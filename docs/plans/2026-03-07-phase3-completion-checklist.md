@@ -6,6 +6,32 @@
 
 ---
 
+## 📋 Related Phase 3 Documents
+
+This checklist integrates and builds on existing Phase 3 planning documents:
+
+1. **[2026-03-07-phase3-image-distribution-design.md](2026-03-07-phase3-image-distribution-design.md)**
+   - Project overview, scope, image asset pool analysis
+   - Design principles and standards
+
+2. **[2026-03-07-phase3-implementation.md](2026-03-07-phase3-implementation.md)**
+   - High-level task breakdown (Tasks 1-8)
+   - Architecture and execution strategy
+
+3. **[2026-03-07-phase3-image-mapping.md](2026-03-07-phase3-image-mapping.md)**
+   - Complete 89-image catalog with descriptions
+   - Page-by-page image recommendations
+   - Image distribution summary
+
+4. **[2026-03-07-phase3-completion-checklist.md](2026-03-07-phase3-completion-checklist.md)** (THIS FILE)
+   - Actual completion status
+   - Processing specifications & workflow
+   - Ready-to-use patterns and checklists
+
+**How to use:** Start with design.md → implementation.md → image-mapping.md → completion checklist
+
+---
+
 ## ✅ COMPLETED (60+ images distributed)
 
 ### Task 1: Image Reference Document
@@ -81,9 +107,11 @@
 
 ---
 
-## Complete Image Processing Specifications
+## Quick Reference: Image Processing Specifications
 
-### HTML Pattern (EXACT - use for all pages)
+For full design context, see [2026-03-07-phase3-image-distribution-design.md](2026-03-07-phase3-image-distribution-design.md)
+
+### HTML Pattern (EXACT - copy/paste ready)
 ```html
 <figure style="text-align: center; margin: 2rem 0;">
   <img
