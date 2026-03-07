@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Retirement Visa Checklist – CMLocals</title>
+<meta name="description" content="Interactive checklist for Thailand Retirement Visa (Non-O) applications. Required documents and financial proof for 50+ applicants."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Caveat:wght@400;700&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --c-dark:          #202A6C;
+  --c-dark-2:        #0D1275;
+  --c-primary:       #4F46E5;
+  --c-accent:        #6366F1;
+  --c-accent-light:  #E0E7FF;
+  --c-white:         #FFFFFF;
+  --c-off-white:     #F8F7FF;
+  --c-body:          #111827;
+  --c-muted:         #4B5563;
+  --c-border:        #E5E7EB;
+  --c-success:       #10B981;
+  --paper-cream:     #FEF9F0;
+  --paper-shadow:    rgba(0,0,0,.06);
+  --font-display:    'Newsreader', Georgia, serif;
+  --font-body:       'DM Sans', system-ui, sans-serif;
+  --font-handwrite:  'Caveat', cursive;
+  --max-w:           1200px;
+  --article-w:       780px;
+  --edge:            clamp(1.25rem, 4vw, 2.5rem);
+  --radius-sm:       6px;
+  --radius-md:       10px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--c-body);
+  background: linear-gradient(135deg, #f5f3ff 0%, #f0ebff 100%);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; display: block; height: auto; }
+a { color: inherit; }
+ul { list-style: none; }
+button { font-family: inherit; cursor: pointer; border: none; background: none; }
+
+.container { width: 100%; max-width: var(--max-w); margin-inline: auto; padding-inline: var(--edge); }
+.article-wrap { width: 100%; max-width: var(--article-w); margin-inline: auto; padding-inline: var(--edge); }
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255,255,255,.92);
+  backdrop-filter: blur(14px) saturate(180%);
+  -webkit-backdrop-filter: blur(14px) saturate(180%);
+  border-bottom: 1px solid var(--c-border);
+  transition: box-shadow .25s;
+}
+.site-header.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,.09); }
+.header-inner { display: flex; align-items: center; justify-content: space-between; height: 54px; gap: 0.6rem; }
+.header-logo { text-decoration: none; flex-shrink: 0; display: flex; align-items: center; gap: .5rem; }
+.header-logo-mark {
+  width: 32px; height: 32px; border-radius: 7px;
+  background: linear-gradient(135deg, var(--c-primary) 0%, #7C3AED 100%);
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-family: var(--font-display); font-size: 1.05rem; font-weight: 500; font-style: italic;
+}
+.header-logo-text { font-family: var(--font-body); font-weight: 700; font-size: 1.05rem; color: #202A6C; letter-spacing: -.02em; }
+.primary-nav { display: flex; align-items: center; justify-content: center; gap: .4rem; flex: 1; }
+.primary-nav a {
+  font-size: 1rem; font-weight: 500; color: var(--c-body); padding: .5em .85em; border-radius: var(--radius-sm);
+  text-decoration: none; white-space: nowrap; transition: color .15s, background .15s;
+}
+.primary-nav a:hover, .primary-nav a.active { color: var(--c-primary); background: var(--c-off-white); }
+.header-ctas { display: flex; align-items: center; gap: .6rem; flex-shrink: 0; }
+.btn {
+  display: inline-flex; align-items: center; gap: .5em; padding: .65em 1.4em; border-radius: var(--radius-sm);
+  font-family: var(--font-body); font-size: .9rem; font-weight: 600; line-height: 1.3;
+  text-decoration: none; border: 1.5px solid transparent; transition: background .18s, transform .12s; white-space: nowrap;
+}
+.btn:hover { transform: translateY(-1px); }
+.btn-wa { background: #25D366; color: #fff; border-color: #25D366; }
+.btn-wa:hover { background: #1aaa55; border-color: #1aaa55; }
+.btn-fb { background: #1877F2; color: #fff; border-color: #1877F2; }
+.btn-fb:hover { background: #1565d8; border-color: #1565d8; }
+.header-hamburger { display: none; }
+.mobile-nav { display: none; }
+
+.page-hero {
+  background: linear-gradient(135deg, #202A6C 0%, #2D3A8C 100%);
+  overflow: hidden; position: relative; padding-block: clamp(5rem, 9vw, 7.5rem);
+}
+.page-hero::before {
+  content: ''; position: absolute; inset: 0; pointer-events: none;
+  background:
+    radial-gradient(ellipse 65% 80% at 90% 30%, rgba(255,255,255,.12) 0%, transparent 65%),
+    radial-gradient(ellipse 50% 70% at 0% 90%, rgba(124,58,237,.24) 0%, transparent 65%),
+    radial-gradient(ellipse 80% 60% at 50% 50%, rgba(99,102,241,.08) 0%, transparent 70%);
+}
+.page-hero-inner {
+  position: relative; z-index: 1; max-width: var(--article-w); padding-inline: var(--edge); margin-inline: auto;
+}
+.page-hero h1 {
+  font-family: var(--font-display); font-size: clamp(2rem, 4.5vw, 3.2rem);
+  font-weight: 400; line-height: 1.15; color: var(--c-white); letter-spacing: -.02em; margin-bottom: 1.25rem;
+}
+.page-hero-lead {
+  font-size: clamp(.95rem, 1.5vw, 1.1rem);
+  color: rgba(255,255,255,.82); line-height: 1.75; max-width: 62ch;
+}
+
+.breadcrumb { background: var(--c-off-white); border-bottom: 1px solid var(--c-border); padding: .65rem 0; }
+.breadcrumb-inner {
+  display: flex; align-items: center; gap: .4rem; font-size: .8rem; color: var(--c-muted);
+  max-width: var(--article-w); padding-inline: var(--edge); margin-inline: auto;
+}
+.breadcrumb a { color: var(--c-muted); text-decoration: none; }
+.breadcrumb a:hover { color: var(--c-primary); }
+
+.checklist-section { padding-block: clamp(3rem, 5vw, 4.5rem); }
+.checklist-wrap { width: 100%; max-width: var(--article-w); margin-inline: auto; padding-inline: var(--edge); }
+
+.checklist-container {
+  position: relative; background: var(--paper-cream); border-radius: 0 0 var(--radius-md) var(--radius-md);
+  padding: clamp(2rem, 5vw, 3.5rem); box-shadow:
+    0 2px 6px rgba(0,0,0,.06), 0 10px 40px rgba(0,0,0,.08), inset 0 1px 0 rgba(255,255,255,.5);
+  border: 1px solid rgba(0,0,0,.04);
+  background-image:
+    repeating-linear-gradient(
+      0deg, transparent, transparent 24px,
+      rgba(99,102,241,.04) 24px, rgba(99,102,241,.04) 25px
+    );
+  background-position: 0 0; position: relative; overflow: hidden;
+}
+
+.checklist-container::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 20px;
+  background: linear-gradient(180deg, rgba(0,0,0,.02) 0%, transparent 100%); pointer-events: none;
+}
+
+.checklist-title {
+  font-family: var(--font-display); font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 400; color: var(--c-dark); margin-bottom: 1.25rem; letter-spacing: -.01em;
+}
+
+.checklist-items {
+  display: flex; flex-direction: column; gap: 1.2rem;
+}
+
+.checklist-item {
+  display: flex; align-items: flex-start; gap: 1rem; padding: 0.75rem 0;
+  cursor: pointer; transition: opacity .2s; position: relative; animation: slideIn 0.5s ease-out backwards;
+}
+
+.checklist-input {
+  appearance: none; -webkit-appearance: none; -moz-appearance: none;
+  flex-shrink: 0; width: 24px; height: 24px; border: 2px solid var(--c-accent);
+  border-radius: 4px; background: var(--c-white); cursor: pointer; margin: 0; margin-top: 2px;
+  transition: all .3s cubic-bezier(.34,.1,.68,.55);
+}
+
+.checklist-input:checked {
+  background: var(--c-accent); border-color: var(--c-accent);
+  animation: scaleCheck .4s cubic-bezier(.34,.1,.68,.55);
+}
+
+.checklist-input:checked::after {
+  content: '✓'; display: flex; align-items: center; justify-content: center;
+  color: var(--c-white); font-size: 16px; font-weight: bold;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-12px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.checklist-item:nth-child(1) { animation-delay: 0.05s; }
+.checklist-item:nth-child(2) { animation-delay: 0.1s; }
+.checklist-item:nth-child(3) { animation-delay: 0.15s; }
+.checklist-item:nth-child(4) { animation-delay: 0.2s; }
+.checklist-item:nth-child(5) { animation-delay: 0.25s; }
+.checklist-item:nth-child(6) { animation-delay: 0.3s; }
+.checklist-item:nth-child(7) { animation-delay: 0.35s; }
+.checklist-item:nth-child(8) { animation-delay: 0.4s; }
+.checklist-item:nth-child(9) { animation-delay: 0.45s; }
+.checklist-item:nth-child(10) { animation-delay: 0.5s; }
+
+.checklist-item:hover { opacity: .75; }
+
+.checklist-text {
+  color: #1a202c; background-color: rgba(255, 235, 59, .3);
+  padding: 0.2em 0.4em; border-radius: 3px; transition: all .3s ease;
+}
+
+.checklist-item.checked .checklist-text {
+  color: rgba(107, 114, 128, .7); background-color: transparent;
+}
+
+.checklist-text {
+  font-size: 1rem; color: var(--c-body); transition: all .3s ease; flex: 1; line-height: 1.5;
+}
+
+.checklist-meta {
+  font-size: .85rem; color: var(--c-muted); margin-top: .25rem; display: block;
+}
+
+.checklist-progress {
+  margin-top: 2.5rem; padding-top: 2rem; border-top: 1px dashed rgba(0,0,0,.12);
+}
+
+.progress-label {
+  font-size: .9rem; font-weight: 600; color: var(--c-dark); margin-bottom: .75rem;
+  display: flex; justify-content: space-between; align-items: center;
+}
+
+.progress-bar {
+  width: 100%; height: 8px; background: rgba(0,0,0,.08); border-radius: 4px; overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%; background: linear-gradient(90deg, var(--c-accent) 0%, var(--c-primary) 100%);
+  border-radius: 4px; transition: width .4s cubic-bezier(.34,.1,.68,.55);
+  box-shadow: 0 0 8px rgba(99,102,241,.3);
+}
+
+.reset-btn {
+  margin-top: 1.5rem; padding: .6em 1.2em; background: var(--c-off-white);
+  color: var(--c-dark); border: 1.5px solid var(--c-border); border-radius: var(--radius-sm);
+  font-family: var(--font-body); font-size: .85rem; font-weight: 600; cursor: pointer;
+  transition: all .2s ease; text-decoration: none;
+}
+
+.reset-btn:hover {
+  background: var(--c-white); border-color: var(--c-accent); color: var(--c-accent);
+}
+
+.site-footer {
+  background: var(--c-dark-2); padding-block: clamp(3rem, 5vw, 4.5rem);
+  color: rgba(255,255,255,.92); margin-top: clamp(3rem, 5vw, 4.5rem);
+}
+.footer-top { display: grid; grid-template-columns: 1.6fr repeat(4, 1fr); gap: 3rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,.1); }
+.footer-logo { display: flex; align-items: center; gap: .5rem; text-decoration: none; margin-bottom: .8rem; }
+.footer-logo-mark {
+  width: 30px; height: 30px; border-radius: 6px;
+  background: linear-gradient(135deg, var(--c-primary) 0%, #7C3AED 100%);
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-family: var(--font-display); font-size: .95rem; font-weight: 500; font-style: italic;
+}
+.footer-logo-text { font-family: var(--font-body); font-weight: 700; font-size: .95rem; color: var(--c-white); }
+.footer-tagline { font-size: .82rem; line-height: 1.6; max-width: 240px; color: rgba(255,255,255,.88); }
+.footer-col-title { font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.70); margin-bottom: 1.1rem; }
+.footer-col ul { display: flex; flex-direction: column; gap: .55rem; }
+.footer-col ul a { font-size: .83rem; color: rgba(255,255,255,.88); text-decoration: none; transition: color .15s; }
+.footer-col ul a:hover { color: var(--c-white); }
+.footer-bottom { display: flex; align-items: center; justify-content: space-between; padding-top: 2rem; gap: 1rem; flex-wrap: wrap; }
+.footer-copy { font-size: .8rem; }
+
+@media (max-width: 960px) {
+  .primary-nav { display: none; }
+  .header-hamburger { display: flex; }
+  .footer-top { grid-template-columns: 1fr 1fr; gap: 2rem; }
+}
+@media (max-width: 640px) {
+  .page-hero h1 { font-size: 1.75rem; }
+  .footer-top { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header" id="site-header" role="banner">
+<div class="container">
+<div class="header-inner">
+  <a href="/" class="header-logo" aria-label="CMLocals homepage">
+    <div class="header-logo-mark" aria-hidden="true">C</div>
+    <span class="header-logo-text">CMLocals</span>
+  </a>
+  <nav class="primary-nav" aria-label="Primary navigation">
+    <a href="/">Home</a>
+    <a href="/pages/visas/index.html">Visas</a>
+    <a href="/pages/checklists/index.html">Checklists</a>
+    <a href="/pages/immigration/index.html">Immigration</a>
+    <a href="/pages/chiang-mai/index.html">Chiang Mai</a>
+  </nav>
+  <div class="header-ctas">
+    <a href="https://wa.me/66801202074" class="btn btn-wa" rel="noopener" target="_blank">WhatsApp</a>
+  </div>
+</div>
+</div>
+</header>
+
+<section class="page-hero">
+<div class="page-hero-inner">
+  <h1>Retirement Visa Checklist</h1>
+  <p class="page-hero-lead">Documents for Thailand Retirement Visa (Non-O) applications. Financial proof and documentation for pensioners aged 50 and over.</p>
+</div>
+</section>
+
+<nav class="breadcrumb">
+<div class="breadcrumb-inner">
+  <a href="/">Home</a>
+  <span>→</span>
+  <a href="/pages/checklists/index.html">Checklists</a>
+  <span>→</span>
+  <span>Retirement Visa</span>
+</div>
+</nav>
+
+<section class="checklist-section">
+<div class="checklist-wrap">
+  <h2 class="checklist-title">What to Prepare</h2>
+
+  <p style="font-size: 1.1rem; line-height: 1.75; color: var(--c-body); margin-bottom: 2.5rem; max-width: 68ch;">The Retirement Visa (Non-O) is designed for pensioners aged 50 and over. You must demonstrate either a stable monthly income of at least 65,000 THB or a lump-sum deposit of 800,000 THB. This checklist covers the key documents needed for initial application and annual extension.</p>
+
+  <div class="checklist-container">
+    <div class="checklist-items" id="checklist">
+      <label class="checklist-item">
+        <input type="checkbox" class="checklist-input" data-item="passport">
+        <div>
+          <div class="checklist-text">Original passport (valid 6+ months)</div>
+          <small class="checklist-meta">Bring original plus 4 copies of bio page and entry stamp</small>
+        </div>
+      </label>
+
+      <label class="checklist-item">
+        <input type="checkbox" class="checklist-input" data-item="tm-6-form">
+        <div>
+          <div class="checklist-text">TM.6 form (Non-O application form)</div>
+          <small class="checklist-meta">Obtain from Thai <a href="https://www.immigration.go.th/" target="_blank" rel="noopener">immigration</a> office or embassy</small>
+        </div>
+      </label>
+
+      <label class="checklist-item">
+        <input type="checkbox" class="checklist-input" data-item="birth-certificate">
+        <div>
+          <div class="checklist-text">Birth certificate (certified copy)</div>
+          <small class="checklist-meta">Proof of age 50+. Thai certified English translation required</small>
+        </div>
+      </label>
+
+      <label class="checklist-item">
+        <input type="checkbox" class="checklist-input" data-item="photos">
+        <div>
+          <div class="checklist-text">Passport-sized photos (4x6 cm)</div>
+          <small class="checklist-meta">Usually 4 photos; check with immigration office</small>
+        </div>
+      </label>
+
+      <label class="checklist-item">
+        <input type="checkbox" class="checklist-input" data-item="income-proof">
+        <div>
+          <div class="checklist-text">Proof of monthly income (65,000 THB minimum)</div>
+          <small class="checklist-meta">Bank statement, pension letter, or income certificate from employer. 12-month history preferred</small>
+        </div>
+      </label>
+
+      <label class="checklist-item">
+        <input type="checkbox" class="checklist-input" data-item="lump-sum-proof">
+        <div>
+          <div class="checklist-text">Bank statement showing 800,000 THB deposit (if using lump-sum option)</div>
+          <small class="checklist-meta">Account must be in your name. Must remain deposited for duration of visa</small>
+        </div>
+      </label>
+
+      <label class="checklist-item">
+        <input type="checkbox" class="checklist-input" data-item="address-proof">
+        <div>
+          <div class="checklist-text">Proof of address in Thailand</div>
+          <small class="checklist-meta">Rental contract, property deed, or accommodation letter</small>
+        </div>
+      </label>
+
+      <label class="checklist-item">
+        <input type="checkbox" class="checklist-input" data-item="tdac">
+        <div>
+          <div class="checklist-text"><a href="https://tdac.immigration.go.th/" target="_blank" rel="noopener">TDAC</a> (Thailand Digital Arrival Card) filed</div>
+          <small class="checklist-meta">File 3 days to 3 weeks before arrival</small>
+        </div>
+      </label>
+
+      <label class="checklist-item">
+        <input type="checkbox" class="checklist-input" data-item="health-insurance">
+        <div>
+          <div class="checklist-text">Health insurance (recommended)</div>
+          <small class="checklist-meta">While not always required, having coverage is advisable for seniors</small>
+        </div>
+      </label>
+
+      <label class="checklist-item">
+        <input type="checkbox" class="checklist-input" data-item="extension-fees">
+        <div>
+          <div class="checklist-text">Visa application and annual extension fees</div>
+          <small class="checklist-meta">Application: varies by embassy. Annual extension: 1,900 THB in Thailand</small>
+        </div>
+      </label>
+    </div>
+
+    <div class="checklist-progress">
+      <div class="progress-label">
+        <span>Preparation Status</span>
+        <span id="progress-text">0/10</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" id="progress-fill" style="width: 0%"></div>
+      </div>
+      <button class="reset-btn" id="reset-btn">Reset Checklist</button>
+    </div>
+
+    <p style="font-size: 0.85rem; line-height: 1.65; color: var(--c-muted); margin-top: 2.5rem; padding-top: 2rem; border-top: 1px dashed rgba(0,0,0,.12); max-width: 68ch;"><strong>Disclaimer:</strong> <a href="https://www.immigration.go.th/" target="_blank" rel="noopener">Thai immigration</a> requirements vary by office and may change. Income requirements, financial thresholds, and required documents differ between initial application and extension. Verify specific requirements with <a href="https://www.immigration.go.th/" target="_blank" rel="noopener">Thai immigration</a> before applying. This checklist is a guide only and not a substitute for official documentation.</p>
+  </div>
+</div>
+</section>
+
+<footer class="site-footer">
+<div class="container">
+  <div class="footer-top">
+    <div>
+      <a href="/" class="footer-logo">
+        <div class="footer-logo-mark" aria-hidden="true">C</div>
+        <span class="footer-logo-text">CMLocals</span>
+      </a>
+      <p class="footer-tagline">Immigration guides, visa strategies, and Thailand resources—by residents, for residents.</p>
+    </div>
+    <div>
+      <h3 class="footer-col-title">Visas</h3>
+      <ul>
+        <li><a href="/pages/visas/index.html">Visa Overview</a></li>
+        <li><a href="/pages/visas/long-stay/index.html">Long Stay</a></li>
+        <li><a href="/pages/ed-visas/index.html">ED Visa</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="footer-col-title">Immigration</h3>
+      <ul>
+        <li><a href="/pages/immigration/index.html">Immigration Home</a></li>
+        <li><a href="/pages/immigration/entry-strategy-guide.html">Entry Strategy</a></li>
+        <li><a href="/pages/immigration/90-day-reporting.html">90-Day Reporting</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="footer-col-title">Checklists</h3>
+      <ul>
+        <li><a href="/pages/checklists/index.html">All Checklists</a></li>
+        <li><a href="/pages/checklists/ed-visa-checklist.html">ED Visa</a></li>
+        <li><a href="/pages/checklists/90-day-reporting-checklist.html">90-Day Reporting</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="footer-col-title">Chiang Mai</h3>
+      <ul>
+        <li><a href="/pages/chiang-mai/index.html">Chiang Mai Home</a></li>
+        <li><a href="/pages/chiang-mai/cost-of-living.html">Cost of Living</a></li>
+        <li><a href="/pages/chiang-mai/where-to-stay.html">Where to Stay</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">&copy; 2026 CMLocals. All rights reserved.</div>
+  </div>
+</div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const checklist = document.getElementById('checklist');
+  const items = checklist.querySelectorAll('.checklist-item');
+  const progressFill = document.getElementById('progress-fill');
+  const progressText = document.getElementById('progress-text');
+  const resetBtn = document.getElementById('reset-btn');
+  const storageKey = 'retirementVisaChecklist';
+
+  function loadState() {
+    const saved = localStorage.getItem(storageKey);
+    if (saved) {
+      const checked = JSON.parse(saved);
+      items.forEach(item => {
+        const input = item.querySelector('.checklist-input');
+        const dataItem = input.getAttribute('data-item');
+        if (checked.includes(dataItem)) {
+          item.classList.add('checked');
+          input.checked = true;
+        }
+      });
+    }
+    updateProgress();
+  }
+
+  function saveState() {
+    const checked = Array.from(items)
+      .filter(item => item.classList.contains('checked'))
+      .map(item => item.querySelector('.checklist-input').getAttribute('data-item'));
+    localStorage.setItem(storageKey, JSON.stringify(checked));
+  }
+
+  function updateProgress() {
+    const completed = Array.from(items).filter(item => item.classList.contains('checked')).length;
+    const total = items.length;
+    const percentage = (completed / total) * 100;
+
+    progressFill.style.width = percentage + '%';
+    progressText.textContent = `${completed}/${total}`;
+  }
+
+  items.forEach(item => {
+    item.addEventListener('click', function(e) {
+      if (e.target.tagName !== 'INPUT' && !e.target.href) {
+        const input = this.querySelector('.checklist-input');
+        input.checked = !input.checked;
+      }
+
+      this.classList.toggle('checked', this.querySelector('.checklist-input').checked);
+      saveState();
+      updateProgress();
+    });
+  });
+
+  resetBtn.addEventListener('click', function() {
+    items.forEach(item => {
+      item.classList.remove('checked');
+      item.querySelector('.checklist-input').checked = false;
+    });
+    localStorage.removeItem(storageKey);
+    updateProgress();
+  });
+
+  loadState();
+});
+</script>
+
+</body>
+</html>

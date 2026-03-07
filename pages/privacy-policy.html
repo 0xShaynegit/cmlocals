@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Privacy Policy – CMLocals</title>
+<meta name="description" content="Privacy Policy for CMLocals. How we collect, use, and protect your personal information. Last updated March 2026."/>
+<link rel="canonical" href="https://www.cmlocals.com/pages/privacy-policy.html"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet"/>
+
+<style>
+/* ============================================================
+   CMLocals – Privacy Policy Page
+   Based on homepage design system + legal-pages.css
+   ============================================================ */
+
+/* --- TOKENS --- */
+:root {
+  --c-dark:          #0D1117;
+  --c-dark-2:        #141922;
+  --c-primary:       #4F46E5;
+  --c-primary-h:     #4338CA;
+  --c-primary-glow:  rgba(79,70,229,.18);
+  --c-violet:        #7C3AED;
+  --c-white:         #FFFFFF;
+  --c-off-white:     #F8F7FF;
+  --c-subtle:        #F1EFFF;
+  --c-body:          #374151;
+  --c-muted:         #6B7280;
+  --c-border:        #E5E7EB;
+  --c-border-dark:   rgba(255,255,255,.1);
+  --c-wa:            #25D366;
+  --c-wa-h:          #1aaa55;
+  --c-fb:            #1877F2;
+  --c-fb-h:          #1565d8;
+  --radius-sm:       6px;
+  --radius-md:       10px;
+  --radius-lg:       16px;
+  --shadow-sm:       0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.06);
+  --shadow-md:       0 4px 16px rgba(0,0,0,.10), 0 2px 6px rgba(0,0,0,.06);
+  --shadow-lg:       0 12px 40px rgba(0,0,0,.14);
+  --font-display:    'Newsreader', Georgia, serif;
+  --font-body:       'DM Sans', system-ui, sans-serif;
+  --max-w:           1200px;
+  --edge:            clamp(1.25rem, 4vw, 2.5rem);
+  --section-py:      clamp(3rem, 5vw, 4.5rem);
+}
+
+/* --- RESET --- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body { font-family: var(--font-body); font-size: 1rem; line-height: 1.65; color: var(--c-body); background: var(--c-white); -webkit-font-smoothing: antialiased; }
+img { max-width: 100%; display: block; height: auto; }
+a { color: inherit; }
+ul { list-style: none; }
+button { font-family: inherit; cursor: pointer; border: none; background: none; }
+
+/* --- UTILITIES --- */
+.container { width: 100%; max-width: var(--max-w); margin-inline: auto; padding-inline: var(--edge); }
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; }
+.text-muted { color: var(--c-muted); }
+
+/* --- BUTTONS --- */
+.btn {
+  display: inline-flex; align-items: center; gap: .5em;
+  padding: .65em 1.4em;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: .9rem; font-weight: 600; line-height: 1.3;
+  text-decoration: none;
+  border: 1.5px solid transparent;
+  transition: background .18s, box-shadow .18s, border-color .18s, transform .12s;
+  white-space: nowrap;
+}
+.btn:hover { transform: translateY(-1px); }
+.btn-primary { background: var(--c-primary); color: var(--c-white); border-color: var(--c-primary); }
+.btn-primary:hover { background: var(--c-primary-h); border-color: var(--c-primary-h); box-shadow: 0 4px 18px var(--c-primary-glow); }
+.btn-wa { background: var(--c-wa); color: var(--c-white); border-color: var(--c-wa); }
+.btn-wa:hover { background: var(--c-wa-h); border-color: var(--c-wa-h); box-shadow: 0 4px 18px rgba(37,211,102,.25); }
+.btn-fb { background: var(--c-fb); color: var(--c-white); border-color: var(--c-fb); }
+.btn-fb:hover { background: var(--c-fb-h); border-color: var(--c-fb-h); }
+.btn-lg { padding: .8em 1.75em; font-size: 1rem; }
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+.site-header {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(255,255,255,.92);
+  backdrop-filter: blur(14px) saturate(180%);
+  -webkit-backdrop-filter: blur(14px) saturate(180%);
+  border-bottom: 1px solid var(--c-border);
+  transition: box-shadow .25s;
+}
+.site-header.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,.09); }
+
+.header-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  height: 54px; gap: 0.6rem;
+}
+
+/* Wordmark */
+.header-logo {
+  text-decoration: none; flex-shrink: 0;
+  display: flex; align-items: center; gap: .5rem;
+}
+.header-logo-mark {
+  width: 32px; height: 32px; border-radius: 7px;
+  background: linear-gradient(135deg, var(--c-primary) 0%, var(--c-violet) 100%);
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-family: var(--font-display); font-size: 1.05rem; font-weight: 500;
+  font-style: italic; letter-spacing: -.01em;
+}
+.header-logo-text {
+  font-family: var(--font-body); font-weight: 700; font-size: 1.05rem;
+  color: var(--c-dark); letter-spacing: -.02em;
+}
+
+/* Primary Nav */
+.primary-nav { display: flex; align-items: center; justify-content: center; gap: .4rem; flex: 1; }
+.primary-nav a {
+  font-size: 1rem; font-weight: 500; color: var(--c-body);
+  padding: .5em .85em; border-radius: var(--radius-sm);
+  text-decoration: none; white-space: nowrap;
+  transition: color .15s, background .15s;
+}
+.primary-nav a:hover { color: var(--c-primary); background: var(--c-subtle); }
+
+/* Header CTAs */
+.header-ctas { display: flex; align-items: center; gap: .6rem; flex-shrink: 0; }
+.header-ctas .btn-wa { padding: .45em 1em; font-size: .83rem; }
+
+/* Mobile toggle */
+.header-hamburger {
+  display: none; flex-direction: column; justify-content: center; align-items: center;
+  width: 40px; height: 40px; gap: 5px;
+  border-radius: var(--radius-sm); cursor: pointer;
+  background: transparent;
+}
+.header-hamburger span {
+  display: block; width: 22px; height: 2px;
+  background: var(--c-dark); border-radius: 2px;
+  transition: transform .25s, opacity .25s;
+}
+.header-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.header-hamburger.open span:nth-child(2) { opacity: 0; }
+.header-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* Mobile drawer */
+.mobile-nav {
+  display: none; position: fixed; inset: 64px 0 0 0; z-index: 99;
+  background: var(--c-white); overflow-y: auto;
+  padding: 1.5rem var(--edge) 3rem;
+  border-top: 1px solid var(--c-border);
+}
+.mobile-nav.open { display: block; }
+.mobile-nav a {
+  display: block; padding: .9rem 0;
+  font-size: 1rem; font-weight: 500; color: var(--c-dark);
+  text-decoration: none;
+  border-bottom: 1px solid var(--c-border);
+}
+.mobile-nav a:last-of-type { border-bottom: none; }
+.mobile-nav a:hover { color: var(--c-primary); }
+.mobile-nav-ctas { display: flex; flex-direction: column; gap: .75rem; margin-top: 1.5rem; }
+.mobile-nav-ctas .btn { justify-content: center; }
+
+/* ============================================================
+   LEGAL PAGE HERO
+   ============================================================ */
+.legal-hero {
+  background: #0D1117;
+  padding-block: clamp(6rem, 9vw, 9rem);
+  position: relative;
+  overflow: hidden;
+}
+
+.legal-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 80% 60% at 75% 30%, rgba(79, 70, 229, 0.22) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 50% at 20% 80%, rgba(124, 58, 237, 0.14) 0%, transparent 65%);
+}
+
+.legal-hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.025'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.legal-hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-inline: var(--edge);
+}
+
+.legal-hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.90);
+  margin-bottom: 1.5rem;
+}
+
+.legal-hero-eyebrow-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--c-primary);
+  box-shadow: 0 0 8px var(--c-primary);
+  animation: pulse-dot 2.5s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { box-shadow: 0 0 8px var(--c-primary); }
+  50% { box-shadow: 0 0 16px var(--c-primary), 0 0 24px rgba(79, 70, 229, 0.4); }
+}
+
+.legal-hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  font-weight: 400;
+  color: var(--c-white);
+  margin: 0;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.legal-hero-lead {
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 1.6vw, 1.1rem);
+  color: rgba(255, 255, 255, 0.88);
+  margin: 1.4rem 0 0 0;
+  max-width: 600px;
+  line-height: 1.65;
+}
+
+/* ============================================================
+   LEGAL CONTENT
+   ============================================================ */
+.legal-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding-inline: var(--edge);
+  padding-block: var(--section-py);
+}
+
+.legal-intro {
+  background: var(--c-subtle);
+  padding: 2rem;
+  border-radius: var(--radius-md);
+  margin-bottom: 3rem;
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--c-dark);
+}
+
+.legal-section {
+  margin-bottom: clamp(2.5rem, 4vw, 3.5rem);
+}
+
+.legal-section h2 {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: var(--c-primary);
+  margin: 0 0 1.5rem 0;
+  line-height: 1.3;
+}
+
+.legal-section p {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--c-body);
+  margin: 0 0 1.25rem 0;
+  max-width: 75ch;
+}
+
+.legal-section p:last-child {
+  margin-bottom: 0;
+}
+
+.legal-section ul,
+.legal-section ol {
+  margin: 1.25rem 0;
+  padding: 0;
+}
+
+.legal-section li {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--c-body);
+  margin-left: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.legal-section li:last-child {
+  margin-bottom: 0;
+}
+
+.legal-section strong {
+  font-weight: 600;
+  color: var(--c-dark);
+}
+
+/* ============================================================
+   QUESTIONS SECTION
+   ============================================================ */
+.legal-questions {
+  background: var(--c-off-white);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-md);
+  padding: 2.5rem;
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.legal-questions h3 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--c-dark);
+  margin: 0 0 1.75rem 0;
+  line-height: 1.3;
+}
+
+.legal-questions-text {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--c-body);
+  margin-bottom: 2rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.legal-questions-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.legal-questions-links a {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.65em 1.4em;
+  background: var(--c-primary);
+  color: var(--c-white);
+  text-decoration: none;
+  border-radius: var(--radius-sm);
+  transition: all 0.3s ease;
+  border: 2px solid var(--c-primary);
+  display: inline-block;
+}
+
+.legal-questions-links a:hover {
+  background: transparent;
+  color: var(--c-primary);
+  transform: translateY(-2px);
+}
+
+.legal-updated {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--c-muted);
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--c-border);
+  text-align: center;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.site-footer {
+  background: var(--c-dark);
+  border-top: 1px solid rgba(255,255,255,.07);
+  padding-top: clamp(3.5rem, 6vw, 5.5rem);
+  padding-bottom: 2.5rem;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr 1fr;
+  gap: 2.5rem;
+  padding-bottom: 3.5rem;
+  border-bottom: 1px solid rgba(255,255,255,.07);
+}
+
+.footer-brand { grid-column: 1; }
+.footer-logo {
+  text-decoration: none; display: inline-flex; align-items: center; gap: .55rem;
+  margin-bottom: 1rem;
+}
+.footer-logo-mark {
+  width: 30px; height: 30px; border-radius: 6px;
+  background: linear-gradient(135deg, var(--c-primary) 0%, var(--c-violet) 100%);
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-family: var(--font-display); font-size: .95rem; font-style: italic;
+}
+.footer-logo-text {
+  font-family: var(--font-body); font-weight: 700; font-size: .95rem; color: var(--c-white);
+}
+.footer-tagline {
+  font-size: .9rem; color: rgba(255,255,255,.80); line-height: 1.6;
+  margin-bottom: 1.5rem; max-width: 240px;
+}
+.footer-social { display: flex; gap: .6rem; }
+.footer-social a {
+  width: 34px; height: 34px; border-radius: 7px;
+  background: rgba(255,255,255,.10); border: 1px solid rgba(255,255,255,.20);
+  display: flex; align-items: center; justify-content: center;
+  text-decoration: none; font-size: .78rem; font-weight: 700;
+  color: rgba(255,255,255,.90);
+  transition: background .15s, color .15s, border-color .15s;
+}
+.footer-social a:hover { background: var(--c-primary); border-color: var(--c-primary); color: #fff; }
+
+.footer-col-title {
+  font-size: .8rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+  color: rgba(255,255,255,.85); margin-bottom: 1rem;
+}
+.footer-col ul { display: flex; flex-direction: column; gap: .55rem; }
+.footer-col ul a {
+  font-size: .9rem; color: rgba(255,255,255,.85); text-decoration: none;
+  transition: color .15s;
+}
+.footer-col ul a:hover { color: rgba(255,255,255,.95); }
+
+.footer-bottom {
+  display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;
+  gap: .75rem; padding-top: 2rem;
+}
+.footer-copy { font-size: .8rem; color: rgba(255,255,255,.70); }
+.footer-legal { display: flex; gap: 1.25rem; }
+.footer-legal a {
+  font-size: .8rem; color: rgba(255,255,255,.75); text-decoration: none;
+  transition: color .15s;
+}
+.footer-legal a:hover { color: rgba(255,255,255,.95); }
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 1100px) {
+  .footer-top { grid-template-columns: 1fr 1fr 1fr; }
+  .footer-brand { grid-column: 1 / -1; }
+  .footer-top { gap: 2rem; }
+}
+
+@media (max-width: 960px) {
+  .primary-nav { display: none; }
+  .header-hamburger { display: flex; }
+
+  .legal-hero h1 {
+    font-size: 1.75rem;
+  }
+
+  .legal-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .legal-questions {
+    padding: 1.5rem;
+    margin-top: 3rem;
+  }
+
+  .legal-questions h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .legal-questions-links {
+    gap: 1rem;
+  }
+
+  .legal-intro {
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding-inline: 20px;
+  }
+
+  .legal-section h2 {
+    font-size: 1.35rem;
+  }
+
+  .legal-questions-links {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .legal-questions-links a {
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer-top { grid-template-columns: 1fr 1fr; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; }
+}
+
+@media (max-width: 400px) {
+  .footer-top { grid-template-columns: 1fr; }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ========================================================
+     HEADER
+     ======================================================== -->
+<header class="site-header" id="site-header" role="banner">
+<div class="container">
+<div class="header-inner">
+
+  <!-- Logo -->
+  <a href="/" class="header-logo" aria-label="CMLocals home">
+    <span class="header-logo-mark" aria-hidden="true">C</span>
+    <span class="header-logo-text">CMLocals</span>
+  </a>
+
+  <!-- Primary Nav -->
+  <nav class="primary-nav" aria-label="Main navigation">
+    <a href="/visas/">Visa Guides</a>
+    <a href="/chiang-mai/">Chiang Mai</a>
+    <a href="/checklists/">Checklists</a>
+    <a href="/tools/">Tools</a>
+    <a href="/pages/about-cmlocals.html">About</a>
+  </nav>
+
+  <!-- Header CTAs -->
+  <div class="header-ctas">
+    <a href="https://wa.me/66801202074" class="btn btn-wa" rel="noopener" target="_blank" aria-label="Contact on WhatsApp">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      WhatsApp
+    </a>
+  </div>
+
+  <!-- Mobile Hamburger -->
+  <button class="header-hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="mobile-nav">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+</div>
+</div>
+</header>
+
+<!-- Mobile Nav -->
+<nav class="mobile-nav" id="mobile-nav" hidden role="navigation" aria-label="Mobile navigation">
+  <a href="/visas/">Visa Guides</a>
+  <a href="/chiang-mai/">Chiang Mai</a>
+  <a href="/checklists/">Checklists</a>
+  <a href="/tools/">Tools</a>
+  <a href="/pages/about-cmlocals.html">About</a>
+  <div class="mobile-nav-ctas">
+    <a href="https://wa.me/66801202074" class="btn btn-wa" rel="noopener" target="_blank">Message on WhatsApp</a>
+    <a href="https://m.me/cmlocals" class="btn btn-fb" rel="noopener" target="_blank">Messenger</a>
+  </div>
+</nav>
+
+<!-- ========================================================
+     HERO
+     ======================================================== -->
+<section class="legal-hero" aria-labelledby="privacy-title">
+<div class="legal-hero-inner">
+  <div class="legal-hero-eyebrow">
+    <span class="legal-hero-eyebrow-dot"></span>
+    About & Legal
+  </div>
+  <h1 id="privacy-title">Privacy Policy</h1>
+  <p class="legal-hero-lead">How we collect, use, and protect your personal information when you visit CMLocals.</p>
+</div>
+</section>
+
+<!-- ========================================================
+     MAIN CONTENT
+     ======================================================== -->
+<main id="main-content">
+<div class="legal-content">
+
+  <!-- Intro Box -->
+  <div class="legal-intro">
+    <p>CMLocals is committed to protecting your privacy. This policy explains how we collect, use, and safeguard your information when you interact with our website and communication channels. We're independent, transparent, and never share your data with third parties without your consent.</p>
+  </div>
+
+  <!-- Section 1: Information We Collect -->
+  <section class="legal-section">
+    <h2>Information We Collect</h2>
+    <p>We collect information in several ways. When you fill out contact forms or subscribe to updates, we capture your name, email address, and WhatsApp number. If you click our WhatsApp or Messenger links, those platforms may collect interaction data. We use Google Analytics to understand how you use our site, including browser type, IP address (anonymised), and pages visited. Cookies in your browser help us remember your preferences and improve your experience.</p>
+    <ul>
+      <li>Contact form submissions (name, email, message)</li>
+      <li>Newsletter signups (email address, optional name)</li>
+      <li>WhatsApp and Messenger link clicks (tracked by those platforms)</li>
+      <li>Google Analytics data (pages visited, session duration, device type)</li>
+      <li>Cookies and local storage for site preferences</li>
+      <li>Device information (operating system, browser, screen resolution)</li>
+    </ul>
+  </section>
+
+  <!-- Section 2: How We Use Information -->
+  <section class="legal-section">
+    <h2>How We Use Information</h2>
+    <p>Your information helps us deliver better service. Contact form data and newsletter subscriptions let us send you relevant visa guides, Chiang Mai living advice, and updates. We use analytics to understand which pages are most useful and where visitors struggle, so we can improve content. We never use your data for marketing beyond the topics you've asked about. Your information stays in our systems only as long as you actively engage with us.</p>
+    <ul>
+      <li>Respond to your enquiries and contact requests</li>
+      <li>Deliver newsletter content you've subscribed to</li>
+      <li>Improve site usability and content quality</li>
+      <li>Understand visitor behaviour and user experience trends</li>
+      <li>Personalise your experience on repeat visits</li>
+    </ul>
+  </section>
+
+  <!-- Section 3: Third-Party Services -->
+  <section class="legal-section">
+    <h2>Third-Party Services</h2>
+    <p>We use trusted partners to deliver specific functions. Google Analytics helps us see how visitors use the site; Google sets its own privacy terms. We may use an email service provider to deliver newsletters, which has access to subscriber addresses but only for sending approved content. WhatsApp, Facebook Messenger, and Facebook have their own privacy policies that apply when you message us through those platforms. These companies process data according to their terms, not ours.</p>
+    <ul>
+      <li><strong>Google Analytics:</strong> Tracks page views and user behaviour; data is anonymised</li>
+      <li><strong>Email service provider:</strong> Stores subscriber email addresses and delivers newsletters</li>
+      <li><strong>WhatsApp, Messenger, Facebook:</strong> Handle message data and conversation history</li>
+      <li>We do not use affiliate links or recommend products for commission</li>
+    </ul>
+  </section>
+
+  <!-- Section 4: Your Rights -->
+  <section class="legal-section">
+    <h2>Your Rights</h2>
+    <p>You have control over your data. You can request access to any personal information we hold about you. You can ask us to delete your contact details and unsubscribe from newsletters at any time. You can opt out of Google Analytics tracking by using browser extensions or adjusting your device settings. For questions about your data or to exercise these rights, contact us via WhatsApp or email.</p>
+    <ul>
+      <li>Request a copy of the data we hold about you</li>
+      <li>Ask for your data to be deleted or your account to be removed</li>
+      <li>Unsubscribe from newsletters with a single click</li>
+      <li>Opt out of Google Analytics tracking</li>
+      <li>Object to any data processing you disagree with</li>
+    </ul>
+  </section>
+
+  <!-- Section 5: Cookies & Tracking -->
+  <section class="legal-section">
+    <h2>Cookies & Tracking</h2>
+    <p>Cookies are small text files your browser stores. Essential cookies make the site work (form submissions, session handling). Analytics cookies from Google help us understand visitor trends. Preference cookies remember your settings on repeat visits. You can control cookies in your browser settings: most browsers let you block all cookies or allow them selectively. Blocking cookies may affect site functionality. We do not use tracking pixels or re-targeting ads.</p>
+    <ul>
+      <li><strong>Essential:</strong> Keep site running (forms, navigation, security)</li>
+      <li><strong>Analytics:</strong> Google Analytics tracking (can be disabled)</li>
+      <li><strong>Preference:</strong> Remember your language, theme, or settings</li>
+      <li>Manage cookies in your browser settings (all modern browsers support this)</li>
+      <li>Clear cookies in privacy/security settings if desired</li>
+    </ul>
+  </section>
+
+  <!-- Section 6: Data Security -->
+  <section class="legal-section">
+    <h2>Data Security</h2>
+    <p>We take security seriously. Submitted data is encrypted in transit using HTTPS (look for the padlock icon). We don't store sensitive information like payment details or passport scans on our servers. However, no online system is 100 percent secure. If we discover a breach affecting your data, we'll notify affected users promptly. We limit access to data to team members who need it to deliver service.</p>
+    <ul>
+      <li>All data transmitted via HTTPS encryption</li>
+      <li>No storage of payment information or identity documents</li>
+      <li>Limited staff access to user information</li>
+      <li>Regular security reviews of our systems</li>
+      <li>Prompt notification in case of any data breach</li>
+    </ul>
+  </section>
+
+  <!-- Section 7: Changes to This Policy -->
+  <section class="legal-section">
+    <h2>Changes to This Policy</h2>
+    <p>We may update this policy as our practices evolve or laws change. Updates will be posted on this page with a new "last updated" date. If changes are significant, we'll notify existing subscribers via email. Your continued use of CMLocals after changes means you accept the updated policy. Checking this page occasionally ensures you're aware of current practices.</p>
+    <ul>
+      <li>Updates posted on this page with new date</li>
+      <li>Major changes notified to subscribers by email</li>
+      <li>Continued use = acceptance of updated terms</li>
+      <li>Last updated: March 5, 2026</li>
+    </ul>
+  </section>
+
+  <!-- Questions Section -->
+  <section class="legal-questions" aria-labelledby="questions-heading">
+    <h3 id="questions-heading">Questions About Your Privacy?</h3>
+    <p class="legal-questions-text">We're happy to answer questions or clarify anything in this policy. Reach out on WhatsApp or Messenger, and we'll respond within 24 hours.</p>
+    <div class="legal-questions-links">
+      <a href="https://wa.me/66801202074" rel="noopener" target="_blank">WhatsApp</a>
+      <a href="https://m.me/cmlocals" rel="noopener" target="_blank">Messenger</a>
+    </div>
+  </section>
+
+  <!-- Last Updated -->
+  <p class="legal-updated">Last updated: March 5, 2026. This policy applies to www.cmlocals.com and all associated communication channels.</p>
+
+</div><!-- .legal-content -->
+</main><!-- #main-content -->
+
+<!-- ========================================================
+     FOOTER
+     ======================================================== -->
+<footer class="site-footer" role="contentinfo">
+<div class="container">
+
+  <div class="footer-top">
+
+    <!-- Brand column -->
+    <div class="footer-brand footer-col">
+      <a href="/" class="footer-logo" aria-label="CMLocals homepage">
+        <span class="footer-logo-mark" aria-hidden="true">C</span>
+        <span class="footer-logo-text">CMLocals</span>
+      </a>
+      <p class="footer-tagline">Independent Thai visa information hub for Chiang Mai and long-stay life in Thailand.</p>
+      <div class="footer-social" aria-label="Social media links">
+        <a href="https://www.facebook.com/chiangmailocals" rel="noopener" target="_blank" aria-label="Facebook">f</a>
+        <a href="https://wa.me/66801202074" rel="noopener" target="_blank" aria-label="WhatsApp">W</a>
+      </div>
+    </div>
+
+    <!-- Visa Guides column -->
+    <div class="footer-col">
+      <h3 class="footer-col-title">Visa Guides</h3>
+      <ul>
+        <li><a href="/visas/">Visa Overview 2026</a></li>
+        <li><a href="/visas/long-stay/">Long-Stay Visas</a></li>
+        <li><a href="/visas/short-stay/">Short-Stay & Tourist</a></li>
+        <li><a href="/visas/long-stay/dtv-digital-nomad/">DTV and Special Programs</a></li>
+        <li><a href="/chiang-mai/immigration-guide/">Chiang Mai Immigration</a></li>
+        <li><a href="/visas/long-stay/permanent-residence/">Permanent Residence</a></li>
+      </ul>
+    </div>
+
+    <!-- Tools & Resources column -->
+    <div class="footer-col">
+      <h3 class="footer-col-title">Tools & Resources</h3>
+      <ul>
+        <li><a href="/checklists/">Checklists</a></li>
+        <li><a href="/tools/stay-duration-calculator/">Stay Duration Calculator</a></li>
+        <li><a href="/tools/visa-quiz/">Visa Suggestion Quiz</a></li>
+        <li><a href="/visas/long-stay/ed-visa/">ED Visa Guide</a></li>
+        <li><a href="/visas/long-stay/thailand-privilege/">Thailand Privilege Visa</a></li>
+      </ul>
+    </div>
+
+    <!-- About & Legal column -->
+    <div class="footer-col">
+      <h3 class="footer-col-title">About & Legal</h3>
+      <ul>
+        <li><a href="/pages/about-cmlocals.html">About CMLocals</a></li>
+        <li><a href="/pages/disclaimer.html">Disclaimer</a></li>
+        <li><a href="/pages/terms-of-service.html">Terms of Service</a></li>
+        <li><a href="/pages/privacy-policy.html">Privacy Policy</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact column -->
+    <div class="footer-col">
+      <h3 class="footer-col-title">Contact</h3>
+      <ul>
+        <li><a href="https://wa.me/66801202074" rel="noopener" target="_blank">WhatsApp</a></li>
+        <li><a href="https://m.me/cmlocals" rel="noopener" target="_blank">Messenger</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- Footer bottom -->
+  <div class="footer-bottom">
+    <span class="footer-copy">&copy; 2026 CMLocals. All rights reserved.</span>
+    <nav class="footer-legal" aria-label="Legal navigation">
+      <a href="/pages/privacy-policy.html">Privacy</a>
+      <a href="/pages/terms-of-service.html">Terms</a>
+      <a href="/pages/disclaimer.html">Disclaimer</a>
+    </nav>
+  </div>
+
+</div>
+</footer>
+
+<!-- ========================================================
+     MINIMAL JS
+     ======================================================== -->
+<script>
+(function() {
+  'use strict';
+
+  // --- Sticky header shadow ---
+  var header = document.getElementById('site-header');
+  function onScroll() {
+    header.classList.toggle('scrolled', window.scrollY > 10);
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  // --- Mobile nav toggle ---
+  var hamburger = document.getElementById('hamburger');
+  var mobileNav = document.getElementById('mobile-nav');
+  hamburger.addEventListener('click', function() {
+    var isOpen = hamburger.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', isOpen);
+    mobileNav.hidden = !isOpen;
+    mobileNav.classList.toggle('open', isOpen);
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  });
+
+  // Close mobile nav on link click
+  mobileNav.querySelectorAll('a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      hamburger.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      mobileNav.hidden = true;
+      mobileNav.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  });
+})();
+</script>
+
+</body>
+</html>

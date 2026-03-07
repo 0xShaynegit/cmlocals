@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Healthcare in Chiang Mai – Hospitals, Costs, Services and Insurance (2026) – CMLocals</title>
+<meta name="description" content="Comprehensive guide to healthcare in Chiang Mai: international hospitals, doctor consultations, dental care, pharmacy system, common procedures and costs, medical insurance requirements, and how to navigate healthcare as a long-stay resident."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet"/>
+
+<style>
+/* ============================================================
+   CMLocals – Chiang Mai Article Pages
+   Dark base: #101585  |  Accent: #6366F1
+   ============================================================ */
+
+:root {
+  --c-dark:          #101585;
+  --c-dark-2:        #0D1275;
+  --c-dark-3:        #0B0F6E;
+  --c-primary:       #4F46E5;
+  --c-primary-h:     #4338CA;
+  --c-primary-glow:  rgba(79,70,229,.18);
+  --c-page-accent:   #6366F1;
+  --c-page-accent-l: #E0E7FF;
+  --c-violet:        #7C3AED;
+  --c-violet-l:      #EDE9FE;
+  --c-white:         #FFFFFF;
+  --c-off-white:     #F8F7FF;
+  --c-subtle:        #F1EFFF;
+  --c-body:          #111827;
+  --c-muted:         #4B5563;
+  --c-border:        #E5E7EB;
+  --c-border-dark:   rgba(255,255,255,.1);
+  --c-wa:            #25D366;
+  --c-wa-h:          #1aaa55;
+  --c-fb:            #1877F2;
+  --c-fb-h:          #1565d8;
+  --radius-sm:       6px;
+  --radius-md:       10px;
+  --radius-lg:       16px;
+  --shadow-sm:       0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.06);
+  --shadow-md:       0 4px 16px rgba(0,0,0,.10), 0 2px 6px rgba(0,0,0,.06);
+  --shadow-lg:       0 12px 40px rgba(0,0,0,.14);
+  --font-display:    'Newsreader', Georgia, serif;
+  --font-body:       'DM Sans', system-ui, sans-serif;
+  --max-w:           1200px;
+  --article-w:       780px;
+  --edge:            clamp(1.25rem, 4vw, 2.5rem);
+  --section-py:      clamp(3rem, 5vw, 4.5rem);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body { font-family: var(--font-body); font-size: 1rem; line-height: 1.65; color: var(--c-body); background: var(--c-white); -webkit-font-smoothing: antialiased; }
+img { max-width: 100%; display: block; height: auto; }
+a { color: inherit; }
+ul { list-style: none; }
+button { font-family: inherit; cursor: pointer; border: none; background: none; }
+
+.container { width: 100%; max-width: var(--max-w); margin-inline: auto; padding-inline: var(--edge); }
+.article-wrap { width: 100%; max-width: var(--article-w); margin-inline: auto; padding-inline: var(--edge); }
+
+.btn {
+  display: inline-flex; align-items: center; gap: .5em;
+  padding: .65em 1.4em; border-radius: var(--radius-sm);
+  font-family: var(--font-body); font-size: .9rem; font-weight: 600; line-height: 1.3;
+  text-decoration: none; border: 1.5px solid transparent;
+  transition: background .18s, box-shadow .18s, border-color .18s, transform .12s;
+  white-space: nowrap;
+}
+.btn:hover { transform: translateY(-1px); }
+.btn-dark { background: rgb(20,25,34); color: var(--c-white); border-color: rgb(20,25,34); }
+.btn-dark:hover { background: #141110; border-color: #141110; box-shadow: var(--shadow-md); }
+.btn-outline-light { background: transparent; color: var(--c-white); border-color: rgba(255,255,255,.35); }
+.btn-outline-light:hover { background: rgba(255,255,255,.1); border-color: rgba(255,255,255,.6); }
+.btn-wa { background: var(--c-wa); color: var(--c-white); border-color: var(--c-wa); }
+.btn-wa:hover { background: var(--c-wa-h); border-color: var(--c-wa-h); }
+.btn-fb { background: var(--c-fb); color: var(--c-white); border-color: var(--c-fb); }
+.btn-fb:hover { background: var(--c-fb-h); border-color: var(--c-fb-h); }
+.btn-lg { padding: .8em 1.75em; font-size: 1rem; }
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+.site-header {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(255,255,255,.92);
+  backdrop-filter: blur(14px) saturate(180%);
+  -webkit-backdrop-filter: blur(14px) saturate(180%);
+  border-bottom: 1px solid var(--c-border);
+  transition: box-shadow .25s;
+}
+.site-header.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,.09); }
+.header-inner { display: flex; align-items: center; justify-content: space-between; height: 54px; gap: 0.6rem; }
+.header-logo { text-decoration: none; flex-shrink: 0; display: flex; align-items: center; gap: .5rem; }
+.header-logo-mark {
+  width: 32px; height: 32px; border-radius: 7px;
+  background: linear-gradient(135deg, var(--c-primary) 0%, var(--c-violet) 100%);
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-family: var(--font-display); font-size: 1.05rem; font-weight: 500; font-style: italic;
+}
+.header-logo-text { font-family: var(--font-body); font-weight: 700; font-size: 1.05rem; color: #101585; letter-spacing: -.02em; }
+.primary-nav { display: flex; align-items: center; justify-content: center; gap: .4rem; flex: 1; }
+.primary-nav a {
+  font-size: 1rem; font-weight: 500; color: var(--c-body);
+  padding: .5em .85em; border-radius: var(--radius-sm);
+  text-decoration: none; white-space: nowrap;
+  transition: color .15s, background .15s;
+}
+.primary-nav a:hover,
+.primary-nav a.active { color: var(--c-primary); background: var(--c-subtle); }
+.header-ctas { display: flex; align-items: center; gap: .6rem; flex-shrink: 0; }
+.header-hamburger {
+  display: none; flex-direction: column; justify-content: center; align-items: center;
+  width: 40px; height: 40px; gap: 5px; border-radius: var(--radius-sm); cursor: pointer; background: transparent;
+}
+.header-hamburger span { display: block; width: 22px; height: 2px; background: #101585; border-radius: 2px; transition: transform .25s, opacity .25s; }
+.header-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.header-hamburger.open span:nth-child(2) { opacity: 0; }
+.header-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.mobile-nav {
+  display: none; position: fixed; inset: 64px 0 0 0; z-index: 99;
+  background: var(--c-white); overflow-y: auto;
+  padding: 1.5rem var(--edge) 3rem; border-top: 1px solid var(--c-border);
+}
+.mobile-nav.open { display: block; }
+.mobile-nav a { display: block; padding: .9rem 0; font-size: 1rem; font-weight: 500; color: #101585; text-decoration: none; border-bottom: 1px solid var(--c-border); }
+.mobile-nav a:last-of-type { border-bottom: none; }
+.mobile-nav a:hover { color: var(--c-primary); }
+.mobile-nav-ctas { display: flex; flex-direction: column; gap: .75rem; margin-top: 1.5rem; }
+.mobile-nav-ctas .btn { justify-content: center; }
+
+/* ============================================================
+   PAGE HERO
+   ============================================================ */
+.page-hero {
+  background: var(--c-dark);
+  overflow: hidden; position: relative;
+  padding-block: clamp(3.5rem, 6vw, 5.5rem);
+}
+.page-hero::before {
+  content: '';
+  position: absolute; inset: 0; pointer-events: none;
+  background:
+    radial-gradient(ellipse 65% 80% at 90% 30%, rgba(255,255,255,.05) 0%, transparent 65%),
+    radial-gradient(ellipse 50% 70% at 0% 90%, rgba(124,58,237,.16) 0%, transparent 65%);
+}
+.page-hero-inner {
+  position: relative; z-index: 1;
+  max-width: var(--article-w); padding-inline: var(--edge); margin-inline: auto;
+}
+.page-hero-eyebrow {
+  display: inline-flex; align-items: center; gap: .5rem;
+  font-size: .8rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase;
+  color: rgba(255,255,255,.75); margin-bottom: 1.25rem;
+}
+.page-hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  font-weight: 400; line-height: 1.15;
+  color: var(--c-white); letter-spacing: -.02em; margin-bottom: 1.25rem;
+}
+.page-hero h1 em { font-style: italic; font-weight: 300; color: rgba(255,255,255,.82); }
+.page-hero-lead {
+  font-size: clamp(.95rem, 1.5vw, 1.1rem);
+  color: rgba(255,255,255,.82); line-height: 1.75; max-width: 62ch; margin-bottom: 2rem;
+}
+.page-hero-meta { font-size: .82rem; color: rgba(255,255,255,.55); display: flex; gap: 1.5rem; flex-wrap: wrap; }
+
+/* ============================================================
+   BREADCRUMB
+   ============================================================ */
+.breadcrumb { background: var(--c-off-white); border-bottom: 1px solid var(--c-border); padding: .65rem 0; }
+.breadcrumb-inner {
+  display: flex; align-items: center; gap: .4rem; font-size: .8rem; color: var(--c-muted);
+  max-width: var(--article-w); padding-inline: var(--edge); margin-inline: auto;
+}
+.breadcrumb a { color: var(--c-muted); text-decoration: none; }
+.breadcrumb a:hover { color: var(--c-primary); }
+.breadcrumb-sep { color: var(--c-border); }
+
+/* ============================================================
+   ARTICLE BODY
+   ============================================================ */
+.article-body { padding-block: clamp(2.5rem, 4vw, 4rem); }
+.article-body h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 400; line-height: 1.25; letter-spacing: -.02em;
+  color: #101585;
+  margin-top: 3rem; margin-bottom: 1rem;
+  padding-top: 2rem; border-top: 1px solid var(--c-border);
+}
+.article-body h2:first-of-type { border-top: none; padding-top: 0; margin-top: 0; }
+.article-body h3 {
+  font-family: var(--font-body); font-size: 1.1rem; font-weight: 600;
+  color: #101585; margin-top: 2rem; margin-bottom: .6rem;
+}
+.article-body p { margin-bottom: 1.2rem; }
+.article-body ul, .article-body ol { margin: 1.2rem 0 1.2rem 1.5rem; }
+.article-body li { margin-bottom: .5rem; }
+.article-body a { color: var(--c-primary); text-decoration: none; border-bottom: 1px solid rgba(79,70,229,.3); transition: border-color .15s; }
+.article-body a:hover { border-bottom-color: var(--c-primary); }
+.article-body table {
+  width: 100%; margin: 1.5rem 0; border-collapse: collapse;
+  font-size: .95rem;
+}
+.article-body th, .article-body td {
+  padding: .8rem; text-align: left; border-bottom: 1px solid var(--c-border);
+}
+.article-body th { font-weight: 600; color: #101585; background: var(--c-subtle); }
+.article-body tr:last-child td { border-bottom: none; }
+
+.callout-band {
+  background: var(--c-page-accent-l); border-left: 4px solid var(--c-page-accent);
+  padding: 1.25rem; border-radius: var(--radius-md);
+  margin: 2rem 0;
+}
+.callout-band p { margin-bottom: .8rem; }
+.callout-band p:last-child { margin-bottom: 0; }
+
+/* ============================================================
+   VISA SECTION
+   ============================================================ */
+.visa-section {
+  background: var(--c-dark);
+  padding-block: var(--section-py);
+  margin-top: 4rem;
+}
+.visa-section-inner {
+  max-width: var(--article-w); margin-inline: auto; padding-inline: var(--edge);
+  color: rgba(255,255,255,.92);
+}
+.visa-section h2 {
+  color: var(--c-white); border-top: none; padding-top: 0; margin-top: 0;
+}
+.visa-section p { color: rgba(255,255,255,.82); margin-bottom: 1.5rem; }
+.label-tag {
+  display: inline-block;
+  font-size: .75rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+  padding: .4em .8em; border-radius: 100px;
+  margin-bottom: 1rem;
+}
+.label-tag--light { background: rgba(255,255,255,.15); color: rgba(255,255,255,.9); }
+.visa-links {
+  display: flex; flex-direction: column; gap: .75rem; margin-top: 2rem;
+}
+.visa-links a {
+  display: inline-flex; align-items: center; gap: .5em;
+  padding: .6em 0; color: var(--c-page-accent-l);
+  text-decoration: none; font-weight: 500;
+  border-bottom: 1px solid rgba(224,231,255,.5);
+  transition: border-color .15s;
+}
+.visa-links a:hover { border-bottom-color: var(--c-page-accent-l); }
+.visa-links a::after { content: '→'; }
+
+/* ============================================================
+   TOOLS SECTION
+   ============================================================ */
+.tools-section {
+  background: var(--c-off-white);
+  padding-block: var(--section-py);
+}
+.tools-section-inner {
+  max-width: var(--max-w); margin-inline: auto; padding-inline: var(--edge);
+}
+.tools-header { margin-bottom: 3rem; text-align: center; }
+.section-title { font-family: var(--font-display); font-size: clamp(1.5rem, 2.5vw, 2rem); font-weight: 400; color: #101585; letter-spacing: -.02em; }
+.guides-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; }
+.tool-card {
+  display: flex; flex-direction: column; gap: 1rem;
+  padding: 2rem; background: var(--c-white); border: 1px solid var(--c-border);
+  border-radius: var(--radius-lg); text-decoration: none;
+  transition: all .25s;
+}
+.tool-card:hover { border-color: var(--c-page-accent); box-shadow: 0 4px 20px rgba(79,70,229,.12); }
+.tool-card__icon { font-size: 2.5rem; line-height: 1; }
+.tool-card__type { font-size: .8rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--c-page-accent); }
+.tool-card__title { font-family: var(--font-display); font-size: 1.15rem; font-weight: 500; color: #101585; line-height: 1.3; }
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.site-footer {
+  background: var(--c-dark-2); color: rgba(255,255,255,.92);
+  padding-top: 3.5rem; padding-bottom: 1.5rem;
+}
+.footer-top { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem; margin-bottom: 3rem; }
+.footer-brand p { color: rgba(255,255,255,.75); margin-top: .75rem; }
+.footer-logo { display: inline-flex; align-items: center; gap: .5rem; text-decoration: none; }
+.footer-logo-mark {
+  display: flex; align-items: center; justify-content: center;
+  width: 32px; height: 32px; border-radius: 6px;
+  background: linear-gradient(135deg, #6366F1 0%, #7C3AED 100%);
+  color: white; font-family: var(--font-display); font-weight: 500; font-size: 1rem;
+}
+.footer-logo-text { font-weight: 700; font-size: 1rem; color: white; }
+.footer-social { display: flex; gap: 1rem; margin-top: 1rem; }
+.footer-social a {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 40px; height: 40px; border-radius: 50%;
+  background: rgba(255,255,255,.1); color: white;
+  text-decoration: none; font-weight: 700; font-size: .9rem;
+  transition: background .2s;
+}
+.footer-social a:hover { background: rgba(255,255,255,.2); }
+.footer-col h3 { font-size: .9rem; font-weight: 600; color: rgba(255,255,255,.88); margin-bottom: 1rem; }
+.footer-col ul { margin: 0; }
+.footer-col li { margin-bottom: .6rem; }
+.footer-col a { color: rgba(255,255,255,.75); text-decoration: none; transition: color .15s; }
+.footer-col a:hover { color: rgba(255,255,255,.92); }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,.1); padding-top: 2rem;
+  text-align: center; font-size: .85rem; color: rgba(255,255,255,.55);
+}
+
+@media (max-width: 768px) {
+  .primary-nav { gap: 0; }
+  .primary-nav a { padding: .4em .5em; font-size: .9rem; }
+  .guides-row { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 640px) {
+  .primary-nav { display: none; }
+  .header-hamburger { display: flex; }
+  .article-body table { font-size: .9rem; }
+  .article-body th, .article-body td { padding: .5rem; }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const header = document.querySelector('.site-header');
+  const hamburger = document.querySelector('.header-hamburger');
+  const mobileNav = document.querySelector('.mobile-nav');
+
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 10);
+  });
+
+  hamburger?.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    mobileNav.classList.toggle('open');
+  });
+
+  document.querySelectorAll('.mobile-nav a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      mobileNav.classList.remove('open');
+    });
+  });
+});
+</script>
+</head>
+<body>
+
+<!-- ========================================================
+     HEADER
+     ======================================================== -->
+<header class="site-header" role="banner">
+<div class="header-inner">
+<div class="container" style="display: flex; align-items: center; justify-content: space-between; width: 100%; height: 54px;">
+
+  <a href="/" class="header-logo" aria-label="CMLocals homepage">
+    <div class="header-logo-mark" aria-hidden="true">C</div>
+    <span class="header-logo-text">CMLocals</span>
+  </a>
+
+  <nav class="primary-nav" aria-label="Primary navigation">
+    <a href="/">Home</a>
+    <a href="/pages/visas/index.html">Visas</a>
+    <a href="/pages/visas/long-stay/index.html">Long Stay</a>
+    <a href="/pages/visas/short-stay/index.html">Short Stay</a>
+    <a href="/pages/ed-visas/index.html">ED Visas</a>
+    <a href="/pages/chiang-mai/index.html" class="active">Chiang Mai</a>
+    <a href="/pages/immigration/index.html">Immigration</a>
+    <a href="/pages/checklists/index.html">Checklists</a>
+    <a href="/pages/tools/index.html">Tools</a>
+  </nav>
+
+  <div class="header-ctas">
+    <a href="https://wa.me/66801202074" class="btn btn-wa" rel="noopener" target="_blank">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      WhatsApp
+    </a>
+    <button class="header-hamburger" id="hamburger" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+</div>
+</div>
+</header>
+
+<nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" hidden>
+  <a href="/">Home</a>
+  <a href="/pages/visas/index.html">Visas</a>
+  <a href="/pages/visas/long-stay/index.html">Long Stay</a>
+  <a href="/pages/visas/short-stay/index.html">Short Stay</a>
+  <a href="/pages/ed-visas/index.html">ED Visas</a>
+  <a href="/pages/chiang-mai/index.html">Chiang Mai</a>
+  <a href="/pages/immigration/index.html">Immigration</a>
+  <a href="/pages/checklists/index.html">Checklists</a>
+  <a href="/pages/tools/index.html">Tools</a>
+  <div class="mobile-nav-ctas">
+    <a href="https://wa.me/66801202074" class="btn btn-wa btn-lg" rel="noopener" target="_blank">Message on WhatsApp</a>
+    <a href="https://m.me/cmlocals" class="btn btn-fb btn-lg" rel="noopener" target="_blank">Messenger</a>
+  </div>
+</nav>
+
+<main id="main-content">
+
+<!-- ========================================================
+     PAGE HERO
+     ======================================================== -->
+<section class="page-hero" aria-labelledby="page-heading">
+<div class="page-hero-inner">
+  <div class="page-hero-eyebrow">
+    <span aria-hidden="true">&#128172;</span> Chiang Mai Guide &nbsp;·&nbsp; 2026
+  </div>
+  <h1 id="page-heading">
+    Healthcare in <em>Chiang Mai</em>
+    <em style="display:block; font-size:.85em; margin-top:.3em;">Hospitals, costs, services and medical insurance for long-stay residents</em>
+  </h1>
+  <p class="page-hero-lead">
+    Chiang Mai has international-standard healthcare at a fraction of Western costs. Understanding how to access it, what services cost, and which insurance is right for your visa status are practical essentials for anyone settling long-term.
+  </p>
+  <div class="page-hero-meta">
+    <span>CMLocals &nbsp;·&nbsp; 16+ years Chiang Mai</span>
+    <span>Last updated February 2026</span>
+  </div>
+</div>
+</section>
+
+<!-- Breadcrumb -->
+<nav class="breadcrumb" aria-label="Breadcrumb">
+<div class="breadcrumb-inner">
+  <a href="/">Home</a>
+  <span class="breadcrumb-sep" aria-hidden="true">›</span>
+  <a href="/pages/chiang-mai/index.html">Chiang Mai</a>
+  <span class="breadcrumb-sep" aria-hidden="true">›</span>
+  <span aria-current="page">Healthcare</span>
+</div>
+</nav>
+
+<!-- ========================================================
+     ARTICLE BODY
+     ======================================================== -->
+<article class="article-body">
+<div class="article-wrap">
+
+  <h2>International Hospitals</h2>
+
+  <p>Chiang Mai has two major international hospitals that meet the expectations of expats and Thai residents requiring English-language care and modern diagnostic equipment.</p>
+
+  <h3>Chiang Mai Ram Hospital</h3>
+  <p>Located on Suthep Road near the Chiang Mai Zoo, Chiang Mai Ram is the city's oldest international hospital and a consistent choice for expats. The facility has English-speaking medical staff throughout the hierarchy, modern diagnostic imaging, emergency services, and a broad range of specialists. A general consultation runs 500 to 1,200 THB depending on the speciality and doctor. Blood tests start at 200 to 400 THB. CT scans cost 3,000 to 5,000 THB.</p>
+
+  <h3>Bangkok Hospital Chiang Mai</h3>
+  <p>Located on Bumrung Buri Road, Bangkok Hospital Chiang Mai is the larger of the two and operates as a satellite of the Bangkok Hospital group based in the capital. It has a broader range of specialists, a larger emergency department, and a more modern physical plant. Consultation fees are similar to Chiang Mai Ram, typically 700 to 1,200 THB with specialists charging at the higher end. Bangkok Hospital Chiang Mai is often the choice for serious or complex conditions.</p>
+
+  <h3>Choosing between them</h3>
+  <p>Both hospitals deliver reliable care. Chiang Mai Ram is centrally located and slightly more accessible for routine consultations. Bangkok Hospital Chiang Mai is often preferred for serious diagnoses, surgery, or complex specialists. Many long-stay residents use Chiang Mai Ram for routine care and switch to Bangkok Hospital for major procedures.</p>
+
+  <h2>Doctor Consultations and Diagnosis</h2>
+
+  <p>Private clinics and hospital outpatient departments are the standard path for doctor visits in Chiang Mai. A typical consultation includes basic examination and prescription of oral medication. Blood tests are available on the same day or the next day with results usually ready within 24 hours.</p>
+
+  <p>Cost for a general consultation: 500 to 1,200 THB. Specialist consultations (cardiology, gastroenterology, orthopedics, etc.) run 700 to 1,500 THB. Most doctors in the major hospitals speak functional English; in smaller clinics, English capability varies and a translator may be useful.</p>
+
+  <p>Bring your passport to all visits. Hospitals require identification and may ask for insurance details. If you have no insurance, you can pay out of pocket and the bill will be delivered at the end of the visit or the next day.</p>
+
+  <h2>Dental Care</h2>
+
+  <p>Dental work in Chiang Mai is significantly cheaper than equivalent care in Western countries and the quality is high. Multiple international-standard dental clinics operate in Nimman, the Old City, and other central areas.</p>
+
+  <p>Standard costs: routine cleaning and checkup, 500 to 800 THB; simple filling, 800 to 1,500 THB; crown, 6,000 to 10,000 THB; root canal treatment, 4,000 to 7,000 THB; scaling and polishing, 600 to 1,000 THB. Teeth whitening runs 2,000 to 4,000 THB. Implants are available but cost 15,000 to 25,000 THB per tooth.</p>
+
+  <p>Several dental chains have English-speaking receptionists and dentists as standard. They maintain regular appointment systems and typically accept card payment or can invoice for larger procedures.</p>
+
+  <h2>Pharmacy System</h2>
+
+  <p>Pharmacies in Chiang Mai are well-stocked with common medications and carry many drugs available in Western countries without requiring a prescription. Antibiotics, antihistamines, pain relievers, and remedies for traveller's stomach are broadly available and cheap by international standards.</p>
+
+  <p>A course of antibiotics costs 150 to 500 THB depending on the drug and strength. Paracetamol or ibuprofen cost 20 to 40 THB per packet. Antihistamines cost 30 to 100 THB. Most pharmacists speak functional English, particularly in the Old City and Nimman areas. For any prescription from a doctor, bring the paper receipt and the pharmacist will fill it.</p>
+
+  <p>Most large shopping malls and central areas have multiple pharmacies. Boots operates branches in Chiang Mai and carries a familiar range of over-the-counter products.</p>
+
+  <h2>Common Procedures and Costs</h2>
+
+  <p>Long-stay residents commonly access the following services in Chiang Mai:</p>
+
+  <table aria-label="Common healthcare procedures and costs in Chiang Mai 2026">
+    <thead>
+      <tr>
+        <th>Procedure</th>
+        <th>Typical Cost (THB)</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>General consultation</td><td>500–1,200</td><td>Hospital outpatient or private clinic</td></tr>
+      <tr><td>Blood test (standard panel)</td><td>200–600</td><td>Results next day</td></tr>
+      <tr><td>Ultrasound</td><td>800–1,500</td><td>Obstetric, abdominal, etc.</td></tr>
+      <tr><td>CT scan</td><td>3,000–5,000</td><td>Head, chest, abdomen or spine</td></tr>
+      <tr><td>Dental cleaning</td><td>500–800</td><td>Standard professional cleaning</td></tr>
+      <tr><td>Dental filling</td><td>800–1,500</td><td>One surface amalgam or composite</td></tr>
+      <tr><td>Root canal</td><td>4,000–7,000</td><td>Full course of treatment</td></tr>
+      <tr><td>Dental crown</td><td>6,000–10,000</td><td>Porcelain or ceramic</td></tr>
+      <tr><td>Teeth whitening</td><td>2,000–4,000</td><td>Professional in-clinic treatment</td></tr>
+      <tr><td>Eye test and glasses</td><td>400–1,200</td><td>Exam plus frames and lenses</td></tr>
+      <tr><td>Vaccination (single dose)</td><td>300–600</td><td>Yellow fever, tetanus, hepatitis A/B, etc.</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Medical Insurance</h2>
+
+  <p>Healthcare insurance is not mandatory for living in Chiang Mai but is strongly recommended for anyone planning a stay longer than a few months. Insurance protects against unexpected major costs, covers specialist consultations, and is required as a condition of certain visa categories.</p>
+
+  <p>See our comprehensive <a href="/pages/chiang-mai/insurance.html">guide to healthcare insurance in Chiang Mai</a> for detailed information on coverage levels, visa requirements, premiums by age, and how to choose a plan.</p>
+
+  <h2>Visa-Specific Insurance Requirements</h2>
+
+  <p>Two long-stay visa categories require proof of health insurance:</p>
+
+  <h3>O-A Retirement Visa</h3>
+  <p>Applicants aged 50 and older must provide evidence of health insurance with minimum coverage of 40,000 THB outpatient and 400,000 THB inpatient. This is a mandatory condition of approval. Any insurance policy issued by a reputable provider meeting these minimums is acceptable. Budget plans commonly meet these requirements.</p>
+
+  <h3>O-X Long-Term Resident Visa</h3>
+  <p>The O-X visa for highly-skilled individuals and retirees also requires health insurance with the same minimum coverage as the O-A. The requirement must be met before the visa is approved.</p>
+
+  <p>For other visa types (DTV, tourist visa, visa-exempt entry, ED visa, etc.), insurance is optional from a regulatory perspective but remains practically important. Unexpected medical bills from a serious illness or accident can exceed your budget by a large margin.</p>
+
+  <div class="callout-band">
+    <p><strong>Insurance recommendation:</strong> For independent insurance broking and advice tailored to your visa category and age, consult Tawm Rosendal on <a href="https://www.facebook.com/tawm.rosendal">Facebook</a>. Tawm is an AIA broker with expertise in health insurance for Chiang Mai residents and can compare plans across multiple insurers to find the right match for your needs and budget.</p>
+  </div>
+
+  <h2>Medical Emergencies</h2>
+
+  <p>Call 1669 for the Chiang Mai ambulance emergency line. Both major hospitals have emergency departments open 24 hours. Chiang Mai Ram is closer to the Old City; Bangkok Hospital Chiang Mai is larger with more specialists on-site at night. In a genuine emergency, call 1669 and the dispatcher will direct you to the nearest appropriate facility.</p>
+
+  <p>If you are conscious and able to choose, going to your preferred hospital directly is faster than waiting for an ambulance. Grab is fast and cost-effective for non-critical conditions.</p>
+
+  <h2>Wellness Infrastructure</h2>
+
+  <p>Beyond formal healthcare, Chiang Mai has extensive wellness options including yoga studios, Thai massage, gym facilities, and meditation programs.</p>
+
+  <p>Yoga classes run 200 to 400 THB per class in independent studios or 2,000 to 4,000 THB per month for unlimited membership. Traditional Thai massage at reputable independent shops costs 250 to 350 THB per hour. Multiple gyms offer monthly memberships from 1,500 to 3,000 THB depending on facilities. Meditation courses and retreats are available at temples and dedicated centres, many at low cost or donation-based.</p>
+
+</div>
+</article>
+
+<!-- ========================================================
+     RELATED READING SECTION
+     ======================================================== -->
+<section class="visa-section" aria-labelledby="related-heading">
+<div class="visa-section-inner">
+
+  <div class="label-tag label-tag--light">Related Reading</div>
+  <h2 id="related-heading">Healthcare costs and insurance go together for long-stayers</h2>
+  <p>Healthcare in Chiang Mai is affordable but unexpected medical events can still create financial strain. Understanding your insurance options and what you are actually paying for healthcare as part of your long-stay budget makes planning realistic and sustainable.</p>
+  <div class="visa-links" role="list">
+    <a href="/pages/chiang-mai/insurance.html" role="listitem">Healthcare insurance guide for Chiang Mai</a>
+    <a href="/pages/chiang-mai/cost-of-living.html" role="listitem">Cost of living in Chiang Mai 2026</a>
+    <a href="/pages/chiang-mai/long-term-living.html" role="listitem">Living long-term in Chiang Mai</a>
+    <a href="/pages/visas/long-stay/retirement-visa/" role="listitem">O-A retirement visa guide</a>
+    <a href="/pages/chiang-mai/index.html" role="listitem">All Chiang Mai guides</a>
+  </div>
+
+</div>
+</section>
+
+<!-- ========================================================
+     TOOLS & CHECKLISTS
+     ======================================================== -->
+<section class="tools-section" aria-labelledby="tools-heading">
+<div class="tools-section-inner">
+  <div class="tools-header">
+    <div class="label-tag">Tools &amp; Checklists</div>
+    <h2 class="section-title" id="tools-heading">Essential tools and resources.</h2>
+  </div>
+  <div class="guides-row" role="list">
+    <a class="tool-card" href="/pages/checklists/index.html" role="listitem">
+      <div class="tool-card__icon" aria-hidden="true">&#128462;</div>
+      <div class="tool-card__body">
+        <div class="tool-card__type">Checklists</div>
+        <div class="tool-card__title">Visa &amp; extension document checklists</div>
+      </div>
+    </a>
+    <a class="tool-card" href="/pages/tools/stay-duration-calculator/" role="listitem">
+      <div class="tool-card__icon" aria-hidden="true">&#128197;</div>
+      <div class="tool-card__body">
+        <div class="tool-card__type">Calculator</div>
+        <div class="tool-card__title">Stay duration calculator &nbsp; arrival to last legal day</div>
+      </div>
+    </a>
+    <a class="tool-card" href="/pages/tools/visa-quiz/" role="listitem">
+      <div class="tool-card__icon" aria-hidden="true">&#10067;</div>
+      <div class="tool-card__body">
+        <div class="tool-card__type">Quiz</div>
+        <div class="tool-card__title">Visa suggestion tool &nbsp; find your best option</div>
+      </div>
+    </a>
+  </div>
+</div>
+</section>
+
+<!-- ========================================================
+     RELATED GUIDES
+     ======================================================== -->
+<section class="related-guides-section" aria-labelledby="related-heading">
+<div class="article-wrap">
+  <div class="related-guides-header">
+    <h2 class="section-title" id="related-heading">Related Chiang Mai guides</h2>
+  </div>
+  <div class="related-guides-grid" role="list">
+    <a href="/pages/chiang-mai/" class="related-guide-card" role="listitem">
+      <span class="related-guide-tag">Hub</span>
+      <span class="related-guide-title">All Chiang Mai guides</span>
+      <span class="related-guide-arrow">→</span>
+    </a>
+    <a href="/pages/chiang-mai/insurance.html" class="related-guide-card" role="listitem">
+      <span class="related-guide-tag">Insurance</span>
+      <span class="related-guide-title">Insurance options</span>
+      <span class="related-guide-arrow">→</span>
+    </a>
+    <a href="/pages/chiang-mai/long-term-living.html" class="related-guide-card" role="listitem">
+      <span class="related-guide-tag">Housing</span>
+      <span class="related-guide-title">Long-term living &amp; residency</span>
+      <span class="related-guide-arrow">→</span>
+    </a>
+    <a href="/pages/chiang-mai/taxes.html" class="related-guide-card" role="listitem">
+      <span class="related-guide-tag">Compliance</span>
+      <span class="related-guide-title">Taxes for expats</span>
+      <span class="related-guide-arrow">→</span>
+    </a>
+  </div>
+</div>
+</section>
+
+<style>
+.related-guides-section { padding: clamp(3rem, 5vw, 4.5rem) 0; background: var(--c-off-white); border-top: 1px solid var(--c-border); }
+.related-guides-header { margin-bottom: 2rem; }
+.related-guides-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.25rem; }
+.related-guide-card { display: flex; flex-direction: column; gap: 0.5rem; padding: 1.5rem; background: var(--c-white); border: 1.5px solid var(--c-border); border-radius: var(--radius-lg); text-decoration: none; color: var(--c-body); transition: box-shadow .2s, transform .2s; }
+.related-guide-card:hover { box-shadow: 0 8px 30px rgba(0,0,0,.12); transform: translateY(-2px); }
+.related-guide-tag { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--c-primary); }
+.related-guide-title { font-weight: 600; color: var(--c-dark); font-size: 0.95rem; }
+.related-guide-arrow { font-weight: 600; color: var(--c-primary); margin-top: 0.5rem; }
+</style>
+
+</main>
+
+<!-- ========================================================
+     FOOTER
+     ======================================================== -->
+<footer class="site-footer" role="contentinfo">
+<div class="container">
+
+  <div class="footer-top">
+
+    <div class="footer-brand footer-col">
+      <a href="/" class="footer-logo" aria-label="CMLocals homepage">
+        <span class="footer-logo-mark" aria-hidden="true">C</span>
+        <span class="footer-logo-text">CMLocals</span>
+      </a>
+      <p class="footer-tagline">Independent Thai visa information hub for Chiang Mai and long-stay life in Thailand.</p>
+      <div class="footer-social" aria-label="Social media links">
+        <a href="https://www.facebook.com/chiangmailocals" rel="noopener" target="_blank" aria-label="Facebook">f</a>
+        <a href="https://wa.me/66801202074" rel="noopener" target="_blank" aria-label="WhatsApp">W</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h3 class="footer-col-title">Visa Guides</h3>
+      <ul>
+        <li><a href="/pages/visas/index.html">Visa Overview 2026</a></li>
+        <li><a href="/pages/visas/long-stay/index.html">Long-Stay Visas</a></li>
+        <li><a href="/pages/visas/short-stay/index.html">Short-Stay &amp; Tourist</a></li>
+        <li><a href="/pages/visas/long-stay/dtv-digital-nomad/">DTV and Special Programs</a></li>
+        <li><a href="/pages/chiang-mai/immigration-guide/">Chiang Mai Immigration</a></li>
+        <li><a href="/pages/visas/long-stay/permanent-residence/">Permanent Residence</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3 class="footer-col-title">Chiang Mai Life</h3>
+      <ul>
+        <li><a href="/pages/chiang-mai/index.html">Chiang Mai Hub</a></li>
+        <li><a href="/pages/chiang-mai/long-term-living.html">Living Long-Term</a></li>
+        <li><a href="/pages/chiang-mai/where-to-stay.html">Where to Stay</a></li>
+        <li><a href="/pages/chiang-mai/cost-of-living.html">Cost of Living</a></li>
+        <li><a href="/pages/chiang-mai/healthcare.html">Healthcare</a></li>
+        <li><a href="/pages/chiang-mai/insurance.html">Healthcare Insurance</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3 class="footer-col-title">Tools &amp; Resources</h3>
+      <ul>
+        <li><a href="/pages/checklists/index.html">Checklists</a></li>
+        <li><a href="/pages/tools/stay-duration-calculator/">Stay Duration Calculator</a></li>
+        <li><a href="/pages/tools/visa-quiz/">Visa Suggestion Quiz</a></li>
+        <li><a href="/pages/visas/long-stay/ed-visa/">ED Visa Guide</a></li>
+        <li><a href="/pages/visas/long-stay/thailand-privilege/">Thailand Privilege Visa</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 CMLocals. All rights reserved. <a href="/pages/disclaimer.html">Disclaimer</a> · <a href="/pages/privacy-policy.html">Privacy</a></p>
+  </div>
+
+</div>
+</footer>
+
+</body>
+</html>

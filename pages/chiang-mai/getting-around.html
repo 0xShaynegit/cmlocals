@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Getting Around Chiang Mai – Transportation Guide for Long-Stay Visitors (2026) – CMLocals</title>
+<meta name="description" content="How to get around Chiang Mai as a long-stay visitor or expat: scooter rental, Grab, songthaews, walking, cycling, day trips and what transport actually looks like when you live here for months at a time."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet"/>
+
+<style>
+/* ============================================================
+   CMLocals – Chiang Mai Article Pages
+   Dark base: #101585  |  Accent: #6366F1
+   ============================================================ */
+
+:root {
+  --c-dark:          #101585;
+  --c-dark-2:        #0D1275;
+  --c-dark-3:        #0B0F6E;
+  --c-primary:       #4F46E5;
+  --c-primary-h:     #4338CA;
+  --c-primary-glow:  rgba(79,70,229,.18);
+  --c-page-accent:   #6366F1;
+  --c-page-accent-l: #E0E7FF;
+  --c-violet:        #7C3AED;
+  --c-violet-l:      #EDE9FE;
+  --c-white:         #FFFFFF;
+  --c-off-white:     #F8F7FF;
+  --c-subtle:        #F1EFFF;
+  --c-body:          #111827;
+  --c-muted:         #4B5563;
+  --c-border:        #E5E7EB;
+  --c-border-dark:   rgba(255,255,255,.1);
+  --c-wa:            #25D366;
+  --c-wa-h:          #1aaa55;
+  --c-fb:            #1877F2;
+  --c-fb-h:          #1565d8;
+  --radius-sm:       6px;
+  --radius-md:       10px;
+  --radius-lg:       16px;
+  --shadow-sm:       0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.06);
+  --shadow-md:       0 4px 16px rgba(0,0,0,.10), 0 2px 6px rgba(0,0,0,.06);
+  --shadow-lg:       0 12px 40px rgba(0,0,0,.14);
+  --font-display:    'Newsreader', Georgia, serif;
+  --font-body:       'DM Sans', system-ui, sans-serif;
+  --max-w:           1200px;
+  --article-w:       780px;
+  --edge:            clamp(1.25rem, 4vw, 2.5rem);
+  --section-py:      clamp(3rem, 5vw, 4.5rem);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body { font-family: var(--font-body); font-size: 1rem; line-height: 1.65; color: var(--c-body); background: var(--c-white); -webkit-font-smoothing: antialiased; }
+img { max-width: 100%; display: block; height: auto; }
+a { color: inherit; }
+ul { list-style: none; }
+button { font-family: inherit; cursor: pointer; border: none; background: none; }
+
+.container { width: 100%; max-width: var(--max-w); margin-inline: auto; padding-inline: var(--edge); }
+.article-wrap { width: 100%; max-width: var(--article-w); margin-inline: auto; padding-inline: var(--edge); }
+
+/* --- BUTTONS --- */
+.btn {
+  display: inline-flex; align-items: center; gap: .5em;
+  padding: .65em 1.4em; border-radius: var(--radius-sm);
+  font-family: var(--font-body); font-size: .9rem; font-weight: 600; line-height: 1.3;
+  text-decoration: none; border: 1.5px solid transparent;
+  transition: background .18s, box-shadow .18s, border-color .18s, transform .12s;
+  white-space: nowrap;
+}
+.btn:hover { transform: translateY(-1px); }
+.btn-dark { background: rgb(20,25,34); color: var(--c-white); border-color: rgb(20,25,34); }
+.btn-dark:hover { background: #141110; border-color: #141110; box-shadow: var(--shadow-md); }
+.btn-outline-light { background: transparent; color: var(--c-white); border-color: rgba(255,255,255,.35); }
+.btn-outline-light:hover { background: rgba(255,255,255,.1); border-color: rgba(255,255,255,.6); }
+.btn-wa { background: var(--c-wa); color: var(--c-white); border-color: var(--c-wa); }
+.btn-wa:hover { background: var(--c-wa-h); border-color: var(--c-wa-h); }
+.btn-fb { background: var(--c-fb); color: var(--c-white); border-color: var(--c-fb); }
+.btn-fb:hover { background: var(--c-fb-h); border-color: var(--c-fb-h); }
+.btn-lg { padding: .8em 1.75em; font-size: 1rem; }
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+.site-header {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(255,255,255,.92);
+  backdrop-filter: blur(14px) saturate(180%);
+  -webkit-backdrop-filter: blur(14px) saturate(180%);
+  border-bottom: 1px solid var(--c-border);
+  transition: box-shadow .25s;
+}
+.site-header.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,.09); }
+.header-inner { display: flex; align-items: center; justify-content: space-between; height: 54px; gap: 0.6rem; }
+.header-logo { text-decoration: none; flex-shrink: 0; display: flex; align-items: center; gap: .5rem; }
+.header-logo-mark {
+  width: 32px; height: 32px; border-radius: 7px;
+  background: linear-gradient(135deg, var(--c-primary) 0%, var(--c-violet) 100%);
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-family: var(--font-display); font-size: 1.05rem; font-weight: 500; font-style: italic;
+}
+.header-logo-text { font-family: var(--font-body); font-weight: 700; font-size: 1.05rem; color: #101585; letter-spacing: -.02em; }
+.primary-nav { display: flex; align-items: center; justify-content: center; gap: .4rem; flex: 1; }
+.primary-nav a {
+  font-size: 1rem; font-weight: 500; color: var(--c-body);
+  padding: .5em .85em; border-radius: var(--radius-sm);
+  text-decoration: none; white-space: nowrap;
+  transition: color .15s, background .15s;
+}
+.primary-nav a:hover,
+.primary-nav a.active { color: var(--c-primary); background: var(--c-subtle); }
+.header-ctas { display: flex; align-items: center; gap: .6rem; flex-shrink: 0; }
+.header-hamburger {
+  display: none; flex-direction: column; justify-content: center; align-items: center;
+  width: 40px; height: 40px; gap: 5px; border-radius: var(--radius-sm); cursor: pointer; background: transparent;
+}
+.header-hamburger span { display: block; width: 22px; height: 2px; background: #101585; border-radius: 2px; transition: transform .25s, opacity .25s; }
+.header-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.header-hamburger.open span:nth-child(2) { opacity: 0; }
+.header-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.mobile-nav {
+  display: none; position: fixed; inset: 64px 0 0 0; z-index: 99;
+  background: var(--c-white); overflow-y: auto;
+  padding: 1.5rem var(--edge) 3rem; border-top: 1px solid var(--c-border);
+}
+.mobile-nav.open { display: block; }
+.mobile-nav a { display: block; padding: .9rem 0; font-size: 1rem; font-weight: 500; color: #101585; text-decoration: none; border-bottom: 1px solid var(--c-border); }
+.mobile-nav a:last-of-type { border-bottom: none; }
+.mobile-nav a:hover { color: var(--c-primary); }
+.mobile-nav-ctas { display: flex; flex-direction: column; gap: .75rem; margin-top: 1.5rem; }
+.mobile-nav-ctas .btn { justify-content: center; }
+
+/* ============================================================
+   PAGE HERO
+   ============================================================ */
+.page-hero {
+  background: var(--c-dark);
+  overflow: hidden; position: relative;
+  padding-block: clamp(3.5rem, 6vw, 5.5rem);
+}
+.page-hero::before {
+  content: '';
+  position: absolute; inset: 0; pointer-events: none;
+  background:
+    radial-gradient(ellipse 65% 80% at 90% 30%, rgba(255,255,255,.05) 0%, transparent 65%),
+    radial-gradient(ellipse 50% 70% at 0% 90%, rgba(124,58,237,.16) 0%, transparent 65%);
+}
+.page-hero-inner {
+  position: relative; z-index: 1;
+  max-width: var(--article-w); padding-inline: var(--edge); margin-inline: auto;
+}
+.page-hero-eyebrow {
+  display: inline-flex; align-items: center; gap: .5rem;
+  font-size: .8rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase;
+  color: rgba(255,255,255,.75); margin-bottom: 1.25rem;
+}
+.page-hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  font-weight: 400; line-height: 1.15;
+  color: var(--c-white); letter-spacing: -.02em; margin-bottom: 1.25rem;
+}
+.page-hero h1 em { font-style: italic; font-weight: 300; color: rgba(255,255,255,.82); }
+.page-hero-lead {
+  font-size: clamp(.95rem, 1.5vw, 1.1rem);
+  color: rgba(255,255,255,.82); line-height: 1.75; max-width: 62ch; margin-bottom: 2rem;
+}
+.page-hero-meta { font-size: .82rem; color: rgba(255,255,255,.55); display: flex; gap: 1.5rem; flex-wrap: wrap; }
+
+/* ============================================================
+   BREADCRUMB
+   ============================================================ */
+.breadcrumb { background: var(--c-off-white); border-bottom: 1px solid var(--c-border); padding: .65rem 0; }
+.breadcrumb-inner {
+  display: flex; align-items: center; gap: .4rem; font-size: .8rem; color: var(--c-muted);
+  max-width: var(--article-w); padding-inline: var(--edge); margin-inline: auto;
+}
+.breadcrumb a { color: var(--c-muted); text-decoration: none; }
+.breadcrumb a:hover { color: var(--c-primary); }
+.breadcrumb-sep { color: var(--c-border); }
+
+/* ============================================================
+   WHY BAND (5-reasons strip)
+   ============================================================ */
+.why-band {
+  background: var(--c-off-white);
+  border-top: 1px solid var(--c-border);
+  border-bottom: 1px solid var(--c-border);
+  padding-block: clamp(2rem, 3.5vw, 3rem);
+}
+.why-band-inner { max-width: var(--article-w); padding-inline: var(--edge); margin-inline: auto; }
+.why-band h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.3rem, 2vw, 1.65rem);
+  font-weight: 400; color: #101585; letter-spacing: -.02em; margin-bottom: 1.25rem;
+}
+.why-items { display: flex; flex-direction: column; gap: .85rem; }
+.why-item {
+  display: flex; align-items: flex-start; gap: 1rem;
+  padding: 1rem 1.25rem;
+  background: var(--c-white); border: 1px solid var(--c-border); border-radius: var(--radius-md);
+}
+.why-item__icon {
+  font-size: 1.3rem; flex-shrink: 0; margin-top: .1rem;
+}
+.why-item__body {}
+.why-item__title { font-weight: 700; font-size: .95rem; color: #101585; margin-bottom: .25rem; }
+.why-item__desc { font-size: .88rem; color: var(--c-body); line-height: 1.6; }
+
+/* ============================================================
+   ARTICLE BODY
+   ============================================================ */
+.article-body { padding-block: clamp(2.5rem, 4vw, 4rem); }
+.article-body h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 400; line-height: 1.25; letter-spacing: -.02em;
+  color: #101585;
+  margin-top: 3rem; margin-bottom: 1rem;
+  padding-top: 2rem; border-top: 1px solid var(--c-border);
+}
+.article-body h2:first-of-type { border-top: none; padding-top: 0; margin-top: 0; }
+.article-body h3 {
+  font-family: var(--font-body); font-size: 1.1rem; font-weight: 600;
+  color: #101585; margin-top: 2rem; margin-bottom: .6rem;
+}
+.article-body p { margin-bottom: 1.25rem; line-height: 1.75; color: var(--c-body); max-width: 68ch; }
+.article-body ul { list-style: none; margin: 1rem 0 1.5rem 0; display: flex; flex-direction: column; gap: .6rem; }
+.article-body ul li { padding-left: 1.25rem; position: relative; line-height: 1.65; color: var(--c-body); }
+.article-body ul li::before {
+  content: ''; position: absolute; left: 0; top: .7em;
+  width: 5px; height: 5px; border-radius: 50%; background: var(--c-page-accent);
+}
+
+/* ============================================================
+   TRANSPORT CARDS
+   ============================================================ */
+.transport-card {
+  border-left: 4px solid var(--c-page-accent);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  background: var(--c-off-white); padding: 1.25rem 1.5rem;
+  margin: 1.75rem 0; max-width: 680px;
+}
+.transport-card__header { display: flex; align-items: center; gap: .75rem; margin-bottom: .6rem; }
+.transport-card__icon { font-size: 1.4rem; }
+.transport-card__title { font-weight: 700; font-size: 1rem; color: #101585; }
+.transport-card__meta { font-size: .78rem; color: var(--c-muted); margin-top: .1rem; }
+.transport-card p { font-size: .9rem; line-height: 1.65; color: var(--c-body); margin: 0; }
+
+/* ============================================================
+   COST TABLE
+   ============================================================ */
+.cost-table {
+  width: 100%; max-width: 640px;
+  border-collapse: collapse; font-size: .9rem; margin: 1.5rem 0;
+}
+.cost-table th {
+  text-align: left; padding: .6rem .8rem;
+  background: #101585; color: rgba(255,255,255,.95);
+  font-weight: 600; font-size: .78rem; letter-spacing: .04em; text-transform: uppercase;
+}
+.cost-table th:last-child { text-align: right; }
+.cost-table td { padding: .65rem .8rem; border-bottom: 1px solid var(--c-border); color: var(--c-body); vertical-align: top; }
+.cost-table td:last-child { text-align: right; font-weight: 600; color: #101585; }
+.cost-table tr.total td { border-bottom: none; font-weight: 700; background: var(--c-off-white); }
+.cost-table tr.total td:last-child { color: var(--c-page-accent); }
+
+/* ============================================================
+   CALLOUT BAND
+   ============================================================ */
+.callout-band {
+  background: var(--c-page-accent-l);
+  border-left: 3px solid var(--c-page-accent);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  padding: 1.25rem 1.5rem; margin: 2rem 0; max-width: 68ch;
+}
+.callout-band p { margin: 0; color: #101585; font-size: .95rem; line-height: 1.65; }
+.callout-band strong { color: var(--c-page-accent); }
+
+/* ============================================================
+   VISA SECTION
+   ============================================================ */
+.visa-section {
+  background: var(--c-dark);
+  padding-block: clamp(2.5rem, 4vw, 3.5rem);
+  margin-block: clamp(2.5rem, 4vw, 4rem);
+  position: relative; overflow: hidden;
+}
+.visa-section::before {
+  content: '';
+  position: absolute; right: -10%; top: -50%; width: 50%; height: 200%;
+  background: radial-gradient(ellipse, rgba(99,102,241,.12) 0%, transparent 65%);
+  pointer-events: none;
+}
+.visa-section-inner {
+  max-width: var(--article-w); padding-inline: var(--edge);
+  margin-inline: auto; position: relative; z-index: 1;
+}
+.visa-section h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 2.5vw, 1.85rem);
+  font-weight: 400; color: var(--c-white); letter-spacing: -.02em; margin-bottom: 1rem;
+}
+.visa-section p { color: rgba(255,255,255,.88); line-height: 1.7; margin-bottom: 1.25rem; max-width: 64ch; }
+.visa-links { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.5rem; }
+.visa-links a {
+  font-size: .85rem; font-weight: 600; color: rgba(255,255,255,.90);
+  background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.18);
+  padding: .45em 1em; border-radius: var(--radius-sm);
+  text-decoration: none; transition: background .18s, border-color .18s;
+}
+.visa-links a:hover { background: rgba(99,102,241,.28); border-color: var(--c-page-accent); color: #fff; }
+
+/* ============================================================
+   TOOLS & CHECKLISTS
+   ============================================================ */
+.tools-section { background: var(--c-white); padding-block: clamp(2.5rem, 4vw, 3.5rem); border-top: 1px solid var(--c-border); }
+.tools-section-inner { max-width: var(--article-w); padding-inline: var(--edge); margin-inline: auto; }
+.tools-header { margin-bottom: 1.5rem; }
+.section-title {
+  font-family: var(--font-display); font-size: clamp(1.4rem, 2.5vw, 1.85rem);
+  font-weight: 400; letter-spacing: -.02em; color: #101585; margin-bottom: .4rem;
+}
+.guides-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+.tool-card {
+  border: 1px solid var(--c-border); border-radius: var(--radius-md);
+  padding: 1.25rem 1.4rem; background: var(--c-off-white);
+  text-decoration: none; color: var(--c-body);
+  display: flex; align-items: center; gap: 1rem;
+  transition: border-color .18s, box-shadow .18s;
+}
+.tool-card:hover { border-color: var(--c-page-accent); background: var(--c-white); box-shadow: var(--shadow-sm); }
+.tool-card__icon {
+  width: 40px; height: 40px; border-radius: var(--radius-sm);
+  background: var(--c-page-accent-l);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.1rem; flex-shrink: 0; transition: background .18s;
+}
+.tool-card:hover .tool-card__icon { background: var(--c-violet-l); }
+.tool-card__body { flex: 1; }
+.tool-card__type { font-size: .7rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--c-page-accent); }
+.tool-card__title { font-size: .88rem; font-weight: 600; color: #101585; line-height: 1.3; }
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.site-footer { background: var(--c-dark-2); padding-block: var(--section-py); color: rgba(255,255,255,.92); }
+.footer-top { display: grid; grid-template-columns: 1.6fr repeat(4, 1fr); gap: 3rem; padding-bottom: 3rem; border-bottom: 1px solid var(--c-border-dark); }
+.footer-logo { display: flex; align-items: center; gap: .5rem; text-decoration: none; margin-bottom: .8rem; }
+.footer-logo-mark {
+  width: 30px; height: 30px; border-radius: 6px;
+  background: linear-gradient(135deg, var(--c-primary) 0%, var(--c-violet) 100%);
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-family: var(--font-display); font-size: .95rem; font-weight: 500; font-style: italic;
+}
+.footer-logo-text { font-family: var(--font-body); font-weight: 700; font-size: .95rem; color: var(--c-white); letter-spacing: -.01em; }
+.footer-tagline { font-size: .82rem; line-height: 1.6; max-width: 240px; color: rgba(255,255,255,.88); }
+.footer-social { display: flex; gap: .6rem; margin-top: 1.25rem; }
+.footer-social a {
+  width: 32px; height: 32px; border-radius: var(--radius-sm);
+  background: rgba(255,255,255,.08); color: rgba(255,255,255,.88);
+  display: flex; align-items: center; justify-content: center;
+  font-size: .8rem; font-weight: 700; text-decoration: none;
+  transition: background .18s, color .18s;
+}
+.footer-social a:hover { background: var(--c-primary); color: var(--c-white); }
+.footer-col-title { font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.70); margin-bottom: 1.1rem; }
+.footer-col ul { display: flex; flex-direction: column; gap: .55rem; }
+.footer-col ul a { font-size: .83rem; color: rgba(255,255,255,.88); text-decoration: none; transition: color .15s; }
+.footer-col ul a:hover { color: var(--c-white); }
+.footer-bottom { display: flex; align-items: center; justify-content: space-between; padding-top: 2rem; gap: 1rem; flex-wrap: wrap; }
+.footer-copy { font-size: .8rem; }
+.footer-legal { display: flex; gap: 1.5rem; }
+.footer-legal a { font-size: .8rem; color: rgba(255,255,255,.75); text-decoration: none; transition: color .15s; }
+.footer-legal a:hover { color: var(--c-white); }
+
+/* ============================================================
+   CHATY
+   ============================================================ */
+#chaty-trigger-btn {
+  position: fixed; bottom: 50px; right: 20px;
+  width: 54px; height: 54px; border-radius: 50%;
+  background: var(--c-primary); border: none; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: var(--shadow-md); z-index: 999;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+#chaty-trigger-btn:hover { transform: scale(1.05); box-shadow: 0 6px 20px var(--c-primary-glow); }
+#chaty-menu {
+  position: fixed; bottom: 120px; right: 20px;
+  background: white; border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg); z-index: 999;
+  display: none; padding: 1rem; min-width: 240px;
+}
+#chaty-menu.open { display: block; }
+.chaty-channel {
+  display: flex; align-items: center; gap: .75rem; padding: .75rem; margin: .25rem 0;
+  text-decoration: none; color: var(--c-body); border-radius: var(--radius-sm);
+  transition: background .2s; font-size: .9rem; font-weight: 500;
+}
+.chaty-channel:hover { background: var(--c-off-white); }
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 1100px) { .footer-top { grid-template-columns: 1fr 1fr 1fr; } }
+@media (max-width: 960px) {
+  .primary-nav { display: none; }
+  .header-hamburger { display: flex; }
+  .footer-top { grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .guides-row { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .page-hero h1 { font-size: 1.75rem; }
+  .footer-top { grid-template-columns: 1fr; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; }
+  #chaty-trigger-btn { width: 40px; height: 40px; }
+  .cost-table { font-size: .82rem; }
+  .cost-table th, .cost-table td { padding: .5rem .6rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- ========================================================
+     HEADER
+     ======================================================== -->
+<header class="site-header" id="site-header" role="banner">
+<div class="container">
+<div class="header-inner">
+
+  <a href="/" class="header-logo" aria-label="CMLocals homepage">
+    <div class="header-logo-mark" aria-hidden="true">C</div>
+    <span class="header-logo-text">CMLocals</span>
+  </a>
+
+  <nav class="primary-nav" aria-label="Primary navigation">
+    <a href="/">Home</a>
+    <a href="/pages/visas/index.html">Visas</a>
+    <a href="/pages/visas/long-stay/index.html">Long Stay</a>
+    <a href="/pages/visas/short-stay/index.html">Short Stay</a>
+    <a href="/pages/ed-visas/index.html">ED Visas</a>
+    <a href="/pages/chiang-mai/index.html" class="active">Chiang Mai</a>
+    <a href="/pages/immigration/index.html">Immigration</a>
+    <a href="/pages/checklists/index.html">Checklists</a>
+    <a href="/pages/tools/index.html">Tools</a>
+  </nav>
+
+  <div class="header-ctas">
+    <a href="https://wa.me/66801202074" class="btn btn-wa" rel="noopener" target="_blank">WhatsApp</a>
+    <a href="https://m.me/cmlocals" class="btn btn-fb" rel="noopener" target="_blank">Messenger</a>
+  </div>
+
+  <button class="header-hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+
+</div>
+</div>
+</header>
+
+<nav class="mobile-nav" id="mobile-nav" hidden>
+  <a href="/">Home</a>
+  <a href="/pages/visas/index.html">Visas</a>
+  <a href="/pages/visas/long-stay/index.html">Long Stay</a>
+  <a href="/pages/visas/short-stay/index.html">Short Stay</a>
+  <a href="/pages/ed-visas/index.html">ED Visas</a>
+  <a href="/pages/chiang-mai/index.html">Chiang Mai</a>
+  <a href="/pages/immigration/index.html">Immigration</a>
+  <a href="/pages/checklists/index.html">Checklists</a>
+  <a href="/pages/tools/index.html">Tools</a>
+  <div class="mobile-nav-ctas">
+    <a href="https://wa.me/66801202074" class="btn btn-wa">WhatsApp</a>
+    <a href="https://m.me/cmlocals" class="btn btn-fb">Messenger</a>
+  </div>
+</nav>
+
+<!-- ========================================================
+     HERO
+     ======================================================== -->
+<section class="page-hero" aria-labelledby="page-title">
+<div class="page-hero-inner">
+  <p class="page-hero-eyebrow">Chiang Mai / Getting Around</p>
+  <h1 id="page-title">Getting around <em>Chiang Mai</em> – transportation guide for long-stay visitors</h1>
+  <p class="page-hero-lead">
+    Chiang Mai is compact, the layout is logical, and the options for moving around are varied. New arrivals find it confusing at first, though, because there is no BTS or MRT, no fixed timetable, and the sensible choice depends entirely on where you live and how long you plan to stay.
+  </p>
+  <div class="page-hero-meta">
+    <span>Last verified: February 2026</span>
+    <span>Chiang Mai, Thailand</span>
+  </div>
+</div>
+</section>
+
+<!-- ========================================================
+     BREADCRUMB
+     ======================================================== -->
+<nav class="breadcrumb" aria-label="Breadcrumb">
+<div class="breadcrumb-inner">
+  <a href="/">Home</a>
+  <span class="breadcrumb-sep" aria-hidden="true">/</span>
+  <a href="/pages/chiang-mai/index.html">Chiang Mai</a>
+  <span class="breadcrumb-sep" aria-hidden="true">/</span>
+  <span aria-current="page">Getting Around</span>
+</div>
+</nav>
+
+<!-- ========================================================
+     WHY BAND
+     ======================================================== -->
+<section class="why-band" aria-labelledby="why-heading">
+<div class="why-band-inner">
+  <h2 id="why-heading">Why Chiang Mai is easy to navigate</h2>
+  <div class="why-items">
+
+    <div class="why-item">
+      <div class="why-item__icon" aria-hidden="true">&#127968;</div>
+      <div class="why-item__body">
+        <div class="why-item__title">A compact, legible city</div>
+        <div class="why-item__desc">The Old City moat forms the central reference point. Doi Suthep mountain sits to the west. The Ping River runs to the east. Nimman is five minutes west of the Old City. Once you understand this orientation, almost everything else falls into place quickly.</div>
+      </div>
+    </div>
+
+    <div class="why-item">
+      <div class="why-item__icon" aria-hidden="true">&#128652;</div>
+      <div class="why-item__body">
+        <div class="why-item__title">Multiple transport options at every price point</div>
+        <div class="why-item__desc">Scooter rental, Grab ride-hailing, songthaew shared taxis, tuk-tuks, bicycle rental, and private car rental are all available. You are never forced into one system. Most residents use a combination depending on distance, time of day, and weather.</div>
+      </div>
+    </div>
+
+    <div class="why-item">
+      <div class="why-item__icon" aria-hidden="true">&#128241;</div>
+      <div class="why-item__body">
+        <div class="why-item__title">App-based ride-hailing works well</div>
+        <div class="why-item__desc">Grab covers the whole city and operates reliably. Prices are fixed and shown before booking. For rainy days, late nights, or journeys with luggage, it removes all the negotiation that used to make tuk-tuks frustrating for newcomers.</div>
+      </div>
+    </div>
+
+    <div class="why-item">
+      <div class="why-item__icon" aria-hidden="true">&#127956;</div>
+      <div class="why-item__body">
+        <div class="why-item__title">A road trip base with excellent access</div>
+        <div class="why-item__desc">Doi Inthanon, Pai, Chiang Rai, Mae Hong Son, Lampang, and dozens of day-trip destinations are accessible by road. Long-stay residents who own or rent a scooter or car find this access to be one of Chiang Mai's stronger lifestyle advantages.</div>
+      </div>
+    </div>
+
+    <div class="why-item">
+      <div class="why-item__icon" aria-hidden="true">&#128690;</div>
+      <div class="why-item__body">
+        <div class="why-item__title">Cycling is practical in the right areas</div>
+        <div class="why-item__desc">The Old City and the area around Nimman have reasonable cycling infrastructure. Bicycle rental runs 80 to 150 THB per day. For residents who live centrally, a bicycle handles short daily trips well outside peak heat hours.</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</section>
+
+<!-- ========================================================
+     ARTICLE BODY
+     ======================================================== -->
+<article class="article-body">
+<div class="article-wrap">
+
+<h2>Everyday transport options</h2>
+<p>
+  The choice that most long-stay residents reach relatively quickly is whether to rent a scooter. Everything else — Grab, songthaews, tuk-tuks — still applies, but having your own transport changes the radius of your daily life significantly. This section covers each option honestly, including what works and what its limits are.
+</p>
+
+<h3>Walking</h3>
+<p>
+  The Old City is walkable. Within the moat, most major temples, cafes, restaurants and convenience stores are within a 10 to 15 minute walk of each other. Nimman is walkable within its core blocks, particularly around Nimmanhaemin Road and the sois branching east and west from it. Maya Mall, CAMP, and the main coffee strip are all on foot from most Nimman accommodation.
+</p>
+<p>
+  Outside these two zones, walking becomes less practical. There are few pavements on arterial roads, traffic is fast, and distances between destinations stretch quickly once you are outside the inner city. The heat from March to June makes extended outdoor walking uncomfortable between around 10am and 5pm.
+</p>
+
+<div class="transport-card">
+  <div class="transport-card__header">
+    <span class="transport-card__icon" aria-hidden="true">&#128690;</span>
+    <div>
+      <div class="transport-card__title">Cycling</div>
+      <div class="transport-card__meta">Best for: Old City residents, early morning use, recreational routes</div>
+    </div>
+  </div>
+  <p>Bicycle rental is available throughout the Old City and Nimman for 80 to 150 THB per day. Long-stay residents sometimes buy a secondhand bicycle for 2,000 to 4,000 THB. The Sunday Walking Street (Wualai Road) and Saturday market area are both easier to access by bicycle than by scooter on market evenings due to congestion. The Ping River road and Mae Rim valley routes are popular for recreational morning rides. The main limitation is heat, traffic on major roads, and the absence of secure parking at many destinations.</p>
+</div>
+
+<h3>Scooter and motorbike rental</h3>
+<p>
+  The scooter is the default transport for most Chiang Mai long-stay residents. It opens up the whole city and province, eliminates dependence on apps or fixed routes, and keeps monthly transport costs predictable. Most 110cc to 125cc automatic scooters can be rented for 2,500 to 3,500 THB per month from local rental shops. Semi-automatic and larger bikes run 4,000 to 8,000 THB per month.
+</p>
+<p>
+  For stays of six months or longer, purchasing a secondhand scooter is often more economical. A reliable secondhand Honda PCX or Yamaha NMAX runs 35,000 to 55,000 THB and can be resold for a similar price on departure if maintained well. Local Facebook groups and the ChiangMaiAmbassador community board are practical places to find secondhand vehicles from departing residents.
+</p>
+<p>
+  Fuel costs are low. A full tank on a 125cc scooter costs around 100 to 130 THB and covers 150 to 200 km of mixed city and road use. Monthly fuel costs for typical city use run 250 to 400 THB.
+</p>
+
+<div class="transport-card">
+  <div class="transport-card__header">
+    <span class="transport-card__icon" aria-hidden="true">&#128653;</span>
+    <div>
+      <div class="transport-card__title">Scooter / motorbike</div>
+      <div class="transport-card__meta">Monthly rental: 2,500 to 3,500 THB | Fuel: 250 to 400 THB/month</div>
+    </div>
+  </div>
+  <p>Covers the full city and province. Parking is easy and usually free. Fastest option for navigating Chiang Mai traffic during peak hours when Grab wait times stretch. Requires confidence in Thai urban traffic conditions. Riders without experience on Asian road networks typically need a short adjustment period. Helmet use is mandatory and police enforcement is regular, particularly at checkpoints on major routes leaving the Old City.</p>
+</div>
+
+<h3>Grab ride-hailing</h3>
+<p>
+  Grab is the dominant ride-hailing app in Chiang Mai and operates reliably across the city. Booking is done through the app, fares are fixed and shown upfront, and payment can be made by cash or credit card linked to the app. Response times in central areas are usually two to eight minutes. In outer areas or during rain, waits can extend to 15 to 20 minutes.
+</p>
+<p>
+  Typical Grab car fares within the central city: 50 to 100 THB for short hops, 120 to 200 THB for cross-city trips, 250 to 400 THB for airport to Nimman or Old City. Grab bike (motorcycle taxi via the app) runs roughly 40 to 70 percent of the car fare for the same journey and arrives faster in traffic.
+</p>
+<p>
+  For residents who do not rent a scooter, a Grab-heavy lifestyle is manageable in budget terms if trips are kept to a few per day. Five or six Grab trips per day in a city this size can add up to 6,000 to 10,000 THB per month, which makes scooter rental economical by comparison for frequent movers.
+</p>
+
+<div class="transport-card">
+  <div class="transport-card__header">
+    <span class="transport-card__icon" aria-hidden="true">&#128241;</span>
+    <div>
+      <div class="transport-card__title">Grab (ride-hailing)</div>
+      <div class="transport-card__meta">Typical city trip: 60 to 180 THB | Airport to city centre: 250 to 400 THB</div>
+    </div>
+  </div>
+  <p>No vehicle required, no parking to find, fixed fares with no negotiation. Ideal for airport transfers, late-night returns, rainy day use, and any trip where you would rather not ride in the heat. The main limitation is wait time during peak hours and rain. Not cost-effective as a sole transport method for residents who move frequently during the day.</p>
+</div>
+
+<h3>Songthaews</h3>
+<p>
+  Songthaews are the red pickup truck taxis that operate as shared transport on loose route patterns around the city. They are the cheapest way to move around: a standard ride anywhere within the central city costs 20 to 30 THB per person. You flag them down, tell the driver your direction, and they fit you in with other passengers heading the same way.
+</p>
+<p>
+  The system works but takes getting used to. There is no app, no fixed schedule, and the route can vary. Songthaews can also be chartered as a private vehicle for a negotiated price, typically 100 to 200 THB for a city trip depending on distance and bargaining. For residents comfortable with the system, songthaews work well for routine trips along familiar routes, particularly for the Central Airport Plaza run or the Nimman to Night Bazaar corridor.
+</p>
+
+<div class="transport-card">
+  <div class="transport-card__header">
+    <span class="transport-card__icon" aria-hidden="true">&#128653;</span>
+    <div>
+      <div class="transport-card__title">Songthaew (shared red truck taxi)</div>
+      <div class="transport-card__meta">Shared fare: 20 to 30 THB | Chartered: 100 to 200 THB</div>
+    </div>
+  </div>
+  <p>Genuinely cheap and part of daily life for many residents. Requires knowing roughly where you are going and which direction the truck is heading. Not suitable for early-morning or late-night travel when frequency drops. A good fallback for budget-conscious residents between songthaew routes.</p>
+</div>
+
+<h2>How neighbourhood shapes your transport choices</h2>
+<p>
+  Where you live in Chiang Mai determines the transport infrastructure around you more than any other factor. This is worth understanding before committing to an area and a transport approach.
+</p>
+<p>
+  Old City residents live in the most walkable and cycle-friendly zone. Coffee shops, restaurants, supermarkets and markets are within walking distance. Songthaews run frequently along the moat roads. The trade-off is that the Old City becomes congested on weekend evenings around the markets, and scooter parking near popular spots can be difficult.
+</p>
+<p>
+  Nimman residents have a similarly walkable core. The difference is that Nimman skews toward the expat and digital nomad community, with co-working spaces, gyms and cafes within a tight radius. Grab is heavily used here. Residents who want to reach the Old City, markets, or the Ping River area regularly tend to use either a scooter or Grab.
+</p>
+<p>
+  Santitham and Chang Phueak sit north of the Old City. Scooter ownership is more common here because the area is less dense for casual walking and songthaew availability is patchier. Residents in these areas who do not have a scooter rely more heavily on Grab.
+</p>
+<p>
+  Out-of-town residents in areas like Mae Rim, Hang Dong or Saraphi typically own a scooter or car. These areas are pleasant, affordable, and quieter, but without personal transport they are functionally isolated. Grab operates in these areas but wait times are longer and costs per trip are higher.
+</p>
+
+<h2>Monthly transport costs for long-stay residents</h2>
+
+<table class="cost-table" aria-label="Monthly transport cost estimates">
+  <thead>
+    <tr><th>Transport approach</th><th>Estimated monthly cost (THB)</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Scooter rental + fuel (central area resident)</td><td>2,800 to 3,900</td></tr>
+    <tr><td>Scooter rental + fuel + occasional Grab</td><td>3,500 to 5,000</td></tr>
+    <tr><td>Grab-only (moderate use)</td><td>4,000 to 7,000</td></tr>
+    <tr><td>Grab-only (frequent use)</td><td>7,000 to 12,000</td></tr>
+    <tr><td>Car running costs (fuel, parking, maintenance)</td><td>5,000 to 10,000</td></tr>
+    <tr><td>Bicycle + Grab for longer trips</td><td>1,500 to 3,500</td></tr>
+    <tr class="total"><td>Typical long-stay resident (scooter + some Grab)</td><td>3,500 to 5,000</td></tr>
+  </tbody>
+</table>
+
+<h2>Day trips and road trips from Chiang Mai</h2>
+<p>
+  One of the advantages that long-stay residents cite consistently is access to the surrounding province and region. Chiang Mai sits in a wide mountain valley with forested hills in every direction. Many of the best destinations are reachable in under two hours by scooter or car.
+</p>
+<p>
+  Doi Suthep temple is a 30-minute ride up a well-maintained mountain road from Nimman. The Monk's Trail and Huay Tung Tao reservoir are within 20 minutes. Mae Sa Waterfall and the Samoeng loop make a full day ride through highland scenery. Sticky Waterfalls (Nam Tok Bua Tong) in Mae Taeng district is about 70 km north and a straightforward 90-minute scooter ride. Doi Inthanon, Thailand's highest peak, is 90 minutes south by road.
+</p>
+<p>
+  Weekend trips work well from Chiang Mai. Pai is a four-hour drive or bus ride northwest and extremely popular with the long-stay community. Chiang Rai is three hours northeast and worth a full weekend. Lampang, 100 km south, is quieter and undervisited. Mae Hong Son requires a long mountain road or a short domestic flight.
+</p>
+<p>
+  For residents without their own transport, songthaew minivans from the Arcade Bus Terminal cover most regional destinations. Organised day trips and van shares are available through guesthouses and the ChiangMaiAmbassador community for destinations like Doi Inthanon.
+</p>
+
+<div class="callout-band">
+  <p><strong>Driving to Pai:</strong> The road from Chiang Mai to Pai involves 762 curves over Mae Hong Son mountain passes. It is scenic but demands full attention. Scooter riders should have genuine confidence before attempting it. Car hire and shared minivan are the safer choices for less experienced riders.</p>
+</div>
+
+<h2>Safety, rules and practical realities</h2>
+<p>
+  Helmets are legally required for scooter riders and passengers. Police run regular checkpoints on main roads leading out of the Old City, on the Superhighway, and at entry points to popular destinations. Fines run 200 to 500 THB for no helmet and are issued routinely. Most rental shops provide helmets with the scooter.
+</p>
+<p>
+  Alcohol checkpoints operate at night, particularly on weekends and during Thai holidays. These are systematic and cannot be avoided by turning around once spotted. Thai drink-drive limits are 50mg/100ml, lower than some Western jurisdictions.
+</p>
+<p>
+  On international driving licences: an international driving permit (IDP) based on your home country licence is the appropriate document for driving legally in Thailand. Technically, a category A motorcycle licence is required to ride above 50cc. In practice, short-stay tourists ride on tourist visa with minimal scrutiny. For long-stay residents, the practical risk profile increases over time. A Thai driving licence is obtainable at the Chiang Mai Land Transport Office and is worth considering for stays beyond six months.
+</p>
+<p>
+  Rainy season (May to October) brings afternoon downpours. Roads flood in low-lying areas around the Ping River and parts of Chang Phueak. Scooter riders get wet and visibility drops sharply in heavy rain. Having a rain jacket accessible is standard practice. Air quality during burning season (roughly February to April) can deteriorate significantly, with PM2.5 readings pushing into hazardous ranges on bad days. Riding with a mask on poor air quality days is common among residents.
+</p>
+
+</div>
+</article>
+
+<!-- ========================================================
+     VISA SECTION
+     ======================================================== -->
+<section class="visa-section" aria-labelledby="visa-heading">
+<div class="visa-section-inner">
+  <h2 id="visa-heading">Visa type and transport planning</h2>
+  <p>
+    Short-stay tourists on visa-exempt entry or tourist visas typically rent a scooter from a local shop, rely on Grab for airport transfers, and use songthaews for city hops. The informal scooter rental market caters to this pattern.
+  </p>
+  <p>
+    Long-stay residents on retirement visas (O-A), the DTV, or ED visas often progress to owning a vehicle within a few months. A Thai driving licence becomes practical for stays beyond six months. The Chiang Mai Land Transport Office handles licence applications and conversions from international licences.
+  </p>
+  <p>
+    For full visa guidance relevant to your stay duration and purpose, use the links below.
+  </p>
+  <div class="visa-links" role="list">
+    <a href="/pages/visas/long-stay/dtv-digital-nomad/" role="listitem">DTV (Digital Nomad Visa)</a>
+    <a href="/pages/visas/long-stay/retirement-visa-o-a/" role="listitem">Retirement Visa (O-A)</a>
+    <a href="/pages/visas/long-stay/ed-visa/" role="listitem">ED Visa</a>
+    <a href="/pages/visas/short-stay/tourist-visa/" role="listitem">Tourist Visa (TR)</a>
+    <a href="/pages/chiang-mai/where-to-stay.html" role="listitem">Where to Stay in Chiang Mai</a>
+    <a href="/pages/chiang-mai/cost-of-living.html" role="listitem">Cost of Living Guide</a>
+    <a href="/pages/chiang-mai/long-term-living.html" role="listitem">Long-Term Living in Chiang Mai</a>
+    <a href="/pages/chiang-mai/immigration-guide/" role="listitem">Chiang Mai Immigration Guide</a>
+  </div>
+</div>
+</section>
+
+<!-- ========================================================
+     TOOLS
+     ======================================================== -->
+<section class="tools-section">
+<div class="tools-section-inner">
+  <div class="tools-header">
+    <h2 class="section-title">Tools and guides</h2>
+  </div>
+  <div class="guides-row" role="list">
+    <a class="tool-card" href="/pages/chiang-mai/cost-of-living.html" role="listitem">
+      <div class="tool-card__icon" aria-hidden="true">&#128178;</div>
+      <div class="tool-card__body">
+        <div class="tool-card__type">Guide</div>
+        <div class="tool-card__title">Full cost of living breakdown 2026</div>
+      </div>
+    </a>
+    <a class="tool-card" href="/pages/chiang-mai/where-to-stay.html" role="listitem">
+      <div class="tool-card__icon" aria-hidden="true">&#127968;</div>
+      <div class="tool-card__body">
+        <div class="tool-card__type">Guide</div>
+        <div class="tool-card__title">Where to stay – neighbourhood guide</div>
+      </div>
+    </a>
+    <a class="tool-card" href="/pages/checklists/index.html" role="listitem">
+      <div class="tool-card__icon" aria-hidden="true">&#128462;</div>
+      <div class="tool-card__body">
+        <div class="tool-card__type">Checklists</div>
+        <div class="tool-card__title">Visa and extension document checklists</div>
+      </div>
+    </a>
+  </div>
+</div>
+</section>
+
+<!-- ========================================================
+     RELATED GUIDES
+     ======================================================== -->
+<section class="related-guides-section" aria-labelledby="related-heading">
+<div class="article-wrap">
+  <div class="related-guides-header">
+    <h2 class="section-title" id="related-heading">Related Chiang Mai guides</h2>
+  </div>
+  <div class="related-guides-grid" role="list">
+    <a href="/pages/chiang-mai/" class="related-guide-card" role="listitem">
+      <span class="related-guide-tag">Hub</span>
+      <span class="related-guide-title">All Chiang Mai guides</span>
+      <span class="related-guide-arrow">→</span>
+    </a>
+    <a href="/pages/chiang-mai/where-to-stay.html" class="related-guide-card" role="listitem">
+      <span class="related-guide-tag">Guide</span>
+      <span class="related-guide-title">Where to stay – neighbourhood guide</span>
+      <span class="related-guide-arrow">→</span>
+    </a>
+    <a href="/pages/chiang-mai/things-to-do.html" class="related-guide-card" role="listitem">
+      <span class="related-guide-tag">Guide</span>
+      <span class="related-guide-title">Things to do in Chiang Mai</span>
+      <span class="related-guide-arrow">→</span>
+    </a>
+    <a href="/pages/chiang-mai/digital-nomads.html" class="related-guide-card" role="listitem">
+      <span class="related-guide-tag">Guide</span>
+      <span class="related-guide-title">Digital nomads in Chiang Mai</span>
+      <span class="related-guide-arrow">→</span>
+    </a>
+  </div>
+</div>
+
+<style>
+.related-guides-section {
+  padding: clamp(3rem, 5vw, 4.5rem) 0;
+  background: var(--c-off-white);
+  border-top: 1px solid var(--c-border);
+}
+
+.related-guides-header {
+  margin-bottom: 2rem;
+}
+
+.related-guides-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.25rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.related-guide-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.5rem;
+  background: var(--c-white);
+  border: 1.5px solid var(--c-border);
+  border-radius: var(--radius-lg);
+  text-decoration: none;
+  color: var(--c-body);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.related-guide-card:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+}
+
+.related-guide-card:focus-visible {
+  outline: 2px solid var(--c-primary);
+  outline-offset: 2px;
+}
+
+.related-guide-tag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--c-primary);
+}
+
+.related-guide-title {
+  font-weight: 600;
+  color: var(--c-dark);
+  font-size: 0.95rem;
+}
+
+.related-guide-arrow {
+  font-weight: 600;
+  color: var(--c-primary);
+  margin-top: 0.5rem;
+}
+</style>
+</section>
+
+<!-- ========================================================
+     FOOTER
+     ======================================================== -->
+<footer class="site-footer" role="contentinfo">
+<div class="container">
+
+  <div class="footer-top">
+
+    <div class="footer-brand footer-col">
+      <a href="/" class="footer-logo" aria-label="CMLocals homepage">
+        <span class="footer-logo-mark" aria-hidden="true">C</span>
+        <span class="footer-logo-text">CMLocals</span>
+      </a>
+      <p class="footer-tagline">Independent Thai visa information hub for Chiang Mai and long-stay life in Thailand.</p>
+      <div class="footer-social" aria-label="Social media links">
+        <a href="https://www.facebook.com/chiangmailocals" rel="noopener" target="_blank" aria-label="Facebook">f</a>
+        <a href="https://wa.me/66801202074" rel="noopener" target="_blank" aria-label="WhatsApp">W</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h3 class="footer-col-title">Visa Guides</h3>
+      <ul>
+        <li><a href="/pages/visas/index.html">Visa Overview 2026</a></li>
+        <li><a href="/pages/visas/long-stay/index.html">Long-Stay Visas</a></li>
+        <li><a href="/pages/visas/short-stay/index.html">Short-Stay &amp; Tourist</a></li>
+        <li><a href="/pages/visas/long-stay/dtv-digital-nomad/">DTV and Special Programs</a></li>
+        <li><a href="/pages/chiang-mai/immigration-guide/">Chiang Mai Immigration</a></li>
+        <li><a href="/pages/visas/long-stay/permanent-residence/">Permanent Residence</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3 class="footer-col-title">Chiang Mai</h3>
+      <ul>
+        <li><a href="/pages/chiang-mai/why-chiang-mai-base.html">Why Chiang Mai</a></li>
+        <li><a href="/pages/chiang-mai/where-to-stay.html">Neighbourhoods</a></li>
+        <li><a href="/pages/chiang-mai/cost-of-living.html">Cost of Living</a></li>
+        <li><a href="/pages/chiang-mai/getting-around.html">Getting Around</a></li>
+        <li><a href="/pages/chiang-mai/phones-and-banking.html">Phones &amp; Banking</a></li>
+        <li><a href="/pages/chiang-mai/digital-nomads.html">Digital Nomads</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3 class="footer-col-title">About &amp; Legal</h3>
+      <ul>
+        <li><a href="/pages/about-cmlocals.html">About CMLocals</a></li>
+        <li><a href="/pages/disclaimer.html">Disclaimer</a></li>
+        <li><a href="/pages/terms-of-service.html">Terms of Service</a></li>
+        <li><a href="/pages/privacy-policy.html">Privacy Policy</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3 class="footer-col-title">Contact</h3>
+      <ul>
+        <li><a href="https://wa.me/66801202074" rel="noopener" target="_blank">WhatsApp</a></li>
+        <li><a href="https://m.me/cmlocals" rel="noopener" target="_blank">Messenger</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <span class="footer-copy">&copy; 2026 CMLocals. All rights reserved.</span>
+    <nav class="footer-legal" aria-label="Legal navigation">
+      <a href="/pages/privacy-policy.html">Privacy</a>
+      <a href="/pages/terms-of-service.html">Terms</a>
+      <a href="/pages/disclaimer.html">Disclaimer</a>
+    </nav>
+  </div>
+
+</div>
+</footer>
+
+<!-- Chaty Widget -->
+<button id="chaty-trigger-btn" aria-label="Open contact channels">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" aria-hidden="true">
+    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+  </svg>
+</button>
+<div id="chaty-menu" role="dialog" aria-label="Contact channels">
+  <a href="https://m.me/cmlocals" class="chaty-channel" target="_blank" rel="noopener">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="#1877F2" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.84 3.49 8.87 8 9.8V15h-2.5V12h2.5v-2.1c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.3.2 2.3.2v2.5h-1.3c-1.3 0-1.7.8-1.7 1.6V12h2.9l-.5 3h-2.4v6.8c4.5-.9 8-4.9 8-9.8 0-5.52-4.48-10-10-10z"/></svg>
+    Facebook Messenger
+  </a>
+  <a href="https://wa.me/66801202074" class="chaty-channel" target="_blank" rel="noopener">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="#25D366" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    WhatsApp
+  </a>
+</div>
+
+<script>
+(function() {
+  'use strict';
+
+  var header = document.getElementById('site-header');
+  window.addEventListener('scroll', function() {
+    header.classList.toggle('scrolled', window.scrollY > 10);
+  }, { passive: true });
+
+  var hamburger = document.getElementById('hamburger');
+  var mobileNav = document.getElementById('mobile-nav');
+  hamburger.addEventListener('click', function() {
+    var isOpen = hamburger.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', isOpen);
+    mobileNav.hidden = !isOpen;
+    mobileNav.classList.toggle('open', isOpen);
+  });
+
+  var chatBtn = document.getElementById('chaty-trigger-btn');
+  var chatMenu = document.getElementById('chaty-menu');
+  chatBtn.addEventListener('click', function() { chatMenu.classList.toggle('open'); });
+  document.addEventListener('click', function(e) {
+    if (!chatBtn.contains(e.target) && !chatMenu.contains(e.target)) {
+      chatMenu.classList.remove('open');
+    }
+  });
+
+})();
+</script>
+
+</body>
+</html>

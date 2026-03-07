@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Thailand Digital Arrival Card (TDAC) 2026 – CMLocals</title>
+<meta name="description" content="Complete guide to Thailand's Digital Arrival Card (TDAC): what it is, who needs it, how to file online for free, integration with visa types, processing times, and common questions. Free service since 2023."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet"/>
+
+<style>
+/* ============================================================
+   CMLocals – Immigration Pages
+   Dark base: #202A6C  |  Accent: #6366F1
+   ============================================================ */
+
+:root {
+  --c-dark:          #202A6C;
+  --c-dark-2:        #202A6C;
+  --c-dark-3:        #0B0F6E;
+  --c-primary:       #4F46E5;
+  --c-primary-h:     #4338CA;
+  --c-primary-glow:  rgba(79,70,229,.18);
+  --c-page-accent:   #6366F1;
+  --c-page-accent-l: #E0E7FF;
+  --c-violet:        #7C3AED;
+  --c-violet-l:      #EDE9FE;
+  --c-white:         #FFFFFF;
+  --c-off-white:     #F8F7FF;
+  --c-subtle:        #F1EFFF;
+  --c-body:          #111827;
+  --c-muted:         #4B5563;
+  --c-border:        #E5E7EB;
+  --c-border-dark:   rgba(255,255,255,.1);
+  --c-wa:            #25D366;
+  --c-wa-h:          #1aaa55;
+  --c-fb:            #1877F2;
+  --c-fb-h:          #1565d8;
+  --radius-sm:       6px;
+  --radius-md:       10px;
+  --radius-lg:       16px;
+  --shadow-sm:       0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.06);
+  --shadow-md:       0 4px 16px rgba(0,0,0,.10), 0 2px 6px rgba(0,0,0,.06);
+  --shadow-lg:       0 12px 40px rgba(0,0,0,.14);
+  --font-display:    'Newsreader', Georgia, serif;
+  --font-body:       'DM Sans', system-ui, sans-serif;
+  --max-w:           1200px;
+  --article-w:       780px;
+  --edge:            clamp(1.25rem, 4vw, 2.5rem);
+  --section-py:      clamp(3rem, 5vw, 4.5rem);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body { font-family: var(--font-body); font-size: 1rem; line-height: 1.65; color: var(--c-body); background: var(--c-white); -webkit-font-smoothing: antialiased; }
+img { max-width: 100%; display: block; height: auto; }
+a { color: inherit; }
+ul { list-style: none; }
+button { font-family: inherit; cursor: pointer; border: none; background: none; }
+
+.container { width: 100%; max-width: var(--max-w); margin-inline: auto; padding-inline: var(--edge); }
+.article-wrap { width: 100%; max-width: var(--article-w); margin-inline: auto; padding-inline: var(--edge); }
+
+/* --- BUTTONS --- */
+.btn {
+  display: inline-flex; align-items: center; gap: .5em;
+  padding: .65em 1.4em; border-radius: var(--radius-sm);
+  font-family: var(--font-body); font-size: .9rem; font-weight: 600; line-height: 1.3;
+  text-decoration: none; border: 1.5px solid transparent;
+  transition: background .18s, box-shadow .18s, border-color .18s, transform .12s;
+  white-space: nowrap;
+}
+.btn:hover { transform: translateY(-1px); }
+.btn-dark { background: rgb(20,25,34); color: var(--c-white); border-color: rgb(20,25,34); }
+.btn-dark:hover { background: #141110; border-color: #141110; box-shadow: var(--shadow-md); }
+.btn-outline-light { background: transparent; color: var(--c-white); border-color: rgba(255,255,255,.35); }
+.btn-outline-light:hover { background: rgba(255,255,255,.1); border-color: rgba(255,255,255,.6); }
+.btn-wa { background: var(--c-wa); color: var(--c-white); border-color: var(--c-wa); }
+.btn-wa:hover { background: var(--c-wa-h); border-color: var(--c-wa-h); }
+.btn-fb { background: var(--c-fb); color: var(--c-white); border-color: var(--c-fb); }
+.btn-fb:hover { background: var(--c-fb-h); border-color: var(--c-fb-h); }
+.btn-lg { padding: .8em 1.75em; font-size: 1rem; }
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+.site-header {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(255,255,255,.92);
+  backdrop-filter: blur(14px) saturate(180%);
+  -webkit-backdrop-filter: blur(14px) saturate(180%);
+  border-bottom: 1px solid var(--c-border);
+  transition: box-shadow .25s;
+}
+.site-header.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,.09); }
+.header-inner { display: flex; align-items: center; justify-content: space-between; height: 54px; gap: 0.6rem; }
+.header-logo { text-decoration: none; flex-shrink: 0; display: flex; align-items: center; gap: .5rem; }
+.header-logo-mark {
+  width: 32px; height: 32px; border-radius: 7px;
+  background: linear-gradient(135deg, var(--c-primary) 0%, var(--c-violet) 100%);
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-family: var(--font-display); font-size: 1.05rem; font-weight: 500; font-style: italic;
+}
+.header-logo-text { font-family: var(--font-body); font-weight: 700; font-size: 1.05rem; color: #202A6C; letter-spacing: -.02em; }
+.primary-nav { display: flex; align-items: center; justify-content: center; gap: .4rem; flex: 1; }
+.primary-nav a {
+  font-size: 1rem; font-weight: 500; color: var(--c-body);
+  padding: .5em .85em; border-radius: var(--radius-sm);
+  text-decoration: none; white-space: nowrap;
+  transition: color .15s, background .15s;
+}
+.primary-nav a:hover,
+.primary-nav a.active { color: var(--c-primary); background: var(--c-subtle); }
+.header-ctas { display: flex; align-items: center; gap: .6rem; flex-shrink: 0; }
+.header-hamburger {
+  display: none; flex-direction: column; justify-content: center; align-items: center;
+  width: 40px; height: 40px; gap: 5px; border-radius: var(--radius-sm); cursor: pointer; background: transparent;
+}
+.header-hamburger span { display: block; width: 22px; height: 2px; background: #202A6C; border-radius: 2px; transition: transform .25s, opacity .25s; }
+.header-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.header-hamburger.open span:nth-child(2) { opacity: 0; }
+.header-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.mobile-nav {
+  display: none; position: fixed; inset: 64px 0 0 0; z-index: 99;
+  background: var(--c-white); overflow-y: auto;
+  padding: 1.5rem var(--edge) 3rem; border-top: 1px solid var(--c-border);
+}
+.mobile-nav.open { display: block; }
+.mobile-nav a { display: block; padding: .9rem 0; font-size: 1rem; font-weight: 500; color: #202A6C; text-decoration: none; border-bottom: 1px solid var(--c-border); }
+.mobile-nav a:last-of-type { border-bottom: none; }
+.mobile-nav a:hover { color: var(--c-primary); }
+.mobile-nav-ctas { display: flex; flex-direction: column; gap: .75rem; margin-top: 1.5rem; }
+.mobile-nav-ctas .btn { justify-content: center; }
+
+/* ============================================================
+   PAGE HERO
+   ============================================================ */
+.page-hero {
+  background: linear-gradient(135deg, #202A6C 0%, #2D3A8C 100%);
+  overflow: hidden; position: relative;
+  padding-block: clamp(3.5rem, 6vw, 5.5rem);
+}
+.page-hero::before {
+  content: '';
+  position: absolute; inset: 0; pointer-events: none;
+  background:
+    radial-gradient(ellipse 65% 80% at 90% 30%, rgba(255,255,255,.12) 0%, transparent 65%),
+    radial-gradient(ellipse 50% 70% at 0% 90%, rgba(124,58,237,.24) 0%, transparent 65%),
+    radial-gradient(ellipse 80% 60% at 50% 50%, rgba(99,102,241,.08) 0%, transparent 70%);
+}
+.page-hero-inner {
+  position: relative; z-index: 1;
+  max-width: var(--article-w); padding-inline: var(--edge); margin-inline: auto;
+}
+.page-hero-eyebrow {
+  display: inline-flex; align-items: center; gap: .5rem;
+  font-size: .8rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase;
+  color: rgba(255,255,255,.75); margin-bottom: 1.25rem;
+}
+.page-hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  font-weight: 400; line-height: 1.15;
+  color: var(--c-white); letter-spacing: -.02em; margin-bottom: 1.25rem;
+}
+.page-hero h1 em { font-style: italic; font-weight: 300; color: rgba(255,255,255,.82); }
+.page-hero-lead {
+  font-size: clamp(.95rem, 1.5vw, 1.1rem);
+  color: rgba(255,255,255,.82); line-height: 1.75; max-width: 62ch; margin-bottom: 2rem;
+}
+.page-hero-meta { font-size: .82rem; color: rgba(255,255,255,.55); display: flex; gap: 1.5rem; flex-wrap: wrap; }
+
+/* ============================================================
+   BREADCRUMB
+   ============================================================ */
+.breadcrumb { background: var(--c-off-white); border-bottom: 1px solid var(--c-border); padding: .65rem 0; }
+.breadcrumb-inner {
+  display: flex; align-items: center; gap: .4rem; font-size: .8rem; color: var(--c-muted);
+  max-width: var(--article-w); padding-inline: var(--edge); margin-inline: auto;
+}
+.breadcrumb a { color: var(--c-muted); text-decoration: none; }
+.breadcrumb a:hover { color: var(--c-primary); }
+.breadcrumb-sep { color: var(--c-border); }
+
+/* ============================================================
+   WHY BAND (key facts strip)
+   ============================================================ */
+.why-band {
+  background: var(--c-off-white);
+  border-top: 1px solid var(--c-border);
+  border-bottom: 1px solid var(--c-border);
+  padding-block: clamp(2rem, 3.5vw, 3rem);
+}
+.why-band-inner { max-width: var(--article-w); padding-inline: var(--edge); margin-inline: auto; }
+.why-band h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.3rem, 2vw, 1.65rem);
+  font-weight: 400; color: #202A6C; letter-spacing: -.02em; margin-bottom: 1.25rem;
+}
+.why-items { display: flex; flex-direction: column; gap: .85rem; }
+.why-item {
+  display: flex; align-items: flex-start; gap: 1rem;
+  padding: 1rem 1.25rem;
+  background: var(--c-white); border: 1px solid var(--c-border); border-radius: var(--radius-md);
+}
+.why-item__icon {
+  font-size: 1.3rem; flex-shrink: 0; margin-top: .1rem;
+}
+.why-item__title { font-weight: 700; font-size: .95rem; color: #202A6C; margin-bottom: .25rem; }
+.why-item__desc { font-size: .88rem; color: var(--c-body); line-height: 1.6; }
+
+/* ============================================================
+   ARTICLE BODY
+   ============================================================ */
+.article-body { padding-block: clamp(2.5rem, 4vw, 4rem); }
+.article-body h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 400; line-height: 1.25; letter-spacing: -.02em;
+  color: #202A6C;
+  margin-top: 3rem; margin-bottom: 1rem;
+  padding-top: 2rem; border-top: 1px solid var(--c-border);
+}
+.article-body h2:first-of-type { border-top: none; padding-top: 0; margin-top: 0; }
+.article-body h3 {
+  font-family: var(--font-body); font-size: 1.1rem; font-weight: 600;
+  color: #202A6C; margin-top: 2rem; margin-bottom: .6rem;
+}
+.article-body p { margin-bottom: 1.25rem; line-height: 1.75; color: var(--c-body); max-width: 68ch; }
+.article-body ul { list-style: none; margin: 1rem 0 1.5rem 0; display: flex; flex-direction: column; gap: .6rem; }
+.article-body ul li { padding-left: 1.25rem; position: relative; line-height: 1.65; color: var(--c-body); }
+.article-body ul li::before {
+  content: ''; position: absolute; left: 0; top: .7em;
+  width: 5px; height: 5px; border-radius: 50%; background: var(--c-page-accent);
+}
+
+/* ============================================================
+   REQUIREMENTS CARD
+   ============================================================ */
+.req-card {
+  border-left: 4px solid var(--c-page-accent);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  background: var(--c-off-white); padding: 1.25rem 1.5rem;
+  margin: 1.75rem 0; max-width: 680px;
+}
+.req-card__header { display: flex; align-items: center; gap: .75rem; margin-bottom: .6rem; }
+.req-card__icon { font-size: 1.4rem; }
+.req-card__title { font-weight: 700; font-size: 1rem; color: #202A6C; }
+.req-card__meta { font-size: .78rem; color: var(--c-muted); margin-top: .1rem; }
+.req-card p { font-size: .9rem; line-height: 1.65; color: var(--c-body); margin: 0; }
+
+/* ============================================================
+   CALLOUT BAND
+   ============================================================ */
+.callout-band {
+  background: var(--c-page-accent-l);
+  border-left: 3px solid var(--c-page-accent);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  padding: 1.25rem 1.5rem; margin: 2rem 0; max-width: 68ch;
+}
+.callout-band p { margin: 0; color: #202A6C; font-size: .95rem; line-height: 1.65; }
+.callout-band strong { color: var(--c-page-accent); }
+
+/* ============================================================
+   VISA SECTION
+   ============================================================ */
+.visa-section {
+  background: var(--c-dark);
+  padding-block: clamp(2.5rem, 4vw, 3.5rem);
+  margin-block: clamp(2.5rem, 4vw, 4rem);
+  position: relative; overflow: hidden;
+}
+.visa-section::before {
+  content: '';
+  position: absolute; right: -10%; top: -50%; width: 50%; height: 200%;
+  background: radial-gradient(ellipse, rgba(99,102,241,.12) 0%, transparent 65%);
+  pointer-events: none;
+}
+.visa-section-inner {
+  max-width: var(--article-w); padding-inline: var(--edge);
+  margin-inline: auto; position: relative; z-index: 1;
+}
+.visa-section h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 2.5vw, 1.85rem);
+  font-weight: 400; color: var(--c-white); letter-spacing: -.02em; margin-bottom: 1rem;
+}
+.visa-section p { color: rgba(255,255,255,.88); line-height: 1.7; margin-bottom: 1.25rem; max-width: 64ch; }
+.visa-links { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.5rem; }
+.visa-links a {
+  font-size: .85rem; font-weight: 600; color: rgba(255,255,255,.90);
+  background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.18);
+  padding: .45em 1em; border-radius: var(--radius-sm);
+  text-decoration: none; transition: background .18s, border-color .18s;
+}
+.visa-links a:hover { background: rgba(99,102,241,.28); border-color: var(--c-page-accent); color: #fff; }
+
+/* ============================================================
+   TOOLS & CHECKLISTS
+   ============================================================ */
+.tools-section { background: var(--c-white); padding-block: clamp(2.5rem, 4vw, 3.5rem); border-top: 1px solid var(--c-border); }
+.tools-section-inner { max-width: var(--article-w); padding-inline: var(--edge); margin-inline: auto; }
+.tools-header { margin-bottom: 1.5rem; }
+.section-title {
+  font-family: var(--font-display); font-size: clamp(1.4rem, 2.5vw, 1.85rem);
+  font-weight: 400; letter-spacing: -.02em; color: #202A6C; margin-bottom: .4rem;
+}
+.guides-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+.tool-card {
+  border: 1px solid var(--c-border); border-radius: var(--radius-md);
+  padding: 1.25rem 1.4rem; background: var(--c-off-white);
+  text-decoration: none; color: var(--c-body);
+  display: flex; align-items: center; gap: 1rem;
+  transition: border-color .18s, box-shadow .18s;
+}
+.tool-card:hover { border-color: var(--c-page-accent); background: var(--c-white); box-shadow: var(--shadow-sm); }
+.tool-card__icon {
+  width: 40px; height: 40px; border-radius: var(--radius-sm);
+  background: var(--c-page-accent-l);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.1rem; flex-shrink: 0; transition: background .18s;
+}
+.tool-card:hover .tool-card__icon { background: var(--c-violet-l); }
+.tool-card__body { flex: 1; }
+.tool-card__type { font-size: .7rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--c-page-accent); }
+.tool-card__title { font-size: .88rem; font-weight: 600; color: #202A6C; line-height: 1.3; }
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.site-footer { background: var(--c-dark-2); padding-block: var(--section-py); color: rgba(255,255,255,.92); }
+.footer-top { display: grid; grid-template-columns: 1.6fr repeat(4, 1fr); gap: 3rem; padding-bottom: 3rem; border-bottom: 1px solid var(--c-border-dark); }
+.footer-logo { display: flex; align-items: center; gap: .5rem; text-decoration: none; margin-bottom: .8rem; }
+.footer-logo-mark {
+  width: 30px; height: 30px; border-radius: 6px;
+  background: linear-gradient(135deg, var(--c-primary) 0%, var(--c-violet) 100%);
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-family: var(--font-display); font-size: .95rem; font-weight: 500; font-style: italic;
+}
+.footer-logo-text { font-family: var(--font-body); font-weight: 700; font-size: .95rem; color: var(--c-white); letter-spacing: -.01em; }
+.footer-tagline { font-size: .82rem; line-height: 1.6; max-width: 240px; color: rgba(255,255,255,.88); }
+.footer-social { display: flex; gap: .6rem; margin-top: 1.25rem; }
+.footer-social a {
+  width: 32px; height: 32px; border-radius: var(--radius-sm);
+  background: rgba(255,255,255,.08); color: rgba(255,255,255,.88);
+  display: flex; align-items: center; justify-content: center;
+  font-size: .8rem; font-weight: 700; text-decoration: none;
+  transition: background .18s, color .18s;
+}
+.footer-social a:hover { background: var(--c-primary); color: var(--c-white); }
+.footer-col-title { font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.70); margin-bottom: 1.1rem; }
+.footer-col ul { display: flex; flex-direction: column; gap: .55rem; }
+.footer-col ul a { font-size: .83rem; color: rgba(255,255,255,.88); text-decoration: none; transition: color .15s; }
+.footer-col ul a:hover { color: var(--c-white); }
+.footer-bottom { display: flex; align-items: center; justify-content: space-between; padding-top: 2rem; gap: 1rem; flex-wrap: wrap; }
+.footer-copy { font-size: .8rem; }
+.footer-legal { display: flex; gap: 1.5rem; }
+.footer-legal a { font-size: .8rem; color: rgba(255,255,255,.75); text-decoration: none; transition: color .15s; }
+.footer-legal a:hover { color: var(--c-white); }
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 1100px) { .footer-top { grid-template-columns: 1fr 1fr 1fr; } }
+@media (max-width: 960px) {
+  .primary-nav { display: none; }
+  .header-hamburger { display: flex; }
+  .footer-top { grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .guides-row { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .page-hero h1 { font-size: 1.75rem; }
+  .footer-top { grid-template-columns: 1fr; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; }
+}
+</style>
+<link rel="stylesheet" href="../../css/chaty-front.min.css"/>
+</head>
+<body>
+
+<!-- ========================================================
+     HEADER
+     ======================================================== -->
+<header class="site-header" id="site-header" role="banner">
+<div class="container">
+<div class="header-inner">
+
+  <a href="/" class="header-logo" aria-label="CMLocals homepage">
+    <div class="header-logo-mark" aria-hidden="true">C</div>
+    <span class="header-logo-text">CMLocals</span>
+  </a>
+
+  <nav class="primary-nav" aria-label="Primary navigation">
+    <a href="/">Home</a>
+    <a href="/pages/visas/index.html">Visas</a>
+    <a href="/pages/visas/long-stay/index.html">Long Stay</a>
+    <a href="/pages/visas/short-stay/index.html">Short Stay</a>
+    <a href="/pages/ed-visas/index.html">ED Visas</a>
+    <a href="/pages/chiang-mai/index.html">Chiang Mai</a>
+    <a href="/pages/immigration/index.html" class="active">Immigration</a>
+    <a href="/pages/checklists/index.html">Checklists</a>
+    <a href="/pages/tools/index.html">Tools</a>
+  </nav>
+
+  <div class="header-ctas">
+    <a href="https://wa.me/66801202074" class="btn btn-wa" rel="noopener" target="_blank">WhatsApp</a>
+    <a href="https://m.me/cmlocals" class="btn btn-fb" rel="noopener" target="_blank">Messenger</a>
+  </div>
+
+  <button class="header-hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+
+</div>
+</div>
+</header>
+
+<nav class="mobile-nav" id="mobile-nav" hidden>
+  <a href="/">Home</a>
+  <a href="/pages/visas/index.html">Visas</a>
+  <a href="/pages/visas/long-stay/index.html">Long Stay</a>
+  <a href="/pages/visas/short-stay/index.html">Short Stay</a>
+  <a href="/pages/ed-visas/index.html">ED Visas</a>
+  <a href="/pages/chiang-mai/index.html">Chiang Mai</a>
+  <a href="/pages/immigration/index.html">Immigration</a>
+  <a href="/pages/checklists/index.html">Checklists</a>
+  <a href="/pages/tools/index.html">Tools</a>
+  <div class="mobile-nav-ctas">
+    <a href="https://wa.me/66801202074" class="btn btn-wa" rel="noopener" target="_blank">WhatsApp</a>
+    <a href="https://m.me/cmlocals" class="btn btn-fb" rel="noopener" target="_blank">Messenger</a>
+  </div>
+</nav>
+
+<!-- ========================================================
+     PAGE HERO
+     ======================================================== -->
+<section class="page-hero">
+<div class="page-hero-inner">
+  <div class="page-hero-eyebrow">✓ Digital Tool</div>
+  <h1>Thailand Digital Arrival Card 2026</h1>
+  <p class="page-hero-lead">Complete guide to TDAC: what it is, who must file, how to submit online for free, integration with visa types, processing times, and common questions about Thailand's digital arrival requirement.</p>
+  <div class="page-hero-meta">
+    <span>Read time: 5 min</span>
+    <span>Last verified: March 2026</span>
+  </div>
+</div>
+</section>
+
+<!-- ========================================================
+     BREADCRUMB
+     ======================================================== -->
+<nav class="breadcrumb">
+<div class="breadcrumb-inner">
+  <a href="/">Home</a>
+  <span class="breadcrumb-sep">/</span>
+  <a href="/pages/immigration/index.html">Immigration</a>
+  <span class="breadcrumb-sep">/</span>
+  <span>Thailand Digital Arrival Card</span>
+</div>
+</nav>
+
+<!-- ========================================================
+     WHY BAND
+     ======================================================== -->
+<section class="why-band">
+<div class="why-band-inner">
+  <h2>Quick Facts</h2>
+  <div class="why-items">
+    <div class="why-item">
+      <div class="why-item__icon">✓</div>
+      <div>
+        <div class="why-item__title">Mandatory for Most Arrivals</div>
+        <div class="why-item__desc">TDAC required for all foreign nationals entering Thailand by air, land, or sea since January 2023.</div>
+      </div>
+    </div>
+    <div class="why-item">
+      <div class="why-item__icon">💰</div>
+      <div>
+        <div class="why-item__title">Always Free</div>
+        <div class="why-item__desc">No charge. Services claiming to file TDAC for a fee are unnecessary—file yourself at no cost.</div>
+      </div>
+    </div>
+    <div class="why-item">
+      <div class="why-item__icon">📱</div>
+      <div>
+        <div class="why-item__title">Online Only</div>
+        <div class="why-item__desc">File at tdac.mfa.go.th. Available 24 hours. Mobile-friendly. No in-person submission required.</div>
+      </div>
+    </div>
+    <div class="why-item">
+      <div class="why-item__icon">⏱️</div>
+      <div>
+        <div class="why-item__title">Deadline: 3 Days Before Arrival</div>
+        <div class="why-item__desc">Must complete TDAC within 3 days of your arrival date. Filing earlier (1–2 weeks) is recommended.</div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ========================================================
+     ARTICLE BODY
+     ======================================================== -->
+<article class="article-body article-wrap">
+
+<h2>What This Covers</h2>
+
+<p>The <a href="https://tdac.immigration.go.th/" target="_blank" rel="noopener">Thailand Digital Arrival Card (TDAC)</a> is a mandatory digital immigration requirement introduced in January 2023. It replaced the TM.6 paper form that previously had to be filled out by hand on arrival at the airport or border.</p>
+
+<p>TDAC streamlines the arrival process by collecting passenger information electronically before you reach <a href="https://www.immigration.go.th/" target="_blank" rel="noopener">immigration</a>. This guide covers what TDAC is, who must submit it, how to file, fees, processing times, integration with visa types, and troubleshooting common errors.</p>
+
+<h2>Who It Applies To</h2>
+
+<p>TDAC is mandatory for all foreign nationals entering Thailand by any port of entry: international airports, land borders, or sea ports.</p>
+
+<p>This applies whether you hold:</p>
+
+<ul>
+<li>A visa (tourist, Non-O, Non-B, ED, etc.)</li>
+<li>Visa-exempt entry</li>
+<li>Visa on arrival (VOA)</li>
+</ul>
+
+<p>The only exceptions are Thai citizens and certain diplomatic passport holders. If you are a foreign national, you must complete TDAC.</p>
+
+<h2>How to File TDAC</h2>
+
+<h3>Step 1: Access the System</h3>
+
+<p>Go to <strong><a href="https://tdac.immigration.go.th/" target="_blank" rel="noopener">tdac.mfa.go.th</a></strong> in your web browser or download the TDAC mobile app. The system is available 24 hours, 7 days a week.</p>
+
+<h3>Step 2: Create an Account (First Time Only)</h3>
+
+<p>If you are filing TDAC for the first time, create an account using your email address and password. The account persists for future trips, so note your credentials.</p>
+
+<h3>Step 3: Complete Your Information</h3>
+
+<p>Fill in your personal details:</p>
+
+<ul>
+<li>Full name (as it appears in your passport)</li>
+<li>Passport number and issue/expiry dates</li>
+<li>Date of birth</li>
+<li>Nationality</li>
+<li>Email address and phone number</li>
+</ul>
+
+<h3>Step 4: Travel Details</h3>
+
+<p>Provide your arrival information:</p>
+
+<ul>
+<li>Expected arrival date and time</li>
+<li>Port of entry (Suvarnabhumi, Don Muang, Chiang Mai, Phuket, etc.)</li>
+<li>Flight number or transport method</li>
+<li>Departure country</li>
+</ul>
+
+<h3>Step 5: Accommodation Details</h3>
+
+<p>Enter your first night's accommodation in Thailand:</p>
+
+<ul>
+<li>Hotel name or residential address</li>
+<li>Province and postal code</li>
+</ul>
+
+<h3>Step 6: Review and Submit</h3>
+
+<p>Check all details for accuracy. Errors in your name or passport number will cause problems at immigration. Submit your form.</p>
+
+<h3>Step 7: Save Your Confirmation</h3>
+
+<p>You will receive a reference number. Screenshot or print this number. You do not need to print TDAC itself—the system verifies your submission electronically at immigration. However, keeping the reference number is useful if immigration asks.</p>
+
+<h2>Timing: When to File</h2>
+
+<p>File TDAC as early as possible, ideally 1–2 weeks before arrival. The latest you can file is 3 days before your scheduled arrival date.</p>
+
+<p>Visa-exempt travellers sometimes file as late as possible to allow itinerary flexibility. Business visa holders and students should file well in advance.</p>
+
+<p>The system will not accept submissions more than 3 days after your arrival date has passed. If you miss the deadline, you may face delays or rejection at immigration.</p>
+
+<h2>Fees</h2>
+
+<p>TDAC is always free. There is no charge to file, no processing fee, and no service fee. Do not use services claiming to file TDAC on your behalf for a fee—this is unnecessary and a waste of money.</p>
+
+<h2>Common Questions and Errors</h2>
+
+<h3>What if I Make a Mistake?</h3>
+
+<p>You can edit your TDAC submission before your arrival date. Log in, locate your record, and update the information. Once you have passed immigration, you cannot modify it.</p>
+
+<h3>What If My Flight is Delayed?</h3>
+
+<p>If your flight is delayed and you now arrive after the TDAC submission deadline, update your arrival date immediately in the system. Immigration checks the system on a rolling basis, so inform the officer at immigration of the delay.</p>
+
+<h3>Can I File TDAC for Multiple Family Members?</h3>
+
+<p>Yes. Each family member must file their own TDAC using their own email address and passport information. There is no group or family submission option.</p>
+
+<h3>What if the Website is Slow or Crashes?</h3>
+
+<p>The system sometimes experiences server overload during peak times (early mornings, weekends). Try again later. Avoid filing close to your arrival date.</p>
+
+<h3>Do I Need to Print TDAC?</h3>
+
+<p>No. Keep your reference number for your records, but immigration checks your submission electronically. You do not need to print anything.</p>
+
+<h2>Integration with Visa Types</h2>
+
+<p>TDAC is required regardless of your visa type. However, how you file may depend on your planned stay:</p>
+
+<h3>Tourist and Short-Stay Visas</h3>
+
+<p>File TDAC before arrival. At immigration, present your passport, ticket, and proof of onward travel. TDAC appears in the system.</p>
+
+<h3>ED Visa (Student)</h3>
+
+<p>File TDAC with your school's letter of acceptance information ready. At immigration, present your ED visa, letter of acceptance, and passport. TDAC streamlines the process.</p>
+
+<h3>Non-O and Non-B Long-Stay Visas</h3>
+
+<p>File TDAC in advance. Your visa approval already grants you entry—TDAC is a supplementary requirement.</p>
+
+<h3>Visa on Arrival (VOA)</h3>
+
+<p>If using VOA, file TDAC first. At immigration, submit your VOA application along with your passport. TDAC accelerates the process.</p>
+
+<h2>Chiang Mai Specific Notes</h2>
+
+<p>Chiang Mai International Airport processes TDAC submissions alongside tourist and long-stay visa arrivals. Officers are experienced and move efficiently. Filing TDAC in advance ensures you move through the queue smoothly.</p>
+
+<p>If arriving via land border (Chiang Khong or Mae Sai), file TDAC beforehand. Border officers check TDAC electronically, and submitting in advance prevents delays.</p>
+
+<h2>Related Visa Categories</h2>
+
+<ul>
+<li><strong><a href="/pages/visas/short-stay/visa-exempt-entry.html">Visa-Exempt Entry</a></strong> – Simplest arrival method; TDAC required but quick processing.</li>
+<li><strong><a href="/pages/visas/short-stay/visa-on-arrival.html">Visa on Arrival</a></strong> – Applied at border; TDAC plus VOA application fees apply.</li>
+<li><strong><a href="/pages/ed-visas/index.html">ED Visa</a></strong> – Long-term study. TDAC required; school assists with documentation.</li>
+<li><strong><a href="/pages/visas/long-stay/index.html">Non-O Long-Stay Visa</a></strong> – For extended residence. TDAC required for each entry.</li>
+</ul>
+
+<p>For repeated or longer stays, an ED visa or Non-O provides clearer pathways and reduced scrutiny at immigration. First-time arrivals benefit from planning ahead with TDAC.</p>
+
+</article>
+
+<!-- ========================================================
+     VISA SECTION
+     ======================================================== -->
+<section class="visa-section">
+<div class="visa-section-inner">
+  <h2>After TDAC and Immigration</h2>
+  <p>Once you have completed TDAC and cleared immigration, your next step is TM30 address registration. Within 24 hours of arrival, your accommodation must register you with local immigration using the TM30 form. If staying longer than 90 days, prepare for 90-day reporting requirements.</p>
+  <div class="visa-links">
+    <a href="/pages/immigration/entry-strategy-guide.html">Entry Strategy & Presentation</a>
+    <a href="/pages/immigration/tm30-address-reporting.html">TM30 Address Registration</a>
+    <a href="/pages/immigration/land-border-vs-air-entry.html">Air vs Land Entry Differences</a>
+  </div>
+</div>
+</section>
+
+<!-- ========================================================
+     TOOLS & CHECKLISTS
+     ======================================================== -->
+<section class="tools-section">
+<div class="tools-section-inner">
+  <div class="tools-header">
+    <h2 class="section-title">Related Resources</h2>
+  </div>
+  <div class="guides-row">
+    <a href="/pages/immigration/index.html" class="tool-card">
+      <div class="tool-card__icon">📚</div>
+      <div class="tool-card__body">
+        <div class="tool-card__type">Guide</div>
+        <div class="tool-card__title">Immigration Overview</div>
+      </div>
+    </a>
+    <a href="/pages/immigration/entry-strategy-guide.html" class="tool-card">
+      <div class="tool-card__icon">👤</div>
+      <div class="tool-card__body">
+        <div class="tool-card__type">Guide</div>
+        <div class="tool-card__title">Your First Entry</div>
+      </div>
+    </a>
+    <a href="/pages/immigration/queue-strategy.html" class="tool-card">
+      <div class="tool-card__icon">⏱️</div>
+      <div class="tool-card__body">
+        <div class="tool-card__type">Strategy</div>
+        <div class="tool-card__title">Queue & Timing Tips</div>
+      </div>
+    </a>
+  </div>
+</div>
+</section>
+
+<!-- ========================================================
+     FOOTER
+     ======================================================== -->
+<footer class="site-footer">
+<div class="container">
+
+  <div class="footer-top">
+    <div>
+      <a href="/" class="footer-logo">
+        <div class="footer-logo-mark" aria-hidden="true">C</div>
+        <span class="footer-logo-text">CMLocals</span>
+      </a>
+      <p class="footer-tagline">Chiang Mai visa guides, immigration rules, and long-term living advice—written by residents, for residents.</p>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/chiangmailocals" rel="noopener" target="_blank" aria-label="Facebook">f</a>
+        <a href="https://wa.me/66801202074" rel="noopener" target="_blank" aria-label="WhatsApp">W</a>
+        <a href="https://m.me/cmlocals" rel="noopener" target="_blank" aria-label="Messenger">m</a>
+      </div>
+    </div>
+    <div>
+      <h3 class="footer-col-title">Visas</h3>
+      <ul>
+        <li><a href="/pages/visas/index.html">Visa Overview</a></li>
+        <li><a href="/pages/visas/short-stay/index.html">Short Stay</a></li>
+        <li><a href="/pages/visas/long-stay/index.html">Long Stay</a></li>
+        <li><a href="/pages/ed-visas/index.html">ED Visa</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="footer-col-title">Immigration</h3>
+      <ul>
+        <li><a href="/pages/immigration/index.html">Immigration Home</a></li>
+        <li><a href="/pages/immigration/entry-strategy-guide.html">Your First Entry</a></li>
+        <li><a href="/pages/immigration/90-day-reporting.html">90-Day Reporting</a></li>
+        <li><a href="/pages/immigration/tm30-address-reporting.html">TM30 Registration</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="footer-col-title">Chiang Mai</h3>
+      <ul>
+        <li><a href="/pages/chiang-mai/index.html">Chiang Mai Home</a></li>
+        <li><a href="/pages/chiang-mai/cost-of-living.html">Cost of Living</a></li>
+        <li><a href="/pages/chiang-mai/where-to-stay.html">Where to Stay</a></li>
+        <li><a href="/pages/chiang-mai/getting-around.html">Getting Around</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="footer-col-title">Resources</h3>
+      <ul>
+        <li><a href="/pages/checklists/index.html">Checklists</a></li>
+        <li><a href="/pages/tools/index.html">Tools</a></li>
+        <li><a href="/">Home</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="footer-copy">&copy; 2026 CMLocals. All rights reserved.</div>
+    <div class="footer-legal">
+      <a href="/">Privacy Policy</a>
+      <a href="/">Terms of Service</a>
+    </div>
+  </div>
+
+</div>
+</footer>
+
+<script src="../../js/nav.js"></script>
+<script src="../../js/chaty-widget.js" defer></script>
+
+</body>
+</html>
