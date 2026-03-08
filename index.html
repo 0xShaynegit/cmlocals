@@ -254,7 +254,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 /* Mega Menu Dropdown */
 .dropdown-menu {
   position: absolute;
-  top: 100%;
+  top: calc(100% - 0.5rem);
   left: 0;
   background: white;
   border: 1px solid rgba(0,0,0,.1);
@@ -268,10 +268,10 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   transition: opacity 0.2s;
   margin-top: 0;
   z-index: 101;
+  padding-top: 2.5rem;
 }
 
-.nav-item > a.nav-link.has-dropdown:hover + .dropdown-menu,
-.dropdown-menu:hover {
+.nav-item:hover .dropdown-menu {
   display: block;
   opacity: 1;
   pointer-events: auto;
