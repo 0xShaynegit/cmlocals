@@ -1142,6 +1142,255 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .compliance-grid { grid-template-columns: 1fr; }
   .experience-stats { grid-template-columns: 1fr; }
 }
+
+/* ============================================================
+   MEGA MENU & MOBILE ACCORDION (TASKS 2 & 3)
+   ============================================================ */
+
+/* Desktop-only class */
+.desktop-only { display: flex; }
+.mobile-only { display: none; }
+
+/* Navigation Items with Dropdown */
+.nav-item {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.nav-link {
+  position: relative;
+  color: var(--c-body);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 0.5rem 0.85rem;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s, color 0.15s;
+  display: inline-flex;
+  align-items: center;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--c-primary);
+  border-bottom-color: var(--c-primary);
+}
+
+.nav-link.has-dropdown {
+  cursor: pointer;
+}
+
+/* Mega Menu Dropdown */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--c-white);
+  border: 1px solid var(--c-border);
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+  padding: 2rem;
+  min-width: 600px;
+  max-width: 900px;
+  display: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s, visibility 0.2s;
+  margin-top: 0.5rem;
+  z-index: 101;
+}
+
+.nav-item:hover > .dropdown-menu,
+.dropdown-menu:hover {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.dropdown-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.dropdown-section h3 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--c-primary);
+  font-weight: 600;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(79, 70, 229, 0.2);
+}
+
+.dropdown-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-section li {
+  margin: 0;
+}
+
+.dropdown-section li a {
+  color: var(--c-body);
+  text-decoration: none;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  transition: color 0.2s;
+  display: block;
+}
+
+.dropdown-section li a:hover {
+  color: var(--c-primary);
+  font-weight: 500;
+}
+
+.section-link {
+  color: var(--c-primary) !important;
+  font-weight: 600;
+  padding-top: 0.5rem;
+  margin-top: 0.5rem;
+  border-top: 1px solid rgba(0,0,0,0.1);
+  display: block;
+}
+
+/* Mobile Menu Toggle */
+.header-hamburger {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  gap: 4px;
+  padding: 0.5rem;
+}
+
+.header-hamburger span {
+  width: 24px;
+  height: 2px;
+  background: var(--c-dark);
+  transition: all 0.3s;
+  border-radius: 1px;
+}
+
+.header-hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px);
+}
+
+.header-hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.header-hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* Mobile Accordion Drawer */
+@media (max-width: 1023px) {
+  .desktop-only {
+    display: none !important;
+  }
+
+  .mobile-only {
+    display: block !important;
+  }
+
+  .header-hamburger {
+    display: flex;
+  }
+
+  .nav-mobile {
+    display: none;
+    position: fixed;
+    inset: 64px 0 0 0;
+    background: var(--c-white);
+    border-bottom: 1px solid var(--c-border);
+    flex-direction: column;
+    max-height: calc(100vh - 4rem);
+    overflow-y: auto;
+    z-index: 99;
+  }
+
+  .nav-mobile.open {
+    display: flex;
+  }
+
+  .nav-accordion {
+    border-bottom: 1px solid var(--c-border);
+    cursor: pointer;
+    margin: 0;
+  }
+
+  .nav-accordion summary {
+    padding: 1rem;
+    font-weight: 600;
+    color: var(--c-dark);
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+    transition: background 0.2s;
+    font-size: 0.95rem;
+  }
+
+  .nav-accordion summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .nav-accordion summary:hover {
+    background: rgba(79, 70, 229, 0.05);
+  }
+
+  .nav-accordion summary::after {
+    content: '▼';
+    font-size: 0.75rem;
+    transition: transform 0.3s;
+    color: var(--c-primary);
+  }
+
+  .nav-accordion[open] summary::after {
+    transform: rotate(180deg);
+  }
+
+  .nav-accordion ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: rgba(79, 70, 229, 0.02);
+  }
+
+  .nav-accordion li {
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    margin: 0;
+  }
+
+  .nav-accordion li a {
+    display: block;
+    padding: 0.75rem 1rem;
+    padding-left: 2rem;
+    color: var(--c-body);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s, background 0.2s;
+  }
+
+  .nav-accordion li a:active {
+    background: rgba(79, 70, 229, 0.1);
+    color: var(--c-primary);
+  }
+
+  /* Hide mega menu on mobile */
+  .dropdown-menu {
+    display: none !important;
+  }
+}
 </style>
 <link rel="stylesheet" href="css/chaty-front.min.css"/>
 </head>
@@ -1155,59 +1404,168 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 <div class="header-inner">
 
   <!-- Logo -->
-  <a href="index.html" class="header-logo" aria-label="CMLocals – homepage">
+  <a href="/" class="header-logo" aria-label="CMLocals – homepage">
     <span class="header-logo-mark" aria-hidden="true">C</span>
     <span class="header-logo-text">CMLocals</span>
   </a>
 
-  <!-- Primary nav -->
-  <nav class="primary-nav" aria-label="Primary navigation">
-    <a href="/" style="font-size: 1rem; font-weight: 500; color: var(--c-body); padding: .5em .85em; border-radius: var(--radius-sm); text-decoration: none; white-space: nowrap; transition: color .15s, background .15s; display: inline-flex; align-items: center;">Home</a>
-
-    <!-- Visas Dropdown -->
+  <!-- Desktop Mega Menu Navigation -->
+  <nav class="primary-nav desktop-only" aria-label="Primary navigation">
+    <!-- Category 1: ED VISAS -->
     <div class="nav-item">
-      <button aria-expanded="false" aria-haspopup="menu">Visas</button>
-      <div class="nav-dropdown" role="menu">
-        <ul class="nav-dropdown-list">
-          <li><a href="/pages/visas/short-stay/visa-exempt-entry.html" class="nav-dropdown-item" role="menuitem">Visa Exempt Entry</a></li>
-          <li><a href="/pages/visas/short-stay/visa-on-arrival.html" class="nav-dropdown-item" role="menuitem">Visa on Arrival</a></li>
-          <li><a href="/pages/visas/short-stay/tourist-visa.html" class="nav-dropdown-item" role="menuitem">Tourist Visa</a></li>
-          <li style="padding: .5rem 1rem; border-top: 1px solid var(--c-border); margin-top: .25rem;"><a href="/pages/visas/long-stay/index.html" class="nav-dropdown-item" style="padding: 0; margin: 0;" role="menuitem"><strong>Long Stay Visas</strong></a></li>
-          <li><a href="/pages/visas/long-stay/ed-visa.html" class="nav-dropdown-item" role="menuitem">ED Visa</a></li>
-          <li><a href="/pages/visas/long-stay/retirement-visa.html" class="nav-dropdown-item" role="menuitem">Retirement Visa</a></li>
-          <li><a href="/pages/visas/long-stay/dtv-digital-nomad.html" class="nav-dropdown-item" role="menuitem">DTV (Digital Nomad)</a></li>
-          <li><a href="/pages/visas/long-stay/index.html" class="nav-dropdown-item" role="menuitem">View all long stay</a></li>
-        </ul>
+      <a href="/pages/ed-visas/" class="nav-link has-dropdown">ED Visas</a>
+      <div class="dropdown-menu mega-menu" role="menu">
+        <div class="dropdown-section">
+          <h3>ED Visa Programs</h3>
+          <ul>
+            <li><a href="/pages/ed-visas/muay-thai-ed-visa-chiang-mai.html" role="menuitem">Muay Thai</a></li>
+            <li><a href="/pages/ed-visas/thai-language-ed-visa-chiang-mai.html" role="menuitem">Thai Language</a></li>
+            <li><a href="/pages/ed-visas/hand-to-hand-combat-ed-visa-chiang-mai.html" role="menuitem">Hand-to-Hand Combat</a></li>
+            <li><a href="/pages/ed-visas/emergency-self-defence-ed-visa-chiang-mai.html" role="menuitem">Self-Defence</a></li>
+            <li><a href="/pages/ed-visas/volunteer-non-o-visa-chiang-mai.html" role="menuitem">Volunteer Non-O</a></li>
+          </ul>
+        </div>
+        <div class="dropdown-section">
+          <a href="/pages/ed-visas/" class="section-link">All ED Visas →</a>
+        </div>
       </div>
     </div>
 
-    <!-- ED Visas Direct Link (Elevated) -->
-    <a href="/pages/ed-visas/index.html" style="font-size: 1rem; font-weight: 600; color: var(--c-primary); padding: .5em .85em; border-radius: var(--radius-sm); text-decoration: none; white-space: nowrap; transition: color .15s, background .15s; display: inline-flex; align-items: center; background: var(--c-subtle);">ED Visas</a>
-
-    <!-- Chiang Mai Dropdown -->
+    <!-- Category 2: CHIANG MAI -->
     <div class="nav-item">
-      <button aria-expanded="false" aria-haspopup="menu">Chiang Mai</button>
-      <div class="nav-dropdown" role="menu">
-        <ul class="nav-dropdown-list">
-          <li><a href="/pages/chiang-mai/index.html" class="nav-dropdown-item" role="menuitem"><strong>Overview</strong></a></li>
-          <li><a href="/pages/chiang-mai/why-chiang-mai-base.html" class="nav-dropdown-item" role="menuitem">Why Chiang Mai</a></li>
-          <li><a href="/pages/chiang-mai/cost-of-living.html" class="nav-dropdown-item" role="menuitem">Cost of Living</a></li>
-          <li><a href="/pages/chiang-mai/getting-around.html" class="nav-dropdown-item" role="menuitem">Getting Around</a></li>
-          <li style="padding: .5rem 1rem; border-top: 1px solid var(--c-border); margin-top: .25rem;"><a href="/pages/immigration/index.html" class="nav-dropdown-item" style="padding: 0; margin: 0;" role="menuitem"><strong>Immigration & Compliance</strong></a></li>
-          <li><a href="/pages/immigration/90-day-reporting.html" class="nav-dropdown-item" role="menuitem">90-Day Reporting</a></li>
-          <li><a href="/pages/immigration/tm30-registration.html" class="nav-dropdown-item" role="menuitem">TM.30 Registration</a></li>
-          <li><a href="/pages/checklists/index.html" class="nav-dropdown-item" role="menuitem">Checklists</a></li>
-        </ul>
+      <a href="/pages/chiang-mai/" class="nav-link has-dropdown">Chiang Mai</a>
+      <div class="dropdown-menu mega-menu" role="menu">
+        <div class="dropdown-section">
+          <h3>Chiang Mai Life</h3>
+          <ul>
+            <li><a href="/pages/chiang-mai/" role="menuitem">Overview</a></li>
+            <li><a href="/pages/chiang-mai/why-chiang-mai-base.html" role="menuitem">Why Base Here</a></li>
+            <li><a href="/pages/chiang-mai/where-to-stay.html" role="menuitem">Where to Stay</a></li>
+            <li><a href="/pages/chiang-mai/long-term-living.html" role="menuitem">Long-Term Living</a></li>
+            <li><a href="/pages/chiang-mai/things-to-do.html" role="menuitem">Things to Do</a></li>
+            <li><a href="/pages/chiang-mai/digital-nomads.html" role="menuitem">Digital Nomads</a></li>
+            <li><a href="/pages/chiang-mai/cost-of-living.html" role="menuitem">Cost of Living</a></li>
+            <li><a href="/pages/chiang-mai/phones-and-banking.html" role="menuitem">Phones & Banking</a></li>
+            <li><a href="/pages/chiang-mai/getting-around.html" role="menuitem">Getting Around</a></li>
+            <li><a href="/pages/chiang-mai/healthcare.html" role="menuitem">Healthcare</a></li>
+            <li><a href="/pages/chiang-mai/insurance.html" role="menuitem">Insurance</a></li>
+            <li><a href="/pages/chiang-mai/taxes.html" role="menuitem">Taxes</a></li>
+          </ul>
+        </div>
       </div>
     </div>
 
-    <!-- Tools -->
-    <a href="/pages/tools/index.html" style="font-size: 1rem; font-weight: 500; color: var(--c-body); padding: .5em .85em; border-radius: var(--radius-sm); text-decoration: none; white-space: nowrap; transition: color .15s, background .15s; display: inline-flex; align-items: center;">Tools</a>
+    <!-- Category 3: VISA GUIDES -->
+    <div class="nav-item">
+      <a href="/pages/visas/" class="nav-link has-dropdown">Visa Guides</a>
+      <div class="dropdown-menu mega-menu" role="menu">
+        <div class="dropdown-section">
+          <h3>Short-Stay</h3>
+          <ul>
+            <li><a href="/pages/visas/short-stay/visa-exempt-entry.html" role="menuitem">Visa Exempt</a></li>
+            <li><a href="/pages/visas/short-stay/tourist-visa.html" role="menuitem">Tourist Visa</a></li>
+            <li><a href="/pages/visas/short-stay/visa-on-arrival.html" role="menuitem">Visa on Arrival</a></li>
+            <li><a href="/pages/visas/short-stay/visa-extensions.html" role="menuitem">Extensions</a></li>
+            <li><a href="/pages/visas/short-stay/border-runs.html" role="menuitem">Border Runs</a></li>
+            <li><a href="/pages/visas/short-stay/dtv-destination-thailand-visa-thai-visa-advice-chiang-mai-cmlocals.html" role="menuitem">DTV</a></li>
+          </ul>
+        </div>
+        <div class="dropdown-section">
+          <h3>Long-Stay</h3>
+          <ul>
+            <li><a href="/pages/visas/long-stay/retirement-visa-thai-visa-advice-chiang-mai-cmlocals.html" role="menuitem">Retirement</a></li>
+            <li><a href="/pages/visas/long-stay/business-visa-non-b-thai-visa-advice-chiang-mai-cmlocals.html" role="menuitem">Business (Non-B)</a></li>
+            <li><a href="/pages/visas/long-stay/marriage-visa-non-o-thai-visa-advice-chiang-mai-cmlocals.html" role="menuitem">Marriage (Non-O)</a></li>
+            <li><a href="/pages/visas/long-stay/ltr-long-term-resident-visa-thai-visa-advice-chiang-mai-cmlocals.html" role="menuitem">LTR</a></li>
+            <li><a href="/pages/visas/long-stay/thailand-privilege-visa-elite-thai-visa-advice-chiang-mai-cmlocals.html" role="menuitem">Elite</a></li>
+          </ul>
+        </div>
+        <div class="dropdown-section">
+          <h3>Guides</h3>
+          <ul>
+            <li><a href="/pages/visas/guides/which-visa.html" role="menuitem">Which Visa?</a></li>
+            <li><a href="/pages/visas/guides/visa-comparisons.html" role="menuitem">Comparisons</a></li>
+            <li><a href="/pages/visas/guides/visa-stay-chiang-mai.html" role="menuitem">Visa Stay CM</a></li>
+            <li><a href="/pages/visas/guides/visa-options-chiang-mai.html" role="menuitem">Options CM</a></li>
+            <li><a href="/pages/visas/guides/extension-vs-re-entry.html" role="menuitem">Extension vs Re-Entry</a></li>
+            <li><a href="/pages/visas/guides/entry-requirements-2026.html" role="menuitem">Entry 2026</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Category 4: IMMIGRATION -->
+    <div class="nav-item">
+      <a href="/pages/immigration/" class="nav-link has-dropdown">Immigration</a>
+      <div class="dropdown-menu mega-menu" role="menu">
+        <div class="dropdown-section">
+          <h3>Compliance</h3>
+          <ul>
+            <li><a href="/pages/immigration/90-day-reporting.html" role="menuitem">90-Day Reporting</a></li>
+            <li><a href="/pages/immigration/tm30-address-reporting.html" role="menuitem">TM30 Registration</a></li>
+            <li><a href="/pages/immigration/re-entry-permits.html" role="menuitem">Re-Entry Permits</a></li>
+            <li><a href="/pages/immigration/visa-extensions.html" role="menuitem">Extensions</a></li>
+          </ul>
+        </div>
+        <div class="dropdown-section">
+          <h3>Guidance</h3>
+          <ul>
+            <li><a href="/pages/immigration/document-requirements.html" role="menuitem">Documents</a></li>
+            <li><a href="/pages/immigration/land-border-vs-air-entry.html" role="menuitem">Entry Strategy</a></li>
+            <li><a href="/pages/immigration/queue-strategy.html" role="menuitem">Queue Strategy</a></li>
+            <li><a href="/pages/immigration/overstay-penalties.html" role="menuitem">Overstay Penalties</a></li>
+            <li><a href="/pages/immigration/common-rejections.html" role="menuitem">Rejections</a></li>
+            <li><a href="/pages/immigration/blacklist-status.html" role="menuitem">Blacklist Status</a></li>
+            <li><a href="/pages/immigration/thailand-digital-arrival-card.html" role="menuitem">Digital Arrival</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Category 5: CULTURE -->
+    <div class="nav-item">
+      <a href="/pages/culture/" class="nav-link has-dropdown">Culture</a>
+      <div class="dropdown-menu mega-menu" role="menu">
+        <div class="dropdown-section">
+          <h3>Thai Culture</h3>
+          <ul>
+            <li><a href="/pages/culture/" role="menuitem">Overview</a></li>
+            <li><a href="/pages/culture/customs-traditions-thailand.html" role="menuitem">Customs & Traditions</a></li>
+            <li><a href="/pages/culture/thai-culture-etiquette.html" role="menuitem">Etiquette</a></li>
+            <li><a href="/pages/culture/festivals-events-chiang-mai.html" role="menuitem">Festivals</a></li>
+            <li><a href="/pages/culture/thai-food-culture.html" role="menuitem">Food Culture</a></li>
+            <li><a href="/pages/culture/temple-etiquette.html" role="menuitem">Temple Etiquette</a></li>
+          </ul>
+        </div>
+        <div class="dropdown-section">
+          <h3>Sak Yant</h3>
+          <ul>
+            <li><a href="/pages/culture/sak-yant-chiang-mai.html" role="menuitem">What is Sak Yant</a></li>
+            <li><a href="/pages/culture/sak-yant-designs-and-meanings.html" role="menuitem">Designs & Meanings</a></li>
+            <li><a href="/pages/culture/sak-yant-getting.html" role="menuitem">Getting One</a></li>
+            <li><a href="/pages/culture/etiquette-when-visiting-a-sak-yant-monk.html" role="menuitem">Monk Etiquette</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Category 6: TOOLS -->
+    <div class="nav-item">
+      <a href="/pages/tools/" class="nav-link has-dropdown">Tools</a>
+      <div class="dropdown-menu mega-menu" role="menu">
+        <div class="dropdown-section">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="/pages/tools/" role="menuitem">All Tools</a></li>
+            <li><a href="/pages/checklists/" role="menuitem">Checklists</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </nav>
 
-  <!-- CTAs -->
+  <!-- CTAs & Mobile Toggle -->
   <div class="header-ctas">
-    <a href="/pages/visas/index.html" class="btn btn-primary" style="font-size: .9rem;">Get Started</a>
     <a href="https://wa.me/66801202074" class="btn btn-wa" rel="noopener" target="_blank" title="Message on WhatsApp">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     </a>
@@ -1220,58 +1578,101 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 </div>
 </header>
 
-<!-- Mobile nav drawer -->
-<nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" hidden>
-  <a href="/" style="display: block; padding: .9rem 0; font-size: 1rem; font-weight: 500; color: var(--c-dark); text-decoration: none; border-bottom: 1px solid var(--c-border);">Home</a>
-
-  <div class="mobile-nav-section">
-    <div class="mobile-nav-section-title">VISAS</div>
-    <a href="/pages/visas/index.html">Visa Overview</a>
-    <a href="/pages/visas/short-stay/visa-exempt-entry.html">Visa Exempt Entry</a>
-    <a href="/pages/visas/short-stay/visa-on-arrival.html">Visa on Arrival</a>
-    <a href="/pages/visas/short-stay/tourist-visa.html">Tourist Visa</a>
-    <a href="/pages/visas/long-stay/index.html" style="font-weight: 600; margin-top: .5rem;">Long Stay Visas</a>
-    <a href="/pages/visas/long-stay/ed-visa.html">ED Visa</a>
-    <a href="/pages/visas/long-stay/retirement-visa.html">Retirement Visa</a>
-    <a href="/pages/visas/long-stay/dtv-digital-nomad.html">DTV (Digital Nomad)</a>
-  </div>
-
-  <div class="mobile-nav-section">
-    <div class="mobile-nav-section-title">ED VISAS</div>
-    <a href="/pages/ed-visas/index.html">All ED Programs</a>
-  </div>
-
-  <div class="mobile-nav-section">
-    <div class="mobile-nav-section-title">CHIANG MAI</div>
-    <a href="/pages/chiang-mai/index.html">Overview</a>
-    <a href="/pages/chiang-mai/why-chiang-mai-base.html">Why Chiang Mai</a>
-    <a href="/pages/chiang-mai/cost-of-living.html">Cost of Living</a>
-    <a href="/pages/chiang-mai/getting-around.html">Getting Around</a>
-    <a href="/pages/chiang-mai/healthcare.html">Healthcare</a>
-    <a href="/pages/chiang-mai/insurance.html">Insurance</a>
-    <a href="/pages/chiang-mai/phones-and-banking.html">Phones & Banking</a>
-    <a href="/pages/chiang-mai/where-to-stay.html">Where to Stay</a>
-    <a href="/pages/chiang-mai/long-term-living.html">Long-Term Living</a>
-  </div>
-
-  <div class="mobile-nav-section">
-    <div class="mobile-nav-section-title">IMMIGRATION & COMPLIANCE</div>
-    <a href="/pages/immigration/index.html">Immigration Guide</a>
-    <a href="/pages/immigration/90-day-reporting.html">90-Day Reporting</a>
-    <a href="/pages/immigration/tm30-registration.html">TM.30 Registration</a>
-    <a href="/pages/immigration/overstay-penalties.html">Overstay Penalties</a>
-  </div>
-
-  <div class="mobile-nav-section">
-    <div class="mobile-nav-section-title">TOOLS & CHECKLISTS</div>
-    <a href="/pages/checklists/index.html">Checklists</a>
-    <a href="/pages/tools/index.html">Tools</a>
-  </div>
-
-  <div class="mobile-nav-ctas">
-    <a href="/pages/visas/index.html" class="btn btn-primary btn-lg">Get Started</a>
-    <a href="https://wa.me/66801202074" class="btn btn-wa btn-lg" rel="noopener" target="_blank">Message on WhatsApp</a>
-  </div>
+<!-- Mobile Accordion Drawer Navigation -->
+<nav class="nav-mobile mobile-only" id="mobile-nav" aria-label="Mobile navigation" hidden>
+  <details class="nav-accordion" open>
+    <summary>ED Visas (5)</summary>
+    <ul>
+      <li><a href="/pages/ed-visas/muay-thai-ed-visa-chiang-mai.html">Muay Thai ED Visa</a></li>
+      <li><a href="/pages/ed-visas/thai-language-ed-visa-chiang-mai.html">Thai Language ED Visa</a></li>
+      <li><a href="/pages/ed-visas/hand-to-hand-combat-ed-visa-chiang-mai.html">Hand-to-Hand Combat</a></li>
+      <li><a href="/pages/ed-visas/emergency-self-defence-ed-visa-chiang-mai.html">Self-Defence ED Visa</a></li>
+      <li><a href="/pages/ed-visas/volunteer-non-o-visa-chiang-mai.html">Volunteer Non-O</a></li>
+    </ul>
+  </details>
+  <details class="nav-accordion">
+    <summary>Chiang Mai (12)</summary>
+    <ul>
+      <li><a href="/pages/chiang-mai/">Chiang Mai Overview</a></li>
+      <li><a href="/pages/chiang-mai/why-chiang-mai-base.html">Why Base Here</a></li>
+      <li><a href="/pages/chiang-mai/where-to-stay.html">Where to Stay</a></li>
+      <li><a href="/pages/chiang-mai/long-term-living.html">Long-Term Living</a></li>
+      <li><a href="/pages/chiang-mai/things-to-do.html">Things to Do</a></li>
+      <li><a href="/pages/chiang-mai/digital-nomads.html">Digital Nomads</a></li>
+      <li><a href="/pages/chiang-mai/cost-of-living.html">Cost of Living</a></li>
+      <li><a href="/pages/chiang-mai/phones-and-banking.html">Phones & Banking</a></li>
+      <li><a href="/pages/chiang-mai/getting-around.html">Getting Around</a></li>
+      <li><a href="/pages/chiang-mai/healthcare.html">Healthcare</a></li>
+      <li><a href="/pages/chiang-mai/insurance.html">Insurance</a></li>
+      <li><a href="/pages/chiang-mai/taxes.html">Taxes</a></li>
+    </ul>
+  </details>
+  <details class="nav-accordion">
+    <summary>Visa Guides (17)</summary>
+    <ul>
+      <li><a href="/pages/visas/">All Visas</a></li>
+      <li><a href="/pages/visas/short-stay/visa-exempt-entry.html">Visa Exempt Entry</a></li>
+      <li><a href="/pages/visas/short-stay/tourist-visa.html">Tourist Visa</a></li>
+      <li><a href="/pages/visas/short-stay/visa-on-arrival.html">Visa on Arrival</a></li>
+      <li><a href="/pages/visas/short-stay/visa-extensions.html">Visa Extensions</a></li>
+      <li><a href="/pages/visas/short-stay/border-runs.html">Border Runs</a></li>
+      <li><a href="/pages/visas/short-stay/dtv-destination-thailand-visa-thai-visa-advice-chiang-mai-cmlocals.html">DTV Visa</a></li>
+      <li><a href="/pages/visas/long-stay/retirement-visa-thai-visa-advice-chiang-mai-cmlocals.html">Retirement Visa</a></li>
+      <li><a href="/pages/visas/long-stay/business-visa-non-b-thai-visa-advice-chiang-mai-cmlocals.html">Business Visa</a></li>
+      <li><a href="/pages/visas/long-stay/marriage-visa-non-o-thai-visa-advice-chiang-mai-cmlocals.html">Marriage Visa</a></li>
+      <li><a href="/pages/visas/long-stay/ltr-long-term-resident-visa-thai-visa-advice-chiang-mai-cmlocals.html">LTR Visa</a></li>
+      <li><a href="/pages/visas/long-stay/thailand-privilege-visa-elite-thai-visa-advice-chiang-mai-cmlocals.html">Elite Visa</a></li>
+      <li><a href="/pages/visas/guides/which-visa.html">Which Visa?</a></li>
+      <li><a href="/pages/visas/guides/visa-comparisons.html">Visa Comparisons</a></li>
+      <li><a href="/pages/visas/guides/visa-stay-chiang-mai.html">Visa Stay CM</a></li>
+      <li><a href="/pages/visas/guides/visa-options-chiang-mai.html">Visa Options CM</a></li>
+      <li><a href="/pages/visas/guides/extension-vs-re-entry.html">Extension vs Re-Entry</a></li>
+    </ul>
+  </details>
+  <details class="nav-accordion">
+    <summary>Immigration (17)</summary>
+    <ul>
+      <li><a href="/pages/immigration/">All Immigration</a></li>
+      <li><a href="/pages/immigration/90-day-reporting.html">90-Day Reporting</a></li>
+      <li><a href="/pages/immigration/tm30-address-reporting.html">TM30 Registration</a></li>
+      <li><a href="/pages/immigration/overstay-penalties.html">Overstay Penalties</a></li>
+      <li><a href="/pages/immigration/document-requirements.html">Document Requirements</a></li>
+      <li><a href="/pages/immigration/re-entry-permits.html">Re-Entry Permits</a></li>
+      <li><a href="/pages/immigration/land-border-vs-air-entry.html">Entry Strategy Guide</a></li>
+      <li><a href="/pages/immigration/queue-strategy.html">Queue Strategy</a></li>
+      <li><a href="/pages/immigration/common-rejections.html">Common Rejections</a></li>
+      <li><a href="/pages/immigration/blacklist-status.html">Blacklist Status</a></li>
+      <li><a href="/pages/immigration/thailand-digital-arrival-card.html">Digital Arrival Card</a></li>
+      <li><a href="/pages/immigration/address-change.html">Address Change</a></li>
+      <li><a href="/pages/immigration/financial-requirements.html">Financial Requirements</a></li>
+      <li><a href="/pages/immigration/immigration-best-practices.html">Best Practices</a></li>
+      <li><a href="/pages/immigration/legal-rights.html">Legal Rights</a></li>
+      <li><a href="/pages/immigration/visa-border-runs.html">Visa Border Runs</a></li>
+      <li><a href="/pages/immigration/entry-strategy-guide.html">Entry Strategy Guide</a></li>
+    </ul>
+  </details>
+  <details class="nav-accordion">
+    <summary>Culture (10)</summary>
+    <ul>
+      <li><a href="/pages/culture/">Culture Guide</a></li>
+      <li><a href="/pages/culture/customs-traditions-thailand.html">Customs & Traditions</a></li>
+      <li><a href="/pages/culture/festivals-events-chiang-mai.html">Festivals & Events</a></li>
+      <li><a href="/pages/culture/thai-culture-etiquette.html">Thai Etiquette</a></li>
+      <li><a href="/pages/culture/temple-etiquette.html">Temple Etiquette</a></li>
+      <li><a href="/pages/culture/sak-yant-chiang-mai.html">Sak Yant</a></li>
+      <li><a href="/pages/culture/sak-yant-designs-and-meanings.html">Sak Yant Designs</a></li>
+      <li><a href="/pages/culture/sak-yant-getting.html">Getting Sak Yant</a></li>
+      <li><a href="/pages/culture/thai-food-culture.html">Thai Food</a></li>
+      <li><a href="/pages/culture/etiquette-when-visiting-a-sak-yant-monk.html">Monk Etiquette</a></li>
+    </ul>
+  </details>
+  <details class="nav-accordion">
+    <summary>Tools (2)</summary>
+    <ul>
+      <li><a href="/pages/tools/">Tools Hub</a></li>
+      <li><a href="/pages/checklists/">Checklists</a></li>
+    </ul>
+  </details>
 </nav>
 
 <main id="main-content">
@@ -2293,6 +2694,43 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     bottomOffset: 50,
     leftOffset: 20
   };
+</script>
+
+<!-- Hamburger Toggle & Mobile Menu -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const toggle = document.querySelector('.header-hamburger');
+  const nav = document.getElementById('mobile-nav');
+
+  if (toggle && nav) {
+    // Toggle menu on hamburger click
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      toggle.classList.toggle('active');
+      nav.classList.toggle('open');
+      nav.removeAttribute('hidden');
+      toggle.setAttribute('aria-expanded', toggle.classList.contains('active'));
+    });
+
+    // Close menu when link is clicked
+    nav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        toggle.classList.remove('active');
+        nav.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Close menu on escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && nav.classList.contains('open')) {
+        toggle.classList.remove('active');
+        nav.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+});
 </script>
 
 <!-- Chaty Widget -->
