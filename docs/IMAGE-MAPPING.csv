@@ -1,0 +1,60 @@
+page_path,total_content_sections,first_image_after_section,second_image_position,third_image_position,target_image_count,section_structure_notes
+pages/chiang-mai/why-chiang-mai-base.html,8,after_section_2,after_section_4,before_related,3,8 content sections: Basics | Neighbourhoods | Renting | Cost | Healthcare | Community | Day Trips + visa band
+pages/chiang-mai/where-to-stay.html,5,after_section_2,before_related,,2,5 content sections: Neighbourhoods thinking | Detail | Rent comparison | Renting notes + visa band
+pages/chiang-mai/long-term-living.html,7,after_section_2,after_section_4,before_related,3,7 content sections: Daily rhythms | Food culture | Accommodation | Wellness | Community events + visa band
+pages/chiang-mai/things-to-do.html,6,after_section_2,after_section_4,before_related,3,6 content sections: Temples | Markets | Hikes | Day trips | Weekend escapes + visa band
+pages/chiang-mai/digital-nomads.html,8,after_section_2,after_section_4,before_related,3,8 content sections: Workspace options | Co-working | Cafe working | Internet | Costs | Community | Visas + visa band
+pages/chiang-mai/cost-of-living.html,12,after_section_2,after_section_4,before_related,3,12 content sections: Budget levels | Expense categories | Hidden costs | Bangkok/Phuket comparison + visa band
+pages/chiang-mai/phones-and-banking.html,9,after_section_2,after_section_4,before_related,3,9 content sections: SIM | eSIM | Fibre | Bank account | ATM fees | Wise/Revolut | PromptPay + visa band
+pages/chiang-mai/getting-around.html,7,after_section_2,after_section_4,before_related,3,7 content sections: Scooter | Grab | Songthaew | Cycling | Neighbourhoods | Day trips | Safety + visa band
+pages/chiang-mai/healthcare.html,10,after_section_2,after_section_4,before_related,3,10 content sections: Hospitals | Consultations | Dental | Pharmacy | Procedures | Costs | Insurance + visa band
+pages/chiang-mai/insurance.html,10,after_section_2,after_section_4,before_related,3,10 content sections: Visa requirements | Coverage levels | Premiums | Plan selection | Considerations + visa band
+pages/chiang-mai/taxes.html,11,after_section_2,after_section_4,before_related,3,11 content sections: Tax residency | Foreign income | Filing | Deductions | Specialist advice + visa band
+pages/visas/index.html,1,after_section_1,,,,1 main section: Visa overview grid + hero (hub page)
+pages/visas/short-stay/index.html,1,after_section_1,,,,1 main section: Short-stay visa card grid + hero (hub page)
+pages/visas/short-stay/visa-exempt-entry.html,13,after_section_2,after_section_4,before_related,3,13 content sections: Definition | 2-per-year | Duration | Eligibility | Calendar reset | Border runs | Quota rules
+pages/visas/short-stay/tourist-visa.html,12,after_section_2,after_section_4,before_related,3,12 content sections: Definition | Application | Eligibility | Duration | Extensions | Cost | Renewal
+pages/visas/short-stay/visa-on-arrival.html,14,after_section_2,after_section_4,before_related,3,14 content sections: Definition | Countries | Application | Duration | Cost | Eligibility | Extensions
+pages/visas/short-stay/visa-extensions.html,13,after_section_2,after_section_4,before_related,3,13 content sections: Extension types | Tourist | COVID | Other extensions
+pages/visas/short-stay/border-runs.html,11,after_section_2,after_section_4,before_related,3,11 content sections: Border run types | Countries | Legal status | Timing | Logistics
+pages/visas/long-stay/index.html,1,after_section_1,,,,1 main section: Long-stay visa card grid + hero (hub page)
+pages/visas/long-stay/retirement-visa-thai-visa-advice-chiang-mai-cmlocals.html,12,after_section_2,after_section_4,before_related,3,12 content sections: Overview | Age | Financial | Application | Documents | Extensions | Renewal
+pages/visas/long-stay/business-visa-non-b-thai-visa-advice-chiang-mai-cmlocals.html,11,after_section_2,after_section_4,before_related,3,11 content sections: Overview | Eligibility | Requirements | Application | Company setup | Extensions
+pages/visas/long-stay/marriage-visa-non-o-thai-visa-advice-chiang-mai-cmlocals.html,12,after_section_2,after_section_4,before_related,3,12 content sections: Overview | Eligibility | Financial | Application | Documents | Extensions
+pages/visas/long-stay/ltr-long-term-resident-visa-thai-visa-advice-chiang-mai-cmlocals.html,10,after_section_2,after_section_4,before_related,3,10 content sections: Overview | Categories | Requirements | Application | Documents | Extensions
+pages/visas/long-stay/thailand-privilege-visa-elite-thai-visa-advice-chiang-mai-cmlocals.html,11,after_section_2,after_section_4,before_related,3,11 content sections: Overview | Membership types | Benefits | Cost | Application | Renewal
+pages/visas/guides/visa-options-chiang-mai.html,5,after_section_2,before_related,,2,5 guide sections: Visa types | Eligibility | Duration | Cost comparison
+pages/visas/guides/visa-comparisons.html,7,after_section_2,after_section_4,before_related,3,7 guide sections: Comparison tables | Cost analysis | Duration analysis | Use cases
+pages/visas/guides/which-visa.html,6,after_section_2,after_section_4,before_related,3,6 guide sections: Decision flowchart | Work status | Duration needs | Financial considerations
+pages/visas/guides/extension-vs-re-entry.html,5,after_section_2,before_related,,2,5 guide sections: Extension process | Re-entry process | Pros/cons | Timing
+pages/visas/guides/entry-requirements-2026.html,6,after_section_2,after_section_4,before_related,3,6 guide sections: Document requirements | Financial proof | Airline | Health
+pages/visas/guides/visa-stay-chiang-mai.html,4,after_section_2,before_related,,2,4 guide sections: Chiang Mai immigration | Extended stay options | Compliance
+pages/immigration/index.html,1,after_section_1,,,,1 main section: Immigration guide card grid + hero (hub page)
+pages/immigration/90-day-reporting.html,8,after_section_2,after_section_4,before_related,3,8 content sections: Overview | Eligibility | Calculation | Filing window | How to file | Documents | Penalties
+pages/immigration/tm30-address-reporting.html,8,after_section_2,after_section_4,before_related,3,8 content sections: Overview | Who must file | Landlord responsibility | Window | Documents | Penalties | Updates
+pages/immigration/overstay-penalties.html,5,after_section_2,before_related,,2,5 content sections: Overstay definition | Fine structure | Grace period | Blacklisting | Border run implications
+pages/immigration/document-requirements.html,6,after_section_2,after_section_4,before_related,3,6 content sections: Passport | Bank statements | Proof of address | Marriage certificates | Thai documents
+pages/immigration/financial-requirements.html,6,after_section_2,after_section_4,before_related,3,6 content sections: Income thresholds | Bank balance rules | Proof forms | Combined | Acceptable documents
+pages/immigration/visa-extensions.html,7,after_section_2,after_section_4,before_related,3,7 content sections: Extension types | Tourist | Family | Marriage | Cost | Documents
+pages/immigration/re-entry-permits.html,8,after_section_2,after_section_4,before_related,3,8 content sections: Purpose | Single/multiple | When needed | How to apply | Cost | Consequences
+pages/immigration/address-change.html,5,after_section_2,before_related,,2,5 content sections: TM.30 reporting | Address process | Landlord notification | Multi-unit | Timing
+pages/immigration/land-border-vs-air-entry.html,7,after_section_2,after_section_4,before_related,3,7 content sections: Border crossing | Air entry | Land borders | Queues | Entry requirements | Visa by border
+pages/immigration/entry-strategy-guide.html,7,after_section_2,after_section_4,before_related,3,7 content sections: Entry planning | Visa prep | Documentation | Border selection | Timing | Common mistakes
+pages/immigration/queue-strategy.html,6,after_section_2,after_section_4,before_related,3,6 content sections: Queue types | Off-peak times | Line management | Form prep | Documentation readiness
+pages/immigration/common-rejections.html,9,after_section_2,after_section_4,before_related,3,9 content sections: Common issues | Document issues | Financial | Border issues | Return required | Appeal process
+pages/immigration/blacklist-status.html,6,after_section_2,after_section_4,before_related,3,6 content sections: Blacklist types | Checking status | Removal process | Overstay causes | Re-entry issues | Lawyer
+pages/immigration/visa-border-runs.html,11,after_section_2,after_section_4,before_related,3,11 content sections: Definition | Legality | Visa combinations | Popular routes | Logistics | Costs | Documentation
+pages/immigration/legal-rights.html,6,after_section_2,after_section_4,before_related,3,6 content sections: Rights overview | Detention | Representation | Appeals | Deportation | Legal resources
+pages/immigration/immigration-best-practices.html,9,after_section_2,after_section_4,before_related,3,9 content sections: Documentation | Compliance | Record keeping | Extensions | Address reporting | Re-entry | Professional help
+pages/immigration/thailand-digital-arrival-card.html,10,after_section_2,after_section_4,before_related,3,10 content sections: Overview | When required | Application | Form fields | Submission | Approval | Advantages
+pages/culture/index.html,4,after_section_2,before_related,,2,4 content sections: Culture overview | Customs intro | Festival intro | Etiquette intro
+pages/culture/customs-traditions-thailand.html,9,after_section_2,after_section_4,before_related,3,9 content sections: Royal customs | Greeting | Superstitions | Festivals | Family values | Spiritual beliefs
+pages/culture/festivals-events-chiang-mai.html,10,after_section_2,after_section_4,before_related,3,10 content sections: Festival overview | Loy Krathong | Songkran | Visakha Bucha | Other festivals | Participation
+pages/culture/thai-culture-etiquette.html,9,after_section_2,after_section_4,before_related,3,9 content sections: Respectful behaviour | Dress code | Food etiquette | Social customs | Personal space | Temple etiquette
+pages/culture/temple-etiquette.html,8,after_section_2,after_section_4,before_related,3,8 content sections: Dress code | Entry | Behaviour | Monk interaction | Offerings | Ceremonies | Photography | Taboos
+pages/culture/sak-yant-chiang-mai.html,8,after_section_2,after_section_4,before_related,3,8 content sections: What is Sak Yant | Spiritual significance | Ritual process | Design meanings | Choosing monk | Cost | Care
+pages/culture/sak-yant-designs-and-meanings.html,6,after_section_2,after_section_4,before_related,3,6 content sections: Popular designs | Protection tattoos | Prosperity designs | Spiritual designs | Combination meanings
+pages/culture/etiquette-when-visiting-a-sak-yant-monk.html,5,after_section_2,before_related,,2,5 content sections: Preparation | Respect during | After session | Taboos | Care instructions
+pages/culture/sak-yant-getting.html,8,after_section_2,after_section_4,before_related,3,8 content sections: Finding a monk | Choosing designs | Cost | Consultation | Ritual process | Care | Beliefs
+pages/culture/thai-food-culture.html,8,after_section_2,after_section_4,before_related,3,8 content sections: Flavour philosophy | Food values | Eating customs | Street food | Regional cuisine | Festivals
+pages/tools/index.html,1,after_section_1,,,,1 main section: Tools overview grid + hero (hub page)
