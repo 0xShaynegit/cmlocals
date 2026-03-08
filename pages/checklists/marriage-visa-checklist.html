@@ -274,26 +274,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 </head>
 <body>
 
-<header class="site-header" id="site-header" role="banner">
-<div class="container">
-<div class="header-inner">
-  <a href="/" class="header-logo" aria-label="CMLocals homepage">
-    <div class="header-logo-mark" aria-hidden="true">C</div>
-    <span class="header-logo-text">CMLocals</span>
-  </a>
-  <nav class="primary-nav" aria-label="Primary navigation">
-    <a href="/">Home</a>
-    <a href="/pages/visas/index.html">Visas</a>
-    <a href="/pages/checklists/index.html">Checklists</a>
-    <a href="/pages/immigration/index.html">Immigration</a>
-    <a href="/pages/chiang-mai/index.html">Chiang Mai</a>
-  </nav>
-  <div class="header-ctas">
-    <a href="https://wa.me/66801202074" class="btn btn-wa" rel="noopener" target="_blank">WhatsApp</a>
-  </div>
-</div>
-</div>
-</header>
 
 <section class="page-hero">
 <div class="page-hero-inner">
@@ -409,53 +389,69 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 </div>
 </section>
 
-<footer class="site-footer">
-<div class="container">
-  <div class="footer-top">
-    <div>
-      <a href="/" class="footer-logo">
-        <div class="footer-logo-mark" aria-hidden="true">C</div>
-        <span class="footer-logo-text">CMLocals</span>
-      </a>
-      <p class="footer-tagline">Immigration guides, visa strategies, and Thailand resources—by residents, for residents.</p>
+<footer class="site-footer" role="contentinfo">
+<div class="footer-container">
+
+  <!-- Column 1: CMLocals + Socials (LEFT) -->
+  <div class="footer-col footer-col-cmlocals">
+    <div class="footer-logo">
+      <a href="/">CMLocals</a>
     </div>
-    <div>
-      <h3 class="footer-col-title">Visas</h3>
-      <ul>
-        <li><a href="/pages/visas/index.html">Visa Overview</a></li>
-        <li><a href="/pages/visas/long-stay/index.html">Long Stay</a></li>
-        <li><a href="/pages/ed-visas/index.html">ED Visa</a></li>
-      </ul>
+    <p class="footer-tagline">Independent Thai visa information hub for Chiang Mai and long-stay life in Thailand.</p>
+    <div class="footer-socials">
+      <a href="https://wa.me/66801202074" title="WhatsApp" target="_blank">WhatsApp</a>
+      <a href="https://m.me/cmlocals" title="Messenger" target="_blank">Messenger</a>
+      <a href="https://www.facebook.com/chiangmailocals" title="Facebook" target="_blank">Facebook</a>
     </div>
-    <div>
-      <h3 class="footer-col-title">Immigration</h3>
-      <ul>
-        <li><a href="/pages/immigration/index.html">Immigration Home</a></li>
-        <li><a href="/pages/immigration/entry-strategy-guide.html">Entry Strategy</a></li>
-        <li><a href="/pages/immigration/90-day-reporting.html">90-Day Reporting</a></li>
-      </ul>
-    </div>
-    <div>
-      <h3 class="footer-col-title">Checklists</h3>
-      <ul>
-        <li><a href="/pages/checklists/index.html">All Checklists</a></li>
-        <li><a href="/pages/checklists/ed-visa-checklist.html">ED Visa</a></li>
-        <li><a href="/pages/checklists/90-day-reporting-checklist.html">90-Day Reporting</a></li>
-      </ul>
-    </div>
-    <div>
-      <h3 class="footer-col-title">Chiang Mai</h3>
-      <ul>
-        <li><a href="/pages/chiang-mai/index.html">Chiang Mai Home</a></li>
-        <li><a href="/pages/chiang-mai/cost-of-living.html">Cost of Living</a></li>
-        <li><a href="/pages/chiang-mai/where-to-stay.html">Where to Stay</a></li>
-      </ul>
-    </div>
+    <p class="footer-copyright">&copy; 2026 CMLocals. All rights reserved.</p>
   </div>
-  <div class="footer-bottom">
-    <div class="footer-copy">&copy; 2026 CMLocals. All rights reserved.</div>
+
+  <!-- Column 2: ED Visas -->
+  <div class="footer-col">
+    <h3 class="footer-col-title">ED Visas</h3>
+    <ul class="footer-links">
+      <li><a href="/pages/ed-visas/muay-thai-ed-visa-chiang-mai.html">Muay Thai</a></li>
+      <li><a href="/pages/ed-visas/thai-language-ed-visa-chiang-mai.html">Thai Language</a></li>
+      <li><a href="/pages/ed-visas/hand-to-hand-combat-ed-visa-chiang-mai.html">Hand-to-Hand Combat</a></li>
+      <li><a href="/pages/ed-visas/emergency-self-defence-ed-visa-chiang-mai.html">Self-Defence</a></li>
+      <li><a href="/pages/ed-visas/volunteer-non-o-visa-chiang-mai.html">Volunteer Non-O</a></li>
+      <li><a href="/pages/ed-visas/">All ED Visas</a></li>
+    </ul>
   </div>
+
+  <!-- Column 3: Chiang Mai -->
+  <div class="footer-col">
+    <h3 class="footer-col-title">Chiang Mai</h3>
+    <ul class="footer-links">
+      <li><a href="/pages/chiang-mai/">Overview</a></li>
+      <li><a href="/pages/chiang-mai/where-to-stay.html">Where to Stay</a></li>
+      <li><a href="/pages/chiang-mai/cost-of-living.html">Cost of Living</a></li>
+      <li><a href="/pages/chiang-mai/getting-around.html">Getting Around</a></li>
+      <li><a href="/pages/chiang-mai/long-term-living.html">Long-Term Living</a></li>
+      <li><a href="/pages/chiang-mai/healthcare.html">Healthcare</a></li>
+    </ul>
+  </div>
+
+  <!-- Column 4: Visa Guides -->
+  <div class="footer-col">
+    <h3 class="footer-col-title">Visa Guides</h3>
+    <ul class="footer-links">
+      <li><a href="/pages/visas/">All Visas</a></li>
+      <li><a href="/pages/visas/short-stay/dtv-destination-thailand-visa-thai-visa-advice-chiang-mai-cmlocals.html">DTV</a></li>
+      <li><a href="/pages/visas/short-stay/">Short Stay</a></li>
+      <li><a href="/pages/visas/long-stay/">Long Stay</a></li>
+      <li><a href="/pages/visas/short-stay/tourist-visa.html">Tourist Visa</a></li>
+      <li><a href="/pages/checklists/">Checklists</a></li>
+    </ul>
+  </div>
+
 </div>
+
+<!-- Bottom Bar -->
+<div class="footer-bottom">
+  <p>&copy; 2026 CMLocals. Independent information hub for Thailand visa &amp; Chiang Mai living.</p>
+</div>
+
 </footer>
 
 <script>
