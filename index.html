@@ -2604,25 +2604,46 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   });
 
   // Dropdown menu management with hover delay
-  var dropdownTimeout;
   var navItems = document.querySelectorAll('.nav-item');
 
   navItems.forEach(function(item) {
     var dropdownMenu = item.querySelector('.dropdown-menu');
     if (!dropdownMenu) return;
 
+    // Store timeout per nav-item
+    item.dropdownTimeout = null;
+
     item.addEventListener('mouseenter', function() {
-      clearTimeout(dropdownTimeout);
+      // Clear this item's close timeout
+      if (item.dropdownTimeout) {
+        clearTimeout(item.dropdownTimeout);
+        item.dropdownTimeout = null;
+      }
+
+      // Close all other open menus
+      navItems.forEach(function(otherItem) {
+        if (otherItem !== item && otherItem.dropdownTimeout === null) {
+          var otherMenu = otherItem.querySelector('.dropdown-menu');
+          if (otherMenu && otherMenu.style.display === 'block') {
+            otherMenu.style.display = 'none';
+            otherMenu.style.opacity = '0';
+            otherMenu.style.pointerEvents = 'none';
+          }
+        }
+      });
+
+      // Show this menu
       dropdownMenu.style.display = 'block';
       dropdownMenu.style.opacity = '1';
       dropdownMenu.style.pointerEvents = 'auto';
     });
 
     item.addEventListener('mouseleave', function() {
-      dropdownTimeout = setTimeout(function() {
+      item.dropdownTimeout = setTimeout(function() {
         dropdownMenu.style.display = 'none';
         dropdownMenu.style.opacity = '0';
         dropdownMenu.style.pointerEvents = 'none';
+        item.dropdownTimeout = null;
       }, 150);
     });
   });
