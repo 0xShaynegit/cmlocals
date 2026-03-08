@@ -241,43 +241,33 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   background: var(--c-white); border-color: var(--c-accent); color: var(--c-accent);
 }
 
-.pro-tip-callout {
-  position: relative; margin: 2.5rem 0; padding: 1.75rem 1.75rem 1.75rem 2rem;
-  background: linear-gradient(135deg, #6366F1 0%, #7C3AED 100%);
-  border-radius: 14px; color: #fff; overflow: hidden;
-  box-shadow: 0 10px 30px rgba(99, 102, 241, .25), 0 4px 12px rgba(124, 58, 237, .2);
+
+.site-footer {
+  background: var(--c-dark-2); padding-block: clamp(3rem, 5vw, 4.5rem);
+  color: rgba(255,255,255,.92); margin-top: clamp(3rem, 5vw, 4.5rem);
 }
-
-.pro-tip-callout::before {
-  content: ''; position: absolute; top: 0; right: 0; width: 280px; height: 280px;
-  background: radial-gradient(circle, rgba(255,255,255,.1) 0%, transparent 70%);
-  border-radius: 50%; pointer-events: none;
+.footer-top { display: grid; grid-template-columns: 1.6fr repeat(4, 1fr); gap: 3rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,.1); }
+.footer-logo { display: flex; align-items: center; gap: .5rem; text-decoration: none; margin-bottom: .8rem; }
+.footer-logo-mark {
+  width: 30px; height: 30px; border-radius: 6px;
+  background: linear-gradient(135deg, var(--c-primary) 0%, #7C3AED 100%);
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-family: var(--font-display); font-size: .95rem; font-weight: 500; font-style: italic;
 }
+.footer-logo-text { font-family: var(--font-body); font-weight: 700; font-size: .95rem; color: var(--c-white); }
+.footer-tagline { font-size: .82rem; line-height: 1.6; max-width: 240px; color: rgba(255,255,255,.88); }
+.footer-col-title { font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.70); margin-bottom: 1.1rem; }
+.footer-col ul { display: flex; flex-direction: column; gap: .55rem; }
+.footer-col ul a { font-size: .83rem; color: rgba(255,255,255,.88); text-decoration: none; transition: color .15s; }
+.footer-col ul a:hover { color: var(--c-white); }
+.footer-bottom { display: flex; align-items: center; justify-content: space-between; padding-top: 2rem; gap: 1rem; flex-wrap: wrap; }
+.footer-copy { font-size: .8rem; }
 
-.pro-tip-callout::after {
-  content: ''; position: absolute; left: -12px; top: 30px; width: 0; height: 0;
-  border-top: 15px solid transparent; border-bottom: 15px solid transparent;
-  border-right: 20px solid rgba(99,102,241,.3);
+@media (max-width: 960px) {
+  .primary-nav { display: none; }
+  .header-hamburger { display: flex; }
+  .footer-top { grid-template-columns: 1fr 1fr; gap: 2rem; }
 }
-
-.pro-tip-content { position: relative; z-index: 1; display: flex; gap: 1.2rem; align-items: flex-start; }
-.pro-tip-icon { font-size: 2.5rem; flex-shrink: 0; filter: drop-shadow(0 2px 4px rgba(0,0,0,.15)); }
-.pro-tip-text { flex: 1; }
-.pro-tip-label { font-family: var(--font-display); font-size: 1.3rem; font-weight: 500; margin-bottom: .5rem; letter-spacing: -.01em; }
-.pro-tip-description { font-size: .95rem; line-height: 1.6; opacity: .95; margin-bottom: 1rem; }
-.pro-tip-action { display: inline-block; background: rgba(255,255,255,.2); border: 1.5px solid rgba(255,255,255,.4); padding: .6em 1.1em;
-  border-radius: 8px; font-size: .85rem; font-weight: 600; transition: all .25s ease; cursor: pointer; }
-.pro-tip-action:hover { background: rgba(255,255,255,.3); border-color: rgba(255,255,255,.6); transform: translateY(-1px); }
-
-@media (max-width: 640px) {
-  .pro-tip-callout { padding: 1.5rem 1.5rem 1.5rem 1.75rem; }
-  .pro-tip-callout::before { width: 180px; height: 180px; }
-  .pro-tip-content { gap: .8rem; }
-  .pro-tip-icon { font-size: 2rem; }
-  .pro-tip-label { font-size: 1.1rem; }
-}
-
-/* Option B: Inline Bubble + Modal Tooltip */
 .pro-tip-bubble {
   display: inline-flex; align-items: center; justify-content: center;
   width: 32px; height: 32px; border-radius: 50%;
@@ -358,32 +348,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .pro-tip-bubble { width: 28px; height: 28px; font-size: 0.9rem; }
 }
 
-.site-footer {
-  background: var(--c-dark-2); padding-block: clamp(3rem, 5vw, 4.5rem);
-  color: rgba(255,255,255,.92); margin-top: clamp(3rem, 5vw, 4.5rem);
-}
-.footer-top { display: grid; grid-template-columns: 1.6fr repeat(4, 1fr); gap: 3rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,.1); }
-.footer-logo { display: flex; align-items: center; gap: .5rem; text-decoration: none; margin-bottom: .8rem; }
-.footer-logo-mark {
-  width: 30px; height: 30px; border-radius: 6px;
-  background: linear-gradient(135deg, var(--c-primary) 0%, #7C3AED 100%);
-  display: flex; align-items: center; justify-content: center;
-  color: #fff; font-family: var(--font-display); font-size: .95rem; font-weight: 500; font-style: italic;
-}
-.footer-logo-text { font-family: var(--font-body); font-weight: 700; font-size: .95rem; color: var(--c-white); }
-.footer-tagline { font-size: .82rem; line-height: 1.6; max-width: 240px; color: rgba(255,255,255,.88); }
-.footer-col-title { font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.70); margin-bottom: 1.1rem; }
-.footer-col ul { display: flex; flex-direction: column; gap: .55rem; }
-.footer-col ul a { font-size: .83rem; color: rgba(255,255,255,.88); text-decoration: none; transition: color .15s; }
-.footer-col ul a:hover { color: var(--c-white); }
-.footer-bottom { display: flex; align-items: center; justify-content: space-between; padding-top: 2rem; gap: 1rem; flex-wrap: wrap; }
-.footer-copy { font-size: .8rem; }
-
-@media (max-width: 960px) {
-  .primary-nav { display: none; }
-  .header-hamburger { display: flex; }
-  .footer-top { grid-template-columns: 1fr 1fr; gap: 2rem; }
-}
 @media (max-width: 640px) {
   .page-hero h1 { font-size: 1.75rem; }
   .footer-top { grid-template-columns: 1fr; }
@@ -436,19 +400,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
   <p style="font-size: 1.1rem; line-height: 1.75; color: var(--c-body); margin-bottom: 2.5rem; max-width: 68ch;">Extending a long-stay visa (Non-O, Non-B, ED, DTV, etc.) requires specific documents based on your visa type and purpose. File your extension 7-14 days before your current visa expires. Use this checklist to gather everything you need before visiting immigration.</p>
 
-  <!-- A/B TEST: OPTION A - Full-width Callout -->
-  <div class="pro-tip-callout">
-    <div class="pro-tip-content">
-      <div class="pro-tip-icon">📅</div>
-      <div class="pro-tip-text">
-        <div class="pro-tip-label">Pro Tip: Never Miss Your Expiry</div>
-        <div class="pro-tip-description">When immigration stamps your extension approval, immediately add the new expiry date to your phone's calendar. Set a notification for the day before your visa expires as a backup reminder.</div>
-        <button class="pro-tip-action" onclick="alert('Add this to your calendar:\n\nVisa Expiry Date: [Check your stamp]\n\nReminder: Set alarm for 1 day before'); ">Add Calendar Reminder</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- A/B TEST: OPTION B - Inline Bubble + Modal -->
   <p style="font-size: 2rem; color: var(--c-muted); margin-bottom: 2rem; font-style: italic; line-height: 1.6; font-weight: 500;">
     💡 <strong>Pro Tip:</strong> When you receive your extension stamp, write down the expiry date
     <button class="pro-tip-bubble" id="pro-tip-bubble-btn" title="Click for important reminder">!</button>
@@ -688,11 +639,10 @@ document.addEventListener('DOMContentLoaded', function() {
   loadState();
 });
 
-// Pro Tip Bubble Modal (Option B)
+// Pro Tip Bubble Modal
 document.addEventListener('DOMContentLoaded', function() {
   const bubble = document.getElementById('pro-tip-bubble-btn');
   const modal = document.getElementById('pro-tip-modal');
-  const addToCalendarBtn = document.getElementById('add-to-calendar-btn');
 
   if (bubble && modal) {
     bubble.addEventListener('click', function(e) {
