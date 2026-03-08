@@ -55,7 +55,7 @@
 /* --- RESET --- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
-body { font-family: var(--font-body); font-size: 1rem; line-height: 1.65; color: var(--c-body); background: var(--c-white); -webkit-font-smoothing: antialiased; }
+body { font-family: var(--font-body); font-size: 1.1rem; line-height: 1.65; color: var(--c-body); background: var(--c-white); -webkit-font-smoothing: antialiased; }
 img { max-width: 100%; display: block; height: auto; }
 a { color: inherit; }
 ul { list-style: none; }
@@ -72,7 +72,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   padding: .65em 1.4em;
   border-radius: var(--radius-sm);
   font-family: var(--font-body);
-  font-size: .9rem; font-weight: 600; line-height: 1.3;
+  font-size: 1.1rem; font-weight: 600; line-height: 1.3;
   text-decoration: none;
   border: 1.5px solid transparent;
   transition: background .18s, box-shadow .18s, border-color .18s, transform .12s;
@@ -91,13 +91,13 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .btn-fb:hover { background: var(--c-fb-h); border-color: var(--c-fb-h); }
 .btn-ghost { background: transparent; color: var(--c-muted); border-color: transparent; padding-inline: .6em; }
 .btn-ghost:hover { color: var(--c-primary); background: var(--c-subtle); transform: none; }
-.btn-lg { padding: .8em 1.75em; font-size: 1rem; }
-.btn-sm { padding: .45em 1em; font-size: .82rem; }
+.btn-lg { padding: .8em 1.75em; font-size: 1.1rem; }
+.btn-sm { padding: .45em 1em; font-size: 1.1rem; }
 
 /* --- TYPOGRAPHY HELPERS --- */
 .label-tag {
   display: inline-block;
-  font-size: .72rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+  font-size: 1.1rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
   color: var(--c-primary); background: var(--c-subtle);
   padding: .2em .75em; border-radius: 100px;
   margin-bottom: .9rem;
@@ -182,7 +182,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 .header-ctas .btn-wa {
   padding: 0.45em 1em;
-  font-size: 0.83rem;
+  font-size: 1.1rem;
 }
 
 .header-fb-link {
@@ -215,7 +215,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .mobile-nav.open { display: block; }
 .mobile-nav a {
   display: block; padding: .9rem 0;
-  font-size: 1rem; font-weight: 500; color: var(--c-dark);
+  font-size: 1.1rem; font-weight: 500; color: var(--c-dark);
   text-decoration: none;
   border-bottom: 1px solid var(--c-border);
 }
@@ -262,7 +262,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   border-radius: 0;
   box-shadow: 0 4px 12px rgba(0,0,0,.08);
   padding: 2rem;
-  min-width: 650px;
+  min-width: 500px;
   display: none;
   opacity: 0;
   pointer-events: none;
@@ -292,7 +292,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 .dropdown-section h3 {
-  font-size: calc(0.9rem + 4px);
+  font-size: 1.1rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: var(--c-primary);
@@ -311,7 +311,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .dropdown-section li a {
   color: #374151;
   text-decoration: none;
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   line-height: 1.6;
   transition: color 0.2s;
   display: block;
@@ -404,11 +404,11 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     justify-content: space-between;
     align-items: center;
     user-select: none;
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
   .nav-accordion summary::after {
     content: '▼';
-    font-size: 0.75rem;
+    font-size: 1.1rem;
     transition: transform 0.3s;
   }
   .nav-accordion[open] summary::after {
@@ -429,7 +429,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     padding-left: 2rem;
     color: #374151;
     text-decoration: none;
-    font-size: 0.95rem;
+    font-size: 1.1rem;
   }
   .nav-accordion li a:active {
     background: rgba(79, 70, 229, 0.1);
@@ -439,13 +439,13 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .nav-dropdown-item {
     padding: .75rem .85rem;
     margin-left: 1.5rem;
-    font-size: .95rem;
+    font-size: 1.1rem;
   }
 
   .nav-submenu-item {
     padding: .65rem .85rem;
     margin-left: 3rem;
-    font-size: .9rem;
+    font-size: 1.1rem;
   }
 }
 
@@ -455,7 +455,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 .mobile-nav-section-title {
-  font-size: .75rem;
+  font-size: 1.1rem;
   font-weight: 700;
   letter-spacing: .08em;
   text-transform: uppercase;
@@ -467,7 +467,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .mobile-nav-section a {
   display: block;
   padding: .75rem 0;
-  font-size: .95rem;
+  font-size: 1.1rem;
   font-weight: 400;
   color: var(--c-dark);
   text-decoration: none;
@@ -513,7 +513,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 .hero-eyebrow {
   display: inline-flex; align-items: center; gap: .5rem;
-  font-size: .85rem; font-weight: 600; letter-spacing: .07em; text-transform: uppercase;
+  font-size: 1.1rem; font-weight: 600; letter-spacing: .07em; text-transform: uppercase;
   color: rgba(255,255,255,.90);
   margin-bottom: 1.5rem;
 }
@@ -558,12 +558,12 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 .hero-trust {
-  font-size: .9rem; color: rgba(255,255,255,.85);
+  font-size: 1.1rem; color: rgba(255,255,255,.85);
   margin-top: 1.25rem;
 }
 
 .hero-link {
-  font-size: .88rem; color: rgba(255,255,255,.80);
+  font-size: 1.1rem; color: rgba(255,255,255,.80);
   text-decoration: none;
   transition: color .18s;
 }
@@ -618,12 +618,12 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   width: 34px; height: 34px; border-radius: 7px;
   background: rgba(255,255,255,.1);
   display: flex; align-items: center; justify-content: center;
-  font-size: 1.08rem; flex-shrink: 0;
+  font-size: 1.1rem; flex-shrink: 0;
 }
 .hero-stat-icon--primary { background: var(--c-primary); }
 .hero-stat-body { flex: 1; }
-.hero-stat-val { font-size: .98rem; font-weight: 700; color: var(--c-white); line-height: 1.2; }
-.hero-stat-desc { font-size: .86rem; color: rgba(255,255,255,.7); margin-top: .05rem; }
+.hero-stat-val { font-size: 1.1rem; font-weight: 700; color: var(--c-white); line-height: 1.2; }
+.hero-stat-desc { font-size: 1.1rem; color: rgba(255,255,255,.7); margin-top: .05rem; }
 
 /* Trust ribbon */
 .trust-ribbon {
@@ -639,7 +639,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 .trust-item {
   display: flex; align-items: center; gap: .45rem;
-  font-size: .88rem; color: rgba(255,255,255,.85);
+  font-size: 1.1rem; color: rgba(255,255,255,.85);
 }
 .trust-item-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--c-primary); flex-shrink: 0; }
 
@@ -665,7 +665,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .section-title em { font-style: italic; font-weight: 300; color: #6B7A8A; }
 
 .section-sub {
-  font-size: 1rem; color: #5A6B7A;
+  font-size: 1.1rem; color: #5A6B7A;
   max-width: 600px; line-height: 1.65;
 }
 
@@ -711,14 +711,14 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   color: var(--c-dark); margin-bottom: .5rem; letter-spacing: -.01em;
 }
 .path-card__desc {
-  font-size: .875rem; color: #5A6B7A; line-height: 1.65;
+  font-size: 1.1rem; color: #5A6B7A; line-height: 1.65;
   margin-bottom: 1.5rem; flex: 1;
 }
 .path-card__list {
   margin-bottom: 1.6rem; display: flex; flex-direction: column; gap: .4rem;
 }
 .path-card__list li {
-  font-size: .84rem; color: #2D3E4F;
+  font-size: 1.1rem; color: #2D3E4F;
   display: flex; align-items: baseline; gap: .5rem;
 }
 .path-card__list li::before {
@@ -730,14 +730,14 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .path-card__list li a:hover { text-decoration: underline; }
 
 .path-card__cta {
-  font-size: .88rem; font-weight: 600; color: var(--c-primary);
+  font-size: 1.1rem; font-weight: 600; color: var(--c-primary);
   text-decoration: none; display: inline-flex; align-items: center; gap: .35em;
   transition: gap .18s;
 }
 .path-card__cta:hover { gap: .6em; }
 
 .path-card__disclaimer {
-  font-size: .8rem; color: #5A6B7A; line-height: 1.5;
+  font-size: 1.1rem; color: #5A6B7A; line-height: 1.5;
   margin-bottom: 1.2rem; padding: .75rem; background: var(--c-subtle);
   border-radius: var(--radius-md); border-left: 3px solid var(--c-primary);
 }
@@ -765,14 +765,14 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 .immigration-content .section-title { color: var(--c-white); }
-.immigration-content .section-sub { color: rgba(255,255,255,.88); max-width: 480px; font-size: 1.05rem; }
+.immigration-content .section-sub { color: rgba(255,255,255,.88); max-width: 480px; font-size: 1.1rem; }
 
 .immigration-meta {
   display: flex; align-items: center; gap: .6rem;
   margin-top: 1.25rem; margin-bottom: .75rem;
 }
 .immigration-meta-badge {
-  font-size: .73rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase;
+  font-size: 1.1rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase;
   padding: .2em .8em; border-radius: 100px;
   background: rgba(79,70,229,.25); color: rgba(255,255,255,.92);
   border: 1px solid rgba(79,70,229,.5);
@@ -796,7 +796,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   background: var(--c-primary);
 }
 .immigration-panel-title {
-  font-size: .82rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase;
+  font-size: 1.1rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase;
   color: rgba(255,255,255,.90);
 }
 
@@ -810,7 +810,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .immigration-topic-item:last-child { border-bottom: none; }
 .immigration-topic-item:hover { background: rgba(255,255,255,.04); }
 .immigration-topic-label {
-  font-size: .95rem; font-weight: 500; color: rgba(255,255,255,.95);
+  font-size: 1.1rem; font-weight: 500; color: rgba(255,255,255,.95);
   display: flex; align-items: center; gap: .6rem;
 }
 .immigration-topic-label::before {
@@ -819,7 +819,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   background: var(--c-primary); flex-shrink: 0;
 }
 .immigration-topic-arrow {
-  font-size: .75rem; color: rgba(255,255,255,.70);
+  font-size: 1.1rem; color: rgba(255,255,255,.70);
   transition: color .15s;
 }
 .immigration-topic-item:hover .immigration-topic-arrow { color: rgba(255,255,255,.90); }
@@ -855,20 +855,20 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   transform: translateY(-2px);
 }
 .comp-card__risk {
-  font-size: .7rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase;
+  font-size: 1.1rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase;
   padding: .15em .65em; border-radius: 100px; display: inline-block; align-self: flex-start;
 }
 .comp-card__risk--high { background: #FEE2E2; color: #DC2626; }
 .comp-card__risk--med  { background: #FEF3C7; color: #D97706; }
 .comp-card__risk--low  { background: var(--c-subtle); color: var(--c-primary); }
 .comp-card__title {
-  font-size: .9rem; font-weight: 600; color: var(--c-dark); line-height: 1.4;
+  font-size: 1.1rem; font-weight: 600; color: var(--c-dark); line-height: 1.4;
 }
 .comp-card__desc {
-  font-size: .8rem; color: #5A6B7A; line-height: 1.5; flex: 1;
+  font-size: 1.1rem; color: #5A6B7A; line-height: 1.5; flex: 1;
 }
 .comp-card__link {
-  font-size: .8rem; font-weight: 600; color: var(--c-primary);
+  font-size: 1.1rem; font-weight: 600; color: var(--c-primary);
   display: flex; align-items: center; gap: .3em;
   margin-top: auto; padding-top: .5rem;
   transition: gap .15s;
@@ -917,7 +917,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 .guide-card--featured:hover { box-shadow: 0 8px 30px rgba(0,0,0,.3); }
 .guide-card__type {
-  font-size: .72rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+  font-size: 1.1rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
   color: var(--c-primary);
 }
 .guide-card--featured .guide-card__type { color: rgba(255,255,255,.90); }
@@ -925,10 +925,10 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   font-family: var(--font-display); font-size: 1.1rem; font-weight: 400;
   color: inherit; line-height: 1.35; letter-spacing: -.01em;
 }
-.guide-card__desc { font-size: .82rem; color: #5A6B7A; line-height: 1.55; flex: 1; }
-.guide-card--featured .guide-card__desc { color: rgba(255,255,255,.90); font-size: .88rem; }
+.guide-card__desc { font-size: 1.1rem; color: #5A6B7A; line-height: 1.55; flex: 1; }
+.guide-card--featured .guide-card__desc { color: rgba(255,255,255,.90); font-size: 1.1rem; }
 .guide-card__cta {
-  font-size: .83rem; font-weight: 600; color: var(--c-primary);
+  font-size: 1.1rem; font-weight: 600; color: var(--c-primary);
   display: flex; align-items: center; gap: .35em;
   margin-top: .5rem; transition: gap .15s;
 }
@@ -960,10 +960,10 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .tool-card:hover .tool-card__icon { background: var(--c-violet-l); }
 .tool-card__body { flex: 1; }
 .tool-card__type {
-  font-size: .7rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase;
+  font-size: 1.1rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase;
   color: var(--c-primary);
 }
-.tool-card__title { font-size: .88rem; font-weight: 600; color: var(--c-dark); line-height: 1.3; }
+.tool-card__title { font-size: 1.1rem; font-weight: 600; color: var(--c-dark); line-height: 1.3; }
 
 /* ============================================================
    EXPERIENCE STRIP
@@ -989,7 +989,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 .experience-content .section-title { color: var(--c-white); }
 .experience-content .section-sub {
-  color: rgba(255,255,255,.88); max-width: none; margin-top: 1rem; margin-bottom: 2rem; font-size: 1.05rem;
+  color: rgba(255,255,255,.88); max-width: none; margin-top: 1rem; margin-bottom: 2rem; font-size: 1.1rem;
 }
 .experience-quote {
   font-family: var(--font-display); font-size: 1.2rem; font-style: italic;
@@ -1013,7 +1013,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   margin-bottom: .4rem;
 }
 .experience-stat__num span { font-size: 1.5rem; color: var(--c-primary); }
-.experience-stat__label { font-size: .88rem; color: rgba(255,255,255,.85); line-height: 1.4; }
+.experience-stat__label { font-size: 1.1rem; color: rgba(255,255,255,.85); line-height: 1.4; }
 .experience-stat--accent {
   background: rgba(79,70,229,.15);
   border-color: rgba(79,70,229,.3);
@@ -1035,7 +1035,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .contact-cta .section-sub { margin-inline: auto; margin-bottom: 2.25rem; }
 .contact-cta-btns { display: flex; flex-wrap: wrap; justify-content: center; gap: .85rem; }
 .contact-disclaimer {
-  font-size: .77rem; color: #5A6B7A; margin-top: 1.5rem; font-style: italic;
+  font-size: 1.1rem; color: #5A6B7A; margin-top: 1.5rem; font-style: italic;
 }
 
 /* ============================================================
@@ -1083,7 +1083,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 
 .footer-tagline {
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   line-height: 1.6;
   margin: 0;
   color: rgba(255, 255, 255, 0.75);
@@ -1147,7 +1147,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .footer-links a {
   color: rgba(255, 255, 255, 0.75);
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 1.1rem;
   line-height: 1.5;
   transition: color 0.2s;
 }
@@ -1169,7 +1169,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 .footer-bottom-bar p {
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   color: rgba(255, 255, 255, 0.6);
   margin: 0;
 }
@@ -1180,7 +1180,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 .footer-legal-links a {
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
   transition: color 0.2s;
@@ -1233,11 +1233,11 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   }
 
   .footer-col-title {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 
   .footer-links a {
-    font-size: 0.95rem;
+    font-size: 1.1rem;
   }
 
   .footer-bottom-bar {
@@ -1247,7 +1247,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   }
 
   .footer-bottom-bar p {
-    font-size: 0.85rem;
+    font-size: 1.1rem;
   }
 
   .footer-legal-links {
@@ -1255,7 +1255,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   }
 
   .footer-legal-links a {
-    font-size: 0.85rem;
+    font-size: 1.1rem;
   }
 }
 
@@ -1327,7 +1327,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   position: relative;
   color: var(--c-body);
   text-decoration: none;
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   font-weight: 500;
   padding: 0.5rem 0.85rem;
   border-bottom: 2px solid transparent;
@@ -1382,7 +1382,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 .dropdown-section h3 {
-  font-size: 0.85rem;
+  font-size: 1.1rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: var(--c-primary);
@@ -1405,7 +1405,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .dropdown-section li a {
   color: var(--c-body);
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   line-height: 1.6;
   transition: color 0.2s;
   display: block;
@@ -1502,7 +1502,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     align-items: center;
     user-select: none;
     transition: background 0.2s;
-    font-size: 0.95rem;
+    font-size: 1.1rem;
   }
 
   .nav-accordion summary::-webkit-details-marker {
@@ -1515,7 +1515,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
   .nav-accordion summary::after {
     content: '▼';
-    font-size: 0.75rem;
+    font-size: 1.1rem;
     transition: transform 0.3s;
     color: var(--c-primary);
   }
@@ -1542,7 +1542,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     padding-left: 2rem;
     color: var(--c-body);
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     transition: color 0.2s, background 0.2s;
   }
 
