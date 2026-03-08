@@ -1002,72 +1002,98 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 /* ============================================================
    FOOTER
    ============================================================ */
+/* FOOTER: Layout & Styling */
+
 .site-footer {
-  background: var(--c-dark);
-  border-top: 1px solid rgba(255,255,255,.07);
-  padding-top: clamp(3.5rem, 6vw, 5.5rem);
-  padding-bottom: 2.5rem;
+  background: #0D1275;
+  color: rgba(255, 255, 255, 0.92);
+  padding: 3rem 1rem 1rem;
+  margin-top: 6rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.footer-top {
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: 1.4fr 1fr 1fr 1fr 1fr;
-  gap: 2.5rem;
-  padding-bottom: 3.5rem;
-  border-bottom: 1px solid rgba(255,255,255,.07);
+  grid-template-columns: repeat(6, 1fr);
+  gap: 3rem;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.footer-brand { grid-column: 1; }
-.footer-logo {
-  text-decoration: none; display: inline-flex; align-items: center; gap: .55rem;
-  margin-bottom: 1rem;
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
-.footer-logo-mark {
-  width: 30px; height: 30px; border-radius: 6px;
-  background: linear-gradient(135deg, var(--c-primary) 0%, var(--c-violet) 100%);
-  display: flex; align-items: center; justify-content: center;
-  color: #fff; font-family: var(--font-display); font-size: .95rem; font-style: italic;
-}
-.footer-logo-text {
-  font-family: var(--font-body); font-weight: 700; font-size: .95rem; color: var(--c-white);
-}
-.footer-tagline {
-  font-size: .9rem; color: rgba(255,255,255,.80); line-height: 1.6;
-  margin-bottom: 1.5rem; max-width: 240px;
-}
-.footer-social { display: flex; gap: .6rem; }
-.footer-social a {
-  width: 34px; height: 34px; border-radius: 7px;
-  background: rgba(255,255,255,.10); border: 1px solid rgba(255,255,255,.20);
-  display: flex; align-items: center; justify-content: center;
-  text-decoration: none; font-size: .78rem; font-weight: 700;
-  color: rgba(255,255,255,.90);
-  transition: background .15s, color .15s, border-color .15s;
-}
-.footer-social a:hover { background: var(--c-primary); border-color: var(--c-primary); color: #fff; }
 
-.footer-col-title {
-  font-size: .8rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
-  color: rgba(255,255,255,.85); margin-bottom: 1rem;
+.footer-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid rgba(79, 70, 229, 0.5);
 }
-.footer-col ul { display: flex; flex-direction: column; gap: .55rem; }
-.footer-col ul a {
-  font-size: .9rem; color: rgba(255,255,255,.85); text-decoration: none;
-  transition: color .15s;
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
 }
-.footer-col ul a:hover { color: rgba(255,255,255,.95); }
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: rgba(79, 70, 229, 1);
+}
+
+.footer-legal {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-legal p {
+  margin: 0.5rem 0;
+}
+
+.footer-legal a {
+  color: rgba(255, 255, 255, 0.65);
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: color 0.2s;
+}
+
+.footer-legal a:hover {
+  color: rgba(255, 255, 255, 0.9);
+}
 
 .footer-bottom {
-  display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;
-  gap: .75rem; padding-top: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
 }
-.footer-copy { font-size: .8rem; color: rgba(255,255,255,.70); }
-.footer-legal { display: flex; gap: 1.25rem; }
-.footer-legal a {
-  font-size: .8rem; color: rgba(255,255,255,.75); text-decoration: none;
-  transition: color .15s;
+
+.footer-bottom p {
+  margin: 0;
 }
-.footer-legal a:hover { color: rgba(255,255,255,.95); }
 
 /* ============================================================
    SCROLL ANIMATIONS
@@ -1086,10 +1112,46 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 /* ============================================================
    RESPONSIVE
    ============================================================ */
-@media (max-width: 1100px) {
-  .footer-top { grid-template-columns: 1fr 1fr 1fr; }
-  .footer-brand { grid-column: 1 / -1; }
-  .footer-top { gap: 2rem; }
+
+/* Tablet Footer (2-3 columns) */
+@media (max-width: 1024px) and (min-width: 641px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+/* Mobile Footer (1 column, stacked) */
+@media (max-width: 640px) {
+  .site-footer {
+    padding: 2rem 1rem 1rem;
+    margin-top: 4rem;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .footer-title {
+    font-size: 0.9rem;
+    padding-bottom: 0.4rem;
+  }
+
+  .footer-links {
+    gap: 0.5rem;
+  }
+
+  .footer-links a {
+    font-size: 0.85rem;
+  }
+
+  .footer-bottom {
+    padding: 1rem 0 0;
+    font-size: 0.8rem;
+  }
 }
 
 @media (max-width: 960px) {
@@ -1132,8 +1194,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .paths-grid { grid-template-columns: 1fr; }
   .compliance-grid { grid-template-columns: 1fr 1fr; }
   .guides-row { grid-template-columns: 1fr; }
-  .footer-top { grid-template-columns: 1fr 1fr; }
-  .footer-bottom { flex-direction: column; align-items: flex-start; }
   .guides-tools-header { flex-direction: column; align-items: flex-start; }
   .hero-ctas { flex-direction: column; align-items: flex-start; }
 }
@@ -2422,81 +2482,108 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
      FOOTER
      ======================================================== -->
 <footer class="site-footer" role="contentinfo">
-<div class="container">
+<div class="footer-container">
 
-  <div class="footer-top">
-
-    <!-- Brand column -->
-    <div class="footer-brand footer-col">
-      <a href="index.html" class="footer-logo" aria-label="CMLocals homepage">
-        <span class="footer-logo-mark" aria-hidden="true">C</span>
-        <span class="footer-logo-text">CMLocals</span>
-      </a>
-      <p class="footer-tagline">Independent Thai visa information hub for Chiang Mai and long-stay life in Thailand.</p>
-      <div class="footer-social" aria-label="Social media links">
-        <a href="https://www.facebook.com/chiangmailocals" rel="noopener" target="_blank" aria-label="Facebook">f</a>
-        <a href="https://wa.me/66801202074" rel="noopener" target="_blank" aria-label="WhatsApp">W</a>
-      </div>
-    </div>
-
-    <!-- Visa Guides column -->
-    <div class="footer-col">
-      <h3 class="footer-col-title">Visa Guides</h3>
-      <ul>
-        <li><a href="/visas/">Visa Overview 2026</a></li>
-        <li><a href="/visas/long-stay/">Long-Stay Visas</a></li>
-        <li><a href="/visas/short-stay/">Short-Stay &amp; Tourist</a></li>
-        <li><a href="/visas/long-stay/dtv-digital-nomad/">DTV and Special Programs</a></li>
-        <li><a href="/chiang-mai/immigration-guide/">Chiang Mai Immigration</a></li>
-        <li><a href="/visas/long-stay/permanent-residence/">Permanent Residence</a></li>
-      </ul>
-    </div>
-
-    <!-- Tools & Resources column -->
-    <div class="footer-col">
-      <h3 class="footer-col-title">Tools &amp; Resources</h3>
-      <ul>
-        <li><a href="/checklists/">Checklists</a></li>
-        <li><a href="/tools/stay-duration-calculator/">Stay Duration Calculator</a></li>
-        <li><a href="/tools/visa-quiz/">Visa Suggestion Quiz</a></li>
-        <li><a href="/visas/long-stay/ed-visa/">ED Visa Guide</a></li>
-        <li><a href="/visas/long-stay/thailand-privilege/">Thailand Privilege Visa</a></li>
-      </ul>
-    </div>
-
-    <!-- About & Legal column -->
-    <div class="footer-col">
-      <h3 class="footer-col-title">About &amp; Legal</h3>
-      <ul>
-        <li><a href="/pages/about-cmlocals.html">About CMLocals</a></li>
-        <li><a href="/pages/disclaimer.html">Disclaimer</a></li>
-        <li><a href="/pages/terms-of-service.html">Terms of Service</a></li>
-        <li><a href="/pages/privacy-policy.html">Privacy Policy</a></li>
-      </ul>
-    </div>
-
-    <!-- Contact column -->
-    <div class="footer-col">
-      <h3 class="footer-col-title">Contact</h3>
-      <ul>
-        <li><a href="https://wa.me/66801202074" rel="noopener" target="_blank">WhatsApp</a></li>
-        <li><a href="https://m.me/cmlocals" rel="noopener" target="_blank">Messenger</a></li>
-      </ul>
-    </div>
-
+  <!-- Column 1: ED VISAS (LEFT, PRIORITY) -->
+  <div class="footer-col">
+    <h3 class="footer-title">ED Visas</h3>
+    <ul class="footer-links">
+      <li><a href="/pages/ed-visas/">All ED Visas</a></li>
+      <li><a href="/pages/ed-visas/muay-thai-ed-visa-chiang-mai.html">Muay Thai</a></li>
+      <li><a href="/pages/ed-visas/thai-language-ed-visa-chiang-mai.html">Thai Language</a></li>
+      <li><a href="/pages/ed-visas/hand-to-hand-combat-ed-visa-chiang-mai.html">Hand-to-Hand Combat</a></li>
+      <li><a href="/pages/ed-visas/emergency-self-defence-ed-visa-chiang-mai.html">Self-Defence</a></li>
+      <li><a href="/pages/ed-visas/volunteer-non-o-visa-chiang-mai.html">Volunteer Non-O</a></li>
+    </ul>
   </div>
 
-  <!-- Footer bottom -->
-  <div class="footer-bottom">
-    <span class="footer-copy">&copy; 2026 CMLocals. All rights reserved.</span>
-    <nav class="footer-legal" aria-label="Legal navigation">
-      <a href="/pages/privacy-policy.html">Privacy</a>
-      <a href="/pages/terms-of-service.html">Terms</a>
-      <a href="/pages/disclaimer.html">Disclaimer</a>
-    </nav>
+  <!-- Column 2: CHIANG MAI -->
+  <div class="footer-col">
+    <h3 class="footer-title">Chiang Mai Life</h3>
+    <ul class="footer-links">
+      <li><a href="/pages/chiang-mai/">Overview</a></li>
+      <li><a href="/pages/chiang-mai/why-chiang-mai-base.html">Why Base Here</a></li>
+      <li><a href="/pages/chiang-mai/where-to-stay.html">Where to Stay</a></li>
+      <li><a href="/pages/chiang-mai/long-term-living.html">Long-Term Living</a></li>
+      <li><a href="/pages/chiang-mai/things-to-do.html">Things to Do</a></li>
+      <li><a href="/pages/chiang-mai/digital-nomads.html">Digital Nomads</a></li>
+      <li><a href="/pages/chiang-mai/cost-of-living.html">Cost of Living</a></li>
+      <li><a href="/pages/chiang-mai/phones-and-banking.html">Phones &amp; Banking</a></li>
+      <li><a href="/pages/chiang-mai/getting-around.html">Getting Around</a></li>
+      <li><a href="/pages/chiang-mai/healthcare.html">Healthcare</a></li>
+      <li><a href="/pages/chiang-mai/insurance.html">Insurance</a></li>
+      <li><a href="/pages/chiang-mai/taxes.html">Taxes</a></li>
+    </ul>
+  </div>
+
+  <!-- Column 3: VISA GUIDES -->
+  <div class="footer-col">
+    <h3 class="footer-title">Visa Guides</h3>
+    <ul class="footer-links">
+      <li><a href="/pages/visas/">All Visas</a></li>
+      <li><a href="/pages/visas/short-stay/">Short-Stay</a></li>
+      <li><a href="/pages/visas/short-stay/visa-exempt-entry.html">Visa Exempt</a></li>
+      <li><a href="/pages/visas/short-stay/tourist-visa.html">Tourist Visa</a></li>
+      <li><a href="/pages/visas/short-stay/visa-on-arrival.html">Visa on Arrival</a></li>
+      <li><a href="/pages/visas/short-stay/dtv-destination-thailand-visa-thai-visa-advice-chiang-mai-cmlocals.html">DTV</a></li>
+      <li><a href="/pages/visas/long-stay/">Long-Stay</a></li>
+      <li><a href="/pages/visas/long-stay/retirement-visa-thai-visa-advice-chiang-mai-cmlocals.html">Retirement</a></li>
+      <li><a href="/pages/visas/long-stay/business-visa-non-b-thai-visa-advice-chiang-mai-cmlocals.html">Business</a></li>
+      <li><a href="/pages/visas/long-stay/marriage-visa-non-o-thai-visa-advice-chiang-mai-cmlocals.html">Marriage</a></li>
+      <li><a href="/pages/visas/long-stay/ltr-long-term-resident-visa-thai-visa-advice-chiang-mai-cmlocals.html">LTR</a></li>
+    </ul>
+  </div>
+
+  <!-- Column 4: IMMIGRATION -->
+  <div class="footer-col">
+    <h3 class="footer-title">Immigration</h3>
+    <ul class="footer-links">
+      <li><a href="/pages/immigration/">All Immigration</a></li>
+      <li><a href="/pages/immigration/90-day-reporting.html">90-Day Reporting</a></li>
+      <li><a href="/pages/immigration/tm30-address-reporting.html">TM30 Registration</a></li>
+      <li><a href="/pages/immigration/overstay-penalties.html">Overstay Penalties</a></li>
+      <li><a href="/pages/immigration/document-requirements.html">Documents</a></li>
+      <li><a href="/pages/immigration/re-entry-permits.html">Re-Entry Permits</a></li>
+      <li><a href="/pages/immigration/land-border-vs-air-entry.html">Entry Strategy</a></li>
+      <li><a href="/pages/immigration/thailand-digital-arrival-card.html">Digital Arrival</a></li>
+    </ul>
+  </div>
+
+  <!-- Column 5: CULTURE & TOOLS -->
+  <div class="footer-col">
+    <h3 class="footer-title">Culture &amp; Tools</h3>
+    <ul class="footer-links">
+      <li><a href="/pages/culture/">Culture Guide</a></li>
+      <li><a href="/pages/culture/sak-yant-chiang-mai.html">Sak Yant</a></li>
+      <li><a href="/pages/culture/festivals-events-chiang-mai.html">Festivals</a></li>
+      <li><a href="/pages/culture/thai-food-culture.html">Thai Food</a></li>
+      <li><a href="/pages/tools/">Tools Hub</a></li>
+      <li><a href="/pages/checklists/">Checklists</a></li>
+    </ul>
+  </div>
+
+  <!-- Column 6: CONTACT -->
+  <div class="footer-col">
+    <h3 class="footer-title">Contact</h3>
+    <ul class="footer-links">
+      <li><a href="https://wa.me/66801202074" target="_blank">WhatsApp</a></li>
+      <li><a href="https://m.me/cmlocals" target="_blank">Messenger</a></li>
+      <li><a href="https://www.facebook.com/chiangmailocals" target="_blank">Facebook</a></li>
+    </ul>
+    <div class="footer-legal">
+      <p><a href="/pages/about.html">About CMLocals</a></p>
+      <p><a href="/pages/privacy-policy.html">Privacy</a></p>
+      <p><a href="/pages/disclaimer.html">Disclaimer</a></p>
+    </div>
   </div>
 
 </div>
+
+<!-- Bottom Bar -->
+<div class="footer-bottom">
+  <p>&copy; 2026 CMLocals. Independent information hub for Thailand visa &amp; Chiang Mai living.</p>
+</div>
+
 </footer>
 
 <!-- ========================================================
