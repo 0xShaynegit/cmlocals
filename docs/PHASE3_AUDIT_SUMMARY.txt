@@ -1,0 +1,96 @@
+PHASE 3: IMAGE DISTRIBUTION AUDIT COMPLETE
+============================================================
+
+AUDIT DATE: 2026-03-08
+AUDITOR: Claude Code
+STATUS: Complete - 60 target pages analyzed and mapped
+
+FILE LOCATION:
+  C:\ZZZWebsites\cmlocals\docs\IMAGE-MAPPING.csv
+
+APPROACH: Flexible, Human-Centered Image Distribution
+  This audit provides structural guidance, NOT a rigid formula.
+  Image distribution will be:
+  - Content-relevant (images match section topics)
+  - Contextually placed (best visual breakpoint per section)
+  - Naturally varied (some pages 2 images, others 5+, based on fit)
+  - Design-driven (visual balance > numerical uniformity)
+  - Randomly distributed (organic placement, not predictable patterns)
+
+PAGES AUDITED:
+  Total pages with content: 58
+  Hub/minimal pages (0-1 images): 5
+  Pages needing visual enrichment: 53
+
+TOTAL AVAILABLE IMAGES: 60+ in /images/ folder
+EXPECTED FINAL DISTRIBUTION: Flexible, 1-5+ images per page based on:
+  - Relevance to section content
+  - Visual pacing and reader engagement
+  - Page length and density
+  - Design composition goals
+
+STRUCTURAL REFERENCE (from CSV):
+  Shows content section breakdown for each page:
+  - Section count helps identify dense content areas
+  - Notes detail topic flow
+  - Insertion zones are suggestions, not requirements
+
+CATEGORY OVERVIEW:
+  Chiang Mai lifestyle guides (11 pages)
+    Rich visual content - temples, neighborhoods, activities, daily life
+    Expect: 3-5 images per page, naturally varied
+
+  Visa pages (20 pages)
+    Mixed content - some purely informational, some with process flows
+    Hub pages: minimal/no images
+    Detail pages: 2-4 images as content demands
+
+  Immigration pages (19 pages)
+    Compliance-focused with procedural steps
+    Expect: 2-4 images per page, strategically placed
+
+  Culture pages (10 pages)
+    Strong visual storytelling opportunity
+    Expect: 3-5 images per page, organic distribution
+
+  Tools pages (1 page)
+    Product grid - minimal additional images needed
+
+CSV COLUMNS EXPLAINED:
+  1. page_path: Full file path
+  2. total_content_sections: Count of main content topics (h2s)
+  3. first_image_after_section: SUGGESTED first image zone (not mandatory)
+  4. second_image_position: SUGGESTED second image zone (not mandatory)
+  5. third_image_position: SUGGESTED third image zone (not mandatory)
+  6. target_image_count: MINIMUM guideline (can exceed if relevant)
+  7. section_structure_notes: Topic breakdown for context
+
+PLACEMENT GUIDELINES (Flexible):
+  - Avoid inserting images in final Related/Footer sections
+  - Images should follow complete section closes
+  - Respect natural reading flow and content grouping
+  - No forced uniformity across similar pages
+  - Let visual balance and relevance drive decisions
+
+NEXT STEPS:
+  1. Review IMAGE-MAPPING.csv for page structure reference
+  2. Examine /images/ folder for available photos
+  3. For each page:
+     - Read content sections
+     - Select 1-5+ images that match topics (not by number, by relevance)
+     - Place them where they enhance comprehension and visual pacing
+     - Write descriptive alt-text
+  4. Pages will naturally vary in image count based on content fit
+  5. Commit in logical groups (by category or theme)
+
+DESIGN PRINCIPLES:
+  - Content drives image selection
+  - Visual hierarchy > numerical consistency
+  - Some pages may have 2 images, neighbors have 5 - that's intentional
+  - Randomness in placement creates organic, designed feel
+  - Reader experience matters more than audit metrics
+
+KEY POINT:
+  This is NOT "add 3 images to every 6+ section page"
+  This IS "use available images to enrich relevant content areas"
+  Variation across pages is a feature, not a bug.
