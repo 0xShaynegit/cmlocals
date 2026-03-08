@@ -228,6 +228,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .nav-item {
   position: relative;
   display: inline-block;
+  padding-bottom: 0.5rem;
 }
 
 .nav-item > a.nav-link {
@@ -254,7 +255,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 /* Mega Menu Dropdown */
 .dropdown-menu {
   position: absolute;
-  top: calc(100% - 0.5rem);
+  top: 100%;
   left: 0;
   background: white;
   border: 1px solid rgba(0,0,0,.1);
@@ -265,17 +266,11 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   display: none;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.2s;
+  transition: opacity 0.15s ease-out;
   margin-top: 0;
   z-index: 101;
-  padding-top: 2.5rem;
 }
 
-.nav-item:hover .dropdown-menu {
-  display: block;
-  opacity: 1;
-  pointer-events: auto;
-}
 
 .dropdown-section {
   display: flex;
@@ -2608,7 +2603,29 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     });
   });
 
-  // Note: Dropdowns use CSS hover - no JS interaction needed
+  // Dropdown menu management with hover delay
+  var dropdownTimeout;
+  var navItems = document.querySelectorAll('.nav-item');
+
+  navItems.forEach(function(item) {
+    var dropdownMenu = item.querySelector('.dropdown-menu');
+    if (!dropdownMenu) return;
+
+    item.addEventListener('mouseenter', function() {
+      clearTimeout(dropdownTimeout);
+      dropdownMenu.style.display = 'block';
+      dropdownMenu.style.opacity = '1';
+      dropdownMenu.style.pointerEvents = 'auto';
+    });
+
+    item.addEventListener('mouseleave', function() {
+      dropdownTimeout = setTimeout(function() {
+        dropdownMenu.style.display = 'none';
+        dropdownMenu.style.opacity = '0';
+        dropdownMenu.style.pointerEvents = 'none';
+      }, 150);
+    });
+  });
 
   // --- Scroll fade-in ---
   if ('IntersectionObserver' in window) {
