@@ -271,12 +271,20 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   z-index: 101;
 }
 
+.dropdown-menu[style*="display: block"] {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
 
 .dropdown-section {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
   margin-bottom: 1rem;
+  flex: 1;
+  min-width: 200px;
 }
 
 .dropdown-section:last-child {
