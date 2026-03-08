@@ -693,65 +693,69 @@ document.addEventListener('DOMContentLoaded', () => {
 <!-- ========================================================
      FOOTER
      ======================================================== -->
-<footer class="site-footer" role="contentinfo">
-<div class="container">
+<footer class="site-footer" role="contentinfo" style="background: #6366F1;">
+<div class="footer-container">
 
-  <div class="footer-top">
-
-    <div class="footer-brand footer-col">
-      <a href="/" class="footer-logo" aria-label="CMLocals homepage">
-        <span class="footer-logo-mark" aria-hidden="true">C</span>
-        <span class="footer-logo-text">CMLocals</span>
-      </a>
-      <p class="footer-tagline">Independent Thai visa information hub for Chiang Mai and long-stay life in Thailand.</p>
-      <div class="footer-social" aria-label="Social media links">
-        <a href="https://www.facebook.com/chiangmailocals" rel="noopener" target="_blank" aria-label="Facebook">f</a>
-        <a href="https://wa.me/66801202074" rel="noopener" target="_blank" aria-label="WhatsApp">W</a>
-      </div>
+  <!-- Column 1: CMLocals + Socials (LEFT) -->
+  <div class="footer-col footer-col-cmlocals">
+    <div class="footer-logo">
+      <a href="/">CMLocals</a>
     </div>
-
-    <div class="footer-col">
-      <h3 class="footer-col-title">Visa Guides</h3>
-      <ul>
-        <li><a href="/pages/visas/index.html">Visa Overview 2026</a></li>
-        <li><a href="/pages/visas/long-stay/index.html">Long-Stay Visas</a></li>
-        <li><a href="/pages/visas/short-stay/index.html">Short-Stay &amp; Tourist</a></li>
-        <li><a href="/pages/visas/long-stay/dtv-digital-nomad/">DTV and Special Programs</a></li>
-        <li><a href="/pages/chiang-mai/immigration-guide/">Chiang Mai Immigration</a></li>
-        <li><a href="/pages/visas/long-stay/permanent-residence/">Permanent Residence</a></li>
-      </ul>
+    <p class="footer-tagline">Independent Thai visa information hub for Chiang Mai and long-stay life in Thailand.</p>
+    <div class="footer-socials">
+      <a href="https://wa.me/66801202074" title="WhatsApp" target="_blank">WhatsApp</a>
+      <a href="https://m.me/cmlocals" title="Messenger" target="_blank">Messenger</a>
+      <a href="https://www.facebook.com/chiangmailocals" title="Facebook" target="_blank">Facebook</a>
     </div>
-
-    <div class="footer-col">
-      <h3 class="footer-col-title">Chiang Mai Life</h3>
-      <ul>
-        <li><a href="/pages/chiang-mai/index.html">Chiang Mai Hub</a></li>
-        <li><a href="/pages/chiang-mai/long-term-living.html">Living Long-Term</a></li>
-        <li><a href="/pages/chiang-mai/where-to-stay.html">Where to Stay</a></li>
-        <li><a href="/pages/chiang-mai/cost-of-living.html">Cost of Living</a></li>
-        <li><a href="/pages/chiang-mai/healthcare.html">Healthcare</a></li>
-        <li><a href="/pages/chiang-mai/insurance.html">Healthcare Insurance</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-col">
-      <h3 class="footer-col-title">Tools &amp; Resources</h3>
-      <ul>
-        <li><a href="/pages/checklists/index.html">Checklists</a></li>
-        <li><a href="/pages/tools/stay-duration-calculator/">Stay Duration Calculator</a></li>
-        <li><a href="/pages/tools/visa-quiz/">Visa Suggestion Quiz</a></li>
-        <li><a href="/pages/visas/long-stay/ed-visa/">ED Visa Guide</a></li>
-        <li><a href="/pages/visas/long-stay/thailand-privilege/">Thailand Privilege Visa</a></li>
-      </ul>
-    </div>
-
+    <p class="footer-copyright">&copy; 2026 CMLocals. All rights reserved.</p>
   </div>
 
-  <div class="footer-bottom">
-    <p>© 2026 CMLocals. All rights reserved. <a href="/pages/disclaimer.html">Disclaimer</a> · <a href="/pages/privacy-policy.html">Privacy</a></p>
+  <!-- Column 2: ED Visas -->
+  <div class="footer-col">
+    <h3 class="footer-col-title">ED Visas</h3>
+    <ul class="footer-links">
+      <li><a href="/pages/ed-visas/muay-thai-ed-visa-chiang-mai.html">Muay Thai</a></li>
+      <li><a href="/pages/ed-visas/thai-language-ed-visa-chiang-mai.html">Thai Language</a></li>
+      <li><a href="/pages/ed-visas/hand-to-hand-combat-ed-visa-chiang-mai.html">Hand-to-Hand Combat</a></li>
+      <li><a href="/pages/ed-visas/emergency-self-defence-ed-visa-chiang-mai.html">Self-Defence</a></li>
+      <li><a href="/pages/ed-visas/volunteer-non-o-visa-chiang-mai.html">Volunteer Non-O</a></li>
+      <li><a href="/pages/ed-visas/">All ED Visas</a></li>
+    </ul>
+  </div>
+
+  <!-- Column 3: Chiang Mai -->
+  <div class="footer-col">
+    <h3 class="footer-col-title">Chiang Mai</h3>
+    <ul class="footer-links">
+      <li><a href="/pages/chiang-mai/">Overview</a></li>
+      <li><a href="/pages/chiang-mai/where-to-stay.html">Where to Stay</a></li>
+      <li><a href="/pages/chiang-mai/cost-of-living.html">Cost of Living</a></li>
+      <li><a href="/pages/chiang-mai/getting-around.html">Getting Around</a></li>
+      <li><a href="/pages/chiang-mai/long-term-living.html">Long-Term Living</a></li>
+      <li><a href="/pages/chiang-mai/healthcare.html">Healthcare</a></li>
+    </ul>
+  </div>
+
+  <!-- Column 4: Visa Guides -->
+  <div class="footer-col">
+    <h3 class="footer-col-title">Visa Guides</h3>
+    <ul class="footer-links">
+      <li><a href="/pages/visas/">All Visas</a></li>
+      <li><a href="/pages/visas/short-stay/dtv-destination-thailand-visa-thai-visa-advice-chiang-mai-cmlocals.html">DTV</a></li>
+      <li><a href="/pages/visas/short-stay/">Short Stay</a></li>
+      <li><a href="/pages/visas/long-stay/">Long Stay</a></li>
+      <li><a href="/pages/visas/short-stay/tourist-visa.html">Tourist Visa</a></li>
+      <li><a href="/pages/checklists/">Checklists</a></li>
+    </ul>
   </div>
 
 </div>
+
+<!-- Bottom Bar -->
+<div class="footer-bottom">
+  <p>&copy; 2026 CMLocals. Independent information hub for Thailand visa &amp; Chiang Mai living.</p>
+</div>
+
 </footer>
 
 </body>
