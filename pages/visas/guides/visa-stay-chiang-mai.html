@@ -603,6 +603,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 </style>
 <link rel="stylesheet" href="../../../css/chaty-front.min.css"/>
 
+
 <style>
 /* ============================================================
    CANONICAL HEADER + NAV CSS (auto-injected – do not edit here)
@@ -1008,10 +1009,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 </style>
 </head>
 <body>
-
-<!-- ========================================================
-     HEADER
-     ======================================================== -->
 <header class="site-header" id="site-header" role="banner">
 <div class="header-inner">
 
@@ -1124,7 +1121,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 </div>
 </header>
-
 <nav class="nav-mobile mobile-only" id="mobile-nav" aria-label="Mobile navigation" hidden>
   <details class="nav-accordion" open>
     <summary>ED Visas (6)</summary>
@@ -1188,6 +1184,12 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     </ul>
   </details>
 </nav>
+
+<!-- ========================================================
+     HEADER
+     ======================================================== -->
+
+
 
 <main id="main-content">
 
@@ -1347,6 +1349,64 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 <!-- ========================================================
      FOOTER
      ======================================================== -->
+
+
+<!-- Schema Markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.cmlocals.com" },
+    { "@type": "ListItem", "position": 2, "name": "Visas", "item": "https://www.cmlocals.com/pages/visas/" },
+    { "@type": "ListItem", "position": 3, "name": "Guides", "item": "https://www.cmlocals.com/pages/visas/guides/" },
+    { "@type": "ListItem", "position": 4, "name": "Long-Term Stay in Chiang Mai", "item": "https://www.cmlocals.com/pages/visas/guides/visa-stay-chiang-mai.html" }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Long-Term Visa Stay in Chiang Mai",
+  "description": "Practical strategies for extended stays, visa compliance, and building a sustainable life in Chiang Mai.",
+  "author": { "@type": "Organization", "name": "CMLocals" },
+  "datePublished": "2026-03-04",
+  "dateModified": "2026-03-04"
+}
+</script>
+
+<script>
+// Header scroll effect
+const header = document.getElementById('site-header');
+window.addEventListener('scroll', () => {
+  header.classList.toggle('scrolled', window.scrollY > 50);
+});
+
+// Mobile menu toggle
+const hamburger = document.getElementById('hamburger');
+const mobileNav = document.getElementById('mobile-nav');
+hamburger.addEventListener('click', () => {
+  const isOpen = mobileNav.hidden;
+  mobileNav.hidden = !isOpen;
+  hamburger.setAttribute('aria-expanded', isOpen);
+  hamburger.classList.toggle('open');
+});
+
+// Close menu when link clicked
+mobileNav.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    mobileNav.hidden = true;
+    hamburger.setAttribute('aria-expanded', false);
+    hamburger.classList.remove('open');
+  });
+});
+</script>
+
+<script src="../../../../shared/js/header-handler.js" defer></script>
+<script src="../../../../shared/chaty-widget/scripts/chaty-widget.js"></script>
+
 <footer class="site-footer" role="contentinfo" style="background: #0D1117;">
 <div class="footer-container">
 
@@ -1423,61 +1483,5 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 </div>
 
 </footer>
-
-<!-- Schema Markup -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.cmlocals.com" },
-    { "@type": "ListItem", "position": 2, "name": "Visas", "item": "https://www.cmlocals.com/pages/visas/" },
-    { "@type": "ListItem", "position": 3, "name": "Guides", "item": "https://www.cmlocals.com/pages/visas/guides/" },
-    { "@type": "ListItem", "position": 4, "name": "Long-Term Stay in Chiang Mai", "item": "https://www.cmlocals.com/pages/visas/guides/visa-stay-chiang-mai.html" }
-  ]
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "Long-Term Visa Stay in Chiang Mai",
-  "description": "Practical strategies for extended stays, visa compliance, and building a sustainable life in Chiang Mai.",
-  "author": { "@type": "Organization", "name": "CMLocals" },
-  "datePublished": "2026-03-04",
-  "dateModified": "2026-03-04"
-}
-</script>
-
-<script>
-// Header scroll effect
-const header = document.getElementById('site-header');
-window.addEventListener('scroll', () => {
-  header.classList.toggle('scrolled', window.scrollY > 50);
-});
-
-// Mobile menu toggle
-const hamburger = document.getElementById('hamburger');
-const mobileNav = document.getElementById('mobile-nav');
-hamburger.addEventListener('click', () => {
-  const isOpen = mobileNav.hidden;
-  mobileNav.hidden = !isOpen;
-  hamburger.setAttribute('aria-expanded', isOpen);
-  hamburger.classList.toggle('open');
-});
-
-// Close menu when link clicked
-mobileNav.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    mobileNav.hidden = true;
-    hamburger.setAttribute('aria-expanded', false);
-    hamburger.classList.remove('open');
-  });
-});
-</script>
-
-<script src="../../../../shared/js/header-handler.js" defer></script>
-<script src="../../../../shared/chaty-widget/scripts/chaty-widget.js"></script>
 </body>
 </html>

@@ -616,6 +616,7 @@ td strong { color: var(--c-dark); }
 </style>
 <link rel="stylesheet" href="../../css/chaty-front.min.css"/>
 
+
 <style>
 /* ============================================================
    CANONICAL HEADER + NAV CSS (auto-injected – do not edit here)
@@ -1197,6 +1198,7 @@ td strong { color: var(--c-dark); }
   </details>
 </nav>
 
+
 <section class="hero">
 <div class="hero-inner">
 <h1>Beat Immigration Queues</h1>
@@ -1411,6 +1413,29 @@ td strong { color: var(--c-dark); }
 </div>
 </section>
 
+
+
+<script src="../../../shared/js/header-handler.js" defer></script>
+<script src="../../../shared/chaty-widget/scripts/chaty-widget.js"></script>
+<script>
+if (window.ChatyWidget) {
+  window.ChatyWidget.init({
+    whatsapp: '66801202074',
+    messenger: 'cmlocals',
+    facebook: 'chiangmailocals'
+  });
+}
+const header = document.querySelector('.site-header');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 10) {
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
+  }
+});
+</script>
+<script src="../../../shared/js/card-click-handler.js"></script>
+
 <footer class="site-footer" role="contentinfo" style="background: #0D1117;">
 <div class="footer-container">
 
@@ -1487,26 +1512,5 @@ td strong { color: var(--c-dark); }
 </div>
 
 </footer>
-
-<script src="../../../shared/js/header-handler.js" defer></script>
-<script src="../../../shared/chaty-widget/scripts/chaty-widget.js"></script>
-<script>
-if (window.ChatyWidget) {
-  window.ChatyWidget.init({
-    whatsapp: '66801202074',
-    messenger: 'cmlocals',
-    facebook: 'chiangmailocals'
-  });
-}
-const header = document.querySelector('.site-header');
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 10) {
-    header.classList.add('scrolled');
-  } else {
-    header.classList.remove('scrolled');
-  }
-});
-</script>
-<script src="../../../shared/js/card-click-handler.js"></script>
 </body>
 </html>

@@ -744,43 +744,68 @@ def process_file(filepath):
 
     content = filepath.read_text(encoding="utf-8")
 
-    # ── 1. Replace <header>...</header> ────────────────────────────────────
-    new_header = canonical_header_html(prefix)
+    # ── 1. Remove ALL old <header>...</header> tags ────────────────────────
+    # Use count=-1 (or no count param) to replace ALL occurrences
     content = re.sub(
         r'<header\b[^>]*>.*?</header>',
-        new_header,
+        '',
         content,
         flags=re.DOTALL,
     )
 
-    # ── 2. Replace mobile nav between </header> and <main ──────────────────
-    # Could be: <nav class="mobile-nav"...>, <nav class="nav-mobile"...>,
-    # or entirely absent. We replace existing one OR insert after </header>.
-    mobile_nav_new = "\n" + canonical_mobile_nav_html(prefix)
-
-    # Try to replace existing mobile nav
-    replaced = re.sub(
+    # ── 2. Remove ALL old mobile nav tags ──────────────────────────────────
+    # <nav class="mobile-nav"...> or <nav class="nav-mobile"...>
+    content = re.sub(
         r'\n?<nav\b[^>]*(?:mobile-nav|nav-mobile)[^>]*>.*?</nav>',
-        mobile_nav_new,
+        '',
+        content,
+        flags=re.DOTALL,
+    )
+
+    # ── 3. Remove ALL old <footer>...</footer> tags ────────────────────────
+    content = re.sub(
+        r'<footer\b[^>]*>.*?</footer>',
+        '',
+        content,
+        flags=re.DOTALL,
+    )
+
+    # ── 4. Insert canonical header after <body> ────────────────────────────
+    new_header = canonical_header_html(prefix)
+    # Find <body> tag and insert header right after it
+    content = re.sub(
+        r'(<body[^>]*>)',
+        r'\1\n' + new_header,
         content,
         count=1,
         flags=re.DOTALL,
     )
-    if replaced == content:
-        # No mobile nav found – insert after </header>
-        replaced = content.replace("</header>", "</header>" + mobile_nav_new, 1)
-    content = replaced
 
-    # ── 3. Replace <footer>...</footer> ────────────────────────────────────
+    # If no <body> tag found, insert before first major element
+    if new_header not in content:
+        content = re.sub(
+            r'(<main\b[^>]*>)',
+            new_header + r'\n\1',
+            content,
+            count=1,
+            flags=re.DOTALL,
+        )
+
+    # ── 5. Insert canonical mobile nav after </header> ─────────────────────
+    mobile_nav_new = "\n" + canonical_mobile_nav_html(prefix)
+    content = content.replace("</header>", "</header>" + mobile_nav_new, 1)
+
+    # ── 6. Insert canonical footer before </body> ────────────────────────────
     new_footer = canonical_footer_html(prefix, footer_bg)
     content = re.sub(
-        r'<footer\b[^>]*>.*?</footer>',
-        new_footer,
+        r'</body>',
+        new_footer + r'\n</body>',
         content,
+        count=1,
         flags=re.DOTALL,
     )
 
-    # ── 4. Fix header-handler.js script path ───────────────────────────────
+    # ── 7. Fix header-handler.js script path ───────────────────────────────
     content = re.sub(
         r'(?:\.\.\/)+shared\/js\/header-handler\.js',
         script_path,
@@ -794,7 +819,7 @@ def process_file(filepath):
         content,
     )
 
-    # ── 5. Inject canonical CSS before </head> ─────────────────────────────
+    # ── 8. Inject canonical CSS before </head> ─────────────────────────────
     # Remove any previously injected canonical block first to avoid duplicates
     content = re.sub(
         r'\n?<style>\s*/\* =+\s*CANONICAL HEADER \+ NAV CSS.*?</style>\n?',

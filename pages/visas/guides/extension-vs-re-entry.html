@@ -576,6 +576,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 </style>
 <link rel="stylesheet" href="../../../css/chaty-front.min.css"/>
 
+
 <style>
 /* ============================================================
    CANONICAL HEADER + NAV CSS (auto-injected – do not edit here)
@@ -981,7 +982,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 </style>
 </head>
 <body>
-
 <header class="site-header" id="site-header" role="banner">
 <div class="header-inner">
 
@@ -1094,7 +1094,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 </div>
 </header>
-
 <nav class="nav-mobile mobile-only" id="mobile-nav" aria-label="Mobile navigation" hidden>
   <details class="nav-accordion" open>
     <summary>ED Visas (6)</summary>
@@ -1158,6 +1157,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     </ul>
   </details>
 </nav>
+
+
+
 
 <main id="main-content">
 
@@ -1427,6 +1429,60 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 </main>
 
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.cmlocals.com" },
+    { "@type": "ListItem", "position": 2, "name": "Visas", "item": "https://www.cmlocals.com/pages/visas/" },
+    { "@type": "ListItem", "position": 3, "name": "Guides", "item": "https://www.cmlocals.com/pages/visas/guides/" },
+    { "@type": "ListItem", "position": 4, "name": "Extension vs Re-Entry", "item": "https://www.cmlocals.com/pages/visas/guides/extension-vs-re-entry.html" }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Visa Extension vs Re-Entry",
+  "description": "Strategic comparison of extending your visa in Thailand versus leaving and re-entering.",
+  "author": { "@type": "Organization", "name": "CMLocals" },
+  "datePublished": "2026-03-04",
+  "dateModified": "2026-03-04"
+}
+</script>
+
+<script>
+const header = document.getElementById('site-header');
+window.addEventListener('scroll', () => {
+  header.classList.toggle('scrolled', window.scrollY > 50);
+});
+
+const hamburger = document.getElementById('hamburger');
+const mobileNav = document.getElementById('mobile-nav');
+hamburger.addEventListener('click', () => {
+  const isOpen = mobileNav.hidden;
+  mobileNav.hidden = !isOpen;
+  hamburger.setAttribute('aria-expanded', isOpen);
+  hamburger.classList.toggle('open');
+});
+
+mobileNav.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    mobileNav.hidden = true;
+    hamburger.setAttribute('aria-expanded', false);
+    hamburger.classList.remove('open');
+  });
+});
+</script>
+
+<script src="../../../../shared/js/header-handler.js" defer></script>
+<script src="../../../../shared/chaty-widget/scripts/chaty-widget.js"></script>
+
 <footer class="site-footer" role="contentinfo" style="background: #0D1117;">
 <div class="footer-container">
 
@@ -1503,57 +1559,5 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 </div>
 
 </footer>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.cmlocals.com" },
-    { "@type": "ListItem", "position": 2, "name": "Visas", "item": "https://www.cmlocals.com/pages/visas/" },
-    { "@type": "ListItem", "position": 3, "name": "Guides", "item": "https://www.cmlocals.com/pages/visas/guides/" },
-    { "@type": "ListItem", "position": 4, "name": "Extension vs Re-Entry", "item": "https://www.cmlocals.com/pages/visas/guides/extension-vs-re-entry.html" }
-  ]
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "Visa Extension vs Re-Entry",
-  "description": "Strategic comparison of extending your visa in Thailand versus leaving and re-entering.",
-  "author": { "@type": "Organization", "name": "CMLocals" },
-  "datePublished": "2026-03-04",
-  "dateModified": "2026-03-04"
-}
-</script>
-
-<script>
-const header = document.getElementById('site-header');
-window.addEventListener('scroll', () => {
-  header.classList.toggle('scrolled', window.scrollY > 50);
-});
-
-const hamburger = document.getElementById('hamburger');
-const mobileNav = document.getElementById('mobile-nav');
-hamburger.addEventListener('click', () => {
-  const isOpen = mobileNav.hidden;
-  mobileNav.hidden = !isOpen;
-  hamburger.setAttribute('aria-expanded', isOpen);
-  hamburger.classList.toggle('open');
-});
-
-mobileNav.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    mobileNav.hidden = true;
-    hamburger.setAttribute('aria-expanded', false);
-    hamburger.classList.remove('open');
-  });
-});
-</script>
-
-<script src="../../../../shared/js/header-handler.js" defer></script>
-<script src="../../../../shared/chaty-widget/scripts/chaty-widget.js"></script>
 </body>
 </html>

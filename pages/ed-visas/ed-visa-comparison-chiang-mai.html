@@ -502,6 +502,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
 </style>
 <link rel="stylesheet" href="../../css/chaty-front.min.css"/>
 
+
 <style>
 /* ============================================================
    CANONICAL HEADER + NAV CSS (auto-injected – do not edit here)
@@ -1019,7 +1020,6 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
 
 </div>
 </header>
-
 <nav class="nav-mobile mobile-only" id="mobile-nav" aria-label="Mobile navigation" hidden>
   <details class="nav-accordion" open>
     <summary>ED Visas (6)</summary>
@@ -1083,6 +1083,8 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
     </ul>
   </details>
 </nav>
+
+
 <main id="main-content">
 <section class="page-hero" aria-labelledby="page-heading">
 <div class="container"><div class="page-hero-inner">
@@ -1347,6 +1349,40 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
 </div></div>
 </section>
 
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Sticky header shadow on scroll
+  const header = document.getElementById('site-header');
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 0) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  });
+
+  // Mobile hamburger menu toggle
+  const hamburger = document.getElementById('hamburger');
+  const mobileNav = document.getElementById('mobile-nav');
+  if (hamburger && mobileNav) {
+    hamburger.addEventListener('click', function() {
+      const isOpen = mobileNav.hasAttribute('hidden');
+      if (isOpen) {
+        mobileNav.removeAttribute('hidden');
+        hamburger.setAttribute('aria-expanded', 'true');
+      } else {
+        mobileNav.setAttribute('hidden', '');
+        hamburger.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+});
+</script>
+<script src="../../../shared/js/header-handler.js" defer></script>
+<script src="../../../shared/chaty-widget/scripts/chaty-widget.js"></script>
+
 <footer class="site-footer" role="contentinfo" style="background: #0D1117;">
 <div class="footer-container">
 
@@ -1423,37 +1459,5 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
 </div>
 
 </footer>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  // Sticky header shadow on scroll
-  const header = document.getElementById('site-header');
-  window.addEventListener('scroll', function() {
-    if (window.scrollY > 0) {
-      header.classList.add('scrolled');
-    } else {
-      header.classList.remove('scrolled');
-    }
-  });
-
-  // Mobile hamburger menu toggle
-  const hamburger = document.getElementById('hamburger');
-  const mobileNav = document.getElementById('mobile-nav');
-  if (hamburger && mobileNav) {
-    hamburger.addEventListener('click', function() {
-      const isOpen = mobileNav.hasAttribute('hidden');
-      if (isOpen) {
-        mobileNav.removeAttribute('hidden');
-        hamburger.setAttribute('aria-expanded', 'true');
-      } else {
-        mobileNav.setAttribute('hidden', '');
-        hamburger.setAttribute('aria-expanded', 'false');
-      }
-    });
-  }
-});
-</script>
-<script src="../../../shared/js/header-handler.js" defer></script>
-<script src="../../../shared/chaty-widget/scripts/chaty-widget.js"></script>
 </body>
 </html>

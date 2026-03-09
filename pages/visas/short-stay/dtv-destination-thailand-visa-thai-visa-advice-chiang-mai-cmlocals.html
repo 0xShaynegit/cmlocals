@@ -597,6 +597,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
 </style>
 <link rel="stylesheet" href="../../../css/chaty-front.min.css"/>
 
+
 <style>
 /* ============================================================
    CANONICAL HEADER + NAV CSS (auto-injected – do not edit here)
@@ -1002,8 +1003,6 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
 </style>
 </head>
 <body>
-
-<!-- HEADER -->
 <header class="site-header" id="site-header" role="banner">
 <div class="header-inner">
 
@@ -1116,7 +1115,6 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
 
 </div>
 </header>
-
 <nav class="nav-mobile mobile-only" id="mobile-nav" aria-label="Mobile navigation" hidden>
   <details class="nav-accordion" open>
     <summary>ED Visas (6)</summary>
@@ -1180,6 +1178,10 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
     </ul>
   </details>
 </nav>
+
+<!-- HEADER -->
+
+
 
 <main id="main-content">
 
@@ -1583,6 +1585,63 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
 </section>
 
 <!-- FOOTER -->
+
+
+<script>
+// Header scroll shadow
+(function(){
+  var h=document.getElementById('site-header');
+  if(!h)return;
+  window.addEventListener('scroll',function(){
+    h.classList.toggle('scrolled',window.scrollY>10);
+  },{passive:true});
+})();
+
+// Hamburger / mobile nav
+(function(){
+  var btn=document.getElementById('hamburger');
+  var nav=document.getElementById('mobile-nav');
+  if(!btn||!nav)return;
+  btn.addEventListener('click',function(){
+    var open=btn.getAttribute('aria-expanded')==='true';
+    btn.setAttribute('aria-expanded',String(!open));
+    btn.classList.toggle('open',!open);
+    nav.classList.toggle('open',!open);
+    nav.hidden=open;
+  });
+})();
+
+// FAQ accordion
+(function(){
+  var items=document.querySelectorAll('.faq-item');
+  items.forEach(function(item){
+    var btn=item.querySelector('.faq-question');
+    var ans=item.querySelector('.faq-answer');
+    if(!btn||!ans)return;
+    btn.addEventListener('click',function(){
+      var open=item.classList.contains('open');
+      // close all
+      items.forEach(function(i){
+        i.classList.remove('open');
+        var q=i.querySelector('.faq-question');
+        var a=i.querySelector('.faq-answer');
+        if(q)q.setAttribute('aria-expanded','false');
+        if(a)a.hidden=true;
+      });
+      if(!open){
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded','true');
+        ans.hidden=false;
+      }
+    });
+  });
+})();
+</script>
+
+<script src="../../../../shared/js/card-click-handler.js"></script>
+<script src="../../../../shared/js/header-handler.js" defer></script>
+<script src="../../../../shared/chaty-widget/scripts/chaty-widget.js"></script>
+
 <footer class="site-footer" role="contentinfo" style="background: #0D1117;">
 <div class="footer-container">
 
@@ -1659,60 +1718,5 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
 </div>
 
 </footer>
-
-<script>
-// Header scroll shadow
-(function(){
-  var h=document.getElementById('site-header');
-  if(!h)return;
-  window.addEventListener('scroll',function(){
-    h.classList.toggle('scrolled',window.scrollY>10);
-  },{passive:true});
-})();
-
-// Hamburger / mobile nav
-(function(){
-  var btn=document.getElementById('hamburger');
-  var nav=document.getElementById('mobile-nav');
-  if(!btn||!nav)return;
-  btn.addEventListener('click',function(){
-    var open=btn.getAttribute('aria-expanded')==='true';
-    btn.setAttribute('aria-expanded',String(!open));
-    btn.classList.toggle('open',!open);
-    nav.classList.toggle('open',!open);
-    nav.hidden=open;
-  });
-})();
-
-// FAQ accordion
-(function(){
-  var items=document.querySelectorAll('.faq-item');
-  items.forEach(function(item){
-    var btn=item.querySelector('.faq-question');
-    var ans=item.querySelector('.faq-answer');
-    if(!btn||!ans)return;
-    btn.addEventListener('click',function(){
-      var open=item.classList.contains('open');
-      // close all
-      items.forEach(function(i){
-        i.classList.remove('open');
-        var q=i.querySelector('.faq-question');
-        var a=i.querySelector('.faq-answer');
-        if(q)q.setAttribute('aria-expanded','false');
-        if(a)a.hidden=true;
-      });
-      if(!open){
-        item.classList.add('open');
-        btn.setAttribute('aria-expanded','true');
-        ans.hidden=false;
-      }
-    });
-  });
-})();
-</script>
-
-<script src="../../../../shared/js/card-click-handler.js"></script>
-<script src="../../../../shared/js/header-handler.js" defer></script>
-<script src="../../../../shared/chaty-widget/scripts/chaty-widget.js"></script>
 </body>
 </html>

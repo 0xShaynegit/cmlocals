@@ -842,6 +842,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 </style>
 <link rel="stylesheet" href="../css/chaty-front.min.css"/>
 
+
 <style>
 /* ============================================================
    CANONICAL HEADER + NAV CSS (auto-injected – do not edit here)
@@ -1248,10 +1249,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 </head>
 
 <body>
-
-<!-- ========================================================
-     HEADER
-     ======================================================== -->
 <header class="site-header" id="site-header" role="banner">
 <div class="header-inner">
 
@@ -1364,8 +1361,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 </div>
 </header>
-
-<!-- Mobile Nav -->
 <nav class="nav-mobile mobile-only" id="mobile-nav" aria-label="Mobile navigation" hidden>
   <details class="nav-accordion" open>
     <summary>ED Visas (6)</summary>
@@ -1429,6 +1424,13 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     </ul>
   </details>
 </nav>
+
+<!-- ========================================================
+     HEADER
+     ======================================================== -->
+
+
+<!-- Mobile Nav -->
 
 <!-- ========================================================
      HERO
@@ -1564,6 +1566,49 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 <!-- ========================================================
      FOOTER
      ======================================================== -->
+
+
+<!-- ========================================================
+     MINIMAL JS
+     ======================================================== -->
+<script>
+(function() {
+  'use strict';
+
+  // --- Sticky header shadow ---
+  var header = document.getElementById('site-header');
+  function onScroll() {
+    header.classList.toggle('scrolled', window.scrollY > 10);
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  // --- Mobile nav toggle ---
+  var hamburger = document.getElementById('hamburger');
+  var mobileNav = document.getElementById('mobile-nav');
+  hamburger.addEventListener('click', function() {
+    var isOpen = hamburger.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', isOpen);
+    mobileNav.hidden = !isOpen;
+    mobileNav.classList.toggle('open', isOpen);
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  });
+
+  // Close mobile nav on link click
+  mobileNav.querySelectorAll('a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      hamburger.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      mobileNav.hidden = true;
+      mobileNav.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  });
+})();
+</script>
+
+<script src="../../shared/js/header-handler.js" defer></script>
+<script src="../../shared/chaty-widget/scripts/chaty-widget.js"></script>
+
 <footer class="site-footer" role="contentinfo" style="background: #0D1117;">
 <div class="footer-container">
 
@@ -1640,46 +1685,5 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 </div>
 
 </footer>
-
-<!-- ========================================================
-     MINIMAL JS
-     ======================================================== -->
-<script>
-(function() {
-  'use strict';
-
-  // --- Sticky header shadow ---
-  var header = document.getElementById('site-header');
-  function onScroll() {
-    header.classList.toggle('scrolled', window.scrollY > 10);
-  }
-  window.addEventListener('scroll', onScroll, { passive: true });
-
-  // --- Mobile nav toggle ---
-  var hamburger = document.getElementById('hamburger');
-  var mobileNav = document.getElementById('mobile-nav');
-  hamburger.addEventListener('click', function() {
-    var isOpen = hamburger.classList.toggle('open');
-    hamburger.setAttribute('aria-expanded', isOpen);
-    mobileNav.hidden = !isOpen;
-    mobileNav.classList.toggle('open', isOpen);
-    document.body.style.overflow = isOpen ? 'hidden' : '';
-  });
-
-  // Close mobile nav on link click
-  mobileNav.querySelectorAll('a').forEach(function(link) {
-    link.addEventListener('click', function() {
-      hamburger.classList.remove('open');
-      hamburger.setAttribute('aria-expanded', 'false');
-      mobileNav.hidden = true;
-      mobileNav.classList.remove('open');
-      document.body.style.overflow = '';
-    });
-  });
-})();
-</script>
-
-<script src="../../shared/js/header-handler.js" defer></script>
-<script src="../../shared/chaty-widget/scripts/chaty-widget.js"></script>
 </body>
 </html>
