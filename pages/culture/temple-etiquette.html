@@ -527,6 +527,7 @@
 
 <div id="chaty-trigger-btn" aria-expanded="false"></div><div id="chaty-menu" role="menu"><a href="https://wa.me/66801202074" class="chaty-channel">WhatsApp</a><a href="https://m.me/cmlocals" class="chaty-channel">Messenger</a><a href="https://www.facebook.com/chiangmailocals" class="chaty-channel">Facebook</a></div>
 <script>const btn=document.getElementById('chaty-trigger-btn');const menu=document.getElementById('chaty-menu');btn.addEventListener('click',()=>{menu.classList.toggle('open');btn.setAttribute('aria-expanded',menu.classList.contains('open'))});document.addEventListener('click',(e)=>{if(!e.target.closest('#chaty-trigger-btn')&&!e.target.closest('#chaty-menu')){menu.classList.remove('open');btn.setAttribute('aria-expanded','false')}});</script>
+<script src="../../../shared/js/header-handler.js" defer></script>
 <script src="../../../shared/chaty-widget/scripts/chaty-widget.js"></script>
 </body>
 </html>

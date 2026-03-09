@@ -1014,6 +1014,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
 (function(){var items=document.querySelectorAll('.faq-item');items.forEach(function(item){var btn=item.querySelector('.faq-question');var ans=item.querySelector('.faq-answer');if(!btn||!ans)return;btn.addEventListener('click',function(){var open=item.classList.contains('open');items.forEach(function(i){i.classList.remove('open');var q=i.querySelector('.faq-question');var a=i.querySelector('.faq-answer');if(q)q.setAttribute('aria-expanded','false');if(a)a.hidden=true;});if(!open){item.classList.add('open');btn.setAttribute('aria-expanded','true');ans.hidden=false;}});});})();
 </script>
 <script src="../../../../shared/js/card-click-handler.js"></script>
+<script src="../../../../shared/js/header-handler.js" defer></script>
 <script src="../../../../shared/chaty-widget/scripts/chaty-widget.js"></script>
 </body>
 </html>
