@@ -1416,33 +1416,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   cursor: pointer;
 }
 
-/* Mega Menu Dropdown */
-.dropdown-menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: var(--c-white);
-  border: 1px solid var(--c-border);
-  border-radius: 8px;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
-  padding: 1rem;
-  width: 350px;
-  display: none;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.2s, visibility 0.2s;
-  margin-top: 0;
-  z-index: 101;
-}
-
-.nav-item:hover > .dropdown-menu,
-.dropdown-menu:hover {
-  display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
-  opacity: 1;
-  pointer-events: auto;
-}
+/* Mega Menu Dropdown - DUPLICATE REMOVED, using earlier definition */
 
 .dropdown-section {
   display: flex;
