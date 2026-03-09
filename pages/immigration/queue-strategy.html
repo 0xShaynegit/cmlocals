@@ -100,7 +100,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .why-band .container { max-width: var(--article-w); }
 .why-items { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 1.5rem; }
 .why-item { text-align: center; }
-.why-icon { font-size: 2.5rem; margin-bottom: 0.5rem; display: block; }
+.why-icon { font-size: 2.3rem; margin-bottom: 0.5rem; display: block; }
 .why-item h3 { font-size: .9rem; font-weight: 600; color: var(--c-dark); margin-bottom: 0.3rem; }
 .why-item p { font-size: .85rem; color: var(--c-muted); line-height: 1.5; }
 
@@ -114,7 +114,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .article { padding: var(--section-py) var(--edge); }
 .article h2 { font-family: var(--font-display); font-size: 1.8rem; font-weight: 400; color: var(--c-dark); margin-bottom: 1.2rem; padding-top: 1.5rem; border-top: 1px solid var(--c-border); }
 .article h2:first-child { border-top: none; padding-top: 0; }
-.article h3 { font-size: 1.1rem; font-weight: 600; color: var(--c-dark); margin-top: 1.8rem; margin-bottom: 0.8rem; }
+.article h3 { font-size: 0.9rem; font-weight: 600; color: var(--c-dark); margin-top: 1.8rem; margin-bottom: 0.8rem; }
 .article p { margin-bottom: 1rem; }
 .article li { margin-left: 1.5rem; margin-bottom: 0.6rem; list-style: disc; }
 .article ul { margin-bottom: 1.2rem; }
@@ -150,7 +150,7 @@ td strong { color: var(--c-dark); }
 .visa-links { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
 .visa-link { display: flex; align-items: center; gap: .8rem; padding: 1rem; background: rgba(255,255,255,.06); border-radius: var(--radius-md); text-decoration: none; transition: background .18s; }
 .visa-link:hover { background: rgba(255,255,255,.12); }
-.visa-link::before { content: '→'; flex-shrink: 0; font-size: 1.3rem; font-weight: 600; color: var(--c-page-accent); }
+.visa-link::before { content: '→'; flex-shrink: 0; font-size: 0.9rem; font-weight: 600; color: var(--c-page-accent); }
 .visa-link span { font-size: .9rem; font-weight: 500; }
 
 .tools-section { padding: var(--section-py) var(--edge); }
@@ -183,18 +183,64 @@ td strong { color: var(--c-dark); }
 }
 @media (max-width: 960px) {
   .header-nav { display: none; }
-  .article h2 { font-size: 1.5rem; }
+  .article h2 { font-size: 0.9rem; }
   .tools-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 640px) {
   :root { --edge: 1.25rem; --section-py: 2.2rem; }
-  .hero h1 { font-size: 1.6rem; }
-  .article h2 { font-size: 1.3rem; }
+  .hero h1 { font-size: 1.0rem; }
+  .article h2 { font-size: 0.9rem; }
   .card-row { grid-template-columns: 1fr; }
   .tools-grid { grid-template-columns: 1fr; }
   .visa-links { grid-template-columns: 1fr; }
-  .visa-section h2 { font-size: 1.4rem; }
+  .visa-section h2 { font-size: 1.0rem; }
 }
+/* Make entire cards clickable */
+.path-card::before,
+.article-card::before,
+.tool-card::before,
+.guide-card::before,
+.visa-card::before,
+.visa-category-card::before,
+.program-card::before,
+.topic-card::before,
+.checklist-card::before,
+.related-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.path-card,
+.article-card,
+.tool-card,
+.guide-card,
+.visa-card,
+.visa-category-card,
+.program-card,
+.topic-card,
+.checklist-card,
+.related-card {
+  position: relative;
+}
+
+/* Ensure child links are clickable above the overlay */
+.path-card__cta,
+.article-card__link,
+.tool-card__cta,
+.guide-card__cta,
+.visa-card__cta,
+.visa-category-card__cta,
+.program-card__cta,
+.topic-card__cta,
+.checklist-card__cta,
+.related-card {
+  position: relative;
+  z-index: 2;
+}
+
 </style>
 </head>
 <body>
@@ -479,8 +525,8 @@ td strong { color: var(--c-dark); }
     <ul class="footer-links">
       <li><a href="../../pages/visas/index.html">All Visas</a></li>
       <li><a href="../../pages/visas/short-stay/dtv-destination-thailand-visa-thai-visa-advice-chiang-mai-cmlocals.html">DTV</a></li>
-      <li><a href="../../pages/visas/short-stay/">Short Stay</a></li>
-      <li><a href="../../pages/visas/long-stay/">Long Stay</a></li>
+      <li><a href="../../pages/visas/short-stay/index.html">Short Stay</a></li>
+      <li><a href="../../pages/visas/long-stay/index.html">Long Stay</a></li>
       <li><a href="../../pages/visas/short-stay/tourist-visa.html">Tourist Visa</a></li>
       <li><a href="../../pages/checklists/index.html">Checklists</a></li>
     </ul>
@@ -513,5 +559,6 @@ window.addEventListener('scroll', () => {
   }
 });
 </script>
+<script src="../../../shared/js/card-click-handler.js"></script>
 </body>
 </html>

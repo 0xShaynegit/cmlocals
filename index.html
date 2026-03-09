@@ -55,7 +55,7 @@
 /* --- RESET --- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
-body { font-family: var(--font-body); font-size: 1.1rem; line-height: 1.65; color: var(--c-body); background: var(--c-white); -webkit-font-smoothing: antialiased; }
+body { font-family: var(--font-body); font-size: 0.9rem; line-height: 1.65; color: var(--c-body); background: var(--c-white); -webkit-font-smoothing: antialiased; }
 img { max-width: 100%; display: block; height: auto; }
 a { color: inherit; }
 ul { list-style: none; }
@@ -72,7 +72,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   padding: .65em 1.4em;
   border-radius: var(--radius-sm);
   font-family: var(--font-body);
-  font-size: 1.1rem; font-weight: 600; line-height: 1.3;
+  font-size: 0.9rem; font-weight: 600; line-height: 1.3;
   text-decoration: none;
   border: 1.5px solid transparent;
   transition: background .18s, box-shadow .18s, border-color .18s, transform .12s;
@@ -91,14 +91,14 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .btn-fb:hover { background: var(--c-fb-h); border-color: var(--c-fb-h); }
 .btn-ghost { background: transparent; color: var(--c-muted); border-color: transparent; padding-inline: .6em; }
 .btn-ghost:hover { color: var(--c-primary); background: var(--c-subtle); transform: none; }
-.btn-lg { padding: .8em 1.75em; font-size: 1.1rem; }
-.btn-sm { padding: .45em 1em; font-size: 1.1rem; }
+.btn-lg { padding: .8em 1.75em; font-size: 0.9rem; }
+.btn-sm { padding: .45em 1em; font-size: 0.9rem; }
 
 /* --- TYPOGRAPHY HELPERS --- */
 .label-tag {
   display: block;
   width: 100%;
-  font-size: 1.1rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+  font-size: 0.9rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
   color: var(--c-primary); background: var(--c-subtle);
   padding: .2em .75em; border-radius: 100px;
   margin-bottom: .9rem;
@@ -126,7 +126,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.5rem;
-  height: 5rem;
+  height: 70px;
 }
 
 /* Wordmark */
@@ -136,7 +136,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   align-items: center;
 }
 .header-logo img {
-  height: 48px;
+  height: 40px;
   width: auto;
   display: block;
 }
@@ -155,21 +155,23 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   gap: 3rem;
   flex: 1;
   justify-content: center;
+  align-items: center;
 }
 
 .primary-nav a {
   position: relative;
   color: #111827;
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   font-weight: 500;
-  padding: 0.5rem 0;
-  border-bottom: 2px solid transparent;
+  padding: 0;
   transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  line-height: 1;
 }
 
 .primary-nav a:hover {
-  border-bottom-color: var(--c-primary);
   color: var(--c-primary);
 }
 
@@ -182,8 +184,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 .header-ctas .btn-wa {
-  padding: 0.45em 1em;
-  font-size: 1.1rem;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.9rem;
 }
 
 .header-fb-link {
@@ -216,7 +218,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .mobile-nav.open { display: block; }
 .mobile-nav a {
   display: block; padding: .9rem 0;
-  font-size: 1.1rem; font-weight: 500; color: var(--c-dark);
+  font-size: 0.9rem; font-weight: 500; color: var(--c-dark);
   text-decoration: none;
   border-bottom: 1px solid var(--c-border);
 }
@@ -228,24 +230,27 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 /* Navigation Links with Dropdown */
 .nav-item {
   position: relative;
-  display: inline-block;
-  padding-bottom: 0.5rem;
+  display: inline-flex;
+  align-items: center;
 }
 
 .nav-item > a.nav-link {
   position: relative;
   color: #111827;
   text-decoration: none;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   font-weight: 500;
-  padding: 0.5rem 0;
-  border-bottom: 2px solid transparent;
+  padding: 0;
   transition: all 0.2s ease;
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  line-height: 1;
 }
 
 .nav-item > a.nav-link:hover {
-  border-bottom-color: var(--c-primary);
+  text-decoration: underline;
+  text-decoration-color: var(--c-primary);
+  text-underline-offset: 4px;
   color: var(--c-primary);
 }
 
@@ -262,8 +267,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   border: 1px solid rgba(0,0,0,.1);
   border-radius: 0;
   box-shadow: 0 4px 12px rgba(0,0,0,.08);
-  padding: 2rem;
-  min-width: 500px;
+  padding: 1.75rem 2rem;
+  width: 350px;
   display: none;
   opacity: 0;
   pointer-events: none;
@@ -273,17 +278,27 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 .dropdown-menu[style*="display: block"] {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
   gap: 2rem;
+}
+
+.mega-menu {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+}
+
+/* Chiang Mai has two columns, needs wider width */
+.mega-menu:has(> .dropdown-section:nth-child(2)) {
+  width: 600px !important;
 }
 
 
 .dropdown-section {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
-  margin-bottom: 1rem;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
   flex: 1;
   min-width: 200px;
 }
@@ -293,12 +308,12 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 .dropdown-section h3 {
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: var(--c-primary);
   font-weight: 600;
-  margin: 0 0 0.75rem 0;
+  margin: 0 0 0.5rem 0;
   padding: 0;
   border: none;
 }
@@ -312,11 +327,11 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .dropdown-section li a {
   color: #374151;
   text-decoration: none;
-  font-size: 1.1rem;
-  line-height: 1.6;
+  font-size: 0.9rem;
+  line-height: 1.2;
   transition: color 0.2s;
   display: block;
-  padding: 0.35rem 0;
+  padding: 0.1rem 0;
 }
 
 .dropdown-section li a:hover {
@@ -384,7 +399,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     background: white;
     border-bottom: 1px solid rgba(0,0,0,.1);
     flex-direction: column;
-    max-height: calc(100vh - 5rem);
+    max-height: calc(100vh - 70px);
     overflow-y: auto;
     z-index: 999;
   }
@@ -405,11 +420,11 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     justify-content: space-between;
     align-items: center;
     user-select: none;
-    font-size: 1.1rem;
+    font-size: 0.9rem;
   }
   .nav-accordion summary::after {
     content: '▼';
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     transition: transform 0.3s;
   }
   .nav-accordion[open] summary::after {
@@ -430,7 +445,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     padding-left: 2rem;
     color: #374151;
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 0.9rem;
   }
   .nav-accordion li a:active {
     background: rgba(79, 70, 229, 0.1);
@@ -440,13 +455,13 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .nav-dropdown-item {
     padding: .75rem .85rem;
     margin-left: 1.5rem;
-    font-size: 1.1rem;
+    font-size: 0.9rem;
   }
 
   .nav-submenu-item {
     padding: .65rem .85rem;
     margin-left: 3rem;
-    font-size: 1.1rem;
+    font-size: 0.9rem;
   }
 }
 
@@ -456,7 +471,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 .mobile-nav-section-title {
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   font-weight: 700;
   letter-spacing: .08em;
   text-transform: uppercase;
@@ -468,7 +483,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .mobile-nav-section a {
   display: block;
   padding: .75rem 0;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   font-weight: 400;
   color: var(--c-dark);
   text-decoration: none;
@@ -514,7 +529,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 .hero-eyebrow {
   display: inline-flex; align-items: center; gap: .5rem;
-  font-size: 1.1rem; font-weight: 600; letter-spacing: .07em; text-transform: uppercase;
+  font-size: 0.9rem; font-weight: 600; letter-spacing: .07em; text-transform: uppercase;
   color: rgba(255,255,255,.90);
   margin-bottom: 1.5rem;
 }
@@ -531,14 +546,14 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 .hero h1 {
   font-family: var(--font-display);
-  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  font-size: clamp(2.88rem, 6vw, 4.56rem);
   font-weight: 400; line-height: 1.1;
   color: var(--c-white);
   letter-spacing: -.02em;
   margin-bottom: 1.4rem;
 }
 .hero h1 .subtitle {
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   display: block;
 }
 .hero h1 em {
@@ -559,12 +574,12 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 .hero-trust {
-  font-size: 1.1rem; color: rgba(255,255,255,.85);
+  font-size: 0.9rem; color: rgba(255,255,255,.85);
   margin-top: 1.25rem;
 }
 
 .hero-link {
-  font-size: 1.1rem; color: rgba(255,255,255,.80);
+  font-size: 0.9rem; color: rgba(255,255,255,.80);
   text-decoration: none;
   transition: color .18s;
 }
@@ -619,12 +634,12 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   width: 34px; height: 34px; border-radius: 7px;
   background: rgba(255,255,255,.1);
   display: flex; align-items: center; justify-content: center;
-  font-size: 1.1rem; flex-shrink: 0;
+  font-size: 0.9rem; flex-shrink: 0;
 }
 .hero-stat-icon--primary { background: var(--c-primary); }
 .hero-stat-body { flex: 1; }
-.hero-stat-val { font-size: 1.1rem; font-weight: 700; color: var(--c-white); line-height: 1.2; }
-.hero-stat-desc { font-size: 1.1rem; color: rgba(255,255,255,.7); margin-top: .05rem; }
+.hero-stat-val { font-size: 0.9rem; font-weight: 700; color: var(--c-white); line-height: 1.2; }
+.hero-stat-desc { font-size: 0.9rem; color: rgba(255,255,255,.7); margin-top: .05rem; }
 
 /* Trust ribbon */
 .trust-ribbon {
@@ -640,7 +655,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 .trust-item {
   display: flex; align-items: center; gap: .45rem;
-  font-size: 1.1rem; color: rgba(255,255,255,.85);
+  font-size: 0.9rem; color: rgba(255,255,255,.85);
 }
 .trust-item-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--c-primary); flex-shrink: 0; }
 
@@ -666,7 +681,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .section-title em { font-style: italic; font-weight: 300; color: #6B7A8A; }
 
 .section-sub {
-  font-size: 1.1rem; color: #5A6B7A;
+  font-size: 0.9rem; color: #5A6B7A;
   max-width: 600px; line-height: 1.65;
 }
 
@@ -702,24 +717,24 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   width: 48px; height: 48px; border-radius: var(--radius-md);
   background: var(--c-subtle); margin-bottom: 1.25rem;
   display: flex; align-items: center; justify-content: center;
-  font-size: 1.4rem;
+  font-size: 1.0rem;
   transition: background .2s;
 }
 .path-card:hover .path-card__icon-wrap { background: var(--c-violet-l); }
 
 .path-card__title {
-  font-family: var(--font-display); font-size: 1.7rem; font-weight: 400;
+  font-family: var(--font-display); font-size: 1.3rem; font-weight: 400;
   color: var(--c-dark); margin-bottom: .5rem; letter-spacing: -.01em;
 }
 .path-card__desc {
-  font-size: 1.1rem; color: #5A6B7A; line-height: 1.65;
+  font-size: 0.9rem; color: #5A6B7A; line-height: 1.65;
   margin-bottom: 1.5rem; flex: 1;
 }
 .path-card__list {
   margin-bottom: 1.6rem; display: flex; flex-direction: column; gap: .4rem;
 }
 .path-card__list li {
-  font-size: 1.1rem; color: #2D3E4F;
+  font-size: 0.9rem; color: #2D3E4F;
   display: flex; align-items: baseline; gap: .5rem;
 }
 .path-card__list li::before {
@@ -731,7 +746,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .path-card__list li a:hover { text-decoration: underline; }
 
 .path-card__cta {
-  font-size: 1.3rem; font-weight: 600; color: var(--c-primary);
+  font-size: 0.9rem; font-weight: 600; color: var(--c-primary);
   text-decoration: none; display: inline-flex; align-items: center; gap: .35em;
   transition: gap .18s;
 }
@@ -743,9 +758,55 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 .path-card__disclaimer {
-  font-size: 1.1rem; color: #5A6B7A; line-height: 1.5;
+  font-size: 0.9rem; color: #5A6B7A; line-height: 1.5;
   margin-bottom: 1.2rem; padding: .75rem; background: var(--c-subtle);
   border-radius: var(--radius-md); border-left: 3px solid var(--c-primary);
+}
+
+/* Make entire cards clickable */
+.path-card::before,
+.article-card::before,
+.tool-card::before,
+.guide-card::before,
+.visa-card::before,
+.visa-category-card::before,
+.program-card::before,
+.topic-card::before,
+.checklist-card::before,
+.related-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.path-card,
+.article-card,
+.tool-card,
+.guide-card,
+.visa-card,
+.visa-category-card,
+.program-card,
+.topic-card,
+.checklist-card,
+.related-card {
+  position: relative;
+}
+
+/* Ensure child links are clickable above the overlay */
+.path-card__cta,
+.article-card__link,
+.tool-card__cta,
+.guide-card__cta,
+.visa-card__cta,
+.visa-category-card__cta,
+.program-card__cta,
+.topic-card__cta,
+.checklist-card__cta,
+.related-card {
+  position: relative;
+  z-index: 2;
 }
 
 /* ============================================================
@@ -771,14 +832,14 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 .immigration-content .section-title { color: var(--c-white); }
-.immigration-content .section-sub { color: rgba(255,255,255,.88); max-width: 480px; font-size: 1.5rem; }
+.immigration-content .section-sub { color: rgba(255,255,255,.88); max-width: 480px; font-size: 0.9rem; }
 
 .immigration-meta {
   display: flex; align-items: center; gap: .6rem;
   margin-top: 1.25rem; margin-bottom: .75rem;
 }
 .immigration-meta-badge {
-  font-size: 1.1rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase;
+  font-size: 0.9rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase;
   padding: .2em .8em; border-radius: 100px;
   background: rgba(79,70,229,.25); color: rgba(255,255,255,.92);
   border: 1px solid rgba(79,70,229,.5);
@@ -802,7 +863,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   background: var(--c-primary);
 }
 .immigration-panel-title {
-  font-size: 1.1rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase;
+  font-size: 0.9rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase;
   color: rgba(255,255,255,.90);
 }
 
@@ -816,7 +877,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .immigration-topic-item:last-child { border-bottom: none; }
 .immigration-topic-item:hover { background: rgba(255,255,255,.04); }
 .immigration-topic-label {
-  font-size: 1.1rem; font-weight: 500; color: rgba(255,255,255,.95);
+  font-size: 0.9rem; font-weight: 500; color: rgba(255,255,255,.95);
   display: flex; align-items: center; gap: .6rem;
 }
 .immigration-topic-label::before {
@@ -825,7 +886,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   background: var(--c-primary); flex-shrink: 0;
 }
 .immigration-topic-arrow {
-  font-size: 1.1rem; color: rgba(255,255,255,.70);
+  font-size: 0.9rem; color: rgba(255,255,255,.70);
   transition: color .15s;
 }
 .immigration-topic-item:hover .immigration-topic-arrow { color: rgba(255,255,255,.90); }
@@ -861,20 +922,20 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   transform: translateY(-2px);
 }
 .comp-card__risk {
-  font-size: 1.1rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase;
+  font-size: 0.9rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase;
   padding: .15em .65em; border-radius: 100px; display: inline-block; align-self: flex-start;
 }
 .comp-card__risk--high { background: #FEE2E2; color: #DC2626; }
 .comp-card__risk--med  { background: #FEF3C7; color: #D97706; }
 .comp-card__risk--low  { background: var(--c-subtle); color: var(--c-primary); }
 .comp-card__title {
-  font-size: 1.1rem; font-weight: 600; color: var(--c-dark); line-height: 1.4;
+  font-size: 0.9rem; font-weight: 600; color: var(--c-dark); line-height: 1.4;
 }
 .comp-card__desc {
-  font-size: 1.1rem; color: #5A6B7A; line-height: 1.5; flex: 1;
+  font-size: 0.9rem; color: #5A6B7A; line-height: 1.5; flex: 1;
 }
 .comp-card__link {
-  font-size: 1.1rem; font-weight: 600; color: var(--c-primary);
+  font-size: 0.9rem; font-weight: 600; color: var(--c-primary);
   display: flex; align-items: center; gap: .3em;
   margin-top: auto; padding-top: .5rem;
   transition: gap .15s;
@@ -923,18 +984,18 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 .guide-card--featured:hover { box-shadow: 0 8px 30px rgba(0,0,0,.3); }
 .guide-card__type {
-  font-size: 1.1rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+  font-size: 0.9rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
   color: var(--c-primary);
 }
 .guide-card--featured .guide-card__type { color: rgba(255,255,255,.90); }
 .guide-card__title {
-  font-family: var(--font-display); font-size: 1.1rem; font-weight: 400;
+  font-family: var(--font-display); font-size: 0.9rem; font-weight: 400;
   color: inherit; line-height: 1.35; letter-spacing: -.01em;
 }
-.guide-card__desc { font-size: 1.1rem; color: #5A6B7A; line-height: 1.55; flex: 1; }
-.guide-card--featured .guide-card__desc { color: rgba(255,255,255,.90); font-size: 1.1rem; }
+.guide-card__desc { font-size: 0.9rem; color: #5A6B7A; line-height: 1.55; flex: 1; }
+.guide-card--featured .guide-card__desc { color: rgba(255,255,255,.90); font-size: 0.9rem; }
 .guide-card__cta {
-  font-size: 1.1rem; font-weight: 600; color: var(--c-primary);
+  font-size: 0.9rem; font-weight: 600; color: var(--c-primary);
   display: flex; align-items: center; gap: .35em;
   margin-top: .5rem; transition: gap .15s;
 }
@@ -960,16 +1021,16 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   width: 40px; height: 40px; border-radius: var(--radius-sm);
   background: var(--c-subtle);
   display: flex; align-items: center; justify-content: center;
-  font-size: 1.1rem; flex-shrink: 0;
+  font-size: 0.9rem; flex-shrink: 0;
   transition: background .18s;
 }
 .tool-card:hover .tool-card__icon { background: var(--c-violet-l); }
 .tool-card__body { flex: 1; }
 .tool-card__type {
-  font-size: 1.1rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase;
+  font-size: 0.9rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase;
   color: var(--c-primary);
 }
-.tool-card__title { font-size: 1.1rem; font-weight: 600; color: var(--c-dark); line-height: 1.3; }
+.tool-card__title { font-size: 0.9rem; font-weight: 600; color: var(--c-dark); line-height: 1.3; }
 
 /* ============================================================
    EXPERIENCE STRIP
@@ -995,10 +1056,10 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 .experience-content .section-title { color: var(--c-white); }
 .experience-content .section-sub {
-  color: rgba(255,255,255,.88); max-width: none; margin-top: 1rem; margin-bottom: 2rem; font-size: 1.1rem;
+  color: rgba(255,255,255,.88); max-width: none; margin-top: 1rem; margin-bottom: 2rem; font-size: 0.9rem;
 }
 .experience-quote {
-  font-family: var(--font-display); font-size: 1.2rem; font-style: italic;
+  font-family: var(--font-display); font-size: 1.0rem; font-style: italic;
   color: rgba(255,255,255,.95); line-height: 1.6;
   border-left: 3px solid var(--c-primary);
   padding-left: 1.25rem; margin-top: 1.5rem;
@@ -1014,12 +1075,12 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   padding: 1.5rem;
 }
 .experience-stat__num {
-  font-family: var(--font-display); font-size: 2.5rem; font-weight: 300;
+  font-family: var(--font-display); font-size: 2.3rem; font-weight: 300;
   color: var(--c-white); line-height: 1; letter-spacing: -.04em;
   margin-bottom: .4rem;
 }
-.experience-stat__num span { font-size: 1.5rem; color: var(--c-white); }
-.experience-stat__label { font-size: 1.1rem; color: rgba(255,255,255,.85); line-height: 1.4; }
+.experience-stat__num span { font-size: 0.9rem; color: var(--c-white); }
+.experience-stat__label { font-size: 0.9rem; color: rgba(255,255,255,.85); line-height: 1.4; }
 .experience-stat--accent {
   background: rgba(79,70,229,.15);
   border-color: rgba(79,70,229,.3);
@@ -1041,7 +1102,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .contact-cta .section-sub { margin-inline: auto; margin-bottom: 2.25rem; }
 .contact-cta-btns { display: flex; flex-wrap: wrap; justify-content: center; gap: .85rem; }
 .contact-disclaimer {
-  font-size: 1.1rem; color: #5A6B7A; margin-top: 1.5rem; font-style: italic;
+  font-size: 0.9rem; color: #5A6B7A; margin-top: 1.5rem; font-style: italic;
 }
 
 /* ============================================================
@@ -1051,7 +1112,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .site-footer {
   background: var(--footer-bg, #0D1275);
   color: rgba(255, 255, 255, 0.92);
-  padding: 4rem 2rem 0;
+  padding: 3.6rem 0 0;
 }
 
 .footer-container {
@@ -1059,22 +1120,23 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 4rem;
-  padding-bottom: 2rem;
+  gap: 3.6rem;
+  padding: 0 1.8rem 1.8rem;
+  width: 80%;
 }
 
 .footer-col {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.35rem;
 }
 
 .footer-col-cmlocals {
-  gap: 2rem;
+  gap: 1.8rem;
 }
 
 .footer-logo a {
-  font-size: 1.5rem;
+  font-size: 0.9rem;
   font-weight: bold;
   color: white;
   text-decoration: none;
@@ -1082,14 +1144,14 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   align-items: center;
 }
 .footer-logo img {
-  height: 48px;
+  height: 43.2px;
   width: auto;
   display: block;
 }
 
 
 .footer-tagline {
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   line-height: 1.6;
   margin: 0;
   color: rgba(255, 255, 255, 0.75);
@@ -1097,15 +1159,15 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 .footer-socials {
   display: flex;
-  gap: 1.5rem;
+  gap: 1.35rem;
 }
 
 .social-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
+  width: 28.8px;
+  height: 28.8px;
   color: rgba(255, 255, 255, 0.75);
   text-decoration: none;
   transition: filter 0.2s ease, color 0.2s ease;
@@ -1135,7 +1197,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 .footer-col-title {
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -1149,13 +1211,13 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.9rem;
+  gap: 0.81rem;
 }
 
 .footer-links a {
   color: rgba(255, 255, 255, 0.75);
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   line-height: 1.5;
   transition: color 0.2s;
 }
@@ -1168,27 +1230,28 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .footer-bottom-bar {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1.8rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 2rem;
+  gap: 1.8rem;
+  width: 80%;
 }
 
 .footer-bottom-bar p {
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.6);
   margin: 0;
 }
 
 .footer-legal-links {
   display: flex;
-  gap: 2rem;
+  gap: 1.8rem;
 }
 
 .footer-legal-links a {
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
   transition: color 0.2s;
@@ -1241,11 +1304,11 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   }
 
   .footer-col-title {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
   }
 
   .footer-links a {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
   }
 
   .footer-bottom-bar {
@@ -1255,7 +1318,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   }
 
   .footer-bottom-bar p {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
   }
 
   .footer-legal-links {
@@ -1263,7 +1326,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   }
 
   .footer-legal-links a {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
   }
 }
 
@@ -1335,19 +1398,18 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   position: relative;
   color: var(--c-body);
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   font-weight: 500;
-  padding: 0.5rem 0.85rem;
-  border-bottom: 2px solid transparent;
+  padding: 0 0.85rem;
   transition: border-color 0.2s, color 0.15s;
   display: inline-flex;
   align-items: center;
+  height: 70px;
 }
 
 .nav-link:hover,
 .nav-link.active {
   color: var(--c-primary);
-  border-bottom-color: var(--c-primary);
 }
 
 .nav-link.has-dropdown {
@@ -1363,22 +1425,21 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   border: 1px solid var(--c-border);
   border-radius: 8px;
   box-shadow: 0 10px 40px rgba(0,0,0,0.1);
-  padding: 2rem;
-  min-width: 600px;
-  max-width: 900px;
+  padding: 1rem;
+  width: 350px;
   display: none;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.2s, visibility 0.2s;
-  margin-top: 0.5rem;
+  margin-top: 0;
   z-index: 101;
 }
 
 .nav-item:hover > .dropdown-menu,
 .dropdown-menu:hover {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
   opacity: 1;
   pointer-events: auto;
 }
@@ -1386,11 +1447,11 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .dropdown-section {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 0.15rem;
 }
 
 .dropdown-section h3 {
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: var(--c-primary);
@@ -1413,7 +1474,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .dropdown-section li a {
   color: var(--c-body);
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   line-height: 1.6;
   transition: color 0.2s;
   display: block;
@@ -1510,7 +1571,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     align-items: center;
     user-select: none;
     transition: background 0.2s;
-    font-size: 1.1rem;
+    font-size: 0.9rem;
   }
 
   .nav-accordion summary::-webkit-details-marker {
@@ -1523,7 +1584,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
   .nav-accordion summary::after {
     content: '▼';
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     transition: transform 0.3s;
     color: var(--c-primary);
   }
@@ -1550,7 +1611,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     padding-left: 2rem;
     color: var(--c-body);
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     transition: color 0.2s, background 0.2s;
   }
 
@@ -1602,7 +1663,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     <!-- Category 2: CHIANG MAI (with Culture nested) -->
     <div class="nav-item">
       <a href="pages/chiang-mai/index.html" class="nav-link has-dropdown">Chiang Mai</a>
-      <div class="dropdown-menu mega-menu" role="menu">
+      <div class="dropdown-menu mega-menu chiang-mai-menu" role="menu">
         <div class="dropdown-section">
           <h3>Lifestyle</h3>
           <ul>
@@ -1644,8 +1705,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
           <h3>All Types</h3>
           <ul>
             <li><a href="pages/visas/index.html">All Visas</a></li>
-            <li><a href="pages/visas/short-stay/">Short-Stay</a></li>
-            <li><a href="pages/visas/long-stay/">Long-Stay</a></li>
+            <li><a href="pages/visas/short-stay/index.html">Short-Stay</a></li>
+            <li><a href="pages/visas/long-stay/index.html">Long-Stay</a></li>
             <li><a href="pages/visas/short-stay/dtv-destination-thailand-visa-thai-visa-advice-chiang-mai-cmlocals.html">DTV</a></li>
             <li><a href="pages/visas/short-stay/tourist-visa.html">Tourist</a></li>
             <li><a href="pages/visas/guides/which-visa.html">Which Visa?</a></li>
@@ -1675,7 +1736,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   <!-- CTAs & Mobile Toggle -->
   <div class="header-ctas">
     <a href="https://wa.me/66801202074" class="btn btn-wa" rel="noopener" target="_blank" title="Message on WhatsApp">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     </a>
     <button class="mobile-menu-toggle" id="hamburger" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle navigation">
       <span></span><span></span><span></span>
@@ -1731,8 +1792,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     <summary>Visa Guides</summary>
     <ul>
       <li><a href="pages/visas/index.html">All Visas</a></li>
-      <li><a href="pages/visas/short-stay/">Short-Stay</a></li>
-      <li><a href="pages/visas/long-stay/">Long-Stay</a></li>
+      <li><a href="pages/visas/short-stay/index.html">Short-Stay</a></li>
+      <li><a href="pages/visas/long-stay/index.html">Long-Stay</a></li>
       <li><a href="pages/visas/short-stay/dtv-destination-thailand-visa-thai-visa-advice-chiang-mai-cmlocals.html">DTV</a></li>
       <li><a href="pages/visas/short-stay/tourist-visa.html">Tourist</a></li>
       <li><a href="pages/visas/guides/which-visa.html">Which Visa?</a></li>
@@ -1775,7 +1836,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     </p>
 
     <div class="hero-ctas">
-      <a href="/visas/" class="btn btn-primary btn-lg">See 2026 visa overview</a>
+      <a href="pages/visas/index.html" class="btn btn-primary btn-lg">See 2026 visa overview</a>
       <a href="https://wa.me/66801202074" class="btn btn-outline-light btn-lg" rel="noopener" target="_blank">Message us on WhatsApp</a>
     </div>
 
@@ -1796,7 +1857,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
       </div>
 
       <div class="hero-floating-cards">
-        <a href="/visas/long-stay/" class="hero-stat-card hero-stat-card--accent" style="text-decoration: none; color: inherit;">
+        <a href="pages/visas/long-stay/index.html" class="hero-stat-card hero-stat-card--accent" style="text-decoration: none; color: inherit;">
           <div class="hero-stat-icon hero-stat-icon--primary" aria-hidden="true">&#128896;</div>
           <div class="hero-stat-body">
             <div class="hero-stat-val">Long-stay visas</div>
@@ -1810,7 +1871,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
             <div class="hero-stat-desc">DTV, LTR, Privilege, Business/PR</div>
           </div>
         </a>
-        <a href="/chiang-mai/" class="hero-stat-card" style="text-decoration: none; color: inherit;">
+        <a href="pages/chiang-mai/index.html" class="hero-stat-card" style="text-decoration: none; color: inherit;">
           <div class="hero-stat-icon" aria-hidden="true">&#127959;</div>
           <div class="hero-stat-body">
             <div class="hero-stat-val">Chiang Mai life</div>
@@ -1860,7 +1921,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     <h2 class="section-title" id="visas-heading">
       Long stay visa options<br><em>in Chiang Mai</em>
     </h2>
-    <p class="section-sub" style="font-size: 1.5rem;">CMLocals focuses on long-stay visas that actually work in Chiang Mai. Below are your main options, ordered by what we know best.</p>
+    <p class="section-sub" style="font-size: 0.9rem;">CMLocals focuses on long-stay visas that actually work in Chiang Mai. Below are your main options, ordered by what we know best.</p>
   </div>
 
   <div class="paths-grid">
@@ -1871,12 +1932,12 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
       <h3 class="path-card__title">Education (ED visa)</h3>
       <p class="path-card__desc">Study at an approved school in Chiang Mai and stay legally for up to one year, renewable subject to continued enrolment. Programs include emergency self-defence, Thai language, Muay Thai, and combat training.</p>
       <ul class="path-card__list">
-        <li><a href="/ed-visas/emergency-self-defense/">Emergency self-defence training</a></li>
-        <li><a href="/ed-visas/thai-language-schools/">Thai language schools</a></li>
-        <li><a href="/ed-visas/muay-thai/">Muay Thai programs</a></li>
-        <li><a href="/ed-visas/combat-training/">Combat and martial arts</a></li>
+        <li><a href="pages/ed-visas/emergency-self-defence-ed-visa-chiang-mai.html">Emergency self-defence training</a></li>
+        <li><a href="pages/ed-visas/thai-language-ed-visa-chiang-mai.html">Thai language schools</a></li>
+        <li><a href="pages/ed-visas/muay-thai-ed-visa-chiang-mai.html">Muay Thai programs</a></li>
+        <li><a href="pages/ed-visas/hand-to-hand-combat-ed-visa-chiang-mai.html">Combat and martial arts</a></li>
       </ul>
-      <a class="path-card__cta" href="/visas/long-stay/ed-visa/">
+      <a class="path-card__cta" href="pages/ed-visas/index.html">
         View the ED visa guide
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
@@ -1894,7 +1955,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
         <li>Sponsorship requirements</li>
         <li>Common organizations in Chiang Mai</li>
       </ul>
-      <a class="path-card__cta" href="/visas/long-stay/volunteer-visa/">
+      <a class="path-card__cta" href="pages/ed-visas/volunteer-non-o-visa-chiang-mai.html">
         View this visa option
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
@@ -1912,7 +1973,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
         <li>Multiple entry flexibility</li>
         <li>Suited to digital nomads and freelancers</li>
       </ul>
-      <a class="path-card__cta" href="/visas/long-stay/dtv-digital-nomad/">
+      <a class="path-card__cta" href="pages/visas/short-stay/dtv-destination-thailand-visa-thai-visa-advice-chiang-mai-cmlocals.html">
         View this visa option
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
@@ -1930,7 +1991,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
         <li>Multiple re-entry permitted</li>
         <li>Professional and business pathways</li>
       </ul>
-      <a class="path-card__cta" href="/visas/long-stay/ltr-visa/">
+      <a class="path-card__cta" href="pages/visas/long-stay/ltr-long-term-resident-visa-thai-visa-advice-chiang-mai-cmlocals.html">
         View this visa option
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
@@ -1949,7 +2010,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
         <li>Includes dependents up to age 20</li>
       </ul>
       <div class="path-card__disclaimer" aria-label="Knowledge base disclaimer">ⓘ Our in-depth knowledge base focuses on Education, Volunteer, DTV, and LTR visas.</div>
-      <a class="path-card__cta" href="/visas/long-stay/retirement-visa/">
+      <a class="path-card__cta" href="pages/visas/long-stay/retirement-visa-thai-visa-advice-chiang-mai-cmlocals.html">
         View this visa option
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
@@ -1968,7 +2029,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
         <li>Same-sex and common-law partnerships</li>
       </ul>
       <div class="path-card__disclaimer" aria-label="Knowledge base disclaimer">ⓘ Our in-depth knowledge base focuses on Education, Volunteer, DTV, and LTR visas.</div>
-      <a class="path-card__cta" href="/visas/long-stay/marriage-visa/">
+      <a class="path-card__cta" href="pages/visas/long-stay/marriage-visa-non-o-thai-visa-advice-chiang-mai-cmlocals.html">
         View this visa option
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
@@ -1986,7 +2047,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 <div class="container">
 <div class="contact-cta-inner">
   <h2 class="section-title" id="visa-decision-heading">Questions about<br><em>these visas?</em></h2>
-  <p class="section-sub" style="font-size: 1.5rem;">Send us your nationality and current visa preference on WhatsApp for quick guidance. No sales, no agents, just clarity.</p>
+  <p class="section-sub" style="font-size: 0.9rem;">Send us your nationality and current visa preference on WhatsApp for quick guidance. No sales, no agents, just clarity.</p>
   <div class="contact-cta-btns">
     <a href="https://wa.me/66801202074" class="btn btn-wa btn-lg" rel="noopener" target="_blank">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -2008,7 +2069,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     <h2 class="section-title" id="special-programs-heading" style="color: var(--c-white);">
       Special programs<br><em>in 2026</em>
     </h2>
-    <p class="section-sub" style="color: rgba(255,255,255,.78); font-size: 1.5rem;">Elite-tier visa programs for specific demographics and professional categories.</p>
+    <p class="section-sub" style="color: rgba(255,255,255,.78); font-size: 0.9rem;">Elite-tier visa programs for specific demographics and professional categories.</p>
   </div>
 
   <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem;">
@@ -2020,7 +2081,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
       <p class="path-card__desc" style="color: rgba(255,255,255,.78);">Thailand's 5-year visa for remote workers, digital nomads, and flexible professionals.</p>
       <div style="font-size:1.1rem;color:rgba(255,255,255,.7);margin-bottom:1rem;"><strong>For whom:</strong> Remote workers, digital nomads, flexible professionals</div>
       <div style="font-size:1.1rem;color:rgba(255,255,255,.7);margin-bottom:1.5rem;"><strong>Validity:</strong> 5 years, renewable</div>
-      <a class="path-card__cta" href="/visas/long-stay/dtv-digital-nomad/">
+      <a class="path-card__cta" href="pages/visas/short-stay/dtv-destination-thailand-visa-thai-visa-advice-chiang-mai-cmlocals.html">
         Explore DTV
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
@@ -2033,7 +2094,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
       <p class="path-card__desc" style="color: rgba(255,255,255,.78);">Thailand's premium visa for investors, retirees 65+, and high-income professionals with BOI tax benefits.</p>
       <div style="font-size:1.1rem;color:rgba(255,255,255,.7);margin-bottom:1rem;"><strong>For whom:</strong> Investors, retirees 65+, professionals</div>
       <div style="font-size:1.1rem;color:rgba(255,255,255,.7);margin-bottom:1.5rem;"><strong>Validity:</strong> 4 years continuous</div>
-      <a class="path-card__cta" href="/visas/long-stay/ltr-visa/">
+      <a class="path-card__cta" href="pages/visas/long-stay/ltr-long-term-resident-visa-thai-visa-advice-chiang-mai-cmlocals.html">
         Explore LTR
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
@@ -2046,7 +2107,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
       <p class="path-card__desc" style="color: rgba(255,255,255,.78);">Elite membership program with visa extensions, priority processing, and lifestyle benefits in Thailand.</p>
       <div style="font-size:1.1rem;color:rgba(255,255,255,.7);margin-bottom:1rem;"><strong>For whom:</strong> High-net-worth individuals seeking premium status</div>
       <div style="font-size:1.1rem;color:rgba(255,255,255,.7);margin-bottom:1.5rem;"><strong>Validity:</strong> Multiple tiers with various terms</div>
-      <a class="path-card__cta" href="/visas/long-stay/thailand-privilege/">
+      <a class="path-card__cta" href="pages/visas/long-stay/thailand-privilege-visa-elite-thai-visa-advice-chiang-mai-cmlocals.html">
         Explore Privilege
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
@@ -2059,7 +2120,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
       <p class="path-card__desc" style="color: rgba(255,255,255,.78);">Long-term residence through company ownership, investment, or professional registration as PR candidate.</p>
       <div style="font-size:1.1rem;color:rgba(255,255,255,.7);margin-bottom:1rem;"><strong>For whom:</strong> Business owners, investors, PR applicants</div>
       <div style="font-size:1.1rem;color:rgba(255,255,255,.7);margin-bottom:1.5rem;"><strong>Validity:</strong> Non-B visa + extensions, PR track</div>
-      <a class="path-card__cta" href="/visas/long-stay/business-visa/">
+      <a class="path-card__cta" href="pages/visas/long-stay/business-visa-non-b-thai-visa-advice-chiang-mai-cmlocals.html">
         Explore pathway
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
@@ -2080,7 +2141,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     <h2 class="section-title" id="short-stay-heading">
       Short stay and<br><em>tourist options</em>
     </h2>
-    <p class="section-sub" style="font-size: 1.5rem;">For those planning shorter visits or not yet ready for a long-stay visa. See the <a href="/visas/short-stay/" style="color:var(--c-primary);text-decoration:underline;">short stay and tourist visa overview</a> for entry options and rules.</p>
+    <p class="section-sub" style="font-size: 0.9rem;">For those planning shorter visits or not yet ready for a long-stay visa. See the <a href="pages/visas/short-stay/index.html" style="color:var(--c-primary);text-decoration:underline;">short stay and tourist visa overview</a> for entry options and rules.</p>
   </div>
 
   <div class="paths-grid">
@@ -2097,7 +2158,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
         <li>No employment authorization</li>
         <li>Extensions available at immigration</li>
       </ul>
-      <a class="path-card__cta" href="/visas/short-stay/visa-exemption/">
+      <a class="path-card__cta" href="pages/visas/short-stay/visa-exempt-entry.html">
         View this option
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
@@ -2115,7 +2176,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
         <li>Tourist activities only</li>
         <li>No work authorization</li>
       </ul>
-      <a class="path-card__cta" href="/visas/short-stay/tourist-visa/">
+      <a class="path-card__cta" href="pages/visas/short-stay/tourist-visa.html">
         View this option
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
@@ -2133,7 +2194,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
         <li>Timing and legal considerations</li>
         <li>NOT long-term solution strategy</li>
       </ul>
-      <a class="path-card__cta" href="/visas/short-stay/border-runs/">
+      <a class="path-card__cta" href="pages/visas/short-stay/border-runs.html">
         View this option
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
@@ -2151,7 +2212,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 <div class="container">
 <div class="contact-cta-inner">
   <h2 class="section-title" id="explore-cta-heading">Want to explore<br><em>these options?</em></h2>
-  <p class="section-sub" style="font-size: 1.5rem;">Message us on WhatsApp to discuss DTV, LTR, Privilege, and business pathways for your specific situation.</p>
+  <p class="section-sub" style="font-size: 0.9rem;">Message us on WhatsApp to discuss DTV, LTR, Privilege, and business pathways for your specific situation.</p>
   <div class="contact-cta-btns">
     <a href="https://wa.me/66801202074" class="btn btn-wa btn-lg" rel="noopener" target="_blank">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -2173,7 +2234,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     <h2 class="section-title" id="settling-heading">
       Getting settled and set up<br><em>in Chiang Mai</em>
     </h2>
-    <p class="section-sub" style="font-size: 1.5rem;">Beyond visa logistics: housing, costs, banking, and community. See the <a href="/chiang-mai/" style="color:var(--c-primary);text-decoration:underline;">Chiang Mai living guide</a> for practical detail on settling in.</p>
+    <p class="section-sub" style="font-size: 0.9rem;">Beyond visa logistics: housing, costs, banking, and community. See the <a href="pages/chiang-mai/index.html" style="color:var(--c-primary);text-decoration:underline;">Chiang Mai living guide</a> for practical detail on settling in.</p>
   </div>
 
   <div class="paths-grid">
@@ -2190,7 +2251,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
         <li>TM30 landlord requirements</li>
         <li>Housing resources and agencies</li>
       </ul>
-      <a class="path-card__cta" href="/chiang-mai/accommodation/">
+      <a class="path-card__cta" href="pages/chiang-mai/where-to-stay.html">
         Read guide
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
@@ -2208,7 +2269,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
         <li>Healthcare and insurance</li>
         <li>Transportation and utilities</li>
       </ul>
-      <a class="path-card__cta" href="/chiang-mai/cost-of-living/">
+      <a class="path-card__cta" href="pages/chiang-mai/cost-of-living.html">
         Read guide
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
@@ -2226,7 +2287,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
         <li>International remittance and rates</li>
         <li>Tax implications of income transfers</li>
       </ul>
-      <a class="path-card__cta" href="/chiang-mai/banking/">
+      <a class="path-card__cta" href="pages/chiang-mai/phones-and-banking.html">
         Read guide
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
@@ -2244,7 +2305,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
         <li>Language exchange and classes</li>
         <li>Getting involved locally</li>
       </ul>
-      <a class="path-card__cta" href="/chiang-mai/getting-settled/">
+      <a class="path-card__cta" href="pages/chiang-mai/long-term-living.html">
         Read guide
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
@@ -2262,7 +2323,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
         <li>Public transport and songthaew routes</li>
         <li>Taxis, Grab, and ride-sharing apps</li>
       </ul>
-      <a class="path-card__cta" href="/chiang-mai/transport/">
+      <a class="path-card__cta" href="pages/chiang-mai/getting-around.html">
         Read guide
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
@@ -2280,7 +2341,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
         <li>Healthcare and medical tourism</li>
         <li>Seasonal weather and health considerations</li>
       </ul>
-      <a class="path-card__cta" href="/chiang-mai/getting-settled/">
+      <a class="path-card__cta" href="pages/chiang-mai/long-term-living.html">
         Read guide
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
@@ -2298,7 +2359,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 <div class="container">
 <div class="contact-cta-inner">
   <h2 class="section-title" id="ready-cta-heading">Ready to reach out?<br><em>We're here.</em></h2>
-  <p class="section-sub" style="font-size: 1.5rem;">We help with practical questions about long-stay life in Chiang Mai. Send us a message on WhatsApp or Facebook.</p>
+  <p class="section-sub" style="font-size: 0.9rem;">We help with practical questions about long-stay life in Chiang Mai. Send us a message on WhatsApp or Facebook.</p>
   <div class="contact-cta-btns">
     <a href="https://wa.me/66801202074" class="btn btn-wa btn-lg" rel="noopener" target="_blank">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -2319,7 +2380,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
   <div class="experience-content">
     <h2 class="section-title" id="experience-heading">Built from experience,<br><em>not from the brochure.</em></h2>
-    <p class="section-sub" style="font-size: 1.5rem;">
+    <p class="section-sub" style="font-size: 0.9rem;">
       CMLocals has been helping long-stay foreigners navigate Chiang Mai's immigration landscape since before the DTV existed, before Thailand Elite became Thailand Privilege, and before the 90-day online system worked reliably.
     </p>
     <blockquote class="experience-quote">
@@ -2362,7 +2423,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 <div class="container">
 <div class="contact-cta-inner">
   <h2 class="section-title" id="soft-contact-heading">Not sure where<br><em>to start?</em></h2>
-  <p class="section-sub" style="font-size: 1.5rem;">Send us your nationality and current visa status on WhatsApp or Facebook for informal guidance. Short, practical, conversational messages. No sales, just clarity.</p>
+  <p class="section-sub" style="font-size: 0.9rem;">Send us your nationality and current visa status on WhatsApp or Facebook for informal guidance. Short, practical, conversational messages. No sales, just clarity.</p>
   <div class="contact-cta-btns">
     <a href="https://wa.me/66801202074" class="btn btn-wa btn-lg" rel="noopener" target="_blank">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -2385,13 +2446,13 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     <h2 class="section-title" id="immigration-heading">
       When you visit<br><em>Chiang Mai Immigration</em>
     </h2>
-    <p class="section-sub" style="font-size: 1.5rem;">What to expect, how to prepare, and what actually happens when you extend your visa or do 90-day reporting at the office on Mahidon Road.</p>
+    <p class="section-sub" style="font-size: 0.9rem;">What to expect, how to prepare, and what actually happens when you extend your visa or do 90-day reporting at the office on Mahidon Road.</p>
     <div class="immigration-meta">
       <span class="immigration-meta-badge">Central Festival Mahidon Road</span>
     </div>
-    <p class="section-sub" style="margin-top:.5rem; font-size: 1.5rem;">Queues, required documents, and procedures change regularly. This guide is based on regular in-person visits  not official announcements alone.</p>
+    <p class="section-sub" style="margin-top:.5rem; font-size: 0.9rem;">Queues, required documents, and procedures change regularly. This guide is based on regular in-person visits  not official announcements alone.</p>
     <div class="immigration-cta-wrap">
-      <a href="/chiang-mai/immigration-guide/" class="btn btn-primary">Open the Chiang Mai Immigration guide</a>
+      <a href="pages/immigration/index.html" class="btn btn-primary">Open the Chiang Mai Immigration guide</a>
     </div>
   </div>
 
@@ -2447,7 +2508,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   <!-- Column 1: CMLocals + Tagline + Social Icons (LEFT) -->
   <div class="footer-col footer-col-cmlocals">
     <div class="footer-logo">
-      <a href="/">
+      <a href="index.html">
         <img src="images/cmlocals-chiang-mai-locals-logo.webp" alt="CMLocals – Thai visa guides and Chiang Mai living" />
       </a>
     </div>
@@ -2460,9 +2521,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
         <svg width="24" height="24" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="19.4395" cy="19.4395" r="19.4395" fill="#0084FF"/><path d="M19.5 9.5C13.701 9.5 9 13.748 9 19.074c0 3.014 1.474 5.702 3.778 7.456V30l3.294-1.81c.878.244 1.81.376 2.778.376 5.799 0 10.5-4.248 10.5-9.574S25.299 9.5 19.5 9.5zm1.04 12.878l-2.674-2.852-5.22 2.852 5.74-6.096 2.74 2.852 5.154-2.852-5.74 6.096z" fill="white"/></svg>
       </a>
       <a href="https://www.facebook.com/chiangmailocals" title="Facebook" class="social-icon social-facebook" target="_blank" rel="noopener noreferrer">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-        </svg>
+        <svg width="24" height="24" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="19.5" cy="19.5" r="19.5" fill="#1877F2"/><path d="M20.5 28v-8h2.5l.375-2.875h-2.875v-1.75c0-.75.25-1.25 1.375-1.25h1.5V10.625c-.25 0-1.125-.125-2.125-.125-2.125 0-3.625 1.375-3.625 3.875v2.125h-2.5v2.875h2.5v8h3z" fill="white"/></svg>
       </a>
     </div>
   </div>
@@ -2499,10 +2558,10 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     <ul class="footer-links">
       <li><a href="pages/visas/index.html">All Visas</a></li>
       <li><a href="pages/visas/short-stay/dtv-destination-thailand-visa-thai-visa-advice-chiang-mai-cmlocals.html">DTV</a></li>
-      <li><a href="pages/visas/short-stay/">Short Stay</a></li>
-      <li><a href="pages/visas/long-stay/">Long Stay</a></li>
+      <li><a href="pages/visas/short-stay/index.html">Short Stay</a></li>
+      <li><a href="pages/visas/long-stay/index.html">Long Stay</a></li>
       <li><a href="pages/visas/short-stay/tourist-visa.html">Tourist Visa</a></li>
-      <li><a href="pages/checklists/">Checklists</a></li>
+      <li><a href="pages/checklists/index.html">Checklists</a></li>
     </ul>
   </div>
 
@@ -2627,6 +2686,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   }
 })();
 </script>
+
+<!-- Make entire cards clickable -->
+<script src="../shared/js/card-click-handler.js"></script>
 
 <!-- Chaty Widget Configuration -->
 <script>

@@ -154,6 +154,52 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
 @media(max-width:960px){.primary-nav{display:none;}.header-hamburger{display:flex;}.article-layout{grid-template-columns:1fr;}.article-sidebar{position:static;}.related-grid{grid-template-columns:1fr 1fr;}}
 @media(max-width:640px){.container{padding-inline:20px;}.related-grid{grid-template-columns:1fr;}.footer-top{grid-template-columns:1fr 1fr;}.footer-bottom{flex-direction:column;align-items:flex-start;}.cta-btns{flex-direction:column;}}
 @media(max-width:400px){.footer-top{grid-template-columns:1fr;}}
+/* Make entire cards clickable */
+.path-card::before,
+.article-card::before,
+.tool-card::before,
+.guide-card::before,
+.visa-card::before,
+.visa-category-card::before,
+.program-card::before,
+.topic-card::before,
+.checklist-card::before,
+.related-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.path-card,
+.article-card,
+.tool-card,
+.guide-card,
+.visa-card,
+.visa-category-card,
+.program-card,
+.topic-card,
+.checklist-card,
+.related-card {
+  position: relative;
+}
+
+/* Ensure child links are clickable above the overlay */
+.path-card__cta,
+.article-card__link,
+.tool-card__cta,
+.guide-card__cta,
+.visa-card__cta,
+.visa-category-card__cta,
+.program-card__cta,
+.topic-card__cta,
+.checklist-card__cta,
+.related-card {
+  position: relative;
+  z-index: 2;
+}
+
 </style>
 </head>
 <body>
@@ -470,10 +516,10 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
 
     <h2>Overstay and Immigration Complications</h2>
     <p>Border-running has always carried a subtle risk: if you depart and re-enter without a clear entry permission, immigration officers may question your entry status. While most travelers border-run without issue, the risk is real. The 2026 limit has made this risk more likely because third and subsequent border runs are less clearly lawful.</p>
-    <p>If you overstay (even by a few hours), fines of 500 THB per day apply. Previous overstay penalties can result in multi-year re-entry bans. <a href="../../immigration/overstay-penalties/">See overstay penalties guide.</a></p>
+    <p>If you overstay (even by a few hours), fines of 500 THB per day apply. Previous overstay penalties can result in multi-year re-entry bans. <a href="../../immigration/overstay-penalties.html">See overstay penalties guide.</a></p>
 
     <h2>Chiang Mai Immigration Notes</h2>
-    <p>If you plan any visa strategy in Chiang Mai (extensions, VOA applications, inquiries about exemption limits), Chiang Mai Immigration (Mae Rim Office) handles tourist-related matters. They can clarify your specific situation regarding the 2-per-year limit and whether a planned border run would be lawful. <a href="../../chiang-mai/immigration-guide/">See Chiang Mai immigration guide.</a></p>
+    <p>If you plan any visa strategy in Chiang Mai (extensions, VOA applications, inquiries about exemption limits), Chiang Mai Immigration (Mae Rim Office) handles tourist-related matters. They can clarify your specific situation regarding the 2-per-year limit and whether a planned border run would be lawful. <a href="../../chiang-mai/index.html">See Chiang Mai immigration guide.</a></p>
 
     <div class="disclaimer-box">
       <h2>Disclaimer</h2>
@@ -517,8 +563,8 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
         <a href="visa-extensions.html">Visa Extensions</a>
         <a href="tourist-visa.html">Tourist Visa</a>
         <a href="dtv-destination-thailand-visa-thai-visa-advice-chiang-mai-cmlocals.html">DTV Visa</a>
-        <a href="../../immigration/overstay-penalties/">Overstay Penalties</a>
-        <a href="../../chiang-mai/immigration-guide/">Chiang Mai Immigration</a>
+        <a href="../../immigration/overstay-penalties.html">Overstay Penalties</a>
+        <a href="../../chiang-mai/index.html">Chiang Mai Immigration</a>
       </nav>
     </div>
   </aside>
@@ -779,5 +825,6 @@ window.CHATY_CONFIG = {
 })();
 </script>
 
+<script src="../../../../shared/js/card-click-handler.js"></script>
 </body>
 </html>

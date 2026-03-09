@@ -195,7 +195,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 .article-body h2:first-of-type { border-top: none; padding-top: 0; margin-top: 0; }
 .article-body h3 {
-  font-family: var(--font-body); font-size: 1.1rem; font-weight: 600;
+  font-family: var(--font-body); font-size: 0.9rem; font-weight: 600;
   color: #101585; margin-top: 2rem; margin-bottom: .6rem;
 }
 .article-body p { margin-bottom: 1.25rem; line-height: 1.75; color: var(--c-body); max-width: 68ch; }
@@ -328,7 +328,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   width: 40px; height: 40px; border-radius: var(--radius-sm);
   background: var(--c-page-accent-l);
   display: flex; align-items: center; justify-content: center;
-  font-size: 1.1rem; flex-shrink: 0; transition: background .18s;
+  font-size: 0.9rem; flex-shrink: 0; transition: background .18s;
 }
 .tool-card:hover .tool-card__icon { background: var(--c-violet-l); }
 .tool-card__body { flex: 1; }
@@ -413,6 +413,52 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .cost-table { font-size: .82rem; }
   .cost-table th, .cost-table td { padding: .5rem .6rem; }
 }
+/* Make entire cards clickable */
+.path-card::before,
+.article-card::before,
+.tool-card::before,
+.guide-card::before,
+.visa-card::before,
+.visa-category-card::before,
+.program-card::before,
+.topic-card::before,
+.checklist-card::before,
+.related-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.path-card,
+.article-card,
+.tool-card,
+.guide-card,
+.visa-card,
+.visa-category-card,
+.program-card,
+.topic-card,
+.checklist-card,
+.related-card {
+  position: relative;
+}
+
+/* Ensure child links are clickable above the overlay */
+.path-card__cta,
+.article-card__link,
+.tool-card__cta,
+.guide-card__cta,
+.visa-card__cta,
+.visa-category-card__cta,
+.program-card__cta,
+.topic-card__cta,
+.checklist-card__cta,
+.related-card {
+  position: relative;
+  z-index: 2;
+}
+
 </style>
 </head>
 <body>
@@ -906,14 +952,14 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     The DTV (Digital Nomad Visa) and O-A (Retirement Visa) both provide non-immigrant status which makes account opening straightforward at most major branches. For full visa guidance, use the links below.
   </p>
   <div class="visa-links" role="list">
-    <a href="../../pages/visas/long-stay/dtv-digital-nomad/" role="listitem">DTV (Digital Nomad Visa)</a>
-    <a href="../../pages/visas/long-stay/retirement-visa-o-a/" role="listitem">Retirement Visa (O-A)</a>
-    <a href="../../pages/visas/long-stay/ed-visa/" role="listitem">ED Visa</a>
-    <a href="../../pages/visas/short-stay/tourist-visa/" role="listitem">Tourist Visa (TR)</a>
-    <a href="../../pages/immigration/tm30-registration/" role="listitem">TM30 Registration</a>
+    <a href="../../pages/visas/long-stay/dtv-digital-nomad/index.html" role="listitem">DTV (Digital Nomad Visa)</a>
+    <a href="../../pages/visas/long-stay/retirement-visa-o-a/index.html" role="listitem">Retirement Visa (O-A)</a>
+    <a href="../../pages/visas/long-stay/ed-visa/index.html" role="listitem">ED Visa</a>
+    <a href="../../pages/visas/short-stay/tourist-visa/index.html" role="listitem">Tourist Visa (TR)</a>
+    <a href="../../pages/immigration/tm30-registration/index.html" role="listitem">TM30 Registration</a>
     <a href="../../pages/chiang-mai/cost-of-living.html" role="listitem">Chiang Mai Cost of Living</a>
     <a href="../../pages/chiang-mai/digital-nomads.html" role="listitem">Digital Nomad Guide</a>
-    <a href="../../pages/chiang-mai/immigration-guide/" role="listitem">Chiang Mai Immigration Office</a>
+    <a href="../../pages/chiang-mai/immigration-guide/index.html" role="listitem">Chiang Mai Immigration Office</a>
   </div>
 </div>
 </section>
@@ -934,7 +980,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
         <div class="tool-card__title">Chiang Mai cost of living 2026</div>
       </div>
     </a>
-    <a class="tool-card" href="../../pages/tools/visa-quiz/" role="listitem">
+    <a class="tool-card" href="../../pages/tools/visa-quiz/index.html" role="listitem">
       <div class="tool-card__icon" aria-hidden="true">&#10067;</div>
       <div class="tool-card__body">
         <div class="tool-card__type">Quiz</div>
@@ -1046,6 +1092,52 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   color: var(--c-primary);
   margin-top: 0.5rem;
 }
+/* Make entire cards clickable */
+.path-card::before,
+.article-card::before,
+.tool-card::before,
+.guide-card::before,
+.visa-card::before,
+.visa-category-card::before,
+.program-card::before,
+.topic-card::before,
+.checklist-card::before,
+.related-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.path-card,
+.article-card,
+.tool-card,
+.guide-card,
+.visa-card,
+.visa-category-card,
+.program-card,
+.topic-card,
+.checklist-card,
+.related-card {
+  position: relative;
+}
+
+/* Ensure child links are clickable above the overlay */
+.path-card__cta,
+.article-card__link,
+.tool-card__cta,
+.guide-card__cta,
+.visa-card__cta,
+.visa-category-card__cta,
+.program-card__cta,
+.topic-card__cta,
+.checklist-card__cta,
+.related-card {
+  position: relative;
+  z-index: 2;
+}
+
 </style>
 </section>
 
@@ -1103,8 +1195,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     <ul class="footer-links">
       <li><a href="../../pages/visas/index.html">All Visas</a></li>
       <li><a href="../../pages/visas/short-stay/dtv-destination-thailand-visa-thai-visa-advice-chiang-mai-cmlocals.html">DTV</a></li>
-      <li><a href="../../pages/visas/short-stay/">Short Stay</a></li>
-      <li><a href="../../pages/visas/long-stay/">Long Stay</a></li>
+      <li><a href="../../pages/visas/short-stay/index.html">Short Stay</a></li>
+      <li><a href="../../pages/visas/long-stay/index.html">Long Stay</a></li>
       <li><a href="../../pages/visas/short-stay/tourist-visa.html">Tourist Visa</a></li>
       <li><a href="../../pages/checklists/index.html">Checklists</a></li>
     </ul>
@@ -1166,5 +1258,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 })();
 </script>
 
+<script src="../../../shared/js/card-click-handler.js"></script>
 </body>
 </html>

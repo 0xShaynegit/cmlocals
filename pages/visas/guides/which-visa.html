@@ -203,7 +203,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 .article-body h2:first-of-type { border-top: none; padding-top: 0; margin-top: 0; }
 .article-body h3 {
-  font-family: var(--font-body); font-size: 1.1rem; font-weight: 600;
+  font-family: var(--font-body); font-size: 0.9rem; font-weight: 600;
   color: #693aef; margin-top: 2rem; margin-bottom: .6rem;
 }
 .article-body p { margin-bottom: 1.25rem; line-height: 1.75; color: var(--c-body); max-width: 68ch; }
@@ -233,7 +233,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .filter-group h3 {
   margin-top: 0;
   margin-bottom: 1rem;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   color: var(--c-body);
 }
 
@@ -278,7 +278,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 .results-heading {
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   margin-bottom: 1.5rem;
   color: var(--c-body);
 }
@@ -304,7 +304,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 .visa-card h4 {
-  font-size: 1.3rem;
+  font-size: 0.9rem;
   margin-bottom: 0.5rem;
   color: var(--c-body);
   font-weight: 500;
@@ -434,7 +434,7 @@ tr:nth-child(even) {
   width: 40px; height: 40px; border-radius: var(--radius-sm);
   background: var(--c-page-accent-l);
   display: flex; align-items: center; justify-content: center;
-  font-size: 1.1rem; flex-shrink: 0; transition: background .18s;
+  font-size: 0.9rem; flex-shrink: 0; transition: background .18s;
 }
 .tool-card:hover .tool-card__icon { background: var(--c-violet-l); }
 .tool-card__body { flex: 1; }
@@ -455,6 +455,52 @@ tr:nth-child(even) {
   .page-hero h1 { font-size: 1.75rem; }
   .footer-top { grid-template-columns: 1fr; }
   .footer-bottom { flex-direction: column; align-items: flex-start; }
+}
+
+/* Make entire cards clickable */
+.path-card::before,
+.article-card::before,
+.tool-card::before,
+.guide-card::before,
+.visa-card::before,
+.visa-category-card::before,
+.program-card::before,
+.topic-card::before,
+.checklist-card::before,
+.related-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.path-card,
+.article-card,
+.tool-card,
+.guide-card,
+.visa-card,
+.visa-category-card,
+.program-card,
+.topic-card,
+.checklist-card,
+.related-card {
+  position: relative;
+}
+
+/* Ensure child links are clickable above the overlay */
+.path-card__cta,
+.article-card__link,
+.tool-card__cta,
+.guide-card__cta,
+.visa-card__cta,
+.visa-category-card__cta,
+.program-card__cta,
+.topic-card__cta,
+.checklist-card__cta,
+.related-card {
+  position: relative;
+  z-index: 2;
 }
 
 </style>
@@ -1247,5 +1293,6 @@ function updateResults() {
 }
 </script>
 
+<script src="../../../../shared/js/card-click-handler.js"></script>
 </body>
 </html>

@@ -232,7 +232,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   align-self: flex-start;
 }
 .article-card__title {
-  font-family: var(--font-display); font-size: 1.2rem; font-weight: 400;
+  font-family: var(--font-display); font-size: 1.0rem; font-weight: 400;
   color: #101585; line-height: 1.25; letter-spacing: -.015em; margin-bottom: .75rem;
 }
 .article-card__desc {
@@ -244,6 +244,52 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 .article-card__link::after { content: '\2192'; transition: transform .15s; }
 .article-card:hover .article-card__link::after { transform: translateX(3px); }
+
+/* Make entire cards clickable */
+.path-card::before,
+.article-card::before,
+.tool-card::before,
+.guide-card::before,
+.visa-card::before,
+.visa-category-card::before,
+.program-card::before,
+.topic-card::before,
+.checklist-card::before,
+.related-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.path-card,
+.article-card,
+.tool-card,
+.guide-card,
+.visa-card,
+.visa-category-card,
+.program-card,
+.topic-card,
+.checklist-card,
+.related-card {
+  position: relative;
+}
+
+/* Ensure child links are clickable above the overlay */
+.path-card__cta,
+.article-card__link,
+.tool-card__cta,
+.guide-card__cta,
+.visa-card__cta,
+.visa-category-card__cta,
+.program-card__cta,
+.topic-card__cta,
+.checklist-card__cta,
+.related-card {
+  position: relative;
+  z-index: 2;
+}
 
 /* ============================================================
    VISA SECTION
@@ -301,7 +347,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   width: 40px; height: 40px; border-radius: var(--radius-sm);
   background: var(--c-page-accent-l);
   display: flex; align-items: center; justify-content: center;
-  font-size: 1.1rem; flex-shrink: 0; transition: background .18s;
+  font-size: 0.9rem; flex-shrink: 0; transition: background .18s;
 }
 .tool-card:hover .tool-card__icon { background: var(--c-violet-l); }
 .tool-card__body { flex: 1; }
@@ -660,7 +706,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     Each guide focuses on a single topic. Neighbourhood breakdowns cover rental costs and lifestyle trade-offs. The cost of living pages use real 2026 figures. The digital nomad guide covers internet infrastructure, coworking, and time zone practicalities. The phones and banking guide covers what you need to get set up financially when you arrive. For students exploring <a href="../../pages/ed-visas/index.html" style="color: var(--c-page-accent); text-decoration: none; font-weight: 600;">education programs in Chiang Mai</a>, the city has strong pathways for language training, martial arts, and other structured programs that support ED visa applications.
   </p>
   <p>
-    Visa information appears at the bottom of each lifestyle guide and links through to the full visa guides in the <a href="../../pages/visas/long-stay/" style="color: var(--c-page-accent); text-decoration: none; font-weight: 600;">Long Stay Visas</a> section. For step-by-step immigration processes specific to Chiang Mai, use the <a href="../../pages/chiang-mai/immigration-guide/" style="color: var(--c-page-accent); text-decoration: none; font-weight: 600;">Chiang Mai Immigration Guide</a>.
+    Visa information appears at the bottom of each lifestyle guide and links through to the full visa guides in the <a href="../../pages/visas/long-stay/index.html" style="color: var(--c-page-accent); text-decoration: none; font-weight: 600;">Long Stay Visas</a> section. For step-by-step immigration processes specific to Chiang Mai, use the <a href="../../pages/chiang-mai/immigration-guide/index.html" style="color: var(--c-page-accent); text-decoration: none; font-weight: 600;">Chiang Mai Immigration Guide</a>.
   </p>
 </div>
 </div>
@@ -750,17 +796,17 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     The right visa depends on how long you want to stay, what you plan to do, and whether you have income from outside Thailand. The guides below cover the most common options for long-stay visitors and residents.
   </p>
   <p>
-    For step-by-step processes specific to Chiang Mai Immigration Office, use the <a href="../../pages/chiang-mai/immigration-guide/" style="color: rgba(255,255,255,.92); font-weight: 600; text-decoration: none;">Chiang Mai Immigration Guide</a>.
+    For step-by-step processes specific to Chiang Mai Immigration Office, use the <a href="../../pages/chiang-mai/immigration-guide/index.html" style="color: rgba(255,255,255,.92); font-weight: 600; text-decoration: none;">Chiang Mai Immigration Guide</a>.
   </p>
   <div class="visa-links" role="list">
-    <a href="../../pages/visas/long-stay/dtv-digital-nomad/" role="listitem">DTV (Digital Nomad Visa)</a>
-    <a href="../../pages/visas/long-stay/retirement-visa-o-a/" role="listitem">Retirement Visa (O-A)</a>
-    <a href="../../pages/visas/long-stay/ed-visa/" role="listitem">ED Visa</a>
-    <a href="../../pages/visas/long-stay/thailand-privilege/" role="listitem">Thailand Privilege</a>
-    <a href="../../pages/visas/short-stay/tourist-visa/" role="listitem">Tourist Visa (TR)</a>
-    <a href="../../pages/immigration/90-day-reporting/" role="listitem">90-Day Reporting</a>
-    <a href="../../pages/immigration/tm30-registration/" role="listitem">TM30 Registration</a>
-    <a href="../../pages/chiang-mai/immigration-guide/" role="listitem">Chiang Mai Immigration Office</a>
+    <a href="../../pages/visas/long-stay/dtv-digital-nomad/index.html" role="listitem">DTV (Digital Nomad Visa)</a>
+    <a href="../../pages/visas/long-stay/retirement-visa-o-a/index.html" role="listitem">Retirement Visa (O-A)</a>
+    <a href="../../pages/visas/long-stay/ed-visa/index.html" role="listitem">ED Visa</a>
+    <a href="../../pages/visas/long-stay/thailand-privilege/index.html" role="listitem">Thailand Privilege</a>
+    <a href="../../pages/visas/short-stay/tourist-visa/index.html" role="listitem">Tourist Visa (TR)</a>
+    <a href="../../pages/immigration/90-day-reporting/index.html" role="listitem">90-Day Reporting</a>
+    <a href="../../pages/immigration/tm30-registration/index.html" role="listitem">TM30 Registration</a>
+    <a href="../../pages/chiang-mai/immigration-guide/index.html" role="listitem">Chiang Mai Immigration Office</a>
   </div>
 </div>
 </section>
@@ -774,14 +820,14 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     <h2 class="section-title">Tools and checklists</h2>
   </div>
   <div class="guides-row" role="list">
-    <a class="tool-card" href="../../pages/tools/stay-duration-calculator/" role="listitem">
+    <a class="tool-card" href="../../pages/tools/stay-duration-calculator/index.html" role="listitem">
       <div class="tool-card__icon" aria-hidden="true">&#128197;</div>
       <div class="tool-card__body">
         <div class="tool-card__type">Calculator</div>
         <div class="tool-card__title">Stay duration and visa day counter</div>
       </div>
     </a>
-    <a class="tool-card" href="../../pages/tools/visa-quiz/" role="listitem">
+    <a class="tool-card" href="../../pages/tools/visa-quiz/index.html" role="listitem">
       <div class="tool-card__icon" aria-hidden="true">&#10067;</div>
       <div class="tool-card__body">
         <div class="tool-card__type">Quiz</div>
@@ -853,8 +899,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     <ul class="footer-links">
       <li><a href="../../pages/visas/index.html">All Visas</a></li>
       <li><a href="../../pages/visas/short-stay/dtv-destination-thailand-visa-thai-visa-advice-chiang-mai-cmlocals.html">DTV</a></li>
-      <li><a href="../../pages/visas/short-stay/">Short Stay</a></li>
-      <li><a href="../../pages/visas/long-stay/">Long Stay</a></li>
+      <li><a href="../../pages/visas/short-stay/index.html">Short Stay</a></li>
+      <li><a href="../../pages/visas/long-stay/index.html">Long Stay</a></li>
       <li><a href="../../pages/visas/short-stay/tourist-visa.html">Tourist Visa</a></li>
       <li><a href="../../pages/checklists/index.html">Checklists</a></li>
     </ul>
@@ -915,6 +961,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 })();
 </script>
+
+<!-- Make entire cards clickable -->
+<script src="../../../shared/js/card-click-handler.js"></script>
 
 </body>
 </html>

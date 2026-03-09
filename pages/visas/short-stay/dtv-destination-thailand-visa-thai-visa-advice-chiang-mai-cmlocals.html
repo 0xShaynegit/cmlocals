@@ -188,6 +188,52 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
 @media(max-width:960px){.primary-nav{display:none;}.header-hamburger{display:flex;}.article-layout{grid-template-columns:1fr;}.article-sidebar{position:static;}.related-grid{grid-template-columns:1fr 1fr;}}
 @media(max-width:640px){.container{padding-inline:20px;}.related-grid{grid-template-columns:1fr;}.footer-top{grid-template-columns:1fr 1fr;}.footer-bottom{flex-direction:column;align-items:flex-start;}.cta-btns{flex-direction:column;}}
 @media(max-width:400px){.footer-top{grid-template-columns:1fr;}}
+/* Make entire cards clickable */
+.path-card::before,
+.article-card::before,
+.tool-card::before,
+.guide-card::before,
+.visa-card::before,
+.visa-category-card::before,
+.program-card::before,
+.topic-card::before,
+.checklist-card::before,
+.related-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.path-card,
+.article-card,
+.tool-card,
+.guide-card,
+.visa-card,
+.visa-category-card,
+.program-card,
+.topic-card,
+.checklist-card,
+.related-card {
+  position: relative;
+}
+
+/* Ensure child links are clickable above the overlay */
+.path-card__cta,
+.article-card__link,
+.tool-card__cta,
+.guide-card__cta,
+.visa-card__cta,
+.visa-category-card__cta,
+.program-card__cta,
+.topic-card__cta,
+.checklist-card__cta,
+.related-card {
+  position: relative;
+  z-index: 2;
+}
+
 </style>
 </head>
 <body>
@@ -908,5 +954,6 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
 })();
 </script>
 
+<script src="../../../../shared/js/card-click-handler.js"></script>
 </body>
 </html>

@@ -265,7 +265,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .article-body h2:first-of-type { border-top: none; padding-top: 0; margin-top: 0; }
 .article-body h3 {
   font-family: var(--font-body);
-  font-size: 1.1rem; font-weight: 600;
+  font-size: 0.9rem; font-weight: 600;
   color: var(--c-dark);
   margin-top: 2rem; margin-bottom: .6rem;
 }
@@ -431,7 +431,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   width: 40px; height: 40px; border-radius: var(--radius-sm);
   background: var(--c-page-accent-l);
   display: flex; align-items: center; justify-content: center;
-  font-size: 1.1rem; flex-shrink: 0;
+  font-size: 0.9rem; flex-shrink: 0;
   transition: background .18s;
 }
 .tool-card:hover .tool-card__icon { background: var(--c-violet-l); }
@@ -546,6 +546,52 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .cost-table { font-size: .82rem; }
   .cost-table th, .cost-table td { padding: .5rem .6rem; }
 }
+/* Make entire cards clickable */
+.path-card::before,
+.article-card::before,
+.tool-card::before,
+.guide-card::before,
+.visa-card::before,
+.visa-category-card::before,
+.program-card::before,
+.topic-card::before,
+.checklist-card::before,
+.related-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.path-card,
+.article-card,
+.tool-card,
+.guide-card,
+.visa-card,
+.visa-category-card,
+.program-card,
+.topic-card,
+.checklist-card,
+.related-card {
+  position: relative;
+}
+
+/* Ensure child links are clickable above the overlay */
+.path-card__cta,
+.article-card__link,
+.tool-card__cta,
+.guide-card__cta,
+.visa-card__cta,
+.visa-category-card__cta,
+.program-card__cta,
+.topic-card__cta,
+.checklist-card__cta,
+.related-card {
+  position: relative;
+  z-index: 2;
+}
+
 </style>
 </head>
 <body>
@@ -927,9 +973,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   <div class="visa-links" role="list">
     <a href="../../pages/visas/short-stay/visa-exempt-entry.html" role="listitem">Visa-exempt entry 2026</a>
     <a href="../../pages/visas/short-stay/tourist-visa.html" role="listitem">Tourist visa</a>
-    <a href="../../pages/visas/long-stay/dtv-digital-nomad/" role="listitem">DTV – Digital Nomad Visa</a>
-    <a href="../../pages/visas/long-stay/" role="listitem">All long-stay options</a>
-    <a href="../../pages/chiang-mai/immigration-guide/" role="listitem">Chiang Mai immigration guide</a>
+    <a href="../../pages/visas/long-stay/dtv-digital-nomad/index.html" role="listitem">DTV – Digital Nomad Visa</a>
+    <a href="../../pages/visas/long-stay/index.html" role="listitem">All long-stay options</a>
+    <a href="../../pages/chiang-mai/immigration-guide/index.html" role="listitem">Chiang Mai immigration guide</a>
   </div>
 
 </div>
@@ -952,14 +998,14 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
         <div class="tool-card__title">Visa &amp; extension document checklists</div>
       </div>
     </a>
-    <a class="tool-card" href="../../pages/tools/stay-duration-calculator/" role="listitem">
+    <a class="tool-card" href="../../pages/tools/stay-duration-calculator/index.html" role="listitem">
       <div class="tool-card__icon" aria-hidden="true">&#128197;</div>
       <div class="tool-card__body">
         <div class="tool-card__type">Calculator</div>
         <div class="tool-card__title">Stay duration calculator &nbsp; arrival to last legal day</div>
       </div>
     </a>
-    <a class="tool-card" href="../../pages/tools/visa-quiz/" role="listitem">
+    <a class="tool-card" href="../../pages/tools/visa-quiz/index.html" role="listitem">
       <div class="tool-card__icon" aria-hidden="true">&#10067;</div>
       <div class="tool-card__body">
         <div class="tool-card__type">Quiz</div>
@@ -1012,6 +1058,52 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .related-guide-tag { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--c-primary); }
 .related-guide-title { font-weight: 600; color: var(--c-dark); font-size: 0.95rem; }
 .related-guide-arrow { font-weight: 600; color: var(--c-primary); margin-top: 0.5rem; }
+/* Make entire cards clickable */
+.path-card::before,
+.article-card::before,
+.tool-card::before,
+.guide-card::before,
+.visa-card::before,
+.visa-category-card::before,
+.program-card::before,
+.topic-card::before,
+.checklist-card::before,
+.related-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.path-card,
+.article-card,
+.tool-card,
+.guide-card,
+.visa-card,
+.visa-category-card,
+.program-card,
+.topic-card,
+.checklist-card,
+.related-card {
+  position: relative;
+}
+
+/* Ensure child links are clickable above the overlay */
+.path-card__cta,
+.article-card__link,
+.tool-card__cta,
+.guide-card__cta,
+.visa-card__cta,
+.visa-category-card__cta,
+.program-card__cta,
+.topic-card__cta,
+.checklist-card__cta,
+.related-card {
+  position: relative;
+  z-index: 2;
+}
+
 </style>
 
 </main>
@@ -1070,8 +1162,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     <ul class="footer-links">
       <li><a href="../../pages/visas/index.html">All Visas</a></li>
       <li><a href="../../pages/visas/short-stay/dtv-destination-thailand-visa-thai-visa-advice-chiang-mai-cmlocals.html">DTV</a></li>
-      <li><a href="../../pages/visas/short-stay/">Short Stay</a></li>
-      <li><a href="../../pages/visas/long-stay/">Long Stay</a></li>
+      <li><a href="../../pages/visas/short-stay/index.html">Short Stay</a></li>
+      <li><a href="../../pages/visas/long-stay/index.html">Long Stay</a></li>
       <li><a href="../../pages/visas/short-stay/tourist-visa.html">Tourist Visa</a></li>
       <li><a href="../../pages/checklists/index.html">Checklists</a></li>
     </ul>
@@ -1141,5 +1233,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 })();
 </script>
 
+<script src="../../../shared/js/card-click-handler.js"></script>
 </body>
 </html>

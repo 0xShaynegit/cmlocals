@@ -156,6 +156,52 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
 @media(max-width:400px){.footer-top{grid-template-columns:1fr;}}
 
 .desktop-only{display:flex;}.mobile-only{display:none;}.nav-item{position:relative;display:inline-flex;align-items:center;}.nav-link{position:relative;color:var(--c-body);text-decoration:none;font-size:0.95rem;font-weight:500;padding:0.5rem 0.85rem;border-bottom:2px solid transparent;transition:border-color 0.2s,color 0.15s;display:inline-flex;align-items:center;}.nav-link:hover,.nav-link.active{color:var(--c-primary);border-bottom-color:var(--c-primary);}.nav-link.has-dropdown{cursor:pointer;}.dropdown-menu{position:absolute;top:100%;left:0;background:var(--c-white);border:1px solid var(--c-border);border-radius:8px;box-shadow:0 10px 40px rgba(0,0,0,0.1);padding:2rem;min-width:600px;max-width:900px;display:none;opacity:0;pointer-events:none;transition:opacity 0.2s,visibility 0.2s;margin-top:0.5rem;z-index:101;}.nav-item:hover>.dropdown-menu,.dropdown-menu:hover{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:2rem;opacity:1;pointer-events:auto;}.dropdown-section{display:flex;flex-direction:column;gap:0.75rem;}.dropdown-section h3{font-size:0.85rem;text-transform:uppercase;letter-spacing:0.05em;color:var(--c-primary);font-weight:600;margin:0;padding-bottom:0.5rem;border-bottom:1px solid rgba(79,70,229,0.2);}.dropdown-section ul{list-style:none;padding:0;margin:0;}.dropdown-section li{margin:0;}.dropdown-section li a{color:var(--c-body);text-decoration:none;font-size:0.9rem;line-height:1.6;transition:color 0.2s;display:block;}.dropdown-section li a:hover{color:var(--c-primary);font-weight:500;}.section-link{color:var(--c-primary) !important;font-weight:600;padding-top:0.5rem;margin-top:0.5rem;border-top:1px solid rgba(0,0,0,0.1);display:block;}.header-hamburger{display:none;flex-direction:column;background:none;border:none;cursor:pointer;gap:4px;padding:0.5rem;}.header-hamburger span{width:24px;height:2px;background:var(--c-dark);transition:all 0.3s;border-radius:1px;}.header-hamburger.active span:nth-child(1){transform:rotate(45deg) translate(8px,8px);}.header-hamburger.active span:nth-child(2){opacity:0;}.header-hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(7px,-7px);}@media(max-width:1023px){.desktop-only{display:none !important;}.mobile-only{display:block !important;}.header-hamburger{display:flex;}.nav-mobile{display:none;position:fixed;inset:64px 0 0 0;background:var(--c-white);border-bottom:1px solid var(--c-border);flex-direction:column;max-height:calc(100vh - 4rem);overflow-y:auto;z-index:99;}.nav-mobile.open{display:flex;}.nav-accordion{border-bottom:1px solid var(--c-border);cursor:pointer;margin:0;}.nav-accordion summary{padding:1rem;font-weight:600;color:var(--c-dark);list-style:none;display:flex;justify-content:space-between;align-items:center;user-select:none;transition:background 0.2s;font-size:0.95rem;}.nav-accordion summary::-webkit-details-marker{display:none;}.nav-accordion summary:hover{background:rgba(79,70,229,0.05);}.nav-accordion summary::after{content:'▼';font-size:0.75rem;transition:transform 0.3s;color:var(--c-primary);}.nav-accordion[open] summary::after{transform:rotate(180deg);}.nav-accordion ul{list-style:none;padding:0;margin:0;background:rgba(79,70,229,0.02);}.nav-accordion li{border-bottom:1px solid rgba(0,0,0,0.05);margin:0;}.nav-accordion li a{display:block;padding:0.75rem 1rem;padding-left:2rem;color:var(--c-body);text-decoration:none;font-size:0.9rem;transition:color 0.2s,background 0.2s;}.nav-accordion li a:active{background:rgba(79,70,229,0.1);color:var(--c-primary);}.dropdown-menu{display:none !important;}}
+/* Make entire cards clickable */
+.path-card::before,
+.article-card::before,
+.tool-card::before,
+.guide-card::before,
+.visa-card::before,
+.visa-category-card::before,
+.program-card::before,
+.topic-card::before,
+.checklist-card::before,
+.related-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.path-card,
+.article-card,
+.tool-card,
+.guide-card,
+.visa-card,
+.visa-category-card,
+.program-card,
+.topic-card,
+.checklist-card,
+.related-card {
+  position: relative;
+}
+
+/* Ensure child links are clickable above the overlay */
+.path-card__cta,
+.article-card__link,
+.tool-card__cta,
+.guide-card__cta,
+.visa-card__cta,
+.visa-category-card__cta,
+.program-card__cta,
+.topic-card__cta,
+.checklist-card__cta,
+.related-card {
+  position: relative;
+  z-index: 2;
+}
+
 </style>
 </head>
 <body>
@@ -540,22 +586,22 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
       <li>Processing time: Usually 1 business day (submit in morning, collect next business day)</li>
       <li>Staff speak Thai and limited English; bringing a Thai-speaking companion or translation app is helpful</li>
     </ul>
-    <p>For general immigration compliance during your stay, see the <a href="../../chiang-mai/immigration-guide/">Chiang Mai immigration guide</a>.</p>
+    <p>For general immigration compliance during your stay, see the <a href="../../chiang-mai/index.html">Chiang Mai immigration guide</a>.</p>
 
     <h2>Ongoing Compliance Requirements</h2>
 
     <h3>TM30 Registration</h3>
-    <p>All foreign visitors, regardless of visa type, must be registered with immigration within 24 hours of arrival. Your accommodation provider (hotel, guesthouse, or rental landlord) must file a TM30 form. See the <a href="../../immigration/tm30-registration/">TM30 registration guide</a> for details.</p>
+    <p>All foreign visitors, regardless of visa type, must be registered with immigration within 24 hours of arrival. Your accommodation provider (hotel, guesthouse, or rental landlord) must file a TM30 form. See the <a href="../../immigration/tm30-address-reporting.html">TM30 registration guide</a> for details.</p>
 
     <h3>90-Day Reporting</h3>
     <p>Most tourists on a 60-90 day exemption stay do not require 90-day reporting. However, if your extended stay spans more than 90 days from initial entry, or if immigration has flagged you for reporting, you must report every 90 days. Check with your local Immigration office to confirm your situation.</p>
 
     <h3>Re-Entry Permits</h3>
-    <p>If you intend to depart Thailand during your permitted stay and then return (on the same exemption or switching to a paid visa), you must obtain a re-entry permit (1,000 THB for single entry, 3,800 THB for multiple entries) before leaving. Without it, your permission to stay is automatically revoked upon departure. See the <a href="../../immigration/re-entry-permits/">re-entry permit guide</a> for details.</p>
+    <p>If you intend to depart Thailand during your permitted stay and then return (on the same exemption or switching to a paid visa), you must obtain a re-entry permit (1,000 THB for single entry, 3,800 THB for multiple entries) before leaving. Without it, your permission to stay is automatically revoked upon departure. See the <a href="../../immigration/re-entry-permits.html">re-entry permit guide</a> for details.</p>
 
     <h2>Overstay and Penalties</h2>
     <p>If you remain in Thailand beyond your permitted 60-day exemption (or 90 days with extension), you incur an overstay fine of 500 THB per day. Additionally, overstays can result in re-entry bans lasting 1–5 years or more, depending on the duration of overstay. Always depart by your exit date or apply for an extension or new visa before your permitted stay ends.</p>
-    <p>See the <a href="../../immigration/overstay-penalties/">overstay penalties guide</a> for details.</p>
+    <p>See the <a href="../../immigration/overstay-penalties.html">overstay penalties guide</a> for details.</p>
 
     <h2>Alternatives to Visa-Exempt Entry</h2>
     <p>If you need stays longer than 150 days per calendar year (60 + 90, or multiple visa-exempt stretches), or if you need multiple entries without the annual cap, consider these alternatives:</p>
@@ -897,5 +943,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 </script>
 
+<script src="../../../../shared/js/card-click-handler.js"></script>
 </body>
 </html>

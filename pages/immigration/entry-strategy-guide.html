@@ -205,7 +205,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   background: var(--c-white); border: 1px solid var(--c-border); border-radius: var(--radius-md);
 }
 .why-item__icon {
-  font-size: 1.3rem; flex-shrink: 0; margin-top: .1rem;
+  font-size: 0.9rem; flex-shrink: 0; margin-top: .1rem;
 }
 .why-item__title { font-weight: 700; font-size: .95rem; color: #202A6C; margin-bottom: .25rem; }
 .why-item__desc { font-size: .88rem; color: var(--c-body); line-height: 1.6; }
@@ -224,7 +224,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 .article-body h2:first-of-type { border-top: none; padding-top: 0; margin-top: 0; }
 .article-body h3 {
-  font-family: var(--font-body); font-size: 1.1rem; font-weight: 600;
+  font-family: var(--font-body); font-size: 0.9rem; font-weight: 600;
   color: #202A6C; margin-top: 2rem; margin-bottom: .6rem;
 }
 .article-body p { margin-bottom: 1.25rem; line-height: 1.75; color: var(--c-body); max-width: 68ch; }
@@ -245,7 +245,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   margin: 1.75rem 0; max-width: 680px;
 }
 .req-card__header { display: flex; align-items: center; gap: .75rem; margin-bottom: .6rem; }
-.req-card__icon { font-size: 1.4rem; }
+.req-card__icon { font-size: 1.0rem; }
 .req-card__title { font-weight: 700; font-size: 1rem; color: #202A6C; }
 .req-card__meta { font-size: .78rem; color: var(--c-muted); margin-top: .1rem; }
 .req-card p { font-size: .9rem; line-height: 1.65; color: var(--c-body); margin: 0; }
@@ -319,7 +319,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   width: 40px; height: 40px; border-radius: var(--radius-sm);
   background: var(--c-page-accent-l);
   display: flex; align-items: center; justify-content: center;
-  font-size: 1.1rem; flex-shrink: 0; transition: background .18s;
+  font-size: 0.9rem; flex-shrink: 0; transition: background .18s;
 }
 .tool-card:hover .tool-card__icon { background: var(--c-violet-l); }
 .tool-card__body { flex: 1; }
@@ -374,6 +374,52 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .footer-top { grid-template-columns: 1fr; }
   .footer-bottom { flex-direction: column; align-items: flex-start; }
 }
+/* Make entire cards clickable */
+.path-card::before,
+.article-card::before,
+.tool-card::before,
+.guide-card::before,
+.visa-card::before,
+.visa-category-card::before,
+.program-card::before,
+.topic-card::before,
+.checklist-card::before,
+.related-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.path-card,
+.article-card,
+.tool-card,
+.guide-card,
+.visa-card,
+.visa-category-card,
+.program-card,
+.topic-card,
+.checklist-card,
+.related-card {
+  position: relative;
+}
+
+/* Ensure child links are clickable above the overlay */
+.path-card__cta,
+.article-card__link,
+.tool-card__cta,
+.guide-card__cta,
+.visa-card__cta,
+.visa-category-card__cta,
+.program-card__cta,
+.topic-card__cta,
+.checklist-card__cta,
+.related-card {
+  position: relative;
+  z-index: 2;
+}
+
 </style>
 <link rel="stylesheet" href="../../css/chaty-front.min.css"/>
 </head>
@@ -902,8 +948,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     <ul class="footer-links">
       <li><a href="../../pages/visas/index.html">All Visas</a></li>
       <li><a href="../../pages/visas/short-stay/dtv-destination-thailand-visa-thai-visa-advice-chiang-mai-cmlocals.html">DTV</a></li>
-      <li><a href="../../pages/visas/short-stay/">Short Stay</a></li>
-      <li><a href="../../pages/visas/long-stay/">Long Stay</a></li>
+      <li><a href="../../pages/visas/short-stay/index.html">Short Stay</a></li>
+      <li><a href="../../pages/visas/long-stay/index.html">Long Stay</a></li>
       <li><a href="../../pages/visas/short-stay/tourist-visa.html">Tourist Visa</a></li>
       <li><a href="../../pages/checklists/index.html">Checklists</a></li>
     </ul>
@@ -921,5 +967,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 <script src="../../js/nav.js"></script>
 <script src="../../js/chaty-widget.js" defer></script>
 
+<script src="../../../shared/js/card-click-handler.js"></script>
 </body>
 </html>

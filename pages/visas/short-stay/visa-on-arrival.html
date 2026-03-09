@@ -154,6 +154,52 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
 @media(max-width:960px){.primary-nav{display:none;}.header-hamburger{display:flex;}.article-layout{grid-template-columns:1fr;}.article-sidebar{position:static;}.related-grid{grid-template-columns:1fr 1fr;}}
 @media(max-width:640px){.container{padding-inline:20px;}.related-grid{grid-template-columns:1fr;}.footer-top{grid-template-columns:1fr 1fr;}.footer-bottom{flex-direction:column;align-items:flex-start;}.cta-btns{flex-direction:column;}}
 @media(max-width:400px){.footer-top{grid-template-columns:1fr;}}
+/* Make entire cards clickable */
+.path-card::before,
+.article-card::before,
+.tool-card::before,
+.guide-card::before,
+.visa-card::before,
+.visa-category-card::before,
+.program-card::before,
+.topic-card::before,
+.checklist-card::before,
+.related-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.path-card,
+.article-card,
+.tool-card,
+.guide-card,
+.visa-card,
+.visa-category-card,
+.program-card,
+.topic-card,
+.checklist-card,
+.related-card {
+  position: relative;
+}
+
+/* Ensure child links are clickable above the overlay */
+.path-card__cta,
+.article-card__link,
+.tool-card__cta,
+.guide-card__cta,
+.visa-card__cta,
+.visa-category-card__cta,
+.program-card__cta,
+.topic-card__cta,
+.checklist-card__cta,
+.related-card {
+  position: relative;
+  z-index: 2;
+}
+
 </style>
 </head>
 <body>
@@ -458,18 +504,18 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
     <h2>Chiang Mai Application Notes</h2>
     <p>Chiang Mai International Airport has a Visa on Arrival counter for applicants arriving at that airport. Processing occurs immediately upon arrival, though queues can be substantial during peak times.</p>
     <p>For extensions, Chiang Mai Immigration (Mae Rim Office, located north of the city) handles VOA extension applications. The office opens at 8:30 AM and processes applications quickly. Morning submissions are typically completed by the next business day. Immigration staff speak Thai and limited English; bringing a translation app or Thai-speaking companion is helpful.</p>
-    <p>For immigration compliance and registration during your stay, see the <a href="../../immigration/index.html">immigration compliance guide</a> and <a href="../../chiang-mai/immigration-guide/">Chiang Mai immigration guide</a>.</p>
+    <p>For immigration compliance and registration during your stay, see the <a href="../../immigration/index.html">immigration compliance guide</a> and <a href="../../chiang-mai/index.html">Chiang Mai immigration guide</a>.</p>
 
     <h2>Ongoing Compliance Requirements</h2>
 
     <h3>TM30 Registration</h3>
-    <p>All foreign visitors, including VOA holders, must be registered with immigration within 24 hours of arrival. Your accommodation provider (hotel, guesthouse, or landlord) must file a TM30 form. See the <a href="../../immigration/tm30-registration/">TM30 registration guide</a> for complete details.</p>
+    <p>All foreign visitors, including VOA holders, must be registered with immigration within 24 hours of arrival. Your accommodation provider (hotel, guesthouse, or landlord) must file a TM30 form. See the <a href="../../immigration/tm30-address-reporting.html">TM30 registration guide</a> for complete details.</p>
 
     <h3>90-Day Reporting</h3>
     <p>Most tourists on a VOA (even with extension, totaling 90 days) do not require 90-day reporting. If your stay extends beyond 90 days from initial entry, or if immigration assigns you a reporting requirement, you must report every 90 days. Confirm your situation with your local Immigration office.</p>
 
     <h3>Re-Entry Permits</h3>
-    <p>If you intend to depart Thailand during your VOA validity period and then return, you must obtain a re-entry permit before leaving. Without it, your permission to stay is automatically revoked upon departure. The permit costs 1,000 THB (single entry) or 3,800 THB (multiple entries) and is obtained at Immigration. See the <a href="../../immigration/re-entry-permits/">re-entry permit guide</a> for details.</p>
+    <p>If you intend to depart Thailand during your VOA validity period and then return, you must obtain a re-entry permit before leaving. Without it, your permission to stay is automatically revoked upon departure. The permit costs 1,000 THB (single entry) or 3,800 THB (multiple entries) and is obtained at Immigration. See the <a href="../../immigration/re-entry-permits.html">re-entry permit guide</a> for details.</p>
 
     <h2>2026 Visa-Exempt Quota Note</h2>
     <p>The VOA does not count toward the 2026 visa-exempt entry limit of 2 per calendar year. The VOA is governed by its own separate single-entry rule. You can use a VOA and 2 visa-exempt entries in the same calendar year if your travel plans require multiple entries.</p>
@@ -554,9 +600,9 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
         <a href="visa-exempt-entry.html">Visa-Exempt Entry</a>
         <a href="tourist-visa.html">Tourist Visa</a>
         <a href="visa-extensions.html">Visa Extensions</a>
-        <a href="../../immigration/tm30-registration/">TM30 Registration</a>
-        <a href="../../immigration/re-entry-permits/">Re-Entry Permits</a>
-        <a href="../../chiang-mai/immigration-guide/">Chiang Mai Immigration</a>
+        <a href="../../immigration/tm30-address-reporting.html">TM30 Registration</a>
+        <a href="../../immigration/re-entry-permits.html">Re-Entry Permits</a>
+        <a href="../../chiang-mai/index.html">Chiang Mai Immigration</a>
       </nav>
     </div>
   </aside>
@@ -594,7 +640,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
     </button>
     <div class="faq-answer" hidden>
-      <p>Overstaying carries a fine of 500 THB per day. Beyond financial penalties, you may face immigration bans lasting 1–5 years that prevent future Thailand re-entry. See the <a href="../../immigration/overstay-penalties/">overstay penalties guide</a> for details.</p>
+      <p>Overstaying carries a fine of 500 THB per day. Beyond financial penalties, you may face immigration bans lasting 1–5 years that prevent future Thailand re-entry. See the <a href="../../immigration/overstay-penalties.html">overstay penalties guide</a> for details.</p>
     </div>
   </div>
 
@@ -817,5 +863,6 @@ window.CHATY_CONFIG = {
 })();
 </script>
 
+<script src="../../../../shared/js/card-click-handler.js"></script>
 </body>
 </html>

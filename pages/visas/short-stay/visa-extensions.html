@@ -154,6 +154,52 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
 @media(max-width:960px){.primary-nav{display:none;}.header-hamburger{display:flex;}.article-layout{grid-template-columns:1fr;}.article-sidebar{position:static;}.related-grid{grid-template-columns:1fr 1fr;}}
 @media(max-width:640px){.container{padding-inline:20px;}.related-grid{grid-template-columns:1fr;}.footer-top{grid-template-columns:1fr 1fr;}.footer-bottom{flex-direction:column;align-items:flex-start;}.cta-btns{flex-direction:column;}}
 @media(max-width:400px){.footer-top{grid-template-columns:1fr;}}
+/* Make entire cards clickable */
+.path-card::before,
+.article-card::before,
+.tool-card::before,
+.guide-card::before,
+.visa-card::before,
+.visa-category-card::before,
+.program-card::before,
+.topic-card::before,
+.checklist-card::before,
+.related-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.path-card,
+.article-card,
+.tool-card,
+.guide-card,
+.visa-card,
+.visa-category-card,
+.program-card,
+.topic-card,
+.checklist-card,
+.related-card {
+  position: relative;
+}
+
+/* Ensure child links are clickable above the overlay */
+.path-card__cta,
+.article-card__link,
+.tool-card__cta,
+.guide-card__cta,
+.visa-card__cta,
+.visa-category-card__cta,
+.program-card__cta,
+.topic-card__cta,
+.checklist-card__cta,
+.related-card {
+  position: relative;
+  z-index: 2;
+}
+
 </style>
 </head>
 <body>
@@ -509,7 +555,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
 
     <h2>Re-Entry and Extensions</h2>
     <p>If you extend your stay and then depart Thailand, you need a re-entry permit to keep your extension valid. Without it, your permission to stay is revoked upon exit and any extension becomes void. A re-entry permit costs 1,000 THB (single entry) or 3,800 THB (multiple entries) and is obtained at Immigration before departure.</p>
-    <p>See the <a href="../../immigration/re-entry-permits/">re-entry permit guide</a> for details.</p>
+    <p>See the <a href="../../immigration/re-entry-permits.html">re-entry permit guide</a> for details.</p>
 
     <h2>90-Day Reporting</h2>
     <p>If your extended stay spans more than 90 days from initial entry, you may be required to report at Immigration every 90 days. This applies primarily to long-stay visa categories (such as retirement or long-term resident visas). Most short-stay extensions do not trigger this requirement, but check with your local Immigration office to confirm your situation.</p>
@@ -556,8 +602,8 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
         <a href="tourist-visa.html">Tourist Visa</a>
         <a href="visa-on-arrival.html">Visa on Arrival</a>
         <a href="dtv-destination-thailand-visa-thai-visa-advice-chiang-mai-cmlocals.html">DTV Visa</a>
-        <a href="../../immigration/re-entry-permits/">Re-Entry Permits</a>
-        <a href="../../chiang-mai/immigration-guide/">Chiang Mai Immigration</a>
+        <a href="../../immigration/re-entry-permits.html">Re-Entry Permits</a>
+        <a href="../../chiang-mai/index.html">Chiang Mai Immigration</a>
       </nav>
     </div>
   </aside>
@@ -642,7 +688,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
     <span class="related-card-title">Visa-Exempt Entry</span>
     <div class="related-card-desc">Free entry, 60 days, 2 per calendar year. Second entry extendable only.</div>
   </a>
-  <a href="../../immigration/re-entry-permits/" class="related-card">
+  <a href="../../immigration/re-entry-permits.html" class="related-card">
     <div class="related-card-label">Immigration Guide</div>
     <span class="related-card-title">Re-Entry Permits</span>
     <div class="related-card-desc">Required before departing if you have an active extension or permitted stay.</div>
@@ -818,5 +864,6 @@ window.CHATY_CONFIG = {
 })();
 </script>
 
+<script src="../../../../shared/js/card-click-handler.js"></script>
 </body>
 </html>
