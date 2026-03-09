@@ -449,7 +449,6 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
 .article-body ul{margin-bottom:1rem;padding-left:1.25rem;list-style:disc;}
 .article-body ul li{margin-bottom:.35rem;color:var(--c-body);line-height:1.7;}
 .article-body ul li a{color:var(--c-primary);text-decoration:underline;text-decoration-color:rgba(79,70,229,.3);text-underline-offset:2px;}
-.article-body ul li a:hover{text-decoration-color:var(--c-primary);}
 .article-body ol{margin-bottom:1rem;padding-left:1.4rem;list-style:decimal;}
 .article-body ol li{margin-bottom:.45rem;color:var(--c-body);line-height:1.7;}
 
@@ -463,13 +462,12 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
 /* Info strip */
 .info-strip{background:var(--c-subtle);border-left:4px solid var(--c-primary);border-radius:0 var(--radius-md) var(--radius-md) 0;padding:1.25rem 1.75rem;margin:1.5rem 0;}
 .info-strip p{color:var(--c-body);font-size:.95rem;margin-bottom:0;}
-.info-strip p a{color:var(--c-primary);}
 .warning-strip{background:#FFF7ED;border-left:4px solid #F97316;border-radius:0 var(--radius-md) var(--radius-md) 0;padding:1.25rem 1.75rem;margin:1.5rem 0;}
 .warning-strip p{color:#431407;font-size:.95rem;margin-bottom:0;}
 
 /* Sidebar card */
 .sidebar-card{background:var(--c-off-white);border:1px solid var(--c-border);border-radius:var(--radius-lg);padding:1.5rem;}
-.sidebar-card + .sidebar-card{margin-top:1.25rem;}
+.sidebar-card+.sidebar-card{margin-top:1.25rem;}
 .sidebar-card-title{font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--c-muted);margin-bottom:1rem;}
 .sidebar-stat{display:flex;justify-content:space-between;align-items:baseline;padding:.5rem 0;border-bottom:1px solid var(--c-border);font-size:.9rem;}
 .sidebar-stat:last-child{border-bottom:none;}
@@ -509,10 +507,6 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
 .related-card-label{font-size:.72rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--c-muted);margin-bottom:.5rem;}
 .related-card-title{font-family:var(--font-display);font-size:1rem;color:var(--c-dark);text-decoration:none;display:block;margin-bottom:.4rem;}
 .related-card-desc{font-size:.82rem;color:var(--c-muted);line-height:1.55;}
-
-/* Section */
-.section{padding-block:var(--section-py);}
-.section--off{background:var(--c-off-white);}
 
 /* CTA section */
 .cta-section{background:var(--c-dark);padding:clamp(3rem,5vw,4.5rem) 0;text-align:center;position:relative;overflow:hidden;}
