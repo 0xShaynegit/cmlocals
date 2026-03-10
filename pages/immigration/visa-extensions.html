@@ -82,6 +82,79 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .btn-fb:hover { background: var(--c-fb-h); border-color: var(--c-fb-h); }
 .btn-lg { padding: .8em 1.75em; font-size: 1rem; }
 
+.pro-tip-bubble {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 32px; height: 32px; border-radius: 50%;
+  background: linear-gradient(135deg, #6366F1 0%, #7C3AED 100%);
+  color: #fff; font-size: 0.9rem; font-weight: 700; cursor: pointer;
+  margin-left: .4rem; vertical-align: middle; transition: all .3s ease;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, .3);
+}
+
+.pro-tip-bubble:hover {
+  transform: scale(1.1); box-shadow: 0 6px 20px rgba(99, 102, 241, .4);
+}
+
+.pro-tip-modal {
+  display: none; position: fixed; inset: 0; background: rgba(0,0,0,.5);
+  z-index: 1000; align-items: center; justify-content: center;
+  backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
+  animation: fadeInModal .3s ease-out;
+}
+
+.pro-tip-modal.active { display: flex; }
+
+@keyframes fadeInModal {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.pro-tip-modal-content {
+  position: relative; background: linear-gradient(135deg, #6366F1 0%, #7C3AED 100%);
+  border-radius: 16px; padding: 2rem; max-width: 420px; width: 90%; color: #fff;
+  box-shadow: 0 20px 60px rgba(99, 102, 241, .3); overflow: hidden;
+}
+
+.pro-tip-modal-content::before {
+  content: ''; position: absolute; top: -50%; right: -50%; width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(255,255,255,.15) 0%, transparent 70%);
+  border-radius: 50%; pointer-events: none;
+}
+
+.pro-tip-modal-inner { position: relative; z-index: 1; }
+
+.pro-tip-modal-close {
+  position: absolute; top: 1.25rem; right: 1.25rem; width: 32px; height: 32px;
+  background: rgba(255,255,255,.15); border: 1.5px solid rgba(255,255,255,.3);
+  border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  font-size: 0.9rem; color: #fff; transition: all .25s ease;
+}
+
+.pro-tip-modal-close:hover {
+  background: rgba(255,255,255,.25); border-color: rgba(255,255,255,.5);
+}
+
+.pro-tip-modal-icon { font-size: 3rem; margin-bottom: 1rem; display: block; }
+
+.pro-tip-modal-label {
+  font-family: var(--font-display); font-size: 1.8rem; font-weight: 500;
+  margin-bottom: 1rem; letter-spacing: -.01em; line-height: 1.2;
+}
+
+.pro-tip-modal-description {
+  font-size: 1.05rem; line-height: 1.75; opacity: .95; margin-bottom: 1.75rem;
+}
+
+.pro-tip-modal-button {
+  display: inline-block; background: rgba(255,255,255,.2); border: 1.5px solid rgba(255,255,255,.4);
+  padding: 1.2em 2.4em; border-radius: 10px; font-size: 0.9rem; font-weight: 600;
+  color: #fff; cursor: pointer; transition: all .25s ease; font-family: var(--font-body);
+}
+
+.pro-tip-modal-button:hover {
+  background: rgba(255,255,255,.3); border-color: rgba(255,255,255,.6); transform: translateY(-2px);
+}
+
 /* ============================================================
    HEADER
    ============================================================ */
@@ -220,10 +293,11 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: 500;
-  padding: 0;
+  padding: 0 0.85rem;
   transition: all 0.2s ease;
-  display: flex;
+  display: inline-flex;
   align-items: center;
+  height: 70px;
   line-height: 1;
 }
 
@@ -307,7 +381,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   color: #374151;
   text-decoration: none;
   font-size: 0.9rem;
-  line-height: 1.2;
+  line-height: 1.6;
   transition: color 0.2s;
   display: block;
   padding: 0.1rem 0;
@@ -615,7 +689,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   background: var(--c-page-accent-l);
   border-left: 3px solid var(--c-page-accent);
   border-radius: 0 var(--radius-md) var(--radius-md) 0;
-  padding: 1.25rem 1.5rem; margin: 2rem 0; max-width: 68ch;
+  padding: 1.25rem 1.5rem; margin: 2rem 0 0 0; max-width: 68ch;
 }
 .callout-band p { margin: 0; color: #202A6C; font-size: .95rem; line-height: 1.65; }
 .callout-band strong { color: var(--c-page-accent); }
@@ -626,7 +700,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .visa-section {
   background: var(--c-dark);
   padding-block: clamp(2.5rem, 4vw, 3.5rem);
-  margin-block: clamp(2.5rem, 4vw, 4rem);
+  margin-block: 0;
   position: relative; overflow: hidden;
 }
 .visa-section::before {
@@ -780,6 +854,14 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   z-index: 2;
 }
 
+/* Image sizing: 50-70% of column width, centered */
+figure img {
+  max-width: 65%;
+  width: 65%;
+  margin-inline: auto;
+  display: block;
+  height: auto;
+}
 </style>
 <link rel="stylesheet" href="../../css/chaty-front.min.css"/>
 
@@ -889,10 +971,11 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: 500;
-  padding: 0;
+  padding: 0 0.85rem;
   transition: all 0.2s ease;
-  display: flex;
+  display: inline-flex;
   align-items: center;
+  height: 70px;
   line-height: 1;
 }
 .nav-item > a.nav-link:hover {
@@ -955,7 +1038,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   color: #374151;
   text-decoration: none;
   font-size: 0.9rem;
-  line-height: 1.2;
+  line-height: 1.6;
   transition: color 0.2s;
   display: block;
   padding: 0.1rem 0;
@@ -1186,6 +1269,14 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .footer-legal-links { gap: 1rem; }
   .footer-legal-links a { font-size: 0.9rem; }
 }
+/* Image sizing: 50-70% of column width, centered */
+figure img {
+  max-width: 65%;
+  width: 65%;
+  margin-inline: auto;
+  display: block;
+  height: auto;
+}
 </style>
 </head>
 <body>
@@ -1201,16 +1292,16 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   <nav class="primary-nav desktop-only" aria-label="Primary navigation">
     <!-- ED VISAS -->
     <div class="nav-item">
-      <a href="../../pages/ed-visas/index.html" class="nav-link has-dropdown">ED Visas</a>
+      <a href="../ed-visas/index.html" class="nav-link has-dropdown">ED Visas</a>
       <div class="dropdown-menu mega-menu" role="menu">
         <div class="dropdown-section">
           <ul>
-            <li><a href="../../pages/ed-visas/emergency-self-defence-ed-visa-chiang-mai.html">Emergency Self Defence</a></li>
-            <li><a href="../../pages/ed-visas/muay-thai-ed-visa-chiang-mai.html">Muay Thai</a></li>
-            <li><a href="../../pages/ed-visas/thai-language-ed-visa-chiang-mai.html">Thai Language</a></li>
-            <li><a href="../../pages/ed-visas/hand-to-hand-combat-ed-visa-chiang-mai.html">Hand-to-Hand Combat</a></li>
-            <li><a href="../../pages/ed-visas/volunteer-non-o-visa-chiang-mai.html">Volunteer Non-O</a></li>
-            <li><a href="../../pages/ed-visas/index.html">All ED Visas</a></li>
+            <li><a href="../ed-visas/emergency-self-defence-ed-visa-chiang-mai.html">Emergency Self Defence</a></li>
+            <li><a href="../ed-visas/muay-thai-ed-visa-chiang-mai.html">Muay Thai</a></li>
+            <li><a href="../ed-visas/hand-to-hand-combat-ed-visa-chiang-mai.html">Hand-to-Hand Combat</a></li>
+            <li><a href="../ed-visas/thai-language-ed-visa-chiang-mai.html">Thai Language</a></li>
+                        <li><a href="../ed-visas/volunteer-non-o-visa-chiang-mai.html">Volunteer Non-O</a></li>
+            <li><a href="../ed-visas/index.html">All ED Visas</a></li>
           </ul>
         </div>
       </div>
@@ -1218,36 +1309,36 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
     <!-- CHIANG MAI -->
     <div class="nav-item">
-      <a href="../../pages/chiang-mai/index.html" class="nav-link has-dropdown">Chiang Mai</a>
+      <a href="../chiang-mai/index.html" class="nav-link has-dropdown">Chiang Mai</a>
       <div class="dropdown-menu mega-menu chiang-mai-menu" role="menu">
         <div class="dropdown-section">
           <h3>Lifestyle</h3>
           <ul>
-            <li><a href="../../pages/chiang-mai/index.html">Overview</a></li>
-            <li><a href="../../pages/chiang-mai/why-chiang-mai-base.html">Why Base Here</a></li>
-            <li><a href="../../pages/chiang-mai/where-to-stay.html">Where to Stay</a></li>
-            <li><a href="../../pages/chiang-mai/long-term-living.html">Long-Term Living</a></li>
-            <li><a href="../../pages/chiang-mai/things-to-do.html">Things to Do</a></li>
-            <li><a href="../../pages/chiang-mai/digital-nomads.html">Digital Nomads</a></li>
-            <li><a href="../../pages/chiang-mai/cost-of-living.html">Cost of Living</a></li>
-            <li><a href="../../pages/chiang-mai/phones-and-banking.html">Phones &amp; Banking</a></li>
-            <li><a href="../../pages/chiang-mai/getting-around.html">Getting Around</a></li>
-            <li><a href="../../pages/chiang-mai/healthcare.html">Healthcare</a></li>
-            <li><a href="../../pages/chiang-mai/insurance.html">Insurance</a></li>
-            <li><a href="../../pages/chiang-mai/taxes.html">Taxes</a></li>
+            <li><a href="../chiang-mai/index.html">Overview</a></li>
+            <li><a href="../chiang-mai/why-chiang-mai-base.html">Why Base Here</a></li>
+            <li><a href="../chiang-mai/where-to-stay.html">Where to Stay</a></li>
+            <li><a href="../chiang-mai/long-term-living.html">Long-Term Living</a></li>
+            <li><a href="../chiang-mai/things-to-do.html">Things to Do</a></li>
+            <li><a href="../chiang-mai/digital-nomads.html">Digital Nomads</a></li>
+            <li><a href="../chiang-mai/cost-of-living.html">Cost of Living</a></li>
+            <li><a href="../chiang-mai/phones-and-banking.html">Phones &amp; Banking</a></li>
+            <li><a href="../chiang-mai/getting-around.html">Getting Around</a></li>
+            <li><a href="../chiang-mai/healthcare.html">Healthcare</a></li>
+            <li><a href="../chiang-mai/insurance.html">Insurance</a></li>
+            <li><a href="../chiang-mai/taxes.html">Taxes</a></li>
           </ul>
         </div>
         <div class="dropdown-section">
           <h3>Culture</h3>
           <ul>
-            <li><a href="../../pages/culture/index.html">Culture Guide</a></li>
-            <li><a href="../../pages/culture/customs-traditions-thailand.html">Customs &amp; Traditions</a></li>
-            <li><a href="../../pages/culture/thai-culture-etiquette.html">Etiquette</a></li>
-            <li><a href="../../pages/culture/festivals-events-chiang-mai.html">Festivals</a></li>
-            <li><a href="../../pages/culture/thai-food-culture.html">Thai Food</a></li>
-            <li><a href="../../pages/culture/temple-etiquette.html">Temple Etiquette</a></li>
-            <li><a href="../../pages/culture/sak-yant-chiang-mai.html">Sak Yant</a></li>
-            <li><a href="../../pages/culture/sak-yant-designs-and-meanings.html">Sak Yant Designs</a></li>
+            <li><a href="../culture/index.html">Culture Guide</a></li>
+            <li><a href="../culture/customs-traditions-thailand.html">Customs &amp; Traditions</a></li>
+            <li><a href="../culture/thai-culture-etiquette.html">Etiquette</a></li>
+            <li><a href="../culture/festivals-events-chiang-mai.html">Festivals</a></li>
+            <li><a href="../culture/thai-food-culture.html">Thai Food</a></li>
+            <li><a href="../culture/temple-etiquette.html">Temple Etiquette</a></li>
+            <li><a href="../culture/sak-yant-chiang-mai.html">Sak Yant</a></li>
+            <li><a href="../culture/sak-yant-designs-and-meanings.html">Sak Yant Designs</a></li>
           </ul>
         </div>
       </div>
@@ -1255,17 +1346,17 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
     <!-- VISA GUIDES -->
     <div class="nav-item">
-      <a href="../../pages/visas/index.html" class="nav-link has-dropdown">Visa Guides</a>
+      <a href="../visas/index.html" class="nav-link has-dropdown">Visa Guides</a>
       <div class="dropdown-menu mega-menu" role="menu">
         <div class="dropdown-section">
           <h3>All Types</h3>
           <ul>
-            <li><a href="../../pages/visas/index.html">All Visas</a></li>
-            <li><a href="../../pages/visas/short-stay/index.html">Short-Stay</a></li>
-            <li><a href="../../pages/visas/long-stay/index.html">Long-Stay</a></li>
-            <li><a href="../../pages/visas/short-stay/dtv-destination-thailand-visa-thai-visa-advice-chiang-mai-cmlocals.html">DTV</a></li>
-            <li><a href="../../pages/visas/short-stay/tourist-visa.html">Tourist</a></li>
-            <li><a href="../../pages/visas/guides/which-visa.html">Which Visa?</a></li>
+            <li><a href="../visas/index.html">All Visas</a></li>
+            <li><a href="../visas/short-stay/index.html">Short-Stay</a></li>
+            <li><a href="../visas/long-stay/index.html">Long-Stay</a></li>
+            <li><a href="../visas/short-stay/dtv-destination-thailand-visa-thai-visa-advice-chiang-mai-cmlocals.html">DTV</a></li>
+            <li><a href="../visas/short-stay/tourist-visa.html">Tourist</a></li>
+            <li><a href="../visas/guides/which-visa.html">Which Visa?</a></li>
           </ul>
         </div>
       </div>
@@ -1273,16 +1364,16 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
     <!-- IMMIGRATION -->
     <div class="nav-item">
-      <a href="../../pages/immigration/index.html" class="nav-link has-dropdown">Immigration</a>
+      <a href="../immigration/index.html" class="nav-link has-dropdown">Immigration</a>
       <div class="dropdown-menu mega-menu" role="menu">
         <div class="dropdown-section">
           <h3>Compliance</h3>
           <ul>
-            <li><a href="../../pages/immigration/index.html">All Immigration</a></li>
-            <li><a href="../../pages/immigration/90-day-reporting.html">90-Day Reporting</a></li>
-            <li><a href="../../pages/immigration/tm30-address-reporting.html">TM30 Registration</a></li>
-            <li><a href="../../pages/immigration/re-entry-permits.html">Re-Entry Permits</a></li>
-            <li><a href="../../pages/immigration/overstay-penalties.html">Overstay Penalties</a></li>
+            <li><a href="../immigration/index.html">All Immigration</a></li>
+            <li><a href="../immigration/90-day-reporting.html">90-Day Reporting</a></li>
+            <li><a href="../immigration/tm30-address-reporting.html">TM30 Registration</a></li>
+            <li><a href="../immigration/re-entry-permits.html">Re-Entry Permits</a></li>
+            <li><a href="../immigration/overstay-penalties.html">Overstay Penalties</a></li>
           </ul>
         </div>
       </div>
@@ -1305,62 +1396,62 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   <details class="nav-accordion" open>
     <summary>ED Visas (6)</summary>
     <ul>
-      <li><a href="../../pages/ed-visas/emergency-self-defence-ed-visa-chiang-mai.html">Emergency Self Defence</a></li>
-      <li><a href="../../pages/ed-visas/muay-thai-ed-visa-chiang-mai.html">Muay Thai</a></li>
-      <li><a href="../../pages/ed-visas/thai-language-ed-visa-chiang-mai.html">Thai Language</a></li>
-      <li><a href="../../pages/ed-visas/hand-to-hand-combat-ed-visa-chiang-mai.html">Hand-to-Hand Combat</a></li>
-      <li><a href="../../pages/ed-visas/volunteer-non-o-visa-chiang-mai.html">Volunteer Non-O</a></li>
-      <li><a href="../../pages/ed-visas/index.html">All ED Visas</a></li>
+      <li><a href="../ed-visas/emergency-self-defence-ed-visa-chiang-mai.html">Emergency Self Defence</a></li>
+      <li><a href="../ed-visas/muay-thai-ed-visa-chiang-mai.html">Muay Thai</a></li>
+            <li><a href="../ed-visas/hand-to-hand-combat-ed-visa-chiang-mai.html">Hand-to-Hand Combat</a></li>
+      <li><a href="../ed-visas/thai-language-ed-visa-chiang-mai.html">Thai Language</a></li>
+            <li><a href="../ed-visas/volunteer-non-o-visa-chiang-mai.html">Volunteer Non-O</a></li>
+      <li><a href="../ed-visas/index.html">All ED Visas</a></li>
     </ul>
   </details>
   <details class="nav-accordion">
     <summary>Chiang Mai</summary>
     <ul>
-      <li><a href="../../pages/chiang-mai/index.html">Overview</a></li>
-      <li><a href="../../pages/chiang-mai/why-chiang-mai-base.html">Why Base Here</a></li>
-      <li><a href="../../pages/chiang-mai/where-to-stay.html">Where to Stay</a></li>
-      <li><a href="../../pages/chiang-mai/long-term-living.html">Long-Term Living</a></li>
-      <li><a href="../../pages/chiang-mai/things-to-do.html">Things to Do</a></li>
-      <li><a href="../../pages/chiang-mai/digital-nomads.html">Digital Nomads</a></li>
-      <li><a href="../../pages/chiang-mai/cost-of-living.html">Cost of Living</a></li>
-      <li><a href="../../pages/chiang-mai/phones-and-banking.html">Phones &amp; Banking</a></li>
-      <li><a href="../../pages/chiang-mai/getting-around.html">Getting Around</a></li>
-      <li><a href="../../pages/chiang-mai/healthcare.html">Healthcare</a></li>
-      <li><a href="../../pages/chiang-mai/insurance.html">Insurance</a></li>
-      <li><a href="../../pages/chiang-mai/taxes.html">Taxes</a></li>
+      <li><a href="../chiang-mai/index.html">Overview</a></li>
+      <li><a href="../chiang-mai/why-chiang-mai-base.html">Why Base Here</a></li>
+      <li><a href="../chiang-mai/where-to-stay.html">Where to Stay</a></li>
+      <li><a href="../chiang-mai/long-term-living.html">Long-Term Living</a></li>
+      <li><a href="../chiang-mai/things-to-do.html">Things to Do</a></li>
+      <li><a href="../chiang-mai/digital-nomads.html">Digital Nomads</a></li>
+      <li><a href="../chiang-mai/cost-of-living.html">Cost of Living</a></li>
+      <li><a href="../chiang-mai/phones-and-banking.html">Phones &amp; Banking</a></li>
+      <li><a href="../chiang-mai/getting-around.html">Getting Around</a></li>
+      <li><a href="../chiang-mai/healthcare.html">Healthcare</a></li>
+      <li><a href="../chiang-mai/insurance.html">Insurance</a></li>
+      <li><a href="../chiang-mai/taxes.html">Taxes</a></li>
     </ul>
   </details>
   <details class="nav-accordion">
     <summary>Culture</summary>
     <ul>
-      <li><a href="../../pages/culture/index.html">Culture Guide</a></li>
-      <li><a href="../../pages/culture/customs-traditions-thailand.html">Customs &amp; Traditions</a></li>
-      <li><a href="../../pages/culture/thai-culture-etiquette.html">Etiquette</a></li>
-      <li><a href="../../pages/culture/festivals-events-chiang-mai.html">Festivals</a></li>
-      <li><a href="../../pages/culture/thai-food-culture.html">Thai Food</a></li>
-      <li><a href="../../pages/culture/temple-etiquette.html">Temple Etiquette</a></li>
-      <li><a href="../../pages/culture/sak-yant-chiang-mai.html">Sak Yant</a></li>
+      <li><a href="../culture/index.html">Culture Guide</a></li>
+      <li><a href="../culture/customs-traditions-thailand.html">Customs &amp; Traditions</a></li>
+      <li><a href="../culture/thai-culture-etiquette.html">Etiquette</a></li>
+      <li><a href="../culture/festivals-events-chiang-mai.html">Festivals</a></li>
+      <li><a href="../culture/thai-food-culture.html">Thai Food</a></li>
+      <li><a href="../culture/temple-etiquette.html">Temple Etiquette</a></li>
+      <li><a href="../culture/sak-yant-chiang-mai.html">Sak Yant</a></li>
     </ul>
   </details>
   <details class="nav-accordion">
     <summary>Visa Guides</summary>
     <ul>
-      <li><a href="../../pages/visas/index.html">All Visas</a></li>
-      <li><a href="../../pages/visas/short-stay/index.html">Short-Stay</a></li>
-      <li><a href="../../pages/visas/long-stay/index.html">Long-Stay</a></li>
-      <li><a href="../../pages/visas/short-stay/dtv-destination-thailand-visa-thai-visa-advice-chiang-mai-cmlocals.html">DTV</a></li>
-      <li><a href="../../pages/visas/short-stay/tourist-visa.html">Tourist</a></li>
-      <li><a href="../../pages/visas/guides/which-visa.html">Which Visa?</a></li>
+      <li><a href="../visas/index.html">All Visas</a></li>
+      <li><a href="../visas/short-stay/index.html">Short-Stay</a></li>
+      <li><a href="../visas/long-stay/index.html">Long-Stay</a></li>
+      <li><a href="../visas/short-stay/dtv-destination-thailand-visa-thai-visa-advice-chiang-mai-cmlocals.html">DTV</a></li>
+      <li><a href="../visas/short-stay/tourist-visa.html">Tourist</a></li>
+      <li><a href="../visas/guides/which-visa.html">Which Visa?</a></li>
     </ul>
   </details>
   <details class="nav-accordion">
     <summary>Immigration</summary>
     <ul>
-      <li><a href="../../pages/immigration/index.html">All Immigration</a></li>
-      <li><a href="../../pages/immigration/90-day-reporting.html">90-Day Reporting</a></li>
-      <li><a href="../../pages/immigration/tm30-address-reporting.html">TM30 Registration</a></li>
-      <li><a href="../../pages/immigration/re-entry-permits.html">Re-Entry Permits</a></li>
-      <li><a href="../../pages/immigration/overstay-penalties.html">Overstay Penalties</a></li>
+      <li><a href="../immigration/index.html">All Immigration</a></li>
+      <li><a href="../immigration/90-day-reporting.html">90-Day Reporting</a></li>
+      <li><a href="../immigration/tm30-address-reporting.html">TM30 Registration</a></li>
+      <li><a href="../immigration/re-entry-permits.html">Re-Entry Permits</a></li>
+      <li><a href="../immigration/overstay-penalties.html">Overstay Penalties</a></li>
     </ul>
   </details>
 </nav>
@@ -1368,8 +1459,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 <!-- ========================================================
      HEADER
      ======================================================== -->
-
-
 
 <!-- ========================================================
      HERO
@@ -1395,7 +1484,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 <div class="breadcrumb-inner">
   <a href="../../index.html">Home</a>
   <span class="breadcrumb-sep" aria-hidden="true">/</span>
-  <a href="../../pages/immigration/index.html">Immigration</a>
+  <a href="../immigration/index.html">Immigration</a>
   <span class="breadcrumb-sep" aria-hidden="true">/</span>
   <span aria-current="page">Visa Extensions</span>
 </div>
@@ -1451,7 +1540,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 <article class="article-body">
 <div class="article-wrap">
 
-<figure style="text-align: center; margin: 2rem 0;">
+<figure style="text-align: center; margin: 2rem 0 0 0;">
   <img
     src="../../images/cmlocals chiang mai locals thai tourist visa stamp phnom penh 2012.webp"
     alt="CMLocals Chiang Mai Locals Visa Extensions extension process visa stamp"
@@ -1518,6 +1607,36 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   <p><strong>Critical timing:</strong> Always apply for extension at least 30 days before expiry. Immigration offices process extensions sequentially, and applications submitted too close to expiry may not be processed in time. If your visa expires while your extension is pending, you are technically overstaying, which incurs penalties.</p>
 </div>
 
+<p style="font-size: 2rem; color: var(--c-muted); margin-bottom: 2rem; font-style: italic; line-height: 1.6; font-weight: 500;">
+  💡 <strong>Pro Tip:</strong> Once your extension is approved, save your new visa expiry date
+  <button class="pro-tip-bubble" id="pro-tip-bubble-btn" title="Click for important reminder" style="background: linear-gradient(135deg, #6366F1 0%, #7C3AED 100%); color: white; padding: 0.5rem 1rem; border: none; border-radius: 6px; font-weight: 600; cursor: pointer; font-size: 0.9rem; transition: background 0.2s;">Set Expiry Date</button>
+</p>
+
+<div id="pro-tip-modal" class="pro-tip-modal">
+  <div class="pro-tip-modal-content">
+    <button class="pro-tip-modal-close" onclick="document.getElementById('pro-tip-modal').classList.remove('active')">×</button>
+    <div class="pro-tip-modal-inner">
+      <span class="pro-tip-modal-icon">📅</span>
+      <div class="pro-tip-modal-label">Never Miss Your Visa Expiry</div>
+      <div class="pro-tip-modal-description">When immigration stamps your extension approval, enter your visa expiry date to automatically add it to your calendar with reminders for 7 days and 1 day before expiry.</div>
+
+      <form id="visa-date-form" style="margin-top: 1.5rem;">
+        <div style="margin-bottom: 1rem;">
+          <label for="visa-expiry-input" style="display: block; font-size: 0.95rem; margin-bottom: 0.5rem; font-weight: 500;">Visa Expiry Date</label>
+          <input type="text" id="visa-expiry-input" placeholder="DD/MM/YYYY" maxlength="10" style="width: 100%; padding: 0.8em; font-size: 1rem; border: 2px solid rgba(255,255,255,.5); border-radius: 8px; background: rgba(255,255,255,.15); color: #fff; font-family: var(--font-body); transition: all .25s ease;" />
+          <style>
+            #visa-expiry-input::placeholder {
+              color: rgba(255,255,255,.8);
+            }
+          </style>
+          <small style="display: block; margin-top: 0.4rem; opacity: 0.85;">Example: 15/06/2026</small>
+        </div>
+        <button type="submit" class="pro-tip-modal-button" style="width: 100%; text-align: center;">ADD</button>
+      </form>
+    </div>
+  </div>
+</div>
+
 <h2>Step-by-step extension process</h2>
 
 <h3>Step 1: Gather documents</h3>
@@ -1561,7 +1680,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   </tbody>
 </table>
 
-<figure style="text-align: center; margin: 2rem 0;">
+<figure style="text-align: center; margin: 2rem 0 0 0;">
   <img
     src="../../images/cmlocals chiang mai locals thai e-visa application template document portal 1.webp"
     alt="CMLocals Chiang Mai Locals Visa Extensions extension form application process"
@@ -1614,11 +1733,11 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     Each long-stay visa type has specific extension procedures and documentation requirements. Extensions preserve your current visa status and are processed quickly at immigration offices. If you are unsure whether to extend or apply for a renewal, contact immigration directly or consult the guides linked below for your visa category.
   </p>
   <div class="visa-links" role="list">
-    <a href="../../pages/visas/long-stay/retirement-visa-o-a/index.html" role="listitem">Retirement Visa (O-A)</a>
-    <a href="../../pages/visas/long-stay/dtv-digital-nomad/index.html" role="listitem">DTV (Digital Nomad Visa)</a>
-    <a href="../../pages/visas/long-stay/ed-visa/index.html" role="listitem">ED Visa (Education)</a>
-    <a href="../../pages/immigration/index.html" role="listitem">Immigration Rules & Compliance</a>
-    <a href="../../pages/immigration/90-day-reporting.html" role="listitem">90-Day Reporting Requirements</a>
+    <a href="../visas/long-stay/retirement-visa-thai-visa-advice-chiang-mai-cmlocals.html" role="listitem">Retirement Visa (O-A)</a>
+    <a href="../visas/short-stay/dtv-destination-thailand-visa-thai-visa-advice-chiang-mai-cmlocals.html" role="listitem">DTV (Digital Nomad Visa)</a>
+    <a href="../ed-visas/index.html" role="listitem">ED Visa (Education)</a>
+    <a href="../immigration/index.html" role="listitem">Immigration Rules & Compliance</a>
+    <a href="../immigration/90-day-reporting.html" role="listitem">90-Day Reporting Requirements</a>
   </div>
 </div>
 </section>
@@ -1626,37 +1745,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 <!-- ========================================================
      TOOLS
      ======================================================== -->
-<section class="tools-section">
-<div class="tools-section-inner">
-  <div class="tools-header">
-    <h2 class="section-title">Related immigration guides</h2>
-  </div>
-  <div class="guides-row" role="list">
-    <a class="tool-card" href="../../pages/immigration/90-day-reporting.html" role="listitem">
-      <div class="tool-card__icon" aria-hidden="true">📅</div>
-      <div class="tool-card__body">
-        <div class="tool-card__type">Guide</div>
-        <div class="tool-card__title">90-Day Reporting</div>
-      </div>
-    </a>
-    <a class="tool-card" href="../../pages/immigration/tm30-address-reporting.html" role="listitem">
-      <div class="tool-card__icon" aria-hidden="true">🏠</div>
-      <div class="tool-card__body">
-        <div class="tool-card__type">Guide</div>
-        <div class="tool-card__title">TM30 Address Registration</div>
-      </div>
-    </a>
-    <a class="tool-card" href="../../pages/immigration/index.html" role="listitem">
-      <div class="tool-card__icon" aria-hidden="true">📋</div>
-      <div class="tool-card__body">
-        <div class="tool-card__type">Guide</div>
-        <div class="tool-card__title">Immigration Compliance Hub</div>
-      </div>
-    </a>
-  </div>
-</div>
-</section>
-
 <!-- ========================================================
      FOOTER
      ======================================================== -->
@@ -1690,6 +1778,132 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 <script>
 window.CHATY_CONFIG={channels:[{name:"Facebook_Messenger",label:"Facebook Messenger",url:"https://m.me/cmlocals",svg:'<svg viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="19.4395" cy="19.4395" r="19.4395" fill="#0084FF"/><path d="M19.5 9.5C13.701 9.5 9 13.748 9 19.074c0 3.014 1.474 5.702 3.778 7.456V30l3.294-1.81c.878.244 1.81.376 2.778.376 5.799 0 10.5-4.248 10.5-9.574S25.299 9.5 19.5 9.5zm1.04 12.878l-2.674-2.852-5.22 2.852 5.74-6.096 2.74 2.852 5.154-2.852-5.74 6.096z" fill="white"/></svg>'},{name:"WhatsApp",label:"WhatsApp",url:"https://wa.me/66801202074",svg:'<svg viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="19.4395" cy="19.4395" r="19.4395" fill="#25D366"/><path d="M19.5 9.5C14.253 9.5 10 13.753 10 19c0 1.67.436 3.285 1.265 4.717L10 29l5.418-1.234A9.454 9.454 0 0019.5 28.5c5.247 0 9.5-4.253 9.5-9.5s-4.253-9.5-9.5-9.5zm5.508 13.142c-.232.652-1.345 1.247-1.853 1.29-.508.043-.982.228-3.306-.688-2.806-1.107-4.573-3.974-4.71-4.16-.137-.186-1.12-1.49-1.12-2.843 0-1.352.71-2.018.96-2.293.25-.275.546-.344.728-.344.183 0 .365.002.525.01.168.007.394-.064.617.47.232.556.786 1.92.855 2.06.069.138.115.3.023.485-.093.186-.139.3-.275.462-.137.162-.288.362-.412.486-.137.137-.28.286-.12.56.16.275.71 1.173 1.525 1.9 1.047.933 1.93 1.222 2.205 1.36.275.137.435.115.595-.069.16-.185.686-.8.869-1.075.183-.275.365-.228.617-.137.25.092 1.595.752 1.868.889.275.137.457.206.526.32.068.115.068.663-.164 1.315z" fill="white"/></svg>'}],triggerColor:"#9F7AEA",bottomOffset:50,leftOffset:20};
 </script>
+
+<script>
+// Pro Tip Bubble Modal
+document.addEventListener('DOMContentLoaded', function() {
+  const bubble = document.getElementById('pro-tip-bubble-btn');
+  const modal = document.getElementById('pro-tip-modal');
+
+  if (bubble && modal) {
+    bubble.addEventListener('click', function(e) {
+      e.preventDefault();
+      modal.classList.add('active');
+    });
+
+    modal.addEventListener('click', function(e) {
+      if (e.target === modal) {
+        modal.classList.remove('active');
+      }
+    });
+  }
+
+  // Handle visa date form submission
+  const visaDateForm = document.getElementById('visa-date-form');
+  const visaExpiryInput = document.getElementById('visa-expiry-input');
+
+  if (visaDateForm && visaExpiryInput) {
+    visaDateForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const dateInput = visaExpiryInput.value.trim();
+
+      // Parse DD/MM/YYYY format
+      const dateRegex = /^(\d{2})\/(\d{2})\/(\d{4})$/;
+      const match = dateInput.match(dateRegex);
+
+      if (match) {
+        const day = match[1];
+        const month = match[2];
+        const year = match[3];
+
+        // Validate date
+        const date = new Date(`${year}-${month}-${day}`);
+        if (isNaN(date.getTime())) {
+          alert('Invalid date. Please enter a valid date.');
+          return;
+        }
+
+        // Check if date is in the future
+        if (date < new Date()) {
+          alert('Please enter a future date for your visa expiry.');
+          return;
+        }
+
+        const expiryDate = `${year}-${month}-${day}`;
+        const dateFormatted = `${year}${month}${day}`;
+
+        // Create iCalendar with notification alarms (7 days and 1 day before)
+        const icsContent = `BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//CMLocals//Thailand Visa Reminder//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-MICROSOFT-CDO-BUSYSTATUS:BUSY
+BEGIN:VEVENT
+UID:visa-expiry-${expiryDate}@cmlocals.com
+DTSTAMP:${new Date().toISOString().replace(/[-:]/g, '').split('.')[0]}Z
+DTSTART;VALUE=DATE:${dateFormatted}
+DTEND;VALUE=DATE:${dateFormatted}
+SUMMARY:Thai Visa Expiry - RENEW NOW
+DESCRIPTION:Your Thai visa expires today. Visit Chiang Mai Immigration Office to extend. Office hours: 8:30 AM - 4:30 PM (Mon-Fri)\\n\\n⬆️⬆️⬆️ Add notifications before saving:\\n* 7 days before – URGENT: Start renewal process now\\n* 1 day before – CRITICAL: Visit immigration TODAY
+LOCATION:Chiang Mai Immigration Office (near Airport or Central Festival)
+STATUS:CONFIRMED
+SEQUENCE:0
+BEGIN:VALARM
+TRIGGER:-P7D
+REPEAT:0
+DURATION:
+ACTION:DISPLAY
+DESCRIPTION:URGENT: Thai visa expires in 7 days - Start renewal process now
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-P1D
+REPEAT:0
+DURATION:
+ACTION:DISPLAY
+DESCRIPTION:CRITICAL: Thai visa expires in 1 day - Visit immigration TODAY
+END:VALARM
+END:VEVENT
+END:VCALENDAR`;
+
+        // Create Google Calendar link
+        const googleCalendarUrl = `https://calendar.google.com/calendar/r/eventedit?text=Thai%20Visa%20Expiry%20-%20RENEW%20NOW&dates=${dateFormatted}/${dateFormatted}&details=Your%20Thai%20visa%20expires%20today.%20Visit%20Chiang%20Mai%20Immigration%20Office%20to%20extend.%20Office%20hours:%208:30%20AM%20-%204:30%20PM%20(Mon-Fri)%0A%0A%E2%AC%86%EF%B8%8F%E2%AC%86%EF%B8%8F%E2%AC%86%EF%B8%8F%20Add%20notifications%20before%20saving:%0A*%207%20days%20before%20–%20URGENT:%20Start%20renewal%20process%20now%0A*%201%20day%20before%20–%20CRITICAL:%20Visit%20immigration%20TODAY&location=Chiang%20Mai%20Immigration%20Office%20(near%20Airport%20or%20Central%20Festival)`;
+
+        // Create blob for .ics fallback
+        const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
+        const url = URL.createObjectURL(blob);
+
+        // Show calendar option modal
+        const calendarModal = document.createElement('div');
+        calendarModal.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:2000;';
+        calendarModal.innerHTML = `
+          <div style="background:white;border-radius:12px;padding:2rem;max-width:400px;box-shadow:0 20px 60px rgba(0,0,0,0.15);text-align:center;">
+            <div style="font-size:2.5rem;margin-bottom:1rem;">📅</div>
+            <h3 style="margin-bottom:0.5rem;font-size:1.2rem;font-weight:600;">Add to Calendar</h3>
+            <p style="margin-bottom:1.5rem;color:#666;font-size:0.95rem;">Choose your calendar app to save this reminder with notifications for 7 days and 1 day before expiry.</p>
+            <div style="display:flex;flex-direction:column;gap:0.75rem;">
+              <button onclick="window.open('${googleCalendarUrl}','_blank');this.closest('[style*=position]').remove();" style="padding:0.75rem;background:#4F46E5;color:white;border:none;border-radius:8px;font-weight:600;cursor:pointer;font-size:0.95rem;transition:background 0.2s;">📱 Open Google Calendar</button>
+              <button onclick="const link=document.createElement('a');link.href='${url}';link.download='Thai-Visa-Expiry-${expiryDate}.ics';link.click();this.closest('[style*=position]').remove();" style="padding:0.75rem;background:#6366F1;color:white;border:none;border-radius:8px;font-weight:600;cursor:pointer;font-size:0.95rem;transition:background 0.2s;">💾 Download as .ics File</button>
+              <button onclick="this.closest('[style*=position]').remove();" style="padding:0.75rem;background:#E5E7EB;color:#111;border:none;border-radius:8px;font-weight:600;cursor:pointer;font-size:0.95rem;transition:background 0.2s;">Cancel</button>
+            </div>
+          </div>
+        `;
+        document.body.appendChild(calendarModal);
+
+        // Cleanup blob URL after a delay
+        setTimeout(() => URL.revokeObjectURL(url), 5000);
+
+        // Clear form and close modal immediately
+        visaExpiryInput.value = '';
+        modal.classList.remove('active');
+      } else {
+        alert('Invalid date format. Please use DD/MM/YYYY (e.g., 15/06/2026)');
+      }
+    });
+  }
+});
+</script>
+
 <script src="../../../shared/js/header-handler.js" defer></script>
 <script src="../../shared/chaty-widget/scripts/chaty-widget.js"></script>
 <script src="../../../shared/js/card-click-handler.js"></script>
@@ -1722,12 +1936,12 @@ window.CHATY_CONFIG={channels:[{name:"Facebook_Messenger",label:"Facebook Messen
   <div class="footer-col">
     <h3 class="footer-col-title">ED Visas</h3>
     <ul class="footer-links">
-      <li><a href="../../pages/ed-visas/emergency-self-defence-ed-visa-chiang-mai.html">Emergency Self Defence</a></li>
-      <li><a href="../../pages/ed-visas/muay-thai-ed-visa-chiang-mai.html">Muay Thai</a></li>
-      <li><a href="../../pages/ed-visas/thai-language-ed-visa-chiang-mai.html">Thai Language</a></li>
-      <li><a href="../../pages/ed-visas/hand-to-hand-combat-ed-visa-chiang-mai.html">Hand-to-Hand Combat</a></li>
-      <li><a href="../../pages/ed-visas/volunteer-non-o-visa-chiang-mai.html">Volunteer Non-O</a></li>
-      <li><a href="../../pages/ed-visas/index.html">All ED Visas</a></li>
+      <li><a href="../ed-visas/emergency-self-defence-ed-visa-chiang-mai.html">Emergency Self Defence</a></li>
+      <li><a href="../ed-visas/muay-thai-ed-visa-chiang-mai.html">Muay Thai</a></li>
+            <li><a href="../ed-visas/hand-to-hand-combat-ed-visa-chiang-mai.html">Hand-to-Hand Combat</a></li>
+      <li><a href="../ed-visas/thai-language-ed-visa-chiang-mai.html">Thai Language</a></li>
+            <li><a href="../ed-visas/volunteer-non-o-visa-chiang-mai.html">Volunteer Non-O</a></li>
+      <li><a href="../ed-visas/index.html">All ED Visas</a></li>
     </ul>
   </div>
 
@@ -1735,12 +1949,12 @@ window.CHATY_CONFIG={channels:[{name:"Facebook_Messenger",label:"Facebook Messen
   <div class="footer-col">
     <h3 class="footer-col-title">Chiang Mai</h3>
     <ul class="footer-links">
-      <li><a href="../../pages/chiang-mai/index.html">Overview</a></li>
-      <li><a href="../../pages/chiang-mai/where-to-stay.html">Where to Stay</a></li>
-      <li><a href="../../pages/chiang-mai/cost-of-living.html">Cost of Living</a></li>
-      <li><a href="../../pages/chiang-mai/getting-around.html">Getting Around</a></li>
-      <li><a href="../../pages/chiang-mai/long-term-living.html">Long-Term Living</a></li>
-      <li><a href="../../pages/chiang-mai/healthcare.html">Healthcare</a></li>
+      <li><a href="../chiang-mai/index.html">Overview</a></li>
+      <li><a href="../chiang-mai/where-to-stay.html">Where to Stay</a></li>
+      <li><a href="../chiang-mai/cost-of-living.html">Cost of Living</a></li>
+      <li><a href="../chiang-mai/getting-around.html">Getting Around</a></li>
+      <li><a href="../chiang-mai/long-term-living.html">Long-Term Living</a></li>
+      <li><a href="../chiang-mai/healthcare.html">Healthcare</a></li>
     </ul>
   </div>
 
@@ -1748,12 +1962,12 @@ window.CHATY_CONFIG={channels:[{name:"Facebook_Messenger",label:"Facebook Messen
   <div class="footer-col">
     <h3 class="footer-col-title">Visa Guides</h3>
     <ul class="footer-links">
-      <li><a href="../../pages/visas/index.html">All Visas</a></li>
-      <li><a href="../../pages/visas/short-stay/dtv-destination-thailand-visa-thai-visa-advice-chiang-mai-cmlocals.html">DTV</a></li>
-      <li><a href="../../pages/visas/short-stay/index.html">Short Stay</a></li>
-      <li><a href="../../pages/visas/long-stay/index.html">Long Stay</a></li>
-      <li><a href="../../pages/visas/short-stay/tourist-visa.html">Tourist Visa</a></li>
-      <li><a href="../../pages/checklists/index.html">Checklists</a></li>
+      <li><a href="../visas/index.html">All Visas</a></li>
+      <li><a href="../visas/short-stay/dtv-destination-thailand-visa-thai-visa-advice-chiang-mai-cmlocals.html">DTV</a></li>
+      <li><a href="../visas/short-stay/index.html">Short Stay</a></li>
+      <li><a href="../visas/long-stay/index.html">Long Stay</a></li>
+      <li><a href="../visas/short-stay/tourist-visa.html">Tourist Visa</a></li>
+      <li><a href="../checklists/index.html">Checklists</a></li>
     </ul>
   </div>
 
@@ -1763,9 +1977,9 @@ window.CHATY_CONFIG={channels:[{name:"Facebook_Messenger",label:"Facebook Messen
 <div class="footer-bottom-bar">
   <p>&copy; 2026 CMLocals. All rights reserved.</p>
   <div class="footer-legal-links">
-    <a href="../../pages/privacy-policy.html">Privacy</a>
-    <a href="../../pages/terms-of-service.html">Terms</a>
-    <a href="../../pages/disclaimer.html">Disclaimer</a>
+    <a href="../privacy-policy.html">Privacy</a>
+    <a href="../terms-of-service.html">Terms</a>
+    <a href="../disclaimer.html">Disclaimer</a>
   </div>
 </div>
 

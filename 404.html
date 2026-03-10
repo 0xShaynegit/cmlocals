@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Page Not Found – CMLocals</title>
+  <meta name="description" content="This page doesn't exist. Return to CMLocals for Thailand visa guides and Chiang Mai living information."/>
+  <link rel="canonical" href="https://www.cmlocals.com/"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --c-primary: #4F46E5;
+      --c-primary-h: #4338CA;
+      --c-white: #FFFFFF;
+      --c-off-white: #F8F7FF;
+      --c-body: #111827;
+      --c-muted: #6B7280;
+      --c-border: #E5E7EB;
+      --font-display: 'Newsreader', Georgia, serif;
+      --font-body: 'DM Sans', system-ui, sans-serif;
+      --max-w: 1200px;
+      --edge: clamp(1.25rem, 4vw, 2.5rem);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      font-family: var(--font-body);
+      font-size: 1rem;
+      line-height: 1.65;
+      color: var(--c-body);
+      background: var(--c-white);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img { max-width: 100%; display: block; height: auto; }
+    a { color: inherit; text-decoration: none; }
+    button { font-family: inherit; cursor: pointer; border: none; background: none; }
+
+    .container {
+      width: 100%;
+      max-width: var(--max-w);
+      margin-inline: auto;
+      padding-inline: var(--edge);
+    }
+
+    /* Header */
+    .site-header {
+      background: white;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 70px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--c-body);
+    }
+
+    .logo img {
+      height: 40px;
+      width: auto;
+      margin-right: 0.5rem;
+    }
+
+    /* Hero */
+    .hero-404 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 60vh;
+      text-align: center;
+      padding: 4rem var(--edge);
+    }
+
+    .hero-content h1 {
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 8vw, 5rem);
+      font-weight: 400;
+      line-height: 1.1;
+      color: var(--c-body);
+      margin-bottom: 1rem;
+    }
+
+    .hero-content .error-code {
+      font-size: clamp(2rem, 6vw, 3.5rem);
+      color: var(--c-primary);
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-content p {
+      font-size: 1.1rem;
+      color: var(--c-muted);
+      margin-bottom: 2rem;
+      max-width: 600px;
+      margin-inline: auto;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5em;
+      padding: 0.75em 1.8em;
+      border-radius: 6px;
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+      border: 1.5px solid transparent;
+      transition: all 0.2s ease;
+    }
+
+    .btn-primary {
+      background: var(--c-primary);
+      color: var(--c-white);
+      border-color: var(--c-primary);
+    }
+
+    .btn-primary:hover {
+      background: var(--c-primary-h);
+      border-color: var(--c-primary-h);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 18px rgba(79, 70, 229, 0.18);
+    }
+
+    /* Footer */
+    .site-footer {
+      background: var(--c-body);
+      color: rgba(255, 255, 255, 0.92);
+      padding: 3rem var(--edge) 2rem;
+      margin-top: 4rem;
+      border-top: 1px solid rgba(0, 0, 0, 0.2);
+    }
+
+    .footer-content {
+      max-width: var(--max-w);
+      margin-inline: auto;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .footer-col h3 {
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 1rem;
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+
+    .footer-col li {
+      margin-bottom: 0.6rem;
+    }
+
+    .footer-col a {
+      color: rgba(255, 255, 255, 0.88);
+      text-decoration: none;
+      transition: color 0.2s;
+      font-size: 0.9rem;
+    }
+
+    .footer-col a:hover {
+      color: var(--c-primary);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 1.5rem;
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.75);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="site-header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="/" class="logo">
+        <img src="images/cmlocals-chiang-mai-locals-logo.webp" alt="CMLocals"/>
+        CMLocals
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- 404 Hero -->
+<main>
+  <section class="hero-404">
+    <div class="hero-content">
+      <div class="error-code">404</div>
+      <h1>Page Not Found</h1>
+      <p>The page you're looking for doesn't exist. It may have been moved, deleted, or the URL might be incorrect.</p>
+      <a href="/" class="btn btn-primary">Return to Home</a>
+    </div>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h3>Visas</h3>
+        <ul>
+          <li><a href="pages/visas/short-stay/index.html">Short Stay</a></li>
+          <li><a href="pages/visas/long-stay/index.html">Long Stay</a></li>
+          <li><a href="pages/ed-visas/index.html">ED Visas</a></li>
+          <li><a href="pages/visas/guides/which-visa.html">Which Visa?</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Chiang Mai</h3>
+        <ul>
+          <li><a href="pages/chiang-mai/index.html">Living Guide</a></li>
+          <li><a href="pages/chiang-mai/cost-of-living.html">Cost of Living</a></li>
+          <li><a href="pages/chiang-mai/where-to-stay.html">Where to Stay</a></li>
+          <li><a href="pages/chiang-mai/healthcare.html">Healthcare</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Immigration</h3>
+        <ul>
+          <li><a href="pages/immigration/index.html">Immigration Hub</a></li>
+          <li><a href="pages/immigration/90-day-reporting.html">90-Day Reporting</a></li>
+          <li><a href="pages/immigration/tm30-address-reporting.html">TM.30</a></li>
+          <li><a href="pages/immigration/overstay-penalties.html">Overstay Penalties</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>More</h3>
+        <ul>
+          <li><a href="pages/culture/index.html">Culture & Activities</a></li>
+          <li><a href="pages/checklists/">Checklists</a></li>
+          <li><a href="pages/privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="pages/terms-of-service.html">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 CMLocals. Independent Thailand visa guides and Chiang Mai living information.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -3,6 +3,8 @@
 
 # Legacy/backup files (do not modify)
 _raw/
+docs/
+tools/
 
 # OS files
 .DS_Store

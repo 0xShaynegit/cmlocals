@@ -224,10 +224,11 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: 500;
-  padding: 0;
+  padding: 0 0.85rem;
   transition: all 0.2s ease;
-  display: flex;
+  display: inline-flex;
   align-items: center;
+  height: 70px;
   line-height: 1;
 }
 
@@ -311,7 +312,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   color: #374151;
   text-decoration: none;
   font-size: 0.9rem;
-  line-height: 1.2;
+  line-height: 1.6;
   transition: color 0.2s;
   display: block;
   padding: 0.1rem 0;
@@ -559,7 +560,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   background: var(--c-page-accent-l);
   border-left: 3px solid var(--c-page-accent);
   border-radius: 0 var(--radius-md) var(--radius-md) 0;
-  padding: 1.25rem 1.5rem; margin: 2rem 0; max-width: 68ch;
+  padding: 1.25rem 1.5rem; margin: 2rem 0 0 0; max-width: 68ch;
 }
 .callout-band p { margin: 0; color: #693aef; font-size: .95rem; line-height: 1.65; }
 .callout-band strong { color: var(--c-page-accent); }
@@ -610,6 +611,14 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .page-hero h1 { font-size: 1.75rem; }
   .footer-top { grid-template-columns: 1fr; }
   .footer-bottom { flex-direction: column; align-items: flex-start; }
+}
+/* Image sizing: 50-70% of column width, centered */
+figure img {
+  max-width: 65%;
+  width: 65%;
+  margin-inline: auto;
+  display: block;
+  height: auto;
 }
 </style>
 <link rel="stylesheet" href="../../../css/chaty-front.min.css"/>
@@ -720,10 +729,11 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: 500;
-  padding: 0;
+  padding: 0 0.85rem;
   transition: all 0.2s ease;
-  display: flex;
+  display: inline-flex;
   align-items: center;
+  height: 70px;
   line-height: 1;
 }
 .nav-item > a.nav-link:hover {
@@ -786,7 +796,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   color: #374151;
   text-decoration: none;
   font-size: 0.9rem;
-  line-height: 1.2;
+  line-height: 1.6;
   transition: color 0.2s;
   display: block;
   padding: 0.1rem 0;
@@ -1017,6 +1027,14 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .footer-legal-links { gap: 1rem; }
   .footer-legal-links a { font-size: 0.9rem; }
 }
+/* Image sizing: 50-70% of column width, centered */
+figure img {
+  max-width: 65%;
+  width: 65%;
+  margin-inline: auto;
+  display: block;
+  height: auto;
+}
 </style>
 </head>
 <body>
@@ -1032,16 +1050,16 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   <nav class="primary-nav desktop-only" aria-label="Primary navigation">
     <!-- ED VISAS -->
     <div class="nav-item">
-      <a href="../../../pages/ed-visas/index.html" class="nav-link has-dropdown">ED Visas</a>
+      <a href="../../ed-visas/index.html" class="nav-link has-dropdown">ED Visas</a>
       <div class="dropdown-menu mega-menu" role="menu">
         <div class="dropdown-section">
           <ul>
-            <li><a href="../../../pages/ed-visas/emergency-self-defence-ed-visa-chiang-mai.html">Emergency Self Defence</a></li>
-            <li><a href="../../../pages/ed-visas/muay-thai-ed-visa-chiang-mai.html">Muay Thai</a></li>
-            <li><a href="../../../pages/ed-visas/thai-language-ed-visa-chiang-mai.html">Thai Language</a></li>
-            <li><a href="../../../pages/ed-visas/hand-to-hand-combat-ed-visa-chiang-mai.html">Hand-to-Hand Combat</a></li>
-            <li><a href="../../../pages/ed-visas/volunteer-non-o-visa-chiang-mai.html">Volunteer Non-O</a></li>
-            <li><a href="../../../pages/ed-visas/index.html">All ED Visas</a></li>
+            <li><a href="../../ed-visas/emergency-self-defence-ed-visa-chiang-mai.html">Emergency Self Defence</a></li>
+            <li><a href="../../ed-visas/muay-thai-ed-visa-chiang-mai.html">Muay Thai</a></li>
+            <li><a href="../../ed-visas/hand-to-hand-combat-ed-visa-chiang-mai.html">Hand-to-Hand Combat</a></li>
+            <li><a href="../../ed-visas/thai-language-ed-visa-chiang-mai.html">Thai Language</a></li>
+                        <li><a href="../../ed-visas/volunteer-non-o-visa-chiang-mai.html">Volunteer Non-O</a></li>
+            <li><a href="../../ed-visas/index.html">All ED Visas</a></li>
           </ul>
         </div>
       </div>
@@ -1049,36 +1067,36 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
     <!-- CHIANG MAI -->
     <div class="nav-item">
-      <a href="../../../pages/chiang-mai/index.html" class="nav-link has-dropdown">Chiang Mai</a>
+      <a href="../../chiang-mai/index.html" class="nav-link has-dropdown">Chiang Mai</a>
       <div class="dropdown-menu mega-menu chiang-mai-menu" role="menu">
         <div class="dropdown-section">
           <h3>Lifestyle</h3>
           <ul>
-            <li><a href="../../../pages/chiang-mai/index.html">Overview</a></li>
-            <li><a href="../../../pages/chiang-mai/why-chiang-mai-base.html">Why Base Here</a></li>
-            <li><a href="../../../pages/chiang-mai/where-to-stay.html">Where to Stay</a></li>
-            <li><a href="../../../pages/chiang-mai/long-term-living.html">Long-Term Living</a></li>
-            <li><a href="../../../pages/chiang-mai/things-to-do.html">Things to Do</a></li>
-            <li><a href="../../../pages/chiang-mai/digital-nomads.html">Digital Nomads</a></li>
-            <li><a href="../../../pages/chiang-mai/cost-of-living.html">Cost of Living</a></li>
-            <li><a href="../../../pages/chiang-mai/phones-and-banking.html">Phones &amp; Banking</a></li>
-            <li><a href="../../../pages/chiang-mai/getting-around.html">Getting Around</a></li>
-            <li><a href="../../../pages/chiang-mai/healthcare.html">Healthcare</a></li>
-            <li><a href="../../../pages/chiang-mai/insurance.html">Insurance</a></li>
-            <li><a href="../../../pages/chiang-mai/taxes.html">Taxes</a></li>
+            <li><a href="../../chiang-mai/index.html">Overview</a></li>
+            <li><a href="../../chiang-mai/why-chiang-mai-base.html">Why Base Here</a></li>
+            <li><a href="../../chiang-mai/where-to-stay.html">Where to Stay</a></li>
+            <li><a href="../../chiang-mai/long-term-living.html">Long-Term Living</a></li>
+            <li><a href="../../chiang-mai/things-to-do.html">Things to Do</a></li>
+            <li><a href="../../chiang-mai/digital-nomads.html">Digital Nomads</a></li>
+            <li><a href="../../chiang-mai/cost-of-living.html">Cost of Living</a></li>
+            <li><a href="../../chiang-mai/phones-and-banking.html">Phones &amp; Banking</a></li>
+            <li><a href="../../chiang-mai/getting-around.html">Getting Around</a></li>
+            <li><a href="../../chiang-mai/healthcare.html">Healthcare</a></li>
+            <li><a href="../../chiang-mai/insurance.html">Insurance</a></li>
+            <li><a href="../../chiang-mai/taxes.html">Taxes</a></li>
           </ul>
         </div>
         <div class="dropdown-section">
           <h3>Culture</h3>
           <ul>
-            <li><a href="../../../pages/culture/index.html">Culture Guide</a></li>
-            <li><a href="../../../pages/culture/customs-traditions-thailand.html">Customs &amp; Traditions</a></li>
-            <li><a href="../../../pages/culture/thai-culture-etiquette.html">Etiquette</a></li>
-            <li><a href="../../../pages/culture/festivals-events-chiang-mai.html">Festivals</a></li>
-            <li><a href="../../../pages/culture/thai-food-culture.html">Thai Food</a></li>
-            <li><a href="../../../pages/culture/temple-etiquette.html">Temple Etiquette</a></li>
-            <li><a href="../../../pages/culture/sak-yant-chiang-mai.html">Sak Yant</a></li>
-            <li><a href="../../../pages/culture/sak-yant-designs-and-meanings.html">Sak Yant Designs</a></li>
+            <li><a href="../../culture/index.html">Culture Guide</a></li>
+            <li><a href="../../culture/customs-traditions-thailand.html">Customs &amp; Traditions</a></li>
+            <li><a href="../../culture/thai-culture-etiquette.html">Etiquette</a></li>
+            <li><a href="../../culture/festivals-events-chiang-mai.html">Festivals</a></li>
+            <li><a href="../../culture/thai-food-culture.html">Thai Food</a></li>
+            <li><a href="../../culture/temple-etiquette.html">Temple Etiquette</a></li>
+            <li><a href="../../culture/sak-yant-chiang-mai.html">Sak Yant</a></li>
+            <li><a href="../../culture/sak-yant-designs-and-meanings.html">Sak Yant Designs</a></li>
           </ul>
         </div>
       </div>
@@ -1086,17 +1104,17 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
     <!-- VISA GUIDES -->
     <div class="nav-item">
-      <a href="../../../pages/visas/index.html" class="nav-link has-dropdown">Visa Guides</a>
+      <a href="../../visas/index.html" class="nav-link has-dropdown">Visa Guides</a>
       <div class="dropdown-menu mega-menu" role="menu">
         <div class="dropdown-section">
           <h3>All Types</h3>
           <ul>
-            <li><a href="../../../pages/visas/index.html">All Visas</a></li>
-            <li><a href="../../../pages/visas/short-stay/index.html">Short-Stay</a></li>
-            <li><a href="../../../pages/visas/long-stay/index.html">Long-Stay</a></li>
-            <li><a href="../../../pages/visas/short-stay/dtv-destination-thailand-visa-thai-visa-advice-chiang-mai-cmlocals.html">DTV</a></li>
-            <li><a href="../../../pages/visas/short-stay/tourist-visa.html">Tourist</a></li>
-            <li><a href="../../../pages/visas/guides/which-visa.html">Which Visa?</a></li>
+            <li><a href="../../visas/index.html">All Visas</a></li>
+            <li><a href="../../visas/short-stay/index.html">Short-Stay</a></li>
+            <li><a href="../../visas/long-stay/index.html">Long-Stay</a></li>
+            <li><a href="../../visas/short-stay/dtv-destination-thailand-visa-thai-visa-advice-chiang-mai-cmlocals.html">DTV</a></li>
+            <li><a href="../../visas/short-stay/tourist-visa.html">Tourist</a></li>
+            <li><a href="../../visas/guides/which-visa.html">Which Visa?</a></li>
           </ul>
         </div>
       </div>
@@ -1104,16 +1122,16 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
     <!-- IMMIGRATION -->
     <div class="nav-item">
-      <a href="../../../pages/immigration/index.html" class="nav-link has-dropdown">Immigration</a>
+      <a href="../../immigration/index.html" class="nav-link has-dropdown">Immigration</a>
       <div class="dropdown-menu mega-menu" role="menu">
         <div class="dropdown-section">
           <h3>Compliance</h3>
           <ul>
-            <li><a href="../../../pages/immigration/index.html">All Immigration</a></li>
-            <li><a href="../../../pages/immigration/90-day-reporting.html">90-Day Reporting</a></li>
-            <li><a href="../../../pages/immigration/tm30-address-reporting.html">TM30 Registration</a></li>
-            <li><a href="../../../pages/immigration/re-entry-permits.html">Re-Entry Permits</a></li>
-            <li><a href="../../../pages/immigration/overstay-penalties.html">Overstay Penalties</a></li>
+            <li><a href="../../immigration/index.html">All Immigration</a></li>
+            <li><a href="../../immigration/90-day-reporting.html">90-Day Reporting</a></li>
+            <li><a href="../../immigration/tm30-address-reporting.html">TM30 Registration</a></li>
+            <li><a href="../../immigration/re-entry-permits.html">Re-Entry Permits</a></li>
+            <li><a href="../../immigration/overstay-penalties.html">Overstay Penalties</a></li>
           </ul>
         </div>
       </div>
@@ -1136,62 +1154,62 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   <details class="nav-accordion" open>
     <summary>ED Visas (6)</summary>
     <ul>
-      <li><a href="../../../pages/ed-visas/emergency-self-defence-ed-visa-chiang-mai.html">Emergency Self Defence</a></li>
-      <li><a href="../../../pages/ed-visas/muay-thai-ed-visa-chiang-mai.html">Muay Thai</a></li>
-      <li><a href="../../../pages/ed-visas/thai-language-ed-visa-chiang-mai.html">Thai Language</a></li>
-      <li><a href="../../../pages/ed-visas/hand-to-hand-combat-ed-visa-chiang-mai.html">Hand-to-Hand Combat</a></li>
-      <li><a href="../../../pages/ed-visas/volunteer-non-o-visa-chiang-mai.html">Volunteer Non-O</a></li>
-      <li><a href="../../../pages/ed-visas/index.html">All ED Visas</a></li>
+      <li><a href="../../ed-visas/emergency-self-defence-ed-visa-chiang-mai.html">Emergency Self Defence</a></li>
+      <li><a href="../../ed-visas/muay-thai-ed-visa-chiang-mai.html">Muay Thai</a></li>
+            <li><a href="../../ed-visas/hand-to-hand-combat-ed-visa-chiang-mai.html">Hand-to-Hand Combat</a></li>
+      <li><a href="../../ed-visas/thai-language-ed-visa-chiang-mai.html">Thai Language</a></li>
+            <li><a href="../../ed-visas/volunteer-non-o-visa-chiang-mai.html">Volunteer Non-O</a></li>
+      <li><a href="../../ed-visas/index.html">All ED Visas</a></li>
     </ul>
   </details>
   <details class="nav-accordion">
     <summary>Chiang Mai</summary>
     <ul>
-      <li><a href="../../../pages/chiang-mai/index.html">Overview</a></li>
-      <li><a href="../../../pages/chiang-mai/why-chiang-mai-base.html">Why Base Here</a></li>
-      <li><a href="../../../pages/chiang-mai/where-to-stay.html">Where to Stay</a></li>
-      <li><a href="../../../pages/chiang-mai/long-term-living.html">Long-Term Living</a></li>
-      <li><a href="../../../pages/chiang-mai/things-to-do.html">Things to Do</a></li>
-      <li><a href="../../../pages/chiang-mai/digital-nomads.html">Digital Nomads</a></li>
-      <li><a href="../../../pages/chiang-mai/cost-of-living.html">Cost of Living</a></li>
-      <li><a href="../../../pages/chiang-mai/phones-and-banking.html">Phones &amp; Banking</a></li>
-      <li><a href="../../../pages/chiang-mai/getting-around.html">Getting Around</a></li>
-      <li><a href="../../../pages/chiang-mai/healthcare.html">Healthcare</a></li>
-      <li><a href="../../../pages/chiang-mai/insurance.html">Insurance</a></li>
-      <li><a href="../../../pages/chiang-mai/taxes.html">Taxes</a></li>
+      <li><a href="../../chiang-mai/index.html">Overview</a></li>
+      <li><a href="../../chiang-mai/why-chiang-mai-base.html">Why Base Here</a></li>
+      <li><a href="../../chiang-mai/where-to-stay.html">Where to Stay</a></li>
+      <li><a href="../../chiang-mai/long-term-living.html">Long-Term Living</a></li>
+      <li><a href="../../chiang-mai/things-to-do.html">Things to Do</a></li>
+      <li><a href="../../chiang-mai/digital-nomads.html">Digital Nomads</a></li>
+      <li><a href="../../chiang-mai/cost-of-living.html">Cost of Living</a></li>
+      <li><a href="../../chiang-mai/phones-and-banking.html">Phones &amp; Banking</a></li>
+      <li><a href="../../chiang-mai/getting-around.html">Getting Around</a></li>
+      <li><a href="../../chiang-mai/healthcare.html">Healthcare</a></li>
+      <li><a href="../../chiang-mai/insurance.html">Insurance</a></li>
+      <li><a href="../../chiang-mai/taxes.html">Taxes</a></li>
     </ul>
   </details>
   <details class="nav-accordion">
     <summary>Culture</summary>
     <ul>
-      <li><a href="../../../pages/culture/index.html">Culture Guide</a></li>
-      <li><a href="../../../pages/culture/customs-traditions-thailand.html">Customs &amp; Traditions</a></li>
-      <li><a href="../../../pages/culture/thai-culture-etiquette.html">Etiquette</a></li>
-      <li><a href="../../../pages/culture/festivals-events-chiang-mai.html">Festivals</a></li>
-      <li><a href="../../../pages/culture/thai-food-culture.html">Thai Food</a></li>
-      <li><a href="../../../pages/culture/temple-etiquette.html">Temple Etiquette</a></li>
-      <li><a href="../../../pages/culture/sak-yant-chiang-mai.html">Sak Yant</a></li>
+      <li><a href="../../culture/index.html">Culture Guide</a></li>
+      <li><a href="../../culture/customs-traditions-thailand.html">Customs &amp; Traditions</a></li>
+      <li><a href="../../culture/thai-culture-etiquette.html">Etiquette</a></li>
+      <li><a href="../../culture/festivals-events-chiang-mai.html">Festivals</a></li>
+      <li><a href="../../culture/thai-food-culture.html">Thai Food</a></li>
+      <li><a href="../../culture/temple-etiquette.html">Temple Etiquette</a></li>
+      <li><a href="../../culture/sak-yant-chiang-mai.html">Sak Yant</a></li>
     </ul>
   </details>
   <details class="nav-accordion">
     <summary>Visa Guides</summary>
     <ul>
-      <li><a href="../../../pages/visas/index.html">All Visas</a></li>
-      <li><a href="../../../pages/visas/short-stay/index.html">Short-Stay</a></li>
-      <li><a href="../../../pages/visas/long-stay/index.html">Long-Stay</a></li>
-      <li><a href="../../../pages/visas/short-stay/dtv-destination-thailand-visa-thai-visa-advice-chiang-mai-cmlocals.html">DTV</a></li>
-      <li><a href="../../../pages/visas/short-stay/tourist-visa.html">Tourist</a></li>
-      <li><a href="../../../pages/visas/guides/which-visa.html">Which Visa?</a></li>
+      <li><a href="../../visas/index.html">All Visas</a></li>
+      <li><a href="../../visas/short-stay/index.html">Short-Stay</a></li>
+      <li><a href="../../visas/long-stay/index.html">Long-Stay</a></li>
+      <li><a href="../../visas/short-stay/dtv-destination-thailand-visa-thai-visa-advice-chiang-mai-cmlocals.html">DTV</a></li>
+      <li><a href="../../visas/short-stay/tourist-visa.html">Tourist</a></li>
+      <li><a href="../../visas/guides/which-visa.html">Which Visa?</a></li>
     </ul>
   </details>
   <details class="nav-accordion">
     <summary>Immigration</summary>
     <ul>
-      <li><a href="../../../pages/immigration/index.html">All Immigration</a></li>
-      <li><a href="../../../pages/immigration/90-day-reporting.html">90-Day Reporting</a></li>
-      <li><a href="../../../pages/immigration/tm30-address-reporting.html">TM30 Registration</a></li>
-      <li><a href="../../../pages/immigration/re-entry-permits.html">Re-Entry Permits</a></li>
-      <li><a href="../../../pages/immigration/overstay-penalties.html">Overstay Penalties</a></li>
+      <li><a href="../../immigration/index.html">All Immigration</a></li>
+      <li><a href="../../immigration/90-day-reporting.html">90-Day Reporting</a></li>
+      <li><a href="../../immigration/tm30-address-reporting.html">TM30 Registration</a></li>
+      <li><a href="../../immigration/re-entry-permits.html">Re-Entry Permits</a></li>
+      <li><a href="../../immigration/overstay-penalties.html">Overstay Penalties</a></li>
     </ul>
   </details>
 </nav>
@@ -1231,9 +1249,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 <div class="breadcrumb-inner">
   <a href="../../../index.html">Home</a>
   <span class="breadcrumb-sep">/</span>
-  <a href="../../../pages/visas/index.html">Visas</a>
+  <a href="../../visas/index.html">Visas</a>
   <span class="breadcrumb-sep">/</span>
-  <a href="../../../pages/visas/guides/index.html">Guides</a>
+  <a href="../../visas/guides/index.html">Guides</a>
   <span class="breadcrumb-sep">/</span>
   <span>Visa Options in Chiang Mai</span>
 </div>
@@ -1305,39 +1323,39 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   </ul>
 
   <p style="background: var(--c-page-accent-l); border-left: 3px solid var(--c-page-accent); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin: 2rem 0; max-width: 68ch;">
-    <strong>Bridge with education:</strong> Many Chiang Mai newcomers combine <a href="../../../pages/ed-visas/thai-language-schools.html">Thai language ED visas</a> for initial 90-day stays, then transition to longer-term visas (DTV, Retirement, Marriage) afterward. This gives you time to settle before committing to extended residence.
+    <strong>Bridge with education:</strong> Many Chiang Mai newcomers combine <a href="../../ed-visas/thai-language-ed-visa-chiang-mai.html">Thai language ED visas</a> for initial 90-day stays, then transition to longer-term visas (DTV, Retirement, Marriage) afterward. This gives you time to settle before committing to extended residence.
   </p>
 
   <h2>Visa by Situation: Chiang Mai Edition</h2>
 
   <h3>Retiring in Chiang Mai (Age 50+)</h3>
   <ul>
-    <li><strong>Best path:</strong> Apply for <a href="../../../pages/visas/long-stay/retirement-visa.html">Retirement visa</a> at Thai Embassy in your country, then manage renewals at Chiang Mai Immigration</li>
+    <li><strong>Best path:</strong> Apply for <a href="../../visas/long-stay/retirement-visa-thai-visa-advice-chiang-mai-cmlocals.html">Retirement visa</a> at Thai Embassy in your country, then manage renewals at Chiang Mai Immigration</li>
     <li><strong>Why Chiang Mai:</strong> Cost of living supports retirement lifestyle; immigration office is efficient and familiar with retirees</li>
-    <li><strong>Local resource:</strong> <a href="../../../pages/chiang-mai/cost-of-living.html">Chiang Mai cost of living guide</a> for retirement budgeting</li>
+    <li><strong>Local resource:</strong> <a href="../../chiang-mai/cost-of-living.html">Chiang Mai cost of living guide</a> for retirement budgeting</li>
     <li><strong>Pro tip:</strong> Once settled, use Chiang Mai Immigration for all renewals—staff are experienced with long-term retirees</li>
   </ul>
 
   <h3>Remote Workers & Digital Nomads</h3>
   <ul>
-    <li><strong>Best path:</strong> Apply for <a href="../../../pages/visas/long-stay/dtv-digital-nomad.html">DTV visa</a> at Thai Embassy abroad, renew at Chiang Mai Immigration annually</li>
+    <li><strong>Best path:</strong> Apply for <a href="../../visas/short-stay/dtv-destination-thailand-visa-thai-visa-advice-chiang-mai-cmlocals.html">DTV visa</a> at Thai Embassy abroad, renew at Chiang Mai Immigration annually</li>
     <li><strong>Why Chiang Mai:</strong> Low cost, good internet infrastructure, co-working community, friendly visa renewal process</li>
-    <li><strong>Local resource:</strong> <a href="../../../pages/chiang-mai/digital-nomads.html">Digital Nomads in Chiang Mai</a> guide with co-working spaces and community</li>
-    <li><strong>Alternative:</strong> Start with <a href="../../../pages/ed-visas/index.html">ED visa for skill-building</a> (language, martial arts), then transition to DTV</li>
+    <li><strong>Local resource:</strong> <a href="../../chiang-mai/digital-nomads.html">Digital Nomads in Chiang Mai</a> guide with co-working spaces and community</li>
+    <li><strong>Alternative:</strong> Start with <a href="../../ed-visas/index.html">ED visa for skill-building</a> (language, martial arts), then transition to DTV</li>
   </ul>
 
   <h3>Married to a Thai National</h3>
   <ul>
-    <li><strong>Best path:</strong> Initial <a href="../../../pages/visas/long-stay/marriage-visa.html">Marriage visa</a> at Chiang Mai Immigration (if already in Thailand), then annual renewals locally</li>
+    <li><strong>Best path:</strong> Initial <a href="../../visas/long-stay/marriage-visa-non-o-thai-visa-advice-chiang-mai-cmlocals.html">Marriage visa</a> at Chiang Mai Immigration (if already in Thailand), then annual renewals locally</li>
     <li><strong>Why Chiang Mai:</strong> Efficient processing, low-stress atmosphere, experienced staff with marriage visa renewals</li>
     <li><strong>Pro tip:</strong> Bring your Thai spouse to all appointments; co-signature is mandatory for renewals</li>
   </ul>
 
   <h3>Students & Education-Focused Visitors</h3>
   <ul>
-    <li><strong>Best path:</strong> Apply for <a href="../../../pages/visas/long-stay/ed-visa.html">ED visa</a> through a school in Chiang Mai</li>
+    <li><strong>Best path:</strong> Apply for <a href="../../ed-visas/index.html">ED visa</a> through a school in Chiang Mai</li>
     <li><strong>Why Chiang Mai:</strong> Multiple language schools, martial arts camps, dance studios, and self-defense programs all support ED visa enrollment</li>
-    <li><strong>Local options:</strong> <a href="../../../pages/ed-visas/thai-language-schools.html">Thai language schools</a>, <a href="../../../pages/ed-visas/muay-thai.html">Muay Thai gyms</a>, <a href="../../../pages/ed-visas/emergency-self-defense.html">self-defense programs</a></li>
+    <li><strong>Local options:</strong> <a href="../../ed-visas/thai-language-ed-visa-chiang-mai.html">Thai language schools</a>, <a href="../../ed-visas/muay-thai-ed-visa-chiang-mai.html">Muay Thai gyms</a>, <a href="../../ed-visas/emergency-self-defence-ed-visa-chiang-mai.html">self-defense programs</a></li>
     <li><strong>Timeline:</strong> ED visa is valid 90 days; renewable if you continue your course</li>
   </ul>
 
@@ -1346,13 +1364,13 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   <p>Regardless of which visa you hold, you must follow these Thailand-wide procedures through Chiang Mai Immigration:</p>
 
   <ul>
-    <li><strong><a href="../../../pages/immigration/90-day-reporting.html">90-day Reporting:</a></strong> Report address and status every 90 days. Can be done in person or online at immigration office</li>
-    <li><strong><a href="../../../pages/immigration/tm30-registration.html">TM30 (Address Registration):</a></strong> Landlord or accommodation must file within 24 hours of your arrival. Verify it's done or file yourself if landlord doesn't</li>
+    <li><strong><a href="../../immigration/90-day-reporting.html">90-day Reporting:</a></strong> Report address and status every 90 days. Can be done in person or online at immigration office</li>
+    <li><strong><a href="../../immigration/tm30-address-reporting.html">TM30 (Address Registration):</a></strong> Landlord or accommodation must file within 24 hours of your arrival. Verify it's done or file yourself if landlord doesn't</li>
     <li><strong>Annual Visa Renewal:</strong> Plan renewal 1–2 months before expiry. Bring passport, financial proof, TM.47 form (available at Chiang Mai Immigration)</li>
   </ul>
 
   <p style="background: var(--c-page-accent-l); border-left: 3px solid var(--c-page-accent); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin: 2rem 0; max-width: 68ch;">
-    <strong>Get support:</strong> <a href="../../../pages/chiang-mai/immigration-guide.html">Full Chiang Mai Immigration Guide</a> for step-by-step procedures, common mistakes, and compliance requirements.
+    <strong>Get support:</strong> <a href="../../immigration/index.html">Full Chiang Mai Immigration Guide</a> for step-by-step procedures, common mistakes, and compliance requirements.
   </p>
 
   <figure style="text-align: center; margin: 2rem 0;">
@@ -1379,19 +1397,19 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     <div style="border: 1px solid var(--c-border); padding: 1rem; border-radius: 6px;">
       <h4 style="margin-bottom: 0.3rem; color: var(--c-body); font-size: 0.95rem;">Which Visa Is Right for You?</h4>
       <p style="font-size: 0.85rem; margin-bottom: 0.75rem; color: var(--c-muted);">Interactive tool to match your profile and stay duration to visa options.</p>
-      <a href="../../../pages/visas/guides/which-visa.html" style="display: inline-block; padding: 0.45rem 0.85rem; background: var(--c-page-accent); color: var(--c-white); border-radius: 4px; text-decoration: none; font-size: 0.85rem; font-weight: 600;">Read Guide</a>
+      <a href="../../visas/guides/which-visa.html" style="display: inline-block; padding: 0.45rem 0.85rem; background: var(--c-page-accent); color: var(--c-white); border-radius: 4px; text-decoration: none; font-size: 0.85rem; font-weight: 600;">Read Guide</a>
     </div>
 
     <div style="border: 1px solid var(--c-border); padding: 1rem; border-radius: 6px;">
       <h4 style="margin-bottom: 0.3rem; color: var(--c-body); font-size: 0.95rem;">Thai Visa Comparisons</h4>
       <p style="font-size: 0.85rem; margin-bottom: 0.75rem; color: var(--c-muted);">Compare DTV, Retirement, Marriage, and Business visas side-by-side.</p>
-      <a href="../../../pages/visas/guides/visa-comparisons.html" style="display: inline-block; padding: 0.45rem 0.85rem; background: var(--c-page-accent); color: var(--c-white); border-radius: 4px; text-decoration: none; font-size: 0.85rem; font-weight: 600;">Read Guide</a>
+      <a href="../../visas/guides/visa-comparisons.html" style="display: inline-block; padding: 0.45rem 0.85rem; background: var(--c-page-accent); color: var(--c-white); border-radius: 4px; text-decoration: none; font-size: 0.85rem; font-weight: 600;">Read Guide</a>
     </div>
 
     <div style="border: 1px solid var(--c-border); padding: 1rem; border-radius: 6px;">
       <h4 style="margin-bottom: 0.3rem; color: var(--c-body); font-size: 0.95rem;">Chiang Mai Immigration Guide</h4>
       <p style="font-size: 0.85rem; margin-bottom: 0.75rem; color: var(--c-muted);">Full guide to 90-day reporting, TM30, and immigration procedures in Chiang Mai.</p>
-      <a href="../../../pages/chiang-mai/immigration-guide.html" style="display: inline-block; padding: 0.45rem 0.85rem; background: var(--c-page-accent); color: var(--c-white); border-radius: 4px; text-decoration: none; font-size: 0.85rem; font-weight: 600;">Read Guide</a>
+      <a href="../../immigration/index.html" style="display: inline-block; padding: 0.45rem 0.85rem; background: var(--c-page-accent); color: var(--c-white); border-radius: 4px; text-decoration: none; font-size: 0.85rem; font-weight: 600;">Read Guide</a>
     </div>
   </div>
 
@@ -1490,12 +1508,12 @@ mobileNav.querySelectorAll('a').forEach(link => {
   <div class="footer-col">
     <h3 class="footer-col-title">ED Visas</h3>
     <ul class="footer-links">
-      <li><a href="../../../pages/ed-visas/emergency-self-defence-ed-visa-chiang-mai.html">Emergency Self Defence</a></li>
-      <li><a href="../../../pages/ed-visas/muay-thai-ed-visa-chiang-mai.html">Muay Thai</a></li>
-      <li><a href="../../../pages/ed-visas/thai-language-ed-visa-chiang-mai.html">Thai Language</a></li>
-      <li><a href="../../../pages/ed-visas/hand-to-hand-combat-ed-visa-chiang-mai.html">Hand-to-Hand Combat</a></li>
-      <li><a href="../../../pages/ed-visas/volunteer-non-o-visa-chiang-mai.html">Volunteer Non-O</a></li>
-      <li><a href="../../../pages/ed-visas/index.html">All ED Visas</a></li>
+      <li><a href="../../ed-visas/emergency-self-defence-ed-visa-chiang-mai.html">Emergency Self Defence</a></li>
+      <li><a href="../../ed-visas/muay-thai-ed-visa-chiang-mai.html">Muay Thai</a></li>
+            <li><a href="../../ed-visas/hand-to-hand-combat-ed-visa-chiang-mai.html">Hand-to-Hand Combat</a></li>
+      <li><a href="../../ed-visas/thai-language-ed-visa-chiang-mai.html">Thai Language</a></li>
+            <li><a href="../../ed-visas/volunteer-non-o-visa-chiang-mai.html">Volunteer Non-O</a></li>
+      <li><a href="../../ed-visas/index.html">All ED Visas</a></li>
     </ul>
   </div>
 
@@ -1503,12 +1521,12 @@ mobileNav.querySelectorAll('a').forEach(link => {
   <div class="footer-col">
     <h3 class="footer-col-title">Chiang Mai</h3>
     <ul class="footer-links">
-      <li><a href="../../../pages/chiang-mai/index.html">Overview</a></li>
-      <li><a href="../../../pages/chiang-mai/where-to-stay.html">Where to Stay</a></li>
-      <li><a href="../../../pages/chiang-mai/cost-of-living.html">Cost of Living</a></li>
-      <li><a href="../../../pages/chiang-mai/getting-around.html">Getting Around</a></li>
-      <li><a href="../../../pages/chiang-mai/long-term-living.html">Long-Term Living</a></li>
-      <li><a href="../../../pages/chiang-mai/healthcare.html">Healthcare</a></li>
+      <li><a href="../../chiang-mai/index.html">Overview</a></li>
+      <li><a href="../../chiang-mai/where-to-stay.html">Where to Stay</a></li>
+      <li><a href="../../chiang-mai/cost-of-living.html">Cost of Living</a></li>
+      <li><a href="../../chiang-mai/getting-around.html">Getting Around</a></li>
+      <li><a href="../../chiang-mai/long-term-living.html">Long-Term Living</a></li>
+      <li><a href="../../chiang-mai/healthcare.html">Healthcare</a></li>
     </ul>
   </div>
 
@@ -1516,12 +1534,12 @@ mobileNav.querySelectorAll('a').forEach(link => {
   <div class="footer-col">
     <h3 class="footer-col-title">Visa Guides</h3>
     <ul class="footer-links">
-      <li><a href="../../../pages/visas/index.html">All Visas</a></li>
-      <li><a href="../../../pages/visas/short-stay/dtv-destination-thailand-visa-thai-visa-advice-chiang-mai-cmlocals.html">DTV</a></li>
-      <li><a href="../../../pages/visas/short-stay/index.html">Short Stay</a></li>
-      <li><a href="../../../pages/visas/long-stay/index.html">Long Stay</a></li>
-      <li><a href="../../../pages/visas/short-stay/tourist-visa.html">Tourist Visa</a></li>
-      <li><a href="../../../pages/checklists/index.html">Checklists</a></li>
+      <li><a href="../../visas/index.html">All Visas</a></li>
+      <li><a href="../../visas/short-stay/dtv-destination-thailand-visa-thai-visa-advice-chiang-mai-cmlocals.html">DTV</a></li>
+      <li><a href="../../visas/short-stay/index.html">Short Stay</a></li>
+      <li><a href="../../visas/long-stay/index.html">Long Stay</a></li>
+      <li><a href="../../visas/short-stay/tourist-visa.html">Tourist Visa</a></li>
+      <li><a href="../../checklists/index.html">Checklists</a></li>
     </ul>
   </div>
 
@@ -1531,12 +1549,13 @@ mobileNav.querySelectorAll('a').forEach(link => {
 <div class="footer-bottom-bar">
   <p>&copy; 2026 CMLocals. All rights reserved.</p>
   <div class="footer-legal-links">
-    <a href="../../../pages/privacy-policy.html">Privacy</a>
-    <a href="../../../pages/terms-of-service.html">Terms</a>
-    <a href="../../../pages/disclaimer.html">Disclaimer</a>
+    <a href="../../privacy-policy.html">Privacy</a>
+    <a href="../../terms-of-service.html">Terms</a>
+    <a href="../../disclaimer.html">Disclaimer</a>
   </div>
 </div>
 
 </footer>
+<script src="../../../../shared/js/card-click-handler.js"></script>
 </body>
 </html>
