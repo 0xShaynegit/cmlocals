@@ -1830,15 +1830,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
         </svg>
       </div>
 
-      <!-- Visa Calendar Expiry Box - Full Width Above Floating Cards -->
-      <div style="background: linear-gradient(135deg, rgba(32,42,108,0.6) 0%, rgba(13,18,117,0.6) 100%); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.2); border-radius: 16px; padding: 2rem; margin-bottom: 2rem;">
-        <div style="display: flex; gap: 1.5rem; align-items: flex-start;">
-          <div style="font-size: 2rem; flex-shrink: 0;">📅</div>
-          <div style="flex: 1;">
-            <div style="color: rgba(255,255,255,0.95); font-size: 1.05rem; font-weight: 500; line-height: 1.6; margin-bottom: 1.5rem;">Do you know when your visa is expiring? Add it to your calendar NOW!</div>
-            <button id="hero-visa-expiry-btn" style="width: 100%; padding: 0.8rem; background: #4F46E5; color: white; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; font-size: 0.95rem; transition: background 0.2s;">Set Expiry Date</button>
-          </div>
-        </div>
+      <div class="hero-floating-cards">
       </div>
 
       <div class="hero-floating-cards">
@@ -1863,29 +1855,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
             <div class="hero-stat-desc">Housing, costs, community</div>
           </div>
         </a>
-      </div>
-
-      <!-- Modal for visa expiry (same as checklist) -->
-      <div id="hero-visa-modal" style="position: fixed; inset: 0; background: rgba(0,0,0,0.5); display: none; align-items: center; justify-content: center; z-index: 2000;">
-        <div style="background: linear-gradient(135deg, #202A6C 0%, #0D1275 100%); border-radius: 16px; padding: 2.5rem; max-width: 450px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); text-align: center;">
-          <button onclick="document.getElementById('hero-visa-modal').style.display='none'" style="position: absolute; top: 1rem; right: 1rem; background: none; border: none; color: white; font-size: 2rem; cursor: pointer;">×</button>
-          <div style="font-size: 2.5rem; margin-bottom: 1rem;">📅</div>
-          <h3 style="margin-bottom: 0.5rem; font-size: 1.2rem; font-weight: 600; color: white;">Never Miss Your Visa Expiry</h3>
-          <p style="margin-bottom: 1.5rem; color: rgba(255,255,255,0.85); font-size: 0.95rem;">When immigration stamps your extension approval, enter your visa expiry date to automatically add it to your calendar with reminders for 7 days and 1 day before expiry.</p>
-          <form id="hero-visa-form" style="margin-top: 1.5rem;">
-            <div style="margin-bottom: 1rem;">
-              <label for="hero-visa-input" style="display: block; font-size: 0.95rem; margin-bottom: 0.5rem; font-weight: 500; color: white;">Visa Expiry Date</label>
-              <input type="text" id="hero-visa-input" placeholder="DD/MM/YYYY" maxlength="10" style="width: 100%; padding: 0.8em; font-size: 1rem; border: 2px solid rgba(255,255,255,.5); border-radius: 8px; background: rgba(255,255,255,.15); color: #fff; font-family: inherit; transition: all .25s ease;" />
-              <style>
-                #hero-visa-input::placeholder {
-                  color: rgba(255,255,255,.8);
-                }
-              </style>
-              <small style="display: block; margin-top: 0.4rem; opacity: 0.85; color: rgba(255,255,255,0.7);">Example: 15/06/2026</small>
-            </div>
-            <button type="submit" style="width: 100%; padding: 0.75rem; background: #4F46E5; color: white; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; font-size: 0.95rem;">ADD</button>
-          </form>
-        </div>
       </div>
     </div>
   </div>
@@ -2616,116 +2585,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     bottomOffset: 50,
     leftOffset: 20
   };
-</script>
-
-<!-- Hero Visa Expiry Modal -->
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  const heroBtn = document.getElementById('hero-visa-expiry-btn');
-  const heroModal = document.getElementById('hero-visa-modal');
-  const heroForm = document.getElementById('hero-visa-form');
-  const heroInput = document.getElementById('hero-visa-input');
-
-  if (heroBtn && heroModal) {
-    heroBtn.addEventListener('click', function(e) {
-      e.preventDefault();
-      heroModal.style.display = 'flex';
-    });
-
-    heroModal.addEventListener('click', function(e) {
-      if (e.target === heroModal) {
-        heroModal.style.display = 'none';
-      }
-    });
-  }
-
-  if (heroForm && heroInput) {
-    heroForm.addEventListener('submit', function(e) {
-      e.preventDefault();
-      const dateInput = heroInput.value.trim();
-      const dateRegex = /^(\d{2})\/(\d{2})\/(\d{4})$/;
-      const match = dateInput.match(dateRegex);
-
-      if (match) {
-        const day = match[1];
-        const month = match[2];
-        const year = match[3];
-        const date = new Date(`${year}-${month}-${day}`);
-
-        if (isNaN(date.getTime())) {
-          alert('Invalid date. Please enter a valid date.');
-          return;
-        }
-        if (date < new Date()) {
-          alert('Please enter a future date for your visa expiry.');
-          return;
-        }
-
-        const expiryDate = `${year}-${month}-${day}`;
-        const dateFormatted = `${year}${month}${day}`;
-
-        const icsContent = `BEGIN:VCALENDAR
-VERSION:2.0
-PRODID:-//CMLocals//Thailand Visa Reminder//EN
-CALSCALE:GREGORIAN
-METHOD:PUBLISH
-X-MICROSOFT-CDO-BUSYSTATUS:BUSY
-BEGIN:VEVENT
-UID:visa-expiry-${expiryDate}@cmlocals.com
-DTSTAMP:${new Date().toISOString().replace(/[-:]/g, '').split('.')[0]}Z
-DTSTART;VALUE=DATE:${dateFormatted}
-DTEND;VALUE=DATE:${dateFormatted}
-SUMMARY:Thai Visa Expiry - RENEW NOW
-DESCRIPTION:Your Thai visa expires today. Visit Chiang Mai Immigration Office to extend. Office hours: 8:30 AM - 4:30 PM (Mon-Fri)\\n\\n⬆️⬆️⬆️ Add notifications before saving:\\n* 7 days before – URGENT: Start renewal process now\\n* 1 day before – CRITICAL: Visit immigration TODAY
-LOCATION:Chiang Mai Immigration Office (near Airport or Central Festival)
-STATUS:CONFIRMED
-SEQUENCE:0
-BEGIN:VALARM
-TRIGGER:-P7D
-REPEAT:0
-DURATION:
-ACTION:DISPLAY
-DESCRIPTION:URGENT: Thai visa expires in 7 days - Start renewal process now
-END:VALARM
-BEGIN:VALARM
-TRIGGER:-P1D
-REPEAT:0
-DURATION:
-ACTION:DISPLAY
-DESCRIPTION:CRITICAL: Thai visa expires in 1 day - Visit immigration TODAY
-END:VALARM
-END:VEVENT
-END:VCALENDAR`;
-
-        const googleCalendarUrl = `https://calendar.google.com/calendar/r/eventedit?text=Thai%20Visa%20Expiry%20-%20RENEW%20NOW&dates=${dateFormatted}/${dateFormatted}&details=Your%20Thai%20visa%20expires%20today.%20Visit%20Chiang%20Mai%20Immigration%20Office%20to%20extend.%20Office%20hours:%208:30%20AM%20-%204:30%20PM%20(Mon-Fri)%0A%0A%E2%AC%86%EF%B8%8F%E2%AC%86%EF%B8%8F%E2%AC%86%EF%B8%8F%20Add%20notifications%20before%20saving:%0A*%207%20days%20before%20–%20URGENT:%20Start%20renewal%20process%20now%0A*%201%20day%20before%20–%20CRITICAL:%20Visit%20immigration%20TODAY&location=Chiang%20Mai%20Immigration%20Office%20(near%20Airport%20or%20Central%20Festival)`;
-
-        const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
-        const url = URL.createObjectURL(blob);
-
-        const calendarModal = document.createElement('div');
-        calendarModal.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:2000;';
-        calendarModal.innerHTML = `
-          <div style="background:white;border-radius:12px;padding:2rem;max-width:400px;box-shadow:0 20px 60px rgba(0,0,0,0.15);text-align:center;">
-            <div style="font-size:2.5rem;margin-bottom:1rem;">📅</div>
-            <h3 style="margin-bottom:0.5rem;font-size:1.2rem;font-weight:600;">Add to Calendar</h3>
-            <p style="margin-bottom:1.5rem;color:#666;font-size:0.95rem;">Choose your calendar app to save this reminder with notifications for 7 days and 1 day before expiry.</p>
-            <div style="display:flex;flex-direction:column;gap:0.75rem;">
-              <button onclick="window.open('${googleCalendarUrl}','_blank');this.closest('[style*=position]').remove();" style="padding:0.75rem;background:#4F46E5;color:white;border:none;border-radius:8px;font-weight:600;cursor:pointer;font-size:0.95rem;transition:background 0.2s;">📱 Open Google Calendar</button>
-              <button onclick="const link=document.createElement('a');link.href='${url}';link.download='Thai-Visa-Expiry-${expiryDate}.ics';link.click();this.closest('[style*=position]').remove();" style="padding:0.75rem;background:#6366F1;color:white;border:none;border-radius:8px;font-weight:600;cursor:pointer;font-size:0.95rem;transition:background 0.2s;">💾 Download as .ics File</button>
-              <button onclick="this.closest('[style*=position]').remove();" style="padding:0.75rem;background:#E5E7EB;color:#111;border:none;border-radius:8px;font-weight:600;cursor:pointer;font-size:0.95rem;transition:background 0.2s;">Cancel</button>
-            </div>
-          </div>
-        `;
-        document.body.appendChild(calendarModal);
-        setTimeout(() => URL.revokeObjectURL(url), 5000);
-        heroInput.value = '';
-        heroModal.style.display = 'none';
-      } else {
-        alert('Invalid date format. Please use DD/MM/YYYY (e.g., 15/06/2026)');
-      }
-    });
-  }
-});
 </script>
 
 <!-- Hamburger Toggle & Mobile Menu -->
