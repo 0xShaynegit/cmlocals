@@ -515,6 +515,128 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
 @media(max-width:960px){.primary-nav{display:none;}.header-hamburger{display:flex;}.article-layout{grid-template-columns:1fr;}.article-sidebar{position:static;}.related-grid{grid-template-columns:1fr 1fr;}}
 @media(max-width:640px){.container{padding-inline:20px;}.related-grid{grid-template-columns:1fr;}.footer-top{grid-template-columns:1fr 1fr;}.footer-bottom{flex-direction:column;align-items:flex-start;}.cta-btns{flex-direction:column;}}
 @media(max-width:400px){.footer-top{grid-template-columns:1fr;}}
+.footer-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 3.6rem 0 0;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr 1fr;
+  gap: 2.5rem;
+  padding-bottom: 3.5rem;
+  border-bottom: 1px solid rgba(255,255,255,.07);
+}
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.35rem;
+}
+.footer-col-cmlocals { gap: 1.8rem; }
+.footer-logo a {
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: inherit;
+}
+.footer-logo a img { width: 150px; height: auto; }
+.footer-tagline {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+  margin: 0;
+}
+.footer-socials {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+.social-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: background 0.2s, border-color 0.2s;
+}
+.social-icon:hover { background: var(--c-primary); border-color: var(--c-primary); }
+.social-icon.social-whatsapp:hover { color: #25D366; }
+.social-icon.social-facebook:hover { color: #1877F2; }
+.social-icon.social-messenger:hover { color: #0084FF; }
+.social-icon svg { width: 100%; height: 100%; }
+.footer-col-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0 0 1rem 0;
+}
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+.footer-links li { list-style: none; margin: 0; padding: 0; }
+.footer-links a {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.footer-links a:hover { color: white; }
+.footer-bottom-bar {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  width: 80%;
+}
+.footer-bottom-bar p {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+}
+.footer-legal-links {
+  display: flex;
+  gap: 1.8rem;
+}
+.footer-legal-links a {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.footer-legal-links a:hover { color: rgba(255, 255, 255, 0.9); }
+@media (max-width: 1024px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
+  .footer-bottom-bar { flex-direction: column; text-align: center; }
+}
+@media (max-width: 640px) {
+  .site-footer { padding: 3rem 1.5rem 0; }
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding-bottom: 1.5rem;
+  }
+  .footer-col-title { font-size: 0.9rem; }
+  .footer-links a { font-size: 0.9rem; }
+  .footer-bottom-bar {
+    padding: 1.5rem;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .footer-bottom-bar p { font-size: 0.9rem; }
+  .footer-legal-links { gap: 1rem; }
+  .footer-legal-links a { font-size: 0.9rem; }
+}
 </style>
 <link rel="stylesheet" href="../../css/chaty-front.min.css"/>
 
@@ -1018,7 +1140,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <script src="../../../shared/chaty-widget/scripts/chaty-widget.js"></script>
 
 <footer class="site-footer" role="contentinfo" style="background: #0D1117;">
-<div class="footer-top">
+<div class="footer-container">
 
   <!-- Column 1: CMLocals + Tagline + Social Icons -->
   <div class="footer-col footer-col-cmlocals">
