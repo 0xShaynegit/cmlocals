@@ -3,7 +3,7 @@
   <!-- Homepage -->
   <url>
     <loc>https://www.cmlocals.com/</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -11,7 +11,7 @@
   <!-- 404 Error Page -->
   <url>
     <loc>https://www.cmlocals.com/404.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>never</changefreq>
     <priority>0.1</priority>
   </url>
@@ -19,43 +19,43 @@
   <!-- PRIMARY HUBS (Authority Level: 1.0) -->
   <url>
     <loc>https://www.cmlocals.com/pages/visas/</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.cmlocals.com/pages/ed-visas/</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.cmlocals.com/pages/chiang-mai/</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.cmlocals.com/pages/immigration/</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.cmlocals.com/pages/checklists/</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.cmlocals.com/pages/culture/</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.cmlocals.com/pages/tools/</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>quarterly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -63,19 +63,19 @@
   <!-- VISA SUB-HUBS -->
   <url>
     <loc>https://www.cmlocals.com/pages/visas/short-stay/</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
     <loc>https://www.cmlocals.com/pages/visas/long-stay/</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
     <loc>https://www.cmlocals.com/pages/visas/guides/</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -83,37 +83,37 @@
   <!-- SHORT-STAY VISAS (0.85) -->
   <url>
     <loc>https://www.cmlocals.com/pages/visas/short-stay/dtv-destination-thailand-visa-thai-visa-advice-chiang-mai-cmlocals.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.cmlocals.com/pages/visas/short-stay/tourist-visa.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.cmlocals.com/pages/visas/short-stay/visa-exempt-entry.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.cmlocals.com/pages/visas/short-stay/visa-on-arrival.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.cmlocals.com/pages/visas/short-stay/visa-extensions.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.cmlocals.com/pages/visas/short-stay/border-runs.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -121,31 +121,31 @@
   <!-- LONG-STAY VISAS (0.85) -->
   <url>
     <loc>https://www.cmlocals.com/pages/visas/long-stay/retirement-visa-thai-visa-advice-chiang-mai-cmlocals.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.cmlocals.com/pages/visas/long-stay/marriage-visa-non-o-thai-visa-advice-chiang-mai-cmlocals.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.cmlocals.com/pages/visas/long-stay/business-visa-non-b-thai-visa-advice-chiang-mai-cmlocals.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.cmlocals.com/pages/visas/long-stay/ltr-long-term-resident-visa-thai-visa-advice-chiang-mai-cmlocals.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.cmlocals.com/pages/visas/long-stay/thailand-privilege-visa-elite-thai-visa-advice-chiang-mai-cmlocals.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -153,37 +153,37 @@
   <!-- VISA GUIDES (0.8) -->
   <url>
     <loc>https://www.cmlocals.com/pages/visas/guides/which-visa.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.cmlocals.com/pages/visas/guides/visa-comparisons.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.cmlocals.com/pages/visas/guides/visa-options-chiang-mai.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.cmlocals.com/pages/visas/guides/visa-stay-chiang-mai.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.cmlocals.com/pages/visas/guides/entry-requirements-2026.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>quarterly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
     <loc>https://www.cmlocals.com/pages/visas/guides/extension-vs-re-entry.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
@@ -191,37 +191,37 @@
   <!-- ED PROGRAMS (0.8) -->
   <url>
     <loc>https://www.cmlocals.com/pages/ed-visas/muay-thai-ed-visa-chiang-mai.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.cmlocals.com/pages/ed-visas/thai-language-ed-visa-chiang-mai.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.cmlocals.com/pages/ed-visas/hand-to-hand-combat-ed-visa-chiang-mai.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.cmlocals.com/pages/ed-visas/emergency-self-defence-ed-visa-chiang-mai.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.cmlocals.com/pages/ed-visas/volunteer-non-o-visa-chiang-mai.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
     <loc>https://www.cmlocals.com/pages/ed-visas/ed-visa-comparison-chiang-mai.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
@@ -229,67 +229,67 @@
   <!-- CHIANG MAI LIFESTYLE (0.8) -->
   <url>
     <loc>https://www.cmlocals.com/pages/chiang-mai/why-chiang-mai-base.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.cmlocals.com/pages/chiang-mai/where-to-stay.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.cmlocals.com/pages/chiang-mai/long-term-living.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.cmlocals.com/pages/chiang-mai/cost-of-living.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>quarterly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.cmlocals.com/pages/chiang-mai/things-to-do.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
     <loc>https://www.cmlocals.com/pages/chiang-mai/phones-and-banking.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>quarterly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
     <loc>https://www.cmlocals.com/pages/chiang-mai/getting-around.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
     <loc>https://www.cmlocals.com/pages/chiang-mai/healthcare.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>quarterly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.cmlocals.com/pages/chiang-mai/insurance.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>quarterly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.cmlocals.com/pages/chiang-mai/taxes.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>quarterly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.cmlocals.com/pages/chiang-mai/digital-nomads.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
@@ -297,103 +297,103 @@
   <!-- IMMIGRATION COMPLIANCE (0.8) -->
   <url>
     <loc>https://www.cmlocals.com/pages/immigration/90-day-reporting.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>quarterly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.cmlocals.com/pages/immigration/tm30-address-reporting.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>quarterly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.cmlocals.com/pages/immigration/re-entry-permits.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.cmlocals.com/pages/immigration/visa-extensions.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.cmlocals.com/pages/immigration/address-change.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
     <loc>https://www.cmlocals.com/pages/immigration/overstay-penalties.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>annual</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.cmlocals.com/pages/immigration/blacklist-status.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
     <loc>https://www.cmlocals.com/pages/immigration/queue-strategy.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.cmlocals.com/pages/immigration/financial-requirements.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>quarterly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
     <loc>https://www.cmlocals.com/pages/immigration/document-requirements.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>quarterly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
     <loc>https://www.cmlocals.com/pages/immigration/legal-rights.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>annual</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.cmlocals.com/pages/immigration/common-rejections.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
     <loc>https://www.cmlocals.com/pages/immigration/land-border-vs-air-entry.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
     <loc>https://www.cmlocals.com/pages/immigration/entry-strategy-guide.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
     <loc>https://www.cmlocals.com/pages/immigration/visa-border-runs.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.cmlocals.com/pages/immigration/thailand-digital-arrival-card.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>quarterly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.cmlocals.com/pages/immigration/immigration-best-practices.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -401,79 +401,79 @@
   <!-- CHECKLISTS (0.75) -->
   <url>
     <loc>https://www.cmlocals.com/pages/checklists/dtv-visa-checklist.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
     <loc>https://www.cmlocals.com/pages/checklists/90-day-reporting-checklist.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>quarterly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
     <loc>https://www.cmlocals.com/pages/checklists/tm30-checklist.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>quarterly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
     <loc>https://www.cmlocals.com/pages/checklists/first-entry-checklist.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
     <loc>https://www.cmlocals.com/pages/checklists/ed-visa-checklist.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
     <loc>https://www.cmlocals.com/pages/checklists/retirement-visa-checklist.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
     <loc>https://www.cmlocals.com/pages/checklists/marriage-visa-checklist.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
     <loc>https://www.cmlocals.com/pages/checklists/tourist-visa-checklist.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.cmlocals.com/pages/checklists/visa-exempt-entry-checklist.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.cmlocals.com/pages/checklists/visa-on-arrival-checklist.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.cmlocals.com/pages/checklists/re-entry-permit-checklist.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.cmlocals.com/pages/checklists/border-run-checklist.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.cmlocals.com/pages/checklists/visa-extension-checklist.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -481,55 +481,55 @@
   <!-- CULTURE (0.65) - ISOLATED SILO -->
   <url>
     <loc>https://www.cmlocals.com/pages/culture/sak-yant-chiang-mai.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>annual</changefreq>
     <priority>0.65</priority>
   </url>
   <url>
     <loc>https://www.cmlocals.com/pages/culture/sak-yant-designs-and-meanings.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>annual</changefreq>
     <priority>0.65</priority>
   </url>
   <url>
     <loc>https://www.cmlocals.com/pages/culture/sak-yant-getting.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>annual</changefreq>
     <priority>0.65</priority>
   </url>
   <url>
     <loc>https://www.cmlocals.com/pages/culture/etiquette-when-visiting-a-sak-yant-monk.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>annual</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.cmlocals.com/pages/culture/thai-culture-etiquette.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>annual</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.cmlocals.com/pages/culture/customs-traditions-thailand.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>annual</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.cmlocals.com/pages/culture/thai-food-culture.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>annual</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.cmlocals.com/pages/culture/temple-etiquette.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>annual</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.cmlocals.com/pages/culture/festivals-events-chiang-mai.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>annual</changefreq>
     <priority>0.6</priority>
   </url>
@@ -537,19 +537,19 @@
   <!-- LEGAL/META (0.5) -->
   <url>
     <loc>https://www.cmlocals.com/pages/privacy-policy.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>annual</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.cmlocals.com/pages/terms-of-service.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>annual</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.cmlocals.com/pages/disclaimer.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>annual</changefreq>
     <priority>0.5</priority>
   </url>
