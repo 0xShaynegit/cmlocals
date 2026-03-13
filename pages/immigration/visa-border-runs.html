@@ -82,78 +82,37 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .btn-fb:hover { background: var(--c-fb-h); border-color: var(--c-fb-h); }
 .btn-lg { padding: .8em 1.75em; font-size: 1rem; }
 
-.pro-tip-bubble {
-  display: inline-flex; align-items: center; justify-content: center;
-  width: 32px; height: 32px; border-radius: 50%;
-  background: linear-gradient(135deg, #6366F1 0%, #7C3AED 100%);
-  color: #fff; font-size: 0.9rem; font-weight: 700; cursor: pointer;
-  margin-left: .4rem; vertical-align: middle; transition: all .3s ease;
-  box-shadow: 0 4px 12px rgba(99, 102, 241, .3);
-}
 
-.pro-tip-bubble:hover {
-  transform: scale(1.1); box-shadow: 0 6px 20px rgba(99, 102, 241, .4);
-}
 
-.pro-tip-modal {
-  display: none; position: fixed; inset: 0; background: rgba(0,0,0,.5);
-  z-index: 1000; align-items: center; justify-content: center;
-  backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
-  animation: fadeInModal .3s ease-out;
-}
 
-.pro-tip-modal.active { display: flex; }
 
-@keyframes fadeInModal {
-  from { opacity: 0; }
+
+
+
+
+
   to { opacity: 1; }
 }
 
-.pro-tip-modal-content {
-  position: relative; background: linear-gradient(135deg, #6366F1 0%, #7C3AED 100%);
-  border-radius: 16px; padding: 2rem; max-width: 420px; width: 90%; color: #fff;
-  box-shadow: 0 20px 60px rgba(99, 102, 241, .3); overflow: hidden;
-}
 
-.pro-tip-modal-content::before {
-  content: ''; position: absolute; top: -50%; right: -50%; width: 400px; height: 400px;
-  background: radial-gradient(circle, rgba(255,255,255,.15) 0%, transparent 70%);
-  border-radius: 50%; pointer-events: none;
-}
 
-.pro-tip-modal-inner { position: relative; z-index: 1; }
 
-.pro-tip-modal-close {
-  position: absolute; top: 1.25rem; right: 1.25rem; width: 32px; height: 32px;
-  background: rgba(255,255,255,.15); border: 1.5px solid rgba(255,255,255,.3);
-  border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center;
-  font-size: 0.9rem; color: #fff; transition: all .25s ease;
-}
 
-.pro-tip-modal-close:hover {
-  background: rgba(255,255,255,.25); border-color: rgba(255,255,255,.5);
-}
 
-.pro-tip-modal-icon { font-size: 3rem; margin-bottom: 1rem; display: block; }
 
-.pro-tip-modal-label {
-  font-family: var(--font-display); font-size: 1.8rem; font-weight: 500;
-  margin-bottom: 1rem; letter-spacing: -.01em; line-height: 1.2;
-}
 
-.pro-tip-modal-description {
-  font-size: 1.05rem; line-height: 1.75; opacity: .95; margin-bottom: 1.75rem;
-}
 
-.pro-tip-modal-button {
-  display: inline-block; background: rgba(255,255,255,.2); border: 1.5px solid rgba(255,255,255,.4);
-  padding: 1.2em 2.4em; border-radius: 10px; font-size: 0.9rem; font-weight: 600;
-  color: #fff; cursor: pointer; transition: all .25s ease; font-family: var(--font-body);
-}
 
-.pro-tip-modal-button:hover {
-  background: rgba(255,255,255,.3); border-color: rgba(255,255,255,.6); transform: translateY(-2px);
-}
+
+
+
+
+
+
+
+
+
+
 
 /* ============================================================
    HEADER
@@ -842,9 +801,6 @@ figure img {
   display: block;
   height: auto;
 }
-</style>
-<link rel="stylesheet" href="../../css/chaty-front.min.css"/>
-
 
 <style>
 /* ============================================================
@@ -1201,7 +1157,7 @@ figure img {
   max-width: 1400px;
   margin: 0 auto;
   padding: 1.8rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1738,136 +1694,14 @@ figure img {
      ======================================================== -->
 
 
-<script>
-// Pro Tip Bubble Modal
-document.addEventListener('DOMContentLoaded', function() {
-  const bubble = document.getElementById('pro-tip-bubble-btn');
-  const modal = document.getElementById('pro-tip-modal');
 
-  if (bubble && modal) {
-    bubble.addEventListener('click', function(e) {
-      e.preventDefault();
-      modal.classList.add('active');
-    });
-
-    modal.addEventListener('click', function(e) {
-      if (e.target === modal) {
-        modal.classList.remove('active');
-      }
-    });
-  }
-
-  // Handle visa date form submission
-  const visaDateForm = document.getElementById('visa-date-form');
-  const visaExpiryInput = document.getElementById('visa-expiry-input');
-
-  if (visaDateForm && visaExpiryInput) {
-    visaDateForm.addEventListener('submit', function(e) {
-      e.preventDefault();
-      const dateInput = visaExpiryInput.value.trim();
-
-      // Parse DD/MM/YYYY format
-      const dateRegex = /^(\d{2})\/(\d{2})\/(\d{4})$/;
-      const match = dateInput.match(dateRegex);
-
-      if (match) {
-        const day = match[1];
-        const month = match[2];
-        const year = match[3];
-
-        // Validate date
-        const date = new Date(`${year}-${month}-${day}`);
-        if (isNaN(date.getTime())) {
-          alert('Invalid date. Please enter a valid date.');
-          return;
-        }
-
-        // Check if date is in the future
-        if (date < new Date()) {
-          alert('Please enter a future date for your visa expiry.');
-          return;
-        }
-
-        const expiryDate = `${year}-${month}-${day}`;
-        const dateFormatted = `${year}${month}${day}`;
-
-        // Create iCalendar with notification alarms (7 days and 1 day before)
-        const icsContent = `BEGIN:VCALENDAR
-VERSION:2.0
-PRODID:-//CMLocals//Thailand Visa Reminder//EN
-CALSCALE:GREGORIAN
-METHOD:PUBLISH
-X-MICROSOFT-CDO-BUSYSTATUS:BUSY
-BEGIN:VEVENT
-UID:visa-expiry-${expiryDate}@cmlocals.com
-DTSTAMP:${new Date().toISOString().replace(/[-:]/g, '').split('.')[0]}Z
-DTSTART;VALUE=DATE:${dateFormatted}
-DTEND;VALUE=DATE:${dateFormatted}
-SUMMARY:Thai Visa Expiry - RENEW NOW
-DESCRIPTION:Your Thai visa expires today. Visit Chiang Mai Immigration Office to extend. Office hours: 8:30 AM - 4:30 PM (Mon-Fri)\\n\\n⬆️⬆️⬆️ Add notifications before saving:\\n* 7 days before – URGENT: Start renewal process now\\n* 1 day before – CRITICAL: Visit immigration TODAY
-LOCATION:Chiang Mai Immigration Office (near Airport or Central Festival)
-STATUS:CONFIRMED
-SEQUENCE:0
-BEGIN:VALARM
-TRIGGER:-P7D
-REPEAT:0
-DURATION:
-ACTION:DISPLAY
-DESCRIPTION:URGENT: Thai visa expires in 7 days - Start renewal process now
-END:VALARM
-BEGIN:VALARM
-TRIGGER:-P1D
-REPEAT:0
-DURATION:
-ACTION:DISPLAY
-DESCRIPTION:CRITICAL: Thai visa expires in 1 day - Visit immigration TODAY
-END:VALARM
-END:VEVENT
-END:VCALENDAR`;
-
-        // Create Google Calendar link
-        const googleCalendarUrl = `https://calendar.google.com/calendar/r/eventedit?text=Thai%20Visa%20Expiry%20-%20RENEW%20NOW&dates=${dateFormatted}/${dateFormatted}&details=Your%20Thai%20visa%20expires%20today.%20Visit%20Chiang%20Mai%20Immigration%20Office%20to%20extend.%20Office%20hours:%208:30%20AM%20-%204:30%20PM%20(Mon-Fri)%0A%0A%E2%AC%86%EF%B8%8F%E2%AC%86%EF%B8%8F%E2%AC%86%EF%B8%8F%20Add%20notifications%20before%20saving:%0A*%207%20days%20before%20–%20URGENT:%20Start%20renewal%20process%20now%0A*%201%20day%20before%20–%20CRITICAL:%20Visit%20immigration%20TODAY&location=Chiang%20Mai%20Immigration%20Office%20(near%20Airport%20or%20Central%20Festival)`;
-
-        // Create blob for .ics fallback
-        const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
-        const url = URL.createObjectURL(blob);
-
-        // Show calendar option modal
-        const calendarModal = document.createElement('div');
-        calendarModal.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:2000;';
-        calendarModal.innerHTML = `
-          <div style="background:white;border-radius:12px;padding:2rem;max-width:400px;box-shadow:0 20px 60px rgba(0,0,0,0.15);text-align:center;">
-            <div style="font-size:2.5rem;margin-bottom:1rem;">📅</div>
-            <h3 style="margin-bottom:0.5rem;font-size:1.2rem;font-weight:600;">Add to Calendar</h3>
-            <p style="margin-bottom:1.5rem;color:#666;font-size:0.95rem;">Choose your calendar app to save this reminder with notifications for 7 days and 1 day before expiry.</p>
-            <div style="display:flex;flex-direction:column;gap:0.75rem;">
-              <button onclick="window.open('${googleCalendarUrl}','_blank');this.closest('[style*=position]').remove();" style="padding:0.75rem;background:#4F46E5;color:white;border:none;border-radius:8px;font-weight:600;cursor:pointer;font-size:0.95rem;transition:background 0.2s;">📱 Open Google Calendar</button>
-              <button onclick="const link=document.createElement('a');link.href='${url}';link.download='Thai-Visa-Expiry-${expiryDate}.ics';link.click();this.closest('[style*=position]').remove();" style="padding:0.75rem;background:#6366F1;color:white;border:none;border-radius:8px;font-weight:600;cursor:pointer;font-size:0.95rem;transition:background 0.2s;">💾 Download as .ics File</button>
-              <button onclick="this.closest('[style*=position]').remove();" style="padding:0.75rem;background:#E5E7EB;color:#111;border:none;border-radius:8px;font-weight:600;cursor:pointer;font-size:0.95rem;transition:background 0.2s;">Cancel</button>
-            </div>
-          </div>
-        `;
-        document.body.appendChild(calendarModal);
-
-        // Cleanup blob URL after a delay
-        setTimeout(() => URL.revokeObjectURL(url), 5000);
-
-        // Clear form and close modal immediately
-        visaExpiryInput.value = '';
-        modal.classList.remove('active');
-      } else {
-        alert('Invalid date format. Please use DD/MM/YYYY (e.g., 15/06/2026)');
-      }
-    });
-  }
-});
-</script>
 
 <script src="../../js/nav.js"></script>
 <script src="../../../shared/js/header-handler.js" defer></script>
-<script src="../../js/chaty-widget.js" defer></script>
+
 
 <script src="../../../shared/js/card-click-handler.js"></script>
+<script src="../../../shared/chaty-widget/scripts/chaty-widget.js"></script>
 
 <footer class="site-footer" role="contentinfo" style="background: #0D1117;">
 <div class="footer-container">

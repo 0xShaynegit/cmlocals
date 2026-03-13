@@ -766,9 +766,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .page-hero h1 { font-size: 1.75rem; }
   .footer-top { grid-template-columns: 1fr; }
 }
-</style>
-<link rel="stylesheet" href="../../css/chaty-front.min.css"/>
-
 
 <style>
 /* ============================================================
@@ -1125,7 +1122,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   max-width: 1400px;
   margin: 0 auto;
   padding: 1.8rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1174,107 +1171,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .footer-legal-links a { font-size: 0.9rem; }
 }
 
-/* ============================================================
-   PRO TIP MODAL
-   ============================================================ */
-.pro-tip-modal {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 1000;
-  align-items: center;
-  justify-content: center;
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  animation: fadeInModal 0.3s ease-out;
-}
-
-.pro-tip-modal.active {
-  display: flex;
-}
-
-.pro-tip-modal-content {
-  background: white;
-  border-radius: 12px;
-  padding: 2rem;
-  max-width: 500px;
-  width: 90%;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-}
-
-.pro-tip-modal-title {
-  margin: 0 0 1rem 0;
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: var(--c-body);
-  font-family: var(--font-body);
-}
-
-.pro-tip-modal-text {
-  margin: 0 0 1.5rem 0;
-  font-size: 0.95rem;
-  line-height: 1.6;
-  color: var(--c-muted);
-}
-
-.pro-tip-modal-buttons {
-  display: flex;
-  gap: 0.8rem;
-  flex-direction: column;
-}
-
-.pro-tip-modal-buttons button {
-  padding: 0.8rem 1.2rem;
-  border: none;
-  border-radius: 6px;
-  font-size: 0.95rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-family: var(--font-body);
-}
-
-.pro-tip-modal-buttons .btn-primary {
-  background: linear-gradient(135deg, #6366F1 0%, #7C3AED 100%);
-  color: white;
-}
-
-.pro-tip-modal-buttons .btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3);
-}
-
-.pro-tip-modal-buttons .btn-secondary {
-  background: white;
-  color: var(--c-body);
-  border: 1px solid rgba(99, 102, 241, 0.3);
-}
-
-.pro-tip-modal-buttons .btn-secondary:hover {
-  background: rgba(99, 102, 241, 0.05);
-}
-
-.pro-tip-modal-buttons .btn-cancel {
-  background: transparent;
-  color: var(--c-muted);
-  border: none;
-}
-
-.pro-tip-modal-buttons .btn-cancel:hover {
-  color: var(--c-body);
-}
-
-@keyframes fadeInModal {
-  from {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
 </style>
 </head>
 <body>
@@ -1482,28 +1378,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 </nav>
 
 <!-- ========================================================
-     90-DAY PRO TIP
-     ======================================================== -->
-<div style="position: relative; background: linear-gradient(135deg, rgba(32,42,108,0.15) 0%, rgba(13,18,117,0.1) 100%); border: 1px solid rgba(99,102,241,0.2); border-radius: 12px; padding: 2rem; margin: 2rem var(--edge); max-width: 100%;">
-  <div style="display: flex; align-items: flex-start; gap: 1.5rem; max-width: 68ch;">
-    <div style="flex-shrink: 0;">
-      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: #6366F1;">
-        <circle cx="12" cy="12" r="10"></circle>
-        <polyline points="12 6 12 12 16 14"></polyline>
-      </svg>
-    </div>
-    <div>
-      <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; font-weight: 600; color: var(--c-body); font-family: var(--font-body);">Save Your 90-Day Deadline</h3>
-      <p style="margin: 0 0 1.5rem 0; font-size: 0.95rem; line-height: 1.6; color: var(--c-muted);">Enter your entry date to get a calendar reminder for your filing deadline (7–14 days before the 90-day mark).</p>
-      <div style="display: flex; align-items: center; gap: 0.8rem; flex-wrap: wrap;">
-        <input type="text" id="proTipDateInput" placeholder="DD/MM/YYYY" style="padding: 0.6rem 0.8rem; border: 1px solid rgba(99,102,241,0.3); border-radius: 6px; font-size: 0.9rem; font-family: var(--font-body); width: 120px;">
-        <button id="proTipSubmitBtn" style="padding: 0.6rem 1.2rem; background: linear-gradient(135deg, #6366F1 0%, #7C3AED 100%); color: #fff; border: none; border-radius: 6px; font-size: 0.9rem; font-weight: 600; cursor: pointer; transition: all .3s ease;">Add to Calendar</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ========================================================
      CHECKLIST
      ======================================================== -->
 <section class="checklist-section">
@@ -1676,175 +1550,8 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
-<!-- 90-Day Pro Tip Modal -->
-<div id="proTipCalendarModal" class="pro-tip-modal">
-  <div class="pro-tip-modal-content">
-    <h3 class="pro-tip-modal-title">Add 90-Day Deadline to Calendar</h3>
-    <p class="pro-tip-modal-text">Which calendar would you like to use?</p>
-    <div class="pro-tip-modal-buttons">
-      <button class="btn-primary" id="proTipGoogleCalendar">Google Calendar</button>
-      <button class="btn-secondary" id="proTipDownloadIcs">.ics File Download</button>
-      <button class="btn-cancel" id="proTipCancel">Cancel</button>
-    </div>
-  </div>
-</div>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  const dateInput = document.getElementById('proTipDateInput');
-  const submitBtn = document.getElementById('proTipSubmitBtn');
-  const modal = document.getElementById('proTipCalendarModal');
-  const googleCalendarBtn = document.getElementById('proTipGoogleCalendar');
-  const downloadIcsBtn = document.getElementById('proTipDownloadIcs');
-  const cancelBtn = document.getElementById('proTipCancel');
-
-  let calculatedDate = null;
-
-  submitBtn.addEventListener('click', function() {
-    const dateValue = dateInput.value.trim();
-
-    // Validate DD/MM/YYYY format
-    const dateRegex = /^(\d{2})\/(\d{2})\/(\d{4})$/;
-    const match = dateValue.match(dateRegex);
-
-    if (!match) {
-      alert('Please enter date in DD/MM/YYYY format');
-      return;
-    }
-
-    const [, day, month, year] = match;
-    const entryDate = new Date(year, parseInt(month) - 1, parseInt(day));
-
-    // Check if date is valid
-    if (isNaN(entryDate.getTime())) {
-      alert('Please enter a valid date');
-      return;
-    }
-
-    // Check if date is in the future
-    if (entryDate > new Date()) {
-      alert('Please enter a past date (your entry date)');
-      return;
-    }
-
-    // Calculate 90-day deadline
-    const deadlineDate = new Date(entryDate);
-    deadlineDate.setDate(deadlineDate.getDate() + 90);
-
-    // Calculate filing window start (14 days before)
-    const filingStart = new Date(deadlineDate);
-    filingStart.setDate(filingStart.getDate() - 14);
-
-    calculatedDate = { entry: entryDate, deadline: deadlineDate, filingStart: filingStart };
-
-    // Show calendar selection modal
-    modal.classList.add('active');
-  });
-
-  googleCalendarBtn.addEventListener('click', function() {
-    if (calculatedDate) {
-      const filingStartStr = calculatedDate.filingStart.toISOString().split('T')[0].replace(/-/g, '');
-      const deadlineStr = calculatedDate.deadline.toISOString().split('T')[0].replace(/-/g, '');
-
-      const title = '90-Day Reporting Deadline - File Now';
-      const description = 'Your 90-day reporting deadline is ' +
-        calculatedDate.deadline.toLocaleDateString('en-GB') +
-        '. File between now and 14 days before this date at Chiang Mai Immigration Office.\\n\\n' +
-        'Location: 71 Moo 3 Airport Rd, Suthep, Chiang Mai\\n' +
-        'Hours: Mon–Fri 8:30 AM–4:30 PM';
-
-      const url = 'https://calendar.google.com/calendar/r/eventedit?' +
-        'text=' + encodeURIComponent(title) +
-        '&dates=' + filingStartStr + '/' + deadlineStr +
-        '&details=' + encodeURIComponent(description) +
-        '&location=' + encodeURIComponent('Chiang Mai Immigration Office');
-
-      window.open(url, '_blank');
-      modal.classList.remove('active');
-      dateInput.value = '';
-    }
-  });
-
-  downloadIcsBtn.addEventListener('click', function() {
-    if (calculatedDate) {
-      const icsContent = generateICS(calculatedDate);
-      downloadICS(icsContent);
-      modal.classList.remove('active');
-      dateInput.value = '';
-    }
-  });
-
-  cancelBtn.addEventListener('click', function() {
-    modal.classList.remove('active');
-  });
-
-  modal.addEventListener('click', function(e) {
-    if (e.target === modal) {
-      modal.classList.remove('active');
-    }
-  });
-
-  function generateICS(dateObj) {
-    const uid = 'ninety-day-deadline-' + dateObj.deadline.getTime() + '@cmlocals.com';
-    const startDate = formatDateForICS(dateObj.filingStart);
-    const endDate = formatDateForICS(new Date(dateObj.deadline.getTime() + 86400000));
-
-    return `BEGIN:VCALENDAR
-VERSION:2.0
-PRODID:-//CMLocals//Thai Visa Calendar//EN
-CALSCALE:GREGORIAN
-METHOD:PUBLISH
-BEGIN:VEVENT
-UID:${uid}
-DTSTAMP:${formatDateForICS(new Date())}
-DTSTART:${startDate}
-DTEND:${endDate}
-SUMMARY:90-Day Reporting Deadline - File Now
-DESCRIPTION:Your 90-day reporting deadline is ${dateObj.deadline.toLocaleDateString('en-GB')}. You can file from now until 14 days before this date at Chiang Mai Immigration Office.\\n\\nLocation: 71 Moo 3 Airport Rd\\, Suthep\\, Chiang Mai\\nHours: Mon–Fri 8:30 AM–4:30 PM\\n\\nWhat you need: Original passport\\, TM.47 form (if filing in person)\\, proof of address (optional).
-LOCATION:Chiang Mai Immigration Office
-SEQUENCE:0
-STATUS:CONFIRMED
-TRANSP:OPAQUE
-BEGIN:VALARM
-TRIGGER:-P7D
-ACTION:DISPLAY
-DESCRIPTION:90-Day Report Due in 7 Days
-END:VALARM
-BEGIN:VALARM
-TRIGGER:-P1D
-ACTION:DISPLAY
-DESCRIPTION:90-Day Report Due Tomorrow
-END:VALARM
-END:VEVENT
-END:VCALENDAR`;
-  }
-
-  function formatDateForICS(date) {
-    const year = date.getFullYear();
-    const month = String(date.getMonth() + 1).padStart(2, '0');
-    const day = String(date.getDate()).padStart(2, '0');
-    const hours = String(date.getHours()).padStart(2, '0');
-    const minutes = String(date.getMinutes()).padStart(2, '0');
-    const seconds = String(date.getSeconds()).padStart(2, '0');
-    return `${year}${month}${day}T${hours}${minutes}${seconds}`;
-  }
-
-  function downloadICS(icsContent) {
-    const blob = new Blob([icsContent], { type: 'text/calendar' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = '90-day-reporting-deadline.ics';
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
-  }
-});
-</script>
 
 <script src="../../../shared/js/header-handler.js" defer></script>
-<script src="../../../shared/chaty-widget/scripts/chaty-widget.js"></script>
 
 <footer class="site-footer" role="contentinfo" style="background: #0D1117;">
 <div class="footer-container">
@@ -1922,6 +1629,8 @@ END:VCALENDAR`;
 </div>
 
 </footer>
+
 <script src="../../../shared/js/card-click-handler.js"></script>
+<script src="../../../shared/chaty-widget/scripts/chaty-widget.js"></script>
 </body>
 </html>

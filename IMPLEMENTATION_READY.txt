@@ -1,0 +1,168 @@
+================================================================================
+ED VISA 90-DAY REPORTING MODAL - IMPLEMENTATION READY
+================================================================================
+
+CODE TEMPLATE GENERATED: /c/ZZZWebsites/cmlocals/ED_VISA_90DAY_TEMPLATE.md
+
+NO EDITS HAVE BEEN MADE TO ANY FILES YET.
+
+================================================================================
+TEMPLATE STRUCTURE (451 lines)
+================================================================================
+
+PART 1: Inline Button HTML
+   - Lines 14-27
+   - Ready-to-copy <button> element
+   - Styled with indigo (#4F46E5) background
+
+PART 2: CSS Stylesheet Section
+   - Lines 31-161
+   - 130 lines of complete CSS
+   - Includes:
+     * .pro-tip-modal (backdrop, fixed positioning)
+     * .pro-tip-modal-content (white box, shadow)
+     * .pro-tip-modal-title / .pro-tip-modal-text (typography)
+     * .pro-tip-date-input-group (input wrapper)
+     * .pro-tip-modal-buttons (button group)
+     * Button variants (primary, secondary, cancel)
+     * @keyframes fadeInModal animation
+   - All color variables use CSS custom properties
+
+PART 3: Modal HTML
+   - Lines 163-182
+   - 19 lines of HTML
+   - Includes:
+     * Modal div with id="proTipCalendarModal"
+     * Modal content wrapper with correct classes
+     * Title: "Add 90-Day Deadline to Calendar"
+     * Text: "File between 14 days BEFORE and 7 days AFTER to avoid 2,000 THB fine"
+     * Date input (DD/MM/YYYY format)
+     * Three buttons: Google Calendar, .ics download, Cancel
+   - Ready to copy-paste before </article> tag
+
+PART 4: JavaScript Logic
+   - Lines 186-340
+   - 154 lines of complete script
+   - Includes:
+     * DOMContentLoaded event handler
+     * Button selector array (supports multiple buttons)
+     * Date input validation (DD/MM/YYYY format)
+     * Past date verification
+     * 90-day deadline calculation
+     * Filing window calculation (14 days before to 7 days after)
+     * Google Calendar URL generation
+     * .ics file generation with VALARM reminders
+     * Modal open/close handlers
+     * Backdrop click handling
+     * ICS formatting functions
+     * Blob-based file download logic
+
+================================================================================
+IMPLEMENTATION SCOPE
+================================================================================
+
+ACTION REQUIRED: 1 file only
+FILE: /c/ZZZWebsites/cmlocals/pages/ed-visas/muay-thai-ed-visa-chiang-mai.html
+
+STEPS:
+1. Change button ID from "openReportingReminder" to "open90DayReminder" (line ~1291)
+2. Add CSS before </style> tag (from PART 2)
+3. Add modal HTML before </article> tag (from PART 3, around line 1355)
+4. Add JavaScript before </body> tag (from PART 4)
+
+FILES TO SKIP: 6
+- emergency-self-defence-ed-visa-chiang-mai.html (school handles TM.47)
+- hand-to-hand-combat-ed-visa-chiang-mai.html (school handles TM.47)
+- thai-language-ed-visa-chiang-mai.html (school handles TM.47)
+- volunteer-non-o-visa-chiang-mai.html (no 90-day filing requirement)
+- ed-visa-comparison-chiang-mai.html (structure reference only)
+- index.html (link reference only)
+
+================================================================================
+CODE QUALITY VERIFICATION
+================================================================================
+
+HTML Structure
+   - Valid semantic HTML
+   - Proper nesting
+   - ID attributes unique within page
+   - Classes match CSS selectors
+
+CSS Structure
+   - Uses CSS custom properties (fallback friendly)
+   - BEM-like naming convention
+   - Proper specificity
+   - Includes media queries (responsive design)
+   - Animation keyframes included
+   - Vendor prefixes for backdrop-filter
+
+JavaScript Structure
+   - Event-driven (DOMContentLoaded)
+   - Proper error handling (date validation)
+   - Closure-based state management
+   - DOM selector queries with null checks
+   - Event listener cleanup via modal delegation
+   - Function encapsulation
+   - Browser compatibility (standard APIs only)
+
+Accessibility
+   - Modal has proper HTML5 semantics
+   - Button labels are descriptive
+   - Date format guidance ("DD/MM/YYYY") is clear
+   - Error messages appear in alerts
+
+================================================================================
+DEPENDENCIES & COMPATIBILITY
+================================================================================
+
+CSS Custom Properties Used:
+- --c-body (text color)
+- --c-muted (lighter text)
+- --font-body (body font)
+
+JavaScript API Requirements:
+- document.addEventListener (all modern browsers)
+- document.querySelector (all modern browsers)
+- Date object (all browsers)
+- Blob API (all modern browsers)
+- URL.createObjectURL (all modern browsers)
+- window.open (all browsers, for Google Calendar)
+
+Browser Support:
+- Chrome/Edge 88+
+- Firefox 87+
+- Safari 14+
+- IE: Not supported
+
+External Dependencies:
+- None (vanilla JavaScript/CSS)
+- Google Calendar link uses standard query parameters
+
+================================================================================
+FILES INVOLVED
+================================================================================
+
+TEMPLATE FILE (read-only):
+/c/ZZZWebsites/cmlocals/ED_VISA_90DAY_TEMPLATE.md
+- Contains all code ready to copy
+- 451 lines
+- Markdown format with syntax highlighting
+
+TARGET FILE FOR EDITING:
+/c/ZZZWebsites/cmlocals/pages/ed-visas/muay-thai-ed-visa-chiang-mai.html
+- Line 1291: Button ID change
+- Before </style>: Add CSS
+- Before </article> (around line 1355): Add modal HTML
+- Before </body>: Add JavaScript
+
+REFERENCE FILES (analyzed, no changes):
+/c/ZZZWebsites/cmlocals/pages/checklists/90-day-reporting-checklist.html
+- Original implementation (used as template)
+- Confirmed same modal pattern works
+
+================================================================================
+NEXT STEP
+================================================================================
+
+Copy code from ED_VISA_90DAY_TEMPLATE.md and apply edits to target file:
+/c/ZZZWebsites/cmlocals/pages/ed-visas/muay-thai-ed-visa-chiang-mai.html

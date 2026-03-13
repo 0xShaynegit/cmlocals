@@ -500,7 +500,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .hero {
   background: var(--c-dark);
   overflow: hidden; position: relative;
-  padding-top: clamp(2rem, 3.5vw, 5rem);
+  padding-top: 100px;
   padding-bottom: 0;
 }
 
@@ -586,10 +586,16 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .hero-link:hover { color: rgba(255,255,255,.95); }
 .hero-link svg { display: inline; vertical-align: middle; margin-left: .2em; }
 
+/* Hero visuals stack */
+.hero-visuals-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
 /* Hero visual */
 .hero-visual {
-  position: relative; align-self: flex-start;
-  margin-top: 16.875rem;
+  position: relative;
 }
 
 .hero-visual-frame {
@@ -599,8 +605,14 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   background: linear-gradient(135deg, #1a2035 0%, #0d1520 50%, #150d2a 100%);
   border: 1px solid var(--c-border-dark);
   padding: 1.25rem;
-  min-height: 260px;
-  display: flex; align-items: flex-start;
+  min-height: 180px;
+  display: flex; align-items: center; justify-content: center;
+}
+
+.hero-visual:first-child .hero-visual-frame {
+  background: linear-gradient(135deg, #313649 0%, #252c36 50%, #2c2540 100%);
+  padding: 0.3rem;
+  min-height: 45px;
 }
 
 .hero-img-placeholder {
@@ -615,7 +627,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 .hero-floating-cards {
   position: relative; z-index: 2; width: 100%;
-  display: grid; grid-template-columns: 1fr 1fr 1fr; gap: .6rem;
+  display: flex; flex-direction: column; gap: .6rem;
 }
 
 .hero-stat-card {
@@ -658,6 +670,37 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   font-size: 0.9rem; color: rgba(255,255,255,.85);
 }
 .trust-item-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--c-primary); flex-shrink: 0; }
+
+/* ============================================================
+   VISA CALENDAR MODAL
+   ============================================================ */
+
+
+
+
+
+  to { opacity: 1; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ============================================================
    PATHS SECTION
@@ -1231,7 +1274,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   max-width: 1400px;
   margin: 0 auto;
   padding: 1.8rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1598,9 +1641,12 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .dropdown-menu {
     display: none !important;
   }
+
+  
+  
+  
 }
 </style>
-<link rel="stylesheet" href="css/chaty-front.min.css"/>
 </head>
 <body>
 
@@ -1819,42 +1865,50 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     </p>
   </div>
 
-  <!-- Right: Visual -->
-  <div class="hero-visual" aria-hidden="true">
-    <div class="hero-visual-frame">
-      <div class="hero-img-placeholder">
-        <!-- Chiang Mai abstract skyline -->
-        <svg class="hero-skyline" viewBox="0 0 800 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path d="M0 200 L0 120 L40 120 L40 90 L50 90 L50 60 L55 60 L55 40 L60 40 L60 60 L65 60 L65 90 L75 90 L75 70 L80 70 L80 50 L84 50 L84 30 L88 30 L88 50 L92 50 L92 70 L100 70 L100 100 L110 100 L110 80 L115 80 L115 60 L120 60 L120 80 L125 80 L125 100 L140 100 L140 110 L160 110 L160 90 L165 90 L165 65 L169 65 L169 45 L173 45 L173 65 L177 65 L177 90 L185 90 L185 75 L190 75 L190 55 L194 55 L194 35 L198 35 L198 20 L202 20 L202 35 L206 35 L206 55 L210 55 L210 75 L220 75 L220 95 L230 95 L230 105 L250 105 L250 85 L258 85 L258 60 L263 50 L268 60 L268 85 L280 85 L280 100 L300 100 L300 115 L320 115 L320 90 L328 90 L328 65 L335 65 L335 90 L345 90 L345 115 L370 115 L370 95 L378 95 L378 70 L385 55 L392 70 L392 95 L400 95 L400 115 L430 115 L430 100 L440 100 L440 80 L447 80 L447 55 L452 55 L452 35 L457 35 L457 55 L462 55 L462 80 L470 80 L470 100 L490 100 L490 110 L510 110 L510 85 L518 85 L518 60 L524 60 L524 85 L532 85 L532 110 L560 110 L560 90 L568 90 L568 70 L575 70 L575 90 L582 90 L582 110 L600 110 L600 120 L620 120 L620 100 L628 100 L628 75 L635 75 L635 50 L640 50 L640 75 L645 75 L645 100 L660 100 L660 115 L680 115 L680 125 L700 125 L700 110 L710 110 L710 90 L716 90 L716 65 L721 65 L721 90 L727 90 L727 110 L740 110 L740 125 L760 125 L760 130 L800 130 L800 200 Z" fill="rgba(255,255,255,0.07)"/>
-          <path d="M0 200 L0 150 L50 150 L50 135 L80 135 L80 145 L120 145 L120 130 L160 130 L160 140 L200 140 L200 125 L240 125 L240 138 L280 138 L280 128 L320 128 L320 142 L360 142 L360 130 L400 130 L400 145 L440 145 L440 132 L480 132 L480 148 L520 148 L520 135 L560 135 L560 148 L600 148 L600 138 L640 138 L640 150 L680 150 L680 140 L720 140 L720 155 L760 155 L760 145 L800 145 L800 200 Z" fill="rgba(255,255,255,0.04)"/>
-        </svg>
+  <!-- Right: Two stacked visuals -->
+  <div class="hero-visuals-stack">
+    <div class="hero-visual">
+      <div class="hero-visual-frame">
+        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 1.5rem; gap: 1rem;">
+          <p style="color: rgba(255,255,255,.88); font-size: 1rem; margin: 0; max-width: 280px; line-height: 1.5; font-weight: 600;">Do you know when your visa is expiring? Add it to you calendar NOW!</p>
+          <a href="#" onclick="document.getElementById('pro-tip-modal').classList.add('active'); return false;" class="btn btn-primary btn-lg">Add your visa expiry to your calendar now!</a>
+        </div>
       </div>
+    </div>
 
-      <div class="hero-floating-cards">
-      </div>
+    <div class="hero-visual" aria-hidden="true">
+      <div class="hero-visual-frame">
+        <div class="hero-img-placeholder">
+          <!-- Chiang Mai abstract skyline -->
+          <svg class="hero-skyline" viewBox="0 0 800 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M0 200 L0 120 L40 120 L40 90 L50 90 L50 60 L55 60 L55 40 L60 40 L60 60 L65 60 L65 90 L75 90 L75 70 L80 70 L80 50 L84 50 L84 30 L88 30 L88 50 L92 50 L92 70 L100 70 L100 100 L110 100 L110 80 L115 80 L115 60 L120 60 L120 80 L125 80 L125 100 L140 100 L140 110 L160 110 L160 90 L165 90 L165 65 L169 65 L169 45 L173 45 L173 65 L177 65 L177 90 L185 90 L185 75 L190 75 L190 55 L194 55 L194 35 L198 35 L198 20 L202 20 L202 35 L206 35 L206 55 L210 55 L210 75 L220 75 L220 95 L230 95 L230 105 L250 105 L250 85 L258 85 L258 60 L263 50 L268 60 L268 85 L280 85 L280 100 L300 100 L300 115 L320 115 L320 90 L328 90 L328 65 L335 65 L335 90 L345 90 L345 115 L370 115 L370 95 L378 95 L378 70 L385 55 L392 70 L392 95 L400 95 L400 115 L430 115 L430 100 L440 100 L440 80 L447 80 L447 55 L452 55 L452 35 L457 35 L457 55 L462 55 L462 80 L470 80 L470 100 L490 100 L490 110 L510 110 L510 85 L518 85 L518 60 L524 60 L524 85 L532 85 L532 110 L560 110 L560 90 L568 90 L568 70 L575 70 L575 90 L582 90 L582 110 L600 110 L600 120 L620 120 L620 100 L628 100 L628 75 L635 75 L635 50 L640 50 L640 75 L645 75 L645 100 L660 100 L660 115 L680 115 L680 125 L700 125 L700 110 L710 110 L710 90 L716 90 L716 65 L721 65 L721 90 L727 90 L727 110 L740 110 L740 125 L760 125 L760 130 L800 130 L800 200 Z" fill="rgba(255,255,255,0.07)"/>
+            <path d="M0 200 L0 150 L50 150 L50 135 L80 135 L80 145 L120 145 L120 130 L160 130 L160 140 L200 140 L200 125 L240 125 L240 138 L280 138 L280 128 L320 128 L320 142 L360 142 L360 130 L400 130 L400 145 L440 145 L440 132 L480 132 L480 148 L520 148 L520 135 L560 135 L560 148 L600 148 L600 138 L640 138 L640 150 L680 150 L680 140 L720 140 L720 155 L760 155 L760 145 L800 145 L800 200 Z" fill="rgba(255,255,255,0.04)"/>
+          </svg>
+        </div>
 
-      <div class="hero-floating-cards">
-        <a href="pages/visas/long-stay/index.html" class="hero-stat-card hero-stat-card--accent" style="text-decoration: none; color: inherit;">
-          <div class="hero-stat-icon hero-stat-icon--primary" aria-hidden="true">&#128896;</div>
-          <div class="hero-stat-body">
-            <div class="hero-stat-val">Long-stay visas</div>
-            <div class="hero-stat-desc">ED, Volunteer, DTV, LTR</div>
-          </div>
-        </a>
-        <a href="#special-programs-heading" class="hero-stat-card" style="text-decoration: none; color: inherit;">
-          <div class="hero-stat-icon" aria-hidden="true">&#128081;</div>
-          <div class="hero-stat-body">
-            <div class="hero-stat-val">Special programs</div>
-            <div class="hero-stat-desc">DTV, LTR, Privilege, Business/PR</div>
-          </div>
-        </a>
-        <a href="pages/chiang-mai/index.html" class="hero-stat-card" style="text-decoration: none; color: inherit;">
-          <div class="hero-stat-icon" aria-hidden="true">&#127959;</div>
-          <div class="hero-stat-body">
-            <div class="hero-stat-val">Chiang Mai life</div>
-            <div class="hero-stat-desc">Housing, costs, community</div>
-          </div>
-        </a>
+        <div class="hero-floating-cards">
+          <a href="pages/visas/long-stay/index.html" class="hero-stat-card hero-stat-card--accent" style="text-decoration: none; color: inherit;">
+            <div class="hero-stat-icon hero-stat-icon--primary" aria-hidden="true">&#128896;</div>
+            <div class="hero-stat-body">
+              <div class="hero-stat-val">Long-stay visas</div>
+              <div class="hero-stat-desc">ED, Volunteer, DTV, LTR</div>
+            </div>
+          </a>
+          <a href="#special-programs-heading" class="hero-stat-card" style="text-decoration: none; color: inherit;">
+            <div class="hero-stat-icon" aria-hidden="true">&#128081;</div>
+            <div class="hero-stat-body">
+              <div class="hero-stat-val">Special programs</div>
+              <div class="hero-stat-desc">DTV, LTR, Privilege, Business/PR</div>
+            </div>
+          </a>
+          <a href="pages/chiang-mai/index.html" class="hero-stat-card" style="text-decoration: none; color: inherit;">
+            <div class="hero-stat-icon" aria-hidden="true">&#127959;</div>
+            <div class="hero-stat-body">
+              <div class="hero-stat-val">Chiang Mai life</div>
+              <div class="hero-stat-desc">Housing, costs, community</div>
+            </div>
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -2474,6 +2528,27 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 </div>
 </section>
 
+<!-- Visa Calendar Modal -->
+<div id="pro-tip-modal" class="pro-tip-modal">
+  <div class="pro-tip-modal-content">
+    <button class="pro-tip-modal-close" onclick="document.getElementById('pro-tip-modal').classList.remove('active')">×</button>
+    <div class="pro-tip-modal-inner">
+      <span class="pro-tip-modal-icon">📅</span>
+      <div class="pro-tip-modal-label">Never Miss Your Visa Expiry</div>
+      <div class="pro-tip-modal-description">When immigration stamps your extension approval, enter your visa expiry date to automatically add it to your calendar with reminders for 7 days and 1 day before expiry.</div>
+
+      <form id="visa-date-form" style="margin-top: 1.5rem;">
+        <div style="margin-bottom: 1rem;">
+          <label for="visa-expiry-input" style="display: block; font-size: 0.95rem; margin-bottom: 0.5rem; font-weight: 500; color: #fff;">Visa Expiry Date</label>
+          <input type="text" id="visa-expiry-input" placeholder="DD/MM/YYYY" maxlength="10" style="width: 100%; padding: 0.8em; font-size: 1rem; border: 2px solid rgba(255,255,255,.5); border-radius: 8px; background: rgba(255,255,255,.15); color: #fff; font-family: var(--font-body); transition: all .25s ease;" />
+          <small style="display: block; margin-top: 0.4rem; opacity: 1; color: rgba(255,255,255,.95); font-size: 0.9rem;">Example: 15/06/2026</small>
+        </div>
+        <button type="submit" class="pro-tip-modal-button" style="width: 100%; text-align: center;">ADD</button>
+      </form>
+    </div>
+  </div>
+</div>
+
 </main><!-- #main-content -->
 
 <!-- ========================================================
@@ -2562,69 +2637,13 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 <script src="../shared/js/header-handler.js" defer></script>
 
 <!-- Make entire cards clickable -->
-<script src="../shared/js/card-click-handler.js"></script>
 
-<!-- Chaty Widget Configuration -->
-<script>
-  window.CHATY_CONFIG = {
-    channels: [
-      {
-        name: "Facebook_Messenger",
-        label: "Facebook Messenger",
-        url: "https://m.me/cmlocals",
-        svg: '<svg viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="19.4395" cy="19.4395" r="19.4395" fill="#0084FF"/><path d="M19.5 9.5C13.701 9.5 9 13.748 9 19.074c0 3.014 1.474 5.702 3.778 7.456V30l3.294-1.81c.878.244 1.81.376 2.778.376 5.799 0 10.5-4.248 10.5-9.574S25.299 9.5 19.5 9.5zm1.04 12.878l-2.674-2.852-5.22 2.852 5.74-6.096 2.74 2.852 5.154-2.852-5.74 6.096z" fill="white"/></svg>'
-      },
-      {
-        name: "WhatsApp",
-        label: "WhatsApp",
-        url: "https://wa.me/66801202074",
-        svg: '<svg viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="19.4395" cy="19.4395" r="19.4395" fill="#25D366"/><path d="M19.5 9.5C14.253 9.5 10 13.753 10 19c0 1.67.436 3.285 1.265 4.717L10 29l5.418-1.234A9.454 9.454 0 0019.5 28.5c5.247 0 9.5-4.253 9.5-9.5s-4.253-9.5-9.5-9.5zm5.508 13.142c-.232.652-1.345 1.247-1.853 1.29-.508.043-.982.228-3.306-.688-2.806-1.107-4.573-3.974-4.71-4.16-.137-.186-1.12-1.49-1.12-2.843 0-1.352.71-2.018.96-2.293.25-.275.546-.344.728-.344.183 0 .365.002.525.01.168.007.394-.064.617.47.232.556.786 1.92.855 2.06.069.138.115.3.023.485-.093.186-.139.3-.275.462-.137.162-.288.362-.412.486-.137.137-.28.286-.12.56.16.275.71 1.173 1.525 1.9 1.047.933 1.93 1.222 2.205 1.36.275.137.435.115.595-.069.16-.185.686-.8.869-1.075.183-.275.365-.228.617-.137.25.092 1.595.752 1.868.889.275.137.457.206.526.32.068.115.068.663-.164 1.315z" fill="white"/></svg>'
-      }
-    ],
-    triggerColor: "#9F7AEA",
-    bottomOffset: 50,
-    leftOffset: 20
-  };
-</script>
 
-<!-- Hamburger Toggle & Mobile Menu -->
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  const toggle = document.querySelector('.header-hamburger');
-  const nav = document.getElementById('mobile-nav');
+<!-- Chaty Widget Configuration (must be before script) -->
 
-  if (toggle && nav) {
-    // Toggle menu on hamburger click
-    toggle.addEventListener('click', (e) => {
-      e.preventDefault();
-      toggle.classList.toggle('active');
-      nav.classList.toggle('open');
-      nav.removeAttribute('hidden');
-      toggle.setAttribute('aria-expanded', toggle.classList.contains('active'));
-    });
 
-    // Close menu when link is clicked
-    nav.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        toggle.classList.remove('active');
-        nav.classList.remove('open');
-        toggle.setAttribute('aria-expanded', 'false');
-      });
-    });
 
-    // Close menu on escape key
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && nav.classList.contains('open')) {
-        toggle.classList.remove('active');
-        nav.classList.remove('open');
-        toggle.setAttribute('aria-expanded', 'false');
-      }
-    });
-  }
-});
-</script>
 
 <!-- Chaty Widget -->
-<script src="../shared/chaty-widget/scripts/chaty-widget.js"></script>
 </body>
 </html>

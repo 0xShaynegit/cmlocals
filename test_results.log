@@ -1,0 +1,452 @@
+[2026-03-13T17:45:12.850759] [INFO] Starting site crawl...
+[2026-03-13T17:45:12.902817] [INFO] Found 87 .html files
+[2026-03-13T17:45:12.902817] [INFO] Testing UI elements with Playwright...
+[2026-03-13T17:45:14.740721] [INFO] [OK] Loaded 404.html
+[2026-03-13T17:45:14.795338] [INFO]     [OK] Found header
+[2026-03-13T17:45:14.801911] [INFO]     [OK] Found main
+[2026-03-13T17:45:14.809653] [INFO]     [OK] Found footer
+[2026-03-13T17:45:15.079906] [INFO] [OK] Loaded index.html
+[2026-03-13T17:45:15.109853] [INFO]     [OK] Found header
+[2026-03-13T17:45:15.120102] [INFO]     [OK] Found main
+[2026-03-13T17:45:15.131253] [INFO]     [OK] Found footer
+[2026-03-13T17:45:15.427891] [INFO] [OK] Loaded pages\checklists\90-day-reporting-checklist.html
+[2026-03-13T17:45:15.447751] [INFO]     [OK] Found header
+[2026-03-13T17:45:15.451172] [WARN]   [FAIL] Missing main (main, [role='main'])
+[2026-03-13T17:45:15.455293] [INFO]     [OK] Found footer
+[2026-03-13T17:45:15.485110] [INFO] [OK] Loaded pages\checklists\border-run-checklist.html
+[2026-03-13T17:45:15.500062] [INFO]     [OK] Found header
+[2026-03-13T17:45:15.500062] [WARN]   [FAIL] Missing main (main, [role='main'])
+[2026-03-13T17:45:15.508130] [INFO]     [OK] Found footer
+[2026-03-13T17:45:15.532494] [INFO] [OK] Loaded pages\checklists\dtv-visa-checklist.html
+[2026-03-13T17:45:15.555317] [INFO]     [OK] Found header
+[2026-03-13T17:45:15.557097] [WARN]   [FAIL] Missing main (main, [role='main'])
+[2026-03-13T17:45:15.557097] [INFO]     [OK] Found footer
+[2026-03-13T17:45:15.581768] [INFO] [OK] Loaded pages\checklists\ed-visa-checklist.html
+[2026-03-13T17:45:15.598133] [INFO]     [OK] Found header
+[2026-03-13T17:45:15.609582] [WARN]   [FAIL] Missing main (main, [role='main'])
+[2026-03-13T17:45:15.614539] [INFO]     [OK] Found footer
+[2026-03-13T17:45:15.665263] [INFO] [OK] Loaded pages\checklists\first-entry-checklist.html
+[2026-03-13T17:45:15.680612] [INFO]     [OK] Found header
+[2026-03-13T17:45:15.683939] [WARN]   [FAIL] Missing main (main, [role='main'])
+[2026-03-13T17:45:15.688707] [INFO]     [OK] Found footer
+[2026-03-13T17:45:15.743382] [INFO] [OK] Loaded pages\checklists\index.html
+[2026-03-13T17:45:15.755761] [INFO]     [OK] Found header
+[2026-03-13T17:45:15.763997] [INFO]     [OK] Found main
+[2026-03-13T17:45:15.767674] [INFO]     [OK] Found footer
+[2026-03-13T17:45:15.792272] [INFO] [OK] Loaded pages\checklists\marriage-visa-checklist.html
+[2026-03-13T17:45:15.804577] [INFO]     [OK] Found header
+[2026-03-13T17:45:15.811507] [WARN]   [FAIL] Missing main (main, [role='main'])
+[2026-03-13T17:45:15.816341] [INFO]     [OK] Found footer
+[2026-03-13T17:45:15.831580] [INFO] [OK] Loaded pages\checklists\re-entry-permit-checklist.html
+[2026-03-13T17:45:15.847828] [INFO]     [OK] Found header
+[2026-03-13T17:45:15.860738] [WARN]   [FAIL] Missing main (main, [role='main'])
+[2026-03-13T17:45:15.860738] [INFO]     [OK] Found footer
+[2026-03-13T17:45:15.881190] [INFO] [OK] Loaded pages\checklists\retirement-visa-checklist.html
+[2026-03-13T17:45:15.898961] [INFO]     [OK] Found header
+[2026-03-13T17:45:15.910439] [WARN]   [FAIL] Missing main (main, [role='main'])
+[2026-03-13T17:45:15.914521] [INFO]     [OK] Found footer
+[2026-03-13T17:45:15.932673] [INFO] [OK] Loaded pages\checklists\tm30-checklist.html
+[2026-03-13T17:45:15.955392] [INFO]     [OK] Found header
+[2026-03-13T17:45:15.963743] [WARN]   [FAIL] Missing main (main, [role='main'])
+[2026-03-13T17:45:15.966848] [INFO]     [OK] Found footer
+[2026-03-13T17:45:15.988624] [INFO] [OK] Loaded pages\checklists\tourist-visa-checklist.html
+[2026-03-13T17:45:16.011672] [INFO]     [OK] Found header
+[2026-03-13T17:45:16.014751] [WARN]   [FAIL] Missing main (main, [role='main'])
+[2026-03-13T17:45:16.021308] [INFO]     [OK] Found footer
+[2026-03-13T17:45:16.046115] [INFO] [OK] Loaded pages\checklists\visa-exempt-entry-checklist.html
+[2026-03-13T17:45:16.063149] [INFO]     [OK] Found header
+[2026-03-13T17:45:16.063149] [WARN]   [FAIL] Missing main (main, [role='main'])
+[2026-03-13T17:45:16.072419] [INFO]     [OK] Found footer
+[2026-03-13T17:45:16.094291] [INFO] [OK] Loaded pages\checklists\visa-extension-checklist.html
+[2026-03-13T17:45:16.110832] [INFO]     [OK] Found header
+[2026-03-13T17:45:16.110832] [WARN]   [FAIL] Missing main (main, [role='main'])
+[2026-03-13T17:45:16.117850] [INFO]     [OK] Found footer
+[2026-03-13T17:45:16.144679] [INFO] [OK] Loaded pages\checklists\visa-on-arrival-checklist.html
+[2026-03-13T17:45:16.163582] [INFO]     [OK] Found header
+[2026-03-13T17:45:16.168139] [WARN]   [FAIL] Missing main (main, [role='main'])
+[2026-03-13T17:45:16.168139] [INFO]     [OK] Found footer
+[2026-03-13T17:45:16.214144] [INFO] [OK] Loaded pages\chiang-mai\cost-of-living.html
+[2026-03-13T17:45:16.229542] [INFO]     [OK] Found header
+[2026-03-13T17:45:16.236173] [WARN]   [FAIL] Missing main (main, [role='main'])
+[2026-03-13T17:45:16.236173] [INFO]     [OK] Found footer
+[2026-03-13T17:45:16.285423] [INFO] [OK] Loaded pages\chiang-mai\digital-nomads.html
+[2026-03-13T17:45:16.302923] [INFO]     [OK] Found header
+[2026-03-13T17:45:16.302923] [INFO]     [OK] Found main
+[2026-03-13T17:45:16.312506] [INFO]     [OK] Found footer
+[2026-03-13T17:45:16.351116] [INFO] [OK] Loaded pages\chiang-mai\getting-around.html
+[2026-03-13T17:45:16.368125] [INFO]     [OK] Found header
+[2026-03-13T17:45:16.372416] [WARN]   [FAIL] Missing main (main, [role='main'])
+[2026-03-13T17:45:16.375972] [INFO]     [OK] Found footer
+[2026-03-13T17:45:16.401043] [INFO] [OK] Loaded pages\chiang-mai\healthcare.html
+[2026-03-13T17:45:16.415040] [INFO]     [OK] Found header
+[2026-03-13T17:45:16.417861] [INFO]     [OK] Found main
+[2026-03-13T17:45:16.419020] [INFO]     [OK] Found footer
+[2026-03-13T17:45:16.442297] [INFO] [OK] Loaded pages\chiang-mai\index.html
+[2026-03-13T17:45:16.462590] [INFO]     [OK] Found header
+[2026-03-13T17:45:16.466149] [WARN]   [FAIL] Missing main (main, [role='main'])
+[2026-03-13T17:45:16.466149] [INFO]     [OK] Found footer
+[2026-03-13T17:45:16.493959] [INFO] [OK] Loaded pages\chiang-mai\insurance.html
+[2026-03-13T17:45:16.509725] [INFO]     [OK] Found header
+[2026-03-13T17:45:16.513981] [INFO]     [OK] Found main
+[2026-03-13T17:45:16.517176] [INFO]     [OK] Found footer
+[2026-03-13T17:45:16.546868] [INFO] [OK] Loaded pages\chiang-mai\long-term-living.html
+[2026-03-13T17:45:16.560130] [INFO]     [OK] Found header
+[2026-03-13T17:45:16.563874] [INFO]     [OK] Found main
+[2026-03-13T17:45:16.567199] [INFO]     [OK] Found footer
+[2026-03-13T17:45:16.596709] [INFO] [OK] Loaded pages\chiang-mai\phones-and-banking.html
+[2026-03-13T17:45:16.615001] [INFO]     [OK] Found header
+[2026-03-13T17:45:16.615001] [WARN]   [FAIL] Missing main (main, [role='main'])
+[2026-03-13T17:45:16.620556] [INFO]     [OK] Found footer
+[2026-03-13T17:45:16.645226] [INFO] [OK] Loaded pages\chiang-mai\taxes.html
+[2026-03-13T17:45:16.659710] [INFO]     [OK] Found header
+[2026-03-13T17:45:16.664663] [INFO]     [OK] Found main
+[2026-03-13T17:45:16.665707] [INFO]     [OK] Found footer
+[2026-03-13T17:45:16.701743] [INFO] [OK] Loaded pages\chiang-mai\things-to-do.html
+[2026-03-13T17:45:16.713259] [INFO]     [OK] Found header
+[2026-03-13T17:45:16.714843] [INFO]     [OK] Found main
+[2026-03-13T17:45:16.714843] [INFO]     [OK] Found footer
+[2026-03-13T17:45:16.745228] [INFO] [OK] Loaded pages\chiang-mai\where-to-stay.html
+[2026-03-13T17:45:16.757985] [INFO]     [OK] Found header
+[2026-03-13T17:45:16.761896] [INFO]     [OK] Found main
+[2026-03-13T17:45:16.762964] [INFO]     [OK] Found footer
+[2026-03-13T17:45:16.784980] [INFO] [OK] Loaded pages\chiang-mai\why-chiang-mai-base.html
+[2026-03-13T17:45:16.802932] [INFO]     [OK] Found header
+[2026-03-13T17:45:16.802932] [INFO]     [OK] Found main
+[2026-03-13T17:45:16.810161] [INFO]     [OK] Found footer
+[2026-03-13T17:45:16.859716] [INFO] [OK] Loaded pages\culture\customs-traditions-thailand.html
+[2026-03-13T17:45:16.876229] [INFO]     [OK] Found header
+[2026-03-13T17:45:16.878827] [INFO]     [OK] Found main
+[2026-03-13T17:45:16.884389] [INFO]     [OK] Found footer
+[2026-03-13T17:45:16.908796] [INFO] [OK] Loaded pages\culture\etiquette-when-visiting-a-sak-yant-monk.html
+[2026-03-13T17:45:16.929168] [INFO]     [OK] Found header
+[2026-03-13T17:45:16.933885] [INFO]     [OK] Found main
+[2026-03-13T17:45:16.933885] [INFO]     [OK] Found footer
+[2026-03-13T17:45:16.962942] [INFO] [OK] Loaded pages\culture\festivals-events-chiang-mai.html
+[2026-03-13T17:45:16.976966] [INFO]     [OK] Found header
+[2026-03-13T17:45:16.979263] [INFO]     [OK] Found main
+[2026-03-13T17:45:16.983514] [INFO]     [OK] Found footer
+[2026-03-13T17:45:17.011002] [INFO] [OK] Loaded pages\culture\index.html
+[2026-03-13T17:45:17.016622] [INFO]     [OK] Found header
+[2026-03-13T17:45:17.027403] [INFO]     [OK] Found main
+[2026-03-13T17:45:17.029404] [INFO]     [OK] Found footer
+[2026-03-13T17:45:17.058041] [INFO] [OK] Loaded pages\culture\sak-yant-chiang-mai.html
+[2026-03-13T17:45:17.073555] [INFO]     [OK] Found header
+[2026-03-13T17:45:17.077890] [INFO]     [OK] Found main
+[2026-03-13T17:45:17.080542] [INFO]     [OK] Found footer
+[2026-03-13T17:45:17.107891] [INFO] [OK] Loaded pages\culture\sak-yant-designs-and-meanings.html
+[2026-03-13T17:45:17.124568] [INFO]     [OK] Found header
+[2026-03-13T17:45:17.130690] [INFO]     [OK] Found main
+[2026-03-13T17:45:17.135376] [INFO]     [OK] Found footer
+[2026-03-13T17:45:17.159582] [INFO] [OK] Loaded pages\culture\sak-yant-getting.html
+[2026-03-13T17:45:17.178468] [INFO]     [OK] Found header
+[2026-03-13T17:45:17.182636] [INFO]     [OK] Found main
+[2026-03-13T17:45:17.182636] [INFO]     [OK] Found footer
+[2026-03-13T17:45:17.208680] [INFO] [OK] Loaded pages\culture\temple-etiquette.html
+[2026-03-13T17:45:17.221671] [INFO]     [OK] Found header
+[2026-03-13T17:45:17.230742] [INFO]     [OK] Found main
+[2026-03-13T17:45:17.232992] [INFO]     [OK] Found footer
+[2026-03-13T17:45:17.264941] [INFO] [OK] Loaded pages\culture\thai-culture-etiquette.html
+[2026-03-13T17:45:17.281180] [INFO]     [OK] Found header
+[2026-03-13T17:45:17.281180] [INFO]     [OK] Found main
+[2026-03-13T17:45:17.289244] [INFO]     [OK] Found footer
+[2026-03-13T17:45:17.313587] [INFO] [OK] Loaded pages\culture\thai-food-culture.html
+[2026-03-13T17:45:17.329017] [INFO]     [OK] Found header
+[2026-03-13T17:45:17.329017] [INFO]     [OK] Found main
+[2026-03-13T17:45:17.338699] [INFO]     [OK] Found footer
+[2026-03-13T17:45:17.370521] [INFO] [OK] Loaded pages\disclaimer.html
+[2026-03-13T17:45:17.382054] [INFO]     [OK] Found header
+[2026-03-13T17:45:17.387044] [INFO]     [OK] Found main
+[2026-03-13T17:45:17.387044] [INFO]     [OK] Found footer
+[2026-03-13T17:45:17.428082] [INFO] [OK] Loaded pages\ed-visas\ed-visa-comparison-chiang-mai.html
+[2026-03-13T17:45:17.438688] [INFO]     [OK] Found header
+[2026-03-13T17:45:17.447678] [INFO]     [OK] Found main
+[2026-03-13T17:45:17.447678] [INFO]     [OK] Found footer
+[2026-03-13T17:45:17.480672] [INFO] [OK] Loaded pages\ed-visas\emergency-self-defence-ed-visa-chiang-mai.html
+[2026-03-13T17:45:17.497014] [INFO]     [OK] Found header
+[2026-03-13T17:45:17.497014] [INFO]     [OK] Found main
+[2026-03-13T17:45:17.502593] [INFO]     [OK] Found footer
+[2026-03-13T17:45:17.535227] [INFO] [OK] Loaded pages\ed-visas\hand-to-hand-combat-ed-visa-chiang-mai.html
+[2026-03-13T17:45:17.547285] [INFO]     [OK] Found header
+[2026-03-13T17:45:17.551843] [INFO]     [OK] Found main
+[2026-03-13T17:45:17.551843] [INFO]     [OK] Found footer
+[2026-03-13T17:45:17.584683] [INFO] [OK] Loaded pages\ed-visas\index.html
+[2026-03-13T17:45:17.601385] [INFO]     [OK] Found header
+[2026-03-13T17:45:17.601385] [INFO]     [OK] Found main
+[2026-03-13T17:45:17.601385] [INFO]     [OK] Found footer
+[2026-03-13T17:45:17.646549] [INFO] [OK] Loaded pages\ed-visas\muay-thai-ed-visa-chiang-mai.html
+[2026-03-13T17:45:17.659241] [INFO]     [OK] Found header
+[2026-03-13T17:45:17.660282] [INFO]     [OK] Found main
+[2026-03-13T17:45:17.660282] [INFO]     [OK] Found footer
+[2026-03-13T17:45:17.702186] [INFO] [OK] Loaded pages\ed-visas\thai-language-ed-visa-chiang-mai.html
+[2026-03-13T17:45:17.712153] [INFO]     [OK] Found header
+[2026-03-13T17:45:17.716712] [INFO]     [OK] Found main
+[2026-03-13T17:45:17.722998] [INFO]     [OK] Found footer
+[2026-03-13T17:45:17.742286] [INFO] [OK] Loaded pages\ed-visas\volunteer-non-o-visa-chiang-mai.html
+[2026-03-13T17:45:17.762989] [INFO]     [OK] Found header
+[2026-03-13T17:45:17.766357] [INFO]     [OK] Found main
+[2026-03-13T17:45:17.769047] [INFO]     [OK] Found footer
+[2026-03-13T17:45:17.805819] [INFO] [OK] Loaded pages\immigration\90-day-reporting.html
+[2026-03-13T17:45:17.821187] [INFO]     [OK] Found header
+[2026-03-13T17:45:17.824243] [WARN]   [FAIL] Missing main (main, [role='main'])
+[2026-03-13T17:45:17.824243] [INFO]     [OK] Found footer
+[2026-03-13T17:45:17.857323] [INFO] [OK] Loaded pages\immigration\address-change.html
+[2026-03-13T17:45:17.865571] [INFO]     [OK] Found header
+[2026-03-13T17:45:17.873695] [WARN]   [FAIL] Missing main (main, [role='main'])
+[2026-03-13T17:45:17.881906] [INFO]     [OK] Found footer
+[2026-03-13T17:45:17.906758] [INFO] [OK] Loaded pages\immigration\blacklist-status.html
+[2026-03-13T17:45:17.928074] [INFO]     [OK] Found header
+[2026-03-13T17:45:17.931701] [WARN]   [FAIL] Missing main (main, [role='main'])
+[2026-03-13T17:45:17.935382] [INFO]     [OK] Found footer
+[2026-03-13T17:45:17.958378] [INFO] [OK] Loaded pages\immigration\common-rejections.html
+[2026-03-13T17:45:17.974018] [INFO]     [OK] Found header
+[2026-03-13T17:45:17.978156] [WARN]   [FAIL] Missing main (main, [role='main'])
+[2026-03-13T17:45:17.981061] [INFO]     [OK] Found footer
+[2026-03-13T17:45:18.007458] [INFO] [OK] Loaded pages\immigration\document-requirements.html
+[2026-03-13T17:45:18.023546] [INFO]     [OK] Found header
+[2026-03-13T17:45:18.028769] [WARN]   [FAIL] Missing main (main, [role='main'])
+[2026-03-13T17:45:18.030626] [INFO]     [OK] Found footer
+[2026-03-13T17:45:18.060465] [INFO] [OK] Loaded pages\immigration\entry-strategy-guide.html
+[2026-03-13T17:45:18.074035] [INFO]     [OK] Found header
+[2026-03-13T17:45:18.078435] [WARN]   [FAIL] Missing main (main, [role='main'])
+[2026-03-13T17:45:18.081929] [INFO]     [OK] Found footer
+[2026-03-13T17:45:18.105442] [INFO] [OK] Loaded pages\immigration\financial-requirements.html
+[2026-03-13T17:45:18.113538] [INFO]     [OK] Found header
+[2026-03-13T17:45:18.122062] [WARN]   [FAIL] Missing main (main, [role='main'])
+[2026-03-13T17:45:18.122062] [INFO]     [OK] Found footer
+[2026-03-13T17:45:18.146539] [INFO] [OK] Loaded pages\immigration\immigration-best-practices.html
+[2026-03-13T17:45:18.166833] [INFO]     [OK] Found header
+[2026-03-13T17:45:18.171626] [WARN]   [FAIL] Missing main (main, [role='main'])
+[2026-03-13T17:45:18.174858] [INFO]     [OK] Found footer
+[2026-03-13T17:45:18.213174] [INFO] [OK] Loaded pages\immigration\index.html
+[2026-03-13T17:45:18.232661] [INFO]     [OK] Found header
+[2026-03-13T17:45:18.236089] [INFO]     [OK] Found main
+[2026-03-13T17:45:18.240746] [INFO]     [OK] Found footer
+[2026-03-13T17:45:18.281871] [INFO] [OK] Loaded pages\immigration\land-border-vs-air-entry.html
+[2026-03-13T17:45:18.297580] [INFO]     [OK] Found header
+[2026-03-13T17:45:18.297580] [WARN]   [FAIL] Missing main (main, [role='main'])
+[2026-03-13T17:45:18.297580] [INFO]     [OK] Found footer
+[2026-03-13T17:45:18.338723] [INFO] [OK] Loaded pages\immigration\legal-rights.html
+[2026-03-13T17:45:18.353388] [INFO]     [OK] Found header
+[2026-03-13T17:45:18.355123] [WARN]   [FAIL] Missing main (main, [role='main'])
+[2026-03-13T17:45:18.355123] [INFO]     [OK] Found footer
+[2026-03-13T17:45:18.387804] [INFO] [OK] Loaded pages\immigration\overstay-penalties.html
+[2026-03-13T17:45:18.403600] [INFO]     [OK] Found header
+[2026-03-13T17:45:18.413054] [WARN]   [FAIL] Missing main (main, [role='main'])
+[2026-03-13T17:45:18.415245] [INFO]     [OK] Found footer
+[2026-03-13T17:45:18.463873] [INFO] [OK] Loaded pages\immigration\queue-strategy.html
+[2026-03-13T17:45:18.480369] [INFO]     [OK] Found header
+[2026-03-13T17:45:18.483336] [WARN]   [FAIL] Missing main (main, [role='main'])
+[2026-03-13T17:45:18.487045] [INFO]     [OK] Found footer
+[2026-03-13T17:45:18.513804] [INFO] [OK] Loaded pages\immigration\re-entry-permits.html
+[2026-03-13T17:45:18.529516] [INFO]     [OK] Found header
+[2026-03-13T17:45:18.529516] [WARN]   [FAIL] Missing main (main, [role='main'])
+[2026-03-13T17:45:18.529516] [INFO]     [OK] Found footer
+[2026-03-13T17:45:18.562830] [INFO] [OK] Loaded pages\immigration\thailand-digital-arrival-card.html
+[2026-03-13T17:45:18.577368] [INFO]     [OK] Found header
+[2026-03-13T17:45:18.579230] [WARN]   [FAIL] Missing main (main, [role='main'])
+[2026-03-13T17:45:18.579230] [INFO]     [OK] Found footer
+[2026-03-13T17:45:18.612023] [INFO] [OK] Loaded pages\immigration\tm30-address-reporting.html
+[2026-03-13T17:45:18.626829] [INFO]     [OK] Found header
+[2026-03-13T17:45:18.628800] [WARN]   [FAIL] Missing main (main, [role='main'])
+[2026-03-13T17:45:18.631084] [INFO]     [OK] Found footer
+[2026-03-13T17:45:18.653596] [INFO] [OK] Loaded pages\immigration\visa-border-runs.html
+[2026-03-13T17:45:18.669815] [INFO]     [OK] Found header
+[2026-03-13T17:45:18.676415] [WARN]   [FAIL] Missing main (main, [role='main'])
+[2026-03-13T17:45:18.678475] [INFO]     [OK] Found footer
+[2026-03-13T17:45:18.707181] [INFO] [OK] Loaded pages\immigration\visa-extensions.html
+[2026-03-13T17:45:18.718906] [INFO]     [OK] Found header
+[2026-03-13T17:45:18.718906] [WARN]   [FAIL] Missing main (main, [role='main'])
+[2026-03-13T17:45:18.726113] [INFO]     [OK] Found footer
+[2026-03-13T17:45:18.743634] [INFO] [OK] Loaded pages\privacy-policy.html
+[2026-03-13T17:45:18.765390] [INFO]     [OK] Found header
+[2026-03-13T17:45:18.768090] [INFO]     [OK] Found main
+[2026-03-13T17:45:18.771286] [INFO]     [OK] Found footer
+[2026-03-13T17:45:18.799709] [INFO] [OK] Loaded pages\terms-of-service.html
+[2026-03-13T17:45:18.813303] [INFO]     [OK] Found header
+[2026-03-13T17:45:18.817418] [INFO]     [OK] Found main
+[2026-03-13T17:45:18.817418] [INFO]     [OK] Found footer
+[2026-03-13T17:45:18.852295] [INFO] [OK] Loaded pages\tools\index.html
+[2026-03-13T17:45:18.863447] [INFO]     [OK] Found header
+[2026-03-13T17:45:18.865749] [INFO]     [OK] Found main
+[2026-03-13T17:45:18.865749] [INFO]     [OK] Found footer
+[2026-03-13T17:45:18.899204] [INFO] [OK] Loaded pages\visas\guides\entry-requirements-2026.html
+[2026-03-13T17:45:18.914198] [INFO]     [OK] Found header
+[2026-03-13T17:45:18.914198] [INFO]     [OK] Found main
+[2026-03-13T17:45:18.914198] [INFO]     [OK] Found footer
+[2026-03-13T17:45:18.948524] [INFO] [OK] Loaded pages\visas\guides\extension-vs-re-entry.html
+[2026-03-13T17:45:18.962684] [INFO]     [OK] Found header
+[2026-03-13T17:45:18.962684] [INFO]     [OK] Found main
+[2026-03-13T17:45:18.962684] [INFO]     [OK] Found footer
+[2026-03-13T17:45:19.012448] [INFO] [OK] Loaded pages\visas\guides\visa-comparisons.html
+[2026-03-13T17:45:19.022366] [INFO]     [OK] Found header
+[2026-03-13T17:45:19.028858] [INFO]     [OK] Found main
+[2026-03-13T17:45:19.033999] [INFO]     [OK] Found footer
+[2026-03-13T17:45:19.053258] [INFO] [OK] Loaded pages\visas\guides\visa-options-chiang-mai.html
+[2026-03-13T17:45:19.069581] [INFO]     [OK] Found header
+[2026-03-13T17:45:19.077828] [INFO]     [OK] Found main
+[2026-03-13T17:45:19.083062] [INFO]     [OK] Found footer
+[2026-03-13T17:45:19.102207] [INFO] [OK] Loaded pages\visas\guides\visa-stay-chiang-mai.html
+[2026-03-13T17:45:19.123992] [INFO]     [OK] Found header
+[2026-03-13T17:45:19.129477] [INFO]     [OK] Found main
+[2026-03-13T17:45:19.135540] [INFO]     [OK] Found footer
+[2026-03-13T17:45:19.168123] [INFO] [OK] Loaded pages\visas\guides\which-visa.html
+[2026-03-13T17:45:19.185990] [INFO]     [OK] Found header
+[2026-03-13T17:45:19.187164] [INFO]     [OK] Found main
+[2026-03-13T17:45:19.187164] [INFO]     [OK] Found footer
+[2026-03-13T17:45:19.232143] [INFO] [OK] Loaded pages\visas\index.html
+[2026-03-13T17:45:19.243831] [INFO]     [OK] Found header
+[2026-03-13T17:45:19.247586] [INFO]     [OK] Found main
+[2026-03-13T17:45:19.247586] [INFO]     [OK] Found footer
+[2026-03-13T17:45:19.283851] [INFO] [OK] Loaded pages\visas\long-stay\business-visa-non-b-thai-visa-advice-chiang-mai-cmlocals.html
+[2026-03-13T17:45:19.295795] [INFO]     [OK] Found header
+[2026-03-13T17:45:19.300681] [INFO]     [OK] Found main
+[2026-03-13T17:45:19.300681] [INFO]     [OK] Found footer
+[2026-03-13T17:45:19.355259] [INFO] [OK] Loaded pages\visas\long-stay\index.html
+[2026-03-13T17:45:19.366767] [INFO]     [OK] Found header
+[2026-03-13T17:45:19.367866] [INFO]     [OK] Found main
+[2026-03-13T17:45:19.374435] [INFO]     [OK] Found footer
+[2026-03-13T17:45:19.399183] [INFO] [OK] Loaded pages\visas\long-stay\ltr-long-term-resident-visa-thai-visa-advice-chiang-mai-cmlocals.html
+[2026-03-13T17:45:19.416707] [INFO]     [OK] Found header
+[2026-03-13T17:45:19.416707] [INFO]     [OK] Found main
+[2026-03-13T17:45:19.424902] [INFO]     [OK] Found footer
+[2026-03-13T17:45:19.456410] [INFO] [OK] Loaded pages\visas\long-stay\marriage-visa-non-o-thai-visa-advice-chiang-mai-cmlocals.html
+[2026-03-13T17:45:19.467988] [INFO]     [OK] Found header
+[2026-03-13T17:45:19.467988] [INFO]     [OK] Found main
+[2026-03-13T17:45:19.475990] [INFO]     [OK] Found footer
+[2026-03-13T17:45:19.500334] [INFO] [OK] Loaded pages\visas\long-stay\retirement-visa-thai-visa-advice-chiang-mai-cmlocals.html
+[2026-03-13T17:45:19.517031] [INFO]     [OK] Found header
+[2026-03-13T17:45:19.525149] [INFO]     [OK] Found main
+[2026-03-13T17:45:19.525149] [INFO]     [OK] Found footer
+[2026-03-13T17:45:19.559468] [INFO] [OK] Loaded pages\visas\long-stay\thailand-privilege-visa-elite-thai-visa-advice-chiang-mai-cmlocals.html
+[2026-03-13T17:45:19.569175] [INFO]     [OK] Found header
+[2026-03-13T17:45:19.575737] [INFO]     [OK] Found main
+[2026-03-13T17:45:19.575737] [INFO]     [OK] Found footer
+[2026-03-13T17:45:19.611562] [INFO] [OK] Loaded pages\visas\short-stay\border-runs.html
+[2026-03-13T17:45:19.616287] [INFO]     [OK] Found header
+[2026-03-13T17:45:19.627971] [INFO]     [OK] Found main
+[2026-03-13T17:45:19.632532] [INFO]     [OK] Found footer
+[2026-03-13T17:45:19.664945] [INFO] [OK] Loaded pages\visas\short-stay\dtv-destination-thailand-visa-thai-visa-advice-chiang-mai-cmlocals.html
+[2026-03-13T17:45:19.674627] [INFO]     [OK] Found header
+[2026-03-13T17:45:19.690968] [INFO]     [OK] Found main
+[2026-03-13T17:45:19.700560] [INFO]     [OK] Found footer
+[2026-03-13T17:45:19.728223] [INFO] [OK] Loaded pages\visas\short-stay\index.html
+[2026-03-13T17:45:19.740217] [INFO]     [OK] Found header
+[2026-03-13T17:45:19.740217] [INFO]     [OK] Found main
+[2026-03-13T17:45:19.748263] [INFO]     [OK] Found footer
+[2026-03-13T17:45:19.775731] [INFO] [OK] Loaded pages\visas\short-stay\tourist-visa.html
+[2026-03-13T17:45:19.787214] [INFO]     [OK] Found header
+[2026-03-13T17:45:19.792024] [INFO]     [OK] Found main
+[2026-03-13T17:45:19.795075] [INFO]     [OK] Found footer
+[2026-03-13T17:45:19.831183] [INFO] [OK] Loaded pages\visas\short-stay\visa-exempt-entry.html
+[2026-03-13T17:45:19.845737] [INFO]     [OK] Found header
+[2026-03-13T17:45:19.850409] [INFO]     [OK] Found main
+[2026-03-13T17:45:19.851919] [INFO]     [OK] Found footer
+[2026-03-13T17:45:19.882848] [INFO] [OK] Loaded pages\visas\short-stay\visa-extensions.html
+[2026-03-13T17:45:19.897059] [INFO]     [OK] Found header
+[2026-03-13T17:45:19.902582] [INFO]     [OK] Found main
+[2026-03-13T17:45:19.903787] [INFO]     [OK] Found footer
+[2026-03-13T17:45:19.938370] [INFO] [OK] Loaded pages\visas\short-stay\visa-on-arrival.html
+[2026-03-13T17:45:19.953470] [INFO]     [OK] Found header
+[2026-03-13T17:45:19.960487] [INFO]     [OK] Found main
+[2026-03-13T17:45:19.965683] [INFO]     [OK] Found footer
+[2026-03-13T17:45:20.105419] [INFO] Extracting links from all pages...
+[2026-03-13T17:45:23.917710] [INFO] Checking 114 internal links...
+[2026-03-13T17:45:23.917710] [WARN]   [FAIL] file://C:/ZZZWebsites/cmlocals/pages/index.html
+[2026-03-13T17:45:23.917710] [WARN]   [FAIL] file://C:/ZZZWebsites/cmlocals/pages/visas/ed-visas/volunteer-non-o-visa-chiang-mai.html
+[2026-03-13T17:45:23.917710] [WARN]   [FAIL] file://C:/ZZZWebsites/cmlocals/pages/visas/chiang-mai/healthcare.html
+[2026-03-13T17:45:23.917710] [WARN]   [FAIL] file://C:/ZZZWebsites/cmlocals/pages/visas/privacy-policy.html
+[2026-03-13T17:45:23.917710] [WARN]   [FAIL] file://C:/ZZZWebsites/cmlocals/pages/visas/visas/short-stay/index.html
+[2026-03-13T17:45:23.917710] [WARN]   [FAIL] file://C:/ZZZWebsites/cmlocals/pages/visas/chiang-mai/cost-of-living.html
+[2026-03-13T17:45:23.928282] [WARN]   [FAIL] file://C:/ZZZWebsites/cmlocals/pages/tools/visa-recommendation-quiz.html
+[2026-03-13T17:45:23.928282] [WARN]   [FAIL] file://C:/ZZZWebsites/cmlocals/pages/visas/ed-visas/index.html
+[2026-03-13T17:45:23.928282] [WARN]   [FAIL] file://C:/ZZZWebsites/cmlocals/pages/checklists/ed-visa.html
+[2026-03-13T17:45:23.928282] [WARN]   [FAIL] file://C:/ZZZWebsites/cmlocals/pages/visas/visas/short-stay/dtv-destination-thailand-visa-thai-visa-advice-chiang-mai-cmlocals.html
+[2026-03-13T17:45:23.928282] [WARN]   [FAIL] file://C:/ZZZWebsites/cmlocals/pages/visas/guides/index.html
+[2026-03-13T17:45:23.928282] [WARN]   [FAIL] file://C:/ZZZWebsites/cmlocals/pages/visas/ed-visas/muay-thai-ed-visa-chiang-mai.html
+[2026-03-13T17:45:23.928282] [WARN]   [FAIL] file://C:/ZZZWebsites/cmlocals/pages/tools/stay-duration-calculator.html
+[2026-03-13T17:45:23.928282] [WARN]   [FAIL] file://C:/ZZZWebsites/cmlocals/pages/visas/chiang-mai/getting-around.html
+[2026-03-13T17:45:23.928282] [WARN]   [FAIL] file://C:/ZZZWebsites/cmlocals/pages/visas/terms-of-service.html
+[2026-03-13T17:45:23.928282] [WARN]   [FAIL] file://C:/ZZZWebsites/cmlocals/pages/visas/visas/index.html
+[2026-03-13T17:45:23.928282] [WARN]   [FAIL] file://C:/ZZZWebsites/cmlocals/pages/visas/disclaimer.html
+[2026-03-13T17:45:23.928282] [WARN]   [FAIL] file://C:/ZZZWebsites/cmlocals/pages/tools/budget-calculator.html
+[2026-03-13T17:45:23.928282] [WARN]   [FAIL] file://C:/ZZZWebsites/cmlocals/pages/visas/chiang-mai/index.html
+[2026-03-13T17:45:23.928282] [WARN]   [FAIL] file://C:/ZZZWebsites/cmlocals/pages/tools/visa-cost-calculator.html
+[2026-03-13T17:45:23.928282] [WARN]   [FAIL] file://C:/ZZZWebsites/cmlocals/pages/visas/chiang-mai/where-to-stay.html
+[2026-03-13T17:45:23.928282] [WARN]   [FAIL] file://C:/ZZZWebsites/cmlocals/pages/visas/visas/long-stay/index.html
+[2026-03-13T17:45:23.928282] [WARN]   [FAIL] file://C:/ZZZWebsites/cmlocals/pages/visas/checklists/index.html
+[2026-03-13T17:45:23.928282] [WARN]   [FAIL] file://C:/ZZZWebsites/cmlocals/pages/visas/ed-visas/thai-language-ed-visa-chiang-mai.html
+[2026-03-13T17:45:23.928282] [WARN]   [FAIL] file://C:/ZZZWebsites/cmlocals/pages/visas/chiang-mai/long-term-living.html
+[2026-03-13T17:45:23.928282] [WARN]   [FAIL] file://C:/ZZZWebsites/cmlocals/pages/tools/financial-requirements-checker.html
+[2026-03-13T17:45:23.928282] [WARN]   [FAIL] file://C:/ZZZWebsites/cmlocals/pages/visas/visas/short-stay/tourist-visa.html
+[2026-03-13T17:45:23.928282] [WARN]   [FAIL] file://C:/ZZZWebsites/cmlocals/pages/visas/ed-visas/emergency-self-defence-ed-visa-chiang-mai.html
+[2026-03-13T17:45:23.928282] [WARN]   [FAIL] file://C:/ZZZWebsites/cmlocals/pages/tools/retirement-planner.html
+[2026-03-13T17:45:23.928282] [WARN]   [FAIL] file://C:/ZZZWebsites/cmlocals/pages/visas/ed-visas/hand-to-hand-combat-ed-visa-chiang-mai.html
+[2026-03-13T17:45:23.934268] [INFO] Checking 10 external links (sample)...
+[2026-03-13T17:45:38.265234] [WARN]   [FAIL] https://www.immigration.go.th/ -> 403
+[2026-03-13T17:45:42.173384] [WARN]   [FAIL] https://www.immigration.go.th/index.html -> 403
+[2026-03-13T17:45:43.496305] [INFO] 
+============================================================
+[2026-03-13T17:45:43.496305] [INFO] AUDIT SUMMARY
+[2026-03-13T17:45:43.496305] [INFO] ============================================================
+[2026-03-13T17:45:43.496305] [INFO] Total internal links: 114
+[2026-03-13T17:45:43.496305] [INFO] Total external links: 10
+[2026-03-13T17:45:43.496305] [INFO] Failed UI elements: 34
+[2026-03-13T17:45:43.496305] [INFO] Failed links: 30
+[2026-03-13T17:45:43.496305] [ERROR] 
+[FAILED ELEMENTS]
+[2026-03-13T17:45:43.496305] [ERROR]   pages\checklists\90-day-reporting-checklist.html: missing main (main, [role='main'])
+[2026-03-13T17:45:43.496305] [ERROR]   pages\checklists\border-run-checklist.html: missing main (main, [role='main'])
+[2026-03-13T17:45:43.496305] [ERROR]   pages\checklists\dtv-visa-checklist.html: missing main (main, [role='main'])
+[2026-03-13T17:45:43.496305] [ERROR]   pages\checklists\ed-visa-checklist.html: missing main (main, [role='main'])
+[2026-03-13T17:45:43.496305] [ERROR]   pages\checklists\first-entry-checklist.html: missing main (main, [role='main'])
+[2026-03-13T17:45:43.496305] [ERROR]   pages\checklists\marriage-visa-checklist.html: missing main (main, [role='main'])
+[2026-03-13T17:45:43.496305] [ERROR]   pages\checklists\re-entry-permit-checklist.html: missing main (main, [role='main'])
+[2026-03-13T17:45:43.496305] [ERROR]   pages\checklists\retirement-visa-checklist.html: missing main (main, [role='main'])
+[2026-03-13T17:45:43.496305] [ERROR]   pages\checklists\tm30-checklist.html: missing main (main, [role='main'])
+[2026-03-13T17:45:43.496305] [ERROR]   pages\checklists\tourist-visa-checklist.html: missing main (main, [role='main'])
+[2026-03-13T17:45:43.496305] [ERROR]   pages\checklists\visa-exempt-entry-checklist.html: missing main (main, [role='main'])
+[2026-03-13T17:45:43.496305] [ERROR]   pages\checklists\visa-extension-checklist.html: missing main (main, [role='main'])
+[2026-03-13T17:45:43.496305] [ERROR]   pages\checklists\visa-on-arrival-checklist.html: missing main (main, [role='main'])
+[2026-03-13T17:45:43.496305] [ERROR]   pages\chiang-mai\cost-of-living.html: missing main (main, [role='main'])
+[2026-03-13T17:45:43.496305] [ERROR]   pages\chiang-mai\getting-around.html: missing main (main, [role='main'])
+[2026-03-13T17:45:43.496305] [ERROR]   pages\chiang-mai\index.html: missing main (main, [role='main'])
+[2026-03-13T17:45:43.496305] [ERROR]   pages\chiang-mai\phones-and-banking.html: missing main (main, [role='main'])
+[2026-03-13T17:45:43.496305] [ERROR]   pages\immigration\90-day-reporting.html: missing main (main, [role='main'])
+[2026-03-13T17:45:43.496305] [ERROR]   pages\immigration\address-change.html: missing main (main, [role='main'])
+[2026-03-13T17:45:43.496305] [ERROR]   pages\immigration\blacklist-status.html: missing main (main, [role='main'])
+[2026-03-13T17:45:43.496305] [ERROR]   pages\immigration\common-rejections.html: missing main (main, [role='main'])
+[2026-03-13T17:45:43.496305] [ERROR]   pages\immigration\document-requirements.html: missing main (main, [role='main'])
+[2026-03-13T17:45:43.496305] [ERROR]   pages\immigration\entry-strategy-guide.html: missing main (main, [role='main'])
+[2026-03-13T17:45:43.496305] [ERROR]   pages\immigration\financial-requirements.html: missing main (main, [role='main'])
+[2026-03-13T17:45:43.496305] [ERROR]   pages\immigration\immigration-best-practices.html: missing main (main, [role='main'])
+[2026-03-13T17:45:43.496305] [ERROR]   pages\immigration\land-border-vs-air-entry.html: missing main (main, [role='main'])
+[2026-03-13T17:45:43.496305] [ERROR]   pages\immigration\legal-rights.html: missing main (main, [role='main'])
+[2026-03-13T17:45:43.496305] [ERROR]   pages\immigration\overstay-penalties.html: missing main (main, [role='main'])
+[2026-03-13T17:45:43.496305] [ERROR]   pages\immigration\queue-strategy.html: missing main (main, [role='main'])
+[2026-03-13T17:45:43.496305] [ERROR]   pages\immigration\re-entry-permits.html: missing main (main, [role='main'])
+[2026-03-13T17:45:43.496305] [ERROR]   pages\immigration\thailand-digital-arrival-card.html: missing main (main, [role='main'])
+[2026-03-13T17:45:43.496305] [ERROR]   pages\immigration\tm30-address-reporting.html: missing main (main, [role='main'])
+[2026-03-13T17:45:43.496305] [ERROR]   pages\immigration\visa-border-runs.html: missing main (main, [role='main'])
+[2026-03-13T17:45:43.496305] [ERROR]   pages\immigration\visa-extensions.html: missing main (main, [role='main'])
+[2026-03-13T17:45:43.496305] [ERROR] 
+[FAILED LINKS]
+[2026-03-13T17:45:43.496305] [ERROR]   file://C:/ZZZWebsites/cmlocals/pages/index.html: file not found
+[2026-03-13T17:45:43.496305] [ERROR]   file://C:/ZZZWebsites/cmlocals/pages/visas/ed-visas/volunteer-non-o-visa-chiang-mai.html: file not found
+[2026-03-13T17:45:43.496305] [ERROR]   file://C:/ZZZWebsites/cmlocals/pages/visas/chiang-mai/healthcare.html: file not found
+[2026-03-13T17:45:43.496305] [ERROR]   file://C:/ZZZWebsites/cmlocals/pages/visas/privacy-policy.html: file not found
+[2026-03-13T17:45:43.496305] [ERROR]   file://C:/ZZZWebsites/cmlocals/pages/visas/visas/short-stay/index.html: file not found
+[2026-03-13T17:45:43.496305] [ERROR]   file://C:/ZZZWebsites/cmlocals/pages/visas/chiang-mai/cost-of-living.html: file not found
+[2026-03-13T17:45:43.496305] [ERROR]   file://C:/ZZZWebsites/cmlocals/pages/tools/visa-recommendation-quiz.html: file not found
+[2026-03-13T17:45:43.496305] [ERROR]   file://C:/ZZZWebsites/cmlocals/pages/visas/ed-visas/index.html: file not found
+[2026-03-13T17:45:43.496305] [ERROR]   file://C:/ZZZWebsites/cmlocals/pages/checklists/ed-visa.html: file not found
+[2026-03-13T17:45:43.496305] [ERROR]   file://C:/ZZZWebsites/cmlocals/pages/visas/visas/short-stay/dtv-destination-thailand-visa-thai-visa-advice-chiang-mai-cmlocals.html: file not found
+[2026-03-13T17:45:43.496305] [ERROR]   file://C:/ZZZWebsites/cmlocals/pages/visas/guides/index.html: file not found
+[2026-03-13T17:45:43.496305] [ERROR]   file://C:/ZZZWebsites/cmlocals/pages/visas/ed-visas/muay-thai-ed-visa-chiang-mai.html: file not found
+[2026-03-13T17:45:43.496305] [ERROR]   file://C:/ZZZWebsites/cmlocals/pages/tools/stay-duration-calculator.html: file not found
+[2026-03-13T17:45:43.496305] [ERROR]   file://C:/ZZZWebsites/cmlocals/pages/visas/chiang-mai/getting-around.html: file not found
+[2026-03-13T17:45:43.496305] [ERROR]   file://C:/ZZZWebsites/cmlocals/pages/visas/terms-of-service.html: file not found
+[2026-03-13T17:45:43.496305] [ERROR]   file://C:/ZZZWebsites/cmlocals/pages/visas/visas/index.html: file not found
+[2026-03-13T17:45:43.496305] [ERROR]   file://C:/ZZZWebsites/cmlocals/pages/visas/disclaimer.html: file not found
+[2026-03-13T17:45:43.496305] [ERROR]   file://C:/ZZZWebsites/cmlocals/pages/tools/budget-calculator.html: file not found
+[2026-03-13T17:45:43.496305] [ERROR]   file://C:/ZZZWebsites/cmlocals/pages/visas/chiang-mai/index.html: file not found
+[2026-03-13T17:45:43.496305] [ERROR]   file://C:/ZZZWebsites/cmlocals/pages/tools/visa-cost-calculator.html: file not found

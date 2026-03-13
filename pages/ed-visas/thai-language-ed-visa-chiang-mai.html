@@ -490,7 +490,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
 .cta-section h2{font-family:var(--font-display);font-size:clamp(1.6rem,3vw,2.2rem);font-weight:400;color:var(--c-white);margin-bottom:.75rem;}
 .cta-section p{color:rgba(255,255,255,.85);margin-bottom:1.75rem;max-width:500px;margin-inline:auto;}
 .cta-btns{display:flex;flex-wrap:wrap;gap:.75rem;justify-content:center;}
-.site-footer{background:var(--c-dark);border-top:1px solid rgba(255,255,255,.07);padding-top:clamp(3.5rem,6vw,5.5rem);padding-bottom:2.5rem;}
+.site-footer{background:var(--c-dark);padding-top:clamp(3.5rem,6vw,5.5rem);padding-bottom:2.5rem;}
 .footer-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr 1fr;gap:2.5rem;padding-bottom:3.5rem;border-bottom:1px solid rgba(255,255,255,.07);}
 .footer-brand{grid-column:1;}
 .footer-logo{text-decoration:none;display:inline-flex;align-items:center;gap:.55rem;margin-bottom:1rem;}
@@ -513,9 +513,6 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
 @media(max-width:960px){.primary-nav{display:none;}.header-hamburger{display:flex;}.article-layout{grid-template-columns:1fr;}.article-sidebar{position:static;}.related-grid{grid-template-columns:1fr 1fr;}}
 @media(max-width:640px){.container{padding-inline:20px;}.related-grid{grid-template-columns:1fr;}.footer-top{grid-template-columns:1fr 1fr;}.footer-bottom{flex-direction:column;align-items:flex-start;}.cta-btns{flex-direction:column;}}
 @media(max-width:400px){.footer-top{grid-template-columns:1fr;}}
-</style>
-<link rel="stylesheet" href="../../css/chaty-front.min.css"/>
-
 
 <style>
 /* ============================================================
@@ -872,7 +869,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
   max-width: 1400px;
   margin: 0 auto;
   padding: 1.8rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -920,6 +917,19 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
   .footer-legal-links { gap: 1rem; }
   .footer-legal-links a { font-size: 0.9rem; }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:640px) {    }
 </style>
 </head>
 <body>
@@ -1244,7 +1254,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
   <ul>
     <li>Legal, secure long-term residence in Thailand (3 months initially, extendable up to 12 months).</li>
     <li>Peace of mind with Thai immigration authorities.</li>
-    <li>90-day reporting handled by the school (not you).</li>
+    <li><strong>90-day reporting:</strong> Required every 90 days. File form TM.47 at Chiang Mai Immigration between 14 days before and 7 days after your deadline to avoid 2,000 THB fine. Easy process; typically 5–10 minutes online or in-person. <button id="open90DayReminder" style="background: #4F46E5; color: white; padding: 0.35em 0.8em; border: none; border-radius: 6px; font-weight: 600; cursor: pointer; font-size: 0.85rem; transition: background 0.2s;">Set Deadline Reminder</button></li>
     <li>Eligibility for Thai driver's license (car and motorcycle).</li>
     <li>Ability to open Thai bank accounts and obtain Thai credit cards.</li>
     <li>Government attraction discounts and vehicle purchase/sale rights.</li>
@@ -1306,6 +1316,26 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
     <div class="last-verified">Last verified: March 2026</div>
   </div>
 
+<div id="reporting90DayModal" class="pro-tip-modal">
+  <div class="pro-tip-modal-content">
+    <button class="pro-tip-modal-close" onclick="document.getElementById('reporting90DayModal').classList.remove('active')">×</button>
+    <div class="pro-tip-modal-inner">
+      <span class="pro-tip-modal-icon">⏰</span>
+      <div class="pro-tip-modal-label">90-Day Reporting Deadline</div>
+      <div class="pro-tip-modal-description">File form TM.47 between 14 days BEFORE and 7 days AFTER your deadline to avoid a 2,000 THB fine. Enter the date you last filed 90-day reporting.</div>
+
+      <form id="reporting90DayForm" style="margin-top: 1.5rem;">
+        <div style="margin-bottom: 1rem;">
+          <label for="reporting90DayInput" style="display: block; font-size: 0.95rem; margin-bottom: 0.5rem; font-weight: 500; color: #fff;">Last 90-Day Report Date</label>
+          <input type="text" id="reporting90DayInput" placeholder="DD/MM/YYYY" maxlength="10" style="width: 100%; padding: 0.8em; font-size: 1rem; border: 2px solid rgba(255,255,255,.5); border-radius: 8px; background: rgba(255,255,255,.15); color: #fff; font-family: var(--font-body); transition: all .25s ease;" />
+          <small style="display: block; margin-top: 0.4rem; opacity: 1; color: rgba(255,255,255,.95); font-size: 0.9rem;">Example: 15/03/2026</small>
+        </div>
+        <button type="submit" class="pro-tip-modal-button" style="width: 100%; text-align: center;">Add to Calendar</button>
+      </form>
+    </div>
+  </div>
+</div>
+
 </article>
 <aside class="article-sidebar">
   <div class="sidebar-card">
@@ -1345,13 +1375,13 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
   </div>
 
   <div class="sidebar-card">
-    <div class="sidebar-card-title">Related ED Visas</div>
+    <div class="sidebar-card-title">Related Visa Routes</div>
     <div class="sidebar-links">
+      <a href="emergency-self-defence-ed-visa-chiang-mai.html">Emergency Self Defence ED Visa</a>
+      <a href="hand-to-hand-combat-ed-visa-chiang-mai.html">Hand-to-Hand Combat ED Visa</a>
       <a href="muay-thai-ed-visa-chiang-mai.html">Muay Thai ED Visa</a>
-      <a href="emergency-self-defence-ed-visa-chiang-mai.html">Self-Defence ED Visa</a>
-      <a href="index.html">ED Visa Hub</a>
-      <a href="../immigration/90-day-reporting.html">90-Day Reporting</a>
-      <a href="../immigration/index.html">Chiang Mai Immigration Guide</a>
+      <a href="volunteer-non-o-visa-chiang-mai.html">Volunteer Non-O Visa</a>
+      <a href="../visas/long-stay/index.html">All Long-Stay Visas</a>
     </div>
   </div>
 </aside>
@@ -1372,55 +1402,8 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
 
 
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  // Sticky header shadow on scroll
-  const header = document.getElementById('site-header');
-  window.addEventListener('scroll', function() {
-    if (window.scrollY > 0) {
-      header.classList.add('scrolled');
-    } else {
-      header.classList.remove('scrolled');
-    }
-  });
 
-  // Mobile hamburger menu toggle
-  const hamburger = document.getElementById('hamburger');
-  const mobileNav = document.getElementById('mobile-nav');
-  if (hamburger && mobileNav) {
-    hamburger.addEventListener('click', function() {
-      const isOpen = mobileNav.hasAttribute('hidden');
-      if (isOpen) {
-        mobileNav.removeAttribute('hidden');
-        hamburger.setAttribute('aria-expanded', 'true');
-      } else {
-        mobileNav.setAttribute('hidden', '');
-        hamburger.setAttribute('aria-expanded', 'false');
-      }
-    });
-  }
-
-  // FAQ accordion toggle (single open)
-  const faqItems = document.querySelectorAll('.faq-item');
-  faqItems.forEach(item => {
-    const button = item.querySelector('.faq-question');
-    button.addEventListener('click', function() {
-      const isOpen = item.classList.contains('open');
-      // Close all other FAQ items
-      faqItems.forEach(otherItem => otherItem.classList.remove('open'));
-      // Toggle current item
-      if (!isOpen) {
-        item.classList.add('open');
-        button.setAttribute('aria-expanded', 'true');
-      } else {
-        button.setAttribute('aria-expanded', 'false');
-      }
-    });
-  });
-});
-</script>
 <script src="../../../shared/js/header-handler.js" defer></script>
-<script src="../../../shared/chaty-widget/scripts/chaty-widget.js"></script>
 
 <footer class="site-footer" role="contentinfo" style="background: #0D1117;">
 <div class="footer-container">
@@ -1498,6 +1481,11 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 
 </footer>
+
 <script src="../../../shared/js/card-click-handler.js"></script>
+<script src="../../../shared/chaty-widget/scripts/chaty-widget.js"></script>
+
+
+
 </body>
 </html>
