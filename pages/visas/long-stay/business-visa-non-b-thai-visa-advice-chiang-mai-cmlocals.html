@@ -490,7 +490,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
 .cta-section h2{font-family:var(--font-display);font-size:clamp(1.6rem,3vw,2.2rem);font-weight:400;color:var(--c-white);margin-bottom:.75rem;}
 .cta-section p{color:rgba(255,255,255,.85);margin-bottom:1.75rem;max-width:500px;margin-inline:auto;}
 .cta-btns{display:flex;flex-wrap:wrap;gap:.75rem;justify-content:center;}
-.site-footer{background:var(--c-dark);padding-top:clamp(3.5rem,6vw,5.5rem);padding-bottom:2.5rem;}
+.site-footer{background:var(--c-dark);border-top:1px solid rgba(255,255,255,.07);padding-top:clamp(3.5rem,6vw,5.5rem);padding-bottom:2.5rem;}
 .footer-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr 1fr;gap:2.5rem;padding-bottom:3.5rem;border-bottom:1px solid rgba(255,255,255,.07);}
 .footer-brand{grid-column:1;}
 .footer-logo{text-decoration:none;display:inline-flex;align-items:center;gap:.55rem;margin-bottom:1rem;}
@@ -567,6 +567,9 @@ figure img {
   display: block;
   height: auto;
 }
+</style>
+<link rel="stylesheet" href="../../../css/chaty-front.min.css"/>
+
 
 <style>
 /* ============================================================
@@ -923,7 +926,7 @@ figure img {
   max-width: 1400px;
   margin: 0 auto;
   padding: 1.8rem;
-  
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -979,21 +982,7 @@ figure img {
   display: block;
   height: auto;
 }
-/* 90-Day Reporting Modal */
-
-
- to { opacity: 1; } }
-
-
-
-
-
-
-
-
-
-
-@media(max-width:640px) {    }
+.pro-tip-modal{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.5);backdrop-filter:blur(4px);z-index:9999;justify-content:center;align-items:center;padding:1.5rem;}.pro-tip-modal.active{display:flex;}.pro-tip-modal-content{background:white;border-radius:12px;padding:2.5rem;max-width:500px;width:100%;box-shadow:0 20px 60px rgba(0,0,0,.15);animation:fadeInModal .3s ease-out;}@keyframes fadeInModal{from{opacity:0;transform:scale(.95);}to{opacity:1;transform:scale(1);}}.pro-tip-modal h2{font-size:1.5rem;font-family:var(--font-body);margin-bottom:1rem;color:var(--c-body);font-weight:600;}.pro-tip-modal p{font-size:.95rem;color:var(--c-muted);margin-bottom:2rem;line-height:1.6;}.pro-tip-modal-options{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.5rem;}.pro-tip-modal-btn{padding:.9rem 1.5rem;border:1px solid rgba(79,70,229,.3);border-radius:6px;background:white;color:var(--c-body);font-size:.9rem;font-weight:500;cursor:pointer;transition:all .3s ease;font-family:var(--font-body);}.pro-tip-modal-btn:hover{background:rgba(79,70,229,.1);border-color:var(--c-primary);color:var(--c-primary);}.pro-tip-modal-btn.primary{background:linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%);color:white;border:none;}.pro-tip-modal-btn.primary:hover{opacity:.9;background:linear-gradient(135deg, #7C3AED 0%, #8B5CF6 100%);}.pro-tip-modal-close{position:absolute;top:1rem;right:1rem;background:none;border:none;font-size:1.5rem;cursor:pointer;color:var(--c-muted);}.pro-tip-modal-close:hover{color:var(--c-body);}
 </style>
 </head>
 <body>
@@ -1188,7 +1177,27 @@ figure img {
 <div class="article-layout">
 <article class="article-body" aria-label="Business Visa Non-B guide">
 
-    <h2>Who This Visa Is For</h2>
+    <!-- 90-DAY PRO TIP -->
+    <div style="position: relative; background: linear-gradient(135deg, rgba(79,70,229,0.08) 0%, rgba(124,58,237,0.06) 100%); border: 1px solid rgba(79,70,229,0.2); border-radius: 10px; padding: 2rem; margin: 0 0 2.5rem 0;">
+      <div style="display: flex; align-items: flex-start; gap: 1.5rem; max-width: 100%;">
+        <div style="flex-shrink: 0;">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: #4F46E5;">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 16 14"></polyline>
+          </svg>
+        </div>
+        <div style="flex: 1;">
+          <h3 style="margin: 0 0 0.5rem 0; font-size: 1.05rem; font-weight: 600; color: #0D1117;">Save Your 90-Day Deadline</h3>
+          <p style="margin: 0 0 1.25rem 0; font-size: 0.9rem; line-height: 1.6; color: #6B7280;">After entry into Thailand, file your 90-day report 7–14 days before the deadline. Enter your entry date to get a calendar reminder.</p>
+          <div style="display: flex; align-items: center; gap: 0.8rem; flex-wrap: wrap;">
+            <input type="text" id="proTipDateInput" placeholder="DD/MM/YYYY" style="padding: 0.6rem 0.8rem; border: 1px solid rgba(79,70,229,0.3); border-radius: 6px; font-size: 0.9rem; width: 120px; font-family: inherit;">
+            <button id="proTipSubmitBtn" style="padding: 0.6rem 1.2rem; background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%); color: white; border: none; border-radius: 6px; font-size: 0.9rem; font-weight: 600; cursor: pointer; transition: all 0.3s ease;">Add to Calendar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <h2>Who This Visa Is For</h2>
   <p>The Non-Immigrant B visa — commonly called the Non-B or business visa — is the standard entry document for foreign nationals who intend to work legally in Thailand for a Thai employer. It is also used for business activities that fall short of employment: attending meetings, conducting negotiations, or setting up a company.</p>
   <p>In most cases, the Non-B visa is the precursor to a work permit. Without a valid work permit, holding a Non-B visa does not authorise work. The visa and the work permit are two separate documents, both required to work legally.</p>
   <p>For a broader overview of Thai visa options see the <a href="../index.html">Thai visa options hub</a>. This page covers general information only and is not legal or immigration advice.</p>
@@ -1298,9 +1307,6 @@ figure img {
     <li><strong>Assuming a Non-B visa covers freelance or self-employed work.</strong> It does not. Freelancers and self-employed individuals face significant barriers to legal work authorisation in Thailand without company sponsorship.</li>
   </ul>
 
-  <h2>Ongoing Compliance: 90-Day Reporting</h2>
-  <p>As a Non-B visa holder residing in Thailand, you must comply with 90-day address reporting. Required every 90 days. File form TM.47 at Chiang Mai Immigration between 14 days BEFORE and 7 days AFTER your deadline to avoid 2,000 THB fine. Easy process; typically 5–10 minutes online or in-person. <button id="open90DayReminder" style="background: #4F46E5; color: white; padding: 0.35em 0.8em; border: none; border-radius: 6px; font-weight: 600; cursor: pointer; font-size: 0.85rem; transition: background 0.2s;">Set Deadline Reminder</button></p>
-
   <h2>Related Visa Options to Consider</h2>
   <div class="related-grid">
     <div class="related-card">
@@ -1396,7 +1402,17 @@ figure img {
 </div>
 </main>
 
-</div>
+<!-- Pro Tip Modal -->
+<div id="proTipModal" class="pro-tip-modal">
+  <div class="pro-tip-modal-content">
+    <button class="pro-tip-modal-close" id="modalClose">×</button>
+    <h2>Add to Calendar</h2>
+    <p>Choose how you'd like to save your 90-day deadline reminder:</p>
+    <div class="pro-tip-modal-options">
+      <button class="pro-tip-modal-btn" id="googleCalendarBtn">Google Calendar</button>
+      <button class="pro-tip-modal-btn primary" id="downloadIcsBtn">Download .ics File</button>
+    </div>
+  </div>
 </div>
 
 <section class="cta-section" aria-label="Get help">
@@ -1410,11 +1426,23 @@ figure img {
 </div></div>
 </section>
 
+<script>
+(function(){var h=document.getElementById('site-header');if(!h)return;window.addEventListener('scroll',function(){h.classList.toggle('scrolled',window.scrollY>10);},{passive:true});})();
+(function(){var btn=document.getElementById('hamburger');var nav=document.getElementById('mobile-nav');if(!btn||!nav)return;btn.addEventListener('click',function(){var open=btn.getAttribute('aria-expanded')==='true';btn.setAttribute('aria-expanded',String(!open));btn.classList.toggle('open',!open);nav.classList.toggle('open',!open);nav.hidden=open;});})();
+(function(){var items=document.querySelectorAll('.faq-item');items.forEach(function(item){var btn=item.querySelector('.faq-question');var ans=item.querySelector('.faq-answer');if(!btn||!ans)return;btn.addEventListener('click',function(){var open=item.classList.contains('open');items.forEach(function(i){i.classList.remove('open');var q=i.querySelector('.faq-question');var a=i.querySelector('.faq-answer');if(q)q.setAttribute('aria-expanded','false');if(a)a.hidden=true;});if(!open){item.classList.add('open');btn.setAttribute('aria-expanded','true');ans.hidden=false;}});});})();
+</script>
 
-
+<script>
+function formatDateForICS(d){const y=d.getFullYear();const m=String(d.getMonth()+1).padStart(2,'0');const d_=String(d.getDate()).padStart(2,'0');return`${y}${m}${d_}`;}
+function generateICS(dateObj){const uid='ninety-day-deadline-'+dateObj.deadline.getTime()+'@cmlocals.com';const startDate=formatDateForICS(dateObj.filingStart);const endDate=formatDateForICS(new Date(dateObj.deadline.getTime()+86400000));return`BEGIN:VCALENDAR\nVERSION:2.0\nPRODID:-//CMLocals//Thai Visa Calendar//EN\nCALSCALE:GREGORIAN\nMETHOD:PUBLISH\nBEGIN:VEVENT\nUID:${uid}\nDTSTAMP:${formatDateForICS(new Date())}\nDTSTART:${startDate}\nDTEND:${endDate}\nSUMMARY:90-Day Reporting Deadline - File Now\nDESCRIPTION:Your 90-day reporting deadline is ${dateObj.deadline.toLocaleDateString('en-GB')}. You can file from now until 14 days before this date at Chiang Mai Immigration Office.\\n\\nLocation: 71 Moo 3 Airport Rd\\, Suthep\\, Chiang Mai\\nHours: Mon–Fri 8:30 AM–4:30 PM\\n\\nWhat you need: Original passport\\, TM.47 form (if filing in person)\\, proof of address (optional).\nLOCATION:Chiang Mai Immigration Office\nSEQUENCE:0\nSTATUS:CONFIRMED\nTRANSP:OPAQUE\nBEGIN:VALARM\nTRIGGER:-P7D\nACTION:DISPLAY\nDESCRIPTION:90-Day Report Due in 7 Days\nEND:VALARM\nBEGIN:VALARM\nTRIGGER:-P1D\nACTION:DISPLAY\nDESCRIPTION:90-Day Report Due Tomorrow\nEND:VALARM\nEND:VEVENT\nEND:VCALENDAR`;}
+document.addEventListener('DOMContentLoaded',function(){const dateInput=document.getElementById('proTipDateInput');const submitBtn=document.getElementById('proTipSubmitBtn');const modal=document.getElementById('proTipModal');const modalClose=document.getElementById('modalClose');const googleCalendarBtn=document.getElementById('googleCalendarBtn');const downloadIcsBtn=document.getElementById('downloadIcsBtn');let calculatedDate=null;submitBtn.addEventListener('click',function(){const dateValue=dateInput.value.trim();const dateRegex=/^(\d{2})\/(\d{2})\/(\d{4})$/;const match=dateValue.match(dateRegex);if(!match){alert('Please enter date in DD/MM/YYYY format');return;}
+const[,day,month,year]=match;const entryDate=new Date(year,parseInt(month)-1,parseInt(day));if(isNaN(entryDate.getTime())){alert('Please enter a valid date');return;}
+if(entryDate>new Date()){alert('Please enter a past date (your entry date)');return;}
+const deadlineDate=new Date(entryDate);deadlineDate.setDate(deadlineDate.getDate()+90);const filingStart=new Date(deadlineDate);filingStart.setDate(filingStart.getDate()-14);calculatedDate={entry:entryDate,deadline:deadlineDate,filingStart:filingStart};modal.classList.add('active');});modalClose.addEventListener('click',function(){modal.classList.remove('active');});modal.addEventListener('click',function(e){if(e.target===modal){modal.classList.remove('active');}});googleCalendarBtn.addEventListener('click',function(){if(!calculatedDate)return;const startDate=formatDateForICS(calculatedDate.filingStart);const endDate=formatDateForICS(new Date(calculatedDate.deadline.getTime()+86400000));const title=encodeURIComponent('90-Day Reporting Deadline');const details=encodeURIComponent(`Your 90-day reporting deadline is ${calculatedDate.deadline.toLocaleDateString('en-GB')}. File at Chiang Mai Immigration: 71 Moo 3 Airport Rd, Suthep. Hours: Mon-Fri 8:30 AM-4:30 PM`);const url=`https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${startDate}/${endDate}&details=${details}&location=Chiang Mai Immigration Office`;window.open(url,'_blank');modal.classList.remove('active');});downloadIcsBtn.addEventListener('click',function(){if(!calculatedDate)return;const icsContent=generateICS(calculatedDate);const blob=new Blob([icsContent],{type:'text/calendar'});const url=window.URL.createObjectURL(blob);const link=document.createElement('a');link.href=url;link.download='90-day-deadline.ics';document.body.appendChild(link);link.click();document.body.removeChild(link);window.URL.revokeObjectURL(url);modal.classList.remove('active');});});
+</script>
 <script src="../../../../shared/js/card-click-handler.js"></script>
-<script src="../../../../shared/chaty-widget/scripts/chaty-widget.js"></script>
 <script src="../../../../shared/js/header-handler.js" defer></script>
+<script src="../../../../shared/chaty-widget/scripts/chaty-widget.js"></script>
 
 <footer class="site-footer" role="contentinfo" style="background: #0D1117;">
 <div class="footer-container">
@@ -1492,10 +1520,5 @@ figure img {
 </div>
 
 </footer>
-
-<script>
-// 90-Day Reporting Modal Handler
-</script>
-
 </body>
 </html>
