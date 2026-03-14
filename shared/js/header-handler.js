@@ -85,6 +85,15 @@
     });
   });
 
+  // --- FAQ accordion ---
+  document.querySelectorAll('.faq-question').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var item = this.closest('.faq-item');
+      var isOpen = item.classList.toggle('open');
+      this.setAttribute('aria-expanded', isOpen);
+    });
+  });
+
   // --- Scroll fade-in animations ---
   if ('IntersectionObserver' in window) {
     var observer = new IntersectionObserver(function(entries) {

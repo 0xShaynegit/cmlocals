@@ -1865,12 +1865,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
   <!-- Right: Two stacked visuals -->
   <div class="hero-visuals-stack">
-    <div class="hero-visual">
+    <div class="hero-visual" aria-hidden="true">
       <div class="hero-visual-frame">
-        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 1.5rem; gap: 1rem;">
-          <p style="color: rgba(255,255,255,.88); font-size: 1rem; margin: 0; max-width: 280px; line-height: 1.5; font-weight: 600;">Do you know when your visa is expiring? Add it to you calendar NOW!</p>
-          <a href="#" onclick="document.getElementById('pro-tip-modal').classList.add('active'); return false;" class="btn btn-primary btn-lg">Add your visa expiry to your calendar now!</a>
-        </div>
+        <div class="hero-img-placeholder"></div>
       </div>
     </div>
 
@@ -2526,26 +2523,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 </div>
 </section>
 
-<!-- Visa Calendar Modal -->
-<div id="pro-tip-modal" class="pro-tip-modal">
-  <div class="pro-tip-modal-content">
-    <button class="pro-tip-modal-close" onclick="document.getElementById('pro-tip-modal').classList.remove('active')">×</button>
-    <div class="pro-tip-modal-inner">
-      <span class="pro-tip-modal-icon">📅</span>
-      <div class="pro-tip-modal-label">Never Miss Your Visa Expiry</div>
-      <div class="pro-tip-modal-description">When immigration stamps your extension approval, enter your visa expiry date to automatically add it to your calendar with reminders for 7 days and 1 day before expiry.</div>
-
-      <form id="visa-date-form" style="margin-top: 1.5rem;">
-        <div style="margin-bottom: 1rem;">
-          <label for="visa-expiry-input" style="display: block; font-size: 0.95rem; margin-bottom: 0.5rem; font-weight: 500; color: #fff;">Visa Expiry Date</label>
-          <input type="text" id="visa-expiry-input" placeholder="DD/MM/YYYY" maxlength="10" style="width: 100%; padding: 0.8em; font-size: 1rem; border: 2px solid rgba(255,255,255,.5); border-radius: 8px; background: rgba(255,255,255,.15); color: #fff; font-family: var(--font-body); transition: all .25s ease;" />
-          <small style="display: block; margin-top: 0.4rem; opacity: 1; color: rgba(255,255,255,.95); font-size: 0.9rem;">Example: 15/06/2026</small>
-        </div>
-        <button type="submit" class="pro-tip-modal-button" style="width: 100%; text-align: center;">ADD</button>
-      </form>
-    </div>
-  </div>
-</div>
 
 </main><!-- #main-content -->
 
