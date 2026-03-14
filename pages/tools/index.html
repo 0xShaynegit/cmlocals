@@ -994,6 +994,145 @@ figure img {
   display: block;
   height: auto;
 }
+
+/* Pro-tip Modal */
+.pro-tip-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(4px);
+}
+.pro-tip-modal.active {
+  display: flex;
+}
+.pro-tip-modal-content {
+  background: linear-gradient(135deg, #6366F1 0%, #7C3AED 100%);
+  border-radius: 16px;
+  padding: 2.5rem;
+  max-width: 420px;
+  width: 90%;
+  color: white;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  position: relative;
+  animation: slideIn 0.3s ease-out;
+}
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.pro-tip-modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+.pro-tip-modal-close:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+.pro-tip-modal-icon {
+  display: block;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.pro-tip-modal-label {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  text-align: center;
+}
+.pro-tip-modal-description {
+  font-size: 0.95rem;
+  opacity: 0.95;
+  text-align: center;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+.pro-tip-modal-button {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 8px;
+  padding: 0.8em 1.5em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.pro-tip-modal-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+.pro-tip-bubble {
+  cursor: pointer;
+}
+.pro-tip-bubble:hover {
+  opacity: 0.9;
+}
+
+/* Two-button layout for modal */
+.pro-tip-modal-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+.pro-tip-modal-buttons button {
+  flex: 1;
+  padding: 0.8em 1rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 0.9rem;
+}
+.pro-tip-modal-buttons .btn-google {
+  background: rgba(255, 255, 255, 0.25);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.pro-tip-modal-buttons .btn-google:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+.pro-tip-modal-buttons .btn-ics {
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+.pro-tip-modal-buttons .btn-ics:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+@media (max-width: 640px) {
+  .pro-tip-modal-content {
+    padding: 2rem;
+    max-width: 95%;
+  }
+  .pro-tip-modal-label {
+    font-size: 1.2rem;
+  }
+}
 </style>
 </head>
 <body>
@@ -1236,7 +1375,10 @@ figure img {
             </style>
             <small style="display: block; margin-top: 0.4rem; opacity: 0.85;">Example: 15/06/2026</small>
           </div>
-          <button type="submit" class="pro-tip-modal-button" style="width: 100%; text-align: center;">ADD</button>
+          <div class="pro-tip-modal-buttons">
+            <button type="button" class="btn-google" id="add-to-google">Google Calendar</button>
+            <button type="button" class="btn-ics" id="download-ics">.ics File</button>
+          </div>
         </form>
       </div>
     </div>
@@ -1325,6 +1467,163 @@ figure img {
 
 
 <script src="/shared/js/header-handler.js" defer></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const proTipBtn = document.getElementById('pro-tip-bubble-btn');
+  const proTipModal = document.getElementById('pro-tip-modal');
+  const visaDateForm = document.getElementById('visa-date-form');
+  const visaExpiryInput = document.getElementById('visa-expiry-input');
+  const googleCalBtn = document.getElementById('add-to-google');
+  const icsBtn = document.getElementById('download-ics');
+
+  // Open modal
+  if (proTipBtn) {
+    proTipBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      proTipModal.classList.add('active');
+      visaExpiryInput.focus();
+    });
+  }
+
+  // Close modal on background click
+  proTipModal.addEventListener('click', function(e) {
+    if (e.target === proTipModal) {
+      proTipModal.classList.remove('active');
+    }
+  });
+
+  // Validate and handle form submission
+  function validateDate(dateStr) {
+    const regex = /^(\d{2})\/(\d{2})\/(\d{4})$/;
+    const match = dateStr.match(regex);
+    if (!match) return null;
+
+    const day = parseInt(match[1], 10);
+    const month = parseInt(match[2], 10);
+    const year = parseInt(match[3], 10);
+
+    if (month < 1 || month > 12 || day < 1 || day > 31) return null;
+
+    return new Date(year, month - 1, day);
+  }
+
+  function generateGoogleCalendarUrl(date) {
+    const title = 'Thailand Visa Expiry';
+    const description = 'Your Thailand visa expires today. Renew or apply for extension if needed.';
+
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const day = String(date.getDate()).padStart(2, '0');
+    const startDate = `${year}${month}${day}`;
+
+    const sevenDaysBefore = new Date(date);
+    sevenDaysBefore.setDate(sevenDaysBefore.getDate() - 7);
+    const sd7Year = sevenDaysBefore.getFullYear();
+    const sd7Month = String(sevenDaysBefore.getMonth() + 1).padStart(2, '0');
+    const sd7Day = String(sevenDaysBefore.getDate()).padStart(2, '0');
+    const sevenDaysBeforeDate = `${sd7Year}${sd7Month}${sd7Day}`;
+
+    const params = new URLSearchParams({
+      action: 'TEMPLATE',
+      text: title,
+      details: description,
+      dates: `${startDate}/${startDate}`,
+      location: 'Thailand'
+    });
+
+    return `https://calendar.google.com/calendar/render?${params.toString()}`;
+  }
+
+  function generateICS(date) {
+    const title = 'Thailand Visa Expiry';
+    const description = 'Your Thailand visa expires today. Renew or apply for extension if needed.';
+
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const day = String(date.getDate()).padStart(2, '0');
+    const dateStr = `${year}${month}${day}`;
+
+    // Create reminders (VALARM components)
+    const sevenDaysBefore = new Date(date);
+    sevenDaysBefore.setDate(sevenDaysBefore.getDate() - 7);
+    const sevenDaysBeforeStr = sevenDaysBefore.toISOString().split('T')[0].replace(/-/g, '');
+
+    const oneDayBefore = new Date(date);
+    oneDayBefore.setDate(oneDayBefore.getDate() - 1);
+    const oneDayBeforeStr = oneDayBefore.toISOString().split('T')[0].replace(/-/g, '');
+
+    const icsContent = `BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//CMLocals//Thailand Visa Expiry//EN
+BEGIN:VEVENT
+UID:visa-expiry-${dateStr}@cmlocals.com
+DTSTAMP:${new Date().toISOString().replace(/[-:]/g, '').split('.')[0]}Z
+DTSTART;VALUE=DATE:${dateStr}
+DTEND;VALUE=DATE:${dateStr}
+SUMMARY:${title}
+DESCRIPTION:${description}
+LOCATION:Thailand
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:Visa expiry in 7 days
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Visa expiry tomorrow
+END:VALARM
+END:VEVENT
+END:VCALENDAR`;
+
+    return icsContent;
+  }
+
+  if (googleCalBtn) {
+    googleCalBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      const dateStr = visaExpiryInput.value.trim();
+      const date = validateDate(dateStr);
+
+      if (!date) {
+        alert('Please enter a valid date in DD/MM/YYYY format');
+        return;
+      }
+
+      const googleUrl = generateGoogleCalendarUrl(date);
+      window.open(googleUrl, '_blank');
+      proTipModal.classList.remove('active');
+    });
+  }
+
+  if (icsBtn) {
+    icsBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      const dateStr = visaExpiryInput.value.trim();
+      const date = validateDate(dateStr);
+
+      if (!date) {
+        alert('Please enter a valid date in DD/MM/YYYY format');
+        return;
+      }
+
+      const icsContent = generateICS(date);
+      const blob = new Blob([icsContent], { type: 'text/calendar' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `visa-expiry-${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}.ics`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+      proTipModal.classList.remove('active');
+    });
+  }
+});
+</script>
+
 <script>
 window.CHATY_CONFIG={channels:[{name:"Facebook_Messenger",label:"Facebook Messenger",url:"https://m.me/cmlocals",svg:'<svg viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="19.4395" cy="19.4395" r="19.4395" fill="#0084FF"/><path d="M19.5 9.5C13.701 9.5 9 13.748 9 19.074c0 3.014 1.474 5.702 3.778 7.456V30l3.294-1.81c.878.244 1.81.376 2.778.376 5.799 0 10.5-4.248 10.5-9.574S25.299 9.5 19.5 9.5zm1.04 12.878l-2.674-2.852-5.22 2.852 5.74-6.096 2.74 2.852 5.154-2.852-5.74 6.096z" fill="white"/></svg>'},{name:"WhatsApp",label:"WhatsApp",url:"https://wa.me/66801202074",svg:'<svg viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="19.4395" cy="19.4395" r="19.4395" fill="#25D366"/><path d="M19.5 9.5C14.253 9.5 10 13.753 10 19c0 1.67.436 3.285 1.265 4.717L10 29l5.418-1.234A9.454 9.454 0 0019.5 28.5c5.247 0 9.5-4.253 9.5-9.5s-4.253-9.5-9.5-9.5zm5.508 13.142c-.232.652-1.345 1.247-1.853 1.29-.508.043-.982.228-3.306-.688-2.806-1.107-4.573-3.974-4.71-4.16-.137-.186-1.12-1.49-1.12-2.843 0-1.352.71-2.018.96-2.293.25-.275.546-.344.728-.344.183 0 .365.002.525.01.168.007.394-.064.617.47.232.556.786 1.92.855 2.06.069.138.115.3.023.485-.093.186-.139.3-.275.462-.137.162-.288.362-.412.486-.137.137-.28.286-.12.56.16.275.71 1.173 1.525 1.9 1.047.933 1.93 1.222 2.205 1.36.275.137.435.115.595-.069.16-.185.686-.8.869-1.075.183-.275.365-.228.617-.137.25.092 1.595.752 1.868.889.275.137.457.206.526.32.068.115.068.663-.164 1.315z" fill="white"/></svg>'}],triggerColor:"#9F7AEA",bottomOffset:50,leftOffset:20};
 </script>
