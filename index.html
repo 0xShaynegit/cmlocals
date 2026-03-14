@@ -226,9 +226,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .mobile-nav a:hover { color: var(--c-primary); }
 .mobile-nav-ctas { display: flex; flex-direction: column; gap: .75rem; margin-top: 1.5rem; }
 .mobile-nav-ctas .btn { justify-content: center; }
-.mobile-nav-header { display: flex; justify-content: flex-end; align-items: center; padding-bottom: 1rem; border-bottom: 1px solid var(--c-border); }
-.mobile-nav-close { background: none; border: none; font-size: 1.5rem; cursor: pointer; padding: 0.5rem; color: var(--c-dark); display: flex; align-items: center; justify-content: center; }
-.mobile-nav-close:hover { color: var(--c-primary); }
 
 /* Navigation Links with Dropdown */
 .nav-item {
@@ -360,7 +357,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 .mobile-menu-toggle.active span:nth-child(1) {
-  transform: rotate(45deg) translate(8px, 8px);
+  transform: translateY(6px) rotate(45deg);
 }
 
 .mobile-menu-toggle.active span:nth-child(2) {
@@ -368,7 +365,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 .mobile-menu-toggle.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(7px, -7px);
+  transform: translateY(-6px) rotate(-45deg);
 }
 
 /* Desktop Only */
@@ -1429,9 +1426,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
    MEGA MENU & MOBILE ACCORDION (TASKS 2 & 3)
    ============================================================ */
 
-/* Desktop-only class */
-.desktop-only { display: flex; }
-.mobile-only { display: none; }
 
 /* Navigation Items with Dropdown */
 .nav-item {
@@ -1534,7 +1528,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 .header-hamburger.active span:nth-child(1) {
-  transform: rotate(45deg) translate(8px, 8px);
+  transform: translateY(6px) rotate(45deg);
 }
 
 .header-hamburger.active span:nth-child(2) {
@@ -1542,7 +1536,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 .header-hamburger.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(7px, -7px);
+  transform: translateY(-6px) rotate(-45deg);
 }
 
 /* Mobile Accordion Drawer */
@@ -1770,12 +1764,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 </header>
 
 <!-- Mobile Accordion Drawer Navigation -->
-<nav class="nav-mobile mobile-only" id="mobile-nav" aria-label="Mobile navigation" hidden>
-  <div class="mobile-nav-header">
-    <button class="mobile-nav-close" id="mobile-nav-close" aria-label="Close navigation">
-      <span class="close-icon">✕</span>
-    </button>
-  </div>
+<nav class="nav-mobile mobile-only" id="mobile-nav" aria-label="Mobile navigation">
   <details class="nav-accordion">
     <summary>ED Visas (6)</summary>
     <ul>
@@ -1814,6 +1803,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
       <li><a href="pages/culture/thai-food-culture.html">Thai Food</a></li>
       <li><a href="pages/culture/temple-etiquette.html">Temple Etiquette</a></li>
       <li><a href="pages/culture/sak-yant-chiang-mai.html">Sak Yant</a></li>
+      <li><a href="pages/culture/sak-yant-designs-and-meanings.html">Sak Yant Designs</a></li>
     </ul>
   </details>
   <details class="nav-accordion">
@@ -2642,14 +2632,14 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 <!-- ========================================================
      MINIMAL JS
      ======================================================== -->
-<script src="../shared/js/header-handler.js" defer></script>
+<script src="/shared/js/header-handler.js" defer></script>
 
 <!-- Make entire cards clickable -->
-<script src="../shared/js/card-click-handler.js" defer></script>
+<script src="/shared/js/card-click-handler.js" defer></script>
 
 <!-- Chaty Widget Configuration (must be before script) -->
 
 <!-- Chaty Widget -->
-<script src="../shared/chaty-widget/scripts/chaty-widget.js"></script>
+<script src="/shared/chaty-widget/scripts/chaty-widget.js"></script>
 </body>
 </html>

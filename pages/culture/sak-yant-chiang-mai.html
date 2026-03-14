@@ -176,9 +176,6 @@ a:hover { color: var(--c-dark-2); }
 .mobile-nav a:hover { color: var(--c-primary); }
 .mobile-nav-ctas { display: flex; flex-direction: column; gap: .75rem; margin-top: 1.5rem; }
 .mobile-nav-ctas .btn { justify-content: center; }
-.mobile-nav-header { display: flex; justify-content: flex-end; align-items: center; padding-bottom: 1rem; border-bottom: 1px solid var(--c-border); }
-.mobile-nav-close { background: none; border: none; font-size: 1.5rem; cursor: pointer; padding: 0.5rem; color: var(--c-dark); display: flex; align-items: center; justify-content: center; }
-.mobile-nav-close:hover { color: var(--c-primary); }
 
 /* Navigation Links with Dropdown */
 .nav-item {
@@ -310,7 +307,7 @@ a:hover { color: var(--c-dark-2); }
 }
 
 .mobile-menu-toggle.active span:nth-child(1) {
-  transform: rotate(45deg) translate(8px, 8px);
+  transform: translateY(6px) rotate(45deg);
 }
 
 .mobile-menu-toggle.active span:nth-child(2) {
@@ -318,7 +315,7 @@ a:hover { color: var(--c-dark-2); }
 }
 
 .mobile-menu-toggle.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(7px, -7px);
+  transform: translateY(-6px) rotate(-45deg);
 }
 
 /* Desktop Only */
@@ -717,9 +714,6 @@ figcaption { font-size: .9rem; color: #4B5563; margin-top: 1rem; }
 .mobile-nav a:hover { color: var(--c-primary, #4F46E5); }
 .mobile-nav-ctas { display: flex; flex-direction: column; gap: .75rem; margin-top: 1.5rem; }
 .mobile-nav-ctas .btn { justify-content: center; }
-.mobile-nav-header { display: flex; justify-content: flex-end; align-items: center; padding-bottom: 1rem; border-bottom: 1px solid var(--c-border); }
-.mobile-nav-close { background: none; border: none; font-size: 1.5rem; cursor: pointer; padding: 0.5rem; color: var(--c-dark); display: flex; align-items: center; justify-content: center; }
-.mobile-nav-close:hover { color: var(--c-primary); }
 .nav-item {
   position: relative;
   display: inline-flex;
@@ -819,9 +813,9 @@ figcaption { font-size: .9rem; color: #4B5563; margin-top: 1rem; }
   background: #111827;
   transition: all 0.3s;
 }
-.mobile-menu-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(8px, 8px); }
+.mobile-menu-toggle.active span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
 .mobile-menu-toggle.active span:nth-child(2) { opacity: 0; }
-.mobile-menu-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(7px, -7px); }
+.mobile-menu-toggle.active span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
 @media (min-width: 1024px) {
   .desktop-only { display: flex !important; }
   .mobile-only { display: none !important; }
@@ -1144,12 +1138,7 @@ figcaption { font-size: .9rem; color: #4B5563; margin-top: 1rem; }
 
 </div>
 </header>
-<nav class="nav-mobile mobile-only" id="mobile-nav" aria-label="Mobile navigation" hidden>
-  <div class="mobile-nav-header">
-    <button class="mobile-nav-close" id="mobile-nav-close" aria-label="Close navigation">
-      <span class="close-icon">✕</span>
-    </button>
-  </div>
+<nav class="nav-mobile mobile-only" id="mobile-nav" aria-label="Mobile navigation">
   <details class="nav-accordion">
     <summary>ED Visas (6)</summary>
     <ul>
@@ -1188,6 +1177,7 @@ figcaption { font-size: .9rem; color: #4B5563; margin-top: 1rem; }
       <li><a href="../culture/thai-food-culture.html">Thai Food</a></li>
       <li><a href="../culture/temple-etiquette.html">Temple Etiquette</a></li>
       <li><a href="../culture/sak-yant-chiang-mai.html">Sak Yant</a></li>
+      <li><a href="pages/culture/sak-yant-designs-and-meanings.html">Sak Yant Designs</a></li>
     </ul>
   </details>
   <details class="nav-accordion">
@@ -1377,7 +1367,7 @@ figcaption { font-size: .9rem; color: #4B5563; margin-top: 1rem; }
 
 
 
-<script src="../../../shared/js/header-handler.js" defer></script>
+<script src="/shared/js/header-handler.js" defer></script>
 
 <footer class="site-footer" role="contentinfo" style="background: #0D1117;">
 <div class="footer-container">
@@ -1455,7 +1445,7 @@ figcaption { font-size: .9rem; color: #4B5563; margin-top: 1rem; }
 </div>
 
 </footer>
-<script src="../../../shared/js/card-click-handler.js"></script>
-<script src="../../../shared/chaty-widget/scripts/chaty-widget.js"></script>
+<script src="/shared/js/card-click-handler.js"></script>
+<script src="/shared/chaty-widget/scripts/chaty-widget.js"></script>
 </body>
 </html>

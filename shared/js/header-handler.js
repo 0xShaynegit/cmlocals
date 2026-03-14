@@ -17,12 +17,10 @@
   // --- Mobile nav toggle ---
   var hamburger = document.getElementById('hamburger');
   var mobileNav = document.getElementById('mobile-nav');
-  var mobileNavClose = document.getElementById('mobile-nav-close');
 
   function closeMobileNav() {
     hamburger.classList.remove('active');
     hamburger.setAttribute('aria-expanded', 'false');
-    mobileNav.hidden = true;
     mobileNav.classList.remove('open');
     document.body.style.overflow = '';
   }
@@ -31,7 +29,6 @@
     hamburger.addEventListener('click', function() {
       var isOpen = hamburger.classList.toggle('active');
       hamburger.setAttribute('aria-expanded', isOpen);
-      mobileNav.hidden = !isOpen;
       mobileNav.classList.toggle('open', isOpen);
       document.body.style.overflow = isOpen ? 'hidden' : '';
     });
@@ -42,13 +39,6 @@
         closeMobileNav();
       });
     });
-
-    // Close mobile nav on close button click
-    if (mobileNavClose) {
-      mobileNavClose.addEventListener('click', function() {
-        closeMobileNav();
-      });
-    }
   }
 
   // --- Dropdown menu management with hover delay ---
