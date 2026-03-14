@@ -39,6 +39,21 @@
         closeMobileNav();
       });
     });
+
+    // --- Mobile accordion: only one open at a time ---
+    var accordions = mobileNav.querySelectorAll('.nav-accordion');
+    accordions.forEach(function(accordion) {
+      accordion.addEventListener('toggle', function(e) {
+        if (e.target.open) {
+          // Close all other accordions
+          accordions.forEach(function(other) {
+            if (other !== e.target) {
+              other.open = false;
+            }
+          });
+        }
+      });
+    });
   }
 
   // --- Dropdown menu management with hover delay ---
