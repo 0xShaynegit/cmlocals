@@ -213,6 +213,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .mobile-nav a:hover { color: var(--c-primary); }
 .mobile-nav-ctas { display: flex; flex-direction: column; gap: .75rem; margin-top: 1.5rem; }
 .mobile-nav-ctas .btn { justify-content: center; }
+.mobile-nav-header { display: flex; justify-content: flex-end; align-items: center; padding-bottom: 1rem; border-bottom: 1px solid var(--c-border); }
+.mobile-nav-close { background: none; border: none; font-size: 1.5rem; cursor: pointer; padding: 0.5rem; color: var(--c-dark); display: flex; align-items: center; justify-content: center; }
+.mobile-nav-close:hover { color: var(--c-primary); }
 
 /* Navigation Links with Dropdown */
 .nav-item {
@@ -904,7 +907,12 @@ figure img {
 </div>
 </header>
 <nav class="nav-mobile mobile-only" id="mobile-nav" aria-label="Mobile navigation" hidden>
-  <details class="nav-accordion" open>
+  <div class="mobile-nav-header">
+    <button class="mobile-nav-close" id="mobile-nav-close" aria-label="Close navigation">
+      <span class="close-icon">✕</span>
+    </button>
+  </div>
+  <details class="nav-accordion">
     <summary>ED Visas (6)</summary>
     <ul>
       <li><a href="../ed-visas/emergency-self-defence-ed-visa-chiang-mai.html">Emergency Self Defence</a></li>
@@ -1395,6 +1403,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .mobile-nav a:hover { color: var(--c-primary); }
 .mobile-nav-ctas { display: flex; flex-direction: column; gap: .75rem; margin-top: 1.5rem; }
 .mobile-nav-ctas .btn { justify-content: center; }
+.mobile-nav-header { display: flex; justify-content: flex-end; align-items: center; padding-bottom: 1rem; border-bottom: 1px solid var(--c-border); }
+.mobile-nav-close { background: none; border: none; font-size: 1.5rem; cursor: pointer; padding: 0.5rem; color: var(--c-dark); display: flex; align-items: center; justify-content: center; }
+.mobile-nav-close:hover { color: var(--c-primary); }
 
 /* Navigation Links with Dropdown */
 .nav-item {
@@ -2002,7 +2013,7 @@ figure img {
       <a href="https://m.me/cmlocals" title="Messenger" class="social-icon social-messenger" target="_blank" rel="noopener noreferrer">
         <svg width="24" height="24" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="19.4395" cy="19.4395" r="19.4395" fill="#0084FF"/><path d="M19.5 9.5C13.701 9.5 9 13.748 9 19.074c0 3.014 1.474 5.702 3.778 7.456V30l3.294-1.81c.878.244 1.81.376 2.778.376 5.799 0 10.5-4.248 10.5-9.574S25.299 9.5 19.5 9.5zm1.04 12.878l-2.674-2.852-5.22 2.852 5.74-6.096 2.74 2.852 5.154-2.852-5.74 6.096z" fill="white"/></svg>
       </a>
-      <a href="https://www.facebook.com/chiangmailocals" title="Facebook" class="social-icon social-facebook" target="_blank" rel="noopener noreferrer">
+      <a href="https://www.facebook.com/cmlocals" title="Facebook" class="social-icon social-facebook" target="_blank" rel="noopener noreferrer">
         <svg width="24" height="24" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="19.5" cy="19.5" r="19.5" fill="#1877F2"/><path d="M20.5 28v-8h2.5l.375-2.875h-2.875v-1.75c0-.75.25-1.25 1.375-1.25h1.5V10.625c-.25 0-1.125-.125-2.125-.125-2.125 0-3.625 1.375-3.625 3.875v2.125h-2.5v2.875h2.5v8h3z" fill="white"/></svg>
       </a>
     </div>
@@ -2154,6 +2165,9 @@ figure img {
 .mobile-nav a:hover { color: var(--c-primary, #4F46E5); }
 .mobile-nav-ctas { display: flex; flex-direction: column; gap: .75rem; margin-top: 1.5rem; }
 .mobile-nav-ctas .btn { justify-content: center; }
+.mobile-nav-header { display: flex; justify-content: flex-end; align-items: center; padding-bottom: 1rem; border-bottom: 1px solid var(--c-border); }
+.mobile-nav-close { background: none; border: none; font-size: 1.5rem; cursor: pointer; padding: 0.5rem; color: var(--c-dark); display: flex; align-items: center; justify-content: center; }
+.mobile-nav-close:hover { color: var(--c-primary); }
 .nav-item {
   position: relative;
   display: inline-flex;
