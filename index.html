@@ -1926,7 +1926,10 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   <div class="hero-visuals-stack">
     <div class="hero-visual" aria-hidden="true">
       <div class="hero-visual-frame">
-        <div class="hero-img-placeholder"></div>
+        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 1.5rem; gap: 1rem; width: 100%;">
+          <p style="color: rgba(255,255,255,.88); font-size: 1rem; margin: 0; max-width: 280px; line-height: 1.5; font-weight: 600;">Do you know when your visa is expiring? Add it to you calendar NOW!</p>
+          <button onclick="document.getElementById('pro-tip-modal').classList.add('active'); return false;" class="btn btn-primary btn-lg" style="white-space: nowrap;">Add your visa expiry to your calendar now!</button>
+        </div>
       </div>
     </div>
 
@@ -2583,6 +2586,147 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 </section>
 
 
+<!-- Pro-Tip Modal: Visa Expiry Calendar Integration -->
+<div id="pro-tip-modal" class="pro-tip-modal" style="display: none; position: fixed; inset: 0; z-index: 2000; align-items: center; justify-content: center; background: rgba(0,0,0,.5); backdrop-filter: blur(2px);">
+  <div class="pro-tip-modal-content" style="background: linear-gradient(135deg, rgba(79,70,229,.9) 0%, rgba(99,102,241,.85) 100%); border-radius: 16px; padding: 2rem; max-width: 420px; width: 90%; position: relative; box-shadow: 0 20px 60px rgba(0,0,0,.3);">
+    <button class="pro-tip-modal-close" onclick="document.getElementById('pro-tip-modal').classList.remove('active'); document.getElementById('pro-tip-modal').style.display = 'none';" style="position: absolute; top: 1.2rem; right: 1.2rem; background: none; border: none; font-size: 1.8rem; color: white; cursor: pointer; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center;">×</button>
+
+    <div class="pro-tip-modal-inner" style="text-align: center;">
+      <span class="pro-tip-modal-icon" style="font-size: 2.5rem; display: block; margin-bottom: 1rem;">📅</span>
+      <div class="pro-tip-modal-label" style="color: white; font-size: 1.2rem; font-weight: 600; margin-bottom: 0.8rem;">Never Miss Your Visa Expiry</div>
+      <div class="pro-tip-modal-description" style="color: rgba(255,255,255,.92); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.5rem;">When immigration stamps your extension approval, enter your visa expiry date to automatically add it to your calendar with reminders for 7 days and 1 day before expiry.</div>
+
+      <form id="visa-date-form" style="margin-top: 1.5rem;">
+        <div style="margin-bottom: 1rem; text-align: left;">
+          <label for="visa-expiry-input" style="display: block; font-size: 0.9rem; margin-bottom: 0.5rem; font-weight: 500; color: white;">Visa Expiry Date</label>
+          <input type="text" id="visa-expiry-input" placeholder="DD/MM/YYYY" maxlength="10" style="width: 100%; padding: 0.8em; font-size: 1rem; border: 2px solid rgba(255,255,255,.5); border-radius: 8px; background: rgba(255,255,255,.15); color: #fff; font-family: var(--font-body); transition: all .25s ease;" />
+          <small style="display: block; margin-top: 0.4rem; opacity: 0.85; color: rgba(255,255,255,.85);">Example: 15/06/2026</small>
+        </div>
+        <button type="submit" class="pro-tip-modal-button" style="width: 100%; text-align: center; padding: 0.8em 1.5em; background: white; color: #4F46E5; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; font-size: 0.9rem; transition: all 0.2s ease;">ADD</button>
+      </form>
+
+      <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,.2);">
+        <small style="color: rgba(255,255,255,.75); font-size: 0.85rem; line-height: 1.5;">
+          <strong>After clicking ADD:</strong> Choose to save to Google Calendar or download .ics file for your calendar app.
+        </small>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+#pro-tip-modal.active {
+  display: flex !important;
+}
+
+#visa-expiry-input::placeholder {
+  color: rgba(255,255,255,.8);
+}
+
+.pro-tip-modal-button:hover {
+  background: #f0f0f0;
+  box-shadow: 0 4px 12px rgba(0,0,0,.15);
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const form = document.getElementById('visa-date-form');
+  const modal = document.getElementById('pro-tip-modal');
+  const input = document.getElementById('visa-expiry-input');
+
+  // Format input as DD/MM/YYYY
+  input.addEventListener('input', function(e) {
+    let value = e.target.value.replace(/\D/g, '');
+    if (value.length >= 2) {
+      value = value.slice(0, 2) + '/' + value.slice(2);
+    }
+    if (value.length >= 5) {
+      value = value.slice(0, 5) + '/' + value.slice(5, 9);
+    }
+    e.target.value = value;
+  });
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const dateStr = input.value;
+    const dateRegex = /^(\d{2})\/(\d{2})\/(\d{4})$/;
+    const match = dateStr.match(dateRegex);
+
+    if (!match) {
+      alert('Please enter date in DD/MM/YYYY format');
+      return;
+    }
+
+    const [, day, month, year] = match;
+    const expiryDate = new Date(year, month - 1, day);
+
+    if (isNaN(expiryDate.getTime())) {
+      alert('Invalid date. Please check and try again.');
+      return;
+    }
+
+    // Create iCalendar format
+    const eventDate = expiryDate.toISOString().split('T')[0].replace(/-/g, '');
+    const reminderDate7Days = new Date(expiryDate);
+    reminderDate7Days.setDate(reminderDate7Days.getDate() - 7);
+    const reminder7 = reminderDate7Days.toISOString().split('T')[0].replace(/-/g, '');
+
+    const icsContent = `BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//CMLocals//Thai Visa Reminder//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:visa-expiry-${expiryDate.getTime()}@cmlocals.com
+DTSTAMP:${new Date().toISOString().replace(/[-:]/g, '').split('.')[0]}Z
+DTSTART:${eventDate}
+SUMMARY:Thai Visa Expiry Date
+DESCRIPTION:Your Thai visa expires today
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P7D
+DESCRIPTION:Your visa expires in 7 days
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Your visa expires tomorrow
+END:VALARM
+END:VEVENT
+END:VCALENDAR`;
+
+    // Create Google Calendar URL
+    const gcalUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=Thai+Visa+Expiry+Date&dates=${eventDate}/${eventDate}&details=Your+Thai+visa+expires+today`;
+
+    // Show options
+    const choice = confirm('Add to Google Calendar? (Cancel to download .ics file)');
+
+    if (choice) {
+      // Open Google Calendar
+      window.open(gcalUrl, '_blank');
+    } else {
+      // Download .ics file
+      const blob = new Blob([icsContent], { type: 'text/calendar' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'visa-expiry-reminder.ics';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }
+
+    // Clear input and close modal
+    input.value = '';
+    modal.classList.remove('active');
+    modal.style.display = 'none';
+  });
+});
+</script>
+
 </main><!-- #main-content -->
 
 <!-- ========================================================
@@ -2668,14 +2812,14 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 <!-- ========================================================
      MINIMAL JS
      ======================================================== -->
-<script src="/shared/js/header-handler.js" defer></script>
+<script src="../shared/js/header-handler.js" defer></script>
 
 <!-- Make entire cards clickable -->
-<script src="/shared/js/card-click-handler.js" defer></script>
+<script src="../shared/js/card-click-handler.js" defer></script>
 
 <!-- Chaty Widget Configuration (must be before script) -->
 
 <!-- Chaty Widget -->
-<script src="/shared/chaty-widget/scripts/chaty-widget.js"></script>
+<script src="../shared/chaty-widget/scripts/chaty-widget.js"></script>
 </body>
 </html>
