@@ -620,6 +620,143 @@ figure img {
   display: block;
   height: auto;
 }
+
+/* CANONICAL FOOTER CSS */
+.site-footer {
+  background: var(--footer-bg, #0D1117);
+  color: rgba(255, 255, 255, 0.92);
+  padding: 3.6rem 0 0;
+}
+.footer-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 3.6rem;
+  padding: 0 1.8rem 1.8rem;
+  width: 80%;
+}
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.35rem;
+}
+.footer-col-cmlocals { gap: 1.8rem; }
+.footer-logo a {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+.footer-logo img {
+  height: 43.2px;
+  width: auto;
+  display: block;
+}
+.footer-tagline {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.75);
+}
+.footer-socials {
+  display: flex;
+  gap: 1.35rem;
+}
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28.8px;
+  height: 28.8px;
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  transition: filter 0.2s ease, color 0.2s ease;
+  filter: grayscale(100%);
+}
+.social-icon:hover { color: currentColor; filter: grayscale(0%); }
+.social-icon.social-whatsapp:hover { color: #25D366; }
+.social-icon.social-facebook:hover { color: #1877F2; }
+.social-icon.social-messenger:hover { color: #0084FF; }
+.social-icon svg { width: 100%; height: 100%; }
+.footer-col-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0;
+}
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.81rem;
+}
+.footer-links a {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  transition: color 0.2s;
+}
+.footer-links a:hover { color: white; }
+.footer-bottom-bar {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1.8rem;
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.8rem;
+  width: 80%;
+}
+.footer-bottom-bar p {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+}
+.footer-legal-links {
+  display: flex;
+  gap: 1.8rem;
+}
+.footer-legal-links a {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.footer-legal-links a:hover { color: rgba(255, 255, 255, 0.9); }
+@media (max-width: 1024px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
+  .footer-bottom-bar { flex-direction: column; text-align: center; }
+}
+@media (max-width: 640px) {
+  .site-footer { padding: 3rem 1.5rem 0; }
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding-bottom: 1.5rem;
+  }
+  .footer-col-title { font-size: 0.9rem; }
+  .footer-links a { font-size: 0.9rem; }
+  .footer-bottom-bar {
+    padding: 1.5rem;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .footer-bottom-bar p { font-size: 0.9rem; }
+  .footer-legal-links { gap: 1rem; }
+  .footer-legal-links a { font-size: 0.9rem; }
+}
 </style>
 <link rel="stylesheet" href="../../../css/chaty-front.min.css"/>
 
@@ -1127,8 +1264,8 @@ mobileNav.querySelectorAll('a').forEach(link => {
 });
 </script>
 
-<script src="/shared/js/header-handler.js" defer></script>
-<script src="/shared/chaty-widget/scripts/chaty-widget.js"></script>
+<script src="../../../../shared/js/header-handler.js" defer></script>
+<script src="../../../../shared/chaty-widget/scripts/chaty-widget.js"></script>
 
 <footer class="site-footer" role="contentinfo" style="background: #0D1117;">
 <div class="footer-container">
@@ -1196,6 +1333,7 @@ mobileNav.querySelectorAll('a').forEach(link => {
 </div>
 
 <!-- Bottom Legal Bar -->
+</div>
 <div class="footer-bottom-bar">
   <p>&copy; 2026 CMLocals. All rights reserved.</p>
   <div class="footer-legal-links">
@@ -1206,6 +1344,6 @@ mobileNav.querySelectorAll('a').forEach(link => {
 </div>
 
 </footer>
-<script src="/shared/js/card-click-handler.js"></script>
+<script src="../../../../shared/js/card-click-handler.js"></script>
 </body>
 </html>

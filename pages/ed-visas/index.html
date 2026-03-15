@@ -451,10 +451,10 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
 
 /* Program card grid */
 .program-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;margin-top:2rem;}
-.program-card{border:1px solid var(--c-border);border-radius:var(--radius-lg);padding:2rem 1.75rem;background:var(--c-white);display:flex;flex-direction:column;position:relative;overflow:hidden;transition:border-color .2s,box-shadow .2s,transform .2s;}
-.program-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--c-primary),var(--c-violet));opacity:0;transition:opacity .2s;}
+.program-card{cursor:pointer;border:1px solid var(--c-border);border-radius:var(--radius-lg);padding:2rem 1.75rem;background:var(--c-white);display:flex;flex-direction:column;position:relative;overflow:hidden;transition:border-color .2s,box-shadow .2s,transform .2s;;cursor:pointer}
+.program-card::after{content:'';position:absolute;top:0;left:0;right:0;z-index:1;background:linear-gradient(90deg,var(--c-primary),var(--c-violet));opacity:0;transition:opacity .2s;}
 .program-card:hover{border-color:transparent;box-shadow:var(--shadow-lg);transform:translateY(-3px);}
-.program-card:hover::before{opacity:1;}
+.program-card:hover::after{opacity:1;}
 .program-card__icon{width:44px;height:44px;border-radius:var(--radius-md);background:var(--c-subtle);display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:1.2rem;transition:background .2s;}
 .program-card:hover .program-card__icon{background:var(--c-violet-l);}
 .program-card__title{font-family:var(--font-display);font-size:1.25rem;font-weight:400;color:var(--c-dark);margin-bottom:.5rem;letter-spacing:-.01em;}
@@ -751,7 +751,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
 @media (max-width: 1023px) {
   .mobile-menu-toggle { display: flex; }
   .primary-nav { display: none; }
-  .dropdown-menu { display: none; }
+  
   .nav-mobile {
     display: none;
     position: fixed;
@@ -807,7 +807,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
     background: rgba(79, 70, 229, 0.1);
     color: var(--c-primary, #4F46E5);
   }
-  .dropdown-menu { display: none !important; }
+  
 }
 @media (max-width: 960px) {
   .primary-nav { display: none; }
@@ -1356,13 +1356,13 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
   });
 })();
 </script>
-<script src="/shared/js/header-handler.js" defer></script>
+<script src="../../../shared/js/header-handler.js" defer></script>
 <script>
 window.CHATY_CONFIG={channels:[{name:"Facebook_Messenger",label:"Facebook Messenger",url:"https://m.me/cmlocals",svg:'<svg viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="19.4395" cy="19.4395" r="19.4395" fill="#0084FF"/><path d="M19.5 9.5C13.701 9.5 9 13.748 9 19.074c0 3.014 1.474 5.702 3.778 7.456V30l3.294-1.81c.878.244 1.81.376 2.778.376 5.799 0 10.5-4.248 10.5-9.574S25.299 9.5 19.5 9.5zm1.04 12.878l-2.674-2.852-5.22 2.852 5.74-6.096 2.74 2.852 5.154-2.852-5.74 6.096z" fill="white"/></svg>'},{name:"WhatsApp",label:"WhatsApp",url:"https://wa.me/66801202074",svg:'<svg viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="19.4395" cy="19.4395" r="19.4395" fill="#25D366"/><path d="M19.5 9.5C14.253 9.5 10 13.753 10 19c0 1.67.436 3.285 1.265 4.717L10 29l5.418-1.234A9.454 9.454 0 0019.5 28.5c5.247 0 9.5-4.253 9.5-9.5s-4.253-9.5-9.5-9.5zm5.508 13.142c-.232.652-1.345 1.247-1.853 1.29-.508.043-.982.228-3.306-.688-2.806-1.107-4.573-3.974-4.71-4.16-.137-.186-1.12-1.49-1.12-2.843 0-1.352.71-2.018.96-2.293.25-.275.546-.344.728-.344.183 0 .365.002.525.01.168.007.394-.064.617.47.232.556.786 1.92.855 2.06.069.138.115.3.023.485-.093.186-.139.3-.275.462-.137.162-.288.362-.412.486-.137.137-.28.286-.12.56.16.275.71 1.173 1.525 1.9 1.047.933 1.93 1.222 2.205 1.36.275.137.435.115.595-.069.16-.185.686-.8.869-1.075.183-.275.365-.228.617-.137.25.092 1.595.752 1.868.889.275.137.457.206.526.32.068.115.068.663-.164 1.315z" fill="white"/></svg>'}],triggerColor:"#9F7AEA",bottomOffset:50,leftOffset:20};
 </script>
 
-<script src="/shared/js/card-click-handler.js"></script>
-<script src="/shared/chaty-widget/scripts/chaty-widget.js"></script>
+<script src="../../../shared/js/card-click-handler.js"></script>
+<script src="../../../shared/chaty-widget/scripts/chaty-widget.js"></script>
 
 <footer class="site-footer" role="contentinfo" style="background: #0D1117;">
 <div class="footer-container">
@@ -1430,6 +1430,7 @@ window.CHATY_CONFIG={channels:[{name:"Facebook_Messenger",label:"Facebook Messen
 </div>
 
 <!-- Bottom Legal Bar -->
+</div>
 <div class="footer-bottom-bar">
   <p>&copy; 2026 CMLocals. All rights reserved.</p>
   <div class="footer-legal-links">
