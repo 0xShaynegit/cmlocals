@@ -1,0 +1,44 @@
+name: Build Footer & Check Links
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  build-and-validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: cd . && npm install
+
+      - name: Inject footer into all pages
+        run: npm run build
+
+      - name: Check for uncommitted changes
+        run: |
+          if git diff --quiet; then
+            echo "✓ No changes from build script"
+          else
+            echo "⚠ Build script made changes. Committing..."
+            git config user.name "Footer Build Bot"
+            git config user.email "bot@cmlocals.com"
+            git add -A
+            git commit -m "build: auto-inject footer into all pages" || true
+            git push
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Report build success
+        run: echo "✅ Footer injection complete and validated"

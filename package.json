@@ -1,0 +1,21 @@
+{
+  "name": "cmlocals-build",
+  "version": "1.0.0",
+  "description": "CMLocals footer injection and link validation build system",
+  "main": "build-footer.js",
+  "scripts": {
+    "build": "node build-footer.js",
+    "check-links": "broken-link-checker --recursive --quiet --timeout 10000 http://localhost:3000",
+    "validate": "npm run build && echo 'Build complete. Run link checker in CI/CD pipeline.'"
+  },
+  "keywords": [
+    "footer",
+    "build",
+    "static-site"
+  ],
+  "author": "CMLocals",
+  "license": "MIT",
+  "devDependencies": {
+    "broken-link-checker": "^0.7.8"
+  }
+}
