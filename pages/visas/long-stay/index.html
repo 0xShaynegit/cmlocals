@@ -463,6 +463,44 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
 .visa-card__cta{font-size:.88rem;font-weight:600;color:var(--c-primary);text-decoration:none;display:inline-flex;align-items:center;gap:.35em;transition:gap .18s;margin-top:auto;}
 .visa-card__cta:hover{gap:.6em;}
 
+/* Card underline fixes */
+.visa-card,
+.article-card,
+.tool-card,
+.guide-card,
+.visa-category-card,
+.program-card,
+.topic-card,
+.checklist-card,
+.related-card,
+.sidebar-card {
+  text-decoration: none;
+}
+.visa-card *,
+.article-card *,
+.tool-card *,
+.guide-card *,
+.visa-category-card *,
+.program-card *,
+.topic-card *,
+.checklist-card *,
+.related-card *,
+.sidebar-card * {
+  text-decoration: none;
+}
+.visa-card:hover,
+.article-card:hover,
+.tool-card:hover,
+.guide-card:hover,
+.visa-category-card:hover,
+.program-card:hover,
+.topic-card:hover,
+.checklist-card:hover,
+.related-card:hover,
+.sidebar-card:hover {
+  text-decoration: none;
+}
+
 /* Info strip */
 .info-strip{background:var(--c-subtle);border-left:4px solid var(--c-primary);border-radius:0 var(--radius-md) var(--radius-md) 0;padding:1.25rem 1.75rem;margin:2.5rem 0;}
 .info-strip p{color:var(--c-body);font-size:.95rem;}
