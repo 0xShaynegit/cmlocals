@@ -584,6 +584,15 @@ a:hover { color: var(--c-dark-2); }
 .section-footer p { color: rgba(255,255,255,.88); line-height: 1.7; margin-bottom: 1.25rem; max-width: 64ch; }
 .footer-links { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.5rem; }
 
+.explore-cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-top: 2rem; }
+@media (max-width: 768px) { .explore-cards { grid-template-columns: 1fr; } }
+.explore-card { position: relative; min-height: 220px; border-radius: 8px; overflow: hidden; text-decoration: none; color: #fff; transition: all .2s; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; text-align: center; background-size: cover; background-position: center; border: 1px solid rgba(255,255,255,.15); padding: 1.5rem; z-index: 1; }
+.explore-card::before { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,.2), rgba(0,0,0,.6)); z-index: -1; }
+.explore-card:hover { border-color: rgba(255,255,255,.3); transform: translateY(-2px); filter: brightness(1.1); }
+.explore-card h3 { font-family: var(--font-display); font-size: 1.1rem; font-weight: 500; margin: 0 0 .5rem; color: #fff; position: relative; z-index: 2; }
+.explore-card p { font-size: .85rem; color: rgba(255,255,255,.82); margin: 0; position: relative; z-index: 2; }
+
+
 
 .site-footer { background: #5a0a3a; padding-block: var(--section-py); color: rgba(255,255,255,.92); }
 .footer-top { display: grid; grid-template-columns: 1.6fr repeat(4, 1fr); gap: 3rem; padding-bottom: 3rem; border-bottom: 1px solid var(--c-border-dark); }
@@ -1245,7 +1254,7 @@ figure img {
 </div>
 </main>
 
-<section class="section-footer"><div class="section-footer-inner"><h2>Explore Thai Culture</h2><div class="explore-cards"><a href="../culture/index.html" class="explore-card"><div class="explore-card-icon">🏛️</div><h3>Culture Hub</h3><p>Browse all cultural guides and traditions</p></a><a href="../culture/thai-culture-etiquette.html" class="explore-card"><div class="explore-card-icon">🙏</div><h3>Thai Etiquette</h3><p>Learn respect and social customs</p></a><a href="../culture/temple-etiquette.html" class="explore-card"><div class="explore-card-icon">⛩️</div><h3>Temple Etiquette</h3><p>Proper conduct in sacred spaces</p></a><a href="../culture/festivals-events-chiang-mai.html" class="explore-card"><div class="explore-card-icon">🎉</div><h3>Festivals & Events</h3><p>Discover celebrations throughout the year</p></a></div></div></section>
+<section class="section-footer"><div class="section-footer-inner"><h2>Explore Thai Culture</h2><div class="explore-cards"><a href="../culture/index.html" class="explore-card" style="background-image:url('../../images/cmlocals chiang mai locals offering bowl with white and green lotus flowers.webp')"><h3>Culture Hub</h3><p>Browse all cultural guides and traditions</p></a><a href="../culture/thai-culture-etiquette.html" class="explore-card" style="background-image:url('../../images/cmlocals chiang mai locals wat phra singh golden buddha statue interior chiang mai.webp')"><h3>Thai Etiquette</h3><p>Learn respect and social customs</p></a><a href="../culture/temple-etiquette.html" class="explore-card" style="background-image:url('../../images/cmlocals chiang mai locals three tourists sitting with monks in buddhist temple 1.webp')"><h3>Temple Etiquette</h3><p>Proper conduct in sacred spaces</p></a><a href="../culture/festivals-events-chiang-mai.html" class="explore-card" style="background-image:url('../../images/cmlocals chiang mai locals yi peng festival hundreds of sky lanterns over temple.webp')"><h3>Festivals & Events</h3><p>Discover celebrations throughout the year</p></a></div></div></section>
 
 
 
