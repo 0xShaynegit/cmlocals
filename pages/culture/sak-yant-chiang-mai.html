@@ -496,12 +496,12 @@ a:hover { color: var(--c-dark-2); }
   font-size: clamp(.95rem, 1.5vw, 1.1rem);
   color: rgba(255,255,255,.82); line-height: 1.75; max-width: 62ch; margin-bottom: 2rem;
 }
-.page-hero-meta { font-size: .82rem; color: rgba(255,255,255,.55); display: flex; gap: 1.5rem; flex-wrap: wrap; }
+
 
 .breadcrumb { background: var(--c-off-white); border-bottom: 1px solid var(--c-border); padding: .65rem 0; }
 .breadcrumb-inner {
   display: flex; align-items: center; gap: .4rem; font-size: .8rem; color: var(--c-muted);
-  max-width: var(--article-w); padding-inline: var(--edge); margin-inline: auto;
+  max-width: 1090px; padding-inline: var(--edge); margin-inline: auto;
 }
 .breadcrumb a { color: var(--c-muted); text-decoration: none; }
 .breadcrumb a:hover { color: var(--c-page-accent); }
@@ -1034,13 +1034,12 @@ figcaption { font-size: .9rem; color: #4B5563; margin-top: 1rem; }
   <a href="../culture/sak-yant-chiang-mai.html">Sak Yant</a>
   <span class="breadcrumb-sep">/</span>
   <span>Overview</span>
-</div>
-</nav>
+
 
 
 
 <main class="article-body">
-<div class="container" style="max-width: var(--article-w); margin-inline: auto; padding-inline: var(--edge);">
+<div class="container" style="max-width: 1090px; margin-inline: auto; padding-inline: var(--edge);">
 
 <h2>What Is Sak Yant</h2>
 <p>Sak Yant refers to sacred geometric tattoos created using a hand-poked needle called a bamboo stick or metal rod. The word "sak" means to tattoo or pierce, and "yant" refers to the geometric designs with spiritual significance. These tattoos are rooted in Buddhism and regional South Asian tattoo traditions, combining sacred geometry with spiritual protection and blessing.</p>
@@ -1264,6 +1263,31 @@ figcaption { font-size: .9rem; color: #4B5563; margin-top: 1rem; }
 
 <script src="../../../shared/js/card-click-handler.js"></script>
 <script src="../../../shared/chaty-widget/scripts/chaty-widget.js"></script>
-<script src="../../shared/js/progress-bar.js" defer></script>
+
+<script>
+(function() {
+  'use strict';
+  function calculateReadTime() {
+    const article = document.querySelector('article.article-body');
+    if (!article) return;
+    const text = article.innerText;
+    const wordCount = text.trim().split(/\s+/).length;
+    const readTime = Math.max(1, Math.round(wordCount / 200));
+    const readTimeEl = document.getElementById('read-time');
+    if (readTimeEl) {
+      readTimeEl.textContent = readTime + ' min';
+    }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', calculateReadTime);
+  } else {
+    calculateReadTime();
+  }
+})();
+</script>\n\n" defer></script>
 </body>
 </html>
+
+
+
+

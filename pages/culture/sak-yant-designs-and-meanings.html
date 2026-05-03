@@ -500,7 +500,7 @@ a:hover { color: var(--c-dark-2); }
 .breadcrumb { background: var(--c-off-white); border-bottom: 1px solid var(--c-border); padding: .65rem 0; }
 .breadcrumb-inner {
   display: flex; align-items: center; gap: .4rem; font-size: .8rem; color: var(--c-muted);
-  max-width: var(--article-w); padding-inline: var(--edge); margin-inline: auto;
+  max-width: 1090px; padding-inline: var(--edge); margin-inline: auto;
 }
 .breadcrumb a { color: var(--c-muted); text-decoration: none; }
 .breadcrumb a:hover { color: var(--c-page-accent); }
@@ -1045,13 +1045,12 @@ figure img {
   <a href="../culture/sak-yant-chiang-mai.html">Sak Yant</a>
   <span class="breadcrumb-sep">/</span>
   <span>Designs & Meanings</span>
-</div>
-</nav>
+
 
 
 
 <main class="article-body">
-<div class="container" style="max-width: var(--article-w); margin-inline: auto; padding-inline: var(--edge);">
+<div class="container" style="max-width: 1090px; margin-inline: auto; padding-inline: var(--edge);">
 
 <h2>Understanding Sak Yant Design Symbolism</h2>
 <p>Sak Yant designs combine sacred geometry, Buddhist cosmology, and animistic symbolism. Each design carries specific spiritual protections or blessings. The geometric patterns represent sacred cosmology, while Pali script mantras and animal symbols add layers of meaning and protection.</p>
@@ -1313,6 +1312,31 @@ figure img {
 
 <script src="../../../shared/js/card-click-handler.js"></script>
 <script src="../../../shared/chaty-widget/scripts/chaty-widget.js"></script>
-<script src="../../shared/js/progress-bar.js" defer></script>
+
+<script>
+(function() {
+  'use strict';
+  function calculateReadTime() {
+    const article = document.querySelector('article.article-body');
+    if (!article) return;
+    const text = article.innerText;
+    const wordCount = text.trim().split(/\s+/).length;
+    const readTime = Math.max(1, Math.round(wordCount / 200));
+    const readTimeEl = document.getElementById('read-time');
+    if (readTimeEl) {
+      readTimeEl.textContent = readTime + ' min';
+    }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', calculateReadTime);
+  } else {
+    calculateReadTime();
+  }
+})();
+</script>\n\n" defer></script>
 </body>
 </html>
+
+
+
+
