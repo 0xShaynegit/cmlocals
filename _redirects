@@ -1,0 +1,69 @@
+## Root-level old WordPress slugs to new pages
+
+# Muay Thai ED Visa variants
+/1-year-muay-thai-ed-visa/ /pages/ed-visas/muay-thai-ed-visa-chiang-mai.html 301
+/muay-thai-visa-chiang-mai/ /pages/ed-visas/muay-thai-ed-visa-chiang-mai.html 301
+/muay-thai-ed-visa-chiang-mai/ /pages/ed-visas/muay-thai-ed-visa-chiang-mai.html 301
+
+# Hand-to-Hand Combat ED Visa variants
+/1-year-ed-visa-hand-to-hand-combat/ /pages/ed-visas/hand-to-hand-combat-ed-visa-chiang-mai.html 301
+/combat-class-chiang-mai/ /pages/ed-visas/hand-to-hand-combat-ed-visa-chiang-mai.html 301
+
+# Self-Defence ED Visa variants
+/emergency-self-defense/ /pages/ed-visas/emergency-self-defence-ed-visa-chiang-mai.html 301
+/about-the-emergency-self-defense-class-in-chiang-mai-thailand/ /pages/ed-visas/emergency-self-defence-ed-visa-chiang-mai.html 301
+
+# Thai Language ED Visa
+/ed-visa-thai-language/ /pages/ed-visas/thai-language-ed-visa-chiang-mai.html 301
+
+# Volunteer/Non-O Visa
+/thai-non-o-volunteer-visa/ /pages/ed-visas/volunteer-non-o-visa-chiang-mai.html 301
+
+# Sak Yant Culture pages
+/sak-yant-chiang-mai/ /pages/culture/sak-yant-chiang-mai.html 301
+/etiquette-when-visiting-a-sak-yant-monk/ /pages/culture/etiquette-when-visiting-a-sak-yant-monk.html 301
+
+# Visa Guides
+/thai-visa-options-in-chiang-mai/ /pages/visas/guides/visa-options-chiang-mai.html 301
+/thai-visa-stay-in-chiang-mai/ /pages/visas/guides/visa-stay-chiang-mai.html 301
+/thai-visa-comparisons/ /pages/visas/guides/visa-comparisons.html 301
+/best-digital-nomad-visa/ /pages/visas/short-stay/dtv-destination-thailand-visa-thai-visa-advice-chiang-mai-cmlocals.html 301
+
+# Elite Visa
+/elite-visa/ /pages/visas/long-stay/thailand-privilege-visa-elite-thai-visa-advice-chiang-mai-cmlocals.html 301
+
+# Chiang Mai pages
+/accommodation-in-chiang-mai/ /pages/chiang-mai/where-to-stay.html 301
+/chiang-mai-local-services/ /pages/chiang-mai/index.html 301
+
+## Old /pages/ URLs without .html extension
+
+# Add .html extension to old URLs missing it
+/pages/immigration/blacklist-status /pages/immigration/blacklist-status.html 301
+/pages/immigration/visa-border-runs /pages/immigration/visa-border-runs.html 301
+/pages/immigration/ /pages/immigration/index.html 301
+
+/pages/culture/festivals-events-chiang-mai /pages/culture/festivals-events-chiang-mai.html 301
+
+/pages/ed-visas/ed-visa-comparison-chiang-mai /pages/ed-visas/ed-visa-comparison-chiang-mai.html 301
+
+/pages/chiang-mai/where-to-stay /pages/chiang-mai/where-to-stay.html 301
+
+/pages/visas/guides/which-visa /pages/visas/guides/which-visa.html 301
+/pages/visas/guides/visa-options-chiang-mai /pages/visas/guides/visa-options-chiang-mai.html 301
+
+/pages/visas/short-stay/visa-on-arrival /pages/visas/short-stay/visa-on-arrival.html 301
+/pages/visas/long-stay/ /pages/visas/long-stay/index.html 301
+
+/pages/checklists/visa-on-arrival-checklist /pages/checklists/visa-on-arrival-checklist.html 301
+/pages/checklists/re-entry-permit-checklist /pages/checklists/re-entry-permit-checklist.html 301
+
+## WordPress asset cleanup (prevent 404s and redirect parasitic traffic)
+
+/wp-content/* /pages/disclaimer.html 301
+/blog/ /pages/visas/guides/visa-comparisons.html 301
+/information-articles/ /pages/visas/index.html 301
+/homeold/ /pages/chiang-mai/index.html 301
+
+## Legacy blog redirects
+/blog/* /pages/visas/guides/visa-comparisons.html 301
