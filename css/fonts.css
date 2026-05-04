@@ -10,7 +10,7 @@
        url('/fonts/newsreader.ttf') format('truetype');
   font-weight: 100 900;
   font-style: normal;
-  font-display: fallback;
+  font-display: swap;
 }
 
 @font-face {
@@ -19,5 +19,5 @@
        url('/fonts/dm-sans.ttf') format('truetype');
   font-weight: 100 900;
   font-style: normal;
-  font-display: fallback;
+  font-display: swap;
 }
