@@ -574,6 +574,18 @@ figure img {
 /* PROGRESS BAR */
 .progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: linear-gradient(90deg, #4F46E5, #6366F1, #4F46E5); width: 2%; min-width: 2%; z-index: 10001; transition: width 0.1s linear; box-shadow: 0 2px 8px rgba(79,70,229,.18); }
 @media (prefers-reduced-motion: reduce) { .progress-bar { transition: none; } }
+.article-wrap { width: 100%; max-width: var(--article-w); margin-inline: auto; padding-inline: var(--edge); }
+.culture-explore { padding-block: clamp(2.5rem, 4vw, 3.5rem); background: #f8f4ff; border-top: 1px solid #e9e3f8; }
+.culture-explore-inner { max-width: 1400px; margin-inline: auto; padding-inline: var(--edge); }
+.culture-explore h2 { font-family: var(--font-display); font-size: clamp(1.4rem, 2.5vw, 1.9rem); font-weight: 400; color: #5a0a3a; margin-bottom: 1.5rem; text-align: center; }
+.culture-explore-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+@media(max-width: 900px) { .culture-explore-grid { grid-template-columns: repeat(2, 1fr); } }
+@media(max-width: 480px) { .culture-explore-grid { grid-template-columns: 1fr; } }
+.explore-card { position: relative; min-height: 220px; border-radius: 8px; overflow: hidden; text-decoration: none; color: #fff; transition: all .2s; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; text-align: center; background-size: cover; background-position: center; border: 1px solid rgba(255,255,255,.15); padding: 1.5rem; z-index: 1; }
+.explore-card::before { content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,.2), rgba(0,0,0,.6)); z-index: -1; }
+.explore-card:hover { border-color: rgba(255,255,255,.3); transform: translateY(-2px); filter: brightness(1.1); }
+.explore-card h3 { font-family: var(--font-display); font-size: 1.1rem; font-weight: 500; margin: 0 0 .5rem; color: #fff; position: relative; z-index: 2; }
+.explore-card p { font-size: .85rem; color: rgba(255,255,255,.82); margin: 0; position: relative; z-index: 2; }
 </style>
 
 
@@ -824,7 +836,7 @@ figure img {
 
 <section class="page-hero"><div class="page-hero-inner"><div style="font-size:.8rem;font-weight:600;text-transform:uppercase;color:rgba(255,255,255,.75);margin-bottom:1.25rem;">Chiang Mai Culture</div><h1>Thai Culture and Traditions in Chiang Mai</h1><p class="page-hero-lead">Explore the customs, practices, and traditions that define Thai society. Learn temple etiquette, cultural values, festivals, food customs, and the spiritual practices that shape life in Chiang Mai.</p></div></section>
 <nav class="breadcrumb"><div class="breadcrumb-inner"><a href="../../index.html">Home</a> / <span>Culture</span></div></nav>
-<main class="article-body"><div class="container" style="max-width:1090px;margin-inline:auto;padding-inline:var(--edge);">
+<main class="article-body"><div class="article-wrap">
 
 <h2>Essential Thai Culture Topics</h2>
 <p>Understanding Thai culture is fundamental to living and traveling respectfully in Chiang Mai. Thai society is deeply rooted in Buddhism, respect for hierarchy, and community harmony. The guides below cover the key cultural practices you'll encounter daily.</p>
@@ -923,11 +935,30 @@ figure img {
 
 </div></main>
 
-<section class="section-footer"><div class="section-footer-inner"><h2>Explore Chiang Mai</h2><div class="footer-links"><a href="../chiang-mai/index.html">Chiang Mai Living Guide →</a><a href="../chiang-mai/things-to-do.html">Things to Do →</a><a href="../chiang-mai/cost-of-living.html">Cost of Living →</a></div></div></section>
-
-
-
+<section class="culture-explore">
+<div class="culture-explore-inner">
+<h2>Explore Chiang Mai</h2>
+<div class="culture-explore-grid">
+  <a href="../chiang-mai/index.html" class="explore-card" style="background-image:url('../../images/cmlocals chiang mai locals yi peng festival hundreds of sky lanterns over temple.webp')">
+    <h3>Chiang Mai Living</h3>
+    <p>Overview of long-stay life in Chiang Mai</p>
+  </a>
+  <a href="../chiang-mai/things-to-do.html" class="explore-card" style="background-image:url('../../images/cmlocals chiang mai locals getting around temple human body community fun recreation.webp')">
+    <h3>Things to Do</h3>
+    <p>Activities, attractions, and experiences</p>
+  </a>
+  <a href="../chiang-mai/cost-of-living.html" class="explore-card" style="background-image:url('../../images/cmlocals chiang mai locals getting around market retail collection bazaar collectable flea.webp')">
+    <h3>Cost of Living</h3>
+    <p>Budgeting and expenses in Chiang Mai</p>
+  </a>
+  <a href="../chiang-mai/where-to-stay.html" class="explore-card" style="background-image:url('../../images/cmlocals chiang mai locals getting around sign advertising.webp')">
+    <h3>Where to Stay</h3>
+    <p>Neighbourhoods and accommodation guide</p>
+  </a>
 </div>
+</div>
+</section>
+
 
 
 
