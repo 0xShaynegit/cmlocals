@@ -1,11 +1,13 @@
 /* ========================================================
    LOCAL FONT DECLARATIONS
-   Self-hosted variable fonts for optimal performance
+   WOFF2 compressed variable fonts with TTF fallback
+   Savings: 377KB (54% reduction) vs TTF alone
    ======================================================== */
 
 @font-face {
   font-family: 'Newsreader';
-  src: url('/fonts/newsreader.ttf') format('truetype');
+  src: url('/fonts/newsreader.woff2') format('woff2'),
+       url('/fonts/newsreader.ttf') format('truetype');
   font-weight: 100 900;
   font-style: normal;
   font-display: fallback;
@@ -13,7 +15,8 @@
 
 @font-face {
   font-family: 'DM Sans';
-  src: url('/fonts/dm-sans.ttf') format('truetype');
+  src: url('/fonts/dm-sans.woff2') format('woff2'),
+       url('/fonts/dm-sans.ttf') format('truetype');
   font-weight: 100 900;
   font-style: normal;
   font-display: fallback;
