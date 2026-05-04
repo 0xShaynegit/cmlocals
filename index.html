@@ -8,7 +8,8 @@
 <link rel="canonical" href="https://www.cmlocals.com/"/>
 <link rel="preload" href="fonts/newsreader.woff2" as="font" type="font/woff2" crossorigin/>
 <link rel="preload" href="fonts/dm-sans.woff2" as="font" type="font/woff2" crossorigin/>
-<link rel="stylesheet" href="css/fonts.css"/>
+<link rel="stylesheet" href="css/fonts.css" media="print" onload="this.media='all'"/>
+<noscript><link rel="stylesheet" href="css/fonts.css"/></noscript>
 
 <style>
 /* ============================================================
@@ -34,10 +35,10 @@
   --c-muted:         #6B7280;
   --c-border:        #E5E7EB;
   --c-border-dark:   rgba(255,255,255,.1);
-  --c-wa:            #25D366;
-  --c-wa-h:          #1aaa55;
-  --c-fb:            #1877F2;
-  --c-fb-h:          #1565d8;
+  --c-wa:            #1FA853;
+  --c-wa-h:          #168640;
+  --c-fb:            #0A66C2;
+  --c-fb-h:          #054aa1;
   --footer-bg:       #0D1117;
   --radius-sm:       6px;
   --radius-md:       10px;
@@ -536,12 +537,12 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .hero-eyebrow-dot {
   width: 6px; height: 6px; border-radius: 50%;
   background: var(--c-primary);
-  box-shadow: 0 0 8px var(--c-primary);
   animation: pulse-dot 2.5s ease-in-out infinite;
+  will-change: transform, opacity;
 }
 @keyframes pulse-dot {
-  0%, 100% { box-shadow: 0 0 8px var(--c-primary); }
-  50% { box-shadow: 0 0 16px var(--c-primary), 0 0 24px rgba(79,70,229,.4); }
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.4); opacity: 0.7; }
 }
 
 .hero h1 {
@@ -565,6 +566,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   font-size: clamp(1.1rem, 1.6vw, 1.1rem);
   color: rgba(255,255,255,.88);
   max-width: 520px; line-height: 1.65;
+  contain: layout paint;
   margin-bottom: 2.25rem;
 }
 
@@ -1663,7 +1665,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
   <!-- Logo -->
   <a href="https://www.cmlocals.com" class="header-logo" aria-label="CMLocals – homepage">
-    <img src="images/cmlocals-chiang-mai-locals-logo.webp" alt="CMLocals – Thai visa guides and Chiang Mai living" width="150" height="43" />
+    <img src="images/cmlocals-chiang-mai-locals-logo.webp" alt="CMLocals – Thai visa guides and Chiang Mai living" width="210" height="60" />
   </a>
 
   <!-- Desktop Mega Menu Navigation -->
@@ -2755,7 +2757,7 @@ END:VCALENDAR`;
   <div class="footer-col footer-col-cmlocals">
     <div class="footer-logo">
       <a href="/index.html">
-        <img src="/images/cmlocals-chiang-mai-locals-logo.webp" alt="CMLocals – Thai visa guides and Chiang Mai living" />
+        <img src="/images/cmlocals-chiang-mai-locals-logo.webp" alt="CMLocals – Thai visa guides and Chiang Mai living" width="140" height="40" />
       </a>
     </div>
     <p class="footer-tagline">Independent Thai visa information hub for Chiang Mai and long-stay life in Thailand.</p>
@@ -2838,7 +2840,7 @@ END:VCALENDAR`;
 <!-- Chaty Widget Configuration (must be before script) -->
 
 <!-- Chaty Widget -->
-<script src="../shared/chaty-widget/scripts/chaty-widget.js"></script>
+<script src="../shared/chaty-widget/scripts/chaty-widget.js" defer></script>
 <script src="shared/js/progress-bar.js" defer></script>
 </body>
 </html>
