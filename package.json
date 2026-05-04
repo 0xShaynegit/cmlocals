@@ -1,8 +1,0 @@
-{
-  "name": "cmlocals",
-  "version": "1.0.0",
-  "description": "Thai visa guidance and Chiang Mai living information",
-  "scripts": {
-    "build": "node docs/build-footer.js"
-  }
-}
