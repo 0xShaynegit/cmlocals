@@ -60,7 +60,7 @@ ul { list-style: none; }
 button { font-family: inherit; cursor: pointer; border: none; background: none; }
 
 .container { width: 100%; max-width: var(--max-w); margin-inline: auto; padding-inline: var(--edge); }
-.article-wrap { width: 100%; max-width: var(--article-w); margin-inline: auto; padding-inline: var(--edge); }
+.article-wrap { width: 100%; max-width: 1090px; margin-inline: auto; padding-inline: var(--edge); }
 
 /* --- BUTTONS --- */
 .btn {
@@ -492,7 +492,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 .page-hero-inner {
   position: relative; z-index: 1;
-  max-width: var(--article-w); padding-inline: var(--edge); margin-inline: auto;
+  max-width: 1090px; padding-inline: var(--edge); margin-inline: auto;
 }
 .page-hero-eyebrow {
   display: inline-flex; align-items: center; gap: .5rem;
@@ -510,7 +510,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   font-size: clamp(.95rem, 1.5vw, 1.1rem);
   color: rgba(255,255,255,.82); line-height: 1.75; max-width: 62ch; margin-bottom: 2rem;
 }
-.page-hero-meta { font-size: .82rem; color: rgba(255,255,255,.55); display: flex; gap: 1.5rem; flex-wrap: wrap; }
+
 
 /* ============================================================
    BREADCRUMB
@@ -518,7 +518,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .breadcrumb { background: var(--c-off-white); border-bottom: 1px solid var(--c-border); padding: .65rem 0; }
 .breadcrumb-inner {
   display: flex; align-items: center; gap: .4rem; font-size: .8rem; color: var(--c-muted);
-  max-width: var(--article-w); padding-inline: var(--edge); margin-inline: auto;
+  max-width: 1090px; padding-inline: var(--edge); margin-inline: auto;
 }
 .breadcrumb a { color: var(--c-muted); text-decoration: none; }
 .breadcrumb a:hover { color: var(--c-primary); }
@@ -533,7 +533,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   border-bottom: 1px solid var(--c-border);
   padding-block: clamp(2rem, 3.5vw, 3rem);
 }
-.why-band-inner { max-width: var(--article-w); padding-inline: var(--edge); margin-inline: auto; }
+.why-band-inner { max-width: 1090px; padding-inline: var(--edge); margin-inline: auto; }
 .why-band h2 {
   font-family: var(--font-display);
   font-size: clamp(1.3rem, 2vw, 1.65rem);
@@ -619,7 +619,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   pointer-events: none;
 }
 .visa-section-inner {
-  max-width: var(--article-w); padding-inline: var(--edge);
+  max-width: 1090px; padding-inline: var(--edge);
   margin-inline: auto; position: relative; z-index: 1;
 }
 .visa-section h2 {
@@ -641,7 +641,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
    TOOLS & CHECKLISTS
    ============================================================ */
 .tools-section { background: var(--c-white); padding-block: clamp(2.5rem, 4vw, 3.5rem); border-top: 1px solid var(--c-border); }
-.tools-section-inner { max-width: var(--article-w); padding-inline: var(--edge); margin-inline: auto; }
+.tools-section-inner { max-width: 1090px; padding-inline: var(--edge); margin-inline: auto; }
 .tools-header { margin-bottom: 1.5rem; }
 .section-title {
   font-family: var(--font-display); font-size: clamp(1.4rem, 2.5vw, 1.85rem);
@@ -1216,6 +1216,7 @@ figure img {
             <li><a href="../ed-visas/thai-language-ed-visa-chiang-mai.html">Thai Language</a></li>
             <li><a href="../ed-visas/hand-to-hand-combat-ed-visa-chiang-mai.html">Hand-to-Hand Combat</a></li>
             <li><a href="../ed-visas/volunteer-non-o-visa-chiang-mai.html">Volunteer Non-O</a></li>
+            <li><a href="../ed-visas/ed-visa-comparison-chiang-mai.html">ED Visa Comparison</a></li>
             <li><a href="../ed-visas/index.html">All ED Visas</a></li>
           </ul>
         </div>
@@ -1292,8 +1293,7 @@ figure img {
           </ul>
         </div>
       </div>
-    </div>
-  </nav>
+    
 
   <!-- CTAs & Mobile Toggle -->
   <div class="header-ctas">
@@ -1444,10 +1444,6 @@ figure img {
   <div class="page-hero-eyebrow">✓ Digital Tool</div>
   <h1>Thailand Digital Arrival Card 2026</h1>
   <p class="page-hero-lead">Complete guide to TDAC: what it is, who must file, how to submit online for free, integration with visa types, processing times, and common questions about Thailand's digital arrival requirement.</p>
-  <div class="page-hero-meta">
-    <span>Read time: 5 min</span>
-    <span>Last verified: March 2026</span>
-  </div>
 </div>
 </section>
 
@@ -1461,8 +1457,7 @@ figure img {
   <a href="../immigration/index.html">Immigration</a>
   <span class="breadcrumb-sep">/</span>
   <span>Thailand Digital Arrival Card</span>
-</div>
-</nav>
+
 
 <!-- ========================================================
      WHY BAND
@@ -1775,6 +1770,31 @@ figure img {
 </footer>
 
 
-<script src="../../shared/js/progress-bar.js" defer></script>
+
+<script>
+(function() {
+  'use strict';
+  function calculateReadTime() {
+    const article = document.querySelector('article.article-body');
+    if (!article) return;
+    const text = article.innerText;
+    const wordCount = text.trim().split(/\s+/).length;
+    const readTime = Math.max(1, Math.round(wordCount / 200));
+    const readTimeEl = document.getElementById('read-time');
+    if (readTimeEl) {
+      readTimeEl.textContent = readTime + ' min';
+    }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', calculateReadTime);
+  } else {
+    calculateReadTime();
+  }
+})();
+
 </body>
 </html>
+
+
+
+

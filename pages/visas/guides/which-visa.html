@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en-US">
 <head>
 <meta charset="utf-8"/>
@@ -409,7 +409,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     font-size: 0.9rem;
   }
   .nav-accordion summary::after {
-    content: '▼';
+    content: 'â–¼';
     font-size: 0.9rem;
     transition: transform 0.3s;
   }
@@ -516,7 +516,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   font-size: clamp(.95rem, 1.5vw, 1.1rem);
   color: rgba(255,255,255,.82); line-height: 1.75; max-width: 62ch; margin-bottom: 2rem;
 }
-.page-hero-meta { font-size: .82rem; color: rgba(255,255,255,.55); display: flex; gap: 1.5rem; flex-wrap: wrap; }
+
 
 /* ============================================================
    BREADCRUMB
@@ -996,6 +996,8 @@ figure img {
 .visa-card,.article-card,.tool-card,.guide-card,.visa-category-card,.program-card,.topic-card,.checklist-card,.related-card,.sidebar-card{text-decoration:none;}
 .visa-card *,.article-card *,.tool-card *,.guide-card *,.visa-category-card *,.program-card *,.topic-card *,.checklist-card *,.related-card *,.sidebar-card *{text-decoration:none;}
 .visa-card:hover,.article-card:hover,.tool-card:hover,.guide-card:hover,.visa-category-card:hover,.program-card:hover,.topic-card:hover,.checklist-card:hover,.related-card:hover,.sidebar-card:hover{text-decoration:none;}
+
+.breadcrumb-meta { color: var(--c-muted); }
 </style>
 <link rel="stylesheet" href="../../../css/chaty-front.min.css"/>
 
@@ -1028,6 +1030,7 @@ figure img {
             <li><a href="../../ed-visas/thai-language-ed-visa-chiang-mai.html">Thai Language</a></li>
             <li><a href="../../ed-visas/hand-to-hand-combat-ed-visa-chiang-mai.html">Hand-to-Hand Combat</a></li>
             <li><a href="../../ed-visas/volunteer-non-o-visa-chiang-mai.html">Volunteer Non-O</a></li>
+            <li><a href="../../ed-visas/ed-visa-comparison-chiang-mai.html">ED Visa Comparison</a></li>
             <li><a href="../../ed-visas/index.html">All ED Visas</a></li>
           </ul>
         </div>
@@ -1104,8 +1107,7 @@ figure img {
           </ul>
         </div>
       </div>
-    </div>
-  </nav>
+    
 
   <!-- CTAs & Mobile Toggle -->
   <div class="header-ctas">
@@ -1258,7 +1260,7 @@ figure img {
 <section class="page-hero" aria-labelledby="page-heading">
 <div class="page-hero-inner">
   <div class="page-hero-eyebrow">
-    <span aria-hidden="true">✓</span> Visa Guide &nbsp;·&nbsp; 2026
+    <span aria-hidden="true">â</span> Visa Guide &nbsp;Â–&nbsp; 2026
   </div>
   <h1 id="page-heading">
     Which Thai Visa Is Right for You?
@@ -1266,9 +1268,6 @@ figure img {
   <p class="page-hero-lead">
     Find your path through Thailand's visa options. Answer a few quick questions to discover what works for your situation and get matched to the right visa type.
   </p>
-  <div class="page-hero-meta">
-    <span>Last verified: March 2026</span>
-  </div>
 </div>
 </section>
 
@@ -1284,8 +1283,7 @@ figure img {
   <a href="../guides/index.html">Guides</a>
   <span class="breadcrumb-sep">/</span>
   <span>Which Visa Is Right for You</span>
-</div>
-</nav>
+
 
 <!-- ========================================================
      ARTICLE BODY
@@ -1302,9 +1300,9 @@ figure img {
     <div class="filter-group">
       <h3>How long do you want to stay?</h3>
       <div class="filter-buttons" id="duration-buttons">
-        <button class="filter-btn" data-duration="1-30">1–30 Days</button>
-        <button class="filter-btn" data-duration="30-90">30–90 Days</button>
-        <button class="filter-btn" data-duration="90-180">90–180 Days</button>
+        <button class="filter-btn" data-duration="1-30">1–0 Days</button>
+        <button class="filter-btn" data-duration="30-90">30–0 Days</button>
+        <button class="filter-btn" data-duration="90-180">90–0 Days</button>
         <button class="filter-btn" data-duration="180-plus">180+ Days</button>
       </div>
     </div>
@@ -1405,7 +1403,7 @@ figure img {
   <!-- Section 3: Visa by Duration -->
   <h2>Visa by Duration</h2>
 
-  <h3>1–30 Days</h3>
+  <h3>1–0 Days</h3>
   <p>Short trips don't require advance planning. Most visitors use visa exemption or tourist visa options.</p>
   <ul>
     <li><strong><a href="../short-stay/visa-exempt-entry.html">Visa Exempt Entry</a></strong> – Free entry for eligible nationalities. 60 days, extendable +30 days.</li>
@@ -1413,7 +1411,7 @@ figure img {
     <li><strong><a href="../short-stay/visa-on-arrival.html">Visa on Arrival (VOA)</a></strong> – Quick option at airport if visa exempt unavailable. 15 days only.</li>
   </ul>
 
-  <h3>30–90 Days</h3>
+  <h3>30–0 Days</h3>
   <p>Medium stays still use short-stay visas, but education and volunteer options become viable for those committing to study or work.</p>
   <ul>
     <li><strong><a href="../short-stay/tourist-visa.html">Tourist Visa Extension</a></strong> – Extend your stay at immigration offices.</li>
@@ -1421,7 +1419,7 @@ figure img {
     <li><strong><a href="../../ed-visas/volunteer-non-o-visa-chiang-mai.html">Volunteer Visa</a></strong> – Work with NGOs and charity organizations.</li>
   </ul>
 
-  <h3>90–180 Days</h3>
+  <h3>90–0 Days</h3>
   <p>Extended stays require formal long-stay visas. Digital nomads and remote workers have a dedicated option.</p>
   <ul>
     <li><strong><a href="../short-stay/dtv-destination-thailand-visa-thai-visa-advice-chiang-mai-cmlocals.html">DTV (Digital Nomad Visa)</a></strong> – New visa for remote workers. 180 days, renewable annually.</li>
@@ -1761,7 +1759,7 @@ function updateResults() {
   const resultsHTML = visas.map(visa => `
     <div class="visa-card">
       <h4>${visa.name}</h4>
-      <div class="meta">${visa.duration} • ${visa.cost}</div>
+      <div class="meta">${visa.duration} - � ${visa.cost}</div>
       <p>${visa.desc}</p>
       <a href="${visa.link}">Learn More</a>
     </div>
@@ -1854,6 +1852,34 @@ function updateResults() {
 </footer>
 
 
-<script src="../../../shared/js/progress-bar.js" defer></script>
+
+<script>
+(function() {
+  'use strict';
+  function calculateReadTime() {
+    const article = document.querySelector('article.article-body');
+    if (!article) return;
+    const text = article.innerText;
+    const wordCount = text.trim().split(/\s+/).length;
+    const readTime = Math.max(1, Math.round(wordCount / 200));
+    const readTimeEl = document.getElementById('read-time');
+    if (readTimeEl) {
+      readTimeEl.textContent = readTime + ' min';
+    }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', calculateReadTime);
+  } else {
+    calculateReadTime();
+  }
+})();
+
 </body>
 </html>
+
+
+
+
+
+
+

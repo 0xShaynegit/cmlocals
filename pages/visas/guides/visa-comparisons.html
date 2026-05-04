@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en-US">
 <head>
 <meta charset="utf-8"/>
@@ -409,7 +409,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     font-size: 0.9rem;
   }
   .nav-accordion summary::after {
-    content: '▼';
+    content: 'â–¼';
     font-size: 0.9rem;
     transition: transform 0.3s;
   }
@@ -516,7 +516,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   font-size: clamp(.95rem, 1.5vw, 1.1rem);
   color: rgba(255,255,255,.82); line-height: 1.75; max-width: 62ch; margin-bottom: 2rem;
 }
-.page-hero-meta { font-size: .82rem; color: rgba(255,255,255,.55); display: flex; gap: 1.5rem; flex-wrap: wrap; }
+
 
 /* ============================================================
    BREADCRUMB
@@ -792,6 +792,8 @@ figure img {
 /* PROGRESS BAR */
 .progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: linear-gradient(90deg, #4F46E5, #6366F1, #4F46E5); width: 2%; min-width: 2%; z-index: 10001; transition: width 0.1s linear; box-shadow: 0 2px 8px rgba(79,70,229,.18); }
 @media (prefers-reduced-motion: reduce) { .progress-bar { transition: none; } }
+
+.breadcrumb-meta { color: var(--c-muted); }
 </style>
 <link rel="stylesheet" href="../../../css/chaty-front.min.css"/>
 
@@ -824,6 +826,7 @@ figure img {
             <li><a href="../../ed-visas/thai-language-ed-visa-chiang-mai.html">Thai Language</a></li>
             <li><a href="../../ed-visas/hand-to-hand-combat-ed-visa-chiang-mai.html">Hand-to-Hand Combat</a></li>
             <li><a href="../../ed-visas/volunteer-non-o-visa-chiang-mai.html">Volunteer Non-O</a></li>
+            <li><a href="../../ed-visas/ed-visa-comparison-chiang-mai.html">ED Visa Comparison</a></li>
             <li><a href="../../ed-visas/index.html">All ED Visas</a></li>
           </ul>
         </div>
@@ -900,8 +903,7 @@ figure img {
           </ul>
         </div>
       </div>
-    </div>
-  </nav>
+    
 
   <!-- CTAs & Mobile Toggle -->
   <div class="header-ctas">
@@ -1054,7 +1056,7 @@ figure img {
 <section class="page-hero" aria-labelledby="page-heading">
 <div class="page-hero-inner">
   <div class="page-hero-eyebrow">
-    <span aria-hidden="true">⚖️</span> Comparison Guide &nbsp;·&nbsp; 2026
+    <span aria-hidden="true">âš–ï¸</span> Comparison Guide &nbsp;Â–&nbsp; 2026
   </div>
   <h1 id="page-heading">
     Compare Long-Stay Visas for Thailand
@@ -1062,9 +1064,6 @@ figure img {
   <p class="page-hero-lead">
     Side-by-side comparison of DTV, Retirement, Marriage, and Business visas. Understand financial requirements, duration, renewal costs, and which visa suits your situation.
   </p>
-  <div class="page-hero-meta">
-    <span>Last verified: March 2026</span>
-  </div>
 </div>
 </section>
 
@@ -1080,8 +1079,7 @@ figure img {
   <a href="../guides/index.html">Guides</a>
   <span class="breadcrumb-sep">/</span>
   <span>Visa Comparisons</span>
-</div>
-</nav>
+
 
 <!-- ========================================================
      ARTICLE BODY
@@ -1259,9 +1257,9 @@ figure img {
 
   <h2>Processing and Timing</h2>
 
-  <p><strong>DTV:</strong> Applied at Thai embassy abroad. Processing typically 5–10 business days. Can be fast-tracked in some locations. On arrival, bring financial proof for Thai immigration records.</p>
+  <p><strong>DTV:</strong> Applied at Thai embassy abroad. Processing typically 5–0 business days. Can be fast-tracked in some locations. On arrival, bring financial proof for Thai immigration records.</p>
 
-  <p><strong>Retirement & Marriage:</strong> Apply through the eVisa system at https://www.thaievisa.go.th/ before arrival OR extend/renew at immigration office in Thailand if already on another visa. Processing 1–3 days for renewal, 5–15 days for initial eVisa application.</p>
+  <p><strong>Retirement & Marriage:</strong> Apply through the eVisa system at https://www.thaievisa.go.th/ before arrival OR extend/renew at immigration office in Thailand if already on another visa. Processing 1–3 days for renewal, 5–5 days for initial eVisa application.</p>
 
   <p><strong>Business:</strong> Most complex. Requires Thai company setup or investment documentation. Processing 1–2 weeks minimum for approval once documents are complete.</p>
 
@@ -1457,6 +1455,34 @@ mobileNav.querySelectorAll('a').forEach(link => {
 
 
 <script src="../../../../shared/js/card-click-handler.js"></script>
-<script src="../../../shared/js/progress-bar.js" defer></script>
+
+<script>
+(function() {
+  'use strict';
+  function calculateReadTime() {
+    const article = document.querySelector('article.article-body');
+    if (!article) return;
+    const text = article.innerText;
+    const wordCount = text.trim().split(/\s+/).length;
+    const readTime = Math.max(1, Math.round(wordCount / 200));
+    const readTimeEl = document.getElementById('read-time');
+    if (readTimeEl) {
+      readTimeEl.textContent = readTime + ' min';
+    }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', calculateReadTime);
+  } else {
+    calculateReadTime();
+  }
+})();
+
 </body>
 </html>
+
+
+
+
+
+
+

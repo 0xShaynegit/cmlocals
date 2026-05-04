@@ -1274,6 +1274,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
             <li><a href="ed-visas/thai-language-ed-visa-chiang-mai.html">Thai Language</a></li>
             <li><a href="ed-visas/hand-to-hand-combat-ed-visa-chiang-mai.html">Hand-to-Hand Combat</a></li>
             <li><a href="ed-visas/volunteer-non-o-visa-chiang-mai.html">Volunteer Non-O</a></li>
+            <li><a href="ed-visas/ed-visa-comparison-chiang-mai.html">ED Visa Comparison</a></li>
             <li><a href="ed-visas/index.html">All ED Visas</a></li>
           </ul>
         </div>
@@ -1350,8 +1351,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
           </ul>
         </div>
       </div>
-    </div>
-  </nav>
+    
 
   <!-- CTAs & Mobile Toggle -->
   <div class="header-ctas">
@@ -1780,6 +1780,31 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 <script src="../../shared/js/card-click-handler.js"></script>
 <script src="../../shared/chaty-widget/scripts/chaty-widget.js"></script>
 
-<script src="../shared/js/progress-bar.js" defer></script>
+
+<script>
+(function() {
+  'use strict';
+  function calculateReadTime() {
+    const article = document.querySelector('article.article-body');
+    if (!article) return;
+    const text = article.innerText;
+    const wordCount = text.trim().split(/\s+/).length;
+    const readTime = Math.max(1, Math.round(wordCount / 200));
+    const readTimeEl = document.getElementById('read-time');
+    if (readTimeEl) {
+      readTimeEl.textContent = readTime + ' min';
+    }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', calculateReadTime);
+  } else {
+    calculateReadTime();
+  }
+})();
+
 </body>
 </html>
+
+
+
+

@@ -60,7 +60,7 @@ ul { list-style: none; }
 button { font-family: inherit; cursor: pointer; border: none; background: none; }
 
 .container { width: 100%; max-width: var(--max-w); margin-inline: auto; padding-inline: var(--edge); }
-.article-wrap { width: 100%; max-width: var(--article-w); margin-inline: auto; padding-inline: var(--edge); }
+.article-wrap { width: 100%; max-width: 1090px; margin-inline: auto; padding-inline: var(--edge); }
 
 /* --- BUTTONS --- */
 .btn {
@@ -435,7 +435,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     font-size: 0.9rem;
   }
   .nav-accordion summary::after {
-    content: '▼';
+    content: 'â–¼';
     font-size: 0.9rem;
     transition: transform 0.3s;
   }
@@ -524,7 +524,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 .page-hero-inner {
   position: relative; z-index: 1;
-  max-width: var(--article-w); padding-inline: var(--edge); margin-inline: auto;
+  max-width: 1090px; padding-inline: var(--edge); margin-inline: auto;
 }
 .page-hero-eyebrow {
   display: inline-flex; align-items: center; gap: .5rem;
@@ -542,7 +542,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   font-size: clamp(.95rem, 1.5vw, 1.1rem);
   color: rgba(255,255,255,.82); line-height: 1.75; max-width: 62ch; margin-bottom: 2rem;
 }
-.page-hero-meta { font-size: .82rem; color: rgba(255,255,255,.55); display: flex; gap: 1.5rem; flex-wrap: wrap; }
+
 
 /* ============================================================
    BREADCRUMB
@@ -550,7 +550,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .breadcrumb { background: var(--c-off-white); border-bottom: 1px solid var(--c-border); padding: .65rem 0; }
 .breadcrumb-inner {
   display: flex; align-items: center; gap: .4rem; font-size: .8rem; color: var(--c-muted);
-  max-width: var(--article-w); padding-inline: var(--edge); margin-inline: auto;
+  max-width: 1090px; padding-inline: var(--edge); margin-inline: auto;
 }
 .breadcrumb a { color: var(--c-muted); text-decoration: none; }
 .breadcrumb a:hover { color: var(--c-primary); }
@@ -565,7 +565,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   border-bottom: 1px solid var(--c-border);
   padding-block: clamp(2rem, 3.5vw, 3rem);
 }
-.why-band-inner { max-width: var(--article-w); padding-inline: var(--edge); margin-inline: auto; }
+.why-band-inner { max-width: 1090px; padding-inline: var(--edge); margin-inline: auto; }
 .why-band h2 {
   font-family: var(--font-display);
   font-size: clamp(1.3rem, 2vw, 1.65rem);
@@ -669,7 +669,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   pointer-events: none;
 }
 .visa-section-inner {
-  max-width: var(--article-w); padding-inline: var(--edge);
+  max-width: 1090px; padding-inline: var(--edge);
   margin-inline: auto; position: relative; z-index: 1;
 }
 .visa-section h2 {
@@ -691,7 +691,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
    TOOLS & CHECKLISTS
    ============================================================ */
 .tools-section { background: var(--c-white); padding-block: clamp(2.5rem, 4vw, 3.5rem); border-top: 1px solid var(--c-border); }
-.tools-section-inner { max-width: var(--article-w); padding-inline: var(--edge); margin-inline: auto; }
+.tools-section-inner { max-width: 1090px; padding-inline: var(--edge); margin-inline: auto; }
 .tools-header { margin-bottom: 1.5rem; }
 .section-title {
   font-family: var(--font-display); font-size: clamp(1.4rem, 2.5vw, 1.85rem);
@@ -1057,7 +1057,7 @@ figure img {
     font-size: 0.9rem;
   }
   .nav-accordion summary::after {
-    content: '▼';
+    content: 'â–¼';
     font-size: 0.9rem;
     transition: transform 0.3s;
   }
@@ -1240,6 +1240,8 @@ figure img {
 .visa-card,.article-card,.tool-card,.guide-card,.visa-category-card,.program-card,.topic-card,.checklist-card,.related-card,.sidebar-card{text-decoration:none;}
 .visa-card *,.article-card *,.tool-card *,.guide-card *,.visa-category-card *,.program-card *,.topic-card *,.checklist-card *,.related-card *,.sidebar-card *{text-decoration:none;}
 .visa-card:hover,.article-card:hover,.tool-card:hover,.guide-card:hover,.visa-category-card:hover,.program-card:hover,.topic-card:hover,.checklist-card:hover,.related-card:hover,.sidebar-card:hover{text-decoration:none;}
+
+.breadcrumb-meta { color: var(--c-muted); }
 </style>
 <link rel="stylesheet" href="/shared/css/card-fixes.css">
 <link rel="stylesheet" href="/shared/css/responsive-images.css">
@@ -1268,6 +1270,7 @@ figure img {
             <li><a href="../ed-visas/thai-language-ed-visa-chiang-mai.html">Thai Language</a></li>
             <li><a href="../ed-visas/hand-to-hand-combat-ed-visa-chiang-mai.html">Hand-to-Hand Combat</a></li>
             <li><a href="../ed-visas/volunteer-non-o-visa-chiang-mai.html">Volunteer Non-O</a></li>
+            <li><a href="../ed-visas/ed-visa-comparison-chiang-mai.html">ED Visa Comparison</a></li>
             <li><a href="../ed-visas/index.html">All ED Visas</a></li>
           </ul>
         </div>
@@ -1344,8 +1347,7 @@ figure img {
           </ul>
         </div>
       </div>
-    </div>
-  </nav>
+    
 
   <!-- CTAs & Mobile Toggle -->
   <div class="header-ctas">
@@ -1498,10 +1500,6 @@ figure img {
   <p class="page-hero-lead">
     Complete guide to Thai re-entry permits: what they are, when required, single vs multiple entry options, how to file the TM.8 form, cost (1,000 THB), validity deadlines, and penalties for exiting without one.
   </p>
-  <div class="page-hero-meta">
-    <span>Last verified: March 2026</span>
-    <span>Thailand Immigration Bureau</span>
-  </div>
 </div>
 </section>
 
@@ -1527,7 +1525,7 @@ figure img {
   <div class="why-items">
 
     <div class="why-item">
-      <div class="why-item__icon" aria-hidden="true">✈️</div>
+      <div class="why-item__icon" aria-hidden="true">âœˆï¸</div>
       <div class="why-item__body">
         <div class="why-item__title">Required if you are exiting Thailand on a long-stay visa</div>
         <div class="why-item__desc">If you hold a long-stay visa and exit Thailand without a re-entry permit, your visa is automatically cancelled. You must file a TM.8 before you leave if you intend to return while the visa is still valid.</div>
@@ -1535,7 +1533,7 @@ figure img {
     </div>
 
     <div class="why-item">
-      <div class="why-item__icon" aria-hidden="true">1️⃣</div>
+      <div class="why-item__icon" aria-hidden="true">1ï¸âƒ£</div>
       <div class="why-item__body">
         <div class="why-item__title">Single vs multiple entry options</div>
         <div class="why-item__desc">Single entry permits allow one exit and re-entry; your permit expires after you re-enter. Multiple entry permits allow unlimited exits and re-entries for one year. Multiple entry costs 3,800 THB, single costs 1,000 THB.</div>
@@ -1543,7 +1541,7 @@ figure img {
     </div>
 
     <div class="why-item">
-      <div class="why-item__icon" aria-hidden="true">⏰</div>
+      <div class="why-item__icon" aria-hidden="true">â°</div>
       <div class="why-item__body">
         <div class="why-item__title">File before you travel</div>
         <div class="wow-item__desc">Re-entry permits must be filed at the immigration office before you depart Thailand. You cannot file while outside the country. Processing takes approximately 15 minutes to 1 hour.</div>
@@ -1551,7 +1549,7 @@ figure img {
     </div>
 
     <div class="why-item">
-      <div class="why-item__icon" aria-hidden="true">🎫</div>
+      <div class="why-item__icon" aria-hidden="true">ðŸŽ«</div>
       <div class="why-item__body">
         <div class="why-item__title">One-year validity from issue date</div>
         <div class="why-item__desc">Multiple entry permits are valid for one year from the date of issue. Single entry permits are valid until you re-enter Thailand. Keep your permit receipt if traveling internationally.</div>
@@ -1631,7 +1629,7 @@ figure img {
 
 <div class="req-card">
   <div class="req-card__header">
-    <span class="req-card__icon" aria-hidden="true">📊</span>
+    <span class="req-card__icon" aria-hidden="true">ðŸ�–Š</span>
     <div>
       <div class="req-card__title">Re-Entry Permit Types Comparison</div>
       <div class="req-card__meta">Cost and validity</div>
@@ -1641,15 +1639,15 @@ figure img {
 </div>
 
 <p style="font-size: 2rem; color: var(--c-muted); margin-bottom: 2rem; font-style: italic; line-height: 1.6; font-weight: 500;">
-  💡 <strong>Pro Tip:</strong> Before you leave, save your visa expiry date
+  ðŸ’¡ <strong>Pro Tip:</strong> Before you leave, save your visa expiry date
   <button class="pro-tip-bubble" id="pro-tip-bubble-btn" title="Click for important reminder" style="background: linear-gradient(135deg, #6366F1 0%, #7C3AED 100%); color: white; padding: 0.5rem 1rem; border: none; border-radius: 6px; font-weight: 600; cursor: pointer; font-size: 0.9rem; transition: background 0.2s;">Set Expiry Date</button>
 </p>
 
 <div id="pro-tip-modal" class="pro-tip-modal">
   <div class="pro-tip-modal-content">
-    <button class="pro-tip-modal-close" onclick="document.getElementById('pro-tip-modal').classList.remove('active')">×</button>
+    <button class="pro-tip-modal-close" onclick="document.getElementById('pro-tip-modal').classList.remove('active')">Ã—</button>
     <div class="pro-tip-modal-inner">
-      <span class="pro-tip-modal-icon">📅</span>
+      <span class="pro-tip-modal-icon">ðŸ�–…</span>
       <div class="pro-tip-modal-label">Never Miss Your Visa Expiry</div>
       <div class="pro-tip-modal-description">Enter your visa expiry date to automatically add it to your calendar with reminders for 7 days and 1 day before expiry. Useful before traveling with a re-entry permit.</div>
 
@@ -1668,7 +1666,9 @@ figure img {
 .visa-card,.article-card,.tool-card,.guide-card,.visa-category-card,.program-card,.topic-card,.checklist-card,.related-card,.sidebar-card{text-decoration:none;}
 .visa-card *,.article-card *,.tool-card *,.guide-card *,.visa-category-card *,.program-card *,.topic-card *,.checklist-card *,.related-card *,.sidebar-card *{text-decoration:none;}
 .visa-card:hover,.article-card:hover,.tool-card:hover,.guide-card:hover,.visa-category-card:hover,.program-card:hover,.topic-card:hover,.checklist-card:hover,.related-card:hover,.sidebar-card:hover{text-decoration:none;}
-          </style>
+          
+.breadcrumb-meta { color: var(--c-muted); }
+</style>
           <small style="display: block; margin-top: 0.4rem; opacity: 0.85;">Example: 15/06/2026</small>
         </div>
         <button type="submit" class="pro-tip-modal-button" style="width: 100%; text-align: center;">ADD</button>
@@ -1870,6 +1870,34 @@ figure img {
 </footer>
 
 
-<script src="../../shared/js/progress-bar.js" defer></script>
+
+<script>
+(function() {
+  'use strict';
+  function calculateReadTime() {
+    const article = document.querySelector('article.article-body');
+    if (!article) return;
+    const text = article.innerText;
+    const wordCount = text.trim().split(/\s+/).length;
+    const readTime = Math.max(1, Math.round(wordCount / 200));
+    const readTimeEl = document.getElementById('read-time');
+    if (readTimeEl) {
+      readTimeEl.textContent = readTime + ' min';
+    }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', calculateReadTime);
+  } else {
+    calculateReadTime();
+  }
+})();
+
 </body>
 </html>
+
+
+
+
+
+
+

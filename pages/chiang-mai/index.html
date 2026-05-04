@@ -59,7 +59,7 @@ a { color: inherit; }
 ul { list-style: none; }
 button { font-family: inherit; cursor: pointer; border: none; background: none; }
 
-.container { width: 100%; max-width: var(--max-w); margin-inline: auto; padding-inline: var(--edge); }
+.container { width: 100%; max-width: var(--article-w); margin-inline: auto; padding-inline: var(--edge); }
 .article-wrap { width: 100%; max-width: var(--article-w); margin-inline: auto; padding-inline: var(--edge); }
 
 /* --- BUTTONS --- */
@@ -491,7 +491,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 .hub-hero-inner {
   position: relative; z-index: 1;
-  max-width: var(--max-w); padding-inline: var(--edge); margin-inline: auto;
+  max-width: var(--article-w); padding-inline: var(--edge); margin-inline: auto;
   display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
 }
 .hub-hero-eyebrow {
@@ -510,7 +510,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   font-size: clamp(.95rem, 1.5vw, 1.1rem);
   color: rgba(255,255,255,.82); line-height: 1.75; max-width: 54ch; margin-bottom: 2rem;
 }
-.hub-hero-ctas { display: flex; gap: .75rem; flex-wrap: wrap; }
+.hub-hero-ctas { display: flex; gap: .75rem; flex-wrap: nowrap; align-items: center; }
 
 .hub-hero-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
 .stat-card {
@@ -529,7 +529,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .breadcrumb { background: var(--c-off-white); border-bottom: 1px solid var(--c-border); padding: .65rem 0; }
 .breadcrumb-inner {
   display: flex; align-items: center; gap: .4rem; font-size: .8rem; color: var(--c-muted);
-  max-width: var(--max-w); padding-inline: var(--edge); margin-inline: auto;
+  max-width: var(--article-w); padding-inline: var(--edge); margin-inline: auto;
 }
 .breadcrumb a { color: var(--c-muted); text-decoration: none; }
 .breadcrumb a:hover { color: var(--c-primary); }
@@ -539,7 +539,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
    INTRO SECTION
    ============================================================ */
 .hub-intro { padding-block: clamp(2.5rem, 4vw, 4rem); background: var(--c-white); }
-.hub-intro-inner { max-width: var(--max-w); padding-inline: var(--edge); margin-inline: auto; }
+.hub-intro-inner { max-width: var(--article-w); padding-inline: var(--edge); margin-inline: auto; }
 .hub-intro-text { max-width: 720px; }
 .hub-intro-text .section-title {
   font-family: var(--font-display); font-size: clamp(1.5rem, 2.5vw, 2rem);
@@ -551,40 +551,41 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
    ARTICLE CARDS GRID
    ============================================================ */
 .articles-section { background: var(--c-off-white); padding-block: clamp(2.5rem, 4vw, 4rem); }
-.articles-section-inner { max-width: var(--max-w); padding-inline: var(--edge); margin-inline: auto; }
-.articles-header { margin-bottom: 2rem; }
+.articles-section-inner { max-width: 1090px; padding-inline: var(--edge); margin-inline: auto; }
+.articles-header { margin-bottom: 2.5rem; }
 .articles-header .section-title {
   font-family: var(--font-display); font-size: clamp(1.4rem, 2.5vw, 1.85rem);
-  font-weight: 400; letter-spacing: -.02em; color: #101585; margin-bottom: .4rem;
+  font-weight: 400; letter-spacing: -.02em; color: #101585; margin-bottom: .5rem;
 }
 .articles-header p { font-size: .9rem; color: var(--c-muted); max-width: 52ch; }
-.articles-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+.articles-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
 .article-card {
   background: var(--c-white); border: 1px solid var(--c-border); border-radius: var(--radius-lg);
-  padding: 1.75rem 1.75rem 1.5rem; text-decoration: none; color: var(--c-body);
+  padding: 2rem; text-decoration: none; color: var(--c-body);
   display: flex; flex-direction: column;
-  transition: border-color .18s, box-shadow .18s, transform .18s;
+  transition: border-color .2s, box-shadow .2s, transform .2s;
+  box-shadow: 0 1px 3px rgba(0,0,0,.05);
 }
-.article-card:hover { border-color: var(--c-page-accent); box-shadow: var(--shadow-md); transform: translateY(-2px); }
+.article-card:hover { border-color: var(--c-page-accent); box-shadow: 0 8px 24px rgba(99,102,241,.12); transform: translateY(-4px); }
 .article-card__category {
-  font-size: .7rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+  font-size: .65rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
   color: var(--c-page-accent); background: var(--c-page-accent-l);
-  display: inline-block; padding: .2em .7em; border-radius: 100px; margin-bottom: 1rem;
+  display: inline-block; padding: .25em .8em; border-radius: 100px; margin-bottom: 1.25rem;
   align-self: flex-start;
 }
 .article-card__title {
-  font-family: var(--font-display); font-size: 1.0rem; font-weight: 400;
-  color: #101585; line-height: 1.25; letter-spacing: -.015em; margin-bottom: .75rem;
+  font-family: var(--font-display); font-size: 1.15rem; font-weight: 400;
+  color: #101585; line-height: 1.35; letter-spacing: -.015em; margin-bottom: 1rem;
 }
 .article-card__desc {
-  font-size: .88rem; line-height: 1.65; color: var(--c-muted); margin-bottom: 1.5rem; flex: 1;
+  font-size: .9rem; line-height: 1.7; color: var(--c-muted); margin-bottom: 1.75rem; flex: 1;
 }
 .article-card__link {
-  font-size: .82rem; font-weight: 600; color: var(--c-page-accent);
-  display: inline-flex; align-items: center; gap: .35rem; text-decoration: none;
+  font-size: .85rem; font-weight: 600; color: var(--c-page-accent);
+  display: inline-flex; align-items: center; gap: .4rem; text-decoration: none;
 }
-.article-card__link::after { content: '\2192'; transition: transform .15s; }
-.article-card:hover .article-card__link::after { transform: translateX(3px); }
+.article-card__link::after { content: '\2192'; transition: transform .2s; }
+.article-card:hover .article-card__link::after { transform: translateX(4px); }
 
 /* Make entire cards clickable */
 .path-card::before,
@@ -647,7 +648,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   pointer-events: none;
 }
 .visa-section-inner {
-  max-width: var(--max-w); padding-inline: var(--edge);
+  max-width: var(--article-w); padding-inline: var(--edge);
   margin-inline: auto; position: relative; z-index: 1;
 }
 .visa-section h2 {
@@ -669,7 +670,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
    TOOLS & CHECKLISTS
    ============================================================ */
 .tools-section { background: var(--c-white); padding-block: clamp(2.5rem, 4vw, 3.5rem); border-top: 1px solid var(--c-border); }
-.tools-section-inner { max-width: var(--max-w); padding-inline: var(--edge); margin-inline: auto; }
+.tools-section-inner { max-width: var(--article-w); padding-inline: var(--edge); margin-inline: auto; }
 .tools-header { margin-bottom: 1.5rem; }
 .section-title {
   font-family: var(--font-display); font-size: clamp(1.4rem, 2.5vw, 1.85rem);
@@ -925,6 +926,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
             <li><a href="../ed-visas/thai-language-ed-visa-chiang-mai.html">Thai Language</a></li>
             <li><a href="../ed-visas/hand-to-hand-combat-ed-visa-chiang-mai.html">Hand-to-Hand Combat</a></li>
             <li><a href="../ed-visas/volunteer-non-o-visa-chiang-mai.html">Volunteer Non-O</a></li>
+            <li><a href="../ed-visas/ed-visa-comparison-chiang-mai.html">ED Visa Comparison</a></li>
             <li><a href="../ed-visas/index.html">All ED Visas</a></li>
           </ul>
         </div>
@@ -1433,3 +1435,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 <script src="../../shared/js/progress-bar.js" defer></script>
 </body>
 </html>
+
+
+

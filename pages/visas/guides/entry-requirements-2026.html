@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en-US">
 <head>
 <meta charset="utf-8"/>
@@ -400,7 +400,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     font-size: 0.9rem;
   }
   .nav-accordion summary::after {
-    content: '▼';
+    content: 'â–¼';
     font-size: 0.9rem;
     transition: transform 0.3s;
   }
@@ -504,7 +504,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   font-size: clamp(.95rem, 1.5vw, 1.1rem);
   color: rgba(255,255,255,.82); line-height: 1.75; max-width: 62ch; margin-bottom: 2rem;
 }
-.page-hero-meta { font-size: .82rem; color: rgba(255,255,255,.55); display: flex; gap: 1.5rem; flex-wrap: wrap; }
+
 
 .breadcrumb { background: var(--c-off-white); border-bottom: 1px solid var(--c-border); padding: .65rem 0; }
 .breadcrumb-inner {
@@ -722,6 +722,8 @@ figure img {
 /* PROGRESS BAR */
 .progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: linear-gradient(90deg, #4F46E5, #6366F1, #4F46E5); width: 2%; min-width: 2%; z-index: 10001; transition: width 0.1s linear; box-shadow: 0 2px 8px rgba(79,70,229,.18); }
 @media (prefers-reduced-motion: reduce) { .progress-bar { transition: none; } }
+
+.breadcrumb-meta { color: var(--c-muted); }
 </style>
 <link rel="stylesheet" href="../../../css/chaty-front.min.css"/>
 
@@ -754,6 +756,7 @@ figure img {
             <li><a href="../../ed-visas/thai-language-ed-visa-chiang-mai.html">Thai Language</a></li>
             <li><a href="../../ed-visas/hand-to-hand-combat-ed-visa-chiang-mai.html">Hand-to-Hand Combat</a></li>
             <li><a href="../../ed-visas/volunteer-non-o-visa-chiang-mai.html">Volunteer Non-O</a></li>
+            <li><a href="../../ed-visas/ed-visa-comparison-chiang-mai.html">ED Visa Comparison</a></li>
             <li><a href="../../ed-visas/index.html">All ED Visas</a></li>
           </ul>
         </div>
@@ -830,8 +833,7 @@ figure img {
           </ul>
         </div>
       </div>
-    </div>
-  </nav>
+    
 
   <!-- CTAs & Mobile Toggle -->
   <div class="header-ctas">
@@ -978,7 +980,7 @@ figure img {
 <section class="page-hero" aria-labelledby="page-heading">
 <div class="page-hero-inner">
   <div class="page-hero-eyebrow">
-    <span aria-hidden="true">✈️</span> Entry Guide &nbsp;·&nbsp; 2026
+    <span aria-hidden="true">âœˆï¸</span> Entry Guide &nbsp;Â–&nbsp; 2026
   </div>
   <h1 id="page-heading">
     Thailand Entry Requirements 2026
@@ -986,9 +988,6 @@ figure img {
   <p class="page-hero-lead">
     Complete checklist of documents, health requirements, customs procedures, and digital processes for entering Thailand.
   </p>
-  <div class="page-hero-meta">
-    <span>Last verified: March 2026</span>
-  </div>
 </div>
 </section>
 
@@ -1001,8 +1000,7 @@ figure img {
   <a href="../guides/index.html">Guides</a>
   <span class="breadcrumb-sep">/</span>
   <span>Entry Requirements 2026</span>
-</div>
-</nav>
+
 
 <article class="article-body">
 <div class="article-wrap">
@@ -1030,7 +1028,7 @@ figure img {
   <p>The documents you need depend on your visa type:</p>
 
   <ul>
-    <li><strong>Visa Exempt Entry:</strong> Passport only (for eligible nationalities). You receive 30–60 days visa-free entry automatically.</li>
+    <li><strong>Visa Exempt Entry:</strong> Passport only (for eligible nationalities). You receive 30–0 days visa-free entry automatically.</li>
     <li><strong>Tourist Visa:</strong> Valid visa stamp from a Thai embassy or consulate. Bring your passport with the visa already issued.</li>
     <li><strong>DTV (Digital Nomad Visa):</strong> Valid visa stamp. Apply through the eVisa system at https://www.thaievisa.go.th/ before arrival. Obtain information from the Thai embassy or consulate website.</li>
     <li><strong>ED Visa (Education Visa):</strong> Valid visa stamp from a Thai embassy. Requires letter of acceptance from a Thai educational institution.</li>
@@ -1099,7 +1097,7 @@ figure img {
   <h3>Absolute Prohibitions</h3>
   <p>Do not attempt to bring the following into Thailand:</p>
   <ul>
-    <li>Narcotics or controlled substances (penalties: 12–40 years imprisonment)</li>
+    <li>Narcotics or controlled substances (penalties: 12–0 years imprisonment)</li>
     <li>Firearms or ammunition without permit (automatic deportation and criminal charges)</li>
     <li>Explosives or incendiary devices</li>
     <li>Counterfeit currency or documents</li>
@@ -1289,6 +1287,34 @@ mobileNav.querySelectorAll('a').forEach(link => {
 
 
 <script src="../../../../shared/js/card-click-handler.js"></script>
-<script src="../../../shared/js/progress-bar.js" defer></script>
+
+<script>
+(function() {
+  'use strict';
+  function calculateReadTime() {
+    const article = document.querySelector('article.article-body');
+    if (!article) return;
+    const text = article.innerText;
+    const wordCount = text.trim().split(/\s+/).length;
+    const readTime = Math.max(1, Math.round(wordCount / 200));
+    const readTimeEl = document.getElementById('read-time');
+    if (readTimeEl) {
+      readTimeEl.textContent = readTime + ' min';
+    }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', calculateReadTime);
+  } else {
+    calculateReadTime();
+  }
+})();
+
 </body>
 </html>
+
+
+
+
+
+
+

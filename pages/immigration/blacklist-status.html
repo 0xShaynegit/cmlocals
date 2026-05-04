@@ -60,7 +60,7 @@ ul { list-style: none; }
 button { font-family: inherit; cursor: pointer; border: none; background: none; }
 
 .container { width: 100%; max-width: var(--max-w); margin-inline: auto; padding-inline: var(--edge); }
-.article-wrap { width: 100%; max-width: var(--article-w); margin-inline: auto; padding-inline: var(--edge); }
+.article-wrap { width: 100%; max-width: 1090px; margin-inline: auto; padding-inline: var(--edge); }
 
 /* --- BUTTONS --- */
 .btn {
@@ -403,7 +403,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     font-size: 0.9rem;
   }
   .nav-accordion summary::after {
-    content: '▼';
+    content: 'â–¼';
     font-size: 0.9rem;
     transition: transform 0.3s;
   }
@@ -492,7 +492,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 .page-hero-inner {
   position: relative; z-index: 1;
-  max-width: var(--article-w); padding-inline: var(--edge); margin-inline: auto;
+  max-width: 1090px; padding-inline: var(--edge); margin-inline: auto;
 }
 .page-hero-eyebrow {
   display: inline-flex; align-items: center; gap: .5rem;
@@ -510,7 +510,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   font-size: clamp(.95rem, 1.5vw, 1.1rem);
   color: rgba(255,255,255,.82); line-height: 1.75; max-width: 62ch; margin-bottom: 2rem;
 }
-.page-hero-meta { font-size: .82rem; color: rgba(255,255,255,.55); display: flex; gap: 1.5rem; flex-wrap: wrap; }
+
 
 /* ============================================================
    BREADCRUMB
@@ -518,7 +518,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .breadcrumb { background: var(--c-off-white); border-bottom: 1px solid var(--c-border); padding: .65rem 0; }
 .breadcrumb-inner {
   display: flex; align-items: center; gap: .4rem; font-size: .8rem; color: var(--c-muted);
-  max-width: var(--article-w); padding-inline: var(--edge); margin-inline: auto;
+  max-width: 1090px; padding-inline: var(--edge); margin-inline: auto;
 }
 .breadcrumb a { color: var(--c-muted); text-decoration: none; }
 .breadcrumb a:hover { color: var(--c-primary); }
@@ -533,7 +533,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   border-bottom: 1px solid var(--c-border);
   padding-block: clamp(2rem, 3.5vw, 3rem);
 }
-.why-band-inner { max-width: var(--article-w); padding-inline: var(--edge); margin-inline: auto; }
+.why-band-inner { max-width: 1090px; padding-inline: var(--edge); margin-inline: auto; }
 .why-band h2 {
   font-family: var(--font-display);
   font-size: clamp(1.3rem, 2vw, 1.65rem);
@@ -637,7 +637,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   pointer-events: none;
 }
 .visa-section-inner {
-  max-width: var(--article-w); padding-inline: var(--edge);
+  max-width: 1090px; padding-inline: var(--edge);
   margin-inline: auto; position: relative; z-index: 1;
 }
 .visa-section h2 {
@@ -659,7 +659,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
    TOOLS & CHECKLISTS
    ============================================================ */
 .tools-section { background: var(--c-white); padding-block: clamp(2.5rem, 4vw, 3.5rem); border-top: 1px solid var(--c-border); }
-.tools-section-inner { max-width: var(--article-w); padding-inline: var(--edge); margin-inline: auto; }
+.tools-section-inner { max-width: 1090px; padding-inline: var(--edge); margin-inline: auto; }
 .tools-header { margin-bottom: 1.5rem; }
 .section-title {
   font-family: var(--font-display); font-size: clamp(1.4rem, 2.5vw, 1.85rem);
@@ -1025,7 +1025,7 @@ figure img {
     font-size: 0.9rem;
   }
   .nav-accordion summary::after {
-    content: '▼';
+    content: 'â–¼';
     font-size: 0.9rem;
     transition: transform 0.3s;
   }
@@ -1208,6 +1208,8 @@ figure img {
 .visa-card,.article-card,.tool-card,.guide-card,.visa-category-card,.program-card,.topic-card,.checklist-card,.related-card,.sidebar-card{text-decoration:none;}
 .visa-card *,.article-card *,.tool-card *,.guide-card *,.visa-category-card *,.program-card *,.topic-card *,.checklist-card *,.related-card *,.sidebar-card *{text-decoration:none;}
 .visa-card:hover,.article-card:hover,.tool-card:hover,.guide-card:hover,.visa-category-card:hover,.program-card:hover,.topic-card:hover,.checklist-card:hover,.related-card:hover,.sidebar-card:hover{text-decoration:none;}
+
+.breadcrumb-meta { color: var(--c-muted); }
 </style>
 <link rel="stylesheet" href="/shared/css/card-fixes.css">
 <link rel="stylesheet" href="/shared/css/responsive-images.css">
@@ -1236,6 +1238,7 @@ figure img {
             <li><a href="../ed-visas/thai-language-ed-visa-chiang-mai.html">Thai Language</a></li>
             <li><a href="../ed-visas/hand-to-hand-combat-ed-visa-chiang-mai.html">Hand-to-Hand Combat</a></li>
             <li><a href="../ed-visas/volunteer-non-o-visa-chiang-mai.html">Volunteer Non-O</a></li>
+            <li><a href="../ed-visas/ed-visa-comparison-chiang-mai.html">ED Visa Comparison</a></li>
             <li><a href="../ed-visas/index.html">All ED Visas</a></li>
           </ul>
         </div>
@@ -1312,8 +1315,7 @@ figure img {
           </ul>
         </div>
       </div>
-    </div>
-  </nav>
+    
 
   <!-- CTAs & Mobile Toggle -->
   <div class="header-ctas">
@@ -1466,10 +1468,6 @@ figure img {
   <p class="page-hero-lead">
     Complete guide to Thailand's immigration blacklist: what causes blacklist status, how to check if you're blacklisted, duration and removal, appeal rights, and long-term consequences.
   </p>
-  <div class="page-hero-meta">
-    <span>Last verified: March 2026</span>
-    <span>Thailand Immigration Bureau</span>
-  </div>
 </div>
 </section>
 
@@ -1495,7 +1493,7 @@ figure img {
   <div class="why-items">
 
     <div class="why-item">
-      <div class="why-item__icon" aria-hidden="true">⛔</div>
+      <div class="why-item__icon" aria-hidden="true">â›”</div>
       <div class="why-item__body">
         <div class="why-item__title">Multiple reasons for blacklist notation</div>
         <div class="why-item__desc">Extended overstay, repeated visa violations, immigration fraud, criminal conviction, or overstay being caught (vs. voluntary surrender) can result in blacklist status.</div>
@@ -1503,7 +1501,7 @@ figure img {
     </div>
 
     <div class="why-item">
-      <div class="why-item__icon" aria-hidden="true">🔍</div>
+      <div class="why-item__icon" aria-hidden="true">ðŸ”</div>
       <div class="why-item__body">
         <div class="why-item__title">Check status online or at immigration office</div>
         <div class="why-item__desc">You can query your blacklist status at any Thai immigration office or check online via the <a href="https://tdac.immigration.go.th/" target="_blank" rel="noopener">TDAC system</a> by providing your passport number and personal details.</div>
@@ -1511,7 +1509,7 @@ figure img {
     </div>
 
     <div class="why-item">
-      <div class="why-item__icon" aria-hidden="true">⏳</div>
+      <div class="why-item__icon" aria-hidden="true">â³</div>
       <div class="why-item__body">
         <div class="why-item__title">Duration depends on violation severity</div>
         <div class="why-item__desc">Minor violations may result in a 1–3 year notation. Serious offences (extended overstay, fraud) can mean permanent blacklist or 10+ year bans.</div>
@@ -1519,7 +1517,7 @@ figure img {
     </div>
 
     <div class="why-item">
-      <div class="why-item__icon" aria-hidden="true">⚖️</div>
+      <div class="why-item__icon" aria-hidden="true">âš–ï¸</div>
       <div class="why-item__body">
         <div class="why-item__title">Appeal and removal process available</div>
         <div class="why-item__desc">You can appeal blacklist status through Thai immigration or the Ministry of Foreign Affairs, with evidence of reformed behaviour or extenuating circumstances.</div>
@@ -1575,15 +1573,15 @@ figure img {
 </p>
 
 <p>
-  For Chiang Mai residents, visit the main immigration office at 71 Moo 3, Airport Road, Suthep Sub-district, Muang District, Chiang Mai 50200. The check takes 10–15 minutes and is free. You will receive written confirmation if no notation exists, or be informed of details if blacklist status is present.
+  For Chiang Mai residents, visit the main immigration office at 71 Moo 3, Airport Road, Suthep Sub-district, Muang District, Chiang Mai 50200. The check takes 10- –15 minutes and is free. You will receive written confirmation if no notation exists, or be informed of details if blacklist status is present.
 </p>
 
 <div class="req-card">
   <div class="req-card__header">
-    <span class="req-card__icon" aria-hidden="true">🏢</span>
+    <span class="req-card__icon" aria-hidden="true">ðŸ¢</span>
     <div>
       <div class="req-card__title">Chiang Mai Immigration Office (Main)</div>
-      <div class="req-card__meta">71 Moo 3, Airport Road, Suthep, Muang District | Hours: Monday–Friday, 8:30 AM–4:30 PM</div>
+      <div class="req-card__meta">71 Moo 3, Airport Road, Suthep, Muang District | Hours: Monday- –Friday, 8:30 AM- –4:30 PM</div>
     </div>
   </div>
   <p>Main office for all services. To check your blacklist status in person, visit with your original passport. Ask for a background check or record inquiry. Processing is quick during weekday mornings. Request English-language confirmation if needed.</p>
@@ -1597,7 +1595,7 @@ figure img {
 <h2>Duration and removal of blacklist notation</h2>
 
 <p>
-  Unlike re-entry bans which have fixed durations (1–10 years depending on overstay length), blacklist notation duration varies depending on the violation's severity.
+  Unlike re-entry bans which have fixed durations (1- –10 years depending on overstay length), blacklist notation duration varies depending on the violation's severity.
 </p>
 
 <table class="cost-table" aria-label="Blacklist duration by violation type">
@@ -1606,8 +1604,8 @@ figure img {
   </thead>
   <tbody>
     <tr><td>Minor repeated violations</td><td>1–3 years</td></tr>
-    <tr><td>Extended overstay (3–12 months)</td><td>3–5 years</td></tr>
-    <tr><td>Long-term overstay (1–3 years)</td><td>5–10 years</td></tr>
+    <tr><td>Extended overstay (3- –12 months)</td><td>3- –5 years</td></tr>
+    <tr><td>Long-term overstay (1–3 years)</td><td>5- –10 years</td></tr>
     <tr><td>Immigration fraud or serious offence</td><td>Permanent or 10+ years</td></tr>
   </tbody>
 </table>
@@ -1808,6 +1806,34 @@ window.CHATY_CONFIG={channels:[{name:"Facebook_Messenger",label:"Facebook Messen
 </footer>
 
 
-<script src="../../shared/js/progress-bar.js" defer></script>
+
+<script>
+(function() {
+  'use strict';
+  function calculateReadTime() {
+    const article = document.querySelector('article.article-body');
+    if (!article) return;
+    const text = article.innerText;
+    const wordCount = text.trim().split(/\s+/).length;
+    const readTime = Math.max(1, Math.round(wordCount / 200));
+    const readTimeEl = document.getElementById('read-time');
+    if (readTimeEl) {
+      readTimeEl.textContent = readTime + ' min';
+    }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', calculateReadTime);
+  } else {
+    calculateReadTime();
+  }
+})();
+
 </body>
 </html>
+
+
+
+
+
+
+

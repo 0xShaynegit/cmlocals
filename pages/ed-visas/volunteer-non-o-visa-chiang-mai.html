@@ -426,8 +426,8 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
 .page-hero h1{font-family:var(--font-display);font-size:clamp(2rem,4vw,3rem);font-weight:400;line-height:1.15;color:var(--c-white);letter-spacing:-.02em;margin-bottom:1.1rem;}
 .page-hero h1 em{font-style:italic;font-weight:300;color:rgba(255,255,255,.8);}
 .page-hero-sub{font-size:clamp(.95rem,1.5vw,1.08rem);color:rgba(255,255,255,.85);max-width:580px;line-height:1.7;margin-bottom:2rem;}
-.page-hero-meta{display:flex;flex-wrap:wrap;gap:.75rem;align-items:center;}
-.page-hero-meta .label-tag{margin-bottom:0;}
+
+
 .article-layout{display:grid;grid-template-columns:1fr 300px;gap:3rem;align-items:start;padding-block:var(--section-py);}
 .article-body{min-width:0;}
 .article-sidebar{position:sticky;top:74px;}
@@ -961,6 +961,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
             <li><a href="../ed-visas/thai-language-ed-visa-chiang-mai.html">Thai Language</a></li>
             <li><a href="../ed-visas/hand-to-hand-combat-ed-visa-chiang-mai.html">Hand-to-Hand Combat</a></li>
             <li><a href="../ed-visas/volunteer-non-o-visa-chiang-mai.html">Volunteer Non-O</a></li>
+            <li><a href="../ed-visas/ed-visa-comparison-chiang-mai.html">ED Visa Comparison</a></li>
             <li><a href="../ed-visas/index.html">All ED Visas</a></li>
           </ul>
         </div>
@@ -1037,8 +1038,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
           </ul>
         </div>
       </div>
-    </div>
-  </nav>
+    
 
   <!-- CTAs & Mobile Toggle -->
   <div class="header-ctas">
@@ -1181,10 +1181,6 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
 <main id="main-content">
 <section class="page-hero" aria-labelledby="page-heading">
 <div class="container"><div class="page-hero-inner">
-  <div class="page-hero-meta">
-    <span class="label-tag label-tag--light">Volunteer Visa</span>
-    <span class="label-tag label-tag--light">Non-O Visa</span>
-  </div>
   <h1 id="page-heading">Volunteer Non-O Visa – <em>Complete Guide for Chiang Mai 2026</em></h1>
   <p class="page-hero-sub">Independent guide to the Thai Non-O Visa for volunteer work in Chiang Mai. Covers visa validity, pricing, application process, volunteer opportunities, and step-by-step procedures. Teach, contribute, and stay long-term.</p>
 </div></div>
@@ -1494,6 +1490,31 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
 
 
 
-<script src="../../shared/js/progress-bar.js" defer></script>
+
+<script>
+(function() {
+  'use strict';
+  function calculateReadTime() {
+    const article = document.querySelector('article.article-body');
+    if (!article) return;
+    const text = article.innerText;
+    const wordCount = text.trim().split(/\s+/).length;
+    const readTime = Math.max(1, Math.round(wordCount / 200));
+    const readTimeEl = document.getElementById('read-time');
+    if (readTimeEl) {
+      readTimeEl.textContent = readTime + ' min';
+    }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', calculateReadTime);
+  } else {
+    calculateReadTime();
+  }
+})();
+
 </body>
 </html>
+
+
+
+

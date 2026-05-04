@@ -55,6 +55,48 @@ body { font-family: var(--font-body); background: var(--c-white); color: var(--c
 a { color: var(--c-page-accent); text-decoration: none; transition: color .18s; }
 a:hover { color: var(--c-dark-2); }
 
+/* --- BUTTONS --- */
+.btn {
+  display: inline-flex; align-items: center; gap: .5em;
+  padding: .65em 1.4em;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: .9rem; font-weight: 600; line-height: 1.3;
+  text-decoration: none;
+  border: 1.5px solid transparent;
+  transition: background .18s, box-shadow .18s, border-color .18s, transform .12s;
+  white-space: nowrap;
+}
+.btn:hover { transform: translateY(-1px); }
+.btn-dark { background: rgb(20,25,34); color: var(--c-white); border-color: rgb(20,25,34); }
+.btn-dark:hover { background: #141110; border-color: #141110; box-shadow: var(--shadow-md); }
+.btn-outline-light { background: transparent; color: var(--c-white); border-color: rgba(255,255,255,.35); }
+.btn-outline-light:hover { background: rgba(255,255,255,.1); border-color: rgba(255,255,255,.6); }
+.btn-wa { background: var(--c-wa); color: var(--c-white); border-color: var(--c-wa); }
+.btn-wa:hover { background: var(--c-wa-h); border-color: var(--c-wa-h); box-shadow: 0 4px 18px rgba(37,211,102,.25); }
+.btn-fb { background: var(--c-fb); color: var(--c-white); border-color: var(--c-fb); }
+.btn-fb:hover { background: var(--c-fb-h); border-color: var(--c-fb-h); }
+.btn-ghost { background: transparent; color: var(--c-muted); border-color: transparent; padding-inline: .6em; }
+.btn-ghost:hover { color: var(--c-primary); background: var(--c-subtle); transform: none; }
+.btn-lg { padding: .8em 1.75em; font-size: 1rem; }
+.btn-sm { padding: .45em 1em; font-size: .82rem; }
+
+/* --- LABEL TAG --- */
+.label-tag {
+  display: inline-block;
+  font-size: .72rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+  color: var(--c-page-accent); background: var(--c-page-accent-l);
+  padding: .2em .75em; border-radius: 100px;
+  margin-bottom: .9rem;
+}
+.label-tag--light {
+  color: rgba(255,255,255,.9);
+  background: rgba(255,255,255,.12);
+}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
 /* ============================================================
    HEADER
    ============================================================ */
@@ -140,26 +182,6 @@ a:hover { color: var(--c-dark-2); }
 
 .header-fb-link {
   display: none;
-}
-
-/* Button Base Styles */
-.btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5em;
-  padding: 0.65em 1.4em;
-  border-radius: var(--radius-sm);
-  font-family: var(--font-body);
-  font-size: 0.9rem;
-  font-weight: 600;
-  line-height: 1.3;
-  text-decoration: none;
-  border: 1.5px solid transparent;
-  transition: background 0.18s, box-shadow 0.18s, border-color 0.18s, transform 0.12s;
-  white-space: nowrap;
-}
-.btn:hover {
-  transform: translateY(-1px);
 }
 
 /* Mobile toggle */
@@ -464,6 +486,9 @@ a:hover { color: var(--c-dark-2); }
   color: var(--c-primary);
 }
 
+/* ============================================================
+   PAGE HERO  (dark, full-width, matches homepage style)
+   ============================================================ */
 .page-hero {
   background: linear-gradient(135deg, #7f0652 0%, #6a0845 100%);
   color: var(--c-white); padding-block: clamp(4rem, 6vw, 5rem);
@@ -500,7 +525,7 @@ a:hover { color: var(--c-dark-2); }
 .breadcrumb { background: var(--c-off-white); border-bottom: 1px solid var(--c-border); padding: .65rem 0; }
 .breadcrumb-inner {
   display: flex; align-items: center; gap: .4rem; font-size: .8rem; color: var(--c-muted);
-  max-width: 1090px; padding-inline: var(--edge); margin-inline: auto;
+  max-width: var(--article-w); padding-inline: var(--edge); margin-inline: auto;
 }
 .breadcrumb a { color: var(--c-muted); text-decoration: none; }
 .breadcrumb a:hover { color: var(--c-page-accent); }
@@ -594,64 +619,6 @@ a:hover { color: var(--c-dark-2); }
 .explore-card h3 { font-family: var(--font-display); font-size: 1.1rem; font-weight: 500; margin: 0 0 .5rem; color: #fff; position: relative; z-index: 2; }
 .explore-card p { font-size: .85rem; color: rgba(255,255,255,.82); margin: 0; position: relative; z-index: 2; }
 
-.site-footer { background: #5a0a3a; padding-block: var(--section-py); color: rgba(255,255,255,.92); }
-.footer-top { display: grid; grid-template-columns: 1.6fr repeat(4, 1fr); gap: 3rem; padding-bottom: 3rem; border-bottom: 1px solid var(--c-border-dark); }
-.footer-logo { display: flex; align-items: center; gap: .5rem; text-decoration: none; margin-bottom: .8rem; }
-.footer-logo-mark {
-  width: 30px; height: 30px; border-radius: 6px;
-  background: linear-gradient(135deg, #7f0652 0%, #b85a9c 100%);
-  display: flex; align-items: center; justify-content: center;
-  color: #fff; font-family: var(--font-display); font-size: .95rem; font-weight: 500; font-style: italic;
-}
-.footer-logo-text { font-family: var(--font-body); font-weight: 700; font-size: .95rem; color: var(--c-white); letter-spacing: -.01em; }
-.footer-tagline { font-size: .82rem; line-height: 1.6; max-width: 240px; color: rgba(255,255,255,.88); }
-.footer-social { display: flex; gap: .6rem; margin-top: 1.25rem; }
-.footer-social a {
-  width: 32px; height: 32px; border-radius: var(--radius-sm);
-  background: rgba(255,255,255,.08); color: rgba(255,255,255,.88);
-  display: flex; align-items: center; justify-content: center;
-  font-size: .8rem; font-weight: 700; text-decoration: none;
-  transition: background .18s, color .18s;
-}
-.footer-social a:hover { background: #7f0652; color: var(--c-white); }
-.footer-col-title { font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.70); margin-bottom: 1.1rem; }
-.footer-col ul { display: flex; flex-direction: column; gap: .55rem; }
-.footer-col ul a { font-size: .83rem; color: rgba(255,255,255,.88); text-decoration: none; transition: color .15s; }
-.footer-col ul a:hover { color: var(--c-white); }
-.footer-bottom { display: flex; align-items: center; justify-content: space-between; padding-top: 2rem; gap: 1rem; flex-wrap: wrap; }
-.footer-copy { font-size: .8rem; }
-.footer-legal { display: flex; gap: 1.5rem; }
-.footer-legal a { font-size: .8rem; color: rgba(255,255,255,.75); text-decoration: none; transition: color .15s; }
-.footer-legal a:hover { color: var(--c-white); }
-
-
-
-
-
-
-
-
-@media (max-width: 1100px) { .footer-top { grid-template-columns: 1fr 1fr 1fr; } }
-@media (max-width: 960px) {
-  .primary-nav { display: none; }
-  .header-hamburger { display: flex; }
-  .footer-top { grid-template-columns: 1fr 1fr; gap: 2rem; }
-}
-@media (max-width: 640px) {
-  .page-hero h1 { font-size: 1.75rem; }
-  .footer-top { grid-template-columns: 1fr; }
-  .footer-bottom { flex-direction: column; align-items: flex-start; }
-}
-/* Image sizing: 50-70% of column width, centered */
-figure img {
-  max-width: 70%;
-  width: 70%;
-  margin-inline: auto;
-  display: block;
-  height: auto;
-  border-radius: 12px;
-}
-.btn-wa{background:var(--c-wa);color:var(--c-white);border-color:var(--c-wa);}.btn-wa:hover { background: var(--c-wa-h); border-color: var(--c-wa-h); box-shadow:0 4px 18px rgba(37,211,102,.25);}
 /* CANONICAL FOOTER CSS */
 .site-footer {
   background: var(--footer-bg, #0D1117);
@@ -791,6 +758,13 @@ figure img {
 /* PROGRESS BAR */
 .progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: linear-gradient(90deg, #4F46E5, #6366F1, #4F46E5); width: 2%; min-width: 2%; z-index: 10001; transition: width 0.1s linear; box-shadow: 0 2px 8px rgba(79,70,229,.18); }
 @media (prefers-reduced-motion: reduce) { .progress-bar { transition: none; } }
+.article-wrap{width:100%;max-width:var(--article-w);margin-inline:auto;padding-inline:var(--edge);}
+.culture-explore{padding-block:clamp(2.5rem,4vw,3.5rem);background:#f8f4ff;border-top:1px solid #e9e3f8;}
+.culture-explore-inner{max-width:1400px;margin-inline:auto;padding-inline:var(--edge);}
+.culture-explore h2{font-family:var(--font-display);font-size:clamp(1.4rem,2.5vw,1.9rem);font-weight:400;color:#5a0a3a;margin-bottom:1.5rem;text-align:center;}
+.culture-explore-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;}
+@media(max-width:900px){.culture-explore-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:480px){.culture-explore-grid{grid-template-columns:1fr;}}
 </style>
 
 
@@ -822,6 +796,7 @@ figure img {
             <li><a href="../ed-visas/thai-language-ed-visa-chiang-mai.html">Thai Language</a></li>
             <li><a href="../ed-visas/hand-to-hand-combat-ed-visa-chiang-mai.html">Hand-to-Hand Combat</a></li>
             <li><a href="../ed-visas/volunteer-non-o-visa-chiang-mai.html">Volunteer Non-O</a></li>
+            <li><a href="../ed-visas/ed-visa-comparison-chiang-mai.html">ED Visa Comparison</a></li>
             <li><a href="../ed-visas/index.html">All ED Visas</a></li>
           </ul>
         </div>
@@ -1050,15 +1025,16 @@ figure img {
 <nav class="breadcrumb" aria-label="Breadcrumb">
 <div class="breadcrumb-inner">
   <a href="../../index.html">Home</a>
-  <span class="breadcrumb-sep">/</span>
-  <a href="../culture/sak-yant-chiang-mai.html">Sak Yant</a>
-  <span class="breadcrumb-sep">/</span>
-  <span>Designs & Meanings</span>
+  <span class="breadcrumb-sep" aria-hidden="true">›</span>
+  <a href="../culture/index.html">Culture</a>
+  <span class="breadcrumb-sep" aria-hidden="true">›</span>
+  <span aria-current="page">Sak Yant Designs</span>
+  <span class="breadcrumb-sep" aria-hidden="true">–</span> Updated May 2026 <span class="breadcrumb-sep" aria-hidden="true">–</span> 6 min read
 </div>
 </nav>
 
-<main class="article-body">
-<div class="container" style="max-width: 1090px; margin-inline: auto; padding-inline: var(--edge);">
+<article class="article-body">
+<div class="article-wrap">
 
 <h2>Understanding Sak Yant Design Symbolism</h2>
 <p>Sak Yant designs combine sacred geometry, Buddhist cosmology, and animistic symbolism. Each design carries specific spiritual protections or blessings. The geometric patterns represent sacred cosmology, while Pali script mantras and animal symbols add layers of meaning and protection.</p>
@@ -1218,7 +1194,17 @@ figure img {
 </div>
 </main>
 
-<section class="section-footer"><div class="section-footer-inner"><h2>Explore Thai Culture</h2><div class="explore-cards"><a href="../culture/index.html" class="explore-card" style="background-image:url('../../images/cmlocals chiang mai locals offering bowl with white and green lotus flowers.webp')"><h3>Culture Hub</h3><p>Browse all cultural guides and traditions</p></a><a href="../culture/thai-culture-etiquette.html" class="explore-card" style="background-image:url('../../images/cmlocals chiang mai locals wat phra singh golden buddha statue interior chiang mai.webp')"><h3>Thai Etiquette</h3><p>Learn respect and social customs</p></a><a href="../culture/temple-etiquette.html" class="explore-card" style="background-image:url('../../images/cmlocals chiang mai locals three tourists sitting with monks in buddhist temple 1.webp')"><h3>Temple Etiquette</h3><p>Proper conduct in sacred spaces</p></a><a href="../culture/festivals-events-chiang-mai.html" class="explore-card" style="background-image:url('../../images/cmlocals chiang mai locals yi peng festival hundreds of sky lanterns over temple.webp')"><h3>Festivals & Events</h3><p>Discover celebrations throughout the year</p></a></div></div></section>
+<section class="culture-explore">
+<div class="culture-explore-inner">
+  <h2>Explore Thai Culture</h2>
+  <div class="culture-explore-grid">
+    <a href="../culture/index.html" class="explore-card" style="background-image:url('../../images/cmlocals chiang mai locals offering bowl with white and green lotus flowers.webp')"><h3>Culture Hub</h3><p>Browse all cultural guides and traditions</p></a>
+    <a href="../culture/thai-culture-etiquette.html" class="explore-card" style="background-image:url('../../images/cmlocals chiang mai locals wat phra singh golden buddha statue interior chiang mai.webp')"><h3>Thai Etiquette</h3><p>Learn respect and social customs</p></a>
+    <a href="../culture/temple-etiquette.html" class="explore-card" style="background-image:url('../../images/cmlocals chiang mai locals three tourists sitting with monks in buddhist temple 1.webp')"><h3>Temple Etiquette</h3><p>Proper conduct in sacred spaces</p></a>
+    <a href="../culture/festivals-events-chiang-mai.html" class="explore-card" style="background-image:url('../../images/cmlocals chiang mai locals yi peng festival hundreds of sky lanterns over temple.webp')"><h3>Festivals & Events</h3><p>Discover celebrations throughout the year</p></a>
+  </div>
+</div>
+</section>
 
 
 

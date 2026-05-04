@@ -65,8 +65,8 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
 .page-hero h1{font-family:var(--font-display);font-size:clamp(2rem,4vw,3rem);font-weight:400;line-height:1.15;color:var(--c-white);letter-spacing:-.02em;margin-bottom:1.1rem;}
 .page-hero h1 em{font-style:italic;font-weight:300;color:rgba(255,255,255,.8);}
 .page-hero-sub{font-size:clamp(.95rem,1.5vw,1.08rem);color:rgba(255,255,255,.85);max-width:580px;line-height:1.7;margin-bottom:2rem;}
-.page-hero-meta{display:flex;flex-wrap:wrap;gap:.75rem;align-items:center;}
-.page-hero-meta .label-tag{margin-bottom:0;}
+
+
 .article-layout{display:grid;grid-template-columns:1fr 300px;gap:3rem;align-items:start;padding-block:var(--section-py);}
 .article-body{min-width:0;}
 .article-sidebar{position:sticky;top:74px;}
@@ -1000,6 +1000,7 @@ figure img {
             <li><a href="../../ed-visas/thai-language-ed-visa-chiang-mai.html">Thai Language</a></li>
             <li><a href="../../ed-visas/hand-to-hand-combat-ed-visa-chiang-mai.html">Hand-to-Hand Combat</a></li>
             <li><a href="../../ed-visas/volunteer-non-o-visa-chiang-mai.html">Volunteer Non-O</a></li>
+            <li><a href="../../ed-visas/ed-visa-comparison-chiang-mai.html">ED Visa Comparison</a></li>
             <li><a href="../../ed-visas/index.html">All ED Visas</a></li>
           </ul>
         </div>
@@ -1076,8 +1077,7 @@ figure img {
           </ul>
         </div>
       </div>
-    </div>
-  </nav>
+    
 
   <!-- CTAs & Mobile Toggle -->
   <div class="header-ctas">
@@ -1222,10 +1222,6 @@ figure img {
 <section class="page-hero" aria-labelledby="page-heading">
 <div class="container">
 <div class="page-hero-inner">
-  <div class="page-hero-meta">
-    <span class="label-tag label-tag--light">Short Stay Silo</span>
-    <span class="label-tag label-tag--light">Thai Visa Advice</span>
-  </div>
   <h1 id="page-heading">Visa-Exempt Entry Thailand 2026 –<em> Rolling 2-Entry Limit, 60 Days, Both Entries Extendable</em></h1>
   <p class="page-hero-sub">Complete guide to Thailand's visa-exempt entry system and the significant 2026 rule changes. Covers eligibility, rolling 12-month 2-entry limit, 60-day stays, extensions on both entries (+30 and +7 days), and how the old unlimited strategy ended.</p>
 </div>
@@ -1699,6 +1695,31 @@ document.addEventListener('DOMContentLoaded', () => {
 </footer>
 
 
-<script src="../../../shared/js/progress-bar.js" defer></script>
+
+<script>
+(function() {
+  'use strict';
+  function calculateReadTime() {
+    const article = document.querySelector('article.article-body');
+    if (!article) return;
+    const text = article.innerText;
+    const wordCount = text.trim().split(/\s+/).length;
+    const readTime = Math.max(1, Math.round(wordCount / 200));
+    const readTimeEl = document.getElementById('read-time');
+    if (readTimeEl) {
+      readTimeEl.textContent = readTime + ' min';
+    }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', calculateReadTime);
+  } else {
+    calculateReadTime();
+  }
+})();
+
 </body>
 </html>
+
+
+
+
