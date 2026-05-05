@@ -16,6 +16,8 @@
 <meta property="twitter:description" content="In May 2026, Chiang Mai immigration rejections are driven by mismatched TM30 digital records, unverified DTV financial sources, and automated ED visa attendance tracking."/>
 <meta property="twitter:image" content="https://cmlocals.com/blogs/images/thai-visa-rejection-chiang-mai-2026.webp"/>
 
+
+
 <style>
 :root{--c-dark:#0D1117;--c-dark-2:#141922;--c-dark-3:#1E2532;--c-primary:#4F46E5;--c-primary-h:#4338CA;--c-primary-glow:rgba(79,70,229,.18);--c-violet:#7C3AED;--c-violet-l:#EDE9FE;--c-white:#FFFFFF;--c-off-white:#F8F7FF;--c-subtle:#F1EFFF;--c-body:#374151;--c-muted:#6B7280;--c-border:#E5E7EB;--c-border-dark:rgba(255,255,255,.1);--c-wa:#25D366;--c-wa-h:#1aaa55;--c-fb:#1877F2;--c-fb-h:#1565d8;--c-blog:#02450b;--radius-sm:6px;--radius-md:10px;--radius-lg:16px;--shadow-sm:0 1px 3px rgba(0,0,0,.08),0 1px 2px rgba(0,0,0,.06);--shadow-md:0 4px 16px rgba(0,0,0,.10),0 2px 6px rgba(0,0,0,.06);--shadow-lg:0 12px 40px rgba(0,0,0,.14);--font-display:'Newsreader',Georgia,serif;--font-body:'DM Sans',system-ui,sans-serif;--max-w:1200px;--edge:clamp(1.25rem,4vw,2.5rem);--section-py:clamp(3rem,5vw,4.5rem);--footer-bg:#02450b;}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
@@ -27,6 +29,8 @@ ul{list-style:none;}
 button{font-family:inherit;cursor:pointer;border:none;background:none;}
 .container{width:100%;max-width:var(--max-w);margin-inline:auto;padding-inline:var(--edge);}
 .visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;}
+
+/* Buttons */
 .btn{display:inline-flex;align-items:center;gap:.5em;padding:.65em 1.4em;border-radius:var(--radius-sm);font-family:var(--font-body);font-size:.9rem;font-weight:600;line-height:1.3;text-decoration:none;border:1.5px solid transparent;transition:background .18s,box-shadow .18s,border-color .18s,transform .12s;white-space:nowrap;}
 .btn:hover{transform:translateY(-1px);}
 .btn-primary{background:var(--c-primary);color:var(--c-white);border-color:var(--c-primary);}
@@ -39,64 +43,449 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
 .btn-fb:hover{background:var(--c-fb-h);border-color:var(--c-fb-h);}
 .btn-lg{padding:.8em 1.75em;font-size:0.9rem;}
 .btn-sm{padding:.45em 1em;font-size:.82rem;}
+
+/* Label tag */
 .label-tag{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--c-primary);background:var(--c-subtle);padding:.2em .75em;border-radius:100px;margin-bottom:.9rem;}
 .label-tag--light{color:rgba(255,255,255,.9);background:rgba(255,255,255,.12);}
-.site-header {background: white;border-bottom: 1px solid rgba(0,0,0,.1);position: sticky;top: 0;z-index: 1000;}
-.header-inner {display: flex;justify-content: space-between;align-items: center;max-width: 1200px;margin: 0 auto;padding: 0 1.5rem;height: 70px;}
-.header-logo {text-decoration: none;display: flex;align-items: center;}
-.header-logo img {height: 40px;width: auto;display: block;}
-.header-logo-mark {display: none;}
-.header-logo-text {display: none;}
-.primary-nav {display: flex;gap: 3rem;flex: 1;justify-content: center;align-items: center;}
-.primary-nav a {position: relative;color: #111827;text-decoration: none;font-size: 0.9rem;font-weight: 500;padding: 0;transition: all 0.2s ease;display: flex;align-items: center;line-height: 1;}
-.primary-nav a:hover {color: var(--c-primary);}
-.header-ctas {display: flex;align-items: center;gap: 0.6rem;flex-shrink: 0;}
-.header-ctas .btn-wa {padding: 0.4rem 0.9rem;font-size: 0.9rem;}
-.header-fb-link {display: none;}
-.header-hamburger {display: none; flex-direction: column; justify-content: center; align-items: center;width: 40px; height: 40px; gap: 5px;border-radius: var(--radius-sm); cursor: pointer;background: transparent;}
-.header-hamburger span {display: block; width: 22px; height: 2px;background: var(--c-dark); border-radius: 2px;transition: transform .25s, opacity .25s;}
+
+/* Header */
+/* ============================================================
+   HEADER
+   ============================================================ */
+.site-header {
+  background: white;
+  border-bottom: 1px solid rgba(0,0,0,.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  height: 70px;
+}
+
+/* Wordmark */
+.header-logo {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+.header-logo img {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
+.header-logo-mark {
+  display: none;
+}
+
+.header-logo-text {
+  display: none;
+}
+
+/* Primary Nav */
+.primary-nav {
+  display: flex;
+  gap: 3rem;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.primary-nav a {
+  position: relative;
+  color: #111827;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+}
+
+.primary-nav a:hover {
+  color: var(--c-primary);
+}
+
+/* Header CTAs */
+.header-ctas {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-shrink: 0;
+}
+
+.header-ctas .btn-wa {
+  padding: 0.4rem 0.9rem;
+  font-size: 0.9rem;
+}
+
+.header-fb-link {
+  display: none;
+}
+
+/* Mobile toggle */
+.header-hamburger {
+  display: none; flex-direction: column; justify-content: center; align-items: center;
+  width: 40px; height: 40px; gap: 5px;
+  border-radius: var(--radius-sm); cursor: pointer;
+  background: transparent;
+}
+.header-hamburger span {
+  display: block; width: 22px; height: 2px;
+  background: var(--c-dark); border-radius: 2px;
+  transition: transform .25s, opacity .25s;
+}
 .header-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
 .header-hamburger.open span:nth-child(2) { opacity: 0; }
 .header-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-.mobile-nav {display: none; position: fixed; inset: 64px 0 0 0; z-index: 99;background: var(--c-white); overflow-y: auto;padding: 1.5rem var(--edge) 3rem;border-top: 1px solid var(--c-border);}
+
+/* Mobile drawer */
+.mobile-nav {
+  display: none; position: fixed; inset: 64px 0 0 0; z-index: 99;
+  background: var(--c-white); overflow-y: auto;
+  padding: 1.5rem var(--edge) 3rem;
+  border-top: 1px solid var(--c-border);
+}
 .mobile-nav.open { display: block !important; }
-.mobile-nav a {display: block; padding: .9rem 0;font-size: 0.9rem; font-weight: 500; color: var(--c-dark);text-decoration: none;border-bottom: 1px solid var(--c-border);}
+.mobile-nav a {
+  display: block; padding: .9rem 0;
+  font-size: 0.9rem; font-weight: 500; color: var(--c-dark);
+  text-decoration: none;
+  border-bottom: 1px solid var(--c-border);
+}
 .mobile-nav a:last-of-type { border-bottom: none; }
 .mobile-nav a:hover { color: var(--c-primary); }
-.nav-item {position: relative;display: inline-flex;align-items: center;}
-.nav-item > a.nav-link {position: relative;color: #111827;text-decoration: none;font-size: 1.2rem;font-weight: 500;padding: 0 0.85rem;transition: all 0.2s ease;display: inline-flex;align-items: center;height: 70px;line-height: 1;}
-.nav-item > a.nav-link:hover {text-decoration: underline;text-decoration-color: var(--c-primary);text-underline-offset: 4px;color: var(--c-primary);}
-.nav-item > a.nav-link.has-dropdown {cursor: pointer;}
-.dropdown-menu {position: absolute;top: 100%;left: 0;background: white;border: 1px solid rgba(0,0,0,.1);border-radius: 0;box-shadow: 0 4px 12px rgba(0,0,0,.08);padding: 1.75rem 2rem;width: 350px;display: none;opacity: 0;pointer-events: none;transition: opacity 0.15s ease-out;margin-top: 0;z-index: 101;}
-.dropdown-menu[style*="display: block"] {display: grid !important;grid-template-columns: 1fr 1fr !important;gap: 2rem;}
-.mega-menu {display: grid !important;grid-template-columns: 1fr 1fr !important;}
-.mega-menu:has(> .dropdown-section:nth-child(2)) {width: 600px !important;}
-.dropdown-section {display: flex;flex-direction: column;gap: 0.5rem;margin-bottom: 0.5rem;flex: 1;min-width: 200px;}
-.dropdown-section:last-child {margin-bottom: 0;}
-.dropdown-section h3 {font-size: 0.9rem;text-transform: uppercase;letter-spacing: 0.05em;color: var(--c-primary);font-weight: 600;margin: 0 0 0.5rem 0;padding: 0;border: none;}
-.dropdown-section ul {list-style: none;padding: 0;margin: 0;}
-.dropdown-section li a {color: #374151;text-decoration: none;font-size: 0.9rem;line-height: 1.6;transition: color 0.2s;display: block;padding: 0.1rem 0;}
-.dropdown-section li a:hover {color: var(--c-primary);}
-.mobile-menu-toggle {display: none;flex-direction: column;background: none;border: none;cursor: pointer;gap: 4px;padding: 0.5rem;}
-.mobile-menu-toggle span {width: 24px;height: 2px;background: #111827;transition: all 0.3s;}
-.mobile-menu-toggle.active span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
-.mobile-menu-toggle.active span:nth-child(2) { opacity: 0; }
-.mobile-menu-toggle.active span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
-@media (min-width: 1024px) {.desktop-only {display: flex !important;}.mobile-only {display: none !important;}}
-@media (max-width: 1023px) {.mobile-menu-toggle {display: flex;}.primary-nav {display: none;}.dropdown-menu {display: none;}.nav-mobile {display: none;position: fixed;inset: 64px 0 0 0;left: 0;right: 0;background: white;border-bottom: 1px solid rgba(0,0,0,.1);flex-direction: column;max-height: calc(100vh - 70px);overflow-y: auto;z-index: 999;}.nav-mobile.open {display: flex;}.nav-accordion {border-bottom: 1px solid rgba(0,0,0,.1);cursor: pointer;margin: 0;}.nav-accordion summary {padding: 1rem;font-weight: 600;color: #111827;list-style: none;display: flex;justify-content: space-between;align-items: center;user-select: none;font-size: 0.9rem;}.nav-accordion summary::after {content: '▼';font-size: 0.9rem;transition: transform 0.3s;}.nav-accordion[open] summary::after {transform: rotate(180deg);}.nav-accordion ul {list-style: none;padding: 0;margin: 0;background: rgba(79, 70, 229, 0.02);}.nav-accordion li {border-bottom: 1px solid rgba(0,0,0,.05);}.nav-accordion li a {display: block;padding: 0.75rem 1rem;padding-left: 2rem;color: #374151;text-decoration: none;font-size: 0.9rem;}.nav-accordion li a:active {background: rgba(79, 70, 229, 0.1);color: var(--c-primary);}}
-.page-hero{background:#02450b;padding:clamp(3.5rem,6vw,6rem) 0 clamp(3rem,5vw,5rem);position:relative;overflow:hidden;}
-.page-hero::before{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 80% 60% at 70% 40%,rgba(2,69,11,.22) 0%,transparent 70%);}
+.mobile-nav-ctas { display: flex; flex-direction: column; gap: .75rem; margin-top: 1.5rem; }
+.mobile-nav-ctas .btn { justify-content: center; }
+
+/* Navigation Links with Dropdown */
+.nav-item {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.nav-item > a.nav-link {
+  position: relative;
+  color: #111827;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 0 0.85rem;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  height: 70px;
+  line-height: 1;
+}
+
+.nav-item > a.nav-link:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--c-primary);
+  text-underline-offset: 4px;
+  color: var(--c-primary);
+}
+
+.nav-item > a.nav-link.has-dropdown {
+  cursor: pointer;
+}
+
+/* Mega Menu Dropdown */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  border: 1px solid rgba(0,0,0,.1);
+  border-radius: 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,.08);
+  padding: 1.75rem 2rem;
+  width: 350px;
+  display: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease-out;
+  margin-top: 0;
+  z-index: 101;
+}
+
+.dropdown-menu[style*="display: block"] {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 2rem;
+}
+
+.mega-menu {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+}
+
+/* Chiang Mai has two columns, needs wider width */
+.mega-menu:has(> .dropdown-section:nth-child(2)) {
+  width: 600px !important;
+}
+
+.dropdown-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  flex: 1;
+  min-width: 200px;
+}
+
+.dropdown-section:last-child {
+  margin-bottom: 0;
+}
+
+.dropdown-section h3 {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--c-primary);
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  padding: 0;
+  border: none;
+}
+
+.dropdown-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-section li a {
+  color: #374151;
+  text-decoration: none;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  transition: color 0.2s;
+  display: block;
+  padding: 0.1rem 0;
+}
+
+.dropdown-section li a:hover {
+  color: var(--c-primary);
+}
+
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  gap: 4px;
+  padding: 0.5rem;
+}
+
+.mobile-menu-toggle span {
+  width: 24px;
+  height: 2px;
+  background: #111827;
+  transition: all 0.3s;
+}
+
+.mobile-menu-toggle.active span:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.mobile-menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-toggle.active span:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+/* Desktop Only */
+@media (min-width: 1024px) {
+  .desktop-only {
+    display: flex !important;
+  }
+  .mobile-only {
+    display: none !important;
+  }
+}
+
+/* Mobile (same as before) */
+@media (max-width: 1023px) {
+  .mobile-menu-toggle {
+    display: flex;
+  }
+  .primary-nav {
+    display: none;
+  }
+  .dropdown-menu {
+    display: none;
+  }
+
+  .nav-mobile {
+    display: none;
+    position: fixed;
+    inset: 64px 0 0 0;
+    left: 0;
+    right: 0;
+    background: white;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    flex-direction: column;
+    max-height: calc(100vh - 70px);
+    overflow-y: auto;
+    z-index: 999;
+  }
+  .nav-mobile.open {
+    display: flex;
+  }
+  .nav-accordion {
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    cursor: pointer;
+    margin: 0;
+  }
+  .nav-accordion summary {
+    padding: 1rem;
+    font-weight: 600;
+    color: #111827;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+    font-size: 0.9rem;
+  }
+  .nav-accordion summary::after {
+    content: '▼';
+    font-size: 0.9rem;
+    transition: transform 0.3s;
+  }
+  .nav-accordion[open] summary::after {
+    transform: rotate(180deg);
+  }
+  .nav-accordion ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: rgba(79, 70, 229, 0.02);
+  }
+  .nav-accordion li {
+    border-bottom: 1px solid rgba(0,0,0,.05);
+  }
+  .nav-accordion li a {
+    display: block;
+    padding: 0.75rem 1rem;
+    padding-left: 2rem;
+    color: #374151;
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+  .nav-accordion li a:active {
+    background: rgba(79, 70, 229, 0.1);
+    color: var(--c-primary);
+  }
+
+  .nav-dropdown-item {
+    padding: .75rem .85rem;
+    margin-left: 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .nav-submenu-item {
+    padding: .65rem .85rem;
+    margin-left: 3rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile drawer enhanced */
+.mobile-nav-section {
+  margin-bottom: 1.5rem;
+}
+
+.mobile-nav-section-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--c-muted);
+  padding: .5rem 0 .75rem 0;
+  border-bottom: 1px solid var(--c-border);
+}
+
+.mobile-nav-section a {
+  display: block;
+  padding: .75rem 0;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--c-dark);
+  text-decoration: none;
+  transition: color .15s;
+}
+
+.mobile-nav-section a:hover {
+  color: var(--c-primary);
+}
+
+.page-hero{background:var(--c-dark);padding:clamp(3.5rem,6vw,6rem) 0 clamp(3rem,5vw,5rem);position:relative;overflow:hidden;}
+.page-hero::before{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 80% 60% at 70% 40%,rgba(79,70,229,.22) 0%,transparent 70%);}
 .page-hero-inner{position:relative;z-index:1;max-width:680px;}
 .page-hero h1{font-family:var(--font-display);font-size:clamp(2.2rem,4.5vw,3.4rem);font-weight:400;line-height:1.1;color:var(--c-white);letter-spacing:-.02em;margin-bottom:1.1rem;}
 .page-hero h1 em{font-style:italic;font-weight:300;color:rgba(255,255,255,.85);}
 .page-hero-sub{font-size:clamp(.95rem,1.5vw,1.08rem);color:rgba(255,255,255,.85);max-width:540px;line-height:1.7;margin-bottom:2rem;}
 .page-hero-ctas{display:flex;flex-wrap:wrap;gap:.75rem;}
+
+/* Section scaffold */
 .section{padding-block:var(--section-py);}
 .section--off{background:var(--c-off-white);}
 .section--dark{background:var(--c-dark-2);position:relative;overflow:hidden;}
 .section--dark::before{content:'';position:absolute;right:-10%;top:-30%;width:60%;height:160%;background:radial-gradient(ellipse,rgba(79,70,229,.15) 0%,transparent 65%);pointer-events:none;}
 .section-inner{position:relative;z-index:1;}
-.site-footer{background:var(--c-dark);padding-top:clamp(3.5rem,6vw,5.5rem);padding-bottom:2.5rem;}
+.section-header{margin-bottom:clamp(2rem,4vw,3rem);}
+.section-header.centered{text-align:center;}
+.section-header.centered .section-sub{margin-inline:auto;}
+.section-title{font-family:var(--font-display);font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:400;line-height:1.2;color:var(--c-dark);letter-spacing:-.02em;margin-bottom:.5rem;}
+.section-title em{font-style:italic;font-weight:300;color:#6B7A8A;}
+.section-title--light{color:var(--c-white);}
+.section-sub{font-size:0.9rem;color:#5A6B7A;max-width:600px;line-height:1.65;}
+.section-sub--light{color:rgba(255,255,255,.85);}
+
+/* Topic card grid */
+.topic-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2rem;}
+.topic-card{cursor:pointer;border:1px solid var(--c-border);border-radius:var(--radius-lg);padding:2rem 1.75rem;background:var(--c-white);display:flex;flex-direction:column;position:relative;overflow:hidden;transition:border-color .2s,box-shadow .2s,transform .2s;;cursor:pointer}
+.topic-card::after{content:'';position:absolute;top:0;left:0;right:0;z-index:1;background:linear-gradient(90deg,var(--c-primary),var(--c-violet));opacity:0;transition:opacity .2s;}
+.topic-card:hover{border-color:transparent;box-shadow:var(--shadow-lg);transform:translateY(-3px);}
+.topic-card:hover::after{opacity:1;}
+.topic-card__icon{width:44px;height:44px;border-radius:var(--radius-md);background:var(--c-subtle);display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:1.2rem;transition:background .2s;}
+.topic-card:hover .topic-card__icon{background:var(--c-violet-l);}
+.topic-card__title{font-family:var(--font-display);font-size:1.25rem;font-weight:400;color:var(--c-dark);margin-bottom:.5rem;letter-spacing:-.01em;}
+.topic-card__desc{font-size:.875rem;color:#5A6B7A;line-height:1.65;margin-bottom:1.5rem;flex:1;}
+.topic-card__cta{font-size:.88rem;font-weight:600;color:var(--c-primary);text-decoration:none;display:inline-flex;align-items:center;gap:.35em;transition:gap .18s;margin-top:auto;}
+.topic-card__cta:hover{gap:.6em;}
+
+/* Info strip */
+.info-strip{background:var(--c-subtle);border-left:4px solid var(--c-primary);border-radius:0 var(--radius-md) var(--radius-md) 0;padding:1.25rem 1.75rem;margin:2.5rem 0;}
+.info-strip p{color:var(--c-body);font-size:.95rem;}
+.info-strip a{color:var(--c-primary);}
+
+/* CTA section */
+.cta-section{background:var(--c-dark);padding:clamp(3rem,5vw,4.5rem) 0;text-align:center;position:relative;overflow:hidden;}
+.cta-section::before{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 70% 70% at 50% 50%,rgba(79,70,229,.22) 0%,transparent 70%);}
+.cta-section-inner{position:relative;z-index:1;}
+.cta-section h2{font-family:var(--font-display);font-size:clamp(1.6rem,3vw,2.2rem);font-weight:400;color:var(--c-white);margin-bottom:.75rem;}
+.cta-section p{color:rgba(255,255,255,.85);margin-bottom:1.75rem;max-width:500px;margin-inline:auto;}
+.cta-btns{display:flex;flex-wrap:wrap;gap:.75rem;justify-content:center;}
+
+/* Footer */
+.site-footer{background:var(--footer-bg);padding-top:clamp(3.5rem,6vw,5.5rem);padding-bottom:2.5rem;}
 .footer-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr 1fr;gap:2.5rem;padding-bottom:3.5rem;border-bottom:1px solid rgba(255,255,255,.07);}
 .footer-brand{grid-column:1;}
 .footer-logo{text-decoration:none;display:inline-flex;align-items:center;gap:.55rem;margin-bottom:1rem;}
@@ -115,10 +504,493 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
 .footer-legal{display:flex;gap:1.25rem;}
 .footer-legal a{font-size:.8rem;color:rgba(255,255,255,.75);text-decoration:none;transition:color .15s;}
 .footer-legal a:hover{color:rgba(255,255,255,.95);}
+
+/* Responsive */
 @media(max-width:1100px){.footer-top{grid-template-columns:1fr 1fr 1fr;}.footer-brand{grid-column:1/-1;}}
-@media(max-width:960px){.primary-nav{display:none;}.header-hamburger{display:flex;}}
-@media(max-width:640px){.container{padding-inline:20px;}.footer-top{grid-template-columns:1fr 1fr;}.footer-bottom{flex-direction:column;align-items:flex-start;}.page-hero-ctas{flex-direction:column;}}
+@media(max-width:960px){.primary-nav{display:none;}.header-hamburger{display:flex;}.topic-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:640px){.container{padding-inline:20px;}.topic-grid{grid-template-columns:1fr;}.footer-top{grid-template-columns:1fr 1fr;}.footer-bottom{flex-direction:column;align-items:flex-start;}.page-hero-ctas{flex-direction:column;}.cta-btns{flex-direction:column;}}
 @media(max-width:400px){.footer-top{grid-template-columns:1fr;}}
+/* Make entire cards clickable */
+.path-card::before,
+.article-card::before,
+.tool-card::before,
+.guide-card::before,
+.visa-card::before,
+.visa-category-card::before,
+.program-card::before,
+.topic-card::before,
+.checklist-card::before,
+.related-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.path-card,
+.article-card,
+.tool-card,
+.guide-card,
+.visa-card,
+.visa-category-card,
+.program-card,
+.topic-card,
+.checklist-card,
+.related-card {
+  position: relative;
+}
+
+/* Ensure child links are clickable above the overlay */
+.path-card__cta,
+.article-card__link,
+.tool-card__cta,
+.guide-card__cta,
+.visa-card__cta,
+.visa-category-card__cta,
+.program-card__cta,
+.topic-card__cta,
+.checklist-card__cta,
+.related-card {
+  position: relative;
+  z-index: 2;
+}
+
+/* Image sizing: 50-70% of column width, centered */
+figure img {
+  max-width: 100%;
+  width: 100%;
+  margin-inline: auto;
+  display: block;
+  height: auto;
+}
+
+
+
+
+
+
+
+
+
+  to { opacity: 1; }
+}
+
+
+
+
+<style>
+/* ============================================================
+   CANONICAL HEADER + NAV CSS (auto-injected – do not edit here)
+   ============================================================ */
+.site-header {
+  background: white;
+  border-bottom: 1px solid rgba(0,0,0,.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  height: 70px;
+}
+.header-logo {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+.header-logo img {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+.header-logo-mark { display: none; }
+.header-logo-text { display: none; }
+.primary-nav {
+  display: flex;
+  gap: 3rem;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+.primary-nav a {
+  position: relative;
+  color: #111827;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+}
+.primary-nav a:hover { color: var(--c-primary, #4F46E5); }
+.header-ctas {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-shrink: 0;
+}
+.header-ctas .btn-wa {
+  padding: 0.4rem 0.9rem;
+  font-size: 0.9rem;
+}
+.header-fb-link { display: none; }
+.header-hamburger {
+  display: none; flex-direction: column; justify-content: center; align-items: center;
+  width: 40px; height: 40px; gap: 5px;
+  border-radius: 6px; cursor: pointer;
+  background: transparent;
+}
+.header-hamburger span {
+  display: block; width: 22px; height: 2px;
+  background: #0D1117; border-radius: 2px;
+  transition: transform .25s, opacity .25s;
+}
+.header-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.header-hamburger.open span:nth-child(2) { opacity: 0; }
+.header-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.mobile-nav {
+  display: none; position: fixed; inset: 64px 0 0 0; z-index: 99;
+  background: #FFFFFF; overflow-y: auto;
+  padding: 1.5rem clamp(1.25rem, 4vw, 2.5rem) 3rem;
+  border-top: 1px solid #E5E7EB;
+}
+.mobile-nav.open { display: block !important; }
+.mobile-nav a {
+  display: block; padding: .9rem 0;
+  font-size: 0.9rem; font-weight: 500; color: #0D1117;
+  text-decoration: none;
+  border-bottom: 1px solid #E5E7EB;
+}
+.mobile-nav a:last-of-type { border-bottom: none; }
+.mobile-nav a:hover { color: var(--c-primary, #4F46E5); }
+.mobile-nav-ctas { display: flex; flex-direction: column; gap: .75rem; margin-top: 1.5rem; }
+.mobile-nav-ctas .btn { justify-content: center; }
+.nav-item {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+.nav-item > a.nav-link {
+  position: relative;
+  color: #111827;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 0 0.85rem;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  height: 70px;
+  line-height: 1;
+}
+.nav-item > a.nav-link:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--c-primary, #4F46E5);
+  text-underline-offset: 4px;
+  color: var(--c-primary, #4F46E5);
+}
+.nav-item > a.nav-link.has-dropdown { cursor: pointer; }
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  border: 1px solid rgba(0,0,0,.1);
+  border-radius: 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,.08);
+  padding: 1.75rem 2rem;
+  width: 350px;
+  display: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease-out;
+  margin-top: 0;
+  z-index: 101;
+}
+.dropdown-menu[style*="display: block"] {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 2rem;
+}
+.mega-menu {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+}
+.mega-menu:has(> .dropdown-section:nth-child(2)) {
+  width: 600px !important;
+}
+.dropdown-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  flex: 1;
+  min-width: 200px;
+}
+.dropdown-section:last-child { margin-bottom: 0; }
+.dropdown-section h3 {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--c-primary, #4F46E5);
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  padding: 0;
+  border: none;
+}
+.dropdown-section ul { list-style: none; padding: 0; margin: 0; }
+.dropdown-section li a {
+  color: #374151;
+  text-decoration: none;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  transition: color 0.2s;
+  display: block;
+  padding: 0.1rem 0;
+}
+.dropdown-section li a:hover { color: var(--c-primary, #4F46E5); }
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  gap: 4px;
+  padding: 0.5rem;
+}
+.mobile-menu-toggle span {
+  width: 24px;
+  height: 2px;
+  background: #111827;
+  transition: all 0.3s;
+}
+.mobile-menu-toggle.active span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+.mobile-menu-toggle.active span:nth-child(2) { opacity: 0; }
+.mobile-menu-toggle.active span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+@media (min-width: 1024px) {
+  .desktop-only { display: flex !important; }
+  .mobile-only { display: none !important; }
+}
+@media (max-width: 1023px) {
+  .mobile-menu-toggle { display: flex; }
+  .primary-nav { display: none; }
+
+  .nav-mobile {
+    display: none;
+    position: fixed;
+    inset: 64px 0 0 0;
+    left: 0;
+    right: 0;
+    background: white;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    flex-direction: column;
+    max-height: calc(100vh - 70px);
+    overflow-y: auto;
+    z-index: 999;
+  }
+  .nav-mobile.open { display: flex !important; }
+  .nav-accordion {
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    cursor: pointer;
+    margin: 0;
+  }
+  .nav-accordion summary {
+    padding: 1rem;
+    font-weight: 600;
+    color: #111827;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+    font-size: 0.9rem;
+  }
+  .nav-accordion summary::after {
+    content: '▼';
+    font-size: 0.9rem;
+    transition: transform 0.3s;
+  }
+  .nav-accordion[open] summary::after { transform: rotate(180deg); }
+  .nav-accordion ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: rgba(79, 70, 229, 0.02);
+  }
+  .nav-accordion li { border-bottom: 1px solid rgba(0,0,0,.05); }
+  .nav-accordion li a {
+    display: block;
+    padding: 0.75rem 1rem;
+    padding-left: 2rem;
+    color: #374151;
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+  .nav-accordion li a:active {
+    background: rgba(79, 70, 229, 0.1);
+    color: var(--c-primary, #4F46E5);
+  }
+
+}
+@media (max-width: 960px) {
+  .primary-nav { display: none; }
+  .header-hamburger { display: flex; }
+}
+/* ============================================================
+   CANONICAL FOOTER CSS (auto-injected – do not edit here)
+   ============================================================ */
+.site-footer {
+  background: var(--footer-bg, #0D1117);
+  color: rgba(255, 255, 255, 0.92);
+  padding: 3.6rem 0 0;
+}
+.footer-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 3.6rem;
+  padding: 0 1.8rem 1.8rem;
+  width: 80%;
+}
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.35rem;
+}
+.footer-col-cmlocals { gap: 1.8rem; }
+.footer-logo a {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+.footer-logo img {
+  height: 43.2px;
+  width: auto;
+  display: block;
+}
+.footer-tagline {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.75);
+}
+.footer-socials {
+  display: flex;
+  gap: 1.35rem;
+}
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28.8px;
+  height: 28.8px;
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  transition: filter 0.2s ease, color 0.2s ease;
+  filter: grayscale(100%);
+}
+.social-icon:hover { color: currentColor; filter: grayscale(0%); }
+.social-icon.social-whatsapp:hover { color: #25D366; }
+.social-icon.social-facebook:hover { color: #1877F2; }
+.social-icon.social-messenger:hover { color: #0084FF; }
+.social-icon svg { width: 100%; height: 100%; }
+.footer-col-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0;
+}
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.81rem;
+}
+.footer-links a {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  transition: color 0.2s;
+}
+.footer-links a:hover { color: white; }
+.footer-bottom-bar {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1.8rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.8rem;
+  width: 80%;
+}
+.footer-bottom-bar p {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+}
+.footer-legal-links {
+  display: flex;
+  gap: 1.8rem;
+}
+.footer-legal-links a {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.footer-legal-links a:hover { color: rgba(255, 255, 255, 0.9); }
+@media (max-width: 1024px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
+  .footer-bottom-bar { flex-direction: column; text-align: center; }
+}
+@media (max-width: 640px) {
+  .site-footer { padding: 3rem 1.5rem 0; }
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding-bottom: 1.5rem;
+  }
+  .footer-col-title { font-size: 0.9rem; }
+  .footer-links a { font-size: 0.9rem; }
+  .footer-bottom-bar {
+    padding: 1.5rem;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .footer-bottom-bar p { font-size: 0.9rem; }
+  .footer-legal-links { gap: 1rem; }
+  .footer-legal-links a { font-size: 0.9rem; }
+}
+/* Image sizing: 50-70% of column width, centered */
+figure img {
+  max-width: 100%;
+  width: 100%;
+  margin-inline: auto;
+  display: block;
+  height: auto;
+}
+/* BLOG EXPLORE CARDS */
 .blog-explore { padding-block: clamp(2.5rem, 4vw, 3.5rem); background: rgba(2, 69, 11, 0.06); border-top: 1px solid rgba(2, 69, 11, 0.15); }
 .blog-explore-inner { max-width: 1400px; margin-inline: auto; padding-inline: var(--edge); }
 .blog-explore h2 { font-family: var(--font-display); font-size: clamp(1.4rem, 2.5vw, 1.9rem); font-weight: 400; color: #02450b; margin-bottom: 1.5rem; text-align: center; }
@@ -130,10 +1002,15 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
 .explore-card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15); }
 @media (max-width: 900px) { .blog-explore-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 480px) { .blog-explore-grid { grid-template-columns: 1fr; } }
+
+/* PROGRESS BAR */
 .progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: linear-gradient(90deg, #4F46E5, #6366F1, #4F46E5); width: 2%; min-width: 2%; z-index: 10001; transition: width 0.1s linear; box-shadow: 0 2px 8px rgba(79,70,229,.18); }
 @media (prefers-reduced-motion: reduce) { .progress-bar { transition: none; } }
+/* Card underline fixes */
+.visa-card,.article-card,.tool-card,.guide-card,.visa-category-card,.program-card,.topic-card,.checklist-card,.related-card,.sidebar-card{text-decoration:none;}
+.visa-card *,.article-card *,.tool-card *,.guide-card *,.visa-category-card *,.program-card *,.topic-card *,.checklist-card *,.related-card *,.sidebar-card *{text-decoration:none;}
+.visa-card:hover,.article-card:hover,.tool-card:hover,.guide-card:hover,.visa-category-card:hover,.program-card:hover,.topic-card:hover,.checklist-card:hover,.related-card:hover,.sidebar-card:hover{text-decoration:none;}
 </style>
-
 <link rel="stylesheet" href="/shared/css/card-fixes.css">
 <link rel="stylesheet" href="/shared/css/responsive-images.css">
 <link rel="preload" href="../../fonts/newsreader.woff2" as="font" type="font/woff2" crossorigin/>
@@ -145,10 +1022,15 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
   <div class="progress-bar" id="progress-bar" aria-label="Reading progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
 <header class="site-header" id="site-header" role="banner">
 <div class="header-inner">
+
+  <!-- Logo -->
   <a href="https://www.cmlocals.com" class="header-logo" aria-label="CMLocals – homepage">
     <img src="../../images/cmlocals-chiang-mai-locals-logo.webp" alt="CMLocals – Thai visa guides and Chiang Mai living" width="150" height="43" />
   </a>
+
+  <!-- Desktop Mega Menu Navigation -->
   <nav class="primary-nav desktop-only" aria-label="Primary navigation">
+    <!-- Category 1: ED VISAS -->
     <div class="nav-item">
       <a href="../ed-visas/index.html" class="nav-link has-dropdown">ED Visas</a>
       <div class="dropdown-menu mega-menu" role="menu">
@@ -165,6 +1047,8 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
         </div>
       </div>
     </div>
+
+    <!-- Category 2: CHIANG MAI (with Culture nested) -->
     <div class="nav-item">
       <a href="../chiang-mai/index.html" class="nav-link has-dropdown">Chiang Mai</a>
       <div class="dropdown-menu mega-menu chiang-mai-menu" role="menu">
@@ -178,6 +1062,11 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
             <li><a href="../chiang-mai/things-to-do.html">Things to Do</a></li>
             <li><a href="../chiang-mai/digital-nomads.html">Digital Nomads</a></li>
             <li><a href="../chiang-mai/cost-of-living.html">Cost of Living</a></li>
+            <li><a href="../chiang-mai/phones-and-banking.html">Phones & Banking</a></li>
+            <li><a href="../chiang-mai/getting-around.html">Getting Around</a></li>
+            <li><a href="../chiang-mai/healthcare.html">Healthcare</a></li>
+            <li><a href="../chiang-mai/insurance.html">Insurance</a></li>
+            <li><a href="../chiang-mai/taxes.html">Taxes</a></li>
           </ul>
         </div>
         <div class="dropdown-section">
@@ -188,10 +1077,15 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
             <li><a href="../culture/thai-culture-etiquette.html">Etiquette</a></li>
             <li><a href="../culture/festivals-events-chiang-mai.html">Festivals</a></li>
             <li><a href="../culture/thai-food-culture.html">Thai Food</a></li>
+            <li><a href="../culture/temple-etiquette.html">Temple Etiquette</a></li>
+            <li><a href="../culture/sak-yant-chiang-mai.html">Sak Yant</a></li>
+            <li><a href="../culture/sak-yant-designs-and-meanings.html">Sak Yant Designs</a></li>
           </ul>
         </div>
       </div>
     </div>
+
+    <!-- Category 3: VISA GUIDES -->
     <div class="nav-item">
       <a href="../visas/index.html" class="nav-link has-dropdown">Visa Guides</a>
       <div class="dropdown-menu mega-menu" role="menu">
@@ -203,10 +1097,13 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
             <li><a href="../visas/long-stay/index.html">Long-Stay</a></li>
             <li><a href="../visas/short-stay/dtv-destination-thailand-visa-thai-visa-advice-chiang-mai-cmlocals.html">DTV</a></li>
             <li><a href="../visas/short-stay/tourist-visa.html">Tourist</a></li>
+            <li><a href="../visas/guides/which-visa.html">Which Visa?</a></li>
           </ul>
         </div>
       </div>
     </div>
+
+    <!-- Category 4: IMMIGRATION -->
     <div class="nav-item">
       <a href="../immigration/index.html" class="nav-link has-dropdown">Immigration</a>
       <div class="dropdown-menu mega-menu" role="menu">
@@ -223,6 +1120,8 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
       </div>
     </div>
   </nav>
+
+  <!-- CTAs & Mobile Toggle -->
   <div class="header-ctas">
     <a href="https://wa.me/66801202074" class="btn btn-wa" rel="noopener" target="_blank" title="Message on WhatsApp">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -231,6 +1130,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
       <span></span><span></span><span></span>
     </button>
   </div>
+
 </div>
 </header>
 <nav class="nav-mobile mobile-only" id="mobile-nav" aria-label="Mobile navigation">
@@ -238,16 +1138,47 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
     <summary>ED Visas</summary>
     <ul>
       <li><a href="../ed-visas/index.html">All ED Visas</a></li>
+      <li><a href="../ed-visas/emergency-self-defence-ed-visa-chiang-mai.html">Emergency Self Defence</a></li>
       <li><a href="../ed-visas/muay-thai-ed-visa-chiang-mai.html">Muay Thai</a></li>
       <li><a href="../ed-visas/thai-language-ed-visa-chiang-mai.html">Thai Language</a></li>
+      <li><a href="../ed-visas/hand-to-hand-combat-ed-visa-chiang-mai.html">Hand-to-Hand Combat</a></li>
+      <li><a href="../ed-visas/volunteer-non-o-visa-chiang-mai.html">Volunteer Non-O</a></li>
+      <li><a href="../ed-visas/ed-visa-comparison-chiang-mai.html">ED Visa Comparison</a></li>
+    </ul>
+  </details>
+  <details class="nav-accordion">
+    <summary>Short-Stay Visas</summary>
+    <ul>
+      <li><a href="../visas/short-stay/index.html">Short-Stay Overview</a></li>
+      <li><a href="../visas/short-stay/visa-exempt-entry.html">Visa Exempt Entry</a></li>
+      <li><a href="../visas/short-stay/visa-on-arrival.html">Visa on Arrival</a></li>
+      <li><a href="../visas/short-stay/tourist-visa.html">Tourist Visa</a></li>
+      <li><a href="../visas/short-stay/dtv-destination-thailand-visa-thai-visa-advice-chiang-mai-cmlocals.html">DTV (Destination Thailand)</a></li>
+      <li><a href="../visas/short-stay/visa-extensions.html">Extensions</a></li>
+      <li><a href="../visas/short-stay/border-runs.html">Border Runs</a></li>
+    </ul>
+  </details>
+  <details class="nav-accordion">
+    <summary>Long-Stay Visas</summary>
+    <ul>
+      <li><a href="../visas/long-stay/index.html">Long-Stay Overview</a></li>
+      <li><a href="../visas/long-stay/business-visa-non-b-thai-visa-advice-chiang-mai-cmlocals.html">Business (Non-B)</a></li>
+      <li><a href="../visas/long-stay/marriage-visa-non-o-thai-visa-advice-chiang-mai-cmlocals.html">Marriage (Non-O)</a></li>
+      <li><a href="../visas/long-stay/retirement-visa-thai-visa-advice-chiang-mai-cmlocals.html">Retirement (Non-O)</a></li>
+      <li><a href="../visas/long-stay/ltr-long-term-resident-visa-thai-visa-advice-chiang-mai-cmlocals.html">LTR (Long-Term Resident)</a></li>
+      <li><a href="../visas/long-stay/thailand-privilege-visa-elite-thai-visa-advice-chiang-mai-cmlocals.html">Elite/Privilege</a></li>
     </ul>
   </details>
   <details class="nav-accordion">
     <summary>Visa Guides</summary>
     <ul>
-      <li><a href="../visas/index.html">All Visas</a></li>
-      <li><a href="../visas/short-stay/dtv-destination-thailand-visa-thai-visa-advice-chiang-mai-cmlocals.html">DTV</a></li>
-      <li><a href="../visas/short-stay/tourist-visa.html">Tourist Visa</a></li>
+      <li><a href="../visas/index.html">All Visa Pages</a></li>
+      <li><a href="../visas/guides/which-visa.html">Which Visa is Right?</a></li>
+      <li><a href="../visas/guides/visa-comparisons.html">Visa Comparisons</a></li>
+      <li><a href="../visas/guides/visa-options-chiang-mai.html">Visa Options for Chiang Mai</a></li>
+      <li><a href="../visas/guides/visa-stay-chiang-mai.html">Visa & Stay Advice</a></li>
+      <li><a href="../visas/guides/extension-vs-re-entry.html">Extension vs Re-Entry</a></li>
+      <li><a href="../visas/guides/entry-requirements-2026.html">2026 Entry Requirements</a></li>
     </ul>
   </details>
   <details class="nav-accordion">
@@ -255,17 +1186,89 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
     <ul>
       <li><a href="../immigration/index.html">All Immigration</a></li>
       <li><a href="../immigration/90-day-reporting.html">90-Day Reporting</a></li>
-      <li><a href="../immigration/tm30-address-reporting.html">TM30 Registration</a></li>
+      <li><a href="../immigration/tm30-address-reporting.html">TM30 Address Reporting</a></li>
+      <li><a href="../immigration/re-entry-permits.html">Re-Entry Permits</a></li>
+      <li><a href="../immigration/visa-extensions.html">Visa Extensions</a></li>
+      <li><a href="../immigration/visa-border-runs.html">Visa Border Runs</a></li>
+      <li><a href="../immigration/address-change.html">Address Change</a></li>
+      <li><a href="../immigration/overstay-penalties.html">Overstay Penalties</a></li>
+      <li><a href="../immigration/blacklist-status.html">Blacklist Status</a></li>
+      <li><a href="../immigration/common-rejections.html">Common Rejections</a></li>
+      <li><a href="../immigration/document-requirements.html">Document Requirements</a></li>
+      <li><a href="../immigration/entry-strategy-guide.html">Entry Strategy</a></li>
+      <li><a href="../immigration/financial-requirements.html">Financial Requirements</a></li>
+      <li><a href="../immigration/immigration-best-practices.html">Best Practices</a></li>
+      <li><a href="../immigration/legal-rights.html">Legal Rights</a></li>
+      <li><a href="../immigration/queue-strategy.html">Queue Strategy</a></li>
+      <li><a href="../immigration/thailand-digital-arrival-card.html">Thailand Digital Arrival Card</a></li>
+      <li><a href="../immigration/land-border-vs-air-entry.html">Land Border vs Air Entry</a></li>
+    </ul>
+  </details>
+  <details class="nav-accordion">
+    <summary>Chiang Mai</summary>
+    <ul>
+      <li><a href="../chiang-mai/index.html">Overview</a></li>
+      <li><a href="../chiang-mai/why-chiang-mai-base.html">Why Base Here</a></li>
+      <li><a href="../chiang-mai/where-to-stay.html">Where to Stay</a></li>
+      <li><a href="../chiang-mai/long-term-living.html">Long-Term Living</a></li>
+      <li><a href="../chiang-mai/things-to-do.html">Things to Do</a></li>
+      <li><a href="../chiang-mai/digital-nomads.html">Digital Nomads</a></li>
+      <li><a href="../chiang-mai/cost-of-living.html">Cost of Living</a></li>
+      <li><a href="../chiang-mai/phones-and-banking.html">Phones & Banking</a></li>
+      <li><a href="../chiang-mai/getting-around.html">Getting Around</a></li>
+      <li><a href="../chiang-mai/healthcare.html">Healthcare</a></li>
+      <li><a href="../chiang-mai/insurance.html">Insurance</a></li>
+      <li><a href="../chiang-mai/taxes.html">Taxes</a></li>
+    </ul>
+  </details>
+  <details class="nav-accordion">
+    <summary>Culture & Lifestyle</summary>
+    <ul>
+      <li><a href="../culture/index.html">Culture Guide</a></li>
+      <li><a href="../culture/customs-traditions-thailand.html">Customs & Traditions</a></li>
+      <li><a href="../culture/thai-culture-etiquette.html">Etiquette</a></li>
+      <li><a href="../culture/etiquette-when-visiting-a-sak-yant-monk.html">Sak Yant Etiquette</a></li>
+      <li><a href="../culture/festivals-events-chiang-mai.html">Festivals</a></li>
+      <li><a href="../culture/thai-food-culture.html">Thai Food</a></li>
+      <li><a href="../culture/temple-etiquette.html">Temple Etiquette</a></li>
+      <li><a href="../culture/sak-yant-chiang-mai.html">Sak Yant</a></li>
+      <li><a href="../culture/sak-yant-designs-and-meanings.html">Sak Yant Designs</a></li>
+      <li><a href="../culture/sak-yant-getting.html">Getting a Sak Yant</a></li>
+    </ul>
+  </details>
+  <details class="nav-accordion">
+    <summary>Checklists</summary>
+    <ul>
+      <li><a href="../checklists/index.html">All Checklists</a></li>
+      <li><a href="../checklists/first-entry-checklist.html">First Entry</a></li>
+      <li><a href="../checklists/visa-exempt-entry-checklist.html">Visa Exempt Entry</a></li>
+      <li><a href="../checklists/visa-on-arrival-checklist.html">Visa on Arrival</a></li>
+      <li><a href="../checklists/tourist-visa-checklist.html">Tourist Visa</a></li>
+      <li><a href="../checklists/dtv-visa-checklist.html">DTV Visa</a></li>
+      <li><a href="../checklists/ed-visa-checklist.html">ED Visa</a></li>
+      <li><a href="../checklists/marriage-visa-checklist.html">Marriage Visa</a></li>
+      <li><a href="../checklists/retirement-visa-checklist.html">Retirement Visa</a></li>
+      <li><a href="../checklists/visa-extension-checklist.html">Visa Extension</a></li>
+      <li><a href="../checklists/border-run-checklist.html">Border Run</a></li>
+      <li><a href="../checklists/re-entry-permit-checklist.html">Re-Entry Permit</a></li>
+      <li><a href="../checklists/tm30-checklist.html">TM30 Registration</a></li>
+      <li><a href="../checklists/90-day-reporting-checklist.html">90-Day Reporting</a></li>
     </ul>
   </details>
 </nav>
 
+
+<!-- HEADER -->
+
+
+
 <main id="main-content">
 
-<section class="page-hero" aria-labelledby="page-heading">
+<!-- HERO -->
+<section class="page-hero" style="background: #02450b;" aria-labelledby="page-heading">
 <div class="container">
 <div class="page-hero-inner">
-  <span class="label-tag label-tag--light">Immigration Insight</span>
+  <span class="label-tag label-tag--light">Blog Post</span>
   <h1 id="page-heading">Why Are Thai Visas Being Rejected in Chiang Mai? (May 2026 Update)</h1>
   <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; margin-top: 1.5rem; color: rgba(255,255,255,.85); font-size: 0.95rem;">
     <span>By CMLocals Team</span>
@@ -278,138 +1281,119 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
 </div>
 </section>
 
+<!-- ARTICLE CONTENT -->
 <section class="section" aria-label="Blog article">
 <div class="container" style="max-width: 800px;">
 
+  <!-- Breadcrumb Navigation -->
   <nav style="margin-bottom: 2rem;" aria-label="Breadcrumb">
     <ol style="display: flex; gap: 0.5rem; flex-wrap: wrap; font-size: 0.9rem; color: #6B7280;">
       <li><a href="../../index.html" style="color: #6B7280; text-decoration: none;">Home</a></li>
       <li style="color: #6B7280;">/</li>
       <li><a href="../index.html" style="color: #6B7280; text-decoration: none;">Blog</a></li>
       <li style="color: #6B7280;">/</li>
-      <li style="color: #111827;">Why Visas Are Being Rejected</li>
+      <li style="color: #111827;">Why Are Thai Visas Being Rejected in Chiang Mai? (May 2026 Update)</li>
     </ol>
   </nav>
 
+  <!-- Featured Image -->
   <figure style="margin: 2.5rem 0; text-align: center;">
     <img
       src="../../blogs/images/thai-visa-rejection-chiang-mai-2026.webp"
-      alt="Thai visa rejection reasons in Chiang Mai 2026"
+      alt="Why Are Thai Visas Being Rejected in Chiang Mai? (May 2026 Update)"
       style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,.08);"
       loading="lazy"
     />
-    <figcaption style="margin-top: 1rem; font-size: 0.85rem; color: #6B7280; font-style: italic;">Immigration officers in Chiang Mai now use AI-driven cross-referencing systems to verify visa applications.</figcaption>
+    <figcaption style="margin-top: 1rem; font-size: 0.85rem; color: #6B7280; font-style: italic;">Chiang Mai Immigration Office rejection reasons for 2026</figcaption>
   </figure>
 
+  <!-- Article Body -->
   <article style="line-height: 1.8; color: var(--c-body);">
 
+    <!-- Introduction Section -->
     <p style="font-size: 1.05rem; margin-bottom: 1.5rem; color: #374151;">
-      In May 2026, Chiang Mai immigration rejections are primarily driven by mismatched TM30 digital records, unverified DTV financial sources, and automated attendance tracking for ED visas. To ensure approval at the Promenada or Central Festival offices, you must verify your landlord's filing in the TDAC system and provide 3-6 months of seasoned bank statements rather than just a closing balance.
+      Thai visa rejections in Chiang Mai have shifted dramatically since January 2026. Rejections are now driven by digital mismatches, source verification, and automated attendance tracking. This guide explains the 2026 rejection landscape and how to avoid pitfalls.
     </p>
 
+    <!-- Section 1 -->
     <h2 style="font-family: var(--font-display); font-size: 1.75rem; font-weight: 400; margin-top: 2.5rem; margin-bottom: 1rem; color: var(--c-dark); letter-spacing: -0.01em;">
-      The 2026 Immigration Landscape: A New Era of Enforcement
+      TM30 Mismatches: The Digital Problem
     </h2>
     <p style="margin-bottom: 1rem;">
-      For over a decade, Chiang Mai was known as the soft entry point for Thai residency. However, as of early 2026, the Royal Thai Immigration Bureau has integrated AI-driven cross-referencing tools. This means that an officer in Chiang Mai can now instantly see if your financial history matches your visa type or if your landlord has failed to report your presence.
+      The most common rejection reason in May 2026 is TM30 data mismatch. Chiang Mai Immigration now cross-references TM30 digital records (submitted by landlords) against internal immigration databases. If your registered address does not match the address you submitted in your visa application, your request is rejected.
     </p>
     <p style="margin-bottom: 1.5rem;">
-      While the new Destination Thailand Visa (DTV) has opened doors for 5-year stays, it has also brought a quality control crackdown. Immigration is no longer just looking for the right documents. They are looking for behavioral compliance.
+      This is not intentional fraud on your part. Many landlords delay TM30 filing or register the wrong unit. Before you apply, confirm that your landlord has filed the TM30 and that the address is correct. Request a copy of the filed TM30 confirmation.
     </p>
 
+    <!-- Callout Box 1 -->
     <div style="background: rgba(2,69,11,0.08); border-left: 4px solid #02450b; border-radius: 0 8px 8px 0; padding: 1.5rem; margin: 2rem 0;">
-      <strong style="color: #02450b; display: block; margin-bottom: 0.5rem;">Quick Reality Check</strong>
+      <strong style="color: #02450b; display: block; margin-bottom: 0.5rem;">Key Point</strong>
       <p style="margin: 0; color: var(--c-body);">
-        The TM30 (Notification of Residence) remains the biggest headache for Chiang Mai residents. In 2026, the physical receipt is often ignored in favour of what appears on the officer's screen.
+        Always request written confirmation from your landlord that the TM30 has been filed with your correct address. Mismatches are now the top reason for visa rejections.
       </p>
     </div>
 
+    <!-- Section 2 -->
     <h2 style="font-family: var(--font-display); font-size: 1.75rem; font-weight: 400; margin-top: 2.5rem; margin-bottom: 1rem; color: var(--c-dark); letter-spacing: -0.01em;">
-      Rejection Reason 1: The TM30 Ghosting Problem
+      DTV Financial Source Verification
     </h2>
     <p style="margin-bottom: 1rem;">
-      Many local landlords in Santitham or Hang Dong still believe a paper receipt is sufficient. However, if the landlord has not updated the Thai Digital Arrival Control (TDAC) system, your visa extension will be rejected on the spot.
-    </p>
-    <p style="margin-bottom: 1rem;">
-      Before your appointment, ask your landlord for a screenshot of the digital confirmation page. If you are staying in an Airbnb, ensure the host is registered as a Business entity. Individual hosts are frequently failing the 2026 audits.
+      The DTV visa requires proof of income or savings. Since May 2026, Chiang Mai Immigration has been verifying source documents directly with banks and employers. Bank statements that lack official stamps or watermarks are now commonly rejected. Employer letters that cannot be verified with the company are flagged.
     </p>
     <p style="margin-bottom: 1.5rem;">
-      This is not optional. The system shows conflicting occupancy records, and immigration officers will ask you to resolve it before processing your extension.
+      The key change is that officers now call or email the issuing bank and employer to confirm the documents are real. If you use a freelance income source or gig-economy work, ensure you have bank statements that clearly show income deposits and official bank certification.
     </p>
 
+    <!-- Section 3 -->
     <h2 style="font-family: var(--font-display); font-size: 1.75rem; font-weight: 400; margin-top: 2.5rem; margin-bottom: 1rem; color: var(--c-dark); letter-spacing: -0.01em;">
-      Rejection Reason 2: DTV Financials Beyond the 500k THB Balance
+      ED Visa Attendance Tracking
     </h2>
     <p style="margin-bottom: 1rem;">
-      The DTV requires 500,000 THB (approximately $14,500 USD) in proof of funds. In 2024 and 2025, a simple screenshot often sufficed. In 2026, Chiang Mai officers are trained to spot borrowed funds.
-    </p>
-    <p style="margin-bottom: 1rem;">
-      If you show 500,000 THB that arrived in your account 48 hours before your application, expect a rejection or a Request for Evidence letter. You must now demonstrate where the money came from. If you are a remote worker, this means showing salary transfers into that account over the last 3-6 months.
+      ED visa renewals and extensions are now subject to automated attendance verification. Schools submit class attendance records to the Ministry of Education database. If your record shows gaps in attendance (particularly during periods when you were supposed to be in class), your ED visa renewal can be rejected.
     </p>
     <p style="margin-bottom: 1.5rem;">
-      Bitcoin and other digital assets are strictly rejected as proof of funds in 2026. Only liquid cash in a personal savings or checking account is accepted.
+      This affects language students, martial arts students, and IT certification students most. If you take a week off for travel, ensure it is aligned with school holidays or obtain written approval from your school before you leave.
     </p>
 
-    <h2 style="font-family: var(--font-display); font-size: 1.75rem; font-weight: 400; margin-top: 2.5rem; margin-bottom: 1rem; color: var(--c-dark); letter-spacing: -0.01em;">
-      Rejection Reason 3: The Ghost Student Crackdown (ED Visas)
-    </h2>
-    <p style="margin-bottom: 1rem;">
-      If you are on an Education (ED) visa for Thai Language or Muay Thai, the days of optional attendance are over. Chiang Mai schools are now required to use biometric or QR-based attendance tracking that links directly to the Immigration database.
-    </p>
-    <p style="margin-bottom: 1rem;">
-      If your attendance drops below 80%, the system flags your file for a mandatory interview during your 90-day extension. Officers are now more likely to perform a casual interview in Thai. If you have been on a language visa for 6 months and cannot answer basic questions in Thai, your extension will likely be denied.
-    </p>
-    <p style="margin-bottom: 1.5rem;">
-      This is not a suggestion. Schools submit attendance records to immigration automatically. You cannot work around this.
-    </p>
-
+    <!-- Callout Box 2 -->
     <div style="background: rgba(2,69,11,0.08); border-left: 4px solid #02450b; border-radius: 0 8px 8px 0; padding: 1.5rem; margin: 2rem 0;">
       <strong style="color: #02450b; display: block; margin-bottom: 0.5rem;">Pro Tip</strong>
       <p style="margin: 0; color: var(--c-body);">
-        Always check your occupancy status 7 days before your visa expires. Log into the TDAC portal or ask your landlord to confirm the digital filing. This single step prevents 80% of TM30-related rejections.
+        For ED visas, maintain attendance consistently. If you need to miss class, inform your school in advance and obtain written confirmation of the absence reason. Excused absences are not flagged in the automated system.
       </p>
     </div>
 
+    <!-- Conclusion -->
     <h2 style="font-family: var(--font-display); font-size: 1.75rem; font-weight: 400; margin-top: 2.5rem; margin-bottom: 1rem; color: var(--c-dark); letter-spacing: -0.01em;">
-      What Changed Between 2025 and 2026
+      Takeaway
     </h2>
-    <p style="margin-bottom: 1rem;">
-      2025 relied on paper trails and manual verification. 2026 requires digital synchronisation. Your TM30 receipt from your landlord must match the digital TDAC system. Your DTV funds must show months of activity, not a single balance. Your ED visa attendance must be verified by school biometric systems, not handwritten logs.
-    </p>
-    <p style="margin-bottom: 1.5rem;">
-      The shift is complete. Plan accordingly.
-    </p>
-
-    <h2 style="font-family: var(--font-display); font-size: 1.75rem; font-weight: 400; margin-top: 2.5rem; margin-bottom: 1rem; color: var(--c-dark); letter-spacing: -0.01em;">
-      Common Pitfalls to Avoid
-    </h2>
-    <p style="margin-bottom: 1rem;">
-      Apply 15-30 days before your current stamp expires, not at the last minute. For DTV freelancers, officers want to see active contracts, not letters of intent. Never use a visa agent who claims they can bypass the TM30 process. You will be the one facing the blacklist if they are caught.
-    </p>
-    <p style="margin-bottom: 1.5rem;">
-      Last verified: May 2026. Immigration rules change regularly. Verify current requirements with the Chiang Mai Immigration Office or contact CMLocals before submitting your application.
+    <p style="margin-bottom: 2rem;">
+      May 2026 rejections are data-driven, not discretionary. The shifts are TM30 digital verification, DTV financial source verification, and ED visa automated attendance tracking. The path to approval is documentation and transparency. If you are aware of potential issues (TM30 delays, freelance income, school absences), address them before you apply. Chiang Mai Immigration is now equipped to verify claims across multiple systems.
     </p>
 
   </article>
 
+  <!-- Author Bio -->
   <div style="background: var(--c-subtle); padding: 1.75rem; border-radius: var(--radius-md); margin: 3rem 0; border-left: 4px solid #02450b;">
     <div style="display: flex; gap: 1rem;">
       <img src="../../images/author-cmlocals.webp" alt="CMLocals Team" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;" loading="lazy" />
       <div>
         <strong style="display: block; color: var(--c-dark); margin-bottom: 0.25rem;">CMLocals Team</strong>
         <p style="margin: 0; font-size: 0.9rem; color: #6B7280;">
-          CMLocals provides independent, verified information on Thai visas and Chiang Mai living. This article reflects immigration policy as of May 2026 based on direct interviews with officers and community feedback.
+          CMLocals is an independent Thai visa information resource staffed by expat residents in Chiang Mai with direct experience navigating Thailand immigration.
         </p>
       </div>
     </div>
   </div>
 
+  <!-- CTA -->
   <div style="background: #02450b; color: white; padding: 2rem; border-radius: var(--radius-md); text-align: center; margin: 3rem 0;">
     <h3 style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 400; margin-bottom: 0.75rem; color: white;">
-      Need Help with Your Visa Application?
+      Have Questions?
     </h3>
     <p style="margin-bottom: 1.5rem; color: rgba(255,255,255,0.9);">
-      Get a document review or clarification on requirements before you head to immigration.
+      Get clarity on visa requirements or immigration procedures directly from our team.
     </p>
     <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
       <a href="https://wa.me/66801202074" class="btn btn-wa btn-lg" rel="noopener" target="_blank">Message on WhatsApp</a>
@@ -420,31 +1404,37 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
 </div>
 </section>
 
+<!-- RELATED POSTS -->
 <section class="blog-explore">
 <div class="blog-explore-inner">
   <h2>Read More</h2>
   <div class="blog-explore-grid">
-    <a href="dtv-vs-ed-visa-chiang-mai-2026.html" class="explore-card" style="background-image: url('../../blogs/images/dtv-vs-ed-visa-chiang-mai-2026.webp');">
-      <h3>DTV vs ED Visa: Which is Best for Your 2026 Chiang Mai Move?</h3>
-      <p>Compare the 5-year DTV against the ED visa. Cost, flexibility, and which suits your situation.</p>
+    <a href="dtv-vs-ed-visa-chiang-mai-2026.html" class="explore-card" style="background-image: url('../../blogs/images/dtv-vs-ed-visa-comparison-2026.webp');">
+      <h3>DTV vs ED Visa</h3>
+      <p>Which visa is best for your 2026 move to Chiang Mai.</p>
     </a>
-    <a href="../visas/short-stay/dtv-destination-thailand-visa-thai-visa-advice-chiang-mai-cmlocals.html" class="explore-card" style="background-image: url('../../images/cmlocals-dtv-visa-chiang-mai.webp');">
-      <h3>DTV (Destination Thailand Visa)</h3>
-      <p>Complete guide to the 5-year visa: requirements, costs, and how to apply in Chiang Mai.</p>
+    <a href="../visas/short-stay/dtv-destination-thailand-visa-thai-visa-advice-chiang-mai-cmlocals.html" class="explore-card" style="background-image: url('../../blogs/images/dtv-visa-guide-2026.webp');">
+      <h3>DTV Visa Guide 2026</h3>
+      <p>Complete DTV requirements and application process.</p>
     </a>
-    <a href="../immigration/tm30-address-reporting.html" class="explore-card" style="background-image: url('../../images/cmlocals-tm30-registration.webp');">
-      <h3>TM30 Registration</h3>
-      <p>Step-by-step guide to TM30 address reporting and digital verification in 2026.</p>
+    <a href="../visas/long-stay/index.html" class="explore-card" style="background-image: url('../../blogs/images/long-stay-visas-chiang-mai.webp');">
+      <h3>All Long-Stay Visas</h3>
+      <p>Compare retirement, marriage, business, and LTR visas.</p>
     </a>
-    <a href="../immigration/90-day-reporting.html" class="explore-card" style="background-image: url('../../images/cmlocals-90-day-reporting.webp');">
-      <h3>90-Day Reporting in Chiang Mai</h3>
-      <p>How to submit your mandatory 90-day report correctly and avoid penalties.</p>
+    <a href="../immigration/common-rejections.html" class="explore-card" style="background-image: url('../../blogs/images/immigration-rejections-guide.webp');">
+      <h3>Common Rejection Reasons</h3>
+      <p>Full guide to avoiding visa rejection pitfalls.</p>
     </a>
   </div>
 </div>
 </section>
 
 </main>
+
+<!-- FOOTER -->
+
+
+
 
 <script src="../../../shared/js/header-handler.js" defer></script>
 <script>
@@ -456,6 +1446,8 @@ window.CHATY_CONFIG={channels:[{name:"Facebook_Messenger",label:"Facebook Messen
 
 <footer class="site-footer" role="contentinfo" style="background: #02450b;">
 <div class="footer-container">
+
+  <!-- Column 1: CMLocals + Tagline + Social Icons -->
   <div class="footer-col footer-col-cmlocals">
     <div class="footer-logo">
       <a href="/index.html">
@@ -475,31 +1467,49 @@ window.CHATY_CONFIG={channels:[{name:"Facebook_Messenger",label:"Facebook Messen
       </a>
     </div>
   </div>
+
+  <!-- Column 2: ED Visas -->
   <div class="footer-col">
     <h3 class="footer-col-title">ED Visas</h3>
     <ul class="footer-links">
+      <li><a href="/pages/ed-visas/emergency-self-defence-ed-visa-chiang-mai.html">Emergency Self Defence</a></li>
       <li><a href="/pages/ed-visas/muay-thai-ed-visa-chiang-mai.html">Muay Thai</a></li>
+      <li><a href="/pages/ed-visas/hand-to-hand-combat-ed-visa-chiang-mai.html">Hand-to-Hand Combat</a></li>
       <li><a href="/pages/ed-visas/thai-language-ed-visa-chiang-mai.html">Thai Language</a></li>
+      <li><a href="/pages/ed-visas/volunteer-non-o-visa-chiang-mai.html">Volunteer Non-O</a></li>
       <li><a href="/pages/ed-visas/index.html">All ED Visas</a></li>
     </ul>
   </div>
+
+  <!-- Column 3: Chiang Mai -->
+  <div class="footer-col">
+    <h3 class="footer-col-title">Chiang Mai</h3>
+    <ul class="footer-links">
+      <li><a href="/pages/chiang-mai/index.html">Overview</a></li>
+      <li><a href="/pages/chiang-mai/where-to-stay.html">Where to Stay</a></li>
+      <li><a href="/pages/chiang-mai/cost-of-living.html">Cost of Living</a></li>
+      <li><a href="/pages/chiang-mai/getting-around.html">Getting Around</a></li>
+      <li><a href="/pages/chiang-mai/long-term-living.html">Long-Term Living</a></li>
+      <li><a href="/pages/chiang-mai/healthcare.html">Healthcare</a></li>
+    </ul>
+  </div>
+
+  <!-- Column 4: Visa Guides -->
   <div class="footer-col">
     <h3 class="footer-col-title">Visa Guides</h3>
     <ul class="footer-links">
+      <li><a href="/pages/visas/index.html">All Visas</a></li>
       <li><a href="/pages/visas/short-stay/dtv-destination-thailand-visa-thai-visa-advice-chiang-mai-cmlocals.html">DTV</a></li>
-      <li><a href="/pages/visas/short-stay/tourist-visa.html">Tourist Visa</a></li>
+      <li><a href="/pages/visas/short-stay/index.html">Short Stay</a></li>
       <li><a href="/pages/visas/long-stay/index.html">Long Stay</a></li>
+      <li><a href="/pages/visas/short-stay/tourist-visa.html">Tourist Visa</a></li>
+      <li><a href="/pages/checklists/index.html">Checklists</a></li>
     </ul>
   </div>
-  <div class="footer-col">
-    <h3 class="footer-col-title">Immigration</h3>
-    <ul class="footer-links">
-      <li><a href="/pages/immigration/90-day-reporting.html">90-Day Reporting</a></li>
-      <li><a href="/pages/immigration/tm30-address-reporting.html">TM30 Registration</a></li>
-      <li><a href="/pages/immigration/index.html">All Immigration</a></li>
-    </ul>
-  </div>
+
 </div>
+
+<!-- Bottom Legal Bar -->
 <div class="footer-bottom-bar">
   <p>&copy; 2026 CMLocals. All rights reserved.</p>
   <div class="footer-legal-links">
@@ -508,7 +1518,9 @@ window.CHATY_CONFIG={channels:[{name:"Facebook_Messenger",label:"Facebook Messen
     <a href="/pages/disclaimer.html">Disclaimer</a>
   </div>
 </div>
+
 </footer>
+
 
 <script src="../../shared/js/progress-bar.js" defer></script>
 </body>
