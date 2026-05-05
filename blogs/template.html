@@ -1337,39 +1337,34 @@ figure img {
 <article class="article-body">
 <div class="article-wrap">
 
-  <!-- Featured Image -->
-  <figure style="margin: 2.5rem 0; text-align: center;">
+  <!-- Section 1 - Header Above Everything -->
+  <h2 style="font-family: var(--font-display); font-size: 1.75rem; font-weight: 400; margin-top: 0; margin-bottom: 1.5rem; color: var(--c-dark); letter-spacing: -0.01em;">
+    [SECTION_1_HEADING]
+  </h2>
+
+  <!-- Featured Image - Floated Right, Smaller -->
+  <figure style="float: right; margin: 0 0 1.5rem 1.5rem; width: 200px;">
     <img
       src="../../blogs/images/[FEATURED_IMAGE]"
       alt="[BLOG_TITLE]"
-      style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,.08);"
+      style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,.08);"
       loading="lazy"
     />
-    <figcaption style="margin-top: 1rem; font-size: 0.85rem; color: #6B7280; font-style: italic;">[IMAGE_CAPTION]</figcaption>
   </figure>
 
   <!-- Article Body Content -->
 
-    <!-- Introduction Section -->
-    <p style="font-size: 1.05rem; margin-bottom: 1.5rem; color: #374151;">
-      [INTRODUCTION_PARAGRAPH]
-    </p>
-
-    <!-- Section 1 -->
-    <h2 style="font-family: var(--font-display); font-size: 1.75rem; font-weight: 400; margin-top: 2.5rem; margin-bottom: 1rem; color: var(--c-dark); letter-spacing: -0.01em;">
-      [SECTION_1_HEADING]
-    </h2>
-    <p style="margin-bottom: 1rem;">
+    <!-- First Paragraph (wraps around floated image) -->
+    <p style="margin-bottom: 1.5rem;">
       [SECTION_1_CONTENT_P1]
     </p>
-    <p style="margin-bottom: 1.5rem;">
-      [SECTION_1_CONTENT_P2]
-    </p>
 
-    <!-- Callout Box 1 -->
-    <div class="callout-band">
-      <strong style="color: #02450b; display: block; margin-bottom: 0.5rem;">Key Point</strong>
-      <p>[CALLOUT_1_TEXT]</p>
+    <!-- TL;DR Box -->
+    <div style="background: rgba(2,69,11,0.12); border-left: 4px solid #02450b; border-radius: 0 8px 8px 0; padding: 1.5rem; margin: 2rem 0; color: #1a3a1f; clear: both;">
+      <strong style="color: #02450b; display: block; margin-bottom: 0.5rem;">TL;DR</strong>
+      <p style="margin: 0.5rem 0; font-size: 0.95rem;">
+        [TLDR_TEXT]
+      </p>
     </div>
 
     <!-- Section 2 -->
