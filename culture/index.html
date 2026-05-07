@@ -576,14 +576,14 @@ figure img {
 .article-wrap { width: 100%; max-width: var(--article-w); margin-inline: auto; padding-inline: var(--edge); }
 .culture-explore { padding-block: clamp(2.5rem, 4vw, 3.5rem); background: #f8f4ff; border-top: 1px solid #e9e3f8; }
 .culture-explore-inner { max-width: 1400px; margin-inline: auto; padding-inline: var(--edge); }
-.culture-explore h2 { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: clamp(1.4rem, 2.5vw, 1.9rem); font-weight: 400; color: #5a0a3a; margin-bottom: 1.5rem; text-align: center; }
+.culture-explore h2 { font-family: var(--font-display); font-size: clamp(1.4rem, 2.5vw, 1.9rem); font-weight: 400; color: #5a0a3a; margin-bottom: 1.5rem; text-align: center; }
 .culture-explore-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
 @media(max-width: 900px) { .culture-explore-grid { grid-template-columns: repeat(2, 1fr); } }
 @media(max-width: 480px) { .culture-explore-grid { grid-template-columns: 1fr; } }
 .explore-card { position: relative; min-height: 220px; border-radius: 8px; overflow: hidden; text-decoration: none; color: #fff; transition: all .2s; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; text-align: center; background-size: cover; background-position: center; border: 1px solid rgba(255,255,255,.15); padding: 1.5rem; z-index: 1; }
 .explore-card::before { content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,.2), rgba(0,0,0,.6)); z-index: -1; }
 .explore-card:hover { border-color: rgba(255,255,255,.3); transform: translateY(-2px); filter: brightness(1.1); }
-.explore-card h3 { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 1.1rem; font-weight: 500; margin: 0 0 .5rem; color: #fff; position: relative; z-index: 2; }
+.explore-card h3 { font-family: var(--font-display); font-size: 1.1rem; font-weight: 500; margin: 0 0 .5rem; color: #fff; position: relative; z-index: 2; }
 .explore-card p { font-size: .85rem; color: rgba(255,255,255,.82); margin: 0; position: relative; z-index: 2; }
 .article-body h2, .article-body h3, .article-body p { text-align: left; }
 </style>
@@ -1087,6 +1087,7 @@ figure img {
 <script src="../../shared/js/progress-bar.js" defer></script>
 </body>
 </html>
+
 
 
 
