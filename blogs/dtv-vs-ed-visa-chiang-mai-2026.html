@@ -702,6 +702,78 @@ article table tr:hover {
   letter-spacing: 0.05em;
 }
 
+/* FAQ Accordion */
+.faq-list {
+  margin: 0;
+  padding: 0;
+}
+
+.faq-item {
+  margin-bottom: 0.75rem;
+  border-bottom: 1px solid var(--c-border);
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-question {
+  width: 100%;
+  text-align: left;
+  padding: 1.25rem 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #02450b;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  transition: color 0.2s ease;
+}
+
+.faq-question:hover {
+  color: var(--c-primary);
+}
+
+.faq-question svg {
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.faq-item.open .faq-question svg {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  padding-bottom: 0;
+}
+
+.faq-item.open .faq-answer {
+  max-height: 500px;
+  padding-bottom: 1rem;
+}
+
+.faq-answer p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--c-body);
+}
+
+.faq-answer a {
+  color: #02450b;
+  text-decoration: underline;
+}
+
+.faq-answer a:hover {
+  color: var(--c-primary);
+}
+
 @media (max-width: 768px) {
   .page-hero h1 {
     font-size: 1.75rem;

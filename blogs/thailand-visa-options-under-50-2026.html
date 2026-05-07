@@ -702,6 +702,78 @@ article table tr:hover {
   letter-spacing: 0.05em;
 }
 
+/* FAQ Accordion */
+.faq-list {
+  margin: 0;
+  padding: 0;
+}
+
+.faq-item {
+  margin-bottom: 0.75rem;
+  border-bottom: 1px solid var(--c-border);
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-question {
+  width: 100%;
+  text-align: left;
+  padding: 1.25rem 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #02450b;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  transition: color 0.2s ease;
+}
+
+.faq-question:hover {
+  color: var(--c-primary);
+}
+
+.faq-question svg {
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.faq-item.open .faq-question svg {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  padding-bottom: 0;
+}
+
+.faq-item.open .faq-answer {
+  max-height: 500px;
+  padding-bottom: 1rem;
+}
+
+.faq-answer p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--c-body);
+}
+
+.faq-answer a {
+  color: #02450b;
+  text-decoration: underline;
+}
+
+.faq-answer a:hover {
+  color: var(--c-primary);
+}
+
 @media (max-width: 768px) {
   .page-hero h1 {
     font-size: 1.75rem;
@@ -1100,31 +1172,22 @@ article table tr:hover {
       <li style="margin-bottom: 0.6rem;">Stronger legal position if Thailand's political landscape shifts</li>
     </ul>
 
-    <!-- Common Questions -->
-    <h2 style="font-family: var(--font-display); font-size: 1.75rem; font-weight: 400; margin-top: 2.5rem; margin-bottom: 1rem; color: var(--c-dark); letter-spacing: -0.01em;">
-      Common Questions
-    </h2>
-
-    <h3 style="font-size: 1.3rem; font-weight: 600; margin-top: 1.75rem; margin-bottom: 0.75rem; color: #02450b;">
-      Can I work for a Thai company on a DTV?
-    </h3>
-    <p style="margin-bottom: 1.5rem;">
-      No. The DTV is strictly for remote work with foreign entities. To work for a Thai employer, you must hold a Non-Immigrant B visa and secure a standard work permit.
-    </p>
-
-    <h3 style="font-size: 1.3rem; font-weight: 600; margin-top: 1.75rem; margin-bottom: 0.75rem; color: #02450b;">
-      Does the DTV count toward permanent residency?
-    </h3>
-    <p style="margin-bottom: 1.5rem;">
-      No. Like the Tourist Visa, it is classified as temporary despite its 5-year duration. Permanent residency in Thailand requires 5 consecutive years on a Non-Immigrant visa, not DTV.
-    </p>
-
-    <h3 style="font-size: 1.3rem; font-weight: 600; margin-top: 1.75rem; margin-bottom: 0.75rem; color: #02450b;">
-      I'm 45. Should I wait until 50 for the Retirement Visa?
-    </h3>
-    <p style="margin-bottom: 1.5rem;">
-      Waiting is inefficient. The DTV costs 10,000 THB and offers more flexibility than the Retirement Visa (which requires 800,000 THB bank balance or 65,000 THB monthly income). Use the DTV now; you can switch to Retirement at 50 if you choose.
-    </p>
+    <!-- FAQ Section -->
+    <h2 style="font-family: var(--font-display); font-size: 1.75rem; font-weight: 400; margin-top: 2.5rem; margin-bottom: 1.5rem; color: var(--c-dark); letter-spacing: -0.01em;">Frequently Asked Questions</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">Can I work for a Thai company on a DTV?<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="faq-answer"><p>No. The DTV is strictly for remote work with foreign entities. To work for a Thai employer, you must hold a Non-Immigrant B visa and secure a standard work permit.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">Does the DTV count toward permanent residency?<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="faq-answer"><p>No. Like the Tourist Visa, it is classified as temporary despite its 5-year duration. Permanent residency in Thailand requires 5 consecutive years on a Non-Immigrant visa, not DTV.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">I'm 45. Should I wait until 50 for the Retirement Visa?<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="faq-answer"><p>Waiting is inefficient. The DTV costs 10,000 THB and offers more flexibility than the Retirement Visa (which requires 800,000 THB bank balance or 65,000 THB monthly income). Use the DTV now; you can switch to Retirement at 50 if you choose.</p></div>
+      </div>
+    </div>
 
     <!-- Summary -->
     <h2 style="font-family: var(--font-display); font-size: 1.75rem; font-weight: 400; margin-top: 2.5rem; margin-bottom: 1rem; color: var(--c-dark); letter-spacing: -0.01em;">
