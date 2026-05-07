@@ -1,7 +1,3 @@
-# CMLocals Robots.txt
-# Thai Visa Guidance and Chiang Mai Living Information
-
-# Allow all legitimate crawlers
 User-agent: *
 Allow: /
 Disallow: /admin/
@@ -10,15 +6,11 @@ Disallow: /*.json$
 Disallow: /*?*sort=
 Disallow: /*?*filter=
 
-# Specific crawler rules
 User-agent: AdsBot-Google
 Allow: /
 
 User-agent: Googlebot
 Allow: /
 
-# Crawl delay for respectful crawling
 Crawl-delay: 1
-
-# Sitemap location
-Sitemap: https://cmlocals.com/sitemap.xml
+Sitemap: https://www.cmlocals.com/sitemap.xml
