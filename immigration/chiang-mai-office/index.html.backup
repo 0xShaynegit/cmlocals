@@ -3,15 +3,8 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Visa Extension Checklist - CMLocals</title>
-<meta name="description" content="Interactive checklist for extending long-stay visas in Thailand. Required documents for Non-O, Non-B, ED, and other visa extensions."/>
-<link rel="canonical" href="https://www.cmlocals.com/checklists/visa-extension/"/>
-<meta property="og:type" content="article"/>
-<meta property="og:title" content="Visa Extension Checklist - CMLocals"/>
-<meta property="og:description" content="Interactive checklist for extending long-stay visas in Thailand. Required documents for Non-O, Non-B, ED, and other visa extensions."/>
-<meta property="twitter:card" content="summary"/>
-<meta property="twitter:title" content="Visa Extension Checklist - CMLocals"/>
-<meta property="twitter:description" content="Interactive checklist for extending long-stay visas in Thailand. Required documents for Non-O, Non-B, ED, and other visa extensions."/>
+<title>TM30 Address Registration Thailand 2026 -  Landlord Notification Guide -  CMLocals</title>
+<meta name="description" content="Complete guide to Thailand's TM30 address notification: who must file, 24-hour deadline, landlord responsibility, how to verify filing, and penalties for non-compliance."/>
 
 
 
@@ -19,38 +12,43 @@
 <style>
 :root {
   --c-dark:          #202A6C;
-  --c-dark-2:        #0D1275;
+  --c-dark-2:        #202A6C;
+  --c-dark-3:        #0B0F6E;
   --c-primary:       #4F46E5;
-  --c-accent:        #6366F1;
-  --c-accent-light:  #E0E7FF;
+  --c-primary-h:     #4338CA;
+  --c-primary-glow:  rgba(79,70,229,.18);
+  --c-page-accent:   #6366F1;
+  --c-page-accent-l: #E0E7FF;
+  --c-violet:        #7C3AED;
+  --c-violet-l:      #EDE9FE;
   --c-white:         #FFFFFF;
   --c-off-white:     #F8F7FF;
+  --c-subtle:        #F1EFFF;
   --c-body:          #111827;
   --c-muted:         #4B5563;
   --c-border:        #E5E7EB;
-  --c-success:       #10B981;
+  --c-border-dark:   rgba(255,255,255,.1);
   --c-wa:            #25D366;
   --c-wa-h:          #1aaa55;
+  --c-fb:            #1877F2;
+  --c-fb-h:          #1565d8;
+  --radius-sm:       6px;
+  --radius-md:       10px;
+  --radius-lg:       16px;
+  --shadow-sm:       0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.06);
+  --shadow-md:       0 4px 16px rgba(0,0,0,.10), 0 2px 6px rgba(0,0,0,.06);
+  --shadow-lg:       0 12px 40px rgba(0,0,0,.14);
   --font-display:    'Newsreader', Georgia, serif;
   --font-body:       'DM Sans', system-ui, sans-serif;
-  --font-handwrite:  'Caveat', cursive;
   --max-w:           1200px;
   --article-w:       780px;
   --edge:            clamp(1.25rem, 4vw, 2.5rem);
-  --radius-sm:       6px;
-  --radius-md:       10px;
+  --section-py:      clamp(3rem, 5vw, 4.5rem);
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
-body {
-  font-family: var(--font-body);
-  font-size: 0.9rem;
-  line-height: 1.65;
-  color: var(--c-body);
-  background: var(--c-white);
-  -webkit-font-smoothing: antialiased;
-}
+body { font-family: var(--font-body); font-size: 1rem; line-height: 1.65; color: var(--c-body); background: var(--c-white); -webkit-font-smoothing: antialiased; }
 img { max-width: 100%; display: block; height: auto; }
 a { color: inherit; }
 ul { list-style: none; }
@@ -58,11 +56,21 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 /* --- HEADINGS --- */
 h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); }
-.btn { display: inline-flex; align-items: center; gap: .5em; padding: .65em 1.4em; border-radius: var(--radius-sm); font-family: var(--font-body); font-size: .9rem; font-weight: 600; line-height: 1.3; text-decoration: none; border: 1.5px solid transparent; transition: background .18s, box-shadow .18s, border-color .18s, transform .12s; white-space: nowrap; }
-.btn:hover { transform: translateY(-1px); }
 
 .container { width: 100%; max-width: var(--max-w); margin-inline: auto; padding-inline: var(--edge); }
-.article-wrap { width: 100%; max-width: var(--article-w); margin-inline: auto; padding-inline: var(--edge); }
+.article-wrap { width: 100%; max-width: 1090px; margin-inline: auto; padding-inline: var(--edge); }
+
+.btn { display: inline-flex; align-items: center; gap: .5em; padding: .65em 1.4em; border-radius: var(--radius-sm); font-family: var(--font-body); font-size: .9rem; font-weight: 600; line-height: 1.3; text-decoration: none; border: 1.5px solid transparent; transition: background .18s, box-shadow .18s, border-color .18s, transform .12s; white-space: nowrap; }
+.btn:hover { transform: translateY(-1px); }
+.btn-dark { background: rgb(20,25,34); color: var(--c-white); border-color: rgb(20,25,34); }
+.btn-dark:hover { background: #141110; border-color: #141110; box-shadow: var(--shadow-md); }
+.btn-outline-light { background: transparent; color: var(--c-white); border-color: rgba(255,255,255,.35); }
+.btn-outline-light:hover { background: rgba(255,255,255,.1); border-color: rgba(255,255,255,.6); }
+.btn-wa { background: var(--c-wa); color: var(--c-white); border-color: var(--c-wa); }
+.btn-wa:hover { background: var(--c-wa-h); border-color: var(--c-wa-h); }
+.btn-fb { background: var(--c-fb); color: var(--c-white); border-color: var(--c-fb); }
+.btn-fb:hover { background: var(--c-fb-h); border-color: var(--c-fb-h); }
+.btn-lg { padding: .8em 1.75em; font-size: 1rem; }
 
 /* ============================================================
    HEADER
@@ -117,7 +125,11 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); }
   align-items: center;
 }
 
-.primary-nav a { position: relative; color: #111827; text-decoration: none; font-size: 0.85rem; font-weight: 600; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+.primary-nav a { position: relative;
+  color: #111827;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600; font-family:var(--font-display),, Helvetica, Arial, sans-serif;
   padding: 0;
   transition: all 0.2s ease;
   display: flex;
@@ -136,9 +148,6 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); }
   gap: 0.6rem;
   flex-shrink: 0;
 }
-
-.btn-wa { background: var(--c-wa); color: var(--c-white); border-color: var(--c-wa); }
-.btn-wa:hover { background: var(--c-wa-h); border-color: var(--c-wa-h); box-shadow: 0 4px 18px rgba(37,211,102,.25); }
 
 .header-ctas .btn-wa {
   padding: 0.4rem 0.9rem;
@@ -380,7 +389,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); }
     font-size: 0.9rem;
   }
   .nav-accordion summary::after {
-    content: '▼';
+    content: 'â-¼';
     font-size: 0.9rem;
     transition: transform 0.3s;
   }
@@ -451,228 +460,171 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); }
   color: var(--c-primary);
 }
 
-.page-hero {
-  background: linear-gradient(135deg, #202A6C 0%, #2D3A8C 100%);
-  overflow: hidden; position: relative; padding-block: clamp(5rem, 9vw, 7.5rem);
-}
-.page-hero::before {
-  content: ''; position: absolute; inset: 0; pointer-events: none;
-  background:
-    radial-gradient(ellipse 65% 80% at 90% 30%, rgba(255,255,255,.12) 0%, transparent 65%),
-    radial-gradient(ellipse 50% 70% at 0% 90%, rgba(124,58,237,.24) 0%, transparent 65%),
-    radial-gradient(ellipse 80% 60% at 50% 50%, rgba(99,102,241,.08) 0%, transparent 70%);
-}
-.page-hero-inner {
-  position: relative; z-index: 1; max-width: var(--article-w); padding-inline: var(--edge); margin-inline: auto;
-}
-.page-hero h1 {
-  font-family: var(--font-display); font-size: clamp(2rem, 4.5vw, 3.2rem);
-  font-weight: 400; line-height: 1.15; color: var(--c-white); letter-spacing: -.02em; margin-bottom: 1.25rem;
-}
-.page-hero-lead {
-  font-size: clamp(.95rem, 1.5vw, 1.1rem);
-  color: rgba(255,255,255,.82); line-height: 1.75; max-width: 62ch;
-}
+.page-hero { background: linear-gradient(135deg, #202A6C 0%, #2D3A8C 100%); overflow: hidden; position: relative; padding-block: clamp(3.5rem, 6vw, 5.5rem); }
+.page-hero::before { content: ''; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(ellipse 65% 80% at 90% 30%, rgba(255,255,255,.12) 0%, transparent 65%), radial-gradient(ellipse 50% 70% at 0% 90%, rgba(124,58,237,.24) 0%, transparent 65%), radial-gradient(ellipse 80% 60% at 50% 50%, rgba(99,102,241,.08) 0%, transparent 70%); }
+.page-hero-inner { position: relative; z-index: 1; max-width: 1090px; padding-inline: var(--edge); margin-inline: auto; }
+.page-hero-eyebrow { display: inline-flex; align-items: center; gap: .5rem; font-size: .8rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: rgba(255,255,255,.75); margin-bottom: 1.25rem; }
+.page-hero h1 { font-family:var(--font-display),, Helvetica, Arial, sans-serif; font-size: clamp(2rem, 4.5vw, 3.2rem); font-weight: 400; line-height: 1.15; color: var(--c-white); letter-spacing: -.02em; margin-bottom: 1.25rem; }
+.page-hero h1 em { font-style: italic; font-weight: 300; color: rgba(255,255,255,.82); }
+.page-hero-lead { font-size: clamp(.95rem, 1.5vw, 1.1rem); color: rgba(255,255,255,.82); line-height: 1.75; max-width: 62ch; margin-bottom: 2rem; }
+
 
 .breadcrumb { background: var(--c-off-white); border-bottom: 1px solid var(--c-border); padding: .65rem 0; }
-.breadcrumb-inner {
-  display: flex; align-items: center; gap: .4rem; font-size: .8rem; color: var(--c-muted);
-  max-width: var(--article-w); padding-inline: var(--edge); margin-inline: auto;
-}
+.breadcrumb-inner { display: flex; align-items: center; gap: .4rem; font-size: .8rem; color: var(--c-muted); max-width: 1090px; padding-inline: var(--edge); margin-inline: auto; }
 .breadcrumb a { color: var(--c-muted); text-decoration: none; }
 .breadcrumb a:hover { color: var(--c-primary); }
+.breadcrumb-sep { color: var(--c-border); }
 
-.checklist-section { padding-block: clamp(3rem, 5vw, 4.5rem); }
-.checklist-wrap { width: 100%; max-width: var(--article-w); margin-inline: auto; padding-inline: var(--edge); }
+.why-band { background: var(--c-off-white); border-top: 1px solid var(--c-border); border-bottom: 1px solid var(--c-border); padding-block: clamp(2rem, 3.5vw, 3rem); }
+.why-band-inner { max-width: 1090px; padding-inline: var(--edge); margin-inline: auto; }
+.why-band h2 { font-family:var(--font-display),, Helvetica, Arial, sans-serif; font-size: clamp(1.3rem, 2vw, 1.65rem); font-weight: 400; color: #202A6C; letter-spacing: -.02em; margin-bottom: 1.25rem; }
+.why-items { display: flex; flex-direction: column; gap: .85rem; }
+.why-item { display: flex; align-items: flex-start; gap: 1rem; padding: 1rem 1.25rem; background: var(--c-white); border: 1px solid var(--c-border); border-radius: var(--radius-md); }
+.why-item__icon { font-size: 0.9rem; flex-shrink: 0; margin-top: .1rem; }
+.why-item__title { font-weight: 700; font-size: .95rem; color: #202A6C; margin-bottom: .25rem; }
+.why-item__desc { font-size: .88rem; color: var(--c-body); line-height: 1.6; }
 
-.checklist-container {
-  position: relative; background: var(--paper-cream); border-radius: 0 0 var(--radius-md) var(--radius-md);
-  padding: clamp(2rem, 5vw, 3.5rem); box-shadow:
-    0 2px 6px rgba(0,0,0,.06), 0 10px 40px rgba(0,0,0,.08), inset 0 1px 0 rgba(255,255,255,.5);
-  border: 1px solid rgba(0,0,0,.04);
-  background-image:
-    repeating-linear-gradient(
-      0deg, transparent, transparent 24px,
-      rgba(99,102,241,.04) 24px, rgba(99,102,241,.04) 25px
-    );
-  background-position: 0 0; position: relative; overflow: hidden;
-}
+.article-body { padding-block: clamp(2.5rem, 4vw, 4rem); }
+.article-body h2 { font-family:var(--font-display),, Helvetica, Arial, sans-serif; font-size: clamp(1.5rem, 2.5vw, 2rem); font-weight: 400; line-height: 1.25; letter-spacing: -.02em; color: #202A6C; margin-top: 3rem; margin-bottom: 1rem; padding-top: 2rem; border-top: 1px solid var(--c-border); }
+.article-body h2:first-of-type { border-top: none; padding-top: 0; margin-top: 0; }
+.article-body h3 { font-family: var(--font-body); font-size: 0.9rem; font-weight: 600; color: #202A6C; margin-top: 2rem; margin-bottom: .6rem; }
+.article-body p { margin-bottom: 1.25rem; line-height: 1.75; color: var(--c-body); max-width: 68ch; }
+.article-body ul { list-style: none; margin: 1rem 0 1.5rem 0; display: flex; flex-direction: column; gap: .6rem; }
+.article-body ul li { padding-left: 1.25rem; position: relative; line-height: 1.65; color: var(--c-body); }
+.article-body ul li::before { content: ''; position: absolute; left: 0; top: .7em; width: 5px; height: 5px; border-radius: 50%; background: var(--c-page-accent); }
 
-.checklist-container::before {
-  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 20px;
-  background: linear-gradient(180deg, rgba(0,0,0,.02) 0%, transparent 100%); pointer-events: none;
-}
+.req-card { border-left: 4px solid var(--c-page-accent); border-radius: 0 var(--radius-md) var(--radius-md) 0; background: var(--c-off-white); padding: 1.25rem 1.5rem; margin: 1.75rem 0; max-width: 680px; }
+.req-card__header { display: flex; align-items: center; gap: .75rem; margin-bottom: .6rem; }
+.req-card__icon { font-size: 1.0rem; }
+.req-card__title { font-weight: 700; font-size: 1rem; color: #202A6C; }
+.req-card__meta { font-size: .78rem; color: var(--c-muted); margin-top: .1rem; }
+.req-card p { font-size: .9rem; line-height: 1.65; color: var(--c-body); margin: 0; }
 
-.checklist-title {
-  font-family: var(--font-display); font-size: clamp(1.75rem, 4vw, 2.5rem);
-  font-weight: 400; color: var(--c-dark); margin-bottom: 1.25rem; letter-spacing: -.01em;
-}
+.cost-table { width: 100%; max-width: 640px; border-collapse: collapse; font-size: .9rem; margin: 1.5rem 0; }
+.cost-table th { text-align: left; padding: .6rem .8rem; background: #202A6C; color: rgba(255,255,255,.95); font-weight: 600; font-size: .78rem; letter-spacing: .04em; text-transform: uppercase; }
+.cost-table th:last-child { text-align: right; }
+.cost-table td { padding: .65rem .8rem; border-bottom: 1px solid var(--c-border); color: var(--c-body); vertical-align: top; }
+.cost-table td:last-child { text-align: right; font-weight: 600; color: #202A6C; }
+.cost-table tr.total td { border-bottom: none; font-weight: 700; background: var(--c-off-white); }
+.cost-table tr.total td:last-child { color: var(--c-page-accent); }
 
-.checklist-items {
-  display: flex; flex-direction: column; gap: 1.2rem;
-}
+.callout-band { background: var(--c-page-accent-l); border-left: 3px solid var(--c-page-accent); border-radius: 0 var(--radius-md) var(--radius-md) 0; padding: 1.25rem 1.5rem; margin: 2rem 0 0 0; max-width: 68ch; }
+.callout-band p { margin: 0; color: #202A6C; font-size: .95rem; line-height: 1.65; }
+.callout-band strong { color: var(--c-page-accent); }
 
-.checklist-item {
-  display: flex; align-items: flex-start; gap: 1rem; padding: 0.75rem 0;
-  cursor: pointer; transition: opacity .2s; position: relative; animation: slideIn 0.5s ease-out backwards;
-}
+.visa-section { background: var(--c-dark); padding-block: clamp(2.5rem, 4vw, 3.5rem); margin-block: 0; position: relative; overflow: hidden; }
+.visa-section::before { content: ''; position: absolute; right: -10%; top: -50%; width: 50%; height: 200%; background: radial-gradient(ellipse, rgba(99,102,241,.12) 0%, transparent 65%); pointer-events: none; }
+.visa-section-inner { max-width: 1090px; padding-inline: var(--edge); margin-inline: auto; position: relative; z-index: 1; }
+.visa-section h2 { font-family:var(--font-display),, Helvetica, Arial, sans-serif; font-size: clamp(1.4rem, 2.5vw, 1.85rem); font-weight: 400; color: var(--c-white); letter-spacing: -.02em; margin-bottom: 1rem; }
+.visa-section p { color: rgba(255,255,255,.88); line-height: 1.7; margin-bottom: 1.25rem; max-width: 64ch; }
+.visa-links { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.5rem; }
+.visa-links a { font-size: .85rem; font-weight: 600; color: rgba(255,255,255,.90); background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.18); padding: .45em 1em; border-radius: var(--radius-sm); text-decoration: none; transition: background .18s, border-color .18s; }
+.visa-links a:hover { background: rgba(99,102,241,.28); border-color: var(--c-page-accent); color: #fff; }
 
-.checklist-input {
-  appearance: none; -webkit-appearance: none; -moz-appearance: none;
-  flex-shrink: 0; width: 24px; height: 24px; border: 2px solid var(--c-accent);
-  border-radius: 4px; background: var(--c-white); cursor: pointer; margin: 0; margin-top: 2px;
-  transition: all .3s cubic-bezier(.34,.1,.68,.55);
-}
+.tools-section { background: var(--c-white); padding-block: clamp(2.5rem, 4vw, 3.5rem); border-top: 1px solid var(--c-border); }
+.tools-section-inner { max-width: 1090px; padding-inline: var(--edge); margin-inline: auto; }
+.tools-header { margin-bottom: 1.5rem; }
+.section-title { font-family: var(--font-display); font-size: clamp(1.4rem, 2.5vw, 1.85rem); font-weight: 400; letter-spacing: -.02em; color: #202A6C; margin-bottom: .4rem; }
+.guides-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+.tool-card { border: 1px solid var(--c-border); border-radius: var(--radius-md); padding: 1.25rem 1.4rem; background: var(--c-off-white); text-decoration: none; color: var(--c-body); display: flex; align-items: center; gap: 1rem; transition: border-color .18s, box-shadow .18s; }
+.tool-card:hover { border-color: var(--c-page-accent); background: var(--c-white); box-shadow: var(--shadow-sm); }
+.tool-card__icon { width: 40px; height: 40px; border-radius: var(--radius-sm); background: var(--c-page-accent-l); display: flex; align-items: center; justify-content: center; font-size: 0.9rem; flex-shrink: 0; transition: background .18s; }
+.tool-card:hover .tool-card__icon { background: var(--c-violet-l); }
+.tool-card__body { flex: 1; }
+.tool-card__type { font-size: .7rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--c-page-accent); }
+.tool-card__title { font-size: .88rem; font-weight: 600; color: #202A6C; line-height: 1.3; }
 
-.checklist-input:checked {
-  background: var(--c-accent); border-color: var(--c-accent);
-  animation: scaleCheck .4s cubic-bezier(.34,.1,.68,.55);
-}
-
-.checklist-input:checked::after {
-  content: '✓'; display: flex; align-items: center; justify-content: center;
-  color: var(--c-white); font-size: 16px; font-weight: bold;
-}
-
-@keyframes slideIn {
-  from { opacity: 0; transform: translateX(-12px); }
-  to { opacity: 1; transform: translateX(0); }
-}
-
-.checklist-item:nth-child(1) { animation-delay: 0.05s; }
-.checklist-item:nth-child(2) { animation-delay: 0.1s; }
-.checklist-item:nth-child(3) { animation-delay: 0.15s; }
-.checklist-item:nth-child(4) { animation-delay: 0.2s; }
-.checklist-item:nth-child(5) { animation-delay: 0.25s; }
-.checklist-item:nth-child(6) { animation-delay: 0.3s; }
-.checklist-item:nth-child(7) { animation-delay: 0.35s; }
-.checklist-item:nth-child(8) { animation-delay: 0.4s; }
-.checklist-item:nth-child(9) { animation-delay: 0.45s; }
-.checklist-item:nth-child(10) { animation-delay: 0.5s; }
-
-.checklist-item:hover { opacity: .75; }
-
-.checklist-text {
-  color: #1a202c; background-color: rgba(255, 235, 59, .3);
-  padding: 0.2em 0.4em; border-radius: 3px; transition: all .3s ease;
-}
-
-.checklist-item.checked .checklist-text {
-  color: rgba(107, 114, 128, .7); background-color: transparent;
-}
-
-.checklist-text {
-  font-size: 0.9rem; color: var(--c-body); transition: all .3s ease; flex: 1; line-height: 1.5;
-}
-
-.checklist-meta {
-  font-size: .85rem; color: var(--c-muted); margin-top: .25rem; display: block;
-}
-
-.checklist-progress {
-  margin-top: 2.5rem; padding-top: 2rem; border-top: 1px dashed rgba(0,0,0,.12);
-}
-
-.progress-label {
-  font-size: .9rem; font-weight: 600; color: var(--c-dark); margin-bottom: .75rem;
-  display: flex; justify-content: space-between; align-items: center;
-}
-
-.progress-bar {
-  width: 100%; height: 8px; background: rgba(0,0,0,.08); border-radius: 4px; overflow: hidden;
-}
-
-.progress-fill {
-  height: 100%; background: linear-gradient(90deg, var(--c-accent) 0%, var(--c-primary) 100%);
-  border-radius: 4px; transition: width .4s cubic-bezier(.34,.1,.68,.55);
-  box-shadow: 0 0 8px rgba(99,102,241,.3);
-}
-
-.reset-btn {
-  margin-top: 1.5rem; padding: .6em 1.2em; background: var(--c-off-white);
-  color: var(--c-dark); border: 1.5px solid var(--c-border); border-radius: var(--radius-sm);
-  font-family: var(--font-body); font-size: .85rem; font-weight: 600; cursor: pointer;
-  transition: all .2s ease; text-decoration: none;
-}
-
-.reset-btn:hover {
-  background: var(--c-white); border-color: var(--c-accent); color: var(--c-accent);
-}
-
-
-.site-footer {
-  background: var(--c-dark-2); padding-block: clamp(3rem, 5vw, 4.5rem);
-  color: rgba(255,255,255,.92); margin-top: clamp(3rem, 5vw, 4.5rem);
-}
-.footer-top { display: grid; grid-template-columns: 1.6fr repeat(4, 1fr); gap: 3rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,.1); }
+.site-footer { background: var(--c-dark-2); padding-block: var(--section-py); color: rgba(255,255,255,.92); }
+.footer-top { display: grid; grid-template-columns: 1.6fr repeat(4, 1fr); gap: 3rem; padding-bottom: 3rem; border-bottom: 1px solid var(--c-border-dark); }
 .footer-logo { display: flex; align-items: center; gap: .5rem; text-decoration: none; margin-bottom: .8rem; }
-.footer-logo-mark {
-  width: 30px; height: 30px; border-radius: 6px;
-  background: linear-gradient(135deg, var(--c-primary) 0%, #7C3AED 100%);
-  display: flex; align-items: center; justify-content: center;
-  color: #fff; font-family: var(--font-display); font-size: .95rem; font-weight: 500; font-style: italic;
-}
-.footer-logo-text { font-family: var(--font-body); font-weight: 700; font-size: .95rem; color: var(--c-white); }
+.footer-logo-mark { width: 30px; height: 30px; border-radius: 6px; background: linear-gradient(135deg, var(--c-primary) 0%, var(--c-violet) 100%); display: flex; align-items: center; justify-content: center; color: #fff; font-family:var(--font-display),, Helvetica, Arial, sans-serif; font-size: .95rem; font-weight: 500; font-style: italic; }
+.footer-logo-text { font-family: var(--font-body); font-weight: 700; font-size: .95rem; color: var(--c-white); letter-spacing: -.01em; }
 .footer-tagline { font-size: .82rem; line-height: 1.6; max-width: 240px; color: rgba(255,255,255,.88); }
+.footer-social { display: flex; gap: .6rem; margin-top: 1.25rem; }
+.footer-social a { width: 32px; height: 32px; border-radius: var(--radius-sm); background: rgba(255,255,255,.08); color: rgba(255,255,255,.88); display: flex; align-items: center; justify-content: center; font-size: .8rem; font-weight: 700; text-decoration: none; transition: background .18s, color .18s; }
+.footer-social a:hover { background: var(--c-primary); color: var(--c-white); }
 .footer-col-title { font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.70); margin-bottom: 1.1rem; }
 .footer-col ul { display: flex; flex-direction: column; gap: .55rem; }
 .footer-col ul a { font-size: .83rem; color: rgba(255,255,255,.88); text-decoration: none; transition: color .15s; }
 .footer-col ul a:hover { color: var(--c-white); }
 .footer-bottom { display: flex; align-items: center; justify-content: space-between; padding-top: 2rem; gap: 1rem; flex-wrap: wrap; }
 .footer-copy { font-size: .8rem; }
+.footer-legal { display: flex; gap: 1.5rem; }
+.footer-legal a { font-size: .8rem; color: rgba(255,255,255,.75); text-decoration: none; transition: color .15s; }
+.footer-legal a:hover { color: var(--c-white); }
 
+@media (max-width: 1100px) { .footer-top { grid-template-columns: 1fr 1fr 1fr; } }
 @media (max-width: 960px) {
   .primary-nav { display: none; }
   .header-hamburger { display: flex; }
   .footer-top { grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .guides-row { grid-template-columns: 1fr; }
 }
-
-
-
-
-
-
-
-
-
-  to { opacity: 1; }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media (max-width: 640px) {
-  
-  
-  
-  
-}
-
 @media (max-width: 640px) {
   .page-hero h1 { font-size: 1.75rem; }
   .footer-top { grid-template-columns: 1fr; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; }
+  .cost-table { font-size: .82rem; }
+  .cost-table th, .cost-table td { padding: .5rem .6rem; }
+}
+/* Make entire cards clickable */
+.path-card::before,
+.article-card::before,
+.tool-card::before,
+.guide-card::before,
+.visa-card::before,
+.visa-category-card::before,
+.program-card::before,
+.topic-card::before,
+.checklist-card::before,
+.related-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.path-card,
+.article-card,
+.tool-card,
+.guide-card,
+.visa-card,
+.visa-category-card,
+.program-card,
+.topic-card,
+.checklist-card,
+.related-card {
+  position: relative;
+}
+
+/* Ensure child links are clickable above the overlay */
+.path-card__cta,
+.article-card__link,
+.tool-card__cta,
+.guide-card__cta,
+.visa-card__cta,
+.visa-category-card__cta,
+.program-card__cta,
+.topic-card__cta,
+.checklist-card__cta,
+.related-card {
+  position: relative;
+  z-index: 2;
+}
+
+/* Image sizing: 50-70% of column width, centered */
+figure img {
+  max-width: 100%;
+  width: 100%;
+  margin-inline: auto;
+  display: block;
+  height: auto;
 }
 
 <style>
 /* ============================================================
-   CANONICAL HEADER + NAV CSS (auto-injected - do not edit here)
+   CANONICAL HEADER + NAV CSS (auto-injected -  do not edit here)
    ============================================================ */
 .site-header {
   background: white;
@@ -709,7 +661,11 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); }
   justify-content: center;
   align-items: center;
 }
-.primary-nav a { position: relative; color: #111827; text-decoration: none; font-size: 0.85rem; font-weight: 600; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+.primary-nav a { position: relative;
+  color: #111827;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600; font-family:var(--font-display),, Helvetica, Arial, sans-serif;
   padding: 0;
   transition: all 0.2s ease;
   display: flex;
@@ -723,9 +679,6 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); }
   gap: 0.6rem;
   flex-shrink: 0;
 }
-.btn-wa { background: var(--c-wa); color: var(--c-white); border-color: var(--c-wa); }
-.btn-wa:hover { background: var(--c-wa-h); border-color: var(--c-wa-h); box-shadow: 0 4px 18px rgba(37,211,102,.25); }
-
 .header-ctas .btn-wa {
   padding: 0.4rem 0.9rem;
   font-size: 0.9rem;
@@ -903,7 +856,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); }
     font-size: 0.9rem;
   }
   .nav-accordion summary::after {
-    content: '▼';
+    content: 'â-¼';
     font-size: 0.9rem;
     transition: transform 0.3s;
   }
@@ -934,7 +887,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); }
   .header-hamburger { display: flex; }
 }
 /* ============================================================
-   CANONICAL FOOTER CSS (auto-injected - do not edit here)
+   CANONICAL FOOTER CSS (auto-injected -  do not edit here)
    ============================================================ */
 .site-footer {
   background: var(--footer-bg, #0D1117);
@@ -1071,7 +1024,23 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); }
   .footer-legal-links { gap: 1rem; }
   .footer-legal-links a { font-size: 0.9rem; }
 }
+/* Image sizing: 50-70% of column width, centered */
+figure img {
+  max-width: 100%;
+  width: 100%;
+  margin-inline: auto;
+  display: block;
+  height: auto;
+}
 /* PROGRESS BAR */
+.progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: linear-gradient(90deg, #4F46E5, #6366F1, #4F46E5); width: 2%; min-width: 2%; z-index: 10001; transition: width 0.1s linear; box-shadow: 0 2px 8px rgba(79,70,229,.18); }
+@media (prefers-reduced-motion: reduce) { .progress-bar { transition: none; } }
+/* Card underline fixes */
+.visa-card,.article-card,.tool-card,.guide-card,.visa-category-card,.program-card,.topic-card,.checklist-card,.related-card,.sidebar-card{text-decoration:none;}
+.visa-card *,.article-card *,.tool-card *,.guide-card *,.visa-category-card *,.program-card *,.topic-card *,.checklist-card *,.related-card *,.sidebar-card *{text-decoration:none;}
+.visa-card:hover,.article-card:hover,.tool-card:hover,.guide-card:hover,.visa-category-card:hover,.program-card:hover,.topic-card:hover,.checklist-card:hover,.related-card:hover,.sidebar-card:hover{text-decoration:none;}
+
+.breadcrumb-meta { color: var(--c-muted); }
 </style>
 <link rel="stylesheet" href="/shared/css/card-fixes.css">
 <link rel="stylesheet" href="/shared/css/responsive-images.css">
@@ -1081,6 +1050,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); }
 <noscript><link rel="stylesheet" href="../../css/fonts.css"/></noscript>
 </head>
 <body>
+  <div class="progress-bar" id="progress-bar" aria-label="Reading progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
 <header class="site-header" id="site-header" role="banner">
 <div class="header-inner">
 
@@ -1344,157 +1314,252 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); }
 
 
 
-<section class="page-hero">
+
+
+<section class="page-hero" aria-labelledby="page-title">
 <div class="page-hero-inner">
-  <h1>Visa Extension Checklist</h1>
-  <p class="page-hero-lead">Prepare to extend your long-stay visa. Required documents for Non-O, Non-B, ED, and other extensions.</p>
-</div>
-</section>
-
-
-<section class="checklist-section">
-<div class="checklist-wrap">
-  <h2 class="checklist-title">What to Prepare</h2>
-
-  <p style="font-size: 0.9rem; line-height: 1.75; color: var(--c-body); margin-bottom: 2.5rem; max-width: 68ch;">Extending a long-stay visa (Non-O, Non-B, ED, DTV, etc.) requires specific documents based on your visa type and purpose. File your extension 7-14 days before your current visa expires. Use this checklist to gather everything you need before visiting immigration.</p>
-
-  <p style="font-size: 2rem; color: var(--c-muted); margin-bottom: 2rem; font-style: italic; line-height: 1.6; font-weight: 500;">
-    💡 <strong>Pro Tip:</strong> When you receive your extension stamp, write down the expiry date
-    <button id="pro-tip-bubble-btn" style="background: var(--c-primary); color: white; padding: 0.5rem 1rem; border: none; border-radius: 6px; font-weight: 600; cursor: pointer; font-size: 0.9rem; transition: background 0.2s;">Set Expiry Date</button>
+  <p class="page-hero-eyebrow">Immigration Compliance</p>
+  <h1 id="page-title">TM30 Address Registration <em>(Landlord Notification)</em></h1>
+  <p class="page-hero-lead">
+    Essential guide to Thailand's TM30 address notification requirement. Understand who files, the 24-hour deadline, landlord responsibility, how to verify registration, and penalties for non-compliance.
   </p>
+</div>
+</section>
 
-  <div id="pro-tip-modal" class="pro-tip-modal">
-    <div class="pro-tip-modal-content">
-      <button class="pro-tip-modal-close" onclick="document.getElementById('pro-tip-modal').classList.remove('active')">×</button>
-      <div class="pro-tip-modal-inner">
-        <span class="pro-tip-modal-icon">📅</span>
-        <div class="pro-tip-modal-label">Never Miss Your Visa Expiry</div>
-        <div class="pro-tip-modal-description">When immigration stamps your extension approval, enter your visa expiry date to automatically add it to your calendar with reminders for 7 days and 1 day before expiry.</div>
+<nav class="breadcrumb" aria-label="Breadcrumb">
+<div class="breadcrumb-inner">
+  <a href="../../index.html">Home</a>
+  <span class="breadcrumb-sep" aria-hidden="true">/</span>
+  <a href="/immigration/index.html">Immigration</a>
+  <span class="breadcrumb-sep" aria-hidden="true">/</span>
+  <span aria-current="page">TM30 Address Registration</span>
 
-        <form id="visa-date-form" style="margin-top: 1.5rem;">
-          <div style="margin-bottom: 1rem;">
-            <label for="visa-expiry-input" style="display: block; font-size: 0.95rem; margin-bottom: 0.5rem; font-weight: 500;">Visa Expiry Date</label>
-            <input type="text" id="visa-expiry-input" placeholder="DD/MM/YYYY" maxlength="10" style="width: 100%; padding: 0.8em; font-size: 0.9rem; border: 2px solid rgba(255,255,255,.5); border-radius: 8px; background: rgba(255,255,255,.15); color: #fff; font-family: var(--font-body); transition: all .25s ease;" />
-            <style>
-              #visa-expiry-input::placeholder {
-                color: rgba(255,255,255,.8);
-              }
-/* PROGRESS BAR */
-            </style>
-            <small style="display: block; margin-top: 0.4rem; opacity: 0.85;">Example: 15/06/2026</small>
-          </div>
-          <button type="submit" class="pro-tip-modal-button" style="width: 100%; text-align: center;">ADD</button>
-        </form>
+
+<section class="why-band" aria-labelledby="quick-facts-heading">
+<div class="why-band-inner">
+  <h2 id="quick-facts-heading">What you need to know about TM30</h2>
+  <div class="why-items">
+    <div class="why-item">
+      <div class="why-item__icon" aria-hidden="true">ðŸ </div>
+      <div class="why-item__body">
+        <div class="why-item__title">Landlord's responsibility, not yours</div>
+        <div class="why-item__desc">Your landlord, property owner, or accommodation manager must file the TM30 within 24 hours of your arrival. You are not required to file it yourself, though you must ensure it is filed.</div>
       </div>
     </div>
-  </div>
-
-  <div class="checklist-container">
-    <div class="checklist-items" id="checklist">
-      <label class="checklist-item">
-        <input type="checkbox" class="checklist-input" data-item="expiry-date">
-        <div>
-          <div class="checklist-text">Know your visa expiry date</div>
-          <small class="checklist-meta">File 7-14 days before expiration</small>
-        </div>
-      </label>
-
-      <label class="checklist-item">
-        <input type="checkbox" class="checklist-input" data-item="passport">
-        <div>
-          <div class="checklist-text">Original passport with current visa and entry stamps</div>
-          <small class="checklist-meta">Immigration must see all pages with stamps</small>
-        </div>
-      </label>
-
-      <label class="checklist-item">
-        <input type="checkbox" class="checklist-input" data-item="tm47-form">
-        <div>
-          <div class="checklist-text">TM.47 form (if required for your visa type)</div>
-          <small class="checklist-meta">Check with immigration; not all extensions need this</small>
-        </div>
-      </label>
-
-      <label class="checklist-item">
-        <input type="checkbox" class="checklist-input" data-item="financial-docs">
-        <div>
-          <div class="checklist-text">Financial documents for your visa type</div>
-          <small class="checklist-meta">Bank statements, income letters, or proof of funds</small>
-        </div>
-      </label>
-
-      <label class="checklist-item">
-        <input type="checkbox" class="checklist-input" data-item="supporting-docs">
-        <div>
-          <div class="checklist-text">Supporting documents (visa-type specific)</div>
-          <small class="checklist-meta">Employment letter (Non-B), school letter (ED), sponsor letter, etc.</small>
-        </div>
-      </label>
-
-      <label class="checklist-item">
-        <input type="checkbox" class="checklist-input" data-item="address-proof">
-        <div>
-          <div class="checklist-text">Proof of current address</div>
-          <small class="checklist-meta">Utility bill, rental contract, or TM.30 registration</small>
-        </div>
-      </label>
-
-      <label class="checklist-item">
-        <input type="checkbox" class="checklist-input" data-item="photos">
-        <div>
-          <div class="checklist-text">Passport-sized photos (4x6 cm)</div>
-          <small class="checklist-meta">Usually 2-4 photos; check with immigration first</small>
-        </div>
-      </label>
-
-      <label class="checklist-item">
-        <input type="checkbox" class="checklist-input" data-item="photocopies">
-        <div>
-          <div class="checklist-text">Photocopies of key documents</div>
-          <small class="checklist-meta">Passport bio, visa page, TM.30, supporting docs</small>
-        </div>
-      </label>
-
-      <label class="checklist-item">
-        <input type="checkbox" class="checklist-input" data-item="fee">
-        <div>
-          <div class="checklist-text">Extension fee (1,900 THB)</div>
-          <small class="checklist-meta">Standard fee for most visa extensions</small>
-        </div>
-      </label>
-
-      <label class="checklist-item">
-        <input type="checkbox" class="checklist-input" data-item="office-confirmation">
-        <div>
-          <div class="checklist-text">Confirm office hours and location</div>
-          <small class="checklist-meta">Chiang Mai: Mae Rim, Mon-Fri 8:30 AM-4:30 PM</small>
-        </div>
-      </label>
-    </div>
-
-    <div class="checklist-progress">
-      <div class="progress-label">
-        <span>Preparation Status</span>
-        <span id="progress-text">0/10</span>
+    <div class="why-item">
+      <div class="why-item__icon" aria-hidden="true">â°</div>
+      <div class="why-item__body">
+        <div class="why-item__title">24-hour deadline after arrival</div>
+        <div class="why-item__desc">The TM30 must be filed within 24 hours of you moving into the accommodation. This includes your first arrival in Thailand and any subsequent moves within the country.</div>
       </div>
-      <div class="progress-bar">
-        <div class="progress-fill" id="progress-fill" style="width: 0%"></div>
-      </div>
-      <button class="reset-btn" id="reset-btn">Reset Checklist</button>
     </div>
-
-    <p style="font-size: 0.85rem; line-height: 1.65; color: var(--c-muted); margin-top: 2.5rem; padding-top: 2rem; border-top: 1px dashed rgba(0,0,0,.12); max-width: 68ch;"><strong>Disclaimer:</strong> <a href="https://www.immigration.go.th/" target="_blank" rel="noopener">Thai immigration</a> requirements and documents vary by visa type and nationality. Verify specific requirements with your local <a href="https://www.immigration.go.th/" target="_blank" rel="noopener">immigration</a> office before applying. This checklist is a guide only and not a substitute for official documentation.</p>
+    <div class="why-item">
+      <div class="why-item__icon" aria-hidden="true">âœ�-</div>
+      <div class="why-item__body">
+        <div class="why-item__title">Required for visa extensions</div>
+        <div class="why-item__desc">Immigration offices require proof of current TM30 registration when processing visa extensions. Missing TM30 registration can result in visa extension denial.</div>
+      </div>
+    </div>
+    <div class="why-item">
+      <div class="why-item__icon" aria-hidden="true">âš ï¸</div>
+      <div class="why-item__body">
+        <div class="why-item__title">Penalties for non-compliance</div>
+        <div class="why-item__desc">Failure to register can result in fines up to 5,000 THB and complications with visa extensions or renewal applications.</div>
+      </div>
+    </div>
   </div>
 </div>
 </section>
 
+<article class="article-body">
+<div class="article-wrap">
 
+<h2>What is TM30?</h2>
+<p>
+  The TM30 is an official notification form that registers the address of a foreign national staying in Thailand. It is filed by the property owner or manager (not the foreigner) with the local immigration office within 24 hours of the foreigner's arrival or relocation.
+</p>
+<p>
+  The TM30 is not a visa extension or a separate permission document. It is simply an address registration system that allows Thai immigration to track where foreigners are living. However, it is a mandatory compliance requirement, and the record must be current when you apply for visa extensions or renewals.
+</p>
 
+<figure style="text-align: center; margin: 2rem 0 0 0;">
+  <img
+    src="../../images/cmlocals chiang mai locals getting around official residence.webp"
+    alt="CMLocals Chiang Mai Locals TM30 Address Reporting official residence registration"
+    style="max-width: 70%; height: auto; border-radius: 12px;"
+  />
+</figure>
 
+<h2>Who must file the TM30?</h2>
+<p>
+  The legal obligation to file the TM30 falls on the property owner, landlord, or accommodation manager. This means:
+</p>
+<ul>
+  <li>If you rent a house or apartment, your landlord or property manager files the TM30</li>
+  <li>If you own your property, you file the TM30 yourself</li>
+  <li>If you stay in a hotel or resort, the management files it</li>
+  <li>If you stay with a Thai friend or family member, they file it</li>
+</ul>
+<p>
+  As the foreigner, you are not legally required to submit the form yourself. However, you are responsible for ensuring it is filed. If your landlord fails to file it, you may face complications when renewing your visa or encounter immigration officials during a check.
+</p>
 
+<h2>The 24-hour deadline</h2>
+<p>
+  The TM30 must be filed within 24 hours of your arrival at an address. This 24-hour period begins when you physically occupy the accommodation, not when you sign a lease or agreement.
+</p>
+<p>
+  The deadline applies in the following situations:
+</p>
+<ul>
+  <li>Your first arrival in Thailand (if you have a long-stay visa)</li>
+  <li>When you move to a new address within Thailand</li>
+  <li>When you return to Thailand after leaving the country</li>
+</ul>
+<p>
+  In practice, many landlords file the TM30 on the same day you arrive or within a few days. Immigration is generally lenient with the 24-hour deadline as long as the registration is current, but it is technically a requirement.
+</p>
+
+<div class="callout-band">
+  <p><strong>Important:</strong> When you change accommodation, your landlord must file a new TM30 within 24 hours of your move. You cannot rely on an old TM30 from a previous address. This is particularly important for visa extensions.</p>
+</div>
+
+<h2>How TM30 is filed</h2>
+
+<h3>In-person filing at immigration office</h3>
+<p>
+  Most landlords file the TM30 in person at the local immigration office. They complete the form, attach a photocopy of your passport, and submit it. The office processes it immediately and stamps the form as proof of registration.
+</p>
+
+<h3>Online filing</h3>
+<p>
+  Thailand has an online TM30 system (tm30.immigration.go.th) that allows property owners to file electronically. This is more convenient and avoids queues, but not all landlords use the online system.
+</p>
+
+<h3>What happens if your landlord doesn't file?</h3>
+<p>
+  If your landlord fails to file the TM30, you have several options:
+</p>
+<ul>
+  <li>Ask your landlord to file it immediately</li>
+  <li>File it yourself using the online system (though legally the landlord is responsible)</li>
+  <li>Contact immigration to check your status and ask what action is needed</li>
+</ul>
+<p>
+  In most cases, a landlord can file a late TM30 and immigration will accept it. However, if you are caught without current TM30 registration during an immigration check, you may face fines.
+</p>
+
+<h2>Verifying your TM30 registration</h2>
+
+<p>
+  You can verify that your TM30 has been filed by:
+</p>
+<ul>
+  <li>Asking your landlord for proof (a stamped copy of the TM30 form)</li>
+  <li>Visiting the immigration office and asking to check your record</li>
+  <li>Checking the online system (if you have login credentials)</li>
+</ul>
+
+<p>
+  Before applying for a visa extension, it is wise to verify that your TM30 is current. Immigration will check this when processing your extension, and a missing or outdated registration can delay or deny your application.
+</p>
+
+<div class="req-card">
+  <div class="req-card__header">
+    <span class="req-card__icon" aria-hidden="true">ðŸ¢</span>
+    <div>
+      <div class="req-card__title">Chiang Mai Immigration Office (Main)</div>
+      <div class="req-card__meta">71 Moo 3, Airport Road, Suthep, Muang District | Can verify TM30 registration or assist with filing</div>
+    </div>
+  </div>
+  <p>If your landlord has not filed the TM30 or you need to verify your registration, visit the main immigration office at 71 Moo 3, Airport Road, Suthep Sub-district, Muang District, Chiang Mai 50200. Staff can check your current address on file and advise if action is needed. You may also contact Central Festival secondary office to verify (services subject to change).</p>
+</div>
+
+<figure style="text-align: center; margin: 2rem 0 0 0;">
+  <img
+    src="../../images/cmlocals chiang mai locals getting around inn.webp"
+    alt="CMLocals Chiang Mai Locals TM30 Address Reporting accommodation property"
+    style="max-width: 70%; height: auto; border-radius: 12px;"
+  />
+</figure>
+
+<h2>TM30 and visa extensions</h2>
+<p>
+  When you apply for a visa extension or renewal, immigration will check your TM30 registration. If your address on file does not match your current residence, or if there is no current TM30 on record, your extension application may be denied or delayed.
+</p>
+<p>
+  This is a common reason for visa extension rejections. Always ensure your TM30 is current before applying for an extension. If you have recently moved, have your new landlord file the TM30 as soon as possible.
+</p>
+
+<h2>Penalties for non-compliance</h2>
+
+<table class="cost-table" aria-label="TM30 penalties">
+  <thead>
+    <tr><th>Situation</th><th>Penalty</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Missing or late TM30 discovered during check</td><td>Up to 5,000 THB fine</td></tr>
+    <tr><td>TM30 filed late (after initial deadline)</td><td>Usually accepted; minor fine if any</td></tr>
+    <tr><td>Visa extension denied due to missing TM30</td><td>Application rejection; required to file TM30 before reapplying</td></tr>
+    <tr><td>Repeated non-compliance</td><td>Immigration record notation; potential visa renewal complications</td></tr>
+  </tbody>
+</table>
+
+</div>
+</article>
+
+<section class="visa-section" aria-labelledby="visa-heading">
+<div class="visa-section-inner">
+  <h2 id="visa-heading">TM30 and your visa type</h2>
+  <p>
+    The TM30 requirement applies to all visa types that permit residence in Thailand. Whether you hold a long-stay visa, tourist visa, or any other category that allows you to stay at a non-hotel address, the TM30 must be filed.
+  </p>
+  <p>
+    Hotels and resorts handle TM30 filing automatically for guests. The requirement only applies if you are staying at residential accommodation (house, apartment, condo, etc.).
+  </p>
+  <div class="visa-links" role="list">
+    <a href="/visas/long-stay/" role="listitem">Long-Stay Visas Overview</a>
+    <a href="/immigration/90-day-reporting.html" role="listitem">90-Day Reporting (TM.47)</a>
+    <a href="/immigration/address-change.html" role="listitem">Address Change Procedures</a>
+    <a href="/immigration/index.html" role="listitem">Immigration Compliance Hub</a>
+  </div>
+</div>
+</section>
+
+<script>
+(function(){
+  'use strict';
+  var header=document.getElementById('site-header');
+  window.addEventListener('scroll',function(){header.classList.toggle('scrolled',window.scrollY>10);},{passive:true});
+  var hamburger=document.getElementById('hamburger');
+  var mobileNav=document.getElementById('mobile-nav');
+  hamburger.addEventListener('click',function(){
+    var isOpen=hamburger.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded',isOpen);
+    mobileNav.hidden=!isOpen;
+    mobileNav.classList.toggle('open',isOpen);
+    document.body.style.overflow=isOpen?'hidden':'';
+  });
+  mobileNav.querySelectorAll('a').forEach(function(link){
+    link.addEventListener('click',function(){
+      hamburger.classList.remove('open');
+      hamburger.setAttribute('aria-expanded','false');
+      mobileNav.hidden=true;
+      mobileNav.classList.remove('open');
+      document.body.style.overflow='';
+    });
+  });
+})();
+</script>
+<script>
+window.CHATY_CONFIG={channels:[{name:"Facebook_Messenger",label:"Facebook Messenger",url:"https://m.me/cmlocals",svg:'<svg viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="19.4395" cy="19.4395" r="19.4395" fill="#0084FF"/><path d="M19.5 9.5C13.701 9.5 9 13.748 9 19.074c0 3.014 1.474 5.702 3.778 7.456V30l3.294-1.81c.878.244 1.81.376 2.778.376 5.799 0 10.5-4.248 10.5-9.574S25.299 9.5 19.5 9.5zm1.04 12.878l-2.674-2.852-5.22 2.852 5.74-6.096 2.74 2.852 5.154-2.852-5.74 6.096z" fill="white"/></svg>'},{name:"WhatsApp",label:"WhatsApp",url:"https://wa.me/66801202074",svg:'<svg viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="19.4395" cy="19.4395" r="19.4395" fill="#25D366"/><path d="M19.5 9.5C14.253 9.5 10 13.753 10 19c0 1.67.436 3.285 1.265 4.717L10 29l5.418-1.234A9.454 9.454 0 0019.5 28.5c5.247 0 9.5-4.253 9.5-9.5s-4.253-9.5-9.5-9.5zm5.508 13.142c-.232.652-1.345 1.247-1.853 1.29-.508.043-.982.228-3.306-.688-2.806-1.107-4.573-3.974-4.71-4.16-.137-.186-1.12-1.49-1.12-2.843 0-1.352.71-2.018.96-2.293.25-.275.546-.344.728-.344.183 0 .365.002.525.01.168.007.394-.064.617.47.232.556.786 1.92.855 2.06.069.138.115.3.023.485-.093.186-.139.3-.275.462-.137.162-.288.362-.412.486-.137.137-.28.286-.12.56.16.275.71 1.173 1.525 1.9 1.047.933 1.93 1.222 2.205 1.36.275.137.435.115.595-.069.16-.185.686-.8.869-1.075.183-.275.365-.228.617-.137.25.092 1.595.752 1.868.889.275.137.457.206.526.32.068.115.068.663-.164 1.315z" fill="white"/></svg>'}],triggerColor:"#9F7AEA",bottomOffset:50,leftOffset:20};
+</script>
 <script src="../../shared/js/header-handler.js" defer></script>
 
-<section style="background: var(--c-off-white); padding: 2.5rem 1.5rem; margin: 3rem 0 0 0; text-align: center; border-top: 2px solid var(--c-border);"><div class="container"><p><a href="/visa-extensions/" style="font-weight: 600; color: var(--c-primary); text-decoration: none; font-size: 1rem;">Back to Visa Extensions guide →</a></p></div></section><footer class="site-footer" role="contentinfo" style="background: #0D1117;">
+<script src="../../shared/js/card-click-handler.js"></script>
+<script src="../../shared/chaty-widget/scripts/chaty-widget.js"></script>
+
+<section style="background: var(--c-off-white); padding: 2rem 1.5rem; margin: 3rem 0 0 0; border-top: 1px solid var(--c-border);"><div class="container" style="text-align: center;"><p style="margin-bottom: 1rem; font-size: 0.95rem;"><a href="/ed-visa/" style="color: var(--c-primary); text-decoration: none; font-weight: 600;">ED Visa</a> and <a href="/dtv-visa/" style="color: var(--c-primary); text-decoration: none; font-weight: 600;">DTV Visa</a> are your primary long-stay options in Chiang Mai.</p></div></section><footer class="site-footer" role="contentinfo" style="background: #0D1117;">
 <div class="footer-container">
 
   <!-- Column 1: CMLocals + Tagline + Social Icons -->
@@ -1585,10 +1650,35 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); }
 
 
 
-<script src="../../shared/js/card-click-handler.js"></script>
-<script src="../../shared/chaty-widget/scripts/chaty-widget.js"></script>
+<script>
+(function() {
+  'use strict';
+  function calculateReadTime() {
+    const article = document.querySelector('article.article-body');
+    if (!article) return;
+    const text = article.innerText;
+    const wordCount = text.trim().split(/\s+/).length;
+    const readTime = Math.max(1, Math.round(wordCount / 200));
+    const readTimeEl = document.getElementById('read-time');
+    if (readTimeEl) {
+      readTimeEl.textContent = readTime + ' min';
+    }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', calculateReadTime);
+  } else {
+    calculateReadTime();
+  }
+})();
+
 </body>
 </html>
+
+
+
+
+
+
 
 
 
