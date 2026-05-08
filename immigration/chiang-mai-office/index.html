@@ -17,42 +17,249 @@
 <meta property="twitter:description" content="Airport Road (main) or Central Festival (branch)? Complete routing guide for all visa types, 90-day reporting, TM30, and re-entry permits."/>
 <meta property="twitter:image" content="https://www.cmlocals.com/immigration/images/chiang-mai-immigration-office.jpg"/>
 
-<link rel="stylesheet" href="../../shared/css/style.css"/>
-
 <style>
-:root{--c-dark:#0D1117;--c-dark-2:#141922;--c-dark-3:#1E2532;--c-primary:#4F46E5;--c-primary-h:#4338CA;--c-primary-glow:rgba(79,70,229,.18);--c-violet:#7C3AED;--c-violet-l:#EDE9FE;--c-white:#FFFFFF;--c-off-white:#F8F7FF;--c-subtle:#F1EFFF;--c-body:#374151;--c-muted:#6B7280;--c-border:#E5E7EB;--c-border-dark:rgba(255,255,255,.1);--c-wa:#25D366;--c-wa-h:#1aaa55;--c-fb:#1877F2;--c-fb-h:#1565d8;--c-blog:#02450b;--radius-sm:6px;--radius-md:10px;--radius-lg:16px;--shadow-sm:0 1px 3px rgba(0,0,0,.08),0 1px 2px rgba(0,0,0,.06);--shadow-md:0 4px 16px rgba(0,0,0,.10),0 2px 6px rgba(0,0,0,.06);--shadow-lg:0 12px 40px rgba(0,0,0,.14);--font-display:'Newsreader',Georgia,serif;--font-body:'DM Sans',system-ui,sans-serif;--max-w:1200px;--article-w:780px;--edge:clamp(1.25rem,4vw,2.5rem);--section-py:clamp(3rem,5vw,4.5rem);--footer-bg:#02450b;}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
-body{font-family:var(--font-body);font-size:0.9rem;line-height:1.65;color:var(--c-body);background:var(--c-white);-webkit-font-smoothing:antialiased;}
-img{max-width:100%;display:block;height:auto;}
-a{color:inherit;}
-ul{list-style:none;}
-button{font-family:inherit;cursor:pointer;border:none;background:none;}
+/* ============================================================
+   CMLocals - Immigration Pages
+   Dark base: rgb(51, 65, 99)  |  Accent: #6366F1
+   ============================================================ */
+
+:root {
+  --c-dark:          #202A6C;
+  --c-dark-2:        #202A6C;
+  --c-dark-3:        #0B0F6E;
+  --c-primary:       #4F46E5;
+  --c-primary-h:     #4338CA;
+  --c-primary-glow:  rgba(79,70,229,.18);
+  --c-page-accent:   #6366F1;
+  --c-page-accent-l: #E0E7FF;
+  --c-violet:        #7C3AED;
+  --c-violet-l:      #EDE9FE;
+  --c-white:         #FFFFFF;
+  --c-off-white:     #F8F7FF;
+  --c-subtle:        #F1EFFF;
+  --c-body:          #111827;
+  --c-muted:         #4B5563;
+  --c-border:        #E5E7EB;
+  --c-border-dark:   rgba(255,255,255,.1);
+  --c-wa:            #25D366;
+  --c-wa-h:          #1aaa55;
+  --c-fb:            #1877F2;
+  --c-fb-h:          #1565d8;
+  --c-alert-warm:    #F59E0B;
+  --radius-sm:       6px;
+  --radius-md:       10px;
+  --radius-lg:       16px;
+  --shadow-sm:       0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.06);
+  --shadow-md:       0 4px 16px rgba(0,0,0,.10), 0 2px 6px rgba(0,0,0,.06);
+  --shadow-lg:       0 12px 40px rgba(0,0,0,.14);
+  --font-display:    'Newsreader', Georgia, serif;
+  --font-body:       'DM Sans', system-ui, sans-serif;
+  --max-w:           1200px;
+  --article-w:       780px;
+  --edge:            clamp(1.25rem, 4vw, 2.5rem);
+  --section-py:      clamp(3rem, 5vw, 4.5rem);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body { font-family: var(--font-body); font-size: 1rem; line-height: 1.65; color: var(--c-body); background: var(--c-white); -webkit-font-smoothing: antialiased; }
+img { max-width: 100%; display: block; height: auto; }
+a { color: inherit; }
+ul { list-style: none; }
+button { font-family: inherit; cursor: pointer; border: none; background: none; }
+
+/* --- HEADINGS --- */
 h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); }
-.container{width:100%;max-width:var(--max-w);margin-inline:auto;padding-inline:var(--edge);}
-.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;}
-.btn{display:inline-flex;align-items:center;gap:.5em;padding:.65em 1.4em;border-radius:var(--radius-sm);font-family:var(--font-body);font-size:.9rem;font-weight:600;line-height:1.3;text-decoration:none;border:1.5px solid transparent;transition:background .18s,box-shadow .18s,border-color .18s,transform .12s;white-space:nowrap;}
-.btn:hover{transform:translateY(-1px);}
-.btn-primary{background:var(--c-primary);color:var(--c-white);border-color:var(--c-primary);}
-.btn-primary:hover{background:var(--c-primary-h);border-color:var(--c-primary-h);box-shadow:0 4px 18px var(--c-primary-glow);}
-.btn-wa{background:var(--c-wa);color:var(--c-white);border-color:var(--c-wa);}
-.btn-wa:hover{background:var(--c-wa-h);border-color:var(--c-wa-h);box-shadow:0 4px 18px rgba(37,211,102,.25);}
-.btn-fb{background:var(--c-fb);color:var(--c-white);border-color:var(--c-fb);}
-.btn-fb:hover{background:var(--c-fb-h);border-color:var(--c-fb-h);}
-.page-hero{padding:4rem 0 3rem;color:white;}
-.page-hero h1{font-family:var(--font-display);font-size:2.25rem;font-weight:400;line-height:1.3;margin:1rem 0;letter-spacing:-0.01em;}
-.breadcrumb{background:var(--c-off-white);padding:1rem 0;border-bottom:1px solid var(--c-border);font-size:0.85rem;color:var(--c-muted);}
-.breadcrumb-inner{max-width:var(--article-w);margin:0 auto;padding-inline:var(--edge);display:flex;align-items:center;flex-wrap:wrap;gap:0.5rem;}
-.breadcrumb a{color:var(--c-primary);text-decoration:none;transition:color 0.2s;}
-.breadcrumb a:hover{color:var(--c-primary-h);text-decoration:underline;}
-.section{padding:var(--section-py) var(--edge);}
-article table{width:100%;border-collapse:collapse;margin:2rem 0;border:1px solid var(--c-border);}
-article table th,article table td{padding:1rem;text-align:left;border-bottom:1px solid var(--c-border);}
-article table th{background:var(--c-subtle);font-weight:600;color:var(--c-dark);}
-article table tr:hover{background:rgba(0,0,0,0.02);}
-.progress-bar{position:fixed;top:0;left:0;height:3px;background:var(--c-primary);z-index:10001;width:2%;}
-.site-footer{background:var(--footer-bg,#0D1117);color:rgba(255,255,255,0.92);padding:3.6rem 0 0;}
-@media (max-width:768px){.page-hero h1{font-size:1.75rem;}}
+
+.container { width: 100%; max-width: var(--max-w); margin-inline: auto; padding-inline: var(--edge); }
+.article-wrap { width: 100%; max-width: 1090px; margin-inline: auto; padding-inline: var(--edge); }
+
+/* --- BUTTONS --- */
+.btn {
+  display: inline-flex; align-items: center; gap: .5em;
+  padding: .65em 1.4em; border-radius: var(--radius-sm);
+  font-family: var(--font-body); font-size: .9rem; font-weight: 600; line-height: 1.3;
+  text-decoration: none; border: 1.5px solid transparent;
+  transition: background .18s, box-shadow .18s, border-color .18s, transform .12s;
+  white-space: nowrap;
+}
+.btn:hover { transform: translateY(-1px); }
+.btn-wa { background: var(--c-wa); color: var(--c-white); border-color: var(--c-wa); }
+.btn-wa:hover { background: var(--c-wa-h); border-color: var(--c-wa-h); box-shadow: 0 4px 18px rgba(37,211,102,.25); }
+.btn-fb { background: var(--c-fb); color: var(--c-white); border-color: var(--c-fb); }
+.btn-fb:hover { background: var(--c-fb-h); border-color: var(--c-fb-h); box-shadow: 0 4px 18px rgba(24,101,216,.25); }
+
+/* --- PAGE SECTIONS --- */
+.page-hero {
+  padding: clamp(3rem, 8vw, 5rem) 0;
+  background: linear-gradient(135deg, var(--c-dark-3) 0%, var(--c-dark-2) 100%);
+  color: white;
+}
+.page-hero h1 {
+  font-family: var(--font-display);
+  font-size: 2.25rem;
+  font-weight: 400;
+  line-height: 1.3;
+  margin: 1rem 0;
+  letter-spacing: -0.01em;
+}
+
+.breadcrumb {
+  background: var(--c-off-white);
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--c-border);
+  font-size: 0.85rem;
+  color: var(--c-muted);
+}
+.breadcrumb-inner {
+  max-width: var(--article-w);
+  margin: 0 auto;
+  padding-inline: var(--edge);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.breadcrumb a {
+  color: var(--c-primary);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.breadcrumb a:hover { color: var(--c-primary-h); text-decoration: underline; }
+
+.section {
+  padding: var(--section-py) var(--edge);
+}
+
+article {
+  line-height: 1.8;
+}
+article h2 {
+  font-size: 1.75rem;
+  font-weight: 400;
+  margin: 2.5rem 0 1rem;
+  color: var(--c-dark);
+}
+article h3 {
+  font-size: 1.35rem;
+  font-weight: 400;
+  margin: 2rem 0 0.75rem;
+  color: var(--c-dark);
+}
+article p {
+  margin-bottom: 1rem;
+}
+article strong {
+  font-weight: 600;
+  color: var(--c-dark);
+}
+article ul li {
+  margin-bottom: 0.6rem;
+}
+article table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  border: 1px solid var(--c-border);
+}
+article table th,
+article table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--c-border);
+}
+article table th {
+  background: var(--c-subtle);
+  font-weight: 600;
+  color: var(--c-dark);
+}
+article table tr:hover {
+  background: rgba(0,0,0,0.02);
+}
+
+/* --- CALLOUT BOXES --- */
+.alert-box {
+  border-left: 4px solid;
+  border-radius: 0 8px 8px 0;
+  padding: 1.5rem;
+  margin: 2rem 0;
+}
+.alert-primary {
+  background: rgba(79, 70, 229, 0.12);
+  border-left-color: var(--c-primary);
+}
+.alert-primary strong {
+  color: var(--c-primary);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.alert-warm {
+  background: rgba(245, 158, 11, 0.12);
+  border-left-color: var(--c-alert-warm);
+}
+.alert-warm strong {
+  color: #D97706;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.alert-box p {
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+}
+
+/* --- CTA SECTION --- */
+.cta-section {
+  background: var(--c-dark);
+  color: white;
+  padding: 2rem;
+  border-radius: var(--radius-md);
+  text-align: center;
+  margin: 3rem 0;
+}
+.cta-section h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 0.75rem;
+  color: white;
+}
+.cta-section p {
+  margin-bottom: 1.5rem;
+  color: rgba(255,255,255,0.9);
+}
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* --- FOOTER NOTE --- */
+.footer-note {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: var(--c-muted);
+  text-align: center;
+  border-top: 1px solid var(--c-border);
+  padding-top: 1.5rem;
+}
+
+/* --- PROGRESS BAR --- */
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: var(--c-primary);
+  z-index: 10001;
+  width: 2%;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+  .page-hero h1 { font-size: 1.75rem; }
+  article h2 { font-size: 1.5rem; }
+  .cta-buttons { flex-direction: column; }
+}
 </style>
 
 <div class="progress-bar" id="progress-bar"></div>
@@ -61,11 +268,9 @@ article table tr:hover{background:rgba(0,0,0,0.02);}
 
 <main id="main-content">
 
-<section class="page-hero" style="background:#02450b;" aria-labelledby="page-heading">
+<section class="page-hero" aria-labelledby="page-heading">
 <div class="container" style="max-width:var(--article-w);">
-<div class="page-hero-inner">
 <h1 id="page-heading">Chiang Mai Immigration: Two Offices, One Digital System</h1>
-</div>
 </div>
 </section>
 
@@ -81,100 +286,112 @@ article table tr:hover{background:rgba(0,0,0,0.02);}
 </nav>
 
 <section class="section" aria-label="Immigration guide">
-<div class="container" style="max-width:var(--article-w);">
+<div class="article-wrap">
 
-<article style="line-height:1.8;color:var(--c-body);">
+<article>
 
 <p style="font-size:1.1rem;margin-bottom:1.5rem;">
 In 2026, Chiang Mai immigration operates two separate offices serving different purposes. Know which one handles your visa type, and you'll avoid wasted trips. Get it wrong, and you're back tomorrow.
 </p>
 
-<div style="background:rgba(2,69,11,0.12);border-left:4px solid #02450b;border-radius:0 8px 8px 0;padding:1.5rem;margin:2rem 0;">
-<strong style="color:#02450b;display:block;margin-bottom:0.5rem;">TL;DR: Quick Routing</strong>
-<p style="margin:0.5rem 0;font-size:0.95rem;">
+<div class="alert-box alert-primary">
+<strong>TL;DR: Quick Routing</strong>
+<p>
 ED, DTV initial, retirement, marriage, business, TM30, residence certificate: go to Airport Road. Tourist extension, 90-day reporting, re-entry permit, DTV 180-day extension, passport transfer: go to Central Festival. TDAC digital verification is mandatory for all. Queue times: Airport Road 7.30 AM (arrive before 8.00 AM), Central Festival 8.15 AM for mall opening.
 </p>
 </div>
 
-<h2 style="font-size:1.75rem;font-weight:400;margin:2.5rem 0 1rem;color:var(--c-dark);">Airport Road: The Main Office</h2>
+<h2>Airport Road: The Main Office</h2>
 
 <p><strong>71 Moo 3, Sanambin Road, Suthep Sub-District, Muang District, Chiang Mai 50200</strong></p>
-<p style="margin-bottom:1.5rem;">
+<p>
 Hours: 08:00–16:00. Lunch 12:00–13:00. Closes 15:30 (stops accepting new cases). Open weekdays only. Closed Thai public holidays.
 </p>
 
 <p><strong>Services:</strong></p>
-<ul style="list-style:none;margin:1rem 0 1.5rem 0;">
-<li style="margin-bottom:0.6rem;">ED Visa (initial applications and annual renewals)</li>
-<li style="margin-bottom:0.6rem;">DTV Visa (initial applications, NOT 180-day extensions)</li>
-<li style="margin-bottom:0.6rem;">Retirement Visa (Non-O)</li>
-<li style="margin-bottom:0.6rem;">Marriage Visa (Non-O) — spouse must attend</li>
-<li style="margin-bottom:0.6rem;">Business Visa (Non-B) extensions and work permits</li>
-<li style="margin-bottom:0.6rem;">TM.30 residence address notification (digital and paper)</li>
-<li style="margin-bottom:0.6rem;">Residence Certificate (formal document for driving license, vehicle purchase)</li>
-<li style="margin-bottom:0.6rem;">Re-entry Permits (single or multiple)</li>
+<ul>
+<li>ED Visa (initial applications and annual renewals)</li>
+<li>DTV Visa (initial applications, NOT 180-day extensions)</li>
+<li>Retirement Visa (Non-O)</li>
+<li>Marriage Visa (Non-O) — spouse must attend</li>
+<li>Business Visa (Non-B) extensions and work permits</li>
+<li>TM.30 residence address notification (digital and paper)</li>
+<li>Residence Certificate (formal document for driving license, vehicle purchase)</li>
+<li>Re-entry Permits (single or multiple)</li>
 </ul>
 
-<div style="background:#FEF3C7;border-left:4px solid #F59E0B;border-radius:0 8px 8px 0;padding:1.5rem;margin:2rem 0;">
-<strong style="color:#D97706;display:block;margin-bottom:0.5rem;">Guru Tip: The Queue Number Game</strong>
-<p style="margin:0;font-size:0.95rem;">
+<div class="alert-box alert-warm">
+<strong>Guru Tip: The Queue Number Game</strong>
+<p>
 Arrive at 07:30 AM, before the gate opens at 08:00. Immigration issues queue numbers by 08:15 AM. If you arrive at 08:30 or 09:00, you might be number 40+. Office processes 3-4 people per hour. Do the maths. A low queue number (under 20) means 5-7 hours. A high number (40+) means 10+ hours or next day. Bring a book.
 </p>
 </div>
 
-<h2 style="font-size:1.75rem;font-weight:400;margin:2.5rem 0 1rem;color:var(--c-dark);">Central Festival: The Convenience Branch</h2>
+<h2>Central Festival: The Convenience Branch</h2>
 
 <p><strong>2nd Floor, Central Chiangmai Mall, near Supersports zone, Superhighway</strong></p>
-<p style="margin-bottom:1.5rem;">
+<p>
 Hours: 09:00–17:00. Lunch break 12:00–13:00. Service until 16:30. Open weekdays only. Closed Thai public holidays.
 </p>
 
 <p><strong>Services:</strong></p>
-<ul style="list-style:none;margin:1rem 0 1.5rem 0;">
-<li style="margin-bottom:0.6rem;">Tourist Visa extensions (30-day or approval letter)</li>
-<li style="margin-bottom:0.6rem;">90-Day Reporting (TM.28)</li>
-<li style="margin-bottom:0.6rem;">Re-entry Permits (single 1,000 THB or multiple 3,800 THB)</li>
-<li style="margin-bottom:0.6rem;">Passport Transfer (moving visa stamps from old to new passport)</li>
-<li style="margin-bottom:0.6rem;">DTV 180-day local extensions (not initial applications)</li>
+<ul>
+<li>Tourist Visa extensions (30-day or approval letter)</li>
+<li>90-Day Reporting (TM.28)</li>
+<li>Re-entry Permits (single 1,000 THB or multiple 3,800 THB)</li>
+<li>Passport Transfer (moving visa stamps from old to new passport)</li>
+<li>DTV 180-day local extensions (not initial applications)</li>
 </ul>
 
-<p style="margin-bottom:1.5rem;">
+<p>
 Central Festival is faster because volumes are lower. 90-day reporting: typically 5-10 minutes. Tourist extensions: 20-30 minutes. No queue number system. First-come, first-served. A line forms at the mall entrance by 08:15 AM (mall doesn't open until 10 AM officially, but immigration staff start at 09:00).
 </p>
 
-<h2 style="font-size:1.75rem;font-weight:400;margin:2.5rem 0 1rem;color:var(--c-dark);">TDAC: The Digital Checkpoint You Can't Skip</h2>
+<h2>TDAC: The Digital Checkpoint You Can't Skip</h2>
 
-<p style="margin-bottom:1rem;">
+<p>
 Thailand Digital Arrival Control. In 2026, every long-stay visa extension is cross-checked against this system. Your landlord or condo manager must have filed your TM.30 (residential address notification) into TDAC within 24 hours of your arrival or address change.
 </p>
 
-<p style="margin-bottom:1.5rem;">
+<p>
 If your TM.30 is not in the system, immigration will reject your extension. They won't process it anyway. So call your landlord before you go. Say: "Please verify that my TM.30 has been uploaded to TDAC. Please show me the confirmation." If it hasn't, ask them to do it immediately. It takes 10 minutes. TDAC verification can take 1-2 days to appear in immigration's system.
 </p>
 
-<h2 style="font-size:1.75rem;font-weight:400;margin:2.5rem 0 1rem;color:var(--c-dark);">Queue Strategy: Mainstream vs Deep Cut</h2>
+<h2>Queue Strategy: Mainstream vs Deep Cut</h2>
 
 <p><strong>Mainstream:</strong> Arrive 07:30 AM at Airport Road if you have ED, DTV initial, or long-stay applications. Get queue number under 20. Expect 5-7 hour wait. Bring lunch, phone charger, book. Bring all documents. Do not assume you have everything. Missing one document = full restart.
 </p>
 
-<p style="margin-bottom:1.5rem;">
+<p>
 <strong>Deep Cut:</strong> File an online appointment through the official Chiang Mai Immigration website. Appointments available 2 weeks in advance. You bypass the queue entirely. Takes 2 weeks planning, but saves 5 hours. Best move if your visa is time-critical.
 </p>
 
-<div style="background:#02450b;color:white;padding:2rem;border-radius:var(--radius-md);text-align:center;margin:3rem 0;">
-<h3 style="font-size:1.5rem;font-weight:400;margin-bottom:0.75rem;color:white;">
+<div class="cta-section">
+<h3>
 Need Direct Support?
 </h3>
-<p style="margin-bottom:1.5rem;color:rgba(255,255,255,0.9);">
+<p>
 CMLocals can help with document preparation, visa strategy, and TDAC verification. Get your application correct before you queue.
 </p>
-<div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+<div class="cta-buttons">
 <a href="https://wa.me/66801202074" class="btn btn-wa" target="_blank" rel="noopener">WhatsApp Support</a>
 <a href="https://m.me/cmlocals" class="btn btn-fb" target="_blank" rel="noopener">Messenger</a>
 </div>
 </div>
 
-<p style="margin-top:2rem;font-size:0.9rem;color:#6B7280;text-align:center;border-top:1px solid #E5E7EB;padding-top:1.5rem;">
+<h2>Related Reading: Immigration Services at Chiang Mai Office</h2>
+
+<ul style="list-style:none;margin:1rem 0 1.5rem 1.5rem;">
+<li style="margin-bottom:0.6rem;"><strong><a href="/immigration/tm30-registration/" style="color:var(--c-primary);text-decoration:underline;">TM30 Registration Guide</a>:</strong> File your house address within 24 hours of arrival. Mandatory at Chiang Mai Immigration. Digital or paper filing.</li>
+<li style="margin-bottom:0.6rem;"><strong><a href="/immigration/90-day-reporting/" style="color:var(--c-primary);text-decoration:underline;">90-Day Reporting (TM.28)</a>:</strong> File every 90 days to stay legal. Quick process at Central Festival (5-10 minutes). Free filing.</li>
+<li style="margin-bottom:0.6rem;"><strong><a href="/immigration/re-entry-permits/" style="color:var(--c-primary);text-decoration:underline;">Re-Entry Permits</a>:</strong> Before leaving Thailand, buy a re-entry permit at Chiang Mai Immigration. 1,000 THB (single) or 3,800 THB (multiple). Available at both offices.</li>
+<li style="margin-bottom:0.6rem;"><strong><a href="/guides/dtv-180-day-extension/" style="color:var(--c-primary);text-decoration:underline;">DTV 180-Day Extension</a>:</strong> Extend your DTV visa for 180 more days at Airport Road (not Central Festival). 1,900 THB. Alternative to border runs.</li>
+<li style="margin-bottom:0.6rem;"><strong><a href="/guides/business-visa-work-permit/" style="color:var(--c-primary);text-decoration:underline;">Business Visa & Work Permit</a>:</strong> Non-B extensions and work permit applications handled at Airport Road office. File annually.</li>
+<li style="margin-bottom:0.6rem;"><strong><a href="/guides/border-runs/" style="color:var(--c-primary);text-decoration:underline;">Border Run Strategy</a>:</strong> Reset your 180-day stay without using Chiang Mai office. Alternative to extensions. TDAC verification required at re-entry.</li>
+<li style="margin-bottom:0.6rem;"><strong><a href="/immigration/common-rejections/" style="color:var(--c-primary);text-decoration:underline;">Common Immigration Rejections</a>:</strong> Know why visa extensions are denied at Chiang Mai office. Avoid red flags before you apply.</li>
+</ul>
+
+<p class="footer-note">
 Last verified: May 2026 by CMLocals. Office locations, hours, and services verified in-person. Immigration office changes occur without notice. Confirm services at the office before visiting.
 </p>
 
