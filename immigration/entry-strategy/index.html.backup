@@ -3,21 +3,20 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Immigration Blacklist Status Thailand Guide 2026 - CMLocals</title>
-<meta name="description" content="Complete guide to Thailand's immigration blacklist: what causes blacklist status, how to check if you're blacklisted, duration, removal process, and appeal rights."/>
-<link rel="canonical" href="https://www.cmlocals.com/immigration/blacklist-status/"/>
+<title>90-Day Reporting (TM.47) Thailand Immigration Guide 2026 - CMLocals</title>
+<meta name="description" content="Complete guide to Thailand's 90-day reporting requirement (TM.47): who must report, deadlines, filing methods (online/in-person/mail), required documents, and penalties for non-compliance."/>
+<link rel="canonical" href="https://www.cmlocals.com/immigration/90-day-reporting/"/>
 <meta property="og:type" content="article"/>
-<meta property="og:title" content="Thailand Immigration Blacklist: Check Status, Appeal, Removal"/>
-<meta property="og:description" content="How to check if you are on Thai blacklist. Reasons for blacklisting, appeal process, and how to remove yourself."/>
+<meta property="og:title" content="Thailand 90-Day Reporting: Complete Guide & Checklist"/>
+<meta property="og:description" content="Thailand 90-day reporting requirement explained. Who must report, deadline, process, penalties, and how to avoid blacklisting."/>
 <meta property="twitter:card" content="summary"/>
-<meta property="twitter:title" content="Thailand Immigration Blacklist: Check Status, Appeal, Removal"/>
-<meta property="twitter:description" content="How to check if you are on Thai blacklist. Reasons for blacklisting, appeal process, and how to remove yourself."/>
+<meta property="twitter:title" content="Thailand 90-Day Reporting: Complete Guide & Checklist"/>
+<meta property="twitter:description" content="Thailand 90-day reporting requirement explained. Who must report, deadline, process, penalties, and how to avoid blacklisting."/>
 
 
 
 
 <style>
-
 /* ============================================================
    FONT LOADING
    ============================================================ */
@@ -31,6 +30,7 @@
   src: url('/fonts/dm-sans.woff2') format('woff2'), url('/fonts/dm-sans.ttf') format('truetype');
   font-display: swap;
 }
+
 /* ============================================================
    CMLocals - Immigration Pages
    Dark base: rgb(51, 65, 99)  |  Accent: #6366F1
@@ -75,7 +75,7 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
 body { font-family: var(--font-body); font-size: 1rem; line-height: 1.65; color: var(--c-body); background: var(--c-white); -webkit-font-smoothing: antialiased; }
-img { max-width: 100%; display: block; height: auto; max-height: 300px; }
+img { max-width: 100%; display: block; height: auto; }
 a { color: inherit; }
 ul { list-style: none; }
 button { font-family: inherit; cursor: pointer; border: none; background: none; }
@@ -166,7 +166,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); }
   color: #111827;
   text-decoration: none;
   font-size: 0.85rem;
-  font-weight: 600; font-family: var(--font-display);
+  font-weight: 600; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
   padding: 0;
   transition: all 0.2s ease;
   display: flex;
@@ -533,7 +533,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); }
   font-size: clamp(.95rem, 1.5vw, 1.1rem);
   color: rgba(255,255,255,.82); line-height: 1.75; max-width: 62ch; margin-bottom: 2rem;
 }
-
+.page-hero-meta { font-size: .82rem; color: rgba(255,255,255,.55); display: flex; gap: 1.5rem; flex-wrap: wrap; }
 
 /* ============================================================
    BREADCRUMB
@@ -664,7 +664,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); }
   margin-inline: auto; position: relative; z-index: 1;
 }
 .visa-section h2 {
-  font-family: var(--font-display);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
   font-size: clamp(1.4rem, 2.5vw, 1.85rem);
   font-weight: 400; color: var(--c-white); letter-spacing: -.02em; margin-bottom: 1rem;
 }
@@ -717,7 +717,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); }
   width: 30px; height: 30px; border-radius: 6px;
   background: linear-gradient(135deg, var(--c-primary) 0%, var(--c-violet) 100%);
   display: flex; align-items: center; justify-content: center;
-  color: #fff; font-family: var(--font-display); font-size: .95rem; font-weight: 500; font-style: italic;
+  color: #fff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: .95rem; font-weight: 500; font-style: italic;
 }
 .footer-logo-text { font-family: var(--font-body); font-weight: 700; font-size: .95rem; color: var(--c-white); letter-spacing: -.01em; }
 .footer-tagline { font-size: .82rem; line-height: 1.6; max-width: 240px; color: rgba(255,255,255,.88); }
@@ -813,20 +813,6 @@ figure img {
 }
 
 <style>
-
-/* ============================================================
-   FONT LOADING
-   ============================================================ */
-@font-face {
-  font-family: 'Newsreader';
-  src: url('/fonts/newsreader.woff2') format('woff2'), url('/fonts/newsreader.ttf') format('truetype');
-  font-display: swap;
-}
-@font-face {
-  font-family: 'DM Sans';
-  src: url('/fonts/dm-sans.woff2') format('woff2'), url('/fonts/dm-sans.ttf') format('truetype');
-  font-display: swap;
-}
 /* ============================================================
    CANONICAL HEADER + NAV CSS (auto-injected - do not edit here)
    ============================================================ */
@@ -869,7 +855,7 @@ figure img {
   color: #111827;
   text-decoration: none;
   font-size: 0.85rem;
-  font-weight: 600; font-family: var(--font-display);
+  font-weight: 600; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
   padding: 0;
   transition: all 0.2s ease;
   display: flex;
@@ -1243,8 +1229,6 @@ figure img {
 .visa-card,.article-card,.tool-card,.guide-card,.visa-category-card,.program-card,.topic-card,.checklist-card,.related-card,.sidebar-card{text-decoration:none;}
 .visa-card *,.article-card *,.tool-card *,.guide-card *,.visa-category-card *,.program-card *,.topic-card *,.checklist-card *,.related-card *,.sidebar-card *{text-decoration:none;}
 .visa-card:hover,.article-card:hover,.tool-card:hover,.guide-card:hover,.visa-category-card:hover,.program-card:hover,.topic-card:hover,.checklist-card:hover,.related-card:hover,.sidebar-card:hover{text-decoration:none;}
-
-.breadcrumb-meta { color: var(--c-muted); }
 </style>
 <link rel="stylesheet" href="/shared/css/card-fixes.css">
 <link rel="stylesheet" href="/shared/css/responsive-images.css">
@@ -1527,10 +1511,14 @@ figure img {
 <section class="page-hero" aria-labelledby="page-title">
 <div class="page-hero-inner">
   <p class="page-hero-eyebrow">Immigration Compliance</p>
-  <h1 id="page-title">Immigration Blacklist <em>Status in Thailand</em></h1>
+  <h1 id="page-title">90-Day Reporting <em>(TM.47 Notification)</em></h1>
   <p class="page-hero-lead">
-    Complete guide to Thailand's immigration blacklist: what causes blacklist status, how to check if you're blacklisted, duration and removal, appeal rights, and long-term consequences.
+    Complete guide to Thailand's mandatory 90-day reporting requirement for long-stay visa holders. What you need to report, deadlines, filing methods, required documents, and penalties for non-compliance.
   </p>
+  <div class="page-hero-meta">
+    <span>Last verified: March 2026</span>
+    <span>Thailand Immigration Bureau</span>
+  </div>
 </div>
 </section>
 
@@ -1543,7 +1531,8 @@ figure img {
   <span class="breadcrumb-sep" aria-hidden="true">/</span>
   <a href="/immigration/index.html">Immigration</a>
   <span class="breadcrumb-sep" aria-hidden="true">/</span>
-  <span aria-current="page">Blacklist Status</span>
+  <span aria-current="page">90-Day Reporting</span>
+  <span class="breadcrumb-sep" aria-hidden="true">-</span> Updated May 2026 <span class="breadcrumb-sep" aria-hidden="true">-</span> 6 min read
 </div>
 </nav>
 
@@ -1552,38 +1541,38 @@ figure img {
      ======================================================== -->
 <section class="why-band" aria-labelledby="quick-facts-heading">
 <div class="why-band-inner">
-  <h2 id="quick-facts-heading">What you need to know about immigration blacklist</h2>
+  <h2 id="quick-facts-heading">What you need to know about 90-day reporting</h2>
   <div class="why-items">
 
     <div class="why-item">
-      <div class="why-item__icon" aria-hidden="true">â›”</div>
+      <div class="why-item__icon" aria-hidden="true">📅</div>
       <div class="why-item__body">
-        <div class="why-item__title">Multiple reasons for blacklist notation</div>
-        <div class="why-item__desc">Extended overstay, repeated visa violations, immigration fraud, criminal conviction, or overstay being caught (vs. voluntary surrender) can result in blacklist status.</div>
+        <div class="why-item__title">Mandatory for all long-stay visa holders</div>
+        <div class="why-item__desc">If you hold a long-stay visa (retirement, DTV, ED, etc.) and remain in Thailand longer than 90 consecutive days, you must file a TM.47 notification with immigration every 90 days.</div>
       </div>
     </div>
 
     <div class="why-item">
-      <div class="why-item__icon" aria-hidden="true">ðŸ”</div>
+      <div class="why-item__icon" aria-hidden="true">⏰</div>
       <div class="why-item__body">
-        <div class="why-item__title">Check status online or at immigration office</div>
-        <div class="why-item__desc">You can query your blacklist status at any Thai immigration office or check online via the <a href="https://tdac.immigration.go.th/" target="_blank" rel="noopener">TDAC system</a> by providing your passport number and personal details.</div>
+        <div class="why-item__title">14 days before to 7 days after for free</div>
+        <div class="why-item__desc">You can file from 14 days before your 90-day deadline through 7 days after at no charge. Filing from day 8 onwards incurs a 2,000 THB fine. Online reporting is suggested between 14 and 7 days before for best results.</div>
       </div>
     </div>
 
     <div class="why-item">
-      <div class="why-item__icon" aria-hidden="true">â³</div>
+      <div class="why-item__icon" aria-hidden="true">📱</div>
       <div class="why-item__body">
-        <div class="why-item__title">Duration depends on violation severity</div>
-        <div class="why-item__desc">Minor violations may result in a 1-3 year notation. Serious offences (extended overstay, fraud) can mean permanent blacklist or 10+ year bans.</div>
+        <div class="why-item__title">Multiple filing methods available</div>
+        <div class="why-item__desc">You can report in person at an immigration office, by registered mail, or online (for subsequent reports only). The first report must be done in person.</div>
       </div>
     </div>
 
     <div class="why-item">
-      <div class="why-item__icon" aria-hidden="true">âš-ï¸</div>
+      <div class="why-item__icon" aria-hidden="true">💳</div>
       <div class="why-item__body">
-        <div class="why-item__title">Appeal and removal process available</div>
-        <div class="why-item__desc">You can appeal blacklist status through Thai immigration or the Ministry of Foreign Affairs, with evidence of reformed behaviour or extenuating circumstances.</div>
+        <div class="why-item__title">Free if filed on time, 2,000 THB if late</div>
+        <div class="why-item__desc">The TM.47 notification is free to file within the deadline and 7-day grace period. Filing from day 8 onwards costs 2,000 THB. The Next reporting date slip may show up to 5,000 THB depending on how late the report is.</div>
       </div>
     </div>
 
@@ -1597,129 +1586,163 @@ figure img {
 <article class="article-body">
 <div class="article-wrap">
 
+<h2>Who must file the 90-day report</h2>
+<p>
+  The 90-day reporting requirement applies to any foreigner who holds a visa that permits temporary residence in Thailand and who stays in the country for more than 90 consecutive days. This includes:
+</p>
+<ul>
+  <li>Retirement visas (O-A)</li>
+  <li>Digital Nomad Visas (DTV)</li>
+  <li>Education (ED) visas</li>
+  <li>Elite visas</li>
+  <li>Non-O visas (work, business, dependent)</li>
+  <li>Non-immigrant B visas</li>
+  <li>Other temporary resident categories</li>
+</ul>
+
+<p>
+  The requirement does not apply to short-stay tourist visas or visa-exempt entry, since these categories are not intended for stays exceeding 60 days in any case.
+</p>
+
 <figure style="text-align: center; margin: 2rem 0 0 0;">
   <img
-    src="../../images/cmlocals chiang mai locals blacklist status elephant working animal indian elephant terrestrial.webp"
-    alt="CMLocals Chiang Mai Locals Blacklist Status serious immigration violation warning"
+    src="../../images/cmlocals chiang mai locals day reporting night lighting electricity festival midnight holiday.webp"
+    alt="CMLocals Chiang Mai Locals 90-Day Reporting immigration compliance procedure"
     style="max-width: 70%; height: auto; border-radius: 12px;"
   />
 </figure>
 
-<h2>What causes immigration blacklist status</h2>
+<h2>Calculating your 90-day deadline</h2>
 <p>
-  Thailand's immigration blacklist is a notation on your immigration record indicating you have committed a serious visa or immigration violation. This is distinct from the re-entry ban that follows overstay; it is an additional flag in the system.
+  The 90-day period begins from your most recent entry date into Thailand as shown on your entry stamp. This is not based on your visa issue date, but your actual arrival date. If your entry stamp shows you arrived on 15 January, your first 90-day report is due by 14 April. Your next report would then be due 90 days after that (around 13 July), and so on.
 </p>
 
 <p>
-  Common causes of blacklist notation include:
+  Importantly, the 90-day requirement applies whether you renew your visa, extend your stay, or simply remain in the country on the same visa. Each consecutive 90-day period is counted from the last entry date, even if your visa has been extended.
 </p>
 
-<ul>
-  <li>Extended overstay (typically 3+ months, especially if caught rather than voluntarily surrendered)</li>
-  <li>Repeated visa violations or pattern of non-compliance</li>
-  <li>Immigration fraud (false documents, misrepresentation of facts)</li>
-  <li>Working in Thailand without a valid work permit</li>
-  <li>Criminal conviction while in Thailand</li>
-  <li>Violation of deportation orders or re-entry bans</li>
-  <li>Serious breach of visa conditions or stay permit terms</li>
-</ul>
+<div class="callout-band">
+  <p><strong>Calendar reminder:</strong> Many residents set phone reminders for 14 days before their due date to ensure they file within the reporting window. Online reporting is recommended between 14 and 7 days before the deadline for best processing. Immigration offices are busiest in the week before deadlines.</p>
+</div>
 
+<h2>Filing window and deadlines</h2>
 <p>
-  A single minor violation (such as a late 90-day report or one-day overstay caught and surrendered) typically does not result in blacklist notation. However, multiple violations or a single serious violation can trigger blacklist status.
-</p>
-
-<h2>How to check your blacklist status</h2>
-
-<h3>Checking in person at immigration</h3>
-<p>
-  You can visit any Thai immigration office and ask to check your blacklist status. Bring your passport and request to check your record (in Thai: "check record" or ask for a background check). Immigration staff will query the central database and inform you if any notation exists.
+  The TM.47 notification window is 14 days before your due date through 7 days after your due date. This entire window is free. Filing from day 8 onwards incurs a 2,000 THB fine. The grace period exists to allow for minor oversights but does not waive the fine once you exceed the 7-day mark.
 </p>
 
 <p>
-  For Chiang Mai residents, visit the main immigration office at 71 Moo 3, Airport Road, Suthep Sub-district, Muang District, Chiang Mai 50200. The check takes 10- -15 minutes and is free. You will receive written confirmation if no notation exists, or be informed of details if blacklist status is present.
+  Your due date is the 90th day from your entry stamp. If you entered Thailand on 15 January, your due date is 14 April. You can file as early as 31 March (14 days before) and as late as 21 April (7 days after) at no charge. Filing from 22 April onwards incurs a 2,000 THB fine. This gives you a total of 35 days to file without a fine.
+</p>
+
+<p>
+  Online reporting (via the TM.47 online system) is recommended between 14 and 7 days before the deadline for the most reliable processing. Online filing can sometimes be processed within one week before the deadline, but it is not guaranteed, so filing earlier in the window is safer. In-person filing at immigration is also possible throughout the entire window if you prefer or encounter issues with online submission.
+
+  If you do not file within the grace period and are discovered without a current report (during a checkpoint, visa renewal, or immigration audit), the fine written on your Next reporting date slip can be up to 5,000 THB depending on how overdue the report is. Being discovered with extended non-compliance can result in serious immigration consequences, including blacklist status on your immigration record, visa denial, or deportation.
+</p>
+
+<h2>How to file your 90-day report</h2>
+
+<h3>Method 1: In-person filing at immigration office</h3>
+<p>
+  In-person filing at a local immigration office is the most straightforward option. You will complete the TM.47 form on the spot, submit your passport for verification, and receive a stamp confirming your report. Processing typically takes 30 to 60 minutes depending on queue length. Most immigration offices are open Monday to Friday, 8:30 AM to 4:30 PM.
+</p>
+
+<p>
+  For Chiang Mai residents, the main immigration office handling all services is located at 71 Moo 3, Airport Road, Suthep Sub-district, Muang District, Chiang Mai 50200. There is also a limited-service office at Central Festival shopping mall (Floor 2, SuperSport zone side), but services there are limited and subject to change, so verify availability before visiting.
 </p>
 
 <div class="req-card">
   <div class="req-card__header">
-    <span class="req-card__icon" aria-hidden="true">ðŸ¢</span>
+    <span class="req-card__icon" aria-hidden="true">🏢</span>
     <div>
       <div class="req-card__title">Chiang Mai Immigration Office (Main)</div>
-      <div class="req-card__meta">71 Moo 3, Airport Road, Suthep, Muang District | Hours: Monday- -Friday, 8:30 AM- -4:30 PM</div>
+      <div class="req-card__meta">71 Moo 3, Airport Road, Suthep, Muang District | Hours: Monday-Friday, 8:30 AM-4:30 PM</div>
     </div>
   </div>
-  <p>Main office for all services. To check your blacklist status in person, visit with your original passport. Ask for a background check or record inquiry. Processing is quick during weekday mornings. Request English-language confirmation if needed.</p>
+  <p>The main office handles all immigration services. Located on Airport Road in Suthep Sub-district. The office is frequently crowded between the 10th and 25th of each month as many residents file near their due dates. A secondary office at Central Festival shopping mall offers limited services (90-day reporting, tourist visa extensions, family visas, re-entry permits, and selected other services) Monday-Friday 9:00 AM-12:00 PM, 1:00-5:00 PM. Verify services before visiting Central Festival as they are subject to change.</p>
 </div>
 
-<h3>Online status check via <a href="https://tdac.immigration.go.th/" target="_blank" rel="noopener">TDAC</a></h3>
+<h3>Method 2: Online filing (<a href="https://tdac.immigration.go.th/" target="_blank" rel="noopener">TDAC</a> system)</h3>
 <p>
-  You may be able to check your status through the <a href="https://tdac.immigration.go.th/" target="_blank" rel="noopener">Thailand Digital Arrival Card (TDAC) system</a>, though this system primarily tracks entry and exit records rather than blacklist notations. For comprehensive blacklist information, in-person checking at an immigration office is more reliable.
-</p>
-
-<h2>Duration and removal of blacklist notation</h2>
-
-<p>
-  Unlike re-entry bans which have fixed durations (1- -10 years depending on overstay length), blacklist notation duration varies depending on the violation's severity.
-</p>
-
-<table class="cost-table" aria-label="Blacklist duration by violation type">
-  <thead>
-    <tr><th>Violation Type</th><th>Typical Blacklist Duration</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>Minor repeated violations</td><td>1-3 years</td></tr>
-    <tr><td>Extended overstay (3- -12 months)</td><td>3- -5 years</td></tr>
-    <tr><td>Long-term overstay (1-3 years)</td><td>5- -10 years</td></tr>
-    <tr><td>Immigration fraud or serious offence</td><td>Permanent or 10+ years</td></tr>
-  </tbody>
-</table>
-
-<p>
-  Blacklist notations do not automatically expire. Even after the standard ban period ends, the notation may remain on your immigration record. To remove or clear blacklist status, you typically need to pursue an appeal or formally request removal from the immigration authorities.
-</p>
-
-<h2>Appeal and removal process</h2>
-
-<h3>Filing an appeal</h3>
-<p>
-  If you believe your blacklist notation is unjust or circumstances have changed, you can file an appeal through the Thai immigration system. Appeals should be submitted to the Immigration Bureau's central office in Bangkok, though initial consultation can be done at your local immigration office.
+  Subsequent 90-day reports (not your first) can be filed online through Thailand's <a href="https://tdac.immigration.go.th/" target="_blank" rel="noopener">Digital Arrival Card (TDAC) system</a>. You will need your TDAC number, passport number, and access to the online portal.
 </p>
 
 <p>
-  Your appeal should include a written statement explaining your situation, evidence of reformed behaviour (character letters, employment verification, proof of voluntary compliance with Thai laws since the violation), and copies of relevant documents. Having a Thai lawyer assist with the appeal process can improve your chances of success.
+  Online filing is available 24/7 and takes approximately 10 to 15 minutes. Your report is submitted immediately, and you receive a confirmation that can be printed or saved digitally. However, immigration staff recommend carrying a printed copy or the confirmation email when travelling within Thailand, in case you are stopped by authorities and asked to verify your reporting status.
 </p>
 
-<h3>Ministry of Foreign Affairs appeal</h3>
 <p>
-  For serious cases or if immigration denies your initial appeal, you can escalate your request to the Ministry of Foreign Affairs. This route is more complex and typically requires professional legal assistance. Success is not guaranteed, but appealing demonstrates your intention to clear your record.
+  Note: Your first 90-day report must be filed in person. Only subsequent reports can be done online.
+</p>
+
+<h3>Method 3: By registered mail</h3>
+<p>
+  You can also submit your TM.47 form by registered mail (with receipt tracking) to your local immigration office. This method is useful if you are unable to visit the office in person or prefer to file remotely.
+</p>
+
+<p>
+  Mail your completed TM.47 form along with a photocopy of your passport (bio page and entry stamp) to the immigration office. Include your contact details so the office can confirm receipt. However, mail filing takes longer to process and you may not receive a physical stamp in your passport. For this reason, many residents prefer in-person or online filing for documentation clarity.
+</p>
+
+<h2>Required documents and preparation</h2>
+
+<p>
+  For in-person filing, you will need:
+</p>
+
+<ul>
+  <li><strong>Original passport</strong> - with current visa and all entry/exit stamps visible</li>
+  <li><strong>TM.47 form</strong> - available at immigration offices or printable from official websites. It is one page, in English and Thai.</li>
+  <li><strong>Proof of address</strong> - not always required, but having it on hand is recommended. A utility bill, rental receipt, or TM.30 address registration will suffice if requested.</li>
+</ul>
+
+<p>
+  For online filing via <a href="https://tdac.immigration.go.th/" target="_blank" rel="noopener">TDAC</a>, you will need your TDAC number (this was assigned when you arrived in Thailand or registered your address). If you do not have your TDAC number, contact the immigration office or check your TM.30 address registration document.
 </p>
 
 <div class="callout-band">
-  <p><strong>Important:</strong> Attempting to enter Thailand while blacklisted can result in immediate deportation, additional fines, and further notation. Do not attempt to circumvent blacklist status by falsifying documents or hiding your identity at the border.</p>
+  <p><strong>Pro tip:</strong> Print a copy of your TM.47 confirmation (whether filed in person or online) and keep it with your passport. While not legally required, carrying proof of your current reporting status has prevented complications for residents stopped during routine checks.</p>
 </div>
 
 <figure style="text-align: center; margin: 2rem 0 0 0;">
   <img
-    src="../../images/cmlocals chiang mai locals land border vs air entry nature plants landscape landmark garden tourist.webp"
-    alt="CMLocals Chiang Mai Locals Blacklist Status immigration record official documentation"
+    src="../../images/cmlocals chiang mai locals day reporting temple place of worship temple tourist.webp"
+    alt="CMLocals Chiang Mai Locals 90-Day Reporting immigration compliance temple"
     style="max-width: 70%; height: auto; border-radius: 12px;"
   />
 </figure>
 
-<h2>Consequences of blacklist status</h2>
+<h2>Penalties and consequences</h2>
 
-<h3>Visa application impact</h3>
+<table class="cost-table" aria-label="90-day reporting penalties">
+  <thead>
+    <tr><th>Situation</th><th>Fine / Consequence</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Filed on time or within 7-day grace period</td><td>Free</td></tr>
+    <tr><td>Filed from day 8 onwards</td><td>2,000 THB</td></tr>
+    <tr><td>Discovered without current report (caught during checkpoint or audit)</td><td>Up to 5,000 THB depending on how overdue</td></tr>
+    <tr><td>Repeated non-compliance (multiple missed reports)</td><td>Immigration record notation; potential visa denial renewal</td></tr>
+    <tr><td>Serious non-compliance (extended period without reporting)</td><td>Potential blacklist status; immigration complications on future visas</td></tr>
+  </tbody>
+</table>
+
 <p>
-  Blacklist notation makes future Thai visa applications extremely difficult or impossible. Immigration may automatically deny your application, or require extensive documentation and a personal interview before reconsidering. Some visa types (such as investment or employment visas) may be blocked entirely.
+  Missing your 90-day report is treated as an administrative violation, not a criminal offense. However, it is noted on your immigration record. Repeated violations or extended non-compliance can result in visa renewal denials or blacklist status.
 </p>
 
-<h3>Regional travel complications</h3>
 <p>
-  Some Southeast Asian countries share immigration intelligence with Thailand. A blacklist notation in Thailand's system may appear when you apply for visas to Cambodia, Laos, Vietnam, or Myanmar, resulting in visa denials or delays. Your reputation in the region is affected.
+  For long-stay residents, the most important consequence is that your visa can be revoked or you can be deported if caught with serious non-compliance. You have a full 7-day grace period after your due date that incurs no penalty, making the deadline less rigid than many believe. However, the 2,000 THB fine starting from day 8, and the potential 5,000 THB fine for discovered non-compliance, makes staying on top of reporting essential for your immigration standing.
 </p>
 
-<h3>Employment and visa sponsorship</h3>
+<h2>Changing address and updating your report</h2>
+
 <p>
-  If you wish to work in Thailand or have an employer sponsor your visa, the blacklist notation may prevent the sponsorship process from proceeding. Employers conduct background checks and will avoid hiring candidates with immigration complications.
+  If you move to a new address after filing your 90-day report, you do not need to file a second TM.47 immediately. However, you are required to update your address with immigration on the TM.30 form within 24 hours of moving. When you file your next 90-day report (whether in person or online), the system will reflect your updated address.
+</p>
+
+<p>
+  For details on address changes and TM.30 requirements, see the Address Change guide.
 </p>
 
 </div>
@@ -1730,22 +1753,23 @@ figure img {
      ======================================================== -->
 <section class="visa-section" aria-labelledby="visa-heading">
 <div class="visa-section-inner">
-  <h2 id="visa-heading">Avoiding blacklist status</h2>
+  <h2 id="visa-heading">90-day reporting and your visa type</h2>
   <p>
-    The most effective way to avoid blacklist notation is to comply strictly with Thai visa and immigration rules. Track your visa expiration, report required administrative notifications on time, and renew or extend your visa before it expires.
+    The 90-day reporting obligation applies to all long-stay visa types without exception. Whether you hold a retirement visa, DTV, ED visa, or Non-O work visa, the reporting requirement is the same every 90 days.
   </p>
   <p>
-    If you do commit a violation, voluntary surrender to immigration is far preferable to being caught. Voluntary disclosure results in significantly less severe consequences and reduces the likelihood of blacklist notation.
+    Short-stay tourists on tourist visas or visa-exempt entry do not have reporting obligations, as these are intended for stays under 60 days. The reporting requirement only applies if you are permitted to stay longer than 90 consecutive days.
   </p>
   <p>
-    For detailed guidance on visa compliance and requirements, explore the resources below.
+    For full visa guidance and requirements relevant to your stay purpose and duration, use the links below.
   </p>
   <div class="visa-links" role="list">
-    <a href="/immigration/overstay-penalties.html" role="listitem">Overstay Penalties & Fines</a>
-    <a href="/immigration/90-day-reporting.html" role="listitem">90-Day Reporting (TM.47)</a>
-    <a href="/visas/index.html" role="listitem">All Visa Types</a>
-    <a href="/visas/long-stay/" role="listitem">Long-Stay Visas</a>
+    <a href="/visas/long-stay/" role="listitem">Long-Stay Visas Overview</a>
+    <a href="/dtv-visa/" role="listitem">DTV (Digital Nomad Visa)</a>
+    <a href="/retirement-visa/" role="listitem">Retirement Visa (O-A)</a>
+    <a href="/ed-visa/index.html" role="listitem">ED Visa (Education)</a>
     <a href="/immigration/index.html" role="listitem">Immigration Rules & Compliance</a>
+    <a href="/immigration/tm30-registration/" role="listitem">TM30 Address Registration</a>
   </div>
 </div>
 </section>
@@ -1881,38 +1905,9 @@ window.CHATY_CONFIG={channels:[{name:"Facebook_Messenger",label:"Facebook Messen
 </footer>
 
 
-
-<script>
-(function() {
-  'use strict';
-  function calculateReadTime() {
-    const article = document.querySelector('article.article-body');
-    if (!article) return;
-    const text = article.innerText;
-    const wordCount = text.trim().split(/\s+/).length;
-    const readTime = Math.max(1, Math.round(wordCount / 200));
-    const readTimeEl = document.getElementById('read-time');
-    if (readTimeEl) {
-      readTimeEl.textContent = readTime + ' min';
-    }
-  }
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', calculateReadTime);
-  } else {
-    calculateReadTime();
-  }
-})();
-
+<script src="../../shared/js/progress-bar.js" defer></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
 
 
 
