@@ -17,7 +17,6 @@
 
 
 <style>
-
 /* ============================================================
    FONT LOADING
    ============================================================ */
@@ -31,6 +30,7 @@
   src: url('/fonts/dm-sans.woff2') format('woff2'), url('/fonts/dm-sans.ttf') format('truetype');
   font-display: swap;
 }
+
 /* ============================================================
    CMLocals - Immigration Pages
    Dark base: rgb(51, 65, 99)  |  Accent: #6366F1
@@ -166,7 +166,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); }
   color: #111827;
   text-decoration: none;
   font-size: 0.85rem;
-  font-weight: 600; font-family: var(--font-display);
+  font-weight: 600; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
   padding: 0;
   transition: all 0.2s ease;
   display: flex;
@@ -533,7 +533,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); }
   font-size: clamp(.95rem, 1.5vw, 1.1rem);
   color: rgba(255,255,255,.82); line-height: 1.75; max-width: 62ch; margin-bottom: 2rem;
 }
-
+.page-hero-meta { font-size: .82rem; color: rgba(255,255,255,.55); display: flex; gap: 1.5rem; flex-wrap: wrap; }
 
 /* ============================================================
    BREADCRUMB
@@ -717,7 +717,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); }
   width: 30px; height: 30px; border-radius: 6px;
   background: linear-gradient(135deg, var(--c-primary) 0%, var(--c-violet) 100%);
   display: flex; align-items: center; justify-content: center;
-  color: #fff; font-family: var(--font-display); font-size: .95rem; font-weight: 500; font-style: italic;
+  color: #fff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: .95rem; font-weight: 500; font-style: italic;
 }
 .footer-logo-text { font-family: var(--font-body); font-weight: 700; font-size: .95rem; color: var(--c-white); letter-spacing: -.01em; }
 .footer-tagline { font-size: .82rem; line-height: 1.6; max-width: 240px; color: rgba(255,255,255,.88); }
@@ -812,25 +812,6 @@ figure img {
   height: auto;
 }
 
-<style>
-
-/* ============================================================
-   FONT LOADING
-   ============================================================ */
-@font-face {
-  font-family: 'Newsreader';
-  src: url('/fonts/newsreader.woff2') format('woff2'), url('/fonts/newsreader.ttf') format('truetype');
-  font-display: swap;
-}
-@font-face {
-  font-family: 'DM Sans';
-  src: url('/fonts/dm-sans.woff2') format('woff2'), url('/fonts/dm-sans.ttf') format('truetype');
-  font-display: swap;
-}
-/* ============================================================
-   CANONICAL HEADER + NAV CSS (auto-injected - do not edit here)
-   ============================================================ */
-.site-header {
   background: white;
   border-bottom: 1px solid rgba(0,0,0,.1);
   position: sticky;
@@ -869,7 +850,7 @@ figure img {
   color: #111827;
   text-decoration: none;
   font-size: 0.85rem;
-  font-weight: 600; font-family: var(--font-display);
+  font-weight: 600; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
   padding: 0;
   transition: all 0.2s ease;
   display: flex;
@@ -1243,11 +1224,9 @@ figure img {
 .visa-card,.article-card,.tool-card,.guide-card,.visa-category-card,.program-card,.topic-card,.checklist-card,.related-card,.sidebar-card{text-decoration:none;}
 .visa-card *,.article-card *,.tool-card *,.guide-card *,.visa-category-card *,.program-card *,.topic-card *,.checklist-card *,.related-card *,.sidebar-card *{text-decoration:none;}
 .visa-card:hover,.article-card:hover,.tool-card:hover,.guide-card:hover,.visa-category-card:hover,.program-card:hover,.topic-card:hover,.checklist-card:hover,.related-card:hover,.sidebar-card:hover{text-decoration:none;}
-
-.breadcrumb-meta { color: var(--c-muted); }
 </style>
-<link rel="stylesheet" href="/shared/css/card-fixes.css">
-<link rel="stylesheet" href="/shared/css/responsive-images.css">
+
+
 <link rel="preload" href="../../fonts/newsreader.woff2" as="font" type="font/woff2" crossorigin/>
 <link rel="preload" href="../../fonts/dm-sans.woff2" as="font" type="font/woff2" crossorigin/>
 <link rel="stylesheet" href="../../css/fonts.css" media="print" onload="this.media='all'"/>
@@ -1789,8 +1768,7 @@ window.CHATY_CONFIG={channels:[{name:"Facebook_Messenger",label:"Facebook Messen
 
 <script src="../../shared/js/card-click-handler.js"></script>
 <script src="../../shared/chaty-widget/scripts/chaty-widget.js"></script>
-
-<footer class="site-footer" role="contentinfo" style="background: #202A6C;">
+<footer class="site-footer" role="contentinfo" >
 <div class="footer-container">
 
   <!-- Column 1: CMLocals + Tagline + Social Icons -->
@@ -1880,46 +1858,6 @@ window.CHATY_CONFIG={channels:[{name:"Facebook_Messenger",label:"Facebook Messen
 </footer>
 
 
-
-<script>
-(function() {
-  'use strict';
-  function calculateReadTime() {
-    const article = document.querySelector('article.article-body');
-    if (!article) return;
-    const text = article.innerText;
-    const wordCount = text.trim().split(/\s+/).length;
-    const readTime = Math.max(1, Math.round(wordCount / 200));
-    const readTimeEl = document.getElementById('read-time');
-    if (readTimeEl) {
-      readTimeEl.textContent = readTime + ' min';
-    }
-  }
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', calculateReadTime);
-  } else {
-    calculateReadTime();
-  }
-})();
-
+<script src="../../shared/js/progress-bar.js" defer></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

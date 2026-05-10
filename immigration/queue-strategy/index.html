@@ -13,8 +13,10 @@
 <meta property="twitter:title" content="Immigration Queue Strategy: Beat the Crowds"/>
 <meta property="twitter:description" content="Beat immigration office queues in Thailand. Best times to visit, appointment systems, agent options, and time-saving tips."/>
 
-<style>
 
+
+
+<style>
 /* ============================================================
    FONT LOADING
    ============================================================ */
@@ -28,6 +30,7 @@
   src: url('/fonts/dm-sans.woff2') format('woff2'), url('/fonts/dm-sans.ttf') format('truetype');
   font-display: swap;
 }
+
 /* ============================================================
    CMLocals - Immigration Pages
    Dark base: rgb(51, 65, 99)  |  Accent: #6366F1
@@ -112,53 +115,306 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); }
 /* ============================================================
    HEADER
    ============================================================ */
-.site-header { display: flex; align-items: center; justify-content: space-between; padding: 1.2rem var(--edge); background: var(--c-white); position: sticky; top: 0; z-index: 100; box-shadow: 0 1px 3px rgba(0,0,0,.05); }
-.site-header.scrolled { box-shadow: 0 2px 8px rgba(0,0,0,.08); }
-.header-inner { display: flex; align-items: center; width: 100%; max-width: var(--max-w); margin: 0 auto; justify-content: space-between; }
-.header-logo { display: flex; align-items: center; text-decoration: none; margin-right: 2rem; }
-.header-logo img { height: 40px; width: auto; }
-.primary-nav { display: flex; align-items: center; flex: 1; gap: 2.4rem; }
-.nav-item { position: relative; }
-.nav-link { text-decoration: none; color: var(--c-body); font-weight: 500; font-size: 0.95rem; transition: color .2s; }
-.nav-link:hover { color: var(--c-primary); }
-.dropdown-menu { position: absolute; top: 100%; left: 0; background: var(--c-white); min-width: 900px; border-radius: var(--radius-md); box-shadow: var(--shadow-lg); padding: 1.5rem; display: none; margin-top: 0.5rem; }
-.nav-item:hover .dropdown-menu { display: block; }
-.mega-menu { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2.5rem; }
-.dropdown-section h3 { font-size: 0.85rem; font-weight: 700; text-transform: uppercase; color: var(--c-muted); margin-bottom: 1rem; }
-.dropdown-section ul { display: flex; flex-direction: column; gap: 0.5rem; }
-.dropdown-section a { text-decoration: none; color: var(--c-body); font-size: 0.9rem; transition: color .15s; }
-.dropdown-section a:hover { color: var(--c-primary); }
-
-.mobile-menu-toggle { display: none; flex-direction: column; gap: 0.4rem; cursor: pointer; width: 28px; height: 24px; border: none; padding: 0; background: none; }
-.mobile-menu-toggle span { width: 100%; height: 2px; background: var(--c-body); border-radius: 1px; transition: all .3s; }
-.mobile-menu-toggle.active span:nth-child(1) { transform: rotate(45deg) translateY(8px); }
-.mobile-menu-toggle.active span:nth-child(2) { opacity: 0; }
-.mobile-menu-toggle.active span:nth-child(3) { transform: rotate(-45deg) translateY(-8px); }
-
-.mobile-nav { display: none; position: absolute; top: 100%; left: 0; width: 100%; background: var(--c-white); flex-direction: column; border-top: 1px solid var(--c-border); max-height: 80vh; overflow-y: auto; }
-.mobile-nav.active { display: flex; }
-.desktop-only { display: flex; }
-
-@media (max-width: 1100px) {
-  .primary-nav { gap: 1.8rem; }
-  .dropdown-menu { min-width: 750px; }
-  .mega-menu { grid-template-columns: 1fr; }
-}
-@media (max-width: 960px) {
-  .mobile-menu-toggle { display: flex; }
-  .primary-nav { display: none; }
-  .desktop-only { display: none; }
-  .mobile-nav { display: none; }
-  .site-header { padding: 1rem var(--edge); }
-  .header-logo img { height: 32px; }
-  .dropdown-menu { position: static; width: 100%; margin-top: 0; box-shadow: none; border-radius: 0; padding: 1rem 0; }
-  .nav-item:hover .dropdown-menu { display: none; }
-  .nav-item.expanded .dropdown-menu { display: block; }
+.site-header {
+  background: white;
+  border-bottom: 1px solid rgba(0,0,0,.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-/* Mobile accordion nav */
-@media (max-width: 960px) {
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  height: 70px;
+}
+
+/* Wordmark */
+.header-logo {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+.header-logo img {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
+.header-logo-mark {
+  display: none;
+}
+
+.header-logo-text {
+  display: none;
+}
+
+/* Primary Nav */
+.primary-nav { display: flex; gap: 2.4rem;
+  flex-wrap: nowrap;
+  align-items: center;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.primary-nav a { position: relative;
+  color: #111827;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  padding: 0;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+}
+
+.primary-nav a:hover {
+  color: var(--c-primary);
+}
+
+/* Header CTAs */
+.header-ctas {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-shrink: 0;
+}
+
+.header-ctas .btn-wa {
+  padding: 0.4rem 0.9rem;
+  font-size: 0.9rem;
+}
+
+.header-fb-link {
+  display: none;
+}
+
+/* Mobile toggle */
+.header-hamburger {
+  display: none; flex-direction: column; justify-content: center; align-items: center;
+  width: 40px; height: 40px; gap: 5px;
+  border-radius: var(--radius-sm); cursor: pointer;
+  background: transparent;
+}
+.header-hamburger span {
+  display: block; width: 22px; height: 2px;
+  background: var(--c-dark); border-radius: 2px;
+  transition: transform .25s, opacity .25s;
+}
+.header-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.header-hamburger.open span:nth-child(2) { opacity: 0; }
+.header-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* Mobile drawer */
+.mobile-nav {
+  display: none; position: fixed; inset: 64px 0 0 0; z-index: 99;
+  background: var(--c-white); overflow-y: auto;
+  padding: 1.5rem var(--edge) 3rem;
+  border-top: 1px solid var(--c-border);
+}
+.mobile-nav.open { display: block !important; }
+.mobile-nav a {
+  display: block; padding: .9rem 0;
+  font-size: 0.9rem; font-weight: 500; color: var(--c-dark);
+  text-decoration: none;
+  border-bottom: 1px solid var(--c-border);
+}
+.mobile-nav a:last-of-type { border-bottom: none; }
+.mobile-nav a:hover { color: var(--c-primary); }
+.mobile-nav-ctas { display: flex; flex-direction: column; gap: .75rem; margin-top: 1.5rem; }
+.mobile-nav-ctas .btn { justify-content: center; }
+
+/* Navigation Links with Dropdown */
+.nav-item {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.nav-item > a.nav-link {
+  position: relative;
+  color: #111827;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 0 0.85rem;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  height: 70px;
+  line-height: 1;
+}
+
+.nav-item > a.nav-link:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--c-primary);
+  text-underline-offset: 4px;
+  color: var(--c-primary);
+}
+
+.nav-item > a.nav-link.has-dropdown {
+  cursor: pointer;
+}
+
+/* Mega Menu Dropdown */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  border: 1px solid rgba(0,0,0,.1);
+  border-radius: 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,.08);
+  padding: 1.75rem 2rem;
+  width: 350px;
+  display: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease-out;
+  margin-top: 0;
+  z-index: 101;
+}
+
+.dropdown-menu[style*="display: block"] {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 2rem;
+}
+
+.mega-menu {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+}
+
+/* Chiang Mai has two columns, needs wider width */
+.mega-menu:has(> .dropdown-section:nth-child(2)) {
+  width: 600px !important;
+}
+
+.dropdown-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  flex: 1;
+  min-width: 200px;
+}
+
+.dropdown-section:last-child {
+  margin-bottom: 0;
+}
+
+.dropdown-section h3 {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--c-primary);
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  padding: 0;
+  border: none;
+}
+
+.dropdown-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-section li a {
+  color: #374151;
+  text-decoration: none;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  transition: color 0.2s;
+  display: block;
+  padding: 0.1rem 0;
+}
+
+.dropdown-section li a:hover {
+  color: var(--c-primary);
+}
+
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  gap: 4px;
+  padding: 0.5rem;
+}
+
+.mobile-menu-toggle span {
+  width: 24px;
+  height: 2px;
+  background: #111827;
+  transition: all 0.3s;
+}
+
+.mobile-menu-toggle.active span:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.mobile-menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-toggle.active span:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+/* Desktop Only */
+@media (min-width: 1024px) {
+  .desktop-only {
+    display: flex !important;
+  }
+  .mobile-only {
+    display: none !important;
+  }
+}
+
+/* Mobile (same as before) */
+@media (max-width: 1023px) {
+  .mobile-menu-toggle {
+    display: flex;
+  }
+  .primary-nav {
+    display: none;
+  }
+  .dropdown-menu {
+    display: none;
+  }
+
+  .nav-mobile {
+    display: none;
+    position: fixed;
+    inset: 64px 0 0 0;
+    left: 0;
+    right: 0;
+    background: white;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    flex-direction: column;
+    max-height: calc(100vh - 70px);
+    overflow-y: auto;
+    z-index: 999;
+  }
+  .nav-mobile.open {
+    display: flex;
+  }
   .nav-accordion {
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    cursor: pointer;
+    margin: 0;
+  }
+  .nav-accordion summary {
     padding: 1rem;
     font-weight: 600;
     color: #111827;
@@ -277,7 +533,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); }
   font-size: clamp(.95rem, 1.5vw, 1.1rem);
   color: rgba(255,255,255,.82); line-height: 1.75; max-width: 62ch; margin-bottom: 2rem;
 }
-
+.page-hero-meta { font-size: .82rem; color: rgba(255,255,255,.55); display: flex; gap: 1.5rem; flex-wrap: wrap; }
 
 /* ============================================================
    BREADCRUMB
@@ -359,53 +615,195 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); }
 .req-card p { font-size: .9rem; line-height: 1.65; color: var(--c-body); margin: 0; }
 
 /* ============================================================
-   VISA SECTION (related links)
+   COST TABLE
    ============================================================ */
-.visa-section { padding: var(--section-py) var(--edge); background: var(--c-dark); color: rgba(255,255,255,.92); }
-.visa-section .container { max-width: 1090px; }
-.visa-section h2 { font-family: var(--font-display); font-size: 1.8rem; color: var(--c-white); margin-bottom: 1.5rem; border-top: none; padding-top: 0; }
-.visa-links { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
-.visa-link { display: flex; align-items: center; gap: .8rem; padding: 1rem; background: rgba(255,255,255,.06); border-radius: var(--radius-md); text-decoration: none; transition: background .18s; }
-.visa-link:hover { background: rgba(255,255,255,.12); }
-.visa-link::before { content: '→'; flex-shrink: 0; font-size: 0.9rem; font-weight: 600; color: var(--c-page-accent); }
-.visa-link span { font-size: .9rem; font-weight: 500; }
+.cost-table {
+  width: 100%; max-width: 640px;
+  border-collapse: collapse; font-size: .9rem; margin: 1.5rem 0;
+}
+.cost-table th {
+  text-align: left; padding: .6rem .8rem;
+  background: #202A6C; color: rgba(255,255,255,.95);
+  font-weight: 600; font-size: .78rem; letter-spacing: .04em; text-transform: uppercase;
+}
+.cost-table th:last-child { text-align: right; }
+.cost-table td { padding: .65rem .8rem; border-bottom: 1px solid var(--c-border); color: var(--c-body); vertical-align: top; }
+.cost-table td:last-child { text-align: right; font-weight: 600; color: #202A6C; }
+.cost-table tr.total td { border-bottom: none; font-weight: 700; background: var(--c-off-white); }
+.cost-table tr.total td:last-child { color: var(--c-page-accent); }
+
+/* ============================================================
+   CALLOUT BAND
+   ============================================================ */
+.callout-band {
+  background: var(--c-page-accent-l);
+  border-left: 3px solid var(--c-page-accent);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  padding: 1.25rem 1.5rem; margin: 2rem 0 0 0; max-width: 68ch;
+}
+.callout-band p { margin: 0; color: #202A6C; font-size: .95rem; line-height: 1.65; }
+.callout-band strong { color: var(--c-page-accent); }
+
+/* ============================================================
+   VISA SECTION
+   ============================================================ */
+.visa-section {
+  background: var(--c-dark);
+  padding-block: clamp(2.5rem, 4vw, 3.5rem);
+  margin-block: 0;
+  position: relative; overflow: hidden;
+}
+.visa-section::before {
+  content: '';
+  position: absolute; right: -10%; top: -50%; width: 50%; height: 200%;
+  background: radial-gradient(ellipse, rgba(99,102,241,.12) 0%, transparent 65%);
+  pointer-events: none;
+}
+.visa-section-inner {
+  max-width: 1090px; padding-inline: var(--edge);
+  margin-inline: auto; position: relative; z-index: 1;
+}
+.visa-section h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 2.5vw, 1.85rem);
+  font-weight: 400; color: var(--c-white); letter-spacing: -.02em; margin-bottom: 1rem;
+}
+.visa-section p { color: rgba(255,255,255,.88); line-height: 1.7; margin-bottom: 1.25rem; max-width: 64ch; }
+.visa-links { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.5rem; }
+.visa-links a {
+  font-size: .85rem; font-weight: 600; color: rgba(255,255,255,.90);
+  background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.18);
+  padding: .45em 1em; border-radius: var(--radius-sm);
+  text-decoration: none; transition: background .18s, border-color .18s;
+}
+.visa-links a:hover { background: rgba(99,102,241,.28); border-color: var(--c-page-accent); color: #fff; }
+
+/* ============================================================
+   TOOLS & CHECKLISTS
+   ============================================================ */
+.tools-section { background: var(--c-white); padding-block: clamp(2.5rem, 4vw, 3.5rem); border-top: 1px solid var(--c-border); }
+.tools-section-inner { max-width: 1090px; padding-inline: var(--edge); margin-inline: auto; }
+.tools-header { margin-bottom: 1.5rem; }
+.section-title { font-family: var(--font-display); font-size: clamp(1.4rem, 2.5vw, 1.85rem);
+  font-weight: 400; letter-spacing: -.02em; color: #202A6C; margin-bottom: .4rem;
+}
+.guides-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+.tool-card {
+  border: 1px solid var(--c-border); border-radius: var(--radius-md);
+  padding: 1.25rem 1.4rem; background: var(--c-off-white);
+  text-decoration: none; color: var(--c-body);
+  display: flex; align-items: center; gap: 1rem;
+  transition: border-color .18s, box-shadow .18s;
+}
+.tool-card:hover { border-color: var(--c-page-accent); background: var(--c-white); box-shadow: var(--shadow-sm); }
+.tool-card__icon {
+  width: 40px; height: 40px; border-radius: var(--radius-sm);
+  background: var(--c-page-accent-l);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.9rem; flex-shrink: 0; transition: background .18s;
+}
+.tool-card:hover .tool-card__icon { background: var(--c-violet-l); }
+.tool-card__body { flex: 1; }
+.tool-card__type { font-size: .7rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--c-page-accent); }
+.tool-card__title { font-size: .88rem; font-weight: 600; color: #202A6C; line-height: 1.3; }
 
 /* ============================================================
    FOOTER
    ============================================================ */
-.site-footer { background: var(--c-dark-2); color: rgba(255,255,255,.92); padding: clamp(3rem, 5vw, 4.5rem) var(--edge) 2rem; }
-.footer-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2.5rem; max-width: 1090px; margin: 0 auto; padding: 0 var(--edge); }
-.footer-col h4 { font-size: .9rem; font-weight: 600; color: rgba(255,255,255,.70); margin-bottom: 1rem; text-transform: uppercase; letter-spacing: .5px; }
-.footer-col a { display: block; font-size: .85rem; color: rgba(255,255,255,.88); text-decoration: none; margin-bottom: 0.7rem; transition: color .18s; }
-.footer-col a:hover { color: var(--c-page-accent); }
-.footer-links { display: flex; flex-direction: column; gap: 0.6rem; }
+.site-footer { background: var(--c-dark-2); padding-block: var(--section-py); color: rgba(255,255,255,.92); }
+.footer-top { display: grid; grid-template-columns: 1.6fr repeat(4, 1fr); gap: 3rem; padding-bottom: 3rem; border-bottom: 1px solid var(--c-border-dark); }
+.footer-logo { display: flex; align-items: center; gap: .5rem; text-decoration: none; margin-bottom: .8rem; }
+.footer-logo-mark {
+  width: 30px; height: 30px; border-radius: 6px;
+  background: linear-gradient(135deg, var(--c-primary) 0%, var(--c-violet) 100%);
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: .95rem; font-weight: 500; font-style: italic;
+}
+.footer-logo-text { font-family: var(--font-body); font-weight: 700; font-size: .95rem; color: var(--c-white); letter-spacing: -.01em; }
+.footer-tagline { font-size: .82rem; line-height: 1.6; max-width: 240px; color: rgba(255,255,255,.88); }
+.footer-social { display: flex; gap: .6rem; margin-top: 1.25rem; }
+.footer-social a {
+  width: 32px; height: 32px; border-radius: var(--radius-sm);
+  background: rgba(255,255,255,.08); color: rgba(255,255,255,.88);
+  display: flex; align-items: center; justify-content: center;
+  font-size: .8rem; font-weight: 700; text-decoration: none;
+  transition: background .18s, color .18s;
+}
+.footer-social a:hover { background: var(--c-primary); color: var(--c-white); }
+.footer-col-title { font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.70); margin-bottom: 1.1rem; }
+.footer-col ul { display: flex; flex-direction: column; gap: .55rem; }
+.footer-col ul a { font-size: .83rem; color: rgba(255,255,255,.88); text-decoration: none; transition: color .15s; }
+.footer-col ul a:hover { color: var(--c-white); }
+.footer-bottom { display: flex; align-items: center; justify-content: space-between; padding-top: 2rem; gap: 1rem; flex-wrap: wrap; }
+.footer-copy { font-size: .8rem; }
+.footer-legal { display: flex; gap: 1.5rem; }
+.footer-legal a { font-size: .8rem; color: rgba(255,255,255,.75); text-decoration: none; transition: color .15s; }
+.footer-legal a:hover { color: var(--c-white); }
 
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 1100px) { .footer-top { grid-template-columns: 1fr 1fr 1fr; } }
+@media (max-width: 960px) {
+  .primary-nav { display: none; }
+  .header-hamburger { display: flex; }
+  .footer-top { grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .guides-row { grid-template-columns: 1fr; }
+}
 @media (max-width: 640px) {
-  .site-footer { padding: 3rem 1.5rem 0; }
-  .footer-container { grid-template-columns: 1fr; gap: 2rem; padding: 0 1.5rem; }
+  .page-hero h1 { font-size: 1.75rem; }
+  .footer-top { grid-template-columns: 1fr; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; }
+  .cost-table { font-size: .82rem; }
+  .cost-table th, .cost-table td { padding: .5rem .6rem; }
+}
+/* Make entire cards clickable */
+.path-card::before,
+.article-card::before,
+.tool-card::before,
+.guide-card::before,
+.visa-card::before,
+.visa-category-card::before,
+.program-card::before,
+.topic-card::before,
+.checklist-card::before,
+.related-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  cursor: pointer;
 }
 
-/* UTILITY CLASSES */
-.table-wrap { overflow-x: auto; margin: 1.8rem 0; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); }
-table { width: 100%; border-collapse: collapse; background: var(--c-white); }
-th { background: var(--c-dark); color: var(--c-white); padding: 1rem; text-align: left; font-weight: 600; font-size: .9rem; }
-td { padding: 0.9rem 1rem; border-bottom: 1px solid var(--c-border); font-size: .9rem; }
-tr:last-child td { border-bottom: none; }
-tbody tr:nth-child(odd) { background: var(--c-subtle); }
-td strong { color: var(--c-dark); }
+.path-card,
+.article-card,
+.tool-card,
+.guide-card,
+.visa-card,
+.visa-category-card,
+.program-card,
+.topic-card,
+.checklist-card,
+.related-card {
+  position: relative;
+}
 
-.card-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; margin: 1.8rem 0; }
-.card { padding: 1.2rem; background: var(--c-white); border-left: 4px solid var(--c-page-accent); border-radius: 0 var(--radius-md) var(--radius-md) 0; box-shadow: var(--shadow-sm); transition: box-shadow .18s; }
-.card:hover { box-shadow: var(--shadow-md); }
-.card h4 { font-size: .95rem; font-weight: 600; color: var(--c-dark); margin-bottom: 0.4rem; }
-.card p { font-size: .9rem; color: var(--c-body); line-height: 1.6; margin: 0; }
+/* Ensure child links are clickable above the overlay */
+.path-card__cta,
+.article-card__link,
+.tool-card__cta,
+.guide-card__cta,
+.visa-card__cta,
+.visa-category-card__cta,
+.program-card__cta,
+.topic-card__cta,
+.checklist-card__cta,
+.related-card {
+  position: relative;
+  z-index: 2;
+}
 
-.callout { margin: 2.5rem 0; padding: 1.5rem; background: var(--c-page-accent-l); border-left: 4px solid var(--c-page-accent); border-radius: 0 var(--radius-md) var(--radius-md) 0; }
-.callout h4 { font-size: .95rem; font-weight: 700; color: var(--c-dark); margin-bottom: 0.6rem; }
-.callout p { margin-bottom: 0.6rem; font-size: .9rem; }
-.callout ul { margin: 0.8rem 0; }
-.callout li { margin-left: 1.5rem; list-style: disc; }
-
+/* Image sizing: 50-70% of column width, centered */
 figure img {
   max-width: 100%;
   width: 100%;
@@ -414,15 +812,421 @@ figure img {
   height: auto;
 }
 
+  background: white;
+  border-bottom: 1px solid rgba(0,0,0,.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  height: 70px;
+}
+.header-logo {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+.header-logo img {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+.header-logo-mark { display: none; }
+.header-logo-text { display: none; }
+.primary-nav { display: flex; gap: 2.4rem;
+  flex-wrap: nowrap;
+  align-items: center;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+.primary-nav a { position: relative;
+  color: #111827;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  padding: 0;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+}
+.primary-nav a:hover { color: var(--c-primary, #4F46E5); }
+.header-ctas {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-shrink: 0;
+}
+.header-ctas .btn-wa {
+  padding: 0.4rem 0.9rem;
+  font-size: 0.9rem;
+}
+.header-fb-link { display: none; }
+.header-hamburger {
+  display: none; flex-direction: column; justify-content: center; align-items: center;
+  width: 40px; height: 40px; gap: 5px;
+  border-radius: 6px; cursor: pointer;
+  background: transparent;
+}
+.header-hamburger span {
+  display: block; width: 22px; height: 2px;
+  background: #0D1117; border-radius: 2px;
+  transition: transform .25s, opacity .25s;
+}
+.header-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.header-hamburger.open span:nth-child(2) { opacity: 0; }
+.header-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.mobile-nav {
+  display: none; position: fixed; inset: 64px 0 0 0; z-index: 99;
+  background: #FFFFFF; overflow-y: auto;
+  padding: 1.5rem clamp(1.25rem, 4vw, 2.5rem) 3rem;
+  border-top: 1px solid #E5E7EB;
+}
+.mobile-nav.open { display: block !important; }
+.mobile-nav a {
+  display: block; padding: .9rem 0;
+  font-size: 0.9rem; font-weight: 500; color: #0D1117;
+  text-decoration: none;
+  border-bottom: 1px solid #E5E7EB;
+}
+.mobile-nav a:last-of-type { border-bottom: none; }
+.mobile-nav a:hover { color: var(--c-primary, #4F46E5); }
+.mobile-nav-ctas { display: flex; flex-direction: column; gap: .75rem; margin-top: 1.5rem; }
+.mobile-nav-ctas .btn { justify-content: center; }
+.nav-item {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+.nav-item > a.nav-link {
+  position: relative;
+  color: #111827;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 0 0.85rem;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  height: 70px;
+  line-height: 1;
+}
+.nav-item > a.nav-link:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--c-primary, #4F46E5);
+  text-underline-offset: 4px;
+  color: var(--c-primary, #4F46E5);
+}
+.nav-item > a.nav-link.has-dropdown { cursor: pointer; }
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  border: 1px solid rgba(0,0,0,.1);
+  border-radius: 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,.08);
+  padding: 1.75rem 2rem;
+  width: 350px;
+  display: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease-out;
+  margin-top: 0;
+  z-index: 101;
+}
+.dropdown-menu[style*="display: block"] {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 2rem;
+}
+.mega-menu {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+}
+.mega-menu:has(> .dropdown-section:nth-child(2)) {
+  width: 600px !important;
+}
+.dropdown-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  flex: 1;
+  min-width: 200px;
+}
+.dropdown-section:last-child { margin-bottom: 0; }
+.dropdown-section h3 {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--c-primary, #4F46E5);
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  padding: 0;
+  border: none;
+}
+.dropdown-section ul { list-style: none; padding: 0; margin: 0; }
+.dropdown-section li a {
+  color: #374151;
+  text-decoration: none;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  transition: color 0.2s;
+  display: block;
+  padding: 0.1rem 0;
+}
+.dropdown-section li a:hover { color: var(--c-primary, #4F46E5); }
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  gap: 4px;
+  padding: 0.5rem;
+}
+.mobile-menu-toggle span {
+  width: 24px;
+  height: 2px;
+  background: #111827;
+  transition: all 0.3s;
+}
+.mobile-menu-toggle.active span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+.mobile-menu-toggle.active span:nth-child(2) { opacity: 0; }
+.mobile-menu-toggle.active span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+@media (min-width: 1024px) {
+  .desktop-only { display: flex !important; }
+  .mobile-only { display: none !important; }
+}
+@media (max-width: 1023px) {
+  .mobile-menu-toggle { display: flex; }
+  .primary-nav { display: none; }
+  
+  .nav-mobile {
+    display: none;
+    position: fixed;
+    inset: 64px 0 0 0;
+    left: 0;
+    right: 0;
+    background: white;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    flex-direction: column;
+    max-height: calc(100vh - 70px);
+    overflow-y: auto;
+    z-index: 999;
+  }
+  .nav-mobile.open { display: flex !important; }
+  .nav-accordion {
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    cursor: pointer;
+    margin: 0;
+  }
+  .nav-accordion summary {
+    padding: 1rem;
+    font-weight: 600;
+    color: #111827;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+    font-size: 0.9rem;
+  }
+  .nav-accordion summary::after {
+    content: '▼';
+    font-size: 0.9rem;
+    transition: transform 0.3s;
+  }
+  .nav-accordion[open] summary::after { transform: rotate(180deg); }
+  .nav-accordion ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: rgba(79, 70, 229, 0.02);
+  }
+  .nav-accordion li { border-bottom: 1px solid rgba(0,0,0,.05); }
+  .nav-accordion li a {
+    display: block;
+    padding: 0.75rem 1rem;
+    padding-left: 2rem;
+    color: #374151;
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+  .nav-accordion li a:active {
+    background: rgba(79, 70, 229, 0.1);
+    color: var(--c-primary, #4F46E5);
+  }
+  
+}
+@media (max-width: 960px) {
+  .primary-nav { display: none; }
+  .header-hamburger { display: flex; }
+}
+/* ============================================================
+   CANONICAL FOOTER CSS (auto-injected - do not edit here)
+   ============================================================ */
+.site-footer {
+  background: var(--footer-bg, #202A6C);
+  color: rgba(255, 255, 255, 0.92);
+  padding: 3.6rem 0 0;
+}
+.footer-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 0.9fr 0.9fr 0.9fr 0.9fr;
+  gap: 2rem;
+  padding: 0 1.8rem 1.8rem;
+  width: 100%;
+}
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+.footer-col-cmlocals { gap: 1.8rem; }
+.footer-logo a {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+.footer-logo img {
+  height: 43.2px;
+  width: auto;
+  display: block;
+}
+.footer-tagline {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.75);
+}
+.footer-socials {
+  display: flex;
+  gap: 1.35rem;
+}
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28.8px;
+  height: 28.8px;
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  transition: filter 0.2s ease, color 0.2s ease;
+  filter: grayscale(100%);
+}
+.social-icon:hover { color: currentColor; filter: grayscale(0%); }
+.social-icon.social-whatsapp:hover { color: #25D366; }
+.social-icon.social-facebook:hover { color: #1877F2; }
+.social-icon.social-messenger:hover { color: #0084FF; }
+.social-icon svg { width: 100%; height: 100%; }
+.footer-col-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0;
+}
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.footer-links a {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  transition: color 0.2s;
+}
+.footer-links a:hover { color: white; }
+.footer-bottom-bar {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1.8rem;
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.8rem;
+  width: 100%;
+}
+.footer-bottom-bar p {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+}
+.footer-legal-links {
+  display: flex;
+  gap: 1.8rem;
+}
+.footer-legal-links a {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.footer-legal-links a:hover { color: rgba(255, 255, 255, 0.9); }
+@media (max-width: 1024px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
+  .footer-bottom-bar { flex-direction: column; text-align: center; }
+}
+@media (max-width: 640px) {
+  .site-footer { padding: 3rem 1.5rem 0; }
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding-bottom: 1.5rem;
+  }
+  .footer-col-title { font-size: 0.85rem; }
+  .footer-links a { font-size: 0.85rem; }
+  .footer-bottom-bar {
+    padding: 1.5rem;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .footer-bottom-bar p { font-size: 0.9rem; }
+  .footer-legal-links { gap: 1rem; }
+  .footer-legal-links a { font-size: 0.9rem; }
+}
+/* Image sizing: 50-70% of column width, centered */
+figure img {
+  max-width: 100%;
+  width: 100%;
+  margin-inline: auto;
+  display: block;
+  height: auto;
+}
 /* PROGRESS BAR */
 .progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: linear-gradient(90deg, #4F46E5, #6366F1, #4F46E5); width: 2%; min-width: 2%; z-index: 10001; transition: width 0.1s linear; box-shadow: 0 2px 8px rgba(79,70,229,.18); }
 @media (prefers-reduced-motion: reduce) { .progress-bar { transition: none; } }
-
-.breadcrumb-meta { color: var(--c-muted); }
-
+/* Card underline fixes */
+.visa-card,.article-card,.tool-card,.guide-card,.visa-category-card,.program-card,.topic-card,.checklist-card,.related-card,.sidebar-card{text-decoration:none;}
+.visa-card *,.article-card *,.tool-card *,.guide-card *,.visa-category-card *,.program-card *,.topic-card *,.checklist-card *,.related-card *,.sidebar-card *{text-decoration:none;}
+.visa-card:hover,.article-card:hover,.tool-card:hover,.guide-card:hover,.visa-category-card:hover,.program-card:hover,.topic-card:hover,.checklist-card:hover,.related-card:hover,.sidebar-card:hover{text-decoration:none;}
 </style>
-<link rel="stylesheet" href="/shared/css/card-fixes.css">
-<link rel="stylesheet" href="/shared/css/responsive-images.css">
+
+
 <link rel="preload" href="../../fonts/newsreader.woff2" as="font" type="font/woff2" crossorigin/>
 <link rel="preload" href="../../fonts/dm-sans.woff2" as="font" type="font/woff2" crossorigin/>
 <link rel="stylesheet" href="../../css/fonts.css" media="print" onload="this.media='all'"/>
@@ -495,73 +1299,159 @@ figure img {
       </div>
     </div>
 
-    <!-- Category 3: IMMIGRATION -->
+    <!-- Category 3: VISA GUIDES -->
     <div class="nav-item">
-      <a href="/immigration/" class="nav-link has-dropdown">Immigration</a>
-      <div class="dropdown-menu mega-menu chiang-mai-menu" role="menu">
+      <a href="/visas/" class="nav-link has-dropdown">Visa Guides</a>
+      <div class="dropdown-menu mega-menu" role="menu">
         <div class="dropdown-section">
-          <h3>Visas</h3>
+          <h3>All Types</h3>
           <ul>
-            <li><a href="/ed-visa/">ED Visa</a></li>
-            <li><a href="/dtv-visa/">DTV Visa</a></li>
-            <li><a href="/visa-extensions/">Extensions</a></li>
-            <li><a href="/marriage-visa/">Marriage Visa</a></li>
-            <li><a href="/retirement-visa/">Retirement Visa</a></li>
-            <li><a href="/immigration/overstay/">Overstay</a></li>
-          </ul>
-        </div>
-        <div class="dropdown-section">
-          <h3>Compliance</h3>
-          <ul>
-            <li><a href="/immigration/">Immigration Hub</a></li>
-            <li><a href="/immigration/90-day-reporting/">90-Day Reporting</a></li>
-            <li><a href="/immigration/tm30-registration/">TM30 Registration</a></li>
-            <li><a href="/immigration/re-entry-permits/">Re-Entry Permits</a></li>
-            <li><a href="/immigration/queue-strategy/">Queue Strategy</a></li>
+            <li><a href="/visas/">All Visas</a></li>
+            <li><a href="/visas/short-stay/">Short-Stay</a></li>
+            <li><a href="/visas/long-stay/">Long-Stay</a></li>
+            <li><a href="/dtv-visa/">DTV</a></li>
+            <li><a href="/tourist-visa/">Tourist</a></li>
+            <li><a href="/visas/guides/which-visa/">Which Visa?</a></li>
           </ul>
         </div>
       </div>
     </div>
-  </nav>
 
-  <!-- Mobile Menu Toggle -->
-  <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle mobile menu">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
+    <!-- Category 4: IMMIGRATION -->
+    <div class="nav-item">
+      <a href="/immigration/" class="nav-link has-dropdown">Immigration</a>
+      <div class="dropdown-menu mega-menu" role="menu">
+        <div class="dropdown-section">
+          <h3>Compliance</h3>
+          <ul>
+            <li><a href="/immigration/">All Immigration</a></li>
+            <li><a href="/immigration/90-day-reporting/">90-Day Reporting</a></li>
+            <li><a href="/immigration/tm30-registration/">TM30 Registration</a></li>
+            <li><a href="/immigration/re-entry-permits/">Re-Entry Permits</a></li>
+            <li><a href="/immigration/overstay-penalties/">Overstay Penalties</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Category 5: GUIDES -->
+    <div class="nav-item">
+      <a href="/guides/" class="nav-link has-dropdown">Guides</a>
+      <div class="dropdown-menu mega-menu" role="menu">
+        <div class="dropdown-section">
+          <ul>
+            <li><a href="/guides/">All Guides</a></li>
+            <li><a href="/guides/dtv-deep-dive/">DTV Deep-Dive Guide</a></li>
+            <li><a href="/guides/dtv-vs-ed-visa/">DTV vs ED Visa 2026</a></li>
+            <li><a href="/guides/visa-options-under-50/">Visa Options Under 50</a></li>
+            <li><a href="/guides/why-visas-get-rejected/">Why Visas Get Rejected</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>  <!-- CTAs & Mobile Toggle -->
+  <div class="header-ctas">
+    <a href="https://wa.me/66801202074" class="btn btn-wa" rel="noopener" target="_blank" title="Message on WhatsApp">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+    <button class="mobile-menu-toggle" id="hamburger" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
 </div>
 </header>
-
-<!-- MOBILE NAVIGATION (hidden by default, shown with .active class) -->
-<nav class="mobile-nav" id="mobile-nav" role="navigation">
+<nav class="nav-mobile mobile-only" id="mobile-nav" aria-label="Mobile navigation">
   <details class="nav-accordion">
     <summary>ED Visas</summary>
     <ul>
-      <li><a href="/ed-visa/">ED Visa</a></li>
+      <li><a href="/ed-visa/index.html">All ED Visas</a></li>
       <li><a href="/ed-visa/emergency-self-defence/">Emergency Self Defence</a></li>
       <li><a href="/ed-visa/muay-thai/">Muay Thai</a></li>
       <li><a href="/ed-visa/thai-language/">Thai Language</a></li>
       <li><a href="/ed-visa/hand-to-hand-combat/">Hand-to-Hand Combat</a></li>
       <li><a href="/ed-visa/volunteer/">Volunteer Non-O</a></li>
-      <li><a href="/ed-visa/comparison/">ED Visa Comparison</a></li>
+      <li><a href="/ed-visa/">ED Visa Comparison</a></li>
+    </ul>
+  </details>
+  <details class="nav-accordion">
+    <summary>Short-Stay Visas</summary>
+    <ul>
+      <li><a href="/visas/short-stay/">Short-Stay Overview</a></li>
+      <li><a href="/visa-exempt-entry/">Visa Exempt Entry</a></li>
+      <li><a href="/visa-on-arrival/">Visa on Arrival</a></li>
+      <li><a href="/tourist-visa/">Tourist Visa</a></li>
+      <li><a href="/dtv-visa/">DTV (Destination Thailand)</a></li>
+      <li><a href="/visa-extensions/">Extensions</a></li>
+      <li><a href="/border-runs/">Border Runs</a></li>
+    </ul>
+  </details>
+  <details class="nav-accordion">
+    <summary>Long-Stay Visas</summary>
+    <ul>
+      <li><a href="/visas/long-stay/">Long-Stay Overview</a></li>
+      <li><a href="/business-visa/">Business (Non-B)</a></li>
+      <li><a href="/marriage-visa/">Marriage (Non-O)</a></li>
+      <li><a href="/retirement-visa/">Retirement (Non-O)</a></li>
+      <li><a href="/ltr-visa/">LTR (Long-Term Resident)</a></li>
+      <li><a href="/thailand-privilege-visa/">Elite/Privilege</a></li>
+    </ul>
+  </details>
+  <details class="nav-accordion">
+    <summary>Visa Guides</summary>
+    <ul>
+      <li><a href="/visas/index.html">All Visa Pages</a></li>
+      <li><a href="/visas/guides/which-visa/">Which Visa is Right?</a></li>
+      <li><a href="/visas/guides/visa-comparisons/">Visa Comparisons</a></li>
+      <li><a href="/visas/guides/visa-options-chiang-mai/">Visa Options for Chiang Mai</a></li>
+      <li><a href="/visas/guides/long-stay-strategy/">Visa & Stay Advice</a></li>
+      <li><a href="/visas/guides/extension-vs-re-entry/">Extension vs Re-Entry</a></li>
+      <li><a href="/visas/guides/entry-requirements/">2026 Entry Requirements</a></li>
+    </ul>
+  </details>
+  <details class="nav-accordion">
+    <summary>Immigration</summary>
+    <ul>
+      <li><a href="/immigration/index.html">All Immigration</a></li>
+      <li><a href="/immigration/90-day-reporting.html">90-Day Reporting</a></li>
+      <li><a href="/immigration/tm30-registration/">TM30 Address Reporting</a></li>
+      <li><a href="/immigration/re-entry-permits.html">Re-Entry Permits</a></li>
+      <li><a href="/visa-extensions/">Visa Extensions</a></li>
+      <li><a href="/border-runs/">Visa Border Runs</a></li>
+      <li><a href="/immigration/address-change.html">Address Change</a></li>
+      <li><a href="/immigration/overstay-penalties.html">Overstay Penalties</a></li>
+      <li><a href="/immigration/blacklist-status.html">Blacklist Status</a></li>
+      <li><a href="/immigration/common-rejections.html">Common Rejections</a></li>
+      <li><a href="/immigration/document-requirements.html">Document Requirements</a></li>
+      <li><a href="/immigration/entry-strategy/">Entry Strategy</a></li>
+      <li><a href="/immigration/financial-requirements.html">Financial Requirements</a></li>
+      <li><a href="/immigration/best-practices/">Best Practices</a></li>
+      <li><a href="/immigration/legal-rights.html">Legal Rights</a></li>
+      <li><a href="/immigration/queue-strategy.html">Queue Strategy</a></li>
+      <li><a href="/immigration/digital-arrival-card/">Thailand Digital Arrival Card</a></li>
+      <li><a href="/immigration/land-border-vs-air/">Land Border vs Air Entry</a></li>
     </ul>
   </details>
   <details class="nav-accordion">
     <summary>Chiang Mai</summary>
     <ul>
-      <li><a href="/chiang-mai/index.html">Chiang Mai Overview</a></li>
+      <li><a href="/chiang-mai/">Overview</a></li>
       <li><a href="/chiang-mai/why-chiang-mai/">Why Base Here</a></li>
       <li><a href="/chiang-mai/where-to-stay/">Where to Stay</a></li>
       <li><a href="/chiang-mai/long-term-living/">Long-Term Living</a></li>
-      <li><a href="/chiang-mai/things-to-do/">Things to Do</a></li>
-      <li><a href="/chiang-mai/digital-nomads/">Digital Nomads</a></li>
+      <li><a href="/chiang-mai/things-to-do.html">Things to Do</a></li>
+      <li><a href="/chiang-mai/digital-nomads.html">Digital Nomads</a></li>
       <li><a href="/chiang-mai/cost-of-living/">Cost of Living</a></li>
-      <li><a href="/chiang-mai/phones-and-banking/">Phones & Banking</a></li>
+      <li><a href="/chiang-mai/phones-and-banking.html">Phones & Banking</a></li>
       <li><a href="/chiang-mai/getting-around/">Getting Around</a></li>
       <li><a href="/chiang-mai/healthcare/">Healthcare</a></li>
-      <li><a href="/chiang-mai/insurance/">Insurance</a></li>
-      <li><a href="/chiang-mai/taxes/">Taxes</a></li>
+      <li><a href="/chiang-mai/insurance.html">Insurance</a></li>
+      <li><a href="/chiang-mai/taxes.html">Taxes</a></li>
+    </ul>
+  </details>
+  <details class="nav-accordion">
+    <summary>Culture & Lifestyle</summary>
+    <ul>
       <li><a href="/culture/index.html">Culture Guide</a></li>
       <li><a href="/culture/customs-traditions/">Customs & Traditions</a></li>
       <li><a href="/culture/thai-culture-etiquette/">Etiquette</a></li>
@@ -572,22 +1462,6 @@ figure img {
       <li><a href="/culture/sak-yant/">Sak Yant</a></li>
       <li><a href="/culture/sak-yant-designs/">Sak Yant Designs</a></li>
       <li><a href="/culture/sak-yant-getting/">Getting a Sak Yant</a></li>
-    </ul>
-  </details>
-  <details class="nav-accordion">
-    <summary>Immigration</summary>
-    <ul>
-      <li><a href="/immigration/index.html">Immigration Hub</a></li>
-      <li><a href="/ed-visa/">ED Visa</a></li>
-      <li><a href="/dtv-visa/">DTV Visa</a></li>
-      <li><a href="/visa-extensions/">Visa Extensions</a></li>
-      <li><a href="/marriage-visa/">Marriage Visa</a></li>
-      <li><a href="/retirement-visa/">Retirement Visa</a></li>
-      <li><a href="/immigration/90-day-reporting.html">90-Day Reporting (TM.47)</a></li>
-      <li><a href="/immigration/tm30-registration/">TM30 Registration</a></li>
-      <li><a href="/immigration/re-entry-permits.html">Re-Entry Permits (TM.8)</a></li>
-      <li><a href="/immigration/queue-strategy/">Queue Strategy</a></li>
-      <li><a href="/immigration/overstay-penalties.html">Overstay Penalties</a></li>
     </ul>
   </details>
   <details class="nav-accordion">
@@ -621,7 +1495,14 @@ figure img {
   </details>
 </nav>
 
-<!-- PAGE HERO SECTION -->
+
+<!-- ========================================================
+     HEADER
+     ======================================================== -->
+
+<!-- ========================================================
+     HERO
+     ======================================================== -->
 <section class="page-hero">
   <div class="page-hero-inner">
     <div class="page-hero-eyebrow">Immigration Strategy</div>
@@ -849,73 +1730,96 @@ figure img {
 </section>
 
 <!-- FOOTER -->
-<footer class="site-footer" role="contentinfo">
-  <div class="footer-container">
-    <!-- Column 1: CMLocals + Tagline + Social Icons -->
-    <div class="footer-col">
-      <div class="footer-logo">
-        <a href="/index.html">
-          <img src="/images/cmlocals-chiang-mai-locals-logo.webp" alt="CMLocals - Thai visa guides and Chiang Mai living" width="150" height="43" />
-        </a>
-      </div>
-      <p style="font-size: 0.85rem; color: rgba(255,255,255,.88); margin: 1rem 0 1.5rem 0; line-height: 1.5;">Independent Thai visa information hub for Chiang Mai and long-stay life in Thailand.</p>
-    </div>
+<footer class="site-footer" role="contentinfo" >
+<div class="footer-container">
 
-    <!-- Column 2: ED Visas -->
-    <div class="footer-col">
-      <h4>ED Visas</h4>
-      <ul class="footer-links">
-        <li><a href="/ed-visa/">ED Visa Overview</a></li>
-        <li><a href="/ed-visa/emergency-self-defence/">Emergency Self Defence</a></li>
-        <li><a href="/ed-visa/muay-thai/">Muay Thai</a></li>
-        <li><a href="/ed-visa/thai-language/">Thai Language</a></li>
-      </ul>
+  <!-- Column 1: CMLocals + Tagline + Social Icons -->
+  <div class="footer-col footer-col-cmlocals">
+    <div class="footer-logo">
+      <a href="/index.html">
+        <img src="/images/cmlocals-chiang-mai-locals-logo.webp" alt="CMLocals - Thai visa guides and Chiang Mai living" width="150" height="43" />
+      </a>
     </div>
-
-    <!-- Column 3: Immigration -->
-    <div class="footer-col">
-      <h4>Immigration</h4>
-      <ul class="footer-links">
-        <li><a href="/immigration/">Immigration Hub</a></li>
-        <li><a href="/immigration/90-day-reporting/">90-Day Reporting</a></li>
-        <li><a href="/immigration/tm30-registration/">TM30 Registration</a></li>
-        <li><a href="/immigration/re-entry-permits/">Re-Entry Permits</a></li>
-      </ul>
-    </div>
-
-    <!-- Column 4: Chiang Mai -->
-    <div class="footer-col">
-      <h4>Chiang Mai</h4>
-      <ul class="footer-links">
-        <li><a href="/chiang-mai/">Overview</a></li>
-        <li><a href="/chiang-mai/cost-of-living/">Cost of Living</a></li>
-        <li><a href="/chiang-mai/where-to-stay/">Where to Stay</a></li>
-        <li><a href="/chiang-mai/getting-around/">Getting Around</a></li>
-      </ul>
+    <p class="footer-tagline">Independent Thai visa information hub for Chiang Mai and long-stay life in Thailand.</p>
+    <div class="footer-socials">
+      <a href="https://wa.me/66801202074" title="WhatsApp" class="social-icon social-whatsapp" target="_blank" rel="noopener noreferrer">
+        <svg width="24" height="24" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="19.4395" cy="19.4395" r="19.4395" fill="#25D366"/><path d="M19.5 9.5C14.253 9.5 10 13.753 10 19c0 1.67.436 3.285 1.265 4.717L10 29l5.418-1.234A9.454 9.454 0 0019.5 28.5c5.247 0 9.5-4.253 9.5-9.5s-4.253-9.5-9.5-9.5zm5.508 13.142c-.232.652-1.345 1.247-1.853 1.29-.508.043-.982.228-3.306-.688-2.806-1.107-4.573-3.974-4.71-4.16-.137-.186-1.12-1.49-1.12-2.843 0-1.352.71-2.018.96-2.293.25-.275.546-.344.728-.344.183 0 .365.002.525.01.168.007.394-.064.617.47.232.556.786 1.92.855 2.06.069.138.115.3.023.485-.093.186-.139.3-.275.462-.137.162-.288.362-.412.486-.137.137-.28.286-.12.56.16.275.71 1.173 1.525 1.9 1.047.933 1.93 1.222 2.205 1.36.275.137.435.115.595-.069.16-.185.686-.8.869-1.075.183-.275.365-.228.617-.137.25.092 1.595.752 1.868.889.275.137.457.206.526.32.068.115.068.663-.164 1.315z" fill="white"/></svg>
+      </a>
+      <a href="https://m.me/cmlocals" title="Messenger" class="social-icon social-messenger" target="_blank" rel="noopener noreferrer">
+        <svg width="24" height="24" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="19.4395" cy="19.4395" r="19.4395" fill="#0084FF"/><path d="M19.5 9.5C13.701 9.5 9 13.748 9 19.074c0 3.014 1.474 5.702 3.778 7.456V30l3.294-1.81c.878.244 1.81.376 2.778.376 5.799 0 10.5-4.248 10.5-9.574S25.299 9.5 19.5 9.5zm1.04 12.878l-2.674-2.852-5.22 2.852 5.74-6.096 2.74 2.852 5.154-2.852-5.74 6.096z" fill="white"/></svg>
+      </a>
+      <a href="https://www.facebook.com/cmlocals" title="Facebook" class="social-icon social-facebook" target="_blank" rel="noopener noreferrer">
+        <svg width="24" height="24" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="19.5" cy="19.5" r="19.5" fill="#1877F2"/><path d="M20.5 28v-8h2.5l.375-2.875h-2.875v-1.75c0-.75.25-1.25 1.375-1.25h1.5V10.625c-.25 0-1.125-.125-2.125-.125-2.125 0-3.625 1.375-3.625 3.875v2.125h-2.5v2.875h2.5v8h3z" fill="white"/></svg>
+      </a>
     </div>
   </div>
+
+  <!-- Column 2: ED Visas -->
+  <div class="footer-col">
+    <h3 class="footer-col-title">ED Visas</h3>
+    <ul class="footer-links">
+      <li><a href="/ed-visa/emergency-self-defence/">Emergency Self Defence</a></li>
+      <li><a href="/ed-visa/muay-thai/">Muay Thai</a></li>
+      <li><a href="/ed-visa/hand-to-hand-combat/">Hand-to-Hand Combat</a></li>
+      <li><a href="/ed-visa/thai-language/">Thai Language</a></li>
+      <li><a href="/ed-visa/volunteer/">Volunteer Non-O</a></li>
+      <li><a href="/ed-visa/">All ED Visas</a></li>
+    </ul>
+  </div>
+
+  <!-- Column 3: Chiang Mai -->
+  <div class="footer-col">
+    <h3 class="footer-col-title">Chiang Mai</h3>
+    <ul class="footer-links">
+      <li><a href="/chiang-mai/">Overview</a></li>
+      <li><a href="/chiang-mai/where-to-stay/">Where to Stay</a></li>
+      <li><a href="/chiang-mai/cost-of-living/">Cost of Living</a></li>
+      <li><a href="/chiang-mai/getting-around/">Getting Around</a></li>
+      <li><a href="/chiang-mai/long-term-living/">Long-Term Living</a></li>
+      <li><a href="/chiang-mai/healthcare/">Healthcare</a></li>
+    </ul>
+  </div>
+
+  <!-- Column 4: Visa Guides -->
+  <div class="footer-col">
+    <h3 class="footer-col-title">Visa Guides</h3>
+    <ul class="footer-links">
+      <li><a href="/visas/index.html">All Visas</a></li>
+      <li><a href="/dtv-visa/">DTV</a></li>
+      <li><a href="/visas/short-stay/">Short Stay</a></li>
+      <li><a href="/visas/long-stay/">Long Stay</a></li>
+      <li><a href="/tourist-visa/">Tourist Visa</a></li>
+      <li><a href="/checklists/">Checklists</a></li>
+    </ul>
+  </div>
+
+  <!-- Column 5: Guides -->
+  <div class="footer-col">
+    <h3 class="footer-col-title">Guides & Resources</h3>
+    <ul class="footer-links">
+      <li><a href="/guides/">All Guides</a></li>
+      <li><a href="/guides/dtv-deep-dive/">DTV Deep-Dive</a></li>
+      <li><a href="/guides/dtv-vs-ed-visa/">DTV vs ED Visa</a></li>
+      <li><a href="/guides/visa-options-under-50/">Visa Options Under 50</a></li>
+      <li><a href="/guides/why-visas-get-rejected/">Why Visas Get Rejected</a></li>
+    </ul>
+  </div>
+
+</div>
+
+<!-- Bottom Legal Bar -->
+<div class="footer-bottom-bar">
+  <p>&copy; 2026 CMLocals. All rights reserved.</p>
+  <div class="footer-legal-links">
+    <a href="/privacy-policy/">Privacy</a>
+    <a href="/terms-of-service/">Terms</a>
+    <a href="/disclaimer/">Disclaimer</a>
+  </div>
+</div>
+
 </footer>
 
-<script src="../../shared/js/header-handler.js" defer></script>
-<script>
-if (window.ChatyWidget) {
-  window.ChatyWidget.init({
-    whatsapp: '66801202074',
-    messenger: 'cmlocals',
-    facebook: 'chiangmailocals'
-  });
-}
-const header = document.querySelector('.site-header');
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 10) {
-    header.classList.add('scrolled');
-  } else {
-    header.classList.remove('scrolled');
-  }
-});
-</script>
 
-<script src="../../shared/js/card-click-handler.js"></script>
-<script src="../../shared/chaty-widget/scripts/chaty-widget.js"></script>
+<script src="../../shared/js/progress-bar.js" defer></script>
 </body>
 </html>
