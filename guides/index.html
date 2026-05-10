@@ -978,17 +978,10 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); }
 </div>
 </footer>
 
-<script>
-document.getElementById('hamburger')?.addEventListener('click', () => {
-  const nav = document.getElementById('mobile-nav');
-  const hamburger = document.getElementById('hamburger');
-  if (nav) {
-    nav.classList.toggle('open');
-    hamburger.classList.toggle('active');
-    hamburger.setAttribute('aria-expanded', hamburger.classList.contains('active'));
-  }
-});
+<script defer src="../shared/js/header-handler.js"></script>
+<script defer src="../shared/js/card-click-handler.js"></script>
 
+<script>
 // Progress bar
 const progressBar = document.getElementById('progress-bar');
 if (progressBar) {
