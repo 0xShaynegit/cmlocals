@@ -13,5 +13,5 @@ User-agent: Googlebot
 Allow: /
 
 Crawl-delay: 1
-Sitemap: https://www.cmlocals.com/sitemap-v2.xml
+Sitemap: https://www.cmlocals.com/sitemap.xml
 
