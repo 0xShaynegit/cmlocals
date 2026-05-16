@@ -37,6 +37,16 @@
 .btn-lg { padding: .8em 1.75em; font-size: 1rem; }
 .btn-sm { padding: .45em 1em; font-size: .82rem; }
 
+.cta-btn {
+  display: inline-flex; align-items: center; gap: .5rem;
+  padding: .75em 1.5em; background: var(--c-page-accent); color: white;
+  border: none; border-radius: var(--radius-sm); cursor: pointer;
+  font-family: var(--font-body); font-size: .9rem; font-weight: 600;
+  text-decoration: none; transition: background .18s, transform .18s;
+  margin-top: 1rem;
+}
+.cta-btn:hover { background: var(--c-dark-2); transform: translateY(-2px); }
+
 /* --- LABEL TAG --- */
 .label-tag {
   display: inline-block;
