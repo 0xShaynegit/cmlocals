@@ -4,6 +4,12 @@
 # Generated: 2026-05-07
 # ============================================================
 
+# Sak Yant consolidation (moved to root for SEO)
+/sak-yant-chiang-mai/               /sak-yant-chiang-mai.html   301
+/culture/sak-yant/                  /sak-yant-chiang-mai.html   301
+/pages/culture/sak-yant-chiang-mai  /sak-yant-chiang-mai.html   301
+/pages/culture/sak-yant-chiang-mai/ /sak-yant-chiang-mai.html   301
+
 # Old WordPress → Current mapping (preserved, updated targets)
 /1-year-muay-thai-ed-visa/          /ed-visa/muay-thai/         301
 /muay-thai-visa-chiang-mai/         /ed-visa/muay-thai/         301
@@ -23,7 +29,33 @@
 /accommodation-in-chiang-mai/       /chiang-mai/where-to-stay/  301
 /chiang-mai-local-services/         /chiang-mai/                301
 
-# /pages/ prefix removal (all pages restructured)
+# SPECIFIC /pages/ rules (must come BEFORE wildcard splat rules)
+# Long-stay visa slug simplification
+/pages/visas/long-stay/retirement-visa-thai-visa-advice-chiang-mai-cmlocals.html /retirement-visa/ 301
+/pages/visas/long-stay/marriage-visa-non-o-thai-visa-advice-chiang-mai-cmlocals.html /marriage-visa/ 301
+/pages/visas/long-stay/business-visa-non-b-thai-visa-advice-chiang-mai-cmlocals.html /business-visa/ 301
+/pages/visas/long-stay/ltr-long-term-resident-visa-thai-visa-advice-chiang-mai-cmlocals.html /ltr-visa/ 301
+/pages/visas/long-stay/thailand-privilege-visa-elite-thai-visa-advice-chiang-mai-cmlocals.html /thailand-privilege-visa/ 301
+
+# Short-stay DTV visa slug simplification
+/pages/visas/short-stay/dtv-destination-thailand-visa-thai-visa-advice-chiang-mai-cmlocals.html /dtv-visa/ 301
+
+# Catch extension-less URLs and redirect to trailing slash versions
+/pages/immigration/blacklist-status       /immigration/blacklist-status/    301
+/pages/immigration/visa-border-runs       /border-runs/                     301
+/pages/culture/festivals-events-chiang-mai /culture/festivals-events/       301
+/pages/ed-visas/ed-visa-comparison-chiang-mai /ed-visa/comparison/          301
+/pages/chiang-mai/where-to-stay           /chiang-mai/where-to-stay/       301
+/pages/visas/guides/which-visa            /visas/guides/which-visa/        301
+/pages/visas/guides/visa-options-chiang-mai /visas/guides/visa-options-chiang-mai/ 301
+/pages/visas/short-stay/visa-on-arrival   /visa-on-arrival/                301
+/pages/checklists/visa-on-arrival-checklist /checklists/visa-on-arrival/   301
+/pages/checklists/re-entry-permit-checklist /checklists/re-entry-permit/   301
+/pages/disclaimer.html              /disclaimer/                301
+/pages/privacy-policy.html          /privacy-policy/            301
+/pages/terms-of-service.html        /terms-of-service/          301
+
+# WILDCARD /pages/ rules (catch-all after specific rules above)
 /pages/visas/                       /visas/                     301
 /pages/visas/short-stay/            /visas/short-stay/          301
 /pages/visas/long-stay/             /visas/long-stay/           301
@@ -38,20 +70,7 @@
 /pages/chiang-mai/*                 /chiang-mai/:splat          301
 /pages/culture/                     /culture/                   301
 /pages/culture/*                    /culture/:splat             301
-/pages/disclaimer.html              /disclaimer/                301
-/pages/privacy-policy.html          /privacy-policy/            301
-/pages/terms-of-service.html        /terms-of-service/          301
 /pages/tools/                       /tools/                     301
-
-# Long-stay visa slug simplification
-/pages/visas/long-stay/retirement-visa-thai-visa-advice-chiang-mai-cmlocals.html /retirement-visa/ 301
-/pages/visas/long-stay/marriage-visa-non-o-thai-visa-advice-chiang-mai-cmlocals.html /marriage-visa/ 301
-/pages/visas/long-stay/business-visa-non-b-thai-visa-advice-chiang-mai-cmlocals.html /business-visa/ 301
-/pages/visas/long-stay/ltr-long-term-resident-visa-thai-visa-advice-chiang-mai-cmlocals.html /ltr-visa/ 301
-/pages/visas/long-stay/thailand-privilege-visa-elite-thai-visa-advice-chiang-mai-cmlocals.html /thailand-privilege-visa/ 301
-
-# Short-stay DTV visa slug simplification
-/pages/visas/short-stay/dtv-destination-thailand-visa-thai-visa-advice-chiang-mai-cmlocals.html /dtv-visa/ 301
 
 # Blog → Guides migration
 /blogs/*                            /guides/:splat              301
@@ -62,18 +81,6 @@
 /blog/*                             /guides/:splat              301
 /information-articles/              /visas/                     301
 /homeold/                           /chiang-mai/                301
-
-# Catch extension-less URLs and redirect to trailing slash versions
-/pages/immigration/blacklist-status       /immigration/blacklist-status/    301
-/pages/immigration/visa-border-runs       /border-runs/                     301
-/pages/culture/festivals-events-chiang-mai /culture/festivals-events/       301
-/pages/ed-visas/ed-visa-comparison-chiang-mai /ed-visa/comparison/          301
-/pages/chiang-mai/where-to-stay           /chiang-mai/where-to-stay/       301
-/pages/visas/guides/which-visa            /visas/guides/which-visa/        301
-/pages/visas/guides/visa-options-chiang-mai /visas/guides/visa-options-chiang-mai/ 301
-/pages/visas/short-stay/visa-on-arrival   /visa-on-arrival/                301
-/pages/checklists/visa-on-arrival-checklist /checklists/visa-on-arrival/   301
-/pages/checklists/re-entry-permit-checklist /checklists/re-entry-permit/   301
 
 # Catch all for any remaining /pages/ that weren't explicitly mapped
 /pages/*                            /:splat                     301
