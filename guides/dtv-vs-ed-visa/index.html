@@ -793,6 +793,9 @@ article table tr:hover {
     grid-template-columns: 1fr;
   }
 }
+
+.table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1.5rem 0;}
+.table-scroll table{margin:0;}
 </style>
 
 <!-- Progress bar -->
@@ -1288,7 +1291,7 @@ article table tr:hover {
       Let's look at the actual costs of living in Chiang Mai on both visas for one year.
     </p>
 
-    <table style="width: 100%; border-collapse: collapse; margin: 2rem 0; font-size: 0.95rem;">
+    <div class="table-scroll"><table style="width: 100%; border-collapse: collapse; margin: 2rem 0; font-size: 0.95rem;">
       <thead>
         <tr style="background: #f0f0f0; border-bottom: 2px solid #02450b;">
           <th style="padding: 1rem; text-align: left; font-weight: 600;">Expense Category</th>
@@ -1323,7 +1326,7 @@ article table tr:hover {
           <td style="padding: 1rem;">~47,600-57,600 THB</td>
         </tr>
       </tbody>
-    </table>
+    </table></div>
 
     <!-- Section 5 -->
     <h2 style="font-size: 1.75rem; font-weight: 400; margin-top: 2.5rem; margin-bottom: 1rem; color: var(--c-dark); letter-spacing: -0.01em;">

@@ -793,6 +793,9 @@ article table tr:hover {
     grid-template-columns: 1fr;
   }
 }
+
+.table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1.5rem 0;}
+.table-scroll table{margin:0;}
 </style>
 
 <!-- Progress bar -->
@@ -1444,7 +1447,7 @@ article table tr:hover {
     <h3 style="font-size: 1.3rem; font-weight: 600; margin-top: 1.75rem; margin-bottom: 0.75rem; color: #02450b;">
       Quick Comparison Table
     </h3>
-    <table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+    <div class="table-scroll"><table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
       <thead style="background: #02450b; color: white;">
         <tr>
           <th style="padding: 0.75rem; text-align: left; border: 1px solid #ddd;">Aspect</th>
@@ -1491,7 +1494,7 @@ article table tr:hover {
           <td style="padding: 0.75rem; border: 1px solid #ddd; text-align: center;">None</td>
         </tr>
       </tbody>
-    </table>
+    </table></div>
 
     <!-- TDAC Section -->
     <h2 style="font-size: 1.75rem; font-weight: 400; margin-top: 2.5rem; margin-bottom: 1rem; color: var(--c-dark); letter-spacing: -0.01em;">

@@ -435,6 +435,9 @@ figure img {
 .visa-card,.article-card,.tool-card,.guide-card,.visa-category-card,.program-card,.topic-card,.checklist-card,.related-card,.sidebar-card{text-decoration:none;}
 .visa-card *,.article-card *,.tool-card *,.guide-card *,.visa-category-card *,.program-card *,.topic-card *,.checklist-card *,.related-card *,.sidebar-card *{text-decoration:none;}
 .visa-card:hover,.article-card:hover,.tool-card:hover,.guide-card:hover,.visa-category-card:hover,.program-card:hover,.topic-card:hover,.checklist-card:hover,.related-card:hover,.sidebar-card:hover{text-decoration:none;}
+
+.table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1.5rem 0;}
+.table-scroll table{margin:0;}
 </style>
 <link rel="stylesheet" href="/shared/css/card-fixes.css">
 <link rel="stylesheet" href="/shared/css/responsive-images.css">
@@ -812,7 +815,7 @@ figure img {
 
   <p>Insurance premiums for Chiang Mai residents vary significantly by age. Most insurers use age bands and adjust premiums accordingly.</p>
 
-  <table aria-label="Approximate monthly insurance premiums by age for Chiang Mai residents">
+  <div class="table-scroll"><table aria-label="Approximate monthly insurance premiums by age for Chiang Mai residents">
     <thead>
       <tr>
         <th>Age Range</th>
@@ -828,7 +831,7 @@ figure img {
       <tr><td>60-70</td><td>5,000-9,000</td><td>High premiums; some insurers may decline or apply exclusions</td></tr>
       <tr><td>Over 70</td><td>8,000-15,000+</td><td>Very high; many standard policies unavailable; specialist age-specific plans required</td></tr>
     </tbody>
-  </table>
+  </table></div>
 
   <p>These are approximate figures for basic coverage (40,000 outpatient, 400,000 inpatient). Plans with higher coverage limits cost more. Pre-existing medical conditions typically result in higher premiums or specific exclusions for that condition.</p>
 

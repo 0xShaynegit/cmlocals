@@ -762,6 +762,9 @@
 }
 .cta-btn:hover { background: #5a0a3a; transform: translateY(-2px); }
 
+
+.table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1.5rem 0;}
+.table-scroll table{margin:0;}
 </style>
 
 <link rel="stylesheet" href="/shared/css/card-fixes.css">
@@ -1137,7 +1140,7 @@
 
 <h2>Session Cost and What to Expect</h2>
 
-<table class="cost-table">
+<div class="table-scroll"><table class="cost-table">
   <thead>
     <tr>
       <th>Design Complexity</th>
@@ -1167,7 +1170,7 @@
       <td>1-2+ hours</td>
     </tr>
   </tbody>
-</table>
+</table></div>
 
 <p>Prices vary by master reputation, design complexity, and whether customization is involved. Many masters accept donations or "contributions" as an alternative to fixed pricing, honoring the traditional spiritual nature of the exchange.</p>
 

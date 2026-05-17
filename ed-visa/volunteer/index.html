@@ -946,6 +946,9 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); }
 /* PROGRESS BAR */
 .progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: linear-gradient(90deg, #4F46E5, #6366F1, #4F46E5); width: 2%; min-width: 2%; z-index: 10001; transition: width 0.1s linear; box-shadow: 0 2px 8px rgba(79,70,229,.18); }
 @media (prefers-reduced-motion: reduce) { .progress-bar { transition: none; } }
+
+.table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1.5rem 0;}
+.table-scroll table{margin:0;}
 </style>
 <link rel="stylesheet" href="/shared/css/card-fixes.css">
 <link rel="stylesheet" href="/shared/css/responsive-images.css">
@@ -1265,7 +1268,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); }
   <p>Volunteers come from diverse backgrounds and ages. Organizations welcome those without specific experience but willing to learn and contribute. No formal qualifications required, though teaching experience is advantageous for education roles.</p>
 
   <h2>Visa Validity and Annual Renewal</h2>
-  <table class="data-table">
+  <div class="table-scroll"><table class="data-table">
     <thead><tr><th>Feature</th><th>Detail</th></tr></thead>
     <tbody>
       <tr><td>Initial visa (from abroad)</td><td>1 year (single entry)</td></tr>
@@ -1274,17 +1277,17 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); }
       <tr><td>Maximum total duration</td><td>Renewable annually indefinitely</td></tr>
       <tr><td>Re-entry permit</td><td>Single: 1,000 THB (required before international travel)</td></tr>
     </tbody>
-  </table>
+  </table></div>
   <div class="info-strip"><p>The Non-O Volunteer Visa is issued for 1 year from abroad. Unlike ED Visas which extend every 3 months, this visa is renewed annually in person at Chiang Mai Immigration. Each renewal grants another full year of residence and volunteer authorization.</p></div>
 
   <h2>Financial Requirements and Pricing</h2>
-  <table class="data-table">
+  <div class="table-scroll"><table class="data-table">
     <thead><tr><th>Year</th><th>Cost (THB)</th><th>What's Included</th></tr></thead>
     <tbody>
       <tr><td>First year (initial visa)</td><td>46,000</td><td>Visa processing, documentation, organization registration, immigration support</td></tr>
       <tr><td>Subsequent years (annual renewal)</td><td>30,000</td><td>Annual renewal, immigration paperwork, re-registration with organization</td></tr>
     </tbody>
-  </table>
+  </table></div>
   <p>Costs cover organization registration and visa processing through Thai authorities. All living expenses (accommodation, food, transport) are your responsibility.</p>
   <p>Budget 15,000-25,000 THB per month for comfortable living in Chiang Mai, depending on accommodation and lifestyle choices.</p>
 

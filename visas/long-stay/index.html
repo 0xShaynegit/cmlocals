@@ -1042,6 +1042,9 @@ figure img {
 /* PROGRESS BAR */
 .progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: linear-gradient(90deg, #4F46E5, #6366F1, #4F46E5); width: 2%; min-width: 2%; z-index: 10001; transition: width 0.1s linear; box-shadow: 0 2px 8px rgba(79,70,229,.18); }
 @media (prefers-reduced-motion: reduce) { .progress-bar { transition: none; } }
+
+.table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1.5rem 0;}
+.table-scroll table{margin:0;}
 </style>
 <link rel="stylesheet" href="/shared/css/card-fixes.css">
 <link rel="stylesheet" href="/shared/css/responsive-images.css">
@@ -1472,7 +1475,7 @@ figure img {
   </div>
 
   <div style="overflow-x:auto;margin-top:2rem;">
-    <table style="width:100%;border-collapse:collapse;font-size:.92rem;border:1px solid var(--c-border);border-radius:var(--radius-lg);overflow:hidden;">
+    <div class="table-scroll"><table style="width:100%;border-collapse:collapse;font-size:.92rem;border:1px solid var(--c-border);border-radius:var(--radius-lg);overflow:hidden;">
       <thead>
         <tr style="background:var(--c-dark);color:var(--c-white);">
           <th style="padding:.75rem 1rem;text-align:left;font-weight:600;border-bottom:1px solid var(--c-border);">Visa</th>
@@ -1519,7 +1522,7 @@ figure img {
           <td style="padding:.75rem 1rem;">Premium, hassle-free</td>
         </tr>
       </tbody>
-    </table>
+    </table></div>
   </div>
 
   <figure style="text-align: center; margin: 2rem 0;">

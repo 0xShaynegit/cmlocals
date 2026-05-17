@@ -1224,6 +1224,9 @@ figure img {
 .visa-card,.article-card,.tool-card,.guide-card,.visa-category-card,.program-card,.topic-card,.checklist-card,.related-card,.sidebar-card{text-decoration:none;}
 .visa-card *,.article-card *,.tool-card *,.guide-card *,.visa-category-card *,.program-card *,.topic-card *,.checklist-card *,.related-card *,.sidebar-card *{text-decoration:none;}
 .visa-card:hover,.article-card:hover,.tool-card:hover,.guide-card:hover,.visa-category-card:hover,.program-card:hover,.topic-card:hover,.checklist-card:hover,.related-card:hover,.sidebar-card:hover{text-decoration:none;}
+
+.table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1.5rem 0;}
+.table-scroll table{margin:0;}
 </style>
 
 
@@ -1724,7 +1727,7 @@ figure img {
 
 <h2>Quick Comparison Table</h2>
 
-<table class="comparison-table">
+<div class="table-scroll"><table class="comparison-table">
 <thead>
 <tr>
 <th>Factor</th>
@@ -1769,7 +1772,7 @@ figure img {
 <td>Yes</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 
 <figure style="text-align: center; margin: 2rem 0 0 0;">
   <img

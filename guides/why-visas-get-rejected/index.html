@@ -793,6 +793,9 @@ article table tr:hover {
     grid-template-columns: 1fr;
   }
 }
+
+.table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1.5rem 0;}
+.table-scroll table{margin:0;}
 </style>
 
 <!-- Progress bar -->
@@ -1217,7 +1220,7 @@ article table tr:hover {
       2025 vs 2026: What Shifted
     </h2>
 
-    <table style="margin: 2rem 0;">
+    <div class="table-scroll"><table style="margin: 2rem 0;">
       <thead>
         <tr>
           <th>Requirement</th>
@@ -1252,7 +1255,7 @@ article table tr:hover {
           <td>Source documented and verified</td>
         </tr>
       </tbody>
-    </table>
+    </table></div>
 
     <!-- Section 5 -->
     <h2 style="font-size: 1.75rem; font-weight: 400; margin-top: 2.5rem; margin-bottom: 1rem; color: var(--c-dark); letter-spacing: -0.01em;">

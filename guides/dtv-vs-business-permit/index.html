@@ -820,6 +820,9 @@ article table tr:hover {
     grid-template-columns: 1fr;
   }
 }
+
+.table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1.5rem 0;}
+.table-scroll table{margin:0;}
 </style>
 
 <!-- Progress bar -->
@@ -1205,7 +1208,7 @@ article table tr:hover {
           Comparison: DTV vs. Non-B Work Permit
         </h2>
     
-        <table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+        <div class="table-scroll"><table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
           <thead>
             <tr style="background: rgba(2,69,11,0.08); border-bottom: 2px solid #02450b;">
               <th style="padding: 0.75rem; text-align: left; border-right: 1px solid #E5E7EB; font-weight: 600; color: #02450b;">Feature</th>
@@ -1240,7 +1243,7 @@ article table tr:hover {
               <td style="padding: 0.75rem;">Mandatory (Blue Book or Digital)</td>
             </tr>
           </tbody>
-        </table>
+        </table></div>
     
         <!-- FAQ Section -->
         <h2 style="font-size: 1.75rem; font-weight: 400; margin-top: 2.5rem; margin-bottom: 1rem; color: var(--c-dark); letter-spacing: -0.01em;">

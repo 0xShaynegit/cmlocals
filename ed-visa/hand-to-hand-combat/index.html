@@ -946,6 +946,9 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); }
 /* PROGRESS BAR */
 .progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: linear-gradient(90deg, #4F46E5, #6366F1, #4F46E5); width: 2%; min-width: 2%; z-index: 10001; transition: width 0.1s linear; box-shadow: 0 2px 8px rgba(79,70,229,.18); }
 @media (prefers-reduced-motion: reduce) { .progress-bar { transition: none; } }
+
+.table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1.5rem 0;}
+.table-scroll table{margin:0;}
 </style>
 <link rel="stylesheet" href="/shared/css/card-fixes.css">
 <link rel="stylesheet" href="/shared/css/responsive-images.css">
@@ -1282,7 +1285,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); }
   <p>Classes are accessible. Instructors scale intensity for fitness level. You do not need to be fit before starting; fitness improves during training. Muscle soreness is normal in the first week and resolves quickly.</p>
 
   <h2>Visa Validity and Extensions</h2>
-  <table class="data-table">
+  <div class="table-scroll"><table class="data-table">
     <thead><tr><th>Feature</th><th>Detail</th></tr></thead>
     <tbody>
       <tr><td>Initial visa (from abroad)</td><td>3 months (single entry)</td></tr>
@@ -1292,18 +1295,18 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); }
       <tr><td>Processing time (initial)</td><td>4-8 weeks total</td></tr>
       <tr><td>Re-entry permit</td><td>Single: 1,000 THB (valid 3 months per extension); Multiple: 3,800 THB (not recommended)</td></tr>
     </tbody>
-  </table>
+  </table></div>
   <div class="info-strip"><p>The ED Visa for Hand-to-Hand Combat is issued for 3 months from abroad. Extensions are handled by the school every 3 months at Chiang Mai Immigration. The visa is valid for continuous training and residence throughout the period. Total stay can extend to 12 months with extensions (4 x 3-month periods).</p></div>
 
   <h2>Financial Requirements</h2>
-  <table class="data-table">
+  <div class="table-scroll"><table class="data-table">
     <thead><tr><th>Scenario</th><th>Cost (THB)</th><th>What's Included</th></tr></thead>
     <tbody>
       <tr><td>Standard (apply from embassy abroad)</td><td>42,300-52,300</td><td>School enrollment, documentation, visa processing assistance (initial + extensions handled by school)</td></tr>
       <tr><td>In-country completion (rare)</td><td>62,300-72,300</td><td>Same as above, premium for in-Thailand processing</td></tr>
       <tr><td>Dependent visa (spouse/partner)</td><td>20,000</td><td>Non-O dependent visa for family member (extension fees separate)</td></tr>
     </tbody>
-  </table>
+  </table></div>
   <p>All costs include school enrollment, Ministry of Education documentation, immigration assistance, and processing for 3-month extensions at immigration. You are responsible for living expenses (accommodation, food, transport), which are not included.</p>
   <p>Budget 15,000-25,000 THB per month for comfortable living in Chiang Mai, depending on accommodation and lifestyle choices.</p>
 

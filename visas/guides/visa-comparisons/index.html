@@ -795,6 +795,9 @@ figure img {
 @media (prefers-reduced-motion: reduce) { .progress-bar { transition: none; } }
 
 .breadcrumb-meta { color: var(--c-muted); }
+
+.table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1.5rem 0;}
+.table-scroll table{margin:0;}
 </style>
 <link rel="stylesheet" href="../../../css/chaty-front.min.css"/>
 
@@ -1133,7 +1136,7 @@ figure img {
 
   <p>These four visas represent the most common long-stay options for foreigners in Thailand. This table compares key factors across all four.</p>
 
-  <table class="comp-table">
+  <div class="table-scroll"><table class="comp-table">
     <thead>
       <tr>
         <th>Visa Type</th>
@@ -1178,7 +1181,7 @@ figure img {
         <td>Business owners, entrepreneurs</td>
       </tr>
     </tbody>
-  </table>
+  </table></div>
 
   <figure style="text-align: center; margin: 2rem 0 0 0;">
     <img

@@ -977,6 +977,9 @@ figure img {
 /* PROGRESS BAR */
 .progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: linear-gradient(90deg, #4F46E5, #6366F1, #4F46E5); width: 2%; min-width: 2%; z-index: 10001; transition: width 0.1s linear; box-shadow: 0 2px 8px rgba(79,70,229,.18); }
 @media (prefers-reduced-motion: reduce) { .progress-bar { transition: none; } }
+
+.table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1.5rem 0;}
+.table-scroll table{margin:0;}
 </style>
 <link rel="stylesheet" href="/shared/css/card-fixes.css">
 <link rel="stylesheet" href="/shared/css/responsive-images.css">
@@ -1289,7 +1292,7 @@ figure img {
     <h2>Entry Details: Duration and Extensions</h2>
     <p>Each visa-exempt entry grants a 60-day permitted stay. Both the first and second entries can be extended once each within the rolling 12-month period.</p>
 
-    <table class="data-table" aria-label="Visa-exempt 2026 rules summary">
+    <div class="table-scroll"><table class="data-table" aria-label="Visa-exempt 2026 rules summary">
       <thead>
         <tr>
           <th>Entry</th>
@@ -1304,7 +1307,7 @@ figure img {
         <tr><td>2nd exemption (rolling 12 months)</td><td>60 days</td><td>Yes</td><td>+7 days</td><td>67 days</td></tr>
         <tr><td>3rd+ exemption (rolling 12 months)</td><td>Not permitted</td><td>. </td><td>. </td><td>Requires paid visa</td></tr>
       </tbody>
-    </table>
+    </table></div>
 
     <h3>First Entry: Extendable by +30 Days</h3>
     <p>Your first visa-exempt entry can be extended by a single 30-day extension at a Thai Immigration office. This brings the total stay on the first entry to 90 days. To extend, visit an immigration office within Thailand before your 60-day period expires.</p>

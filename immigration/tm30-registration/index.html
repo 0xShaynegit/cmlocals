@@ -1224,6 +1224,9 @@ figure img {
 .visa-card,.article-card,.tool-card,.guide-card,.visa-category-card,.program-card,.topic-card,.checklist-card,.related-card,.sidebar-card{text-decoration:none;}
 .visa-card *,.article-card *,.tool-card *,.guide-card *,.visa-category-card *,.program-card *,.topic-card *,.checklist-card *,.related-card *,.sidebar-card *{text-decoration:none;}
 .visa-card:hover,.article-card:hover,.tool-card:hover,.guide-card:hover,.visa-category-card:hover,.program-card:hover,.topic-card:hover,.checklist-card:hover,.related-card:hover,.sidebar-card:hover{text-decoration:none;}
+
+.table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1.5rem 0;}
+.table-scroll table{margin:0;}
 </style>
 
 
@@ -1694,7 +1697,7 @@ figure img {
 
 <h2>Penalties for non-compliance</h2>
 
-<table class="cost-table" aria-label="TM30 penalties">
+<div class="table-scroll"><table class="cost-table" aria-label="TM30 penalties">
   <thead>
     <tr><th>Situation</th><th>Penalty</th></tr>
   </thead>
@@ -1704,7 +1707,7 @@ figure img {
     <tr><td>Visa extension denied due to missing TM30</td><td>Application rejection; required to file TM30 before reapplying</td></tr>
     <tr><td>Repeated non-compliance</td><td>Immigration record notation; potential visa renewal complications</td></tr>
   </tbody>
-</table>
+</table></div>
 
 </div>
 </article>

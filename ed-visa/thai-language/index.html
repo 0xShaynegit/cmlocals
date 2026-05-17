@@ -946,6 +946,9 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); }
 /* PROGRESS BAR */
 .progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: linear-gradient(90deg, #4F46E5, #6366F1, #4F46E5); width: 2%; min-width: 2%; z-index: 10001; transition: width 0.1s linear; box-shadow: 0 2px 8px rgba(79,70,229,.18); }
 @media (prefers-reduced-motion: reduce) { .progress-bar { transition: none; } }
+
+.table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1.5rem 0;}
+.table-scroll table{margin:0;}
 </style>
 <link rel="stylesheet" href="/shared/css/card-fixes.css">
 <link rel="stylesheet" href="/shared/css/responsive-images.css">
@@ -1287,7 +1290,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); }
   <p>Most programs include regular progress assessments (monthly or quarterly). You advance to higher levels upon demonstrating competency. Classes emphasize practical communication over test performance. Regular homework and self-study expectations vary by program.</p>
 
   <h2>Visa Validity and Extensions</h2>
-  <table class="data-table">
+  <div class="table-scroll"><table class="data-table">
     <thead><tr><th>Feature</th><th>Detail</th></tr></thead>
     <tbody>
       <tr><td>Initial visa (from abroad)</td><td>90 days (single entry)</td></tr>
@@ -1297,11 +1300,11 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); }
       <tr><td>Processing time (initial)</td><td>8-14 weeks total (Chiang Mai)</td></tr>
       <tr><td>Re-entry permit</td><td>Required before international travel; Single: 1,000 THB (valid for visa period)</td></tr>
     </tbody>
-  </table>
+  </table></div>
   <div class="info-strip"><p>The ED Visa for Thai language is issued for 90 days from abroad or via in-country conversion. You must renew (extend) your visa every 90 days in person at Chiang Mai Immigration. The school handles documentation; you attend the appointment. Each extension allows another 90 days of study and residence. If you plan to leave Thailand, obtain a re-entry permit before departure to preserve your visa.</p></div>
 
   <h2>Financial Requirements</h2>
-  <table class="data-table">
+  <div class="table-scroll"><table class="data-table">
     <thead><tr><th>Duration</th><th>Cost - From Abroad (THB)</th><th>Cost - In Thailand (THB)</th></tr></thead>
     <tbody>
       <tr><td>3 months (Thai)</td><td>14,000-19,800</td><td>31,000-36,800</td></tr>
@@ -1310,7 +1313,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); }
       <tr><td>12 months (Thai)</td><td>38,900-49,800</td><td>53,900-66,800</td></tr>
       <tr><td>Dependent visa (spouse)</td><td colspan="2" style="text-align:center;">20,000 THB (extension fees separate)</td></tr>
     </tbody>
-  </table>
+  </table></div>
   <p>Costs shown are school enrollment and course fees. Prices vary by school and course level (group vs. private). All fees exclude Thai embassy visa application fees (typically 80 USD / 2,000 THB) and immigration extension fees (1,900 THB per 90-day extension).</p>
   <p>Budget 15,000-25,000 THB per month for comfortable living in Chiang Mai, depending on accommodation and lifestyle choices.</p>
 

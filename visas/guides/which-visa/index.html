@@ -999,6 +999,9 @@ figure img {
 .visa-card:hover,.article-card:hover,.tool-card:hover,.guide-card:hover,.visa-category-card:hover,.program-card:hover,.topic-card:hover,.checklist-card:hover,.related-card:hover,.sidebar-card:hover{text-decoration:none;}
 
 .breadcrumb-meta { color: var(--c-muted); }
+
+.table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1.5rem 0;}
+.table-scroll table{margin:0;}
 </style>
 <link rel="stylesheet" href="../../../css/chaty-front.min.css"/>
 
@@ -1380,7 +1383,7 @@ figure img {
     />
   </figure>
 
-  <table>
+  <div class="table-scroll"><table>
     <thead>
       <tr>
         <th>Visa Type</th>
@@ -1439,7 +1442,7 @@ figure img {
         <td>Volunteers, charity workers</td>
       </tr>
     </tbody>
-  </table>
+  </table></div>
 
   <!-- Section 3: Visa by Duration -->
   <h2>Visa by Duration</h2>

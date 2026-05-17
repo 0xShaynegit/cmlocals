@@ -93,6 +93,9 @@ article table tr:hover{background:rgba(0,0,0,0.02);}
 .progress-bar{position:fixed;top:0;left:0;height:3px;background:var(--c-primary);z-index:10001;width:2%;}
 
 @media (max-width:768px){.page-hero h1{font-size:1.75rem;}}
+
+.table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1.5rem 0;}
+.table-scroll table{margin:0;}
 </style>
 
 <div class="progress-bar" id="progress-bar"></div>
@@ -273,7 +276,7 @@ DTV wins on cost (11,900 THB/year) and work legality. ED wins on accessibility (
 
 <p>This table breaks down the primary differences between the two most popular "Under 50" visas in 2026.</p>
 
-<table>
+<div class="table-scroll"><table>
 <thead>
 <tr>
 <th>Feature</th>
@@ -323,7 +326,7 @@ DTV wins on cost (11,900 THB/year) and work legality. ED wins on accessibility (
 <td>No (Optional "Soft Power" path)</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 
 <h2 style="font-size:1.75rem;font-weight:400;margin:2.5rem 0 1rem;color:var(--c-dark);">Cost Analysis: Year 1 vs. Year 5</h2>
 
