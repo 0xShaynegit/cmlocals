@@ -1,8 +1,16 @@
 # ============================================================
 # CMLocals URL Restructure Redirects
 # All old /pages/ prefixed URLs redirect to new clean paths
-# Generated: 2026-05-07
+# Updated: 2026-05-23
+# Added: HTTPS & www canonicalization, trailing slash enforcement
 # ============================================================
+
+# HTTPS canonicalization - HTTP to HTTPS (Cloudflare handles this, but explicit for clarity)
+http://cmlocals.com/*           https://www.cmlocals.com/:splat  301
+http://www.cmlocals.com/*       https://www.cmlocals.com/:splat  301
+
+# www canonicalization - non-www to www
+https://cmlocals.com/*          https://www.cmlocals.com/:splat  301
 
 # Sak Yant consolidation (moved to root for SEO)
 /sak-yant-chiang-mai/               /sak-yant-chiang-mai.html   301
@@ -84,3 +92,15 @@
 
 # Catch all for any remaining /pages/ that weren't explicitly mapped
 /pages/*                            /:splat                     301
+
+# Trailing slash enforcement - directory URLs must end in slash
+# This handles both .html and non-slash variants
+/checklists/([^.]+)$                /checklists/$1/             301
+/visas/guides/([^.]+)$              /visas/guides/$1/           301
+/visas/long-stay/([^.]+)$           /visas/long-stay/$1/        301
+/visas/short-stay/([^.]+)$          /visas/short-stay/$1/       301
+/ed-visa/([^.]+)$                   /ed-visa/$1/                301
+/immigration/([^.]+)$               /immigration/$1/            301
+/culture/([^.]+)$                   /culture/$1/                301
+/chiang-mai/([^.]+)$                /chiang-mai/$1/             301
+/guides/([^.]+)$                    /guides/$1/                 301
