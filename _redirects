@@ -5,12 +5,8 @@
 # Added: HTTPS & www canonicalization, trailing slash enforcement
 # ============================================================
 
-# HTTPS canonicalization - HTTP to HTTPS (Cloudflare handles this, but explicit for clarity)
-http://cmlocals.com/*           https://www.cmlocals.com/:splat  301
-http://www.cmlocals.com/*       https://www.cmlocals.com/:splat  301
-
-# www canonicalization - non-www to www
-https://cmlocals.com/*          https://www.cmlocals.com/:splat  301
+# Note: HTTPS and www canonicalization is handled by Cloudflare's custom domain
+# settings. Absolute URL redirects are not supported in _redirects.
 
 # Sak Yant consolidation (moved to root for SEO)
 /sak-yant-chiang-mai/               /sak-yant-chiang-mai.html   301
