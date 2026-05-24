@@ -126,7 +126,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); }
 .header-logo { text-decoration: none; display: flex; align-items: center; }
 .header-logo img { height: 40px; width: auto; display: block; }
 .primary-nav { display: flex; gap: 2.4rem; flex-wrap: nowrap; align-items: center; flex: 1; justify-content: center; }
-.primary-nav a { position: relative; color: #111827; text-decoration: none; font-size: 0.85rem; font-weight: 600; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; padding: 0; transition: all 0.2s ease; display: flex; align-items: center; line-height: 1; }
+.primary-nav a { color: #111827; text-decoration: none; transition: color 0.2s; }
 .primary-nav a:hover { color: var(--c-primary); }
 .header-ctas { display: flex; align-items: center; gap: 0.6rem; flex-shrink: 0; }
 .header-ctas .btn-wa { padding: 0.4rem 0.9rem; font-size: 0.9rem; }
@@ -139,7 +139,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); }
 /* Nav item / dropdown */
 .nav-item { position: relative; display: inline-flex; align-items: center; }
 .nav-link { position: relative; color: #111827; text-decoration: none; font-size: 1.2rem; font-weight: 500; padding: 0 0.85rem; transition: all 0.2s ease; display: inline-flex; align-items: center; height: 70px; line-height: 1; }
-.nav-item > a.nav-link { position: relative; color: #111827; text-decoration: none; font-size: 1.2rem; font-weight: 500; padding: 0 0.85rem; transition: all 0.2s ease; display: inline-flex; align-items: center; height: 70px; line-height: 1; }
+.nav-item > a.nav-link { position: relative; color: #111827; text-decoration: none; font-size: 1.2rem !important; font-weight: 500; padding: 0 0.85rem; transition: all 0.2s ease; display: inline-flex; align-items: center; height: 70px; line-height: 1; }
 .nav-item > a.nav-link:hover { text-decoration: underline; text-decoration-color: var(--c-primary); text-underline-offset: 4px; color: var(--c-primary); }
 .nav-item > a.nav-link.has-dropdown { cursor: pointer; }
 .nav-link:hover, .nav-link.active { color: var(--c-primary); }
