@@ -1503,6 +1503,29 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); }
 </aside>
 </div>
 </div>
+
+<!-- FAQ Accordion Script -->
+<script>
+(function(){
+  var items = document.querySelectorAll('.faq-item');
+  items.forEach(function(item){
+    var btn = item.querySelector('.faq-question');
+    if(!btn) return;
+    btn.addEventListener('click', function(){
+      var open = item.classList.contains('open');
+      items.forEach(function(i){
+        i.classList.remove('open');
+        var q = i.querySelector('.faq-question');
+        if(q) q.setAttribute('aria-expanded', 'false');
+      });
+      if(!open){
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+})();
+</script>
 </main>
 
 <section class="cta-section" aria-label="Get help">

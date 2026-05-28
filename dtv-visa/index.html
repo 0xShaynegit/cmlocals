@@ -1683,6 +1683,29 @@ to{opacity:1;transform:scale(1);}}
 </div><!-- /article-layout -->
 </div><!-- /container -->
 
+
+<!-- FAQ Accordion Script -->
+<script>
+(function(){
+  var items = document.querySelectorAll('.faq-item');
+  items.forEach(function(item){
+    var btn = item.querySelector('.faq-question');
+    if(!btn) return;
+    btn.addEventListener('click', function(){
+      var open = item.classList.contains('open');
+      items.forEach(function(i){
+        i.classList.remove('open');
+        var q = i.querySelector('.faq-question');
+        if(q) q.setAttribute('aria-expanded', 'false');
+      });
+      if(!open){
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+})();
+</script>
 </main>
 
 <!-- NEXT STEPS SECTION -->
