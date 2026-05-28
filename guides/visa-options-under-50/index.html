@@ -1712,7 +1712,7 @@ article table tr:hover {
 
 <!-- FAQ Accordion Script -->
 <script>
-(function(){
+document.addEventListener('DOMContentLoaded', function(){
   var items = document.querySelectorAll('.faq-item');
   items.forEach(function(item){
     var btn = item.querySelector('.faq-question');
@@ -1730,7 +1730,7 @@ article table tr:hover {
       }
     });
   });
-})();
+});
 </script>
 
 <script>
