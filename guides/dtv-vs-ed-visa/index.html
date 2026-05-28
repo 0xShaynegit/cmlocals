@@ -1604,7 +1604,7 @@ article table tr:hover {
 
 <!-- FAQ Accordion Script -->
 <script>
-document.addEventListener('DOMContentLoaded', function(){
+(function(){
   var items = document.querySelectorAll('.faq-item');
   items.forEach(function(item){
     var btn = item.querySelector('.faq-question');
@@ -1622,7 +1622,7 @@ document.addEventListener('DOMContentLoaded', function(){
       }
     });
   });
-});
+})();
 </script>
 
 <script>
