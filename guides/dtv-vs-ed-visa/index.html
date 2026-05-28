@@ -755,14 +755,13 @@ article table tr:hover {
 }
 
 .faq-answer {
-  max-height: 0;
+  height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease, padding 0.3s ease;
+  transition: height 0.3s ease, padding-bottom 0.3s ease;
   padding-bottom: 0;
 }
 
 .faq-item.open .faq-answer {
-  max-height: 500px;
   padding-bottom: 1rem;
 }
 
@@ -1605,31 +1604,50 @@ article table tr:hover {
 <!-- FAQ Accordion Script -->
 <script>
 (function(){
-  console.log('FAQ script running');
   var items = document.querySelectorAll('.faq-item');
-  console.log('Found ' + items.length + ' FAQ items');
+
+  function closeItem(item) {
+    var ans = item.querySelector('.faq-answer');
+    var q = item.querySelector('.faq-question');
+    if (ans) ans.style.height = '0';
+    if (q) q.setAttribute('aria-expanded', 'false');
+    item.classList.remove('open');
+  }
+
+  function openItem(item) {
+    var ans = item.querySelector('.faq-answer');
+    var q = item.querySelector('.faq-question');
+    if (!ans) return;
+    // Measure natural height
+    ans.style.height = 'auto';
+    var h = ans.scrollHeight;
+    ans.style.height = '0';
+    // Force reflow so transition fires
+    ans.offsetHeight;
+    ans.style.height = h + 'px';
+    if (q) q.setAttribute('aria-expanded', 'true');
+    item.classList.add('open');
+  }
 
   items.forEach(function(item){
     var btn = item.querySelector('.faq-question');
-    if(!btn) {
-      console.log('No button found in item');
-      return;
+    if (!btn) return;
+
+    // Set initial state explicitly
+    var ans = item.querySelector('.faq-answer');
+    if (ans) ans.style.height = '0';
+
+    btn.setAttribute('tabindex', '0');
+
+    function toggle() {
+      var isOpen = item.classList.contains('open');
+      items.forEach(closeItem);
+      if (!isOpen) openItem(item);
     }
 
-    btn.addEventListener('click', function(e){
-      e.preventDefault();
-      console.log('FAQ clicked');
-      var open = item.classList.contains('open');
-      items.forEach(function(i){
-        i.classList.remove('open');
-        var q = i.querySelector('.faq-question');
-        if(q) q.setAttribute('aria-expanded', 'false');
-      });
-      if(!open){
-        item.classList.add('open');
-        btn.setAttribute('aria-expanded', 'true');
-        console.log('Added open class');
-      }
+    btn.addEventListener('click', toggle);
+    btn.addEventListener('keydown', function(e){
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
     });
   });
 })();
