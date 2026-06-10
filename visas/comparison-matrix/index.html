@@ -105,6 +105,60 @@ article table tr:hover{background:rgba(0,0,0,0.02);}
 
 .table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1.5rem 0;}
 .table-scroll table{margin:0;}
+
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  gap: 4px;
+  padding: 0.5rem;
+}
+.mobile-menu-toggle span {
+  width: 24px;
+  height: 2px;
+  background: #111827;
+  transition: all 0.3s;
+}
+.mobile-menu-toggle.active span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+.mobile-menu-toggle.active span:nth-child(2) { opacity: 0; }
+.mobile-menu-toggle.active span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+@media (min-width: 1024px) {
+  .desktop-only { display: flex !important; }
+  .mobile-only { display: none !important; }
+  .nav-mobile { display: none !important; }
+}
+@media (max-width: 1023px) {
+  .mobile-menu-toggle { display: flex; }
+  .primary-nav { display: none; }
+  .dropdown-menu { display: none; }
+  .nav-mobile {
+    display: none;
+    position: fixed;
+    inset: 64px 0 0 0;
+    left: 0;
+    right: 0;
+    background: white;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    flex-direction: column;
+    max-height: calc(100vh - 70px);
+    overflow-y: auto;
+    z-index: 999;
+  }
+  .nav-mobile.open { display: flex; }
+  .nav-accordion { border-bottom: 1px solid rgba(0,0,0,.1); cursor: pointer; margin: 0; }
+  .nav-accordion summary { padding: 1rem; font-weight: 600; color: #02450b; list-style: none; cursor: pointer; }
+  .nav-accordion summary::-webkit-details-marker { display: none; }
+  .nav-accordion summary::before { content: '+ '; margin-right: 0.5rem; }
+  .nav-accordion[open] summary::before { content: '- '; }
+  .nav-accordion ul { list-style: none; padding: 0 1rem 1rem 1rem; margin: 0; }
+  .nav-accordion li { margin: 0.5rem 0; }
+  .nav-accordion a { color: #374151; text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+  .nav-accordion a:hover { color: var(--c-primary); }
+}
 </style>
 
 <div class="progress-bar" id="progress-bar"></div>
@@ -244,6 +298,69 @@ article table tr:hover{background:rgba(0,0,0,0.02);}
 </div>
 </header>
 
+<nav class="nav-mobile mobile-only" id="mobile-nav" aria-label="Mobile navigation">
+  <details class="nav-accordion">
+    <summary>ED Visas</summary>
+    <ul>
+      <li><a href="/ed-visa/">All ED Visas</a></li>
+      <li><a href="/ed-visa/emergency-self-defence/">Emergency Self Defence</a></li>
+      <li><a href="/ed-visa/muay-thai/">Muay Thai</a></li>
+      <li><a href="/ed-visa/thai-language/">Thai Language</a></li>
+      <li><a href="/ed-visa/hand-to-hand-combat/">Hand-to-Hand Combat</a></li>
+      <li><a href="/ed-visa/volunteer/">Volunteer Non-O</a></li>
+    </ul>
+  </details>
+  <details class="nav-accordion">
+    <summary>Visa Types</summary>
+    <ul>
+      <li><a href="/visa-exempt-entry/">Visa Exempt Entry</a></li>
+      <li><a href="/visa-on-arrival/">Visa on Arrival</a></li>
+      <li><a href="/tourist-visa/">Tourist Visa</a></li>
+      <li><a href="/dtv-visa/">DTV (Destination Thailand)</a></li>
+      <li><a href="/visa-extensions/">Extensions</a></li>
+      <li><a href="/border-runs/">Border Runs</a></li>
+    </ul>
+  </details>
+  <details class="nav-accordion">
+    <summary>Long-Stay Visas</summary>
+    <ul>
+      <li><a href="/business-visa/">Business (Non-B)</a></li>
+      <li><a href="/marriage-visa/">Marriage (Non-O)</a></li>
+      <li><a href="/retirement-visa/">Retirement (Non-O)</a></li>
+      <li><a href="/ltr-visa/">LTR (Long-Term Resident)</a></li>
+    </ul>
+  </details>
+  <details class="nav-accordion">
+    <summary>Immigration</summary>
+    <ul>
+      <li><a href="/immigration/90-day-reporting/">90-Day Reporting</a></li>
+      <li><a href="/immigration/tm30-registration/">TM30 Address Reporting</a></li>
+      <li><a href="/immigration/re-entry-permits/">Re-Entry Permits</a></li>
+      <li><a href="/immigration/overstay-penalties/">Overstay Penalties</a></li>
+      <li><a href="/immigration/common-rejections/">Common Rejections</a></li>
+    </ul>
+  </details>
+  <details class="nav-accordion">
+    <summary>Chiang Mai</summary>
+    <ul>
+      <li><a href="/chiang-mai/">Overview</a></li>
+      <li><a href="/chiang-mai/where-to-stay/">Where to Stay</a></li>
+      <li><a href="/chiang-mai/long-term-living/">Long-Term Living</a></li>
+      <li><a href="/chiang-mai/cost-of-living/">Cost of Living</a></li>
+      <li><a href="/chiang-mai/getting-around/">Getting Around</a></li>
+    </ul>
+  </details>
+  <details class="nav-accordion">
+    <summary>Guides</summary>
+    <ul>
+      <li><a href="/guides/">All Guides</a></li>
+      <li><a href="/guides/dtv-vs-ed-visa/">DTV vs ED Visa</a></li>
+      <li><a href="/guides/border-runs/">Border Runs Guide</a></li>
+      <li><a href="/guides/visa-options-under-50/">Visa Options Under 50</a></li>
+      <li><a href="/guides/why-visas-get-rejected/">Why Visas Get Rejected</a></li>
+    </ul>
+  </details>
+</nav>
 
 <main id="main-content">
 
@@ -456,6 +573,18 @@ Last verified: May 2026 by CMLocals. Visa requirements, costs, and timelines ver
 </section>
 
 </main>
+
+<script>
+// Mobile menu toggle
+const hamburger = document.getElementById('hamburger');
+const mobileNav = document.getElementById('mobile-nav');
+if (hamburger && mobileNav) {
+  hamburger.addEventListener('click', function() {
+    hamburger.classList.toggle('active');
+    mobileNav.classList.toggle('open');
+  });
+}
+</script>
 
 <script>
 const progressBar = document.getElementById('progress-bar');
