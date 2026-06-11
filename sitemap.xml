@@ -490,4 +490,9 @@
     <priority>0.88</priority>
     <changefreq>weekly</changefreq>
   </url>
+  <url>
+    <loc>https://www.cmlocals.com/resources/</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
 </urlset>
