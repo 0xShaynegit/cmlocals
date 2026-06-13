@@ -1,0 +1,43 @@
+/* Mobile: force all multi-column grids to single column at 640px and below */
+@media (max-width: 640px) {
+
+  .hero-grid,
+  .paths-grid,
+  .guides-row,
+  .guides-grid,
+  .compliance-grid,
+  .immigration-inner,
+  .experience-inner,
+  .experience-stats,
+  .related-grid,
+  .related-guides-grid,
+  .culture-explore-grid,
+  .culture-cards,
+  .explore-cards,
+  .explore-grid,
+  .topic-grid,
+  .visa-grid,
+  .visa-cards,
+  .visa-category-grid,
+  .hub-hero-stats,
+  .hub-hero-inner,
+  .blog-explore-grid,
+  .suggestions-grid,
+  .articles-grid,
+  .provider-cards,
+  .program-grid,
+  .summary-cards,
+  .checklist-grid,
+  .tool-grid,
+  .resource-grid,
+  .footer-container,
+  .footer-top {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Sidebar layouts: stack content above sidebar */
+  .article-layout {
+    grid-template-columns: 1fr !important;
+  }
+
+}
