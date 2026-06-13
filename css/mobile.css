@@ -38,7 +38,9 @@ body {
   .tool-grid,
   .resource-grid,
   .footer-container,
-  .footer-top {
+  .footer-top,
+  .special-programs-grid,
+  .inline-grid-3col {
     grid-template-columns: 1fr !important;
   }
 
