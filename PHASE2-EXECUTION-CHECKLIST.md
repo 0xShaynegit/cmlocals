@@ -5,9 +5,9 @@
 ### Checklist (Target: Complete by end of Week 2)
 
 **Infrastructure Setup** (2-3 hours)
-- [ ] Create Resources landing page (DONE - `/resources/index.html`)
+- [x] Create Resources landing page (DONE - `/resources/index.html`)
 - [ ] Set up outreach tracking spreadsheet
-- [ ] Create email templates (DONE - see PHASE2-OUTREACH-TEMPLATES.md)
+- [x] Create email templates (DONE - see PHASE2-OUTREACH-TEMPLATES.md)
 - [ ] Build contact list for Tier 1 sites (see CONTACT-LIST.md)
 
 **Tier 1 Outreach Campaign** (2-3 hours)
@@ -80,7 +80,7 @@
 - [ ] Expected: 5-10 mentions/links
 
 **Resource Page Optimization** (1 hour)
-- [ ] Add internal links from `/resources/` to 5 key guides
+- [x] Add internal links from `/resources/` to 5 key guides (DONE 12/07/2026 - linked to /dtv-visa/, /retirement-visa/, /business-visa/, /checklists/, /guides/why-visas-get-rejected/)
 - [ ] Optimize `/resources/` for "nomad resources Thailand" keyword
 - [ ] Share on digital nomad communities
 
