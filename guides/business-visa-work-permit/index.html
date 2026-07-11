@@ -207,7 +207,7 @@ article table th{background:var(--c-subtle);font-weight:600;color:var(--c-dark);
     color: var(--c-primary);
   }
 }
-</style>
+.mobile-nav-search-icon{display:flex;align-items:center;justify-content:center;height:60px;padding:20px 24px;border-top:1px solid var(--c-border);color:var(--c-primary);text-decoration:none;transition:background-color 0.2s,opacity 0.2s;margin-top:auto;width:100%;}.mobile-nav-search-icon:hover{opacity:0.8;background:rgba(79,70,229,0.05);}.mobile-nav-search-icon svg{display:block;pointer-events:none;}.header-search-icon{display:flex;align-items:center;justify-content:center;width:36px;height:36px;color:var(--c-body);text-decoration:none;transition:color 0.2s,opacity 0.2s;border:none;background:none;flex-shrink:0;}.header-search-icon:hover{color:var(--c-primary);opacity:0.8;}.header-search-icon svg{display:block;pointer-events:none;}@media(max-width:960px){.header-search-icon{display:none;}}</style>
 
 <div class="progress-bar" id="progress-bar"></div>
 <script type="application/ld+json">
@@ -358,7 +358,10 @@ article table th{background:var(--c-subtle);font-weight:600;color:var(--c-dark);
         </div>
       </div>
     </div>
-  </nav>  <!-- CTAs & Mobile Toggle -->
+  </nav>      <a href="/search.html" class="header-search-icon" aria-label="Search" title="Search">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+    </a>
+    <!-- CTAs & Mobile Toggle -->
   <div class="header-ctas">
     <a href="https://wa.me/66801202074" class="btn btn-wa" rel="noopener" target="_blank" title="Message on WhatsApp">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -380,11 +383,13 @@ article table th{background:var(--c-subtle);font-weight:600;color:var(--c-dark);
       <li><a href="/ed-visa/thai-language/">Thai Language</a></li>
       <li><a href="/ed-visa/hand-to-hand-combat/">Hand-to-Hand Combat</a></li>
       <li><a href="/ed-visa/volunteer/">Volunteer Non-O</a></li>
+      <li><a href="/ed-visa/comparison/">ED Visa Comparison</a></li>
     </ul>
   </details>
   <details class="nav-accordion">
-    <summary>Visa Types</summary>
+    <summary>Short-Stay Visas</summary>
     <ul>
+      <li><a href="/visas/short-stay/">Short-Stay Overview</a></li>
       <li><a href="/visa-exempt-entry/">Visa Exempt Entry</a></li>
       <li><a href="/visa-on-arrival/">Visa on Arrival</a></li>
       <li><a href="/tourist-visa/">Tourist Visa</a></li>
@@ -396,43 +401,122 @@ article table th{background:var(--c-subtle);font-weight:600;color:var(--c-dark);
   <details class="nav-accordion">
     <summary>Long-Stay Visas</summary>
     <ul>
+      <li><a href="/visas/long-stay/">Long-Stay Overview</a></li>
       <li><a href="/business-visa/">Business (Non-B)</a></li>
       <li><a href="/marriage-visa/">Marriage (Non-O)</a></li>
       <li><a href="/retirement-visa/">Retirement (Non-O)</a></li>
       <li><a href="/ltr-visa/">LTR (Long-Term Resident)</a></li>
+      <li><a href="/thailand-privilege-visa/">Elite/Privilege</a></li>
+    </ul>
+  </details>
+  <details class="nav-accordion">
+    <summary>Visa Guides</summary>
+    <ul>
+      <li><a href="/visas/">All Visa Pages</a></li>
+      <li><a href="/visas/guides/which-visa/">Which Visa is Right?</a></li>
+      <li><a href="/visas/guides/visa-comparisons/">Visa Comparisons</a></li>
+      <li><a href="/visas/guides/visa-options-chiang-mai/">Visa Options for Chiang Mai</a></li>
+      <li><a href="/visas/guides/long-stay-strategy/">Visa & Stay Advice</a></li>
+      <li><a href="/visas/guides/extension-vs-re-entry/">Extension vs Re-Entry</a></li>
+      <li><a href="/visas/guides/entry-requirements/">2026 Entry Requirements</a></li>
     </ul>
   </details>
   <details class="nav-accordion">
     <summary>Immigration</summary>
     <ul>
+      <li><a href="/immigration/">All Immigration</a></li>
       <li><a href="/immigration/90-day-reporting/">90-Day Reporting</a></li>
       <li><a href="/immigration/tm30-registration/">TM30 Address Reporting</a></li>
       <li><a href="/immigration/re-entry-permits/">Re-Entry Permits</a></li>
+      <li><a href="/visa-extensions/">Visa Extensions</a></li>
+      <li><a href="/border-runs/">Visa Border Runs</a></li>
+      <li><a href="/immigration/address-change/">Address Change</a></li>
       <li><a href="/immigration/overstay-penalties/">Overstay Penalties</a></li>
+      <li><a href="/immigration/blacklist-status/">Blacklist Status</a></li>
       <li><a href="/immigration/common-rejections/">Common Rejections</a></li>
+      <li><a href="/immigration/document-requirements/">Document Requirements</a></li>
+      <li><a href="/immigration/entry-strategy/">Entry Strategy</a></li>
+      <li><a href="/immigration/financial-requirements/">Financial Requirements</a></li>
+      <li><a href="/immigration/best-practices/">Best Practices</a></li>
+      <li><a href="/immigration/legal-rights/">Legal Rights</a></li>
+      <li><a href="/immigration/queue-strategy/">Queue Strategy</a></li>
+      <li><a href="/immigration/digital-arrival-card/">Thailand Digital Arrival Card</a></li>
+      <li><a href="/immigration/land-border-vs-air/">Land Border vs Air Entry</a></li>
     </ul>
   </details>
   <details class="nav-accordion">
     <summary>Chiang Mai</summary>
     <ul>
       <li><a href="/chiang-mai/">Overview</a></li>
+      <li><a href="/chiang-mai/why-chiang-mai/">Why Base Here</a></li>
       <li><a href="/chiang-mai/where-to-stay/">Where to Stay</a></li>
       <li><a href="/chiang-mai/long-term-living/">Long-Term Living</a></li>
+      <li><a href="/chiang-mai/things-to-do/">Things to Do</a></li>
+      <li><a href="/chiang-mai/digital-nomads/">Digital Nomads</a></li>
       <li><a href="/chiang-mai/cost-of-living/">Cost of Living</a></li>
+      <li><a href="/chiang-mai/phones-and-banking/">Phones & Banking</a></li>
       <li><a href="/chiang-mai/getting-around/">Getting Around</a></li>
+      <li><a href="/chiang-mai/healthcare/">Healthcare</a></li>
+      <li><a href="/chiang-mai/insurance/">Insurance</a></li>
+      <li><a href="/chiang-mai/taxes/">Taxes</a></li>
     </ul>
   </details>
   <details class="nav-accordion">
-    <summary>Guides</summary>
+    <summary>Culture & Lifestyle</summary>
+    <ul>
+      <li><a href="/culture/">Culture Guide</a></li>
+      <li><a href="/culture/customs-traditions/">Customs & Traditions</a></li>
+      <li><a href="/culture/thai-culture-etiquette/">Etiquette</a></li>
+      <li><a href="/culture/sak-yant-etiquette/">Sak Yant Etiquette</a></li>
+      <li><a href="/culture/festivals-events/">Festivals</a></li>
+      <li><a href="/culture/thai-food-culture/">Thai Food</a></li>
+      <li><a href="/culture/temple-etiquette/">Temple Etiquette</a></li>
+      <li><a href="/sak-yant-chiang-mai.html">Sak Yant</a></li>
+      <li><a href="/culture/sak-yant-designs/">Sak Yant Designs</a></li>
+      <li><a href="/culture/sak-yant-getting/">Getting a Sak Yant</a></li>
+    </ul>
+  </details>
+  <details class="nav-accordion">
+    <summary>Checklists</summary>
+    <ul>
+      <li><a href="/checklists/">All Checklists</a></li>
+      <li><a href="/checklists/first-entry/">First Entry</a></li>
+      <li><a href="/checklists/visa-exempt-entry/">Visa Exempt Entry</a></li>
+      <li><a href="/checklists/visa-on-arrival/">Visa on Arrival</a></li>
+      <li><a href="/checklists/tourist-visa/">Tourist Visa</a></li>
+      <li><a href="/checklists/dtv-visa/">DTV Visa</a></li>
+      <li><a href="/checklists/ed-visa/">ED Visa</a></li>
+      <li><a href="/checklists/marriage-visa/">Marriage Visa</a></li>
+      <li><a href="/checklists/retirement-visa/">Retirement Visa</a></li>
+      <li><a href="/checklists/visa-extension/">Visa Extension</a></li>
+      <li><a href="/checklists/border-run/">Border Run</a></li>
+      <li><a href="/checklists/re-entry-permit/">Re-Entry Permit</a></li>
+      <li><a href="/checklists/tm30/">TM30 Registration</a></li>
+      <li><a href="/checklists/90-day-reporting/">90-Day Reporting</a></li>
+    </ul>
+  </details>
+  <details class="nav-accordion">
+    <summary>Guides & Resources</summary>
     <ul>
       <li><a href="/guides/">All Guides</a></li>
-      <li><a href="/guides/dtv-vs-ed-visa/">DTV vs ED Visa</a></li>
+      <li><a href="/guides/dtv-deep-dive/">DTV Deep-Dive Guide</a></li>
+      <li><a href="/guides/dtv-180-day-extension/">DTV 180-Day Extension</a></li>
+      <li><a href="/guides/dtv-vs-ed-visa/">DTV vs ED Visa 2026</a></li>
+      <li><a href="/guides/dtv-vs-business-permit/">DTV vs Business Permit</a></li>
       <li><a href="/guides/border-runs/">Border Runs Guide</a></li>
+      <li><a href="/guides/business-visa-work-permit/">Business Visa & Work Permit</a></li>
+      <li><a href="/guides/ed-visa-cost-budget/">ED Visa Cost & Budget</a></li>
+      <li><a href="/guides/ed-vs-dtv-comparison/">ED vs DTV Comparison</a></li>
       <li><a href="/guides/visa-options-under-50/">Visa Options Under 50</a></li>
       <li><a href="/guides/why-visas-get-rejected/">Why Visas Get Rejected</a></li>
     </ul>
   </details>
+  <a href="/search.html" class="mobile-nav-search-icon" aria-label="Search">
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+  </a>
 </nav>
+
+
 
 
 <main id="main-content">
