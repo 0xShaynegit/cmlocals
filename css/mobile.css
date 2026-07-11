@@ -5,22 +5,30 @@ body {
   max-width: 100%;
 }
 
-/* Mobile header: fixed instead of sticky.
-   overflow-x:hidden above turns body into its own scroll container,
-   which silently breaks position:sticky on .site-header. Fixed
-   positioning is not affected by ancestor overflow. */
-@media (max-width: 1023px) {
-  .site-header {
-    position: fixed !important;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    z-index: 1001;
-  }
+/* Site header: fixed instead of sticky, at every width.
+   overflow-x:hidden above has no media query, so it turns body into
+   its own scroll container on desktop too, which silently breaks
+   position:sticky everywhere, not just mobile. Fixed positioning is
+   not affected by ancestor overflow.
+   Body padding-top matches .site-header's own two height states:
+   71px above 960px (70px .header-inner + 1px border), 85px at/below
+   960px (0.75rem top/bottom padding + 60px .header-inner + 1px border). */
+.site-header {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1001;
+}
 
+body {
+  padding-top: 71px;
+}
+
+@media (max-width: 960px) {
   body {
-    padding-top: 76px;
+    padding-top: 85px;
   }
 }
 
