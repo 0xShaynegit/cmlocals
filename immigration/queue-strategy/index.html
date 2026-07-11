@@ -390,7 +390,16 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); }
 
 /* Mobile (same as before) */
 @media (max-width: 1023px) {
-  .mobile-menu-toggle {
+  .site-header {
+    padding: 0.5rem 1.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 1001;
+  }
+  .header-inner {
+    height: 60px;
+  }
+   {
     display: flex;
   }
   .primary-nav {
