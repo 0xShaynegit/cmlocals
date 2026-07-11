@@ -381,7 +381,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); }
   .header-inner {
     height: 60px;
   }
-   {
+  .mobile-menu-toggle {
     display: flex;
   }
   .primary-nav {
@@ -1826,7 +1826,7 @@ function updateResults() {
   const resultsHTML = visas.map(visa => `
     <div class="visa-card">
       <h4>${visa.name}</h4>
-      <div class="meta">${visa.duration} - � ${visa.cost}</div>
+      <div class="meta">${visa.duration} - ${visa.cost}</div>
       <p>${visa.desc}</p>
       <a href="/visas/guides/which-visa/">Learn More</a>
     </div>
