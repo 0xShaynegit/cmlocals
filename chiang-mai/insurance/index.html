@@ -24,7 +24,97 @@
 
 <style>
 /* ============================================================
-   + NAV CSS (auto-injected - do not edit here)
+   CMLocals - Chiang Mai Article Pages
+   Dark base: #101585  |  Accent: #6366F1
+   ============================================================ */
+
+:root {
+  --c-dark:          #101585;
+  --c-dark-2:        #0D1275;
+  --c-dark-3:        #0B0F6E;
+  --c-primary:       #4F46E5;
+  --c-primary-h:     #4338CA;
+  --c-primary-glow:  rgba(79,70,229,.18);
+  --c-page-accent:   #6366F1;
+  --c-page-accent-l: #E0E7FF;
+  --c-violet:        #7C3AED;
+  --c-violet-l:      #EDE9FE;
+  --c-white:         #FFFFFF;
+  --c-off-white:     #F8F7FF;
+  --c-subtle:        #F1EFFF;
+  --c-body:          #111827;
+  --c-muted:         #4B5563;
+  --c-border:        #E5E7EB;
+  --c-border-dark:   rgba(255,255,255,.1);
+  --c-wa:            #25D366;
+  --c-wa-h:          #1aaa55;
+  --c-fb:            #1877F2;
+  --c-fb-h:          #1565d8;
+  --radius-sm:       6px;
+  --radius-md:       10px;
+  --radius-lg:       16px;
+  --shadow-sm:       0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.06);
+  --shadow-md:       0 4px 16px rgba(0,0,0,.10), 0 2px 6px rgba(0,0,0,.06);
+  --shadow-lg:       0 12px 40px rgba(0,0,0,.14);
+  --font-display:    'Newsreader', Georgia, serif;
+  --font-body:       'DM Sans', system-ui, sans-serif;
+  --max-w:           1200px;
+  --article-w:       780px;
+  --edge:            clamp(1.25rem, 4vw, 2.5rem);
+  --section-py:      clamp(3rem, 5vw, 4.5rem);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body { font-family: var(--font-body); font-size: 1rem; line-height: 1.65; color: var(--c-body); background: var(--c-white); -webkit-font-smoothing: antialiased; }
+img { max-width: 100%; display: block; height: auto; }
+a { color: inherit; }
+ul { list-style: none; }
+button { font-family: inherit; cursor: pointer; border: none; background: none; }
+
+/* --- HEADINGS --- */
+h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); }
+
+.container { width: 100%; max-width: var(--max-w); margin-inline: auto; padding-inline: var(--edge); }
+.article-wrap { width: 100%; max-width: var(--article-w); margin-inline: auto; padding-inline: var(--edge); }
+
+/* --- BUTTONS --- */
+.btn {
+  display: inline-flex; align-items: center; gap: .5em;
+  padding: .65em 1.4em; border-radius: var(--radius-sm);
+  font-family: var(--font-body); font-size: .9rem; font-weight: 600; line-height: 1.3;
+  text-decoration: none; border: 1.5px solid transparent;
+  transition: background .18s, box-shadow .18s, border-color .18s, transform .12s;
+  white-space: nowrap;
+}
+.btn:hover { transform: translateY(-1px); }
+.btn-dark { background: rgb(20,25,34); color: var(--c-white); border-color: rgb(20,25,34); }
+.btn-dark:hover { background: #141110; border-color: #141110; box-shadow: var(--shadow-md); }
+.btn-outline-light { background: transparent; color: var(--c-white); border-color: rgba(255,255,255,.35); }
+.btn-outline-light:hover { background: rgba(255,255,255,.1); border-color: rgba(255,255,255,.6); }
+.btn-wa { background: var(--c-wa); text-shadow: 0 1px 2px rgba(0,0,0,.2); color: var(--c-white); border-color: var(--c-wa); }
+.btn-wa:hover { background: var(--c-wa-h); border-color: var(--c-wa-h); box-shadow: 0 4px 18px rgba(37,211,102,.25); }
+.btn-fb { background: var(--c-fb); color: var(--c-white); border-color: var(--c-fb); }
+.btn-fb:hover { background: var(--c-fb-h); border-color: var(--c-fb-h); }
+.btn-lg { padding: .8em 1.75em; font-size: 1rem; }
+
+/* --- LABEL TAG --- */
+.label-tag {
+  display: inline-block;
+  font-size: .72rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+  color: var(--c-page-accent); background: var(--c-page-accent-l);
+  padding: .2em .75em; border-radius: 100px; margin-bottom: .9rem;
+}
+.label-tag--light { color: rgba(255,255,255,.9); background: rgba(255,255,255,.12); }
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+/* ============================================================
+   HEADER
+   ============================================================ */
+/* ============================================================
+   HEADER
    ============================================================ */
 .site-header {
   background: white;
@@ -33,6 +123,7 @@
   top: 0;
   z-index: 1000;
 }
+
 .header-inner {
   display: flex;
   justify-content: space-between;
@@ -42,6 +133,8 @@
   padding: 0 1.5rem;
   height: 70px;
 }
+
+/* Wordmark */
 .header-logo {
   text-decoration: none;
   display: flex;
@@ -52,8 +145,16 @@
   width: auto;
   display: block;
 }
-.header-logo-mark { display: none; }
-.header-logo-text { display: none; }
+
+.header-logo-mark {
+  display: none;
+}
+
+.header-logo-text {
+  display: none;
+}
+
+/* Primary Nav */
 .primary-nav { display: flex; gap: 2.4rem;
   flex-wrap: nowrap;
   align-items: center;
@@ -61,63 +162,78 @@
   justify-content: center;
   align-items: center;
 }
+
 .primary-nav a { position: relative; color: #111827; text-decoration: none; font-size: 0.85rem; font-weight: 600; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
   padding: 0;
   transition: all 0.2s ease;
   display: flex;
   align-items: center;
   line-height: 1;
-
-  white-space: nowrap;
 }
-.primary-nav a:hover { color: var(--c-primary, #4F46E5); }
+
+.primary-nav a:hover {
+  color: var(--c-primary);
+}
+
+/* Header CTAs */
 .header-ctas {
   display: flex;
   align-items: center;
   gap: 0.6rem;
   flex-shrink: 0;
 }
+
 .header-ctas .btn-wa {
   padding: 0.4rem 0.9rem;
   font-size: 0.9rem;
 }
-.header-fb-link { display: none; }
+
+.header-fb-link {
+  display: none;
+}
+
+/* Mobile toggle */
 .header-hamburger {
   display: none; flex-direction: column; justify-content: center; align-items: center;
   width: 40px; height: 40px; gap: 5px;
-  border-radius: 6px; cursor: pointer;
+  border-radius: var(--radius-sm); cursor: pointer;
   background: transparent;
 }
 .header-hamburger span {
   display: block; width: 22px; height: 2px;
-  background: #0D1117; border-radius: 2px;
+  background: var(--c-dark); border-radius: 2px;
   transition: transform .25s, opacity .25s;
 }
 .header-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
 .header-hamburger.open span:nth-child(2) { opacity: 0; }
 .header-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* Mobile drawer */
 .mobile-nav {
   display: none; position: fixed; inset: 64px 0 0 0; z-index: 99;
-  background: #FFFFFF; overflow-y: auto;
-  padding: 1.5rem clamp(1.25rem, 4vw, 2.5rem) 3rem;
-  border-top: 1px solid #E5E7EB;
+  background: var(--c-white); overflow-y: auto;
+  padding: 1.5rem var(--edge) 3rem;
+  border-top: 1px solid var(--c-border);
 }
 .mobile-nav.open { display: block !important; }
 .mobile-nav a {
   display: block; padding: .9rem 0;
-  font-size: 0.9rem; font-weight: 500; color: #0D1117;
+  font-size: 0.9rem; font-weight: 500; color: var(--c-dark);
   text-decoration: none;
-  border-bottom: 1px solid #E5E7EB;
+  border-bottom: 1px solid var(--c-border);
 }
 .mobile-nav a:last-of-type { border-bottom: none; }
-.mobile-nav a:hover { color: var(--c-primary, #4F46E5); }
+.mobile-nav a:hover { color: var(--c-primary); }
 .mobile-nav-ctas { display: flex; flex-direction: column; gap: .75rem; margin-top: 1.5rem; }
 .mobile-nav-ctas .btn { justify-content: center; }
+
+/* Navigation Links with Dropdown */
 .nav-item {
   position: relative;
   display: inline-flex;
   align-items: center;
 }
+
 .nav-item > a.nav-link {
   position: relative;
   color: #111827;
@@ -131,13 +247,19 @@
   height: 70px;
   line-height: 1;
 }
+
 .nav-item > a.nav-link:hover {
   text-decoration: underline;
-  text-decoration-color: var(--c-primary, #4F46E5);
+  text-decoration-color: var(--c-primary);
   text-underline-offset: 4px;
-  color: var(--c-primary, #4F46E5);
+  color: var(--c-primary);
 }
-.nav-item > a.nav-link.has-dropdown { cursor: pointer; }
+
+.nav-item > a.nav-link.has-dropdown {
+  cursor: pointer;
+}
+
+/* Mega Menu Dropdown */
 .dropdown-menu {
   position: absolute;
   top: 100%;
@@ -155,18 +277,23 @@
   margin-top: 0;
   z-index: 101;
 }
+
 .dropdown-menu[style*="display: block"] {
   display: grid !important;
   grid-template-columns: 1fr 1fr !important;
   gap: 2rem;
 }
+
 .mega-menu {
   display: grid !important;
   grid-template-columns: 1fr 1fr !important;
 }
+
+/* Chiang Mai has two columns, needs wider width */
 .mega-menu:has(> .dropdown-section:nth-child(2)) {
   width: 600px !important;
 }
+
 .dropdown-section {
   display: flex;
   flex-direction: column;
@@ -175,18 +302,28 @@
   flex: 1;
   min-width: 200px;
 }
-.dropdown-section:last-child { margin-bottom: 0; }
+
+.dropdown-section:last-child {
+  margin-bottom: 0;
+}
+
 .dropdown-section h3 {
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: var(--c-primary, #4F46E5);
+  color: var(--c-primary);
   font-weight: 600;
   margin: 0 0 0.5rem 0;
   padding: 0;
   border: none;
 }
-.dropdown-section ul { list-style: none; padding: 0; margin: 0; }
+
+.dropdown-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 .dropdown-section li a {
   color: #374151;
   text-decoration: none;
@@ -196,7 +333,12 @@
   display: block;
   padding: 0.1rem 0;
 }
-.dropdown-section li a:hover { color: var(--c-primary, #4F46E5); }
+
+.dropdown-section li a:hover {
+  color: var(--c-primary);
+}
+
+/* Mobile Menu Toggle */
 .mobile-menu-toggle {
   display: none;
   flex-direction: column;
@@ -206,19 +348,37 @@
   gap: 4px;
   padding: 0.5rem;
 }
+
 .mobile-menu-toggle span {
   width: 24px;
   height: 2px;
   background: #111827;
   transition: all 0.3s;
 }
-.mobile-menu-toggle.active span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
-.mobile-menu-toggle.active span:nth-child(2) { opacity: 0; }
-.mobile-menu-toggle.active span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
-@media (min-width: 1024px) {
-  .desktop-only { display: flex !important; }
-  .mobile-only { display: none !important; }
+
+.mobile-menu-toggle.active span:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
 }
+
+.mobile-menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-toggle.active span:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+/* Desktop Only */
+@media (min-width: 1024px) {
+  .desktop-only {
+    display: flex !important;
+  }
+  .mobile-only {
+    display: none !important;
+  }
+}
+
+/* Mobile (same as before) */
 @media (max-width: 1023px) {
   .site-header {
     padding: 0.5rem 1.5rem;
@@ -229,9 +389,16 @@
   .header-inner {
     height: 60px;
   }
-  .mobile-menu-toggle { display: flex; }
-  .primary-nav { display: none; }
-  
+  .mobile-menu-toggle {
+    display: flex;
+  }
+  .primary-nav {
+    display: none;
+  }
+  .dropdown-menu {
+    display: none;
+  }
+
   .nav-mobile {
     display: none;
     position: fixed;
@@ -245,7 +412,9 @@
     overflow-y: auto;
     z-index: 999;
   }
-  .nav-mobile.open { display: flex !important; }
+  .nav-mobile.open {
+    display: flex;
+  }
   .nav-accordion {
     border-bottom: 1px solid rgba(0,0,0,.1);
     cursor: pointer;
@@ -267,14 +436,18 @@
     font-size: 0.9rem;
     transition: transform 0.3s;
   }
-  .nav-accordion[open] summary::after { transform: rotate(180deg); }
+  .nav-accordion[open] summary::after {
+    transform: rotate(180deg);
+  }
   .nav-accordion ul {
     list-style: none;
     padding: 0;
     margin: 0;
     background: rgba(79, 70, 229, 0.02);
   }
-  .nav-accordion li { border-bottom: 1px solid rgba(0,0,0,.05); }
+  .nav-accordion li {
+    border-bottom: 1px solid rgba(0,0,0,.05);
+  }
   .nav-accordion li a {
     display: block;
     padding: 0.75rem 1rem;
@@ -285,152 +458,344 @@
   }
   .nav-accordion li a:active {
     background: rgba(79, 70, 229, 0.1);
-    color: var(--c-primary, #4F46E5);
+    color: var(--c-primary);
   }
-  
+
+  .nav-dropdown-item {
+    padding: .75rem .85rem;
+    margin-left: 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .nav-submenu-item {
+    padding: .65rem .85rem;
+    margin-left: 3rem;
+    font-size: 0.9rem;
+  }
 }
+
+/* Mobile drawer enhanced */
+.mobile-nav-section {
+  margin-bottom: 1.5rem;
+}
+
+.mobile-nav-section-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--c-muted);
+  padding: .5rem 0 .75rem 0;
+  border-bottom: 1px solid var(--c-border);
+}
+
+.mobile-nav-section a {
+  display: block;
+  padding: .75rem 0;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--c-dark);
+  text-decoration: none;
+  transition: color .15s;
+}
+
+.mobile-nav-section a:hover {
+  color: var(--c-primary);
+}
+
+/* ============================================================
+   PAGE HERO
+   ============================================================ */
+.page-hero {
+  background: var(--c-dark);
+  overflow: hidden; position: relative;
+  padding-block: clamp(3.5rem, 6vw, 5.5rem);
+}
+.page-hero::before {
+  content: '';
+  position: absolute; inset: 0; pointer-events: none;
+  background:
+    radial-gradient(ellipse 60% 90% at 85% 40%, rgba(255,255,255,.06) 0%, transparent 65%),
+    radial-gradient(ellipse 40% 60% at 5% 80%, rgba(124,58,237,.18) 0%, transparent 65%);
+}
+.page-hero-inner {
+  position: relative; z-index: 1;
+  max-width: var(--article-w);
+  padding-inline: var(--edge);
+  margin-inline: auto;
+}
+.page-hero-eyebrow {
+  display: inline-flex; align-items: center; gap: .5rem;
+  font-size: .8rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase;
+  color: rgba(255,255,255,.65); margin-bottom: 1.25rem;
+}
+.page-hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  font-weight: 400; line-height: 1.15;
+  color: var(--c-white); letter-spacing: -.02em; margin-bottom: 1.25rem;
+}
+.page-hero h1 em { font-style: italic; font-weight: 300; color: rgba(255,255,255,.80); }
+.page-hero-lead {
+  font-size: clamp(.95rem, 1.5vw, 1.1rem);
+  color: rgba(255,255,255,.75); line-height: 1.75;
+  max-width: 62ch; margin-bottom: 2rem;
+}
+.page-hero-meta { font-size: .82rem; color: rgba(255,255,255,.45); display: flex; gap: 1.5rem; flex-wrap: wrap; }
+
+/* ============================================================
+   BREADCRUMB
+   ============================================================ */
+.breadcrumb { background: var(--c-off-white); border-bottom: 1px solid var(--c-border); padding: .65rem 0; }
+.breadcrumb-inner {
+  display: flex; align-items: center; gap: .4rem;
+  font-size: .8rem; color: var(--c-muted);
+  max-width: var(--article-w); padding-inline: var(--edge); margin-inline: auto;
+}
+.breadcrumb a { color: var(--c-muted); text-decoration: none; }
+.breadcrumb a:hover { color: var(--c-primary); }
+.breadcrumb-sep { color: var(--c-border); }
+
+/* ============================================================
+   ARTICLE BODY
+   ============================================================ */
+.article-body { padding-block: clamp(2.5rem, 4vw, 4rem); }
+.article-body h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 400; line-height: 1.25; letter-spacing: -.02em;
+  color: #101585;
+  margin-top: 3rem; margin-bottom: 1rem;
+  padding-top: 2rem; border-top: 1px solid var(--c-border);
+}
+.article-body h2:first-of-type { border-top: none; padding-top: 0; margin-top: 0; }
+.article-body h3 {
+  font-family: var(--font-body); font-size: 0.9rem; font-weight: 600;
+  color: #101585; margin-top: 2rem; margin-bottom: .6rem;
+}
+.article-body p { margin-bottom: 1.25rem; line-height: 1.75; color: var(--c-body);  }
+.article-body ul { list-style: none; margin: 1rem 0 1.5rem 0; display: flex; flex-direction: column; gap: .6rem; }
+.article-body ul li { padding-left: 1.25rem; position: relative; line-height: 1.65; color: var(--c-body); }
+.article-body ul li::before {
+  content: ''; position: absolute; left: 0; top: .7em;
+  width: 5px; height: 5px; border-radius: 50%; background: var(--c-page-accent);
+}
+
+/* ============================================================
+   NEIGHBOURHOOD CARDS  (inline within article)
+   ============================================================ */
+.neighbourhood-card {
+  border: 1px solid var(--c-border);
+  border-left: 4px solid var(--c-page-accent);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  background: var(--c-white);
+}
+.neighbourhood-card h3 {
+  font-family: var(--font-display);
+  font-size: 0.9rem; font-weight: 400; letter-spacing: -.01em;
+  color: #101585; margin-top: 0; margin-bottom: .75rem;
+}
+.neighbourhood-card .nc-meta {
+  display: flex; flex-wrap: wrap; gap: .5rem 1.5rem;
+  font-size: .8rem; color: var(--c-muted);
+  margin-bottom: 1rem; padding-bottom: .75rem;
+  border-bottom: 1px solid var(--c-border);
+}
+.neighbourhood-card .nc-meta span strong { color: var(--c-dark); font-weight: 600; }
+.neighbourhood-card p { margin-bottom: .9rem; font-size: .95rem; }
+.neighbourhood-card p:last-child { margin-bottom: 0; }
+
+/* ============================================================
+   CALLOUT BANDS
+   ============================================================ */
+.callout-band {
+  background: var(--c-page-accent-l);
+  border-left: 3px solid var(--c-page-accent);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  padding: 1.25rem 1.5rem; margin: 2rem 0 0 0; max-width: 68ch;
+}
+.callout-band p { margin: 0; color: #101585; font-size: .95rem; line-height: 1.65; }
+.callout-band strong { color: var(--c-page-accent); }
+
+/* ============================================================
+   RENT TABLE
+   ============================================================ */
+.cost-table {
+  width: 100%; max-width: 620px;
+  border-collapse: collapse; font-size: .9rem; margin: 1.5rem 0;
+}
+.cost-table th {
+  text-align: left; padding: .6rem .8rem;
+  background: #101585; color: rgba(255,255,255,.85);
+  font-weight: 600; font-size: .78rem; letter-spacing: .04em; text-transform: uppercase;
+}
+.cost-table td { padding: .65rem .8rem; border-bottom: 1px solid var(--c-border); color: var(--c-body); vertical-align: top; }
+.cost-table td:last-child { font-weight: 600; color: #101585; }
+.cost-table tr:last-child td { border-bottom: none; background: var(--c-off-white); }
+
+/* ============================================================
+   VISA SECTION  (dark band)
+   ============================================================ */
+.visa-section {
+  background: var(--c-dark);
+  padding-block: clamp(2.5rem, 4vw, 3.5rem);
+  margin-block: 0;
+  position: relative; overflow: hidden;
+}
+.visa-section::before {
+  content: '';
+  position: absolute; right: -10%; top: -50%; width: 50%; height: 200%;
+  background: radial-gradient(ellipse, rgba(99,102,241,.12) 0%, transparent 65%);
+  pointer-events: none;
+}
+.visa-section-inner {
+  max-width: var(--article-w); padding-inline: var(--edge);
+  margin-inline: auto; position: relative; z-index: 1;
+}
+.visa-section h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 2.5vw, 1.85rem);
+  font-weight: 400; color: var(--c-white); letter-spacing: -.02em; margin-bottom: 1rem;
+}
+.visa-section p { color: rgba(255,255,255,.72); line-height: 1.7; margin-bottom: 1.25rem; max-width: 64ch; }
+.section-title { font-family: var(--font-display);
+  font-size: clamp(1.4rem, 2.5vw, 1.85rem);
+  font-weight: 400; letter-spacing: -.02em; color: #101585; margin-bottom: .4rem;
+}
+.visa-links { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.5rem; }
+.visa-links a {
+  font-size: .85rem; font-weight: 600; color: rgba(255,255,255,.85);
+  background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.15);
+  padding: .45em 1em; border-radius: var(--radius-sm);
+  text-decoration: none; transition: background .18s, border-color .18s;
+}
+.visa-links a:hover { background: rgba(99,102,241,.25); border-color: var(--c-page-accent); color: #fff; }
+
+/* ============================================================
+   TOOLS & CHECKLISTS
+   ============================================================ */
+.tools-section { background: var(--c-white); padding-block: clamp(2.5rem, 4vw, 3.5rem); border-top: 1px solid var(--c-border); }
+.tools-section-inner { max-width: var(--article-w); padding-inline: var(--edge); margin-inline: auto; }
+.tools-header { margin-bottom: 1.5rem; }
+.guides-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+.tool-card {
+  border: 1px solid var(--c-border); border-radius: var(--radius-md);
+  padding: 1.25rem 1.4rem; background: var(--c-off-white);
+  text-decoration: none; color: var(--c-body);
+  display: flex; align-items: center; gap: 1rem;
+  transition: border-color .18s, box-shadow .18s;
+}
+.tool-card:hover { border-color: var(--c-page-accent); background: var(--c-white); box-shadow: var(--shadow-sm); }
+.tool-card__icon {
+  width: 40px; height: 40px; border-radius: var(--radius-sm);
+  background: var(--c-page-accent-l);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.9rem; flex-shrink: 0; transition: background .18s;
+}
+.tool-card:hover .tool-card__icon { background: var(--c-violet-l); }
+.tool-card__body { flex: 1; }
+.tool-card__type { font-size: .7rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--c-page-accent); }
+.tool-card__title { font-size: .88rem; font-weight: 600; color: #101585; line-height: 1.3; }
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.site-footer { background: var(--c-dark-2); padding-block: var(--section-py); color: rgba(255,255,255,.92); }
+.footer-top { display: grid; grid-template-columns: 1.6fr repeat(4, 1fr); gap: 3rem; padding-bottom: 3rem; border-bottom: 1px solid var(--c-border-dark); }
+.footer-logo { display: flex; align-items: center; gap: .5rem; text-decoration: none; margin-bottom: .8rem; }
+.footer-logo-mark {
+  width: 30px; height: 30px; border-radius: 6px;
+  background: linear-gradient(135deg, var(--c-primary) 0%, var(--c-violet) 100%);
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-family: var(--font-display); font-size: .95rem; font-weight: 500; font-style: italic;
+}
+.footer-logo-text { font-family: var(--font-body); font-weight: 700; font-size: .95rem; color: var(--c-white); letter-spacing: -.01em; }
+.footer-tagline { font-size: .82rem; line-height: 1.6; max-width: 240px; }
+.footer-social { display: flex; gap: .6rem; margin-top: 1.25rem; }
+.footer-social a {
+  width: 32px; height: 32px; border-radius: var(--radius-sm);
+  background: rgba(255,255,255,.08); color: rgba(255,255,255,.88);
+  display: flex; align-items: center; justify-content: center;
+  font-size: .8rem; font-weight: 700; text-decoration: none;
+  transition: background .18s, color .18s;
+}
+.footer-social a:hover { background: var(--c-primary); color: var(--c-white); }
+.footer-col-title { font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.70); margin-bottom: 1.1rem; }
+.footer-col ul { display: flex; flex-direction: column; gap: .55rem; }
+.footer-col ul a { font-size: .83rem; color: rgba(255,255,255,.88); text-decoration: none; transition: color .15s; }
+.footer-col ul a:hover { color: var(--c-white); }
+.footer-bottom { display: flex; align-items: center; justify-content: space-between; padding-top: 2rem; gap: 1rem; flex-wrap: wrap; }
+.footer-copy { font-size: .8rem; }
+.footer-legal { display: flex; gap: 1.5rem; }
+.footer-legal a { font-size: .8rem; color: rgba(255,255,255,.75); text-decoration: none; transition: color .15s; }
+.footer-legal a:hover { color: var(--c-white); }
+
+/\* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 1100px) { .footer-top { grid-template-columns: 1fr 1fr 1fr; } }
 @media (max-width: 960px) {
   .primary-nav { display: none; }
   .header-hamburger { display: flex; }
-}
-/* ============================================================
-   CANONICAL FOOTER CSS (auto-injected - do not edit here)
-   ============================================================ */
-.site-footer {
-  background: var(--footer-bg, #0D1117);
-  color: rgba(255, 255, 255, 0.92);
-  padding: 3.6rem 0 0;
-}
-.footer-container {
-  max-width: 1400px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1.2fr 0.9fr 0.9fr 0.9fr 0.9fr;
-  gap: 2rem;
-  padding: 0 1.8rem 1.8rem;
-  width: 100%;
-}
-.footer-col {
-  display: flex;
-  flex-direction: column;
-  gap: 0.9rem;
-}
-.footer-col-cmlocals { gap: 1.8rem; }
-.footer-logo a {
-  font-size: 0.9rem;
-  font-weight: bold;
-  color: white;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-}
-.footer-logo img {
-  height: 43.2px;
-  width: auto;
-  display: block;
-}
-.footer-tagline {
-  font-size: 0.9rem;
-  line-height: 1.6;
-  margin: 0;
-  color: rgba(255, 255, 255, 0.75);
-}
-.footer-socials {
-  display: flex;
-  gap: 1.35rem;
-}
-.social-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 28.8px;
-  height: 28.8px;
-  color: rgba(255, 255, 255, 0.75);
-  text-decoration: none;
-  transition: filter 0.2s ease, color 0.2s ease;
-  filter: grayscale(100%);
-}
-.social-icon:hover { color: currentColor; filter: grayscale(0%); }
-.social-icon.social-whatsapp:hover { color: #25D366; }
-.social-icon.social-facebook:hover { color: #1877F2; }
-.social-icon.social-messenger:hover { color: #0084FF; }
-.social-icon svg { width: 100%; height: 100%; }
-.footer-col-title {
-  font-size: 0.85rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: rgba(255, 255, 255, 0.95);
-  margin: 0;
-}
-.footer-links {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-}
-.footer-links a {
-  color: rgba(255, 255, 255, 0.75);
-  text-decoration: none;
-  font-size: 0.85rem;
-  line-height: 1.4;
-  transition: color 0.2s;
-}
-.footer-links a:hover { color: white; }
-.footer-bottom-bar {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 1.8rem;
-  
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1.8rem;
-  width: 100%;
-}
-.footer-bottom-bar p {
-  font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.6);
-  margin: 0;
-}
-.footer-legal-links {
-  display: flex;
-  gap: 1.8rem;
-}
-.footer-legal-links a {
-  font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.6);
-  text-decoration: none;
-  transition: color 0.2s;
-}
-.footer-legal-links a:hover { color: rgba(255, 255, 255, 0.9); }
-@media (max-width: 1024px) {
-  .footer-container {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 3rem;
-  }
-  .footer-bottom-bar { flex-direction: column; text-align: center; }
+  .footer-top { grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .guides-row { grid-template-columns: 1fr; }
 }
 @media (max-width: 640px) {
-  .site-footer { padding: 3rem 1.5rem 0; }
-  .footer-container {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    padding-bottom: 1.5rem;
-  }
-  .footer-col-title { font-size: 0.85rem; }
-  .footer-links a { font-size: 0.85rem; }
-  .footer-bottom-bar {
-    padding: 1.5rem;
-    flex-direction: column;
-    gap: 1rem;
-  }
-  .footer-bottom-bar p { font-size: 0.9rem; }
-  .footer-legal-links { gap: 1rem; }
-  .footer-legal-links a { font-size: 0.9rem; }
+  .page-hero h1 { font-size: 1.75rem; }
+  .footer-top { grid-template-columns: 1fr; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; }
+  .cost-table { font-size: .82rem; }
+  .cost-table th, .cost-table td { padding: .5rem .6rem; }
+  .neighbourhood-card .nc-meta { flex-direction: column; gap: .3rem; }
 }
+/* Make entire cards clickable */
+.path-card::before,
+.article-card::before,
+.tool-card::before,
+.guide-card::before,
+.visa-card::before,
+.visa-category-card::before,
+.program-card::before,
+.topic-card::before,
+.checklist-card::before,
+.related-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.path-card,
+.article-card,
+.tool-card,
+.guide-card,
+.visa-card,
+.visa-category-card,
+.program-card,
+.topic-card,
+.checklist-card,
+.related-card {
+  position: relative;
+}
+
+/* Ensure child links are clickable above the overlay */
+.path-card__cta,
+.article-card__link,
+.tool-card__cta,
+.guide-card__cta,
+.visa-card__cta,
+.visa-category-card__cta,
+.program-card__cta,
+.topic-card__cta,
+.checklist-card__cta,
+.related-card {
+  position: relative;
+  z-index: 2;
+}
+
 /* Image sizing: 50-70% of column width, centered */
 figure {
   text-align: center;
@@ -498,7 +863,7 @@ figure img {
 
   <!-- Logo -->
   <a href="https://www.cmlocals.com" class="header-logo" aria-label="CMLocals - homepage">
-    <img src="../../images/cmlocals-chiang-mai-locals-logo.webp" alt="CMLocals - Thai visa guides and Chiang Mai living" width="300" height="86" />
+    <img src="../../images/cmlocals-chiang-mai-locals-logo.webp" alt="CMLocals - Thai visa guides and Chiang Mai living" width="300" height="86" fetchpriority="high" />
   </a>
 
   <!-- Desktop Mega Menu Navigation -->
@@ -535,7 +900,7 @@ figure img {
             <li><a href="/chiang-mai/things-to-do/">Things to Do</a></li>
             <li><a href="/chiang-mai/digital-nomads/">Digital Nomads</a></li>
             <li><a href="/chiang-mai/cost-of-living/">Cost of Living</a></li>
-            <li><a href="/chiang-mai/phones-and-banking/">Phones & Banking</a></li>
+            <li><a href="/chiang-mai/phones-and-banking/">Phones &amp; Banking</a></li>
             <li><a href="/chiang-mai/getting-around/">Getting Around</a></li>
             <li><a href="/chiang-mai/healthcare/">Healthcare</a></li>
             <li><a href="/chiang-mai/insurance/">Insurance</a></li>
@@ -546,7 +911,7 @@ figure img {
           <h3>Culture</h3>
           <ul>
             <li><a href="/culture/">Culture Guide</a></li>
-            <li><a href="/culture/customs-traditions/">Customs & Traditions</a></li>
+            <li><a href="/culture/customs-traditions/">Customs &amp; Traditions</a></li>
             <li><a href="/culture/thai-culture-etiquette/">Etiquette</a></li>
             <li><a href="/culture/festivals-events/">Festivals</a></li>
             <li><a href="/culture/thai-food-culture/">Thai Food</a></li>
@@ -614,7 +979,9 @@ figure img {
         </div>
       </div>
     </div>
-  </nav>      <a href="/search.html" class="header-search-icon" aria-label="Search" title="Search">
+  </nav>
+
+      <a href="/search.html" class="header-search-icon" aria-label="Search" title="Search">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
     </a>
     <!-- CTAs & Mobile Toggle -->
@@ -672,7 +1039,7 @@ figure img {
       <li><a href="/visas/guides/which-visa/">Which Visa is Right?</a></li>
       <li><a href="/visas/guides/visa-comparisons/">Visa Comparisons</a></li>
       <li><a href="/visas/guides/visa-options-chiang-mai/">Visa Options for Chiang Mai</a></li>
-      <li><a href="/visas/guides/long-stay-strategy/">Visa & Stay Advice</a></li>
+      <li><a href="/visas/guides/long-stay-strategy/">Visa &amp; Stay Advice</a></li>
       <li><a href="/visas/guides/extension-vs-re-entry/">Extension vs Re-Entry</a></li>
       <li><a href="/visas/guides/entry-requirements/">2026 Entry Requirements</a></li>
     </ul>
@@ -710,7 +1077,7 @@ figure img {
       <li><a href="/chiang-mai/things-to-do/">Things to Do</a></li>
       <li><a href="/chiang-mai/digital-nomads/">Digital Nomads</a></li>
       <li><a href="/chiang-mai/cost-of-living/">Cost of Living</a></li>
-      <li><a href="/chiang-mai/phones-and-banking/">Phones & Banking</a></li>
+      <li><a href="/chiang-mai/phones-and-banking/">Phones &amp; Banking</a></li>
       <li><a href="/chiang-mai/getting-around/">Getting Around</a></li>
       <li><a href="/chiang-mai/healthcare/">Healthcare</a></li>
       <li><a href="/chiang-mai/insurance/">Insurance</a></li>
@@ -718,10 +1085,10 @@ figure img {
     </ul>
   </details>
   <details class="nav-accordion">
-    <summary>Culture & Lifestyle</summary>
+    <summary>Culture &amp; Lifestyle</summary>
     <ul>
       <li><a href="/culture/">Culture Guide</a></li>
-      <li><a href="/culture/customs-traditions/">Customs & Traditions</a></li>
+      <li><a href="/culture/customs-traditions/">Customs &amp; Traditions</a></li>
       <li><a href="/culture/thai-culture-etiquette/">Etiquette</a></li>
       <li><a href="/culture/sak-yant-etiquette/">Sak Yant Etiquette</a></li>
       <li><a href="/culture/festivals-events/">Festivals</a></li>
@@ -752,7 +1119,7 @@ figure img {
     </ul>
   </details>
   <details class="nav-accordion">
-    <summary>Guides & Resources</summary>
+    <summary>Guides &amp; Resources</summary>
     <ul>
       <li><a href="/guides/">All Guides</a></li>
       <li><a href="/guides/dtv-deep-dive/">DTV Deep-Dive Guide</a></li>
@@ -760,8 +1127,8 @@ figure img {
       <li><a href="/guides/dtv-vs-ed-visa/">DTV vs ED Visa 2026</a></li>
       <li><a href="/guides/dtv-vs-business-permit/">DTV vs Business Permit</a></li>
       <li><a href="/guides/border-runs/">Border Runs Guide</a></li>
-      <li><a href="/guides/business-visa-work-permit/">Business Visa & Work Permit</a></li>
-      <li><a href="/guides/ed-visa-cost-budget/">ED Visa Cost & Budget</a></li>
+      <li><a href="/guides/business-visa-work-permit/">Business Visa &amp; Work Permit</a></li>
+      <li><a href="/guides/ed-visa-cost-budget/">ED Visa Cost &amp; Budget</a></li>
       <li><a href="/guides/ed-vs-dtv-comparison/">ED vs DTV Comparison</a></li>
       <li><a href="/guides/visa-options-under-50/">Visa Options Under 50</a></li>
       <li><a href="/guides/why-visas-get-rejected/">Why Visas Get Rejected</a></li>
@@ -789,7 +1156,7 @@ figure img {
 <section class="page-hero" aria-labelledby="page-heading">
 <div class="page-hero-inner">
   <div class="page-hero-eyebrow">
-    <span aria-hidden="true">&#128188;</span> Chiang Mai Guide &nbsp;-&nbsp; 2026
+    <span aria-hidden="true">&#128188;</span> Chiang Mai Guide &amp;nbsp;-&amp;nbsp; 2026
   </div>
   <h1 id="page-heading">
     Healthcare <em>Insurance</em> in Chiang Mai
@@ -1029,7 +1396,7 @@ figure img {
   <div class="footer-col footer-col-cmlocals">
     <div class="footer-logo">
       <a href="/">
-        <img src="../../images/cmlocals-chiang-mai-locals-logo.webp" alt="CMLocals - Thai visa guides and Chiang Mai living" width="300" height="86" />
+        <img src="/images/cmlocals-chiang-mai-locals-logo.webp" alt="CMLocals - Thai visa guides and Chiang Mai living" width="300" height="86" />
       </a>
     </div>
     <p class="footer-tagline">Independent Thai visa information hub for Chiang Mai and long-stay life in Thailand.</p>
@@ -1087,7 +1454,7 @@ figure img {
 
   <!-- Column 5: Guides -->
   <div class="footer-col">
-    <h3 class="footer-col-title">Guides & Resources</h3>
+    <h3 class="footer-col-title">Guides &amp; Resources</h3>
     <ul class="footer-links">
       <li><a href="/guides/">All Guides</a></li>
       <li><a href="/guides/dtv-deep-dive/">DTV Deep-Dive</a></li>
@@ -1101,7 +1468,7 @@ figure img {
 
 <!-- Bottom Legal Bar -->
 <div class="footer-bottom-bar">
-  <p>&copy; 2026 CMLocals. All rights reserved.</p>
+  <p>&amp;copy; 2026 CMLocals. All rights reserved.</p>
   <div class="footer-legal-links">
     <a href="/privacy-policy/">Privacy</a>
     <a href="/terms-of-service/">Terms</a>
