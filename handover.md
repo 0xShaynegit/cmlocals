@@ -2,6 +2,17 @@
 
 Sliding session log. Newest entry first. Update at end of every session.
 
+## Current State (12/07/2026, link audit session)
+- Site-wide link audit after the checklist-CTA bug (see below): ran a script resolving every internal href across all 104 HTML files against the filesystem, plus a heuristic for repeated card components pointing to a suspiciously identical href.
+- Found and fixed the same "wrong CTA href" bug class on two more pages (not yet caught):
+  - `visas/short-stay/index.html`: 4 of 6 visa-type cards (Tourist, Visa-Exempt, VOA, Border Runs) all linked to `/visas/` instead of their real pages. Fixed to `/tourist-visa/`, `/visa-exempt-entry/`, `/visa-on-arrival/`, `/border-runs/`.
+- Found but NOT fixed, needs a content decision (target pages don't exist, can't just relink):
+  - `visas/index.html`: "Special Programs" and "Permanent Residence" cards both link to `long-stay/index.html`. Neither has a dedicated page anywhere on the site. Closest existing match for Special Programs is `/thailand-privilege-visa/`; Permanent Residence has no equivalent page at all.
+  - `tools/index.html`: all 6 tool cards (Visa Cost Calculator, Stay Duration Calculator, Visa Recommendation Quiz, Budget & Cost of Living, Retirement Planner, Financial Requirements Checker) link to `/tools/` itself. None of these calculators exist anywhere on the site as pages or as embedded widgets on this page (only a date-reminder modal exists). These are placeholder cards for tools that were never built.
+  - `sak-yant-chiang-mai.html` and `culture/sak-yant-getting/index.html`: 4 links each point to `/culture/sak-yant-designs-and-meanings.html#ha-saeng` (and `#arokaya`, `#tiger`, `#gao-yord`) which doesn't exist. The real page is `/culture/sak-yant-designs/`, but it doesn't cover 3 of these 4 designs (only "Eight Directions" overlaps, under a different name) and has no matching anchor ids. Needs either new content on that page or a decision to point elsewhere.
+- Separately found and fixed a much bigger bug: the prior session's site-wide ampersand-escaping fix (commit 415e91c) double-escaped already-valid named HTML entities, turning `&nbsp;`/`&bull;`/`&copy;`/`&rarr;` into `&amp;nbsp;`/`&amp;bull;`/`&amp;copy;`/`&amp;rarr;`, which render as literal text instead of a space/bullet/copyright symbol/arrow. This hit the footer copyright line on 97 of 103 live pages, ticker text on ~20 pages, and the 404 page's "suggestion card" arrows. Fixed with a targeted script that only reverses those 4 specific double-escaped entities (not a blanket unescape, to avoid re-breaking the original ampersand fix). 475 replacements across 98 files total.
+- Not touched: broken links inside `docs/footer-template.html` and `docs/index.backup.html` are template/backup files, not live pages, per the prior session's own exclusion list — left alone except the `&amp;copy;` fix in footer-template.html since it's the source new pages get copied from.
+
 ## Current State (12/07/2026, later session)
 - Mobile menu sticky-header follow-up. Header pinning was already solid (`.site-header { position: fixed !important }` in css/mobile.css beats every page's local `position: sticky`), but hardened two weak spots and closed three gaps:
   - css/mobile.css: `.site-header` z-index changed to `1001 !important` (11 pages had an inline `z-index: 1000` loaded after mobile.css that only cleared the drawer by 1).
