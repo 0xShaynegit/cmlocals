@@ -19,7 +19,10 @@ body {
   left: 0;
   right: 0;
   width: 100%;
-  z-index: 1001;
+  /* !important because 11 pages load their inline <style> AFTER this file,
+     re-declaring .site-header z-index:1000 which would win a plain tie.
+     Header must always stack above .nav-mobile (z-index 999/99 per page). */
+  z-index: 1001 !important;
 }
 
 body {
@@ -38,12 +41,18 @@ body {
 .nav-mobile {
   top: 71px !important;
   max-height: calc(100vh - 71px) !important;
+  /* dvh: 100vh on mobile ignores the browser URL bar, so with vh alone the
+     drawer's bottom items can sit below the visible viewport and be
+     unreachable (page scroll is locked while the menu is open). Browsers
+     without dvh ignore this line and keep the vh value above. */
+  max-height: calc(100dvh - 71px) !important;
 }
 
 @media (max-width: 960px) {
   .nav-mobile {
     top: 85px !important;
     max-height: calc(100vh - 85px) !important;
+    max-height: calc(100dvh - 85px) !important;
   }
 }
 
