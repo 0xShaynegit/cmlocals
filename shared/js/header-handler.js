@@ -18,11 +18,31 @@
   var hamburger = document.getElementById('hamburger');
   var mobileNav = document.getElementById('mobile-nav');
 
+  // iOS/Android touch-scroll can bypass plain overflow:hidden on body,
+  // letting the background page shift under the open menu. Pinning body
+  // with position:fixed at the current scroll offset blocks that.
+  function lockBodyScroll() {
+    var scrollY = window.scrollY;
+    document.body.dataset.scrollY = scrollY;
+    document.body.style.position = 'fixed';
+    document.body.style.top = -scrollY + 'px';
+    document.body.style.width = '100%';
+  }
+
+  function unlockBodyScroll() {
+    var scrollY = parseInt(document.body.dataset.scrollY || '0', 10);
+    document.body.style.position = '';
+    document.body.style.top = '';
+    document.body.style.width = '';
+    delete document.body.dataset.scrollY;
+    window.scrollTo(0, scrollY);
+  }
+
   function closeMobileNav() {
     hamburger.classList.remove('active');
     hamburger.setAttribute('aria-expanded', 'false');
     mobileNav.classList.remove('open');
-    document.body.style.overflow = '';
+    unlockBodyScroll();
   }
 
   if (hamburger && mobileNav) {
@@ -30,7 +50,11 @@
       var isOpen = hamburger.classList.toggle('active');
       hamburger.setAttribute('aria-expanded', isOpen);
       mobileNav.classList.toggle('open', isOpen);
-      document.body.style.overflow = isOpen ? 'hidden' : '';
+      if (isOpen) {
+        lockBodyScroll();
+      } else {
+        unlockBodyScroll();
+      }
     });
 
     // Close mobile nav on link click

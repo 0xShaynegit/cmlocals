@@ -32,6 +32,21 @@ body {
   }
 }
 
+/* Mobile nav drawer: top offset must match .site-header's real height
+   above, not a hardcoded guess - otherwise the open menu renders with
+   its top edge hidden behind the header. */
+.nav-mobile {
+  top: 71px !important;
+  max-height: calc(100vh - 71px) !important;
+}
+
+@media (max-width: 960px) {
+  .nav-mobile {
+    top: 85px !important;
+    max-height: calc(100vh - 85px) !important;
+  }
+}
+
 /* Mobile: force all multi-column grids to single column at 640px and below */
 @media (max-width: 640px) {
 
