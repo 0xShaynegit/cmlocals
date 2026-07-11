@@ -176,10 +176,13 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); }
   .footer-bottom-bar { padding: 1.5rem; flex-direction: column; gap: 1rem; }
   .footer-legal-links { gap: 1rem; }
 }
+.progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: linear-gradient(90deg, #4F46E5, #6366F1, #4F46E5); width: 0%; z-index: 999; transition: width 0.1s linear; box-shadow: 0 2px 8px rgba(79,70,229,.18); }
+@media (prefers-reduced-motion: reduce) { .progress-bar { transition: none; } }
 </style>
 <link rel="stylesheet" href="/css/mobile.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="/css/mobile.css"></noscript>
 </head>
 <body>
+<div class="progress-bar" id="progress-bar" aria-label="Reading progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
 
 <header class="site-header" id="site-header" role="banner">
 <div class="header-inner">
@@ -506,6 +509,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); }
 </footer>
 
 <script src="shared/js/header-handler.js" defer></script>
+<script src="/shared/js/progress-bar.js" defer></script>
 <script src="shared/chaty-widget/scripts/chaty-widget.js" defer></script>
 
 <!-- Cloudflare Web Analytics -->

@@ -477,6 +477,11 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); }
 .info-strip p a{color:var(--c-primary);}
 .warning-strip{background:#FFF7ED;border-left:4px solid #F97316;border-radius:0 var(--radius-md) var(--radius-md) 0;padding:1.25rem 1.75rem;margin:1.5rem 0;}
 .warning-strip p{color:#431407;font-size:.95rem;margin-bottom:0;}
+.service-ticker{background:#DC2626;overflow:hidden;white-space:nowrap;margin:1.5rem 0;border-radius:var(--radius-sm);}
+.service-ticker-track{display:inline-flex;width:max-content;animation:service-ticker-scroll 26s linear infinite;}
+.service-ticker-track span{display:inline-block;padding:.65rem 0;color:#fff;font-weight:700;font-size:.82rem;letter-spacing:.03em;text-transform:uppercase;white-space:nowrap;}
+@keyframes service-ticker-scroll{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+@media (prefers-reduced-motion: reduce){.service-ticker-track{animation:none;}}
 .sidebar-card{background:var(--c-off-white);border:1px solid var(--c-border);border-radius:var(--radius-lg);padding:1.5rem;}
 .sidebar-card + .sidebar-card{margin-top:1.25rem;}
 .sidebar-card-title{font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--c-muted);margin-bottom:1rem;}
@@ -1346,6 +1351,12 @@ figure img {
 </div>
 </section>
 <div class="container">
+<div class="service-ticker" role="note" aria-label="Important notice">
+  <div class="service-ticker-track">
+    <span>WE DO NOT PROVIDE BORDER RUN SERVICES&nbsp; &bull; &nbsp;CMLOCALS IS AN INDEPENDENT INFORMATION GUIDE ONLY&nbsp; &bull; &nbsp;CONTACT A LISTED PROVIDER DIRECTLY TO BOOK&nbsp; &bull; &nbsp;WE DO NOT PROVIDE BORDER RUN SERVICES&nbsp; &bull; &nbsp;CMLOCALS IS AN INDEPENDENT INFORMATION GUIDE ONLY&nbsp; &bull; &nbsp;CONTACT A LISTED PROVIDER DIRECTLY TO BOOK&nbsp; &bull; &nbsp;</span>
+    <span aria-hidden="true">WE DO NOT PROVIDE BORDER RUN SERVICES&nbsp; &bull; &nbsp;CMLOCALS IS AN INDEPENDENT INFORMATION GUIDE ONLY&nbsp; &bull; &nbsp;CONTACT A LISTED PROVIDER DIRECTLY TO BOOK&nbsp; &bull; &nbsp;WE DO NOT PROVIDE BORDER RUN SERVICES&nbsp; &bull; &nbsp;CMLOCALS IS AN INDEPENDENT INFORMATION GUIDE ONLY&nbsp; &bull; &nbsp;CONTACT A LISTED PROVIDER DIRECTLY TO BOOK&nbsp; &bull; &nbsp;</span>
+  </div>
+</div>
 <div class="article-layout">
   <article class="article-body" aria-label="Border runs guide">
     <h2>What Is a Border Run?</h2>
@@ -1412,6 +1423,13 @@ figure img {
       </tbody>
     </table></div>
 
+    <div class="service-ticker" role="note" aria-label="Important notice">
+      <div class="service-ticker-track">
+        <span>WE DO NOT PROVIDE BORDER RUN SERVICES&nbsp; &bull; &nbsp;THE COMPANIES BELOW ARE INDEPENDENT THIRD PARTIES&nbsp; &bull; &nbsp;BOOK AND PAY DIRECTLY WITH THEM&nbsp; &bull; &nbsp;WE DO NOT PROVIDE BORDER RUN SERVICES&nbsp; &bull; &nbsp;THE COMPANIES BELOW ARE INDEPENDENT THIRD PARTIES&nbsp; &bull; &nbsp;BOOK AND PAY DIRECTLY WITH THEM&nbsp; &bull; &nbsp;</span>
+        <span aria-hidden="true">WE DO NOT PROVIDE BORDER RUN SERVICES&nbsp; &bull; &nbsp;THE COMPANIES BELOW ARE INDEPENDENT THIRD PARTIES&nbsp; &bull; &nbsp;BOOK AND PAY DIRECTLY WITH THEM&nbsp; &bull; &nbsp;WE DO NOT PROVIDE BORDER RUN SERVICES&nbsp; &bull; &nbsp;THE COMPANIES BELOW ARE INDEPENDENT THIRD PARTIES&nbsp; &bull; &nbsp;BOOK AND PAY DIRECTLY WITH THEM&nbsp; &bull; &nbsp;</span>
+      </div>
+    </div>
+
     <h2>Border Run Companies in Chiang Mai</h2>
     <p>Established visa run services handle logistics, TDAC compliance, and provide assistance at the border. Prices vary between companies, so confirm rates before booking.</p>
 
@@ -1474,6 +1492,13 @@ figure img {
     <p>Before planning a border run, confirm your eligibility with Chiang Mai Immigration. The office handles tourist visas, visa extensions, VOA applications, and can clarify whether you have remaining exemption entries or whether a border run strategy is lawful for your situation.</p>
     <p><strong>Location:</strong> 71 M.3 Airport Road, Suthep Sub-District, Muang District, Chiang Mai 50200 (Mae Rim Office). <strong>Hours:</strong> Monday-Friday 8:30 AM-4:30 PM. <strong>Contact:</strong> Call ahead for specific queries about exemption limits and border run legality.</p>
     <p>Many Chiang Mai residents consult immigration before booking a border run, especially if they have done multiple entries recently. It takes 15 minutes and eliminates doubt.</p>
+
+    <div class="service-ticker" role="note" aria-label="Important notice">
+      <div class="service-ticker-track">
+        <span>WE DO NOT PROVIDE BORDER RUN SERVICES&nbsp; &bull; &nbsp;CMLOCALS IS AN INDEPENDENT INFORMATION GUIDE ONLY&nbsp; &bull; &nbsp;CONTACT A LISTED PROVIDER DIRECTLY TO BOOK&nbsp; &bull; &nbsp;WE DO NOT PROVIDE BORDER RUN SERVICES&nbsp; &bull; &nbsp;CMLOCALS IS AN INDEPENDENT INFORMATION GUIDE ONLY&nbsp; &bull; &nbsp;CONTACT A LISTED PROVIDER DIRECTLY TO BOOK&nbsp; &bull; &nbsp;</span>
+        <span aria-hidden="true">WE DO NOT PROVIDE BORDER RUN SERVICES&nbsp; &bull; &nbsp;CMLOCALS IS AN INDEPENDENT INFORMATION GUIDE ONLY&nbsp; &bull; &nbsp;CONTACT A LISTED PROVIDER DIRECTLY TO BOOK&nbsp; &bull; &nbsp;WE DO NOT PROVIDE BORDER RUN SERVICES&nbsp; &bull; &nbsp;CMLOCALS IS AN INDEPENDENT INFORMATION GUIDE ONLY&nbsp; &bull; &nbsp;CONTACT A LISTED PROVIDER DIRECTLY TO BOOK&nbsp; &bull; &nbsp;</span>
+      </div>
+    </div>
 
     <div class="disclaimer-box">
       <h2>Disclaimer</h2>
@@ -1860,7 +1885,7 @@ window.CHATY_CONFIG = {
 <!-- Cloudflare Web Analytics -->
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "31c5660fd65b424db315f6dd02aad285"}'></script>
 <!-- End Cloudflare Web Analytics -->
-<script src="shared/js/progress-bar.js" defer></script>
+<script src="/shared/js/progress-bar.js" defer></script>
 </body>
 </html>
 

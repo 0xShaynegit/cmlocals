@@ -42,6 +42,8 @@ section h2{font-size:1.8rem;margin-bottom:1.5rem;color:var(--c-dark);border-bott
 .resource-card a{display:inline-block;padding:0.5rem 1rem;background:var(--c-primary);color:white;border-radius:6px;margin-top:0.5rem;font-weight:600;}
 .resource-card a:hover{text-decoration:none;opacity:0.9;}
 footer{background:#f0f0f0;padding:2rem var(--edge);text-align:center;font-size:0.9rem;color:#666;}
+.progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: linear-gradient(90deg, #4F46E5, #6366F1, #4F46E5); width: 0%; z-index: 999; transition: width 0.1s linear; box-shadow: 0 2px 8px rgba(79,70,229,.18); }
+@media (prefers-reduced-motion: reduce) { .progress-bar { transition: none; } }
 </style>
 <script type="application/ld+json">
 {
@@ -64,6 +66,7 @@ footer{background:#f0f0f0;padding:2rem var(--edge);text-align:center;font-size:0
   <meta property="og:image" content="https://www.cmlocals.com/images/cmlocals-og-social-share.webp">
 </head>
 <body>
+<div class="progress-bar" id="progress-bar" aria-label="Reading progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
 
 <header>
 <h1>Digital Nomad Resources for Thailand</h1>
@@ -296,6 +299,7 @@ footer{background:#f0f0f0;padding:2rem var(--edge);text-align:center;font-size:0
 </footer>
 
 
+<script src="/shared/js/progress-bar.js" defer></script>
 <!-- Cloudflare Web Analytics -->
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "31c5660fd65b424db315f6dd02aad285"}'></script>
 <!-- End Cloudflare Web Analytics -->

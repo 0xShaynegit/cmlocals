@@ -591,9 +591,15 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); }
   display: flex; justify-content: space-between; align-items: center;
 }
 
-.progress-bar {
+.checklist-progress .progress-bar {
   width: 100%; height: 8px; background: rgba(0,0,0,.08); border-radius: 4px; overflow: hidden;
 }
+
+.service-ticker{background:#DC2626;overflow:hidden;white-space:nowrap;margin:1.5rem 0;border-radius:6px;}
+.service-ticker-track{display:inline-flex;width:max-content;animation:service-ticker-scroll 26s linear infinite;}
+.service-ticker-track span{display:inline-block;padding:.65rem 0;color:#fff;font-weight:700;font-size:.82rem;letter-spacing:.03em;text-transform:uppercase;white-space:nowrap;}
+@keyframes service-ticker-scroll{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+@media (prefers-reduced-motion: reduce){.service-ticker-track{animation:none;}}
 
 .progress-fill {
   height: 100%; background: linear-gradient(90deg, var(--c-accent) 0%, var(--c-primary) 100%);
@@ -1051,7 +1057,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); }
   }
 }
 /* PROGRESS BAR */
-.mobile-nav-search-icon{display:flex;align-items:center;justify-content:center;height:60px;padding:20px 24px;border-top:1px solid var(--c-border);color:var(--c-primary);text-decoration:none;transition:background-color 0.2s,opacity 0.2s;width:100%;position:sticky;bottom:0;z-index:100;background:var(--c-white);}.mobile-nav-search-icon:hover{opacity:0.8;background:rgba(79,70,229,0.05);}.mobile-nav-search-icon svg{display:block;pointer-events:none;}.header-search-icon{display:flex;align-items:center;justify-content:center;width:36px;height:36px;color:var(--c-body);text-decoration:none;transition:color 0.2s,opacity 0.2s;border:none;background:none;flex-shrink:0;}.header-search-icon:hover{color:var(--c-primary);opacity:0.8;}.header-search-icon svg{display:block;pointer-events:none;}@media(max-width:960px){.header-search-icon{display:none;}}</style>
+.mobile-nav-search-icon{display:flex;align-items:center;justify-content:center;height:60px;padding:20px 24px;border-top:1px solid var(--c-border);color:var(--c-primary);text-decoration:none;transition:background-color 0.2s,opacity 0.2s;width:100%;position:sticky;bottom:0;z-index:100;background:var(--c-white);}.mobile-nav-search-icon:hover{opacity:0.8;background:rgba(79,70,229,0.05);}.mobile-nav-search-icon svg{display:block;pointer-events:none;}.header-search-icon{display:flex;align-items:center;justify-content:center;width:36px;height:36px;color:var(--c-body);text-decoration:none;transition:color 0.2s,opacity 0.2s;border:none;background:none;flex-shrink:0;}.header-search-icon:hover{color:var(--c-primary);opacity:0.8;}.header-search-icon svg{display:block;pointer-events:none;}@media(max-width:960px){.header-search-icon{display:none;}}.progress-bar{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,#4F46E5,#6366F1,#4F46E5);width:0%;z-index:999;transition:width 0.1s linear;box-shadow:0 2px 8px rgba(79,70,229,.18);}@media(prefers-reduced-motion:reduce){.progress-bar{transition:none;}}</style>
 
 
 <link rel="preload" href="../../fonts/newsreader.woff2" as="font" type="font/woff2" crossorigin/>
@@ -1114,6 +1120,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); }
   <meta property="og:image" content="https://www.cmlocals.com/images/cmlocals-og-social-share.webp">
 </head>
 <body>
+<div class="progress-bar" id="progress-bar" aria-label="Reading progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
 <header class="site-header" id="site-header" role="banner">
 <div class="header-inner">
 
@@ -1407,6 +1414,13 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); }
 
 <section class="checklist-section">
 <div class="checklist-wrap">
+  <div class="service-ticker" role="note" aria-label="Important notice">
+    <div class="service-ticker-track">
+      <span>WE DO NOT PROVIDE BORDER RUN SERVICES&nbsp; &bull; &nbsp;CMLOCALS IS AN INDEPENDENT INFORMATION GUIDE ONLY&nbsp; &bull; &nbsp;CONTACT A LISTED PROVIDER DIRECTLY TO BOOK&nbsp; &bull; &nbsp;WE DO NOT PROVIDE BORDER RUN SERVICES&nbsp; &bull; &nbsp;CMLOCALS IS AN INDEPENDENT INFORMATION GUIDE ONLY&nbsp; &bull; &nbsp;CONTACT A LISTED PROVIDER DIRECTLY TO BOOK&nbsp; &bull; &nbsp;</span>
+      <span aria-hidden="true">WE DO NOT PROVIDE BORDER RUN SERVICES&nbsp; &bull; &nbsp;CMLOCALS IS AN INDEPENDENT INFORMATION GUIDE ONLY&nbsp; &bull; &nbsp;CONTACT A LISTED PROVIDER DIRECTLY TO BOOK&nbsp; &bull; &nbsp;WE DO NOT PROVIDE BORDER RUN SERVICES&nbsp; &bull; &nbsp;CMLOCALS IS AN INDEPENDENT INFORMATION GUIDE ONLY&nbsp; &bull; &nbsp;CONTACT A LISTED PROVIDER DIRECTLY TO BOOK&nbsp; &bull; &nbsp;</span>
+    </div>
+  </div>
+
   <h2 class="checklist-title">What to Prepare</h2>
 
   <p style="font-size: 0.9rem; line-height: 1.75; color: var(--c-body); margin-bottom: 2.5rem; max-width: 68ch;">A border run is a trip to a neighbouring country to exit Thailand and return on a new visa-exempt entry or tourist visa. Popular crossings from northern Thailand include Laos (Vientiane, Udon Thani), Myanmar, and Cambodia. This checklist covers essentials for a successful border run.</p>
@@ -1489,6 +1503,13 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); }
       <button class="reset-btn" id="reset-btn">Reset Checklist</button>
     </div>
 
+    <div class="service-ticker" role="note" aria-label="Important notice">
+      <div class="service-ticker-track">
+        <span>WE DO NOT PROVIDE BORDER RUN SERVICES&nbsp; &bull; &nbsp;CMLOCALS IS AN INDEPENDENT INFORMATION GUIDE ONLY&nbsp; &bull; &nbsp;CONTACT A LISTED PROVIDER DIRECTLY TO BOOK&nbsp; &bull; &nbsp;WE DO NOT PROVIDE BORDER RUN SERVICES&nbsp; &bull; &nbsp;CMLOCALS IS AN INDEPENDENT INFORMATION GUIDE ONLY&nbsp; &bull; &nbsp;CONTACT A LISTED PROVIDER DIRECTLY TO BOOK&nbsp; &bull; &nbsp;</span>
+        <span aria-hidden="true">WE DO NOT PROVIDE BORDER RUN SERVICES&nbsp; &bull; &nbsp;CMLOCALS IS AN INDEPENDENT INFORMATION GUIDE ONLY&nbsp; &bull; &nbsp;CONTACT A LISTED PROVIDER DIRECTLY TO BOOK&nbsp; &bull; &nbsp;WE DO NOT PROVIDE BORDER RUN SERVICES&nbsp; &bull; &nbsp;CMLOCALS IS AN INDEPENDENT INFORMATION GUIDE ONLY&nbsp; &bull; &nbsp;CONTACT A LISTED PROVIDER DIRECTLY TO BOOK&nbsp; &bull; &nbsp;</span>
+      </div>
+    </div>
+
     <p style="font-size: 0.85rem; line-height: 1.65; color: var(--c-muted); margin-top: 2.5rem; padding-top: 2rem; border-top: 1px dashed rgba(0,0,0,.12); max-width: 68ch;"><strong>Disclaimer:</strong> Border run legality and immigration enforcement varies. While border runs are technically allowed, <a href="https://www.immigration.go.th/" target="_blank" rel="noopener">Thai immigration</a> has discretion to deny re-entry or limit repeated visa-exempt entries. Verify current border crossing procedures and requirements with your target border crossing before departure. Have required visas or proof of eligibility for neighbouring countries. This checklist is a guide only and not a substitute for official requirements or legal advice.</p>
   </div>
 </div>
@@ -1563,6 +1584,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
+<script src="/shared/js/progress-bar.js" defer></script>
 <script src="../../shared/js/header-handler.js" defer></script>
 
 <footer class="site-footer" role="contentinfo" style="background: #0D1117;">

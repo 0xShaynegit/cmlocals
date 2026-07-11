@@ -101,6 +101,11 @@ article table tr:hover{background:rgba(0,0,0,0.02);}
 .cta-buttons{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;}
 
 .progress-bar{position:fixed;top:0;left:0;height:3px;background:var(--c-primary);z-index:10001;width:2%;}
+.service-ticker{background:#DC2626;overflow:hidden;white-space:nowrap;margin:1.5rem 0;border-radius:6px;}
+.service-ticker-track{display:inline-flex;width:max-content;animation:service-ticker-scroll 26s linear infinite;}
+.service-ticker-track span{display:inline-block;padding:.65rem 0;color:#fff;font-weight:700;font-size:.82rem;letter-spacing:.03em;text-transform:uppercase;white-space:nowrap;}
+@keyframes service-ticker-scroll{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+@media (prefers-reduced-motion: reduce){.service-ticker-track{animation:none;}}
 
 @media (max-width:768px){.page-hero h1{font-size:1.75rem;}}
 
@@ -559,6 +564,15 @@ article table tr:hover{background:rgba(0,0,0,0.02);}
 </div>
 </nav>
 
+<div class="container" style="max-width:var(--article-w);">
+  <div class="service-ticker" role="note" aria-label="Important notice">
+    <div class="service-ticker-track">
+      <span>WE DO NOT PROVIDE BORDER RUN SERVICES&nbsp; &bull; &nbsp;CMLOCALS IS AN INDEPENDENT INFORMATION GUIDE ONLY&nbsp; &bull; &nbsp;CONTACT A LISTED PROVIDER DIRECTLY TO BOOK&nbsp; &bull; &nbsp;WE DO NOT PROVIDE BORDER RUN SERVICES&nbsp; &bull; &nbsp;CMLOCALS IS AN INDEPENDENT INFORMATION GUIDE ONLY&nbsp; &bull; &nbsp;CONTACT A LISTED PROVIDER DIRECTLY TO BOOK&nbsp; &bull; &nbsp;</span>
+      <span aria-hidden="true">WE DO NOT PROVIDE BORDER RUN SERVICES&nbsp; &bull; &nbsp;CMLOCALS IS AN INDEPENDENT INFORMATION GUIDE ONLY&nbsp; &bull; &nbsp;CONTACT A LISTED PROVIDER DIRECTLY TO BOOK&nbsp; &bull; &nbsp;WE DO NOT PROVIDE BORDER RUN SERVICES&nbsp; &bull; &nbsp;CMLOCALS IS AN INDEPENDENT INFORMATION GUIDE ONLY&nbsp; &bull; &nbsp;CONTACT A LISTED PROVIDER DIRECTLY TO BOOK&nbsp; &bull; &nbsp;</span>
+    </div>
+  </div>
+</div>
+
 <section class="section" aria-label="Border run guide">
 <div class="container" style="max-width:var(--article-w);">
 
@@ -780,6 +794,13 @@ For DTV holders, a border run resets your 180-day stay for free (after one 1,900
 <li style="margin-bottom:0.6rem;"><strong>Cost:</strong> Free (or 1,900 THB if you use a visa agent).</li>
 </ul>
 
+<div class="service-ticker" role="note" aria-label="Important notice">
+  <div class="service-ticker-track">
+    <span>WE DO NOT PROVIDE BORDER RUN SERVICES&nbsp; &bull; &nbsp;THIS GUIDE IS INFORMATIONAL ONLY&nbsp; &bull; &nbsp;BOOK DIRECTLY WITH AN INDEPENDENT PROVIDER&nbsp; &bull; &nbsp;WE DO NOT PROVIDE BORDER RUN SERVICES&nbsp; &bull; &nbsp;THIS GUIDE IS INFORMATIONAL ONLY&nbsp; &bull; &nbsp;BOOK DIRECTLY WITH AN INDEPENDENT PROVIDER&nbsp; &bull; &nbsp;</span>
+    <span aria-hidden="true">WE DO NOT PROVIDE BORDER RUN SERVICES&nbsp; &bull; &nbsp;THIS GUIDE IS INFORMATIONAL ONLY&nbsp; &bull; &nbsp;BOOK DIRECTLY WITH AN INDEPENDENT PROVIDER&nbsp; &bull; &nbsp;WE DO NOT PROVIDE BORDER RUN SERVICES&nbsp; &bull; &nbsp;THIS GUIDE IS INFORMATIONAL ONLY&nbsp; &bull; &nbsp;BOOK DIRECTLY WITH AN INDEPENDENT PROVIDER&nbsp; &bull; &nbsp;</span>
+  </div>
+</div>
+
 <h2 style="font-size:1.75rem;font-weight:400;margin:2.5rem 0 1rem;color:var(--c-dark);">Why CMLocals Recommends Extensions Over Border Runs (When Possible)</h2>
 
 <p>While border runs are legal and strategic, extensions are often the smarter choice for most people. Here's why:</p>
@@ -992,20 +1013,9 @@ if (hamburger && mobileNav) {
 }
 </script>
 
-<script>
-const progressBar = document.getElementById('progress-bar');
-window.addEventListener('scroll', () => {
-const scrollTop = window.scrollY;
-const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-const scrollPercent = (scrollTop / docHeight) * 100;
-progressBar.style.width = Math.max(scrollPercent, 2) + '%';
-});
-</script>
-
-
 <!-- Cloudflare Web Analytics -->
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "31c5660fd65b424db315f6dd02aad285"}'></script>
 <!-- End Cloudflare Web Analytics -->
-<script src="shared/js/progress-bar.js" defer></script>
+<script src="/shared/js/progress-bar.js" defer></script>
 </body>
 </html>

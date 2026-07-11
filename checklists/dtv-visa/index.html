@@ -1056,7 +1056,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); }
   }
 }
 /* PROGRESS BAR */
-.mobile-nav-search-icon{display:flex;align-items:center;justify-content:center;height:60px;padding:20px 24px;border-top:1px solid var(--c-border);color:var(--c-primary);text-decoration:none;transition:background-color 0.2s,opacity 0.2s;width:100%;position:sticky;bottom:0;z-index:100;background:var(--c-white);}.mobile-nav-search-icon:hover{opacity:0.8;background:rgba(79,70,229,0.05);}.mobile-nav-search-icon svg{display:block;pointer-events:none;}.header-search-icon{display:flex;align-items:center;justify-content:center;width:36px;height:36px;color:var(--c-body);text-decoration:none;transition:color 0.2s,opacity 0.2s;border:none;background:none;flex-shrink:0;}.header-search-icon:hover{color:var(--c-primary);opacity:0.8;}.header-search-icon svg{display:block;pointer-events:none;}@media(max-width:960px){.header-search-icon{display:none;}}</style>
+.mobile-nav-search-icon{display:flex;align-items:center;justify-content:center;height:60px;padding:20px 24px;border-top:1px solid var(--c-border);color:var(--c-primary);text-decoration:none;transition:background-color 0.2s,opacity 0.2s;width:100%;position:sticky;bottom:0;z-index:100;background:var(--c-white);}.mobile-nav-search-icon:hover{opacity:0.8;background:rgba(79,70,229,0.05);}.mobile-nav-search-icon svg{display:block;pointer-events:none;}.header-search-icon{display:flex;align-items:center;justify-content:center;width:36px;height:36px;color:var(--c-body);text-decoration:none;transition:color 0.2s,opacity 0.2s;border:none;background:none;flex-shrink:0;}.header-search-icon:hover{color:var(--c-primary);opacity:0.8;}.header-search-icon svg{display:block;pointer-events:none;}@media(max-width:960px){.header-search-icon{display:none;}}.progress-bar{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,#4F46E5,#6366F1,#4F46E5);width:0%;z-index:999;transition:width 0.1s linear;box-shadow:0 2px 8px rgba(79,70,229,.18);}@media(prefers-reduced-motion:reduce){.progress-bar{transition:none;}}</style>
 
 
 <link rel="preload" href="../../fonts/newsreader.woff2" as="font" type="font/woff2" crossorigin/>
@@ -1119,6 +1119,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); }
   <meta property="og:image" content="https://www.cmlocals.com/images/cmlocals-og-social-share.webp">
 </head>
 <body>
+<div class="progress-bar" id="progress-bar" aria-label="Reading progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
 <header class="site-header" id="site-header" role="banner">
 <div class="header-inner">
 
@@ -1584,6 +1585,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
+<script src="/shared/js/progress-bar.js" defer></script>
 <script src="../../shared/js/header-handler.js" defer></script>
 
 <footer class="site-footer" role="contentinfo" style="background: #0D1117;">

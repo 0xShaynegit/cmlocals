@@ -8,24 +8,21 @@
 
   if (!progressBar) return;
 
-  let windowHeight = window.innerHeight;
-  let documentHeight = document.documentElement.scrollHeight - windowHeight;
-
   function updateProgress() {
+    const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
     const scrolled = window.scrollY;
     const progress = documentHeight > 0 ? (scrolled / documentHeight) * 100 : 0;
     progressBar.style.width = progress + '%';
     progressBar.setAttribute('aria-valuenow', Math.round(progress));
   }
 
-  function updateDimensions() {
-    windowHeight = window.innerHeight;
-    documentHeight = document.documentElement.scrollHeight - windowHeight;
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  window.addEventListener('resize', updateProgress, { passive: true });
+  window.addEventListener('load', updateProgress);
+
+  if (window.ResizeObserver) {
+    new ResizeObserver(updateProgress).observe(document.body);
   }
 
-  window.addEventListener('scroll', updateProgress, { passive: true });
-  window.addEventListener('resize', updateDimensions, { passive: true });
-
-  updateDimensions();
   updateProgress();
 })();

@@ -5,6 +5,25 @@ body {
   max-width: 100%;
 }
 
+/* Mobile header: fixed instead of sticky.
+   overflow-x:hidden above turns body into its own scroll container,
+   which silently breaks position:sticky on .site-header. Fixed
+   positioning is not affected by ancestor overflow. */
+@media (max-width: 1023px) {
+  .site-header {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1001;
+  }
+
+  body {
+    padding-top: 76px;
+  }
+}
+
 /* Mobile: force all multi-column grids to single column at 640px and below */
 @media (max-width: 640px) {
 
