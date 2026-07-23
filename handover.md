@@ -2,6 +2,31 @@
 
 Sliding session log. Newest entry first. Update at end of every session.
 
+## Current State (23/07/2026, SEO content build)
+- Comprehensive SEO optimization pass completed — FAQ schema, glossary, sitemap cleanup, content consolidation.
+- **FAQ Schema (28 pages, 201 Q&As):** Added schema.org/FAQPage JSON-LD to all high-impact visa and guide pages:
+  - Main visa pages (11): DTV, LTR, Border-runs, Marriage, Thailand Privilege, Business, Retirement, Visa-extensions, Visa-exempt-entry, Tourist-visa, Visa-on-arrival
+  - ED visa subpages (5): Emergency-self-defence, Hand-to-hand-combat, Muay-thai, Thai-language, Volunteer
+  - Guide pages (8): Border-runs, DTV-180-day-extension, DTV-deep-dive, DTV-vs-business-permit, DTV-vs-ed-visa, ED-visa-cost-budget, Visa-options-under-50, Why-visas-get-rejected
+- **Sitemap cleanup:** 
+  - Added 410 Gone responses for 188 legacy 404 URLs (old /pages/ paths, .html files, old nested visa structures) via _redirects file
+  - Updated lastmod dates to 2026-07-23 for 22 FAQ schema pages (signaling freshness to Google)
+  - Sitemap now contains 99 valid URLs (up from previous count)
+- **Glossary page created:** `/glossary/` with 32 core visa/immigration terms, searchable, filterable by category, fully linked to relevant guides and pages. Includes full site navigation and footer matching all other pages.
+- **Contact links verified:** All 299 WhatsApp links (single number: 66801202074) and 167 Messenger links (cmlocals page) consistent across site.
+- **15 commits, all pushed to origin/master.** Key commits:
+  - FAQ schema batches (5 commits covering all 28 pages)
+  - Sitemap updates (1 commit for dates, 1 commit for 410 Gone responses)
+  - Glossary creation and nav/footer updates (3 commits)
+  - Memory and documentation updates
+- **Learning:** Template-first approach (copy existing page structure) saves time and prevents formatting bugs. One-page-at-a-time workflow maintains quality. Always verify in browser before declaring done (initial glossary had display issues that code-tracing missed).
+
+## Next Steps
+- Monitor GSC Coverage report: 188 "Not found (404)" entries should drop within 1-2 weeks as Google recrawls and gets 410 responses
+- Track FAQ page rankings in GSC Search Analytics (2-4 week window) — expect improvement on "what is X", definition queries, voice search
+- Assess content gaps: consider building visa quiz page (mentioned in tools/index.html as placeholder), immigration calculator widget, or process flowchart pages
+- Optional: add breadcrumb schema to visa page hierarchy (currently only on some pages)
+
 ## Current State (12/07/2026, link audit session)
 - Site-wide link audit after the checklist-CTA bug (see below): ran a script resolving every internal href across all 104 HTML files against the filesystem, plus a heuristic for repeated card components pointing to a suspiciously identical href.
 - Found and fixed the same "wrong CTA href" bug class on two more pages (not yet caught):
