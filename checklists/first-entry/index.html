@@ -1231,7 +1231,10 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); }
   .footer-legal-links a { font-size: 0.9rem; }
 }
 /* PROGRESS BAR */
-.progress-bar{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,#4F46E5,#6366F1,#4F46E5);width:0%;z-index:999;transition:width 0.1s linear;box-shadow:0 2px 8px rgba(79,70,229,.18);}@media(prefers-reduced-motion:reduce){.progress-bar{transition:none;}}</style>
+.progress-bar{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,#4F46E5,#6366F1,#4F46E5);width:0%;z-index:999;transition:width 0.1s linear;box-shadow:0 2px 8px rgba(79,70,229,.18);}@media(prefers-reduced-motion:reduce){.progress-bar{transition:none;}}
+/* Visa Expiry Calendar Modal */
+.pro-tip-modal{position:fixed;inset:0;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .25s ease;z-index:2000;}.pro-tip-modal.active{opacity:1;pointer-events:auto;}.pro-tip-modal-content{background:linear-gradient(135deg,#0D1117 0%,#141922 100%);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:2rem;max-width:420px;width:90%;box-shadow:0 20px 60px rgba(0,0,0,.4);}.pro-tip-modal-close{position:absolute;top:1rem;right:1rem;width:32px;height:32px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.1);border:none;color:#fff;cursor:pointer;font-size:1.5rem;border-radius:6px;transition:background .15s;}.pro-tip-modal-close:hover{background:rgba(255,255,255,.2);}.pro-tip-modal-inner{position:relative;}.pro-tip-modal-icon{display:block;font-size:2rem;margin-bottom:1rem;text-align:center;}.pro-tip-modal-label{font-size:1.1rem;font-weight:600;color:#fff;margin-bottom:.5rem;text-align:center;}.pro-tip-modal-description{font-size:.9rem;color:rgba(255,255,255,.85);line-height:1.6;text-align:center;margin-bottom:1.5rem;}.pro-tip-modal-button{background:var(--c-primary);color:#fff;border:none;padding:.8em 1.5em;border-radius:6px;font-weight:600;font-size:.9rem;cursor:pointer;transition:background .2s;}.pro-tip-modal-button:hover{background:#4338CA;}
+</style>
 
 
 <link rel="preload" href="../../fonts/newsreader.woff2" as="font" type="font/woff2" crossorigin/>
@@ -1822,6 +1825,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); }
 
 
 <script src="../../shared/js/card-click-handler.js"></script>
+<script src="../../shared/js/visa-expiry-calendar.js"></script>
 <script src="../../shared/chaty-widget/scripts/chaty-widget.js"></script>
 
 <!-- Cloudflare Web Analytics -->
