@@ -119,3 +119,29 @@
 /culture/([^.]+)$                   /culture/$1/                301
 /chiang-mai/([^.]+)$                /chiang-mai/$1/             301
 /guides/([^.]+)$                    /guides/$1/                 301
+
+# ============================================================
+# 410 Gone - Permanently Deleted Pages (no redirect)
+# These old URLs no longer exist and should not redirect
+# ============================================================
+
+# WordPress statistics/tracking URLs - permanently gone
+/wp-admin/admin-ajax.php             410
+/wp-admin/*                          410
+/wp-includes/*                       410
+/wp-json/*                           410
+/wp-content/*                        410
+
+# Old URL patterns that shouldn't exist
+/*.html                              410
+/pages/*.html                        410
+
+# Old nested visa structures that no longer exist
+/long-stay/*                         410
+/short-stay/*                        410
+
+# Old service/tool URLs
+/tools/*                             410
+/category/*                          410
+/tag/*                               410
+/feed/*                              410
