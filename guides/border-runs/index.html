@@ -378,7 +378,33 @@ article table tr:hover{background:rgba(0,0,0,0.02);}
     color: var(--c-primary);
   }
 }
-.mobile-nav-search-icon{display:flex;align-items:center;justify-content:center;height:60px;padding:20px 24px;border-top:1px solid var(--c-border);color:var(--c-primary);text-decoration:none;transition:background-color 0.2s,opacity 0.2s;width:100%;position:sticky;bottom:0;z-index:100;background:var(--c-white);}.mobile-nav-search-icon:hover{opacity:0.8;background:rgba(79,70,229,0.05);}.mobile-nav-search-icon svg{display:block;pointer-events:none;}.header-search-icon{display:flex;align-items:center;justify-content:center;width:36px;height:36px;color:var(--c-body);text-decoration:none;transition:color 0.2s,opacity 0.2s;border:none;background:none;flex-shrink:0;}.header-search-icon:hover{color:var(--c-primary);opacity:0.8;}.header-search-icon svg{display:block;pointer-events:none;}@media(max-width:960px){.header-search-icon{display:none;}}</style>
+.mobile-nav-search-icon{display:flex;align-items:center;justify-content:center;height:60px;padding:20px 24px;border-top:1px solid var(--c-border);color:var(--c-primary);text-decoration:none;transition:background-color 0.2s,opacity 0.2s;width:100%;position:sticky;bottom:0;z-index:100;background:var(--c-white);}.mobile-nav-search-icon:hover{opacity:0.8;background:rgba(79,70,229,0.05);}.mobile-nav-search-icon svg{display:block;pointer-events:none;}.header-search-icon{display:flex;align-items:center;justify-content:center;width:36px;height:36px;color:var(--c-body);text-decoration:none;transition:color 0.2s,opacity 0.2s;border:none;background:none;flex-shrink:0;}.header-search-icon:hover{color:var(--c-primary);opacity:0.8;}.header-search-icon svg{display:block;pointer-events:none;}@media(max-width:960px){.header-search-icon{display:none;}}
+.site-footer{background:var(--footer-bg,#0D1117);color:rgba(255,255,255,0.92);padding:3.6rem 0 0;}
+.footer-container{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:1.2fr 0.9fr 0.9fr 0.9fr 0.9fr;gap:2rem;padding:0 1.8rem 1.8rem;width:100%;}
+.footer-col{display:flex;flex-direction:column;gap:0.9rem;}
+.footer-col-cmlocals{gap:1.8rem;}
+.footer-logo a{font-size:0.9rem;font-weight:bold;color:white;text-decoration:none;display:inline-flex;align-items:center;}
+.footer-logo img{height:43.2px;width:auto;display:block;}
+.footer-tagline{font-size:0.9rem;line-height:1.6;margin:0;color:rgba(255,255,255,0.75);}
+.footer-socials{display:flex;gap:1.35rem;}
+.social-icon{display:inline-flex;align-items:center;justify-content:center;width:28.8px;height:28.8px;color:rgba(255,255,255,0.75);text-decoration:none;transition:filter 0.2s ease,color 0.2s ease;filter:grayscale(100%);}
+.social-icon:hover{color:currentColor;filter:grayscale(0%);}
+.social-icon.social-whatsapp:hover{color:#25D366;}
+.social-icon.social-facebook:hover{color:#1877F2;}
+.social-icon.social-messenger:hover{color:#0084FF;}
+.social-icon svg{width:100%;height:100%;}
+.footer-col-title{font-size:0.85rem;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;color:rgba(255,255,255,0.95);margin:0;}
+.footer-links{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.6rem;}
+.footer-links a{color:rgba(255,255,255,0.75);text-decoration:none;font-size:0.85rem;line-height:1.4;transition:color 0.2s;}
+.footer-links a:hover{color:white;}
+.footer-bottom-bar{max-width:1400px;margin:0 auto;padding:1.8rem;display:flex;justify-content:space-between;align-items:center;gap:1.8rem;width:100%;}
+.footer-bottom-bar p{font-size:0.9rem;color:rgba(255,255,255,0.6);margin:0;}
+.footer-legal-links{display:flex;gap:1.8rem;}
+.footer-legal-links a{font-size:0.9rem;color:rgba(255,255,255,0.6);text-decoration:none;transition:color 0.2s;}
+.footer-legal-links a:hover{color:rgba(255,255,255,0.9);}
+@media (max-width:1024px){.footer-container{grid-template-columns:repeat(2,1fr);gap:3rem;}.footer-bottom-bar{flex-direction:column;text-align:center;}}
+@media (max-width:640px){.site-footer{padding:3rem 1.5rem 0;}.footer-container{grid-template-columns:1fr;gap:2rem;padding-bottom:1.5rem;}.footer-bottom-bar{padding:1.5rem;flex-direction:column;gap:1rem;}}
+</style>
 
 <div class="progress-bar" id="progress-bar"></div>
 <script type="application/ld+json">
@@ -1252,6 +1278,96 @@ Last verified: May 2026 by CMLocals. Border routes, TDAC requirements, and fees 
 })();
 </script>
 </main>
+
+<footer class="site-footer" role="contentinfo" style="background: #0D1117;">
+<div class="footer-container">
+
+  <!-- Column 1: CMLocals + Tagline + Social Icons -->
+  <div class="footer-col footer-col-cmlocals">
+    <div class="footer-logo">
+      <a href="/">
+        <img src="../../images/cmlocals-chiang-mai-locals-logo.webp" alt="CMLocals - Thai visa guides and Chiang Mai living" width="140" height="40" />
+      </a>
+    </div>
+    <p class="footer-tagline">Independent Thai visa information hub for Chiang Mai and long-stay life in Thailand.</p>
+    <div class="footer-socials">
+      <a href="https://wa.me/66801202074" title="WhatsApp" class="social-icon social-whatsapp" target="_blank" rel="noopener noreferrer">
+        <svg width="24" height="24" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="19.4395" cy="19.4395" r="19.4395" fill="#25D366"/><path d="M19.5 9.5C14.253 9.5 10 13.753 10 19c0 1.67.436 3.285 1.265 4.717L10 29l5.418-1.234A9.454 9.454 0 0019.5 28.5c5.247 0 9.5-4.253 9.5-9.5s-4.253-9.5-9.5-9.5zm5.508 13.142c-.232.652-1.345 1.247-1.853 1.29-.508.043-.982.228-3.306-.688-2.806-1.107-4.573-3.974-4.71-4.16-.137-.186-1.12-1.49-1.12-2.843 0-1.352.71-2.018.96-2.293.25-.275.546-.344.728-.344.183 0 .365.002.525.01.168.007.394-.064.617.47.232.556.786 1.92.855 2.06.069.138.115.3.023.485-.093.186-.139.3-.275.462-.137.162-.288.362-.412.486-.137.137-.28.286-.12.56.16.275.71 1.173 1.525 1.9 1.047.933 1.93 1.222 2.205 1.36.275.137.435.115.595-.069.16-.185.686-.8.869-1.075.183-.275.365-.228.617-.137.25.092 1.595.752 1.868.889.275.137.457.206.526.32.068.115.068.663-.164 1.315z" fill="white"/></svg>
+      </a>
+      <a href="https://m.me/cmlocals" title="Messenger" class="social-icon social-messenger" target="_blank" rel="noopener noreferrer">
+        <svg width="24" height="24" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="19.4395" cy="19.4395" r="19.4395" fill="#0084FF"/><path d="M19.5 9.5C13.701 9.5 9 13.748 9 19.074c0 3.014 1.474 5.702 3.778 7.456V30l3.294-1.81c.878.244 1.81.376 2.778.376 5.799 0 10.5-4.248 10.5-9.574S25.299 9.5 19.5 9.5zm1.04 12.878l-2.674-2.852-5.22 2.852 5.74-6.096 2.74 2.852 5.154-2.852-5.74 6.096z" fill="white"/></svg>
+      </a>
+      <a href="https://www.facebook.com/cmlocals" title="Facebook" class="social-icon social-facebook" target="_blank" rel="noopener noreferrer">
+        <svg width="24" height="24" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="19.5" cy="19.5" r="19.5" fill="#1877F2"/><path d="M20.5 28v-8h2.5l.375-2.875h-2.875v-1.75c0-.75.25-1.25 1.375-1.25h1.5V10.625c-.25 0-1.125-.125-2.125-.125-2.125 0-3.625 1.375-3.625 3.875v2.125h-2.5v2.875h2.5v8h3z" fill="white"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- Column 2: ED Visas -->
+  <div class="footer-col">
+    <h3 class="footer-col-title">ED Visas</h3>
+    <ul class="footer-links">
+      <li><a href="/ed-visa/emergency-self-defence/">Emergency Self Defence</a></li>
+      <li><a href="/ed-visa/muay-thai/">Muay Thai</a></li>
+      <li><a href="/ed-visa/hand-to-hand-combat/">Hand-to-Hand Combat</a></li>
+      <li><a href="/ed-visa/thai-language/">Thai Language</a></li>
+      <li><a href="/ed-visa/volunteer/">Volunteer Non-O</a></li>
+      <li><a href="/ed-visa/">All ED Visas</a></li>
+    </ul>
+  </div>
+
+  <!-- Column 3: Chiang Mai -->
+  <div class="footer-col">
+    <h3 class="footer-col-title">Chiang Mai</h3>
+    <ul class="footer-links">
+      <li><a href="/chiang-mai/">Overview</a></li>
+      <li><a href="/chiang-mai/where-to-stay/">Where to Stay</a></li>
+      <li><a href="/chiang-mai/cost-of-living/">Cost of Living</a></li>
+      <li><a href="/chiang-mai/getting-around/">Getting Around</a></li>
+      <li><a href="/chiang-mai/long-term-living/">Long-Term Living</a></li>
+      <li><a href="/chiang-mai/healthcare/">Healthcare</a></li>
+    </ul>
+  </div>
+
+  <!-- Column 4: Visa Guides -->
+  <div class="footer-col">
+    <h3 class="footer-col-title">Visa Guides</h3>
+    <ul class="footer-links">
+      <li><a href="/visas/">All Visas</a></li>
+      <li><a href="/dtv-visa/">DTV</a></li>
+      <li><a href="/visas/short-stay/">Short Stay</a></li>
+      <li><a href="/visas/long-stay/">Long Stay</a></li>
+      <li><a href="/visas/short-stay/tourist-visa/">Tourist Visa</a></li>
+      <li><a href="/checklists/">Checklists</a></li>
+    </ul>
+  </div>
+
+  <!-- Column 5: Guides -->
+  <div class="footer-col">
+    <h3 class="footer-col-title">Guides &amp; Resources</h3>
+    <ul class="footer-links">
+      <li><a href="/guides/">All Guides</a></li>
+      <li><a href="/guides/dtv-deep-dive/">DTV Deep-Dive</a></li>
+      <li><a href="/guides/dtv-vs-ed-visa/">DTV vs ED Visa</a></li>
+      <li><a href="/guides/visa-options-under-50/">Visa Options Under 50</a></li>
+      <li><a href="/guides/why-visas-get-rejected/">Why Visas Get Rejected</a></li>
+    </ul>
+  </div>
+
+</div>
+
+<!-- Bottom Legal Bar -->
+<div class="footer-bottom-bar">
+  <p>&copy; 2026 CMLocals. All rights reserved.</p>
+  <div class="footer-legal-links">
+    <a href="/glossary/">Glossary</a>
+    <a href="/privacy-policy/">Privacy</a>
+    <a href="/terms-of-service/">Terms</a>
+    <a href="/disclaimer/">Disclaimer</a>
+  </div>
+</div>
+
+</footer>
 
 <script src="../../shared/js/header-handler.js" defer></script>
 
