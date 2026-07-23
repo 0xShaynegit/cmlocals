@@ -103,6 +103,11 @@
 /visas/guides/visa-comparisons/     /visas/comparison-matrix/            301
 /visas/guides/visa-comparisons      /visas/comparison-matrix/            301
 
+# Long-stay strategy consolidation (July 2026)
+# Consolidating duplicate strategy pages - keeping hub as canonical (more comprehensive)
+/visas/guides/long-stay-strategy/   /visas/long-stay/                    301
+/visas/guides/long-stay-strategy    /visas/long-stay/                    301
+
 # Trailing slash enforcement - directory URLs must end in slash
 # This handles both .html and non-slash variants
 /checklists/([^.]+)$                /checklists/$1/             301
