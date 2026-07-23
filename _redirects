@@ -98,6 +98,11 @@
 /visa-on-arrival/                   /visas/short-stay/visa-on-arrival/   301
 /visa-on-arrival                    /visas/short-stay/visa-on-arrival/   301
 
+# Visa comparison consolidation (July 2026)
+# Consolidating duplicate comparison pages - keeping comprehensive matrix as canonical
+/visas/guides/visa-comparisons/     /visas/comparison-matrix/            301
+/visas/guides/visa-comparisons      /visas/comparison-matrix/            301
+
 # Trailing slash enforcement - directory URLs must end in slash
 # This handles both .html and non-slash variants
 /checklists/([^.]+)$                /checklists/$1/             301
