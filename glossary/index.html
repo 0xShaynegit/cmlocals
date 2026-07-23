@@ -20,23 +20,25 @@
 <style>
 :root{--c-dark:#0D1117;--c-primary:#4F46E5;--c-white:#FFFFFF;--c-off-white:#F8F7FF;--c-body:#374151;--c-border:#E5E7EB;--font-display:'Newsreader',Georgia,serif;--font-body:'DM Sans',system-ui,sans-serif;--max-w:1200px;--article-w:900px;--edge:clamp(1.25rem,4vw,2.5rem);}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
-body{font-family:var(--font-body);font-size:0.9rem;line-height:1.65;color:var(--c-body);background:var(--c-white);-webkit-font-smoothing:antialiased;}
+html{scroll-behavior:smooth;}body{font-family:var(--font-body);font-size:0.9rem;line-height:1.65;color:var(--c-body);background:var(--c-white);-webkit-font-smoothing:antialiased;}
 img{max-width:100%;display:block;height:auto;}
-a{color:var(--c-primary);text-decoration:none;}
-a:hover{text-decoration:underline;}
+a{color:var(--c-primary);text-decoration:none;}a:hover{text-decoration:underline;}
 h1,h2,h3{font-family:var(--font-display);}
-.container{width:100%;max-width:var(--max-w);margin-inline:auto;padding-inline:var(--edge);}
-.article-wrap{width:100%;max-width:var(--article-w);margin-inline:auto;padding-inline:var(--edge);}
+.article-wrap{width:100%;max-width:var(--article-w);margin:0 auto;padding:0 var(--edge);}
 header{background:#0D1117;color:var(--c-white);padding:2rem var(--edge);text-align:center;}
 header h1{font-size:2.5rem;margin-bottom:0.5rem;color:var(--c-white);}
-header p{font-size:1.1rem;color:rgba(255,255,255,0.85);max-width:800px;margin-inline:auto;}
-main{padding:2rem var(--edge);}
-section{margin-bottom:4rem;}
-section h2{font-size:1.8rem;margin-bottom:1.5rem;color:var(--c-dark);border-bottom:3px solid var(--c-primary);padding-bottom:0.5rem;}
-.search-box{max-width:600px;margin:2rem auto;padding:0 var(--edge);}
+header p{font-size:1.1rem;color:rgba(255,255,255,0.85);max-width:800px;margin:0 auto;}
+main{padding:3rem var(--edge);}
+.search-box{max-width:600px;margin:2rem auto;padding:0;}
 .search-box input{width:100%;padding:1rem;font-size:1rem;border:2px solid var(--c-border);border-radius:8px;font-family:var(--font-body);}
 .search-box input:focus{outline:none;border-color:var(--c-primary);box-shadow:0 0 0 3px rgba(79,70,229,0.1);}
+.category-filter{display:flex;flex-wrap:wrap;gap:0.5rem;justify-content:center;margin:2rem 0;}
+.filter-btn{padding:0.5rem 1rem;border:2px solid var(--c-border);background:white;border-radius:6px;cursor:pointer;font-family:var(--font-body);font-size:0.9rem;transition:all 0.2s;color:var(--c-body);}
+.filter-btn.active{background:var(--c-primary);color:white;border-color:var(--c-primary);}
+.filter-btn:hover{border-color:var(--c-primary);color:var(--c-primary);}
+#glossary-container{display:block;width:100%;max-width:var(--article-w);margin:0 auto;padding:0 var(--edge);}
+.glossary-section{margin-bottom:3rem;}
+.glossary-section-title{font-size:1.3rem;color:var(--c-dark);margin:2rem 0 1.5rem 0;padding-left:1rem;border-left:4px solid var(--c-primary);}
 .glossary-term{margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--c-border);}
 .glossary-term:last-child{border-bottom:none;}
 .term-title{font-size:1.1rem;font-weight:600;color:var(--c-dark);margin-bottom:0.5rem;font-family:var(--font-display);}
@@ -44,26 +46,19 @@ section h2{font-size:1.8rem;margin-bottom:1.5rem;color:var(--c-dark);border-bott
 .term-links{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:0.75rem;}
 .term-link{display:inline-block;padding:0.4rem 0.8rem;background:var(--c-off-white);border:1px solid var(--c-border);border-radius:6px;font-size:0.85rem;color:var(--c-primary);transition:all 0.2s;}
 .term-link:hover{background:var(--c-primary);color:white;text-decoration:none;border-color:var(--c-primary);}
-.category-filter{display:flex;flex-wrap:wrap;gap:0.5rem;justify-content:center;margin:2rem 0;padding:0 var(--edge);}
-.filter-btn{padding:0.5rem 1rem;border:2px solid var(--c-border);background:white;border-radius:6px;cursor:pointer;font-family:var(--font-body);font-size:0.9rem;transition:all 0.2s;color:var(--c-body);}
-.filter-btn.active{background:var(--c-primary);color:white;border-color:var(--c-primary);}
-.filter-btn:hover{border-color:var(--c-primary);color:var(--c-primary);}
 .no-results{text-align:center;padding:2rem;color:#999;font-style:italic;}
 footer{background:#f0f0f0;padding:2rem var(--edge);text-align:center;font-size:0.9rem;color:#666;}
-.progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: linear-gradient(90deg, #4F46E5, #6366F1, #4F46E5); width: 0%; z-index: 999; transition: width 0.1s linear; box-shadow: 0 2px 8px rgba(79,70,229,.18); }
-@media (prefers-reduced-motion: reduce) { .progress-bar { transition: none; } }
-@media (max-width:768px){header h1{font-size:1.8rem;}section h2{font-size:1.4rem;}.term-links{flex-direction:column;}}
+.progress-bar{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,#4F46E5,#6366F1,#4F46E5);width:0%;z-index:999;box-shadow:0 2px 8px rgba(79,70,229,.18);}
+@media (max-width:768px){header h1{font-size:1.8rem;}.term-links{flex-direction:column;}}
 </style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {"@type": "Question", "name": "What is a DTV visa?", "acceptedAnswer": {"@type": "Answer", "text": "The Destination Thailand Visa (DTV) is a long-stay visa for digital nomads, remote workers, and people with passive income. It allows 180-day extensions and multi-entry, making it popular for expats working internationally."}},
-    {"@type": "Question", "name": "What is an ED visa?", "acceptedAnswer": {"@type": "Answer", "text": "The Education (ED) visa is for foreign nationals studying in Thailand. It covers university enrollment, Thai language study, martial arts training, and volunteer positions. It's indefinitely renewable as long as you maintain educational enrollment."}},
-    {"@type": "Question", "name": "What does TM30 mean?", "acceptedAnswer": {"@type": "Answer", "text": "TM30 is Thailand's residential notification form. It must be filed within 24 hours of arrival or address change. Landlords typically file it digitally via the TDAC system, and immigration checks it during visa extensions."}},
-    {"@type": "Question", "name": "What is 90-day reporting?", "acceptedAnswer": {"@type": "Answer", "text": "90-day reporting is a mandatory immigration compliance requirement for long-term visa holders. You must report your location to immigration every 90 days, either in person, by mail, or online via the TM47 form."}},
-    {"@type": "Question", "name": "What is LTR visa?", "acceptedAnswer": {"@type": "Answer", "text": "The Long-Term Resident (LTR) visa is Thailand's premium long-stay visa for wealthy individuals, retirees, and remote workers with high income. It allows 10-year validity with multiple categories based on savings and income."}}
+    {"@type": "Question", "name": "What is a DTV visa?", "acceptedAnswer": {"@type": "Answer", "text": "The Destination Thailand Visa (DTV) is a long-stay visa for digital nomads, remote workers, and people with passive income. It allows 180-day extensions and multi-entry."}},
+    {"@type": "Question", "name": "What is an ED visa?", "acceptedAnswer": {"@type": "Answer", "text": "The Education (ED) visa is for foreign nationals studying in Thailand. It covers university enrollment, Thai language study, martial arts training, and volunteer positions."}},
+    {"@type": "Question", "name": "What does TM30 mean?", "acceptedAnswer": {"@type": "Answer", "text": "TM30 is Thailand's residential notification form. It must be filed within 24 hours of arrival or address change."}}
   ]
 }
 </script>
@@ -71,41 +66,13 @@ footer{background:#f0f0f0;padding:2rem var(--edge);text-align:center;font-size:0
   <meta property="og:image" content="https://www.cmlocals.com/images/cmlocals-og-social-share.webp">
 </head>
 <body>
-<div class="progress-bar" id="progress-bar" aria-label="Reading progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+<div class="progress-bar" id="progress-bar"></div>
 
 <header class="site-header" id="site-header" role="banner">
 <div class="header-inner">
   <a href="https://www.cmlocals.com" class="header-logo" aria-label="CMLocals - homepage">
-    <img src="../images/cmlocals-chiang-mai-locals-logo.webp" alt="CMLocals - Thai visa guides and Chiang Mai living" width="300" height="86" fetchpriority="high" />
+    <img src="../images/cmlocals-chiang-mai-locals-logo.webp" alt="CMLocals" width="300" height="86" />
   </a>
-  <nav class="primary-nav desktop-only" aria-label="Primary navigation">
-    <div class="nav-item">
-      <a href="/ed-visa/" class="nav-link has-dropdown">ED Visas</a>
-      <div class="dropdown-menu mega-menu" >
-        <div class="dropdown-section">
-          <ul>
-            <li><a href="/ed-visa/emergency-self-defence/">Emergency Self Defence</a></li>
-            <li><a href="/ed-visa/muay-thai/">Muay Thai</a></li>
-            <li><a href="/ed-visa/thai-language/">Thai Language</a></li>
-            <li><a href="/ed-visa/hand-to-hand-combat/">Hand-to-Hand Combat</a></li>
-            <li><a href="/ed-visa/volunteer/">Volunteer Non-O</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="nav-item">
-      <a href="/dtv-visa/" class="nav-link">DTV Visa</a>
-    </div>
-    <div class="nav-item">
-      <a href="/ltr-visa/" class="nav-link">LTR Visa</a>
-    </div>
-    <div class="nav-item">
-      <a href="/guides/" class="nav-link">Guides</a>
-    </div>
-    <div class="nav-item">
-      <a href="/visas/" class="nav-link">Visas Hub</a>
-    </div>
-  </nav>
 </div>
 </header>
 
@@ -128,95 +95,47 @@ footer{background:#f0f0f0;padding:2rem var(--edge);text-align:center;font-size:0
   <button class="filter-btn" data-category="acronyms">Acronyms</button>
 </div>
 
-<section id="glossary-container"></section>
-
+<div id="glossary-container"></div>
 <div id="no-results" class="no-results" style="display:none;">No terms match your search. Try a different keyword.</div>
 
 </main>
 
 <footer>
-<p>&copy; 2026 CMLocals. <a href="/privacy-policy/">Privacy Policy</a> • <a href="/terms-of-service/">Terms of Service</a></p>
+<p>&copy; 2026 CMLocals. <a href="/privacy-policy/">Privacy</a> • <a href="/terms-of-service/">Terms</a></p>
 </footer>
 
 <script>
 const glossaryData = [
-  {"term": "90-Day Reporting", "definition": "A mandatory immigration requirement for certain long-term visa holders to report their residence location every 90 days. Can be done in person, by mail, or online via TM47 form.", "category": "processes", "links": [{"text": "90-Day Reporting Guide", "url": "/immigration/90-day-reporting/"}, {"text": "Immigration Processes", "url": "/immigration/"}]},
+  {"term": "90-Day Reporting", "definition": "A mandatory immigration requirement for certain long-term visa holders to report their residence location every 90 days. Can be done in person, by mail, or online via TM47 form.", "category": "processes", "links": [{"text": "90-Day Reporting", "url": "/immigration/90-day-reporting/"}]},
   {"term": "Amphur", "definition": "A district administrative division in Thailand, similar to a county. Used in address registration (TM30) and visa applications.", "category": "thailand-terms", "links": [{"text": "TM30 Registration", "url": "/immigration/tm30-registration/"}]},
-  {"term": "Arrival Card (TM.6)", "definition": "The white arrival/departure card issued to all travelers entering Thailand. Must be kept as proof of legal entry and returned upon departure.", "category": "documents", "links": [{"text": "Entry Requirements", "url": "/immigration/entry-strategy/"}]},
-  {"term": "Baht", "definition": "Thailand's official currency (THB). The exchange rate typically fluctuates between 30-35 THB per USD. Required for financial proof on many visas.", "category": "acronyms", "links": [{"text": "Financial Requirements", "url": "/immigration/financial-requirements/"}]},
   {"term": "Bank Balance Requirement", "definition": "The minimum amount of money required to be in your Thai bank account for visa approval. Varies by visa type (e.g., 800,000 THB for retirement, 500,000 THB for DTV).", "category": "documents", "links": [{"text": "Financial Requirements", "url": "/immigration/financial-requirements/"}]},
-  {"term": "Blacklist", "definition": "Thailand's immigration blacklist prevents individuals from entering Thailand. Reasons include overstay, visa fraud, or criminal activity. Check your status before traveling.", "category": "processes", "links": [{"text": "Blacklist Status Check", "url": "/immigration/blacklist-status/"}]},
-  {"term": "Border Run", "definition": "Exiting Thailand and re-entering to reset your stay or visa. Common for visa-exempt entries and tourist visas. Returns with a fresh 30 or 60-day stamp.", "category": "processes", "links": [{"text": "Border Runs Guide", "url": "/guides/border-runs/"}]},
-  {"term": "Breadcrumb Document", "definition": "A travel record showing your exits and entries to Thailand. Required for certain visa extensions. Obtained from immigration or your departure stamps.", "category": "documents", "links": [{"text": "TM30 Registration", "url": "/immigration/tm30-registration/"}]},
+  {"term": "Blacklist", "definition": "Thailand's immigration blacklist prevents individuals from entering Thailand. Reasons include overstay, visa fraud, or criminal activity.", "category": "processes", "links": [{"text": "Blacklist Status Check", "url": "/immigration/blacklist-status/"}]},
+  {"term": "Border Run", "definition": "Exiting Thailand and re-entering to reset your stay or visa. Common for visa-exempt entries and tourist visas. Returns with a fresh 30 or 60-day stamp.", "category": "processes", "links": [{"text": "Border Runs", "url": "/guides/border-runs/"}]},
   {"term": "Business Permit (Alien Workplace Permit)", "definition": "A work authorization required to legally work in Thailand. Separate from visa; both a work permit and appropriate visa (usually Non-B) are needed.", "category": "documents", "links": [{"text": "Work Permit vs DTV", "url": "/guides/dtv-vs-business-permit/"}]},
-  {"term": "Business Visa (Non-B)", "definition": "Long-stay visa for business owners and employees. Requires company registration, endorsement letter, and financial documentation. Extendable annually.", "category": "visa-types", "links": [{"text": "Business Visa", "url": "/business-visa/"}, {"text": "Long-Stay Visas", "url": "/visas/long-stay/"}]},
-  {"term": "Chiang Mai Immigration Office", "definition": "The regional immigration office serving Chiang Mai and northern Thailand. Located in the city center. Handles visa applications, extensions, and 90-day reports.", "category": "thailand-terms", "links": [{"text": "Chiang Mai Immigration Office", "url": "/immigration/chiang-mai-office/"}]},
-  {"term": "Digital Nomad Visa (DTV)", "definition": "Thailand's Destination Thailand Visa for remote workers, digital nomads, and people with passive income. Allows 180-day extensions, multi-entry, and indefinite renewals. Requires 500,000 THB in savings.", "category": "visa-types", "links": [{"text": "DTV Visa Complete Guide", "url": "/dtv-visa/"}, {"text": "DTV Deep Dive", "url": "/guides/dtv-deep-dive/"}]},
-  {"term": "Digital Arrival Card (TM.6 Digital)", "definition": "The new digital version of Thailand's arrival/departure card, filed online before entry. Replaces the physical card system.", "category": "documents", "links": [{"text": "Digital Arrival Card", "url": "/immigration/digital-arrival-card/"}]},
-  {"term": "Education Visa (ED)", "definition": "Visa for studying in Thailand at schools, universities, or training programs. Covers Thai language, martial arts, volunteer work, and academic study. Indefinitely renewable with continued enrollment.", "category": "visa-types", "links": [{"text": "ED Visa Guide", "url": "/ed-visa/"}, {"text": "ED Visa Programs", "url": "/guides/ed-visa-cost-budget/"}]},
-  {"term": "Expat", "definition": "Short for expatriate. A person living outside their home country, typically for work or retirement. Thailand has large expat communities, especially in Bangkok and Chiang Mai.", "category": "acronyms", "links": [{"text": "Chiang Mai Living", "url": "/chiang-mai/"}]},
-  {"term": "Extension of Stay", "definition": "Extending your visa validity beyond the initial grant period. Requires meeting financial and documentation requirements specific to each visa type.", "category": "processes", "links": [{"text": "Visa Extensions Guide", "url": "/visa-extensions/"}, {"text": "DTV 180-Day Extension", "url": "/guides/dtv-180-day-extension/"}]},
+  {"term": "Business Visa (Non-B)", "definition": "Long-stay visa for business owners and employees. Requires company registration, endorsement letter, and financial documentation. Extendable annually.", "category": "visa-types", "links": [{"text": "Business Visa", "url": "/business-visa/"}]},
+  {"term": "Digital Nomad Visa (DTV)", "definition": "Thailand's Destination Thailand Visa for remote workers, digital nomads, and people with passive income. Allows 180-day extensions, multi-entry, and indefinite renewals. Requires 500,000 THB in savings.", "category": "visa-types", "links": [{"text": "DTV Visa", "url": "/dtv-visa/"}, {"text": "DTV Deep Dive", "url": "/guides/dtv-deep-dive/"}]},
+  {"term": "Education Visa (ED)", "definition": "Visa for studying in Thailand at schools, universities, or training programs. Covers Thai language, martial arts, volunteer work, and academic study. Indefinitely renewable with continued enrollment.", "category": "visa-types", "links": [{"text": "ED Visa", "url": "/ed-visa/"}]},
+  {"term": "Extension of Stay", "definition": "Extending your visa validity beyond the initial grant period. Requires meeting financial and documentation requirements specific to each visa type.", "category": "processes", "links": [{"text": "Visa Extensions", "url": "/visa-extensions/"}, {"text": "DTV Extension", "url": "/guides/dtv-180-day-extension/"}]},
   {"term": "Financial Requirements", "definition": "The minimum income or bank balance needed for visa approval. Varies by visa: retirement (800,000 THB), DTV (500,000 THB), LTR (varies by category).", "category": "processes", "links": [{"text": "Financial Requirements", "url": "/immigration/financial-requirements/"}]},
-  {"term": "First Entry", "definition": "Your initial arrival in Thailand. Important for obtaining the Arrival Card (TM.6) and determining your stay period and visa type.", "category": "processes", "links": [{"text": "First Entry Checklist", "url": "/checklists/first-entry/"}]},
-  {"term": "Forever Visa", "definition": "Colloquial term for the LTR visa, which doesn't require annual renewal like other visas. Called 'forever' because it's valid for 10 years without renewal.", "category": "visa-types", "links": [{"text": "LTR Visa", "url": "/ltr-visa/"}]},
-  {"term": "Frequently Asked Questions (FAQ)", "definition": "Common questions answered about specific visa topics. Each visa type on CMLocals includes FAQ sections with schema markup for search visibility.", "category": "acronyms", "links": [{"text": "DTV FAQ", "url": "/dtv-visa/#faq"}, {"text": "ED Visa FAQ", "url": "/ed-visa/#faq"}]},
-  {"term": "Golden Buddha Visa", "definition": "The Thai name for the LTR (Long-Term Resident) visa. Offers 10-year validity for qualified remote workers, retirees, and wealthy individuals.", "category": "visa-types", "links": [{"text": "LTR Visa", "url": "/ltr-visa/"}]},
-  {"term": "Hand-to-Hand Combat (ED)", "definition": "One of Thailand's ED visa programs, offering 1-year education visas for boxing, self-defense, and martial arts training.", "category": "visa-types", "links": [{"text": "Hand-to-Hand Combat ED", "url": "/ed-visa/hand-to-hand-combat/"}, {"text": "ED Visa Cost Budget", "url": "/guides/ed-visa-cost-budget/"}]},
-  {"term": "Health Certificate", "definition": "Documentation of health status, sometimes required for ED visas or visa applications. Typical requirements include HIV/TB screening.", "category": "documents", "links": [{"text": "ED Visa Requirements", "url": "/ed-visa/"}, {"text": "Document Requirements", "url": "/immigration/document-requirements/"}]},
-  {"term": "Home Country Verification", "definition": "Immigration's verification of your background, employment, and civil status with authorities in your home country. Can take weeks or months.", "category": "processes", "links": [{"text": "Document Requirements", "url": "/immigration/document-requirements/"}]},
   {"term": "Inland", "definition": "Applying for a visa extension or new visa within Thailand, typically at the immigration office. Contrasts with applying abroad.", "category": "processes", "links": [{"text": "Visa Extensions", "url": "/visa-extensions/"}]},
-  {"term": "Ivory Card", "definition": "Thailand's high-value residency card for wealthy individuals. More exclusive and expensive than the LTR (Golden Buddha Visa).", "category": "visa-types", "links": [{"text": "LTR Visa", "url": "/ltr-visa/"}]},
-  {"term": "Job Certificate", "definition": "Formal documentation from your employer confirming employment, title, and salary. Required for non-Thai work authorization and some visa types.", "category": "documents", "links": [{"text": "Document Requirements", "url": "/immigration/document-requirements/"}]},
-  {"term": "Land Border", "definition": "Thailand's border crossing points with neighboring countries (Laos, Cambodia, Myanmar, Malaysia). Common for border runs and alternative visa applications.", "category": "processes", "links": [{"text": "Land Border vs Air", "url": "/immigration/land-border-vs-air/"}]},
-  {"term": "Last Visited Country", "definition": "The country you were in immediately before entering Thailand. Used in immigration processing and visa applications.", "category": "processes", "links": [{"text": "Entry Strategy", "url": "/immigration/entry-strategy/"}]},
-  {"term": "Letter of Employment", "definition": "Official document from your employer confirming your role and that you're employed. Required for business visas and some extensions.", "category": "documents", "links": [{"text": "Document Requirements", "url": "/immigration/document-requirements/"}]},
-  {"term": "Long-Term Resident Visa (LTR)", "definition": "Thailand's premium long-stay visa (10-year validity) for remote workers, wealthy individuals, and retirees. Multiple categories based on income/savings.", "category": "visa-types", "links": [{"text": "LTR Visa Guide", "url": "/ltr-visa/"}, {"text": "Long-Stay Strategy", "url": "/visas/long-stay/"}]},
+  {"term": "Long-Term Resident Visa (LTR)", "definition": "Thailand's premium long-stay visa (10-year validity) for remote workers, wealthy individuals, and retirees. Multiple categories based on income/savings.", "category": "visa-types", "links": [{"text": "LTR Visa", "url": "/ltr-visa/"}]},
   {"term": "Marriage Visa (Non-O)", "definition": "Long-stay visa for individuals married to Thai citizens. Requires marriage documentation, financial proof, and Thai spouse sponsorship.", "category": "visa-types", "links": [{"text": "Marriage Visa", "url": "/marriage-visa/"}]},
-  {"term": "Muay Thai (ED)", "definition": "Popular ED visa program for training in traditional Thai boxing. Allows 1-year renewable visa with 4-6 training sessions per week required.", "category": "visa-types", "links": [{"text": "Muay Thai ED Visa", "url": "/ed-visa/muay-thai/"}, {"text": "ED Visa Cost Budget", "url": "/guides/ed-visa-cost-budget/"}]},
+  {"term": "Muay Thai (ED)", "definition": "Popular ED visa program for training in traditional Thai boxing. Allows 1-year renewable visa with 4-6 training sessions per week required.", "category": "visa-types", "links": [{"text": "Muay Thai ED", "url": "/ed-visa/muay-thai/"}]},
   {"term": "Multi-Entry Permit", "definition": "Endorsement allowing a visa holder to exit and re-enter Thailand multiple times without invalidating their visa. Available on most long-stay visas.", "category": "documents", "links": [{"text": "Re-Entry Permits", "url": "/immigration/re-entry-permits/"}]},
-  {"term": "Non-Immigrant Visa (Non-Imm)", "definition": "Category of long-stay visas including Non-B (business), Non-ED (education), Non-O (marriage/parent), Non-F (family), etc.", "category": "visa-types", "links": [{"text": "Long-Stay Visas", "url": "/visas/long-stay/"}]},
-  {"term": "Non-O Visa", "definition": "General non-immigrant visa used for marriage, dependents, and retirement. Requires Thai sponsorship (spouse/parent/child).", "category": "visa-types", "links": [{"text": "Marriage Visa (Non-O)", "url": "/marriage-visa/"}, {"text": "Retirement Visa (Non-O)", "url": "/retirement-visa/"}]},
   {"term": "Overstay", "definition": "Remaining in Thailand past your visa's expiration. Subject to fines (500 THB per day, max 20,000 THB), blacklisting, and deportation.", "category": "processes", "links": [{"text": "Overstay Penalties", "url": "/immigration/overstay-penalties/"}]},
-  {"term": "Passport Validity", "definition": "Your passport must be valid for the entire duration of your visa. Typically requires 6+ months remaining validity for approval.", "category": "documents", "links": [{"text": "Document Requirements", "url": "/immigration/document-requirements/"}]},
-  {"term": "Police Certificate", "definition": "Background clearance from your home country showing no criminal history. Often required for ED visa applications and extensions.", "category": "documents", "links": [{"text": "Document Requirements", "url": "/immigration/document-requirements/"}]},
-  {"term": "Proof of Funds", "definition": "Documentation showing you have sufficient money (bank statements, investment accounts, etc.). Required for financial-based visas like DTV and retirement.", "category": "documents", "links": [{"text": "Financial Requirements", "url": "/immigration/financial-requirements/"}]},
-  {"term": "Queue Strategy", "definition": "Tips for efficiently navigating Thailand's immigration offices. Includes optimal visit times, required documents, and document ordering.", "category": "processes", "links": [{"text": "Queue Strategy Guide", "url": "/immigration/queue-strategy/"}]},
-  {"term": "Retirement Visa (Non-O)", "definition": "Long-stay visa for retirees 50+ years old. Requires 800,000 THB in bank account or 65,000 THB monthly income. Indefinitely renewable.", "category": "visa-types", "links": [{"text": "Retirement Visa", "url": "/retirement-visa/"}, {"text": "Visa Options Under 50", "url": "/guides/visa-options-under-50/"}]},
-  {"term": "Re-Entry Permit", "definition": "A stamp allowing you to exit Thailand and return without invalidating your visa. Must be obtained before leaving if staying long-term.", "category": "documents", "links": [{"text": "Re-Entry Permits Guide", "url": "/immigration/re-entry-permits/"}]},
-  {"term": "Residence Certificate (TM.28)", "definition": "A document certifying your legal residence at a specific address in Thailand. Often required for visa extensions and legal matters.", "category": "documents", "links": [{"text": "TM30 Registration", "url": "/immigration/tm30-registration/"}]},
-  {"term": "Reverse-Entry Permit", "definition": "See 'Re-Entry Permit.' Allows exit and re-entry without visa cancellation.", "category": "documents", "links": [{"text": "Re-Entry Permits", "url": "/immigration/re-entry-permits/"}]},
-  {"term": "Royal Thai Embassy", "definition": "Thailand's diplomatic missions abroad that issue visas before entry. Visa approval can take 2-4 weeks depending on embassy.", "category": "processes", "links": [{"text": "Entry Strategy", "url": "/immigration/entry-strategy/"}]},
-  {"term": "Sak Yant Tattoo", "definition": "Traditional Thai Buddhist tattoo believed to provide protection and blessings. Cultural practice with deep spiritual significance in Thai society.", "category": "thailand-terms", "links": [{"text": "Sak Yant Guide", "url": "/sak-yant-chiang-mai.html"}]},
-  {"term": "Samut Prakan", "definition": "Location of Thailand's main immigration office and international airport. Often used as a visa processing hub for Bangkok-area applicants.", "category": "thailand-terms", "links": [{"text": "Entry Strategy", "url": "/immigration/entry-strategy/"}]},
-  {"term": "School Enrollment Letter", "definition": "Official document from a Thai language school, university, or training program confirming your enrollment. Essential for ED visa applications.", "category": "documents", "links": [{"text": "ED Visa", "url": "/ed-visa/"}]},
-  {"term": "Seasoning", "definition": "The waiting period (typically 2-3 months) required to show a bank balance history before it's accepted as proof of funds. Important for DTV and retirement visas.", "category": "processes", "links": [{"text": "DTV Deep Dive", "url": "/guides/dtv-deep-dive/"}, {"text": "Financial Requirements", "url": "/immigration/financial-requirements/"}]},
-  {"term": "Self-Employed Income", "definition": "Income from freelancing, consulting, or business ownership. Requires tax documentation and bank records. Used for DTV and LTR applications.", "category": "processes", "links": [{"text": "DTV Visa", "url": "/dtv-visa/"}]},
+  {"term": "Re-Entry Permit", "definition": "A stamp allowing you to exit Thailand and return without invalidating your visa. Must be obtained before leaving if staying long-term.", "category": "documents", "links": [{"text": "Re-Entry Permits", "url": "/immigration/re-entry-permits/"}]},
+  {"term": "Retirement Visa (Non-O)", "definition": "Long-stay visa for retirees 50+ years old. Requires 800,000 THB in bank account or 65,000 THB monthly income. Indefinitely renewable.", "category": "visa-types", "links": [{"text": "Retirement Visa", "url": "/retirement-visa/"}]},
+  {"term": "Seasoning", "definition": "The waiting period (typically 2-3 months) required to show a bank balance history before it's accepted as proof of funds. Important for DTV and retirement visas.", "category": "processes", "links": [{"text": "DTV Deep Dive", "url": "/guides/dtv-deep-dive/"}]},
   {"term": "Short-Stay Visa", "definition": "Tourist and visa-exempt entry categories allowing 30-60 day stays. Not extendable beyond initial grant except in specific circumstances.", "category": "visa-types", "links": [{"text": "Short-Stay Visas", "url": "/visas/short-stay/"}]},
-  {"term": "Tambon", "definition": "Thailand's smallest administrative division, like a sub-district or township. Used in address registration and official documentation.", "category": "thailand-terms", "links": [{"text": "TM30 Registration", "url": "/immigration/tm30-registration/"}]},
-  {"term": "Tax Certificate", "definition": "Documentation showing your tax history and income. Required for self-employed DTV applicants and business visa holders.", "category": "documents", "links": [{"text": "DTV Visa", "url": "/dtv-visa/"}]},
-  {"term": "Thai Consulate", "definition": "A Thai diplomatic office that issues visas in foreign countries. Different consulates have varying processing times and requirements.", "category": "processes", "links": [{"text": "Entry Strategy", "url": "/immigration/entry-strategy/"}]},
-  {"term": "Thai Language School", "definition": "Licensed schools offering Thai language programs. Popular for ED visa applications. Common programs are 1-4 year courses.", "category": "thailand-terms", "links": [{"text": "Thai Language ED Visa", "url": "/ed-visa/thai-language/"}]},
-  {"term": "Thailand Privilege Card", "definition": "Premium residency card for high-spending tourists and wealthy individuals. Offers perks like expedited visa services and special privileges.", "category": "visa-types", "links": [{"text": "Thailand Privilege Visa", "url": "/thailand-privilege-visa/"}]},
-  {"term": "Thirty-Day Stamp", "definition": "The standard entry stamp for visa-exempt visitors. Grants 30-day stay, not extendable (unless amended by immigration).", "category": "documents", "links": [{"text": "Visa-Exempt Entry", "url": "/visas/short-stay/visa-exempt-entry/"}]},
+  {"term": "Thailand Privilege Card", "definition": "Premium residency card for high-spending tourists and wealthy individuals. Offers perks like expedited visa services and special privileges.", "category": "visa-types", "links": [{"text": "Thailand Privilege", "url": "/thailand-privilege-visa/"}]},
   {"term": "TM.30 (Residence Notification)", "definition": "Official form notifying immigration of your residence address within 24 hours of arrival. Must be filed by landlord or accommodation provider.", "category": "documents", "links": [{"text": "TM30 Registration", "url": "/immigration/tm30-registration/"}]},
   {"term": "TM.47 (90-Day Report)", "definition": "Form for 90-day residence notification. Can be filed online, by mail, or in person at immigration office.", "category": "documents", "links": [{"text": "90-Day Reporting", "url": "/immigration/90-day-reporting/"}]},
   {"term": "Tourist Visa", "definition": "Visa for tourists visiting Thailand. Single-entry (60 days) or multiple-entry (6 months) options. Not extendable except in extreme circumstances.", "category": "visa-types", "links": [{"text": "Tourist Visa", "url": "/visas/short-stay/tourist-visa/"}]},
-  {"term": "Thailand Digital Government Center (TDAC)", "definition": "Government system where landlords file TM30 forms digitally. Replaced older paper-based system.", "category": "processes", "links": [{"text": "TM30 Registration", "url": "/immigration/tm30-registration/"}]},
-  {"term": "Trailing Spouse", "definition": "A spouse accompanying a primary visa holder on a dependent (Non-O or Non-F) visa. Requires spousal documentation.", "category": "processes", "links": [{"text": "Marriage Visa", "url": "/marriage-visa/"}]},
-  {"term": "Transfer of Visa", "definition": "Changing your visa type while in Thailand without exiting. Generally requires canceling current visa and applying for new one.", "category": "processes", "links": [{"text": "Visa Extensions", "url": "/visa-extensions/"}]},
-  {"term": "UK Affidavit", "definition": "Affidavit for UK citizens proving marital status, employment, or income. Often required for marriage and business visa applications.", "category": "documents", "links": [{"text": "Document Requirements", "url": "/immigration/document-requirements/"}]},
-  {"term": "Underway TM.30", "definition": "An in-process TM.30 notification still being filed by landlord. Creates delays if completed after arrival deadline.", "category": "processes", "links": [{"text": "TM30 Registration", "url": "/immigration/tm30-registration/"}]},
-  {"term": "University Enrollment", "definition": "Official enrollment document from a Thai university for academic study. Basis for ED visa applications for degree programs.", "category": "documents", "links": [{"text": "ED Visa", "url": "/ed-visa/"}]},
-  {"term": "Visa Amnesty", "definition": "Temporary government policy granting overstayers legal status without penalty. Last issued during COVID-19 pandemic.", "category": "processes", "links": [{"text": "Overstay Penalties", "url": "/immigration/overstay-penalties/"}]},
-  {"term": "Visa Comparison", "definition": "Side-by-side analysis of different visa types, comparing requirements, costs, renewability, and work authorization.", "category": "processes", "links": [{"text": "Visa Comparison Matrix", "url": "/visas/comparison-matrix/"}, {"text": "DTV vs ED", "url": "/guides/dtv-vs-ed-visa/"}]},
-  {"term": "Visa Exempt Entry", "definition": "Visa-free entry for certain nationalities, allowing 30-day stay. Not extendable except via border run or approval letter.", "category": "visa-types", "links": [{"text": "Visa-Exempt Entry", "url": "/visas/short-stay/visa-exempt-entry/"}]},
+  {"term": "Visa-Exempt Entry", "definition": "Visa-free entry for certain nationalities, allowing 30-day stay. Not extendable except via border run or approval letter.", "category": "visa-types", "links": [{"text": "Visa-Exempt", "url": "/visas/short-stay/visa-exempt-entry/"}]},
   {"term": "Visa On Arrival (VOA)", "definition": "Visa issued upon arrival at Thai airport. Valid 15 days, can be extended 7 days. For tourists from non-exempt countries.", "category": "visa-types", "links": [{"text": "Visa On Arrival", "url": "/visas/short-stay/visa-on-arrival/"}]},
   {"term": "Visa Rejection", "definition": "Denial of visa application by immigration or embassy. Reasons include incomplete documentation, financial proof issues, or background concerns.", "category": "processes", "links": [{"text": "Why Visas Get Rejected", "url": "/guides/why-visas-get-rejected/"}]},
-  {"term": "Visa Rejection Appeal", "definition": "Process for contesting a rejected visa application. Limited options; reapplication with corrected documents or alternative visa typically required.", "category": "processes", "links": [{"text": "Why Visas Get Rejected", "url": "/guides/why-visas-get-rejected/"}]},
-  {"term": "Volunteer Visa (Non-O)", "definition": "ED visa for volunteering in Thailand, common for humanitarian or charity work. Requires volunteer organization sponsorship.", "category": "visa-types", "links": [{"text": "Volunteer ED Visa", "url": "/ed-visa/volunteer/"}, {"text": "ED Visa Programs", "url": "/guides/ed-visa-cost-budget/"}]},
-  {"term": "Work Authorization", "definition": "Official permission to work legally in Thailand. Requires both appropriate visa (Non-B, etc.) and separate work permit from Labor Ministry.", "category": "processes", "links": [{"text": "Work Permit vs DTV", "url": "/guides/dtv-vs-business-permit/"}]},
-  {"term": "Work Permit", "definition": "Formal authorization from Thailand's Labor Ministry to work legally. Must be obtained in parallel with business visa. Usually valid 1 year.", "category": "documents", "links": [{"text": "Work Permit vs DTV", "url": "/guides/dtv-vs-business-permit/"}]},
-  {"term": "Worldwide Income", "definition": "Income from any source globally that qualifies for visas like DTV. Includes freelancing, passive income, investments, remote work.", "category": "processes", "links": [{"text": "DTV Visa", "url": "/dtv-visa/"}]}
+  {"term": "Volunteer Visa (Non-O)", "definition": "ED visa for volunteering in Thailand, common for humanitarian or charity work. Requires volunteer organization sponsorship.", "category": "visa-types", "links": [{"text": "Volunteer ED", "url": "/ed-visa/volunteer/"}]},
+  {"term": "Work Permit", "definition": "Formal authorization from Thailand's Labor Ministry to work legally. Must be obtained in parallel with business visa. Usually valid 1 year.", "category": "documents", "links": [{"text": "Work Permit vs DTV", "url": "/guides/dtv-vs-business-permit/"}]}
 ];
 
 function renderGlossary(terms = glossaryData, filter = 'all') {
@@ -235,7 +154,6 @@ function renderGlossary(terms = glossaryData, filter = 'all') {
   }
 
   noResults.style.display = 'none';
-
   const grouped = {};
   filtered.forEach(t => {
     const letter = t.term.charAt(0).toUpperCase();
@@ -245,7 +163,7 @@ function renderGlossary(terms = glossaryData, filter = 'all') {
 
   let html = '';
   Object.keys(grouped).sort().forEach(letter => {
-    html += `<div style="margin-top: 3rem;"><h3 style="font-size:1.3rem;color:var(--c-dark);margin-bottom:1rem;border-left:4px solid var(--c-primary);padding-left:1rem;">${letter}</h3>`;
+    html += `<div class="glossary-section"><h3 class="glossary-section-title">${letter}</h3>`;
     grouped[letter].forEach(t => {
       html += `<div class="glossary-term">
         <div class="term-title">${t.term}</div>
@@ -265,7 +183,6 @@ function renderGlossary(terms = glossaryData, filter = 'all') {
   container.innerHTML = html;
 }
 
-// Search functionality
 document.getElementById('glossary-search').addEventListener('input', (e) => {
   const query = e.target.value.toLowerCase();
   const activeFilter = document.querySelector('.filter-btn.active').dataset.category;
@@ -288,7 +205,6 @@ document.getElementById('glossary-search').addEventListener('input', (e) => {
   }
 });
 
-// Filter buttons
 document.querySelectorAll('.filter-btn').forEach(btn => {
   btn.addEventListener('click', () => {
     document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
@@ -299,10 +215,8 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
   });
 });
 
-// Initial render
 renderGlossary();
 
-// Progress bar
 window.addEventListener('scroll', () => {
   const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
   const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
