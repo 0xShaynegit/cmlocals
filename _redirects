@@ -89,6 +89,15 @@
 # Catch all for any remaining /pages/ that weren't explicitly mapped
 /pages/*                            /:splat                     301
 
+# Short-stay visa consolidation (July 2026)
+# Moving root-level short-stay pages under /visas/short-stay/ to fix query cannibalization
+/visa-exempt-entry/                 /visas/short-stay/visa-exempt-entry/ 301
+/visa-exempt-entry                  /visas/short-stay/visa-exempt-entry/ 301
+/tourist-visa/                      /visas/short-stay/tourist-visa/      301
+/tourist-visa                       /visas/short-stay/tourist-visa/      301
+/visa-on-arrival/                   /visas/short-stay/visa-on-arrival/   301
+/visa-on-arrival                    /visas/short-stay/visa-on-arrival/   301
+
 # Trailing slash enforcement - directory URLs must end in slash
 # This handles both .html and non-slash variants
 /checklists/([^.]+)$                /checklists/$1/             301
