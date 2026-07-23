@@ -92,8 +92,6 @@ footer{background:#f0f0f0;padding:2rem var(--edge);text-align:center;font-size:0
   line-height: 1;
 }
 .primary-nav a:hover { color: var(--c-primary, #4F46E5); }
-.header-search-icon{color:#111827;display:flex;align-items:center;margin-left:1rem;}
-.header-search-icon:hover{color:var(--c-primary);}
 .header-ctas {
   display: flex;
   align-items: center;
@@ -245,7 +243,6 @@ footer{background:#f0f0f0;padding:2rem var(--edge);text-align:center;font-size:0
 @media (max-width: 1023px) {
   .mobile-menu-toggle { display: flex; }
   .primary-nav { display: none; }
-  .header-search-icon{display:none;}
   .nav-mobile {
     display: none;
     position: fixed;
@@ -301,12 +298,18 @@ footer{background:#f0f0f0;padding:2rem var(--edge);text-align:center;font-size:0
     background: rgba(79, 70, 229, 0.1);
     color: var(--c-primary, #4F46E5);
   }
-  .mobile-nav-search-icon{display:block;padding:1rem;color:var(--c-primary);}
 }
 @media (max-width: 960px) {
   .primary-nav { display: none; }
   .header-hamburger { display: flex; }
 }
+.mobile-nav-search-icon{display:flex;align-items:center;justify-content:center;height:60px;padding:20px 24px;border-top:1px solid var(--c-border);color:var(--c-primary);text-decoration:none;transition:background-color 0.2s,opacity 0.2s;width:100%;position:sticky;bottom:0;z-index:100;background:var(--c-white);}
+.mobile-nav-search-icon:hover{opacity:0.8;background:rgba(79,70,229,0.05);}
+.mobile-nav-search-icon svg{display:block;pointer-events:none;}
+.header-search-icon{display:flex;align-items:center;justify-content:center;width:36px;height:36px;color:var(--c-body);text-decoration:none;transition:color 0.2s,opacity 0.2s;border:none;background:none;flex-shrink:0;}
+.header-search-icon:hover{color:var(--c-primary);opacity:0.8;}
+.header-search-icon svg{display:block;pointer-events:none;}
+@media(max-width:960px){.header-search-icon{display:none;}}
 .site-footer{background:#0D1117;color:rgba(255,255,255,0.92);padding:3.6rem 0 0;}
 .footer-container{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:1.2fr 0.9fr 0.9fr 0.9fr 0.9fr;gap:2rem;padding:0 1.8rem 1.8rem;width:100%;}
 .footer-col{display:flex;flex-direction:column;gap:0.9rem;}
