@@ -518,8 +518,9 @@ a:hover { color: var(--c-dark-2); }
 .page-hero {
   background: linear-gradient(135deg, #7f0652 0%, #6a0845 100%);
   color: var(--c-white); padding-block: clamp(5rem, 9vw, 7.5rem);
-  position: relative; overflow: hidden;
-}
+  position: relative; overflow: hidden; min-height: 600px; display: flex; align-items: center;}
+@media (max-width: 768px) { .page-hero { min-height: 420px; } }
+
 .page-hero::before {
   content: '';
   position: absolute; inset: 0; pointer-events: none;

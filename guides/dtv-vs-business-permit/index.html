@@ -601,8 +601,9 @@ article table tr:hover {
 /* Page hero */
 .page-hero {
   padding: clamp(5rem, 9vw, 7.5rem) 0;
-  color: white;
-}
+  color: white; min-height: 600px; display: flex; align-items: center;}
+@media (max-width: 768px) { .page-hero { min-height: 420px; } }
+
 
 .page-hero h1 {
   font-family: var(--font-display);

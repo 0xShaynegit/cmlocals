@@ -495,8 +495,9 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); }
 .page-hero {
   background: linear-gradient(135deg, #693aef 0%, #7c4ff2 100%);
   overflow: hidden; position: relative;
-  padding-block: clamp(5rem, 9vw, 7.5rem);
-}
+  padding-block: clamp(5rem, 9vw, 7.5rem); min-height: 600px; display: flex; align-items: center;}
+@media (max-width: 768px) { .page-hero { min-height: 420px; } }
+
 .page-hero::before {
   content: '';
   position: absolute; inset: 0; pointer-events: none;
