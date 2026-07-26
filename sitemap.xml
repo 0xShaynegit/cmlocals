@@ -163,6 +163,12 @@
     <changefreq>weekly</changefreq>
   </url>
   <url>
+    <loc>https://www.cmlocals.com/chiang-mai/things-to-do/cnx-cigars-nimman.html</loc>
+    <lastmod>2026-07-26</lastmod>
+    <priority>0.55</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
     <loc>https://www.cmlocals.com/chiang-mai/where-to-stay/</loc>
     <lastmod>2026-07-12</lastmod>
     <priority>0.82</priority>
@@ -592,6 +598,12 @@
     <loc>https://www.cmlocals.com/glossary/</loc>
     <lastmod>2026-07-23</lastmod>
     <priority>0.75</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.cmlocals.com/search.html</loc>
+    <lastmod>2026-07-26</lastmod>
+    <priority>0.4</priority>
     <changefreq>monthly</changefreq>
   </url>
 </urlset>
