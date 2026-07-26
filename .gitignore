@@ -37,3 +37,8 @@ $RECYCLE.BIN/
 .LSOverride
 
 _archive/
+.wrangler/
+
+# Chatbot build artifacts (regenerate with chatbot/build-chunks.js + upload-vectors.js)
+chatbot/content-chunks.json
+chatbot/vectors.ndjson
