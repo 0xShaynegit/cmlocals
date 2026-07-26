@@ -3,7 +3,7 @@
 // model to answer using only that context.
 
 const EMBED_MODEL = "@cf/baai/bge-base-en-v1.5";
-const CHAT_MODEL = "@cf/meta/llama-3.1-8b-instruct";
+const CHAT_MODEL = "@cf/meta/llama-3.3-70b-instruct-fp8-fast";
 const TOP_K = 5;
 
 export async function onRequestPost(context) {
