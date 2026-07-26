@@ -50,7 +50,9 @@ function main() {
   }
 
   console.log(`Pruning ${staleIds.length} stale vectors...`);
-  const BATCH = 500;
+  // Kept small: Windows has an ~8KB command-line length limit, and each id
+  // (a short hash + #index) still adds up fast across hundreds of vectors.
+  const BATCH = 100;
   for (let i = 0; i < staleIds.length; i += BATCH) {
     const batch = staleIds.slice(i, i + BATCH);
     execFileSync("npx", ["wrangler", "vectorize", "delete-vectors", INDEX_NAME, "--ids", ...batch], {

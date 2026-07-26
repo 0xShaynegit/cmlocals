@@ -4,6 +4,7 @@
 
 const fs = require("fs");
 const path = require("path");
+const crypto = require("crypto");
 
 const ROOT = path.resolve(__dirname, "..");
 const EXCLUDE_DIRS = new Set([
@@ -100,8 +101,11 @@ function main() {
 
     const url = urlFor(file);
     const chunks = chunkText(text, title, url);
+    // Vectorize IDs are capped at 64 bytes; hash the URL so long slugs never
+    // overflow that (the real url still lives in metadata for display/links).
+    const urlHash = crypto.createHash("sha1").update(url).digest("hex").slice(0, 16);
     chunks.forEach((c, i) => {
-      allChunks.push({ id: `${url}#${i}`, ...c });
+      allChunks.push({ id: `${urlHash}#${i}`, ...c });
     });
   }
 
