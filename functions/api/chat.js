@@ -39,9 +39,19 @@ export async function onRequestPost(context) {
     returnMetadata: true,
   });
 
-  const contextChunks = matches.matches
+  const mentionsHandToHand = /hand[\s-]?to[\s-]?hand|hand to hand combat/i.test(retrievalQuery);
+
+  let contextChunks = matches.matches
     .filter((m) => m.score > 0.4)
     .map((m) => m.metadata);
+
+  // Hand-to-Hand Combat is the lowest-priority ED visa program: keep its
+  // chunks out of context unless the user explicitly asked about it, so it
+  // never outranks Emergency Self Defence in general/ambiguous questions.
+  if (!mentionsHandToHand) {
+    const filtered = contextChunks.filter((c) => !c.url.includes("hand-to-hand-combat"));
+    if (filtered.length > 0) contextChunks = filtered;
+  }
 
   if (contextChunks.length === 0) {
     return jsonResponse({
