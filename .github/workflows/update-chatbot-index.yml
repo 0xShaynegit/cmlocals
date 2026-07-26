@@ -9,9 +9,69 @@ on:
       - "chatbot/upload-vectors.js"
       - "chatbot/prune-stale-vectors.js"
       - ".github/workflows/update-chatbot-index.yml"
+  workflow_dispatch: {}
+
+# Only reindex for new pages or substantial edits, not typo/small fixes.
+# A page counts as "major" if it's newly added, deleted, or has more than
+# CHANGE_THRESHOLD lines added+removed since the previous commit on master.
+env:
+  CHANGE_THRESHOLD: 40
 
 jobs:
+  check:
+    runs-on: ubuntu-latest
+    outputs:
+      should_reindex: ${{ steps.decide.outputs.should_reindex }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Decide whether changes are major enough to reindex
+        id: decide
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "should_reindex=true" >> "$GITHUB_OUTPUT"
+            echo "Manually triggered, reindexing."
+            exit 0
+          fi
+
+          BEFORE="${{ github.event.before }}"
+          if [ -z "$BEFORE" ] || [ "$BEFORE" = "0000000000000000000000000000000000000000" ]; then
+            echo "should_reindex=true" >> "$GITHUB_OUTPUT"
+            echo "No previous commit to diff against, reindexing."
+            exit 0
+          fi
+
+          MAJOR=false
+          while IFS=$'\t' read -r added removed file; do
+            case "$file" in
+              *.html) ;;
+              *) continue ;;
+            esac
+            if [ "$added" = "-" ] || [ "$removed" = "-" ]; then
+              echo "Binary/rename change in $file, treating as major."
+              MAJOR=true
+              continue
+            fi
+            TOTAL=$((added + removed))
+            echo "$file: +$added -$removed (total $TOTAL)"
+            if [ "$TOTAL" -gt "$CHANGE_THRESHOLD" ]; then
+              MAJOR=true
+            fi
+          done < <(git diff --numstat "$BEFORE" "${{ github.sha }}" -- '*.html')
+
+          # New or deleted pages always count as major.
+          if git diff --diff-filter=AD --name-only "$BEFORE" "${{ github.sha }}" -- '*.html' | grep -q .; then
+            echo "Page(s) added or deleted, treating as major."
+            MAJOR=true
+          fi
+
+          echo "should_reindex=$MAJOR" >> "$GITHUB_OUTPUT"
+
   reindex:
+    needs: check
+    if: needs.check.outputs.should_reindex == 'true'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
