@@ -30,7 +30,7 @@
   var leftOffset = config.leftOffset || 18;
 
   var isMobile = window.innerWidth <= 480;
-  var iconSize = isMobile ? 36 : 49;
+  var iconSize = isMobile ? 36 : 40;
   var itemGap = isMobile ? 9 : 11;
 
   var triggerSvg =
