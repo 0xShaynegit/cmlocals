@@ -1,6 +1,9 @@
 # Claude Code local directory
 .claude/
 
+# understand-anything analysis output
+.ua/
+
 # Legacy/backup files (do not modify)
 _raw/
 docs/
