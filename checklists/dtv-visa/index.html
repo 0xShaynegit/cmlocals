@@ -578,6 +578,8 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); }
 .checklist-item:nth-child(8) { animation-delay: 0.4s; }
 .checklist-item:nth-child(9) { animation-delay: 0.45s; }
 .checklist-item:nth-child(10) { animation-delay: 0.5s; }
+.checklist-item:nth-child(11) { animation-delay: 0.55s; }
+.checklist-item:nth-child(12) { animation-delay: 0.6s; }
 
 .checklist-item:hover { opacity: .75; }
 
@@ -1420,7 +1422,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); }
 <section class="page-hero">
 <div class="page-hero-inner">
   <h1>DTV Visa Checklist</h1>
-  <p class="page-hero-lead">Documents for Thailand DTV (Digital Nomad) visa applications. Requirements for remote workers and freelancers with foreign income.</p>
+  <p class="page-hero-lead">Documents for Thailand DTV (Digital Nomad) visa applications. Requirements for remote workers and freelancers with foreign income. Updated for the two new documents required nationwide from 31 August 2026 &mdash; see the full <a href="/dtv-visa/" style="color:#fff;text-decoration:underline;">DTV visa guide</a> for details.</p>
 </div>
 </section>
 
@@ -1429,7 +1431,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); }
 <div class="checklist-wrap">
   <h2 class="checklist-title">What to Prepare</h2>
 
-  <p style="font-size: 0.9rem; line-height: 1.75; color: var(--c-body); margin-bottom: 2.5rem; max-width: 68ch;">The DTV (Digital Nomad) visa is designed for remote workers and freelancers earning foreign income. Valid for 180 days per entry and renewable annually. You must demonstrate foreign income of at least 1.8 million THB per year or comparable financial support.</p>
+  <p style="font-size: 0.9rem; line-height: 1.75; color: var(--c-body); margin-bottom: 2.5rem; max-width: 68ch;">The DTV (Digital Nomad) visa is designed for remote workers, freelancers, and Soft Power participants such as Muay Thai or culinary students. It is valid for 5 years with 180-day stays per entry, extendable once for another 180 days. You must demonstrate at least 500,000 THB in funds. From 31 August 2026, two additional documents are required nationwide, see the last two items below. Applications go through the official <a href="https://www.thaievisa.go.th" target="_blank" rel="noopener">Thai e-Visa portal</a>.</p>
 
   <div class="checklist-container">
     <div class="checklist-items" id="checklist">
@@ -1444,8 +1446,8 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); }
       <label class="checklist-item">
         <input type="checkbox" class="checklist-input" data-item="tem-form">
         <div>
-          <div class="checklist-text">DTV application form</div>
-          <small class="checklist-meta">Obtain from Thai <a href="https://www.immigration.go.th/" target="_blank" rel="noopener">immigration</a> office or embassy</small>
+          <div class="checklist-text">DTV e-Visa application submitted</div>
+          <small class="checklist-meta">Every DTV application goes through the official <a href="https://www.thaievisa.go.th" target="_blank" rel="noopener">Thai e-Visa portal</a>, reviewed by the embassy or consulate assigned to your country and region</small>
         </div>
       </label>
 
@@ -1468,8 +1470,8 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); }
       <label class="checklist-item">
         <input type="checkbox" class="checklist-input" data-item="income-proof">
         <div>
-          <div class="checklist-text">Proof of foreign income (1.8 million THB annually)</div>
-          <small class="checklist-meta">Bank statements (12 months), tax returns, income letter, or portfolio demonstrating ongoing income</small>
+          <div class="checklist-text">Proof of funds (500,000 THB, held for 3+ months)</div>
+          <small class="checklist-meta">Bank statements, tax returns, income letter, or portfolio demonstrating ongoing income. Recently deposited funds are a common rejection cause, several embassies expect the balance seasoned for at least three months</small>
         </div>
       </label>
 
@@ -1512,12 +1514,28 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); }
           <small class="checklist-meta">Application: varies by embassy. Annual renewal: 1,900 THB in Thailand</small>
         </div>
       </label>
+
+      <label class="checklist-item">
+        <input type="checkbox" class="checklist-input" data-item="citizenship-residence-proof">
+        <div>
+          <div class="checklist-text">Proof of citizenship or permanent residence <span style="font-weight:600;">(new, from 31 Aug 2026)</span></div>
+          <small class="checklist-meta">Required in the country where you apply. You generally need to apply from your own country of citizenship or a country where you hold permanent residence, see the full <a href="/dtv-visa/">DTV visa guide</a> for what this closes off</small>
+        </div>
+      </label>
+
+      <label class="checklist-item">
+        <input type="checkbox" class="checklist-input" data-item="police-clearance">
+        <div>
+          <div class="checklist-text">Police clearance certificate <span style="font-weight:600;">(new, from 31 Aug 2026)</span></div>
+          <small class="checklist-meta">Certificate of no criminal record, issued within the last 6 months, with a certified English translation if not already in English. Dependents under 16 may submit the primary DTV holder's certificate instead</small>
+        </div>
+      </label>
     </div>
 
     <div class="checklist-progress">
       <div class="progress-label">
         <span>Preparation Status</span>
-        <span id="progress-text">0/10</span>
+        <span id="progress-text">0/12</span>
       </div>
       <div class="progress-bar">
         <div class="progress-fill" id="progress-fill" style="width: 0%"></div>
@@ -1525,7 +1543,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); }
       <button class="reset-btn" id="reset-btn">Reset Checklist</button>
     </div>
 
-    <p style="font-size: 0.85rem; line-height: 1.65; color: var(--c-muted); margin-top: 2.5rem; padding-top: 2rem; border-top: 1px dashed rgba(0,0,0,.12); max-width: 68ch;"><strong>Disclaimer:</strong> <a href="https://www.immigration.go.th/" target="_blank" rel="noopener">Thai immigration</a> requirements for the DTV visa are relatively new and subject to change. Income thresholds, required documentation, and acceptable proof of employment vary between embassies and immigration offices. Verify current requirements with <a href="https://www.immigration.go.th/" target="_blank" rel="noopener">Thai immigration</a> or your nearest Thai embassy before applying. This checklist is a guide only and not a substitute for official documentation.</p>
+    <p style="font-size: 0.85rem; line-height: 1.65; color: var(--c-muted); margin-top: 2.5rem; padding-top: 2rem; border-top: 1px dashed rgba(0,0,0,.12); max-width: 68ch;"><strong>Disclaimer:</strong> Thai immigration rules, embassy procedures, and officer discretion change frequently and without notice. Income thresholds, required documentation, and acceptable proof of employment vary between embassies and immigration offices, and are subject to the sole discretion of Thai immigration officers and embassy staff. Verify current requirements directly with the official <a href="https://www.thaievisa.go.th" target="_blank" rel="noopener">Thai e-Visa portal</a> or your nearest Thai embassy or consulate before applying. See the full <a href="/dtv-visa/">DTV visa guide</a> for country-by-country application details. This checklist is a guide only and not a substitute for official documentation.</p>
   </div>
 </div>
 </section>
