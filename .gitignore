@@ -46,3 +46,4 @@ _archive/
 # Chatbot build artifacts (regenerate with chatbot/build-chunks.js + upload-vectors.js)
 chatbot/content-chunks.json
 chatbot/vectors.ndjson
+manifest.json
