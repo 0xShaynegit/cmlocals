@@ -19,6 +19,10 @@ SKIP_DIRS = {'node_modules', '_archive', '.git', '.md', '.ua', '.github', 'chatb
 SKIP_FILES = {'404.html', 'search.html', 'blog-template.html', 'page-template.html', 'template.html'}
 
 
+# Common misspellings people type: a page containing the key is also found by the value.
+ALIASES = {'smoky': 'smokey'}
+
+
 def url_for(rel):
     if not CMLOCALS:
         return rel
@@ -43,6 +47,9 @@ def words_from(main_html):
     for tok in re.findall(r'[a-z0-9]+(?:-[a-z0-9]+)+', text):
         words.add(tok)
         words.add(tok.replace('-', ''))
+    for word, alias in ALIASES.items():
+        if word in words:
+            words.add(alias)
     return sorted(w for w in words if len(w) >= 3)
 
 
