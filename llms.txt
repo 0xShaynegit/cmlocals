@@ -1,4 +1,4 @@
-Site: https://www.cmlocals.com/
+Site: https://cmlocals.com/
 Structure: index.html at root, subpages in /pages/<slug>.html
 Source: Static export; this folder is the single source of truth (no CMS).
 Editing: All changes are made locally, then pushed to GitHub and deployed via Cloudflare Pages.
